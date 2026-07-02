@@ -8,9 +8,9 @@ import { handleResearch } from "./routes/research";
 const app = new Hono<{ Bindings: Env }>();
 
 /**
- * -----------------------
+ * =======================
  * HEALTH CHECK
- * -----------------------
+ * =======================
  */
 app.get("/health", (c) => {
   return c.json({
@@ -21,9 +21,9 @@ app.get("/health", (c) => {
 });
 
 /**
- * -----------------------
- * ROOT UI (API INDEX)
- * -----------------------
+ * =======================
+ * ROOT API LANDING PAGE
+ * =======================
  */
 app.get("/", (c) => {
   return c.html(`<!doctype html>
@@ -32,34 +32,32 @@ app.get("/", (c) => {
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>rjmlaird API</title>
+  <style>
+    body { font-family: system-ui, sans-serif; padding: 2rem; }
+    code { background: #f4f4f4; padding: 2px 6px; border-radius: 4px; }
+  </style>
 </head>
 <body>
   <h1>rjmlaird API</h1>
-  <p>API running</p>
+  <p>Status: <strong>running</strong></p>
+  <p>Endpoints:</p>
+  <ul>
+    <li><code>/health</code></li>
+    <li><code>/v1/webdav/*</code></li>
+    <li><code>/v1/research/*</code></li>
+    <li><code>/v1/debug</code></li>
+  </ul>
 </body>
 </html>`);
 });
 
 /**
- * -----------------------
- * WEBDAV ROOT FIX (IMPORTANT)
- * -----------------------
- * Fixes:
- * https://api.rjmlaird.co.uk/v1/webdav → 404
- */
-app.all("/v1/webdav", (c) => {
-  return c.text("WebDAV endpoint active");
-});
-
-app.all("/v1/webdav/", (c) => {
-  return c.text("WebDAV endpoint active");
-});
-
-/**
- * -----------------------
- * WEBDAV HANDLER
- * -----------------------
- * Zotero → WebDAV → R2
+ * =======================
+ * WEBDAV (SINGLE ENTRYPOINT)
+ * =======================
+ * IMPORTANT:
+ * - No duplicate / or /root handlers
+ * - Everything goes through handleWebDAV
  */
 app.all("/v1/webdav/*", async (c) => {
   try {
@@ -71,32 +69,39 @@ app.all("/v1/webdav/*", async (c) => {
 });
 
 /**
- * -----------------------
+ * =======================
  * RESEARCH API
- * -----------------------
+ * =======================
  */
 app.all("/v1/research/*", async (c) => {
-  return handleResearch(c.req.raw, c.env);
+  try {
+    return await handleResearch(c.req.raw, c.env);
+  } catch (err) {
+    console.error("Research API error:", err);
+    return c.text("Research internal error", 500);
+  }
 });
 
 /**
- * -----------------------
- * DEBUG ENDPOINT (VERY USEFUL)
- * -----------------------
+ * =======================
+ * DEBUG ENDPOINT
+ * =======================
+ * Safe for production diagnostics
  */
 app.get("/v1/debug", (c) => {
   return c.json({
-    webdav: "/v1/webdav/",
-    research: "/v1/research/",
-    r2Bound: !!c.env.R2,
-    time: new Date().toISOString(),
+    status: "ok",
+    webdav: true,
+    research: true,
+    r2Bound: Boolean(c.env.R2),
+    timestamp: new Date().toISOString(),
   });
 });
 
 /**
- * -----------------------
- * LEGACY CV API
- * -----------------------
+ * =======================
+ * LEGACY CONTENT API
+ * =======================
  */
 app.get("/api/:collection", async (c) => {
   const collection = c.req.param("collection");
