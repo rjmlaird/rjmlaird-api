@@ -1,70 +1,86 @@
-import { jsonResponse } from "../lib/jsonResponse";
-import { getObject, listObjects } from "../services/storage";
+import { json } from "../lib/jsonResponse";
+import { storage } from "../services/storage";
 
 /**
  * Research API router
- * Future sources:
- * - Zotero uploads (WebDAV → R2)
- * - Zenodo deposits
- * - Mendeley imports
+ * Sources:
+ * - Zotero (WebDAV → R2)
+ * - Zenodo imports (future)
+ * - Mendeley imports (future)
  */
-export async function handleResearch(request: Request, env: any) {
+export async function handleResearch(request: Request, env: Env) {
   const url = new URL(request.url);
   const path = url.pathname.replace("/v1/research", "");
 
-  // ----------------------------------------
-  // GET /v1/research/papers
-  // ----------------------------------------
+  /**
+   * ----------------------------------------
+   * GET /v1/research/papers
+   * ----------------------------------------
+   */
   if (path === "/papers" && request.method === "GET") {
-    const items = await listObjects(env, "papers/");
+    const items = await storage.r2.list("papers/", env);
 
-    return jsonResponse({
+    return json({
       source: "r2",
       count: items.length,
-      items
+      items,
     });
   }
 
-  // ----------------------------------------
-  // GET /v1/research/paper/:id
-  // ----------------------------------------
+  /**
+   * ----------------------------------------
+   * GET /v1/research/paper/:id
+   * ----------------------------------------
+   */
   if (path.startsWith("/paper/") && request.method === "GET") {
     const key = path.replace("/paper/", "");
-    const item = await getObject(env, `papers/${key}`);
+
+    const item = await storage.r2.get(`papers/${key}`, env);
 
     if (!item) {
-      return jsonResponse({ error: "Not found" }, 404);
+      return json({ error: "Not found" }, 404);
     }
 
-    return jsonResponse({
+    return json({
       key,
       size: item.size,
-      contentType: item.contentType
+      contentType: item.contentType,
     });
   }
 
-  // ----------------------------------------
-  // POST /v1/research/ingest
-  // (used later for enrichment pipeline)
-  // ----------------------------------------
+  /**
+   * ----------------------------------------
+   * POST /v1/research/ingest
+   * ----------------------------------------
+   */
   if (path === "/ingest" && request.method === "POST") {
-    const body = await request.json();
-
-    // minimal ingestion layer (expand later)
-    const record = {
-      id: crypto.randomUUID(),
-      source: body.source || "unknown",
-      title: body.title || null,
-      tags: body.tags || [],
-      createdAt: new Date().toISOString()
+    const body = (await request.json()) as {
+      source?: string;
+      title?: string;
+      tags?: string[];
     };
 
-    // optional: you could persist metadata separately later
-    return jsonResponse({
+    const record = {
+      id: crypto.randomUUID(),
+      source: body.source ?? "unknown",
+      title: body.title ?? null,
+      tags: body.tags ?? [],
+      createdAt: new Date().toISOString(),
+    };
+
+    // Optional: persist metadata into R2 (future upgrade)
+    await storage.r2.put(
+      `papers/${record.id}.json`,
+      new TextEncoder().encode(JSON.stringify(record)),
+      env,
+      "application/json"
+    );
+
+    return json({
       status: "ingested",
-      record
+      record,
     });
   }
 
-  return jsonResponse({ error: "Not found" }, 404);
+  return json({ error: "Not found" }, 404);
 }
