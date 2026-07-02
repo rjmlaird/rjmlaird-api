@@ -2,81 +2,48 @@ import * as r2 from "./r2";
 import * as zotero from "./zotero";
 
 /**
- * ----------------------------------------------------
- * STORAGE ABSTRACTION LAYER
- * ----------------------------------------------------
- * Single entry point for all persistence operations:
- *
- * - R2 object storage (files, PDFs, assets)
- * - Zotero integration layer (research metadata sync)
- *
- * This prevents route-level coupling to storage backends.
+ * Storage abstraction layer
  */
 export const storage = {
   /**
-   * -----------------------
-   * RAW OBJECT STORAGE (R2)
-   * -----------------------
+   * Raw R2 storage
    */
   r2: {
-    /**
-     * Upload a file to R2
-     */
-    put: async (key: string, body: BodyInit, env: Env, contentType?: string) => {
-      return r2.put(key, body, env, contentType);
-    },
+    put: (
+      key: string,
+      body: ArrayBuffer | ReadableStream,
+      env: Env,
+      contentType?: string
+    ) => r2.putR2Object(env, key, body, contentType),
 
-    /**
-     * Get a file from R2
-     */
-    get: async (key: string, env: Env) => {
-      return r2.get(key, env);
-    },
+    get: (key: string, env: Env) =>
+      r2.getR2Object(env, key),
 
-    /**
-     * Delete a file from R2
-     */
-    del: async (key: string, env: Env) => {
-      return r2.del(key, env);
-    },
+    del: (key: string, env: Env) =>
+      r2.deleteR2Object(env, key),
 
-    /**
-     * List objects in bucket
-     */
-    list: async (prefix: string | undefined, env: Env) => {
-      return r2.list(prefix, env);
-    }
+    list: (prefix: string | undefined, env: Env) =>
+      r2.listR2Objects(env, prefix),
   },
 
   /**
-   * -----------------------
-   * ZOTERO LAYER
-   * -----------------------
-   * Used for:
-   * - research ingestion
-   * - bibliographic metadata
-   * - paper indexing
+   * Zotero WebDAV storage
    */
   zotero: {
-    /**
-     * Store a research item
-     */
-    storeItem: async (item: any, env: Env) => {
-      return zotero.storeItem(item, env);
-    },
+    put: (
+      path: string,
+      body: ArrayBuffer,
+      env: Env,
+      contentType?: string
+    ) => zotero.zoteroPut(env, path, body, contentType),
 
-    /**
-     * Fetch research items
-     */
-    getItems: async (env: Env) => {
-      return zotero.getItems(env);
-    },
+    get: (path: string, env: Env) =>
+      zotero.zoteroGet(env, path),
 
-    /**
-     * Sync metadata from external sources
-     */
-    sync: async (env: Env) => {
-      return zotero.sync(env);
-    }
-  }
+    del: (path: string, env: Env) =>
+      zotero.zoteroDelete(env, path),
+
+    list: (prefix: string | undefined, env: Env) =>
+      zotero.zoteroList(env, prefix),
+  },
 };
