@@ -63,13 +63,13 @@ export async function listR2Objects(
       limit: 1000,
     });
 
-    for (const obj of result.objects) {
-      allObjects.push({
-        key: obj.key,
-        size: obj.size,
-        uploaded: obj.uploaded,
-      });
-    }
+  for (const obj of result.objects) {
+    allObjects.push({
+      key: obj.key,
+      size: obj.size,
+      uploaded: obj.uploaded?.toISOString(),
+    });
+  }
 
     cursor = result.truncated ? result.cursor : undefined;
   } while (cursor);
