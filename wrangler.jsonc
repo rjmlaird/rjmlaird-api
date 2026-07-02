@@ -1,10 +1,11 @@
-/**
- * Cloudflare Worker Configuration
- * https://developers.cloudflare.com/workers/wrangler/configuration/
- */
 {
   "$schema": "node_modules/wrangler/config-schema.json",
 
+  /**
+   * -----------------------
+   * CORE WORKER CONFIG
+   * -----------------------
+   */
   "name": "rjmlaird-api",
   "main": "src/index.ts",
   "compatibility_date": "2026-07-02",
@@ -13,6 +14,11 @@
     "nodejs_compat"
   ],
 
+  /**
+   * -----------------------
+   * OBSERVABILITY
+   * -----------------------
+   */
   "observability": {
     "enabled": true
   },
@@ -20,29 +26,57 @@
   "upload_source_maps": true,
 
   /**
-   * Routes (production domain binding)
+   * -----------------------
+   * ROUTES (PRODUCTION DOMAIN)
+   * -----------------------
    */
   "routes": [
     {
       "pattern": "api.rjmlaird.co.uk/*",
       "zone_name": "rjmlaird.co.uk"
     }
-  ]
+  ],
 
   /**
-   * Smart Placement (optional performance optimisation)
+   * -----------------------
+   * R2 STORAGE BINDING
+   * -----------------------
+   * Used for:
+   * - Zotero WebDAV storage
+   * - research PDFs
+   * - future content assets
    */
-  // "placement": { "mode": "smart" },
+  "r2_buckets": [
+    {
+      "binding": "R2",
+      "bucket_name": "zotero-library"
+    }
+  ],
 
   /**
-   * Environment Variables (non-secret)
+   * -----------------------
+   * ENVIRONMENT VARIABLES
+   * -----------------------
+   * Non-sensitive config only
    */
-  // "vars": {
-  //   "ENVIRONMENT": "production"
+  "vars": {
+    "ENVIRONMENT": "production",
+    "SERVICE_NAME": "rjmlaird-api"
+  },
+
+  /**
+   * -----------------------
+   * SMART PLACEMENT (optional perf optimisation)
+   * -----------------------
+   */
+  // "placement": {
+  //   "mode": "smart"
   // },
 
   /**
-   * Static Assets (if ever needed)
+   * -----------------------
+   * STATIC ASSETS (future frontend use)
+   * -----------------------
    */
   // "assets": {
   //   "directory": "./public",
@@ -50,7 +84,15 @@
   // },
 
   /**
-   * Service bindings (multi-worker architecture)
+   * -----------------------
+   * SERVICE BINDINGS (future modular architecture)
+   * -----------------------
+   * Example: separate workers for research, CRM, etc.
    */
-  // "services": []
+  // "services": [
+  //   {
+  //     "binding": "RESEARCH_SERVICE",
+  //     "service": "rjmlaird-research"
+  //   }
+  // ]
 }
