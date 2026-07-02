@@ -1,33 +1,51 @@
-name: Deploy Cloudflare Worker API
+name: Deploy Cloudflare Worker API (Production)
 
 on:
   push:
     branches:
       - main
 
+  workflow_dispatch:
+
+concurrency:
+  group: cloudflare-worker-production
+  cancel-in-progress: true
+
 jobs:
   deploy:
+    name: Build & Deploy Worker
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js (LTS 22)
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
 
-      - name: Install dependencies
+      - name: Verify Node + npm versions
+        run: |
+          node -v
+          npm -v
+
+      - name: Install dependencies (clean install)
         run: npm ci
 
-      - name: Type check
+      - name: Run TypeScript type check
         run: npm run check
 
-      - name: Deploy
+      - name: Generate Worker types
+        run: npm run cf-typegen
+
+      - name: Deploy to Cloudflare Workers
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: deploy
+
+      - name: Deployment success notice
+        run: echo "🚀 Worker deployed successfully to production"
