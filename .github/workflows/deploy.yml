@@ -3,11 +3,11 @@ name: Deploy Cloudflare Worker API (Production)
 on:
   push:
     branches:
-      - main
+      - master
 
   pull_request:
     branches:
-      - main
+      - master
 
   workflow_dispatch: {}
 
