@@ -1,20 +1,28 @@
 {
-  "name": "cloudflare-workers-openapi",
-  "version": "0.0.1",
+  "name": "rjmlaird-api",
+  "version": "0.1.0",
   "private": true,
+
   "scripts": {
-    "deploy": "wrangler deploy",
     "dev": "wrangler dev",
-    "start": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check": "tsc --noEmit",
     "cf-typegen": "wrangler types"
   },
+
   "dependencies": {
     "chanfana": "^3.3.0",
     "hono": "^4.12.12",
     "zod": "^4.3.6"
   },
+
   "devDependencies": {
     "@types/node": "^25.9.4",
+    "typescript": "^5.9.3",
     "wrangler": "^4.106.0"
+  },
+
+  "engines": {
+    "node": ">=22"
   }
 }
