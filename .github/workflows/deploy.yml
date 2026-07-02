@@ -1,16 +1,3 @@
-name: Deploy Cloudflare Worker API (Production)
-
-on:
-  push:
-    branches:
-      - main
-
-  workflow_dispatch:
-
-concurrency:
-  group: cloudflare-worker-production
-  cancel-in-progress: true
-
 jobs:
   deploy:
     name: Build & Deploy Worker
@@ -40,12 +27,21 @@ jobs:
       - name: Generate Worker types
         run: npm run cf-typegen
 
-      - name: Deploy to Cloudflare Workers
+      - name: Install Wrangler explicitly
+        run: npm install -g wrangler
+
+      - name: Deploy to Cloudflare Workers (production)
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: deploy
+          command: deploy --env production
+
+      - name: Show deployment info
+        run: npx wrangler deployments list
+
+      - name: Verify Worker route
+        run: npx wrangler route list
 
       - name: Deployment success notice
         run: echo "🚀 Worker deployed successfully to production"

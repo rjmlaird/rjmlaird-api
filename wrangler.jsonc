@@ -2,9 +2,9 @@
   "$schema": "node_modules/wrangler/config-schema.json",
 
   /**
-   * -----------------------
+   * =======================
    * CORE WORKER CONFIG
-   * -----------------------
+   * =======================
    */
   "name": "rjmlaird-api",
   "main": "src/index.ts",
@@ -15,9 +15,9 @@
   ],
 
   /**
-   * -----------------------
+   * =======================
    * OBSERVABILITY
-   * -----------------------
+   * =======================
    */
   "observability": {
     "enabled": true
@@ -26,9 +26,10 @@
   "upload_source_maps": true,
 
   /**
-   * -----------------------
-   * ROUTES (PRODUCTION DOMAIN)
-   * -----------------------
+   * =======================
+   * ROUTING (PRODUCTION)
+   * =======================
+   * IMPORTANT: ensures ALL subpaths are routed correctly
    */
   "routes": [
     {
@@ -38,13 +39,56 @@
   ],
 
   /**
-   * -----------------------
-   * R2 STORAGE BINDING
-   * -----------------------
-   * Used for:
-   * - Zotero WebDAV storage
-   * - research PDFs
-   * - future content assets
+   * =======================
+   * ENVIRONMENTS (CRITICAL FOR DEBUGGING)
+   * =======================
+   * This helps you isolate why /v1/debug or /v1/webdav isn't hitting
+   */
+  "env": {
+    "production": {
+      "vars": {
+        "ENVIRONMENT": "production",
+        "SERVICE_NAME": "rjmlaird-api"
+      },
+
+      "r2_buckets": [
+        {
+          "binding": "R2",
+          "bucket_name": "zotero-library"
+        }
+      ]
+    },
+
+    "preview": {
+      "vars": {
+        "ENVIRONMENT": "preview",
+        "SERVICE_NAME": "rjmlaird-api-preview"
+      },
+
+      "r2_buckets": [
+        {
+          "binding": "R2",
+          "bucket_name": "zotero-library"
+        }
+      ]
+    }
+  },
+
+  /**
+   * =======================
+   * GLOBAL VARS (fallback)
+   * =======================
+   */
+  "vars": {
+    "ENVIRONMENT": "production",
+    "SERVICE_NAME": "rjmlaird-api"
+  },
+
+  /**
+   * =======================
+   * R2 (DEFAULT BINDING)
+   * =======================
+   * Ensures env.R2 always exists even outside env blocks
    */
   "r2_buckets": [
     {
@@ -54,29 +98,18 @@
   ],
 
   /**
-   * -----------------------
-   * ENVIRONMENT VARIABLES
-   * -----------------------
-   * Non-sensitive config only
+   * =======================
+   * PERFORMANCE OPTIMISATION
+   * =======================
    */
-  "vars": {
-    "ENVIRONMENT": "production",
-    "SERVICE_NAME": "rjmlaird-api"
+  "placement": {
+    "mode": "smart"
   },
 
   /**
-   * -----------------------
-   * SMART PLACEMENT (optional perf optimisation)
-   * -----------------------
-   */
-  // "placement": {
-  //   "mode": "smart"
-  // },
-
-  /**
-   * -----------------------
-   * STATIC ASSETS (future frontend use)
-   * -----------------------
+   * =======================
+   * OPTIONAL STATIC ASSETS
+   * =======================
    */
   // "assets": {
   //   "directory": "./public",
@@ -84,15 +117,18 @@
   // },
 
   /**
-   * -----------------------
-   * SERVICE BINDINGS (future modular architecture)
-   * -----------------------
-   * Example: separate workers for research, CRM, etc.
+   * =======================
+   * FUTURE SERVICE BINDINGS
+   * =======================
+   * Useful when splitting:
+   * - research engine
+   * - CRM sync
+   * - content pipeline
    */
-  // "services": [
-  //   {
-  //     "binding": "RESEARCH_SERVICE",
-  //     "service": "rjmlaird-research"
-  //   }
-  // ]
+  "services": [
+    // {
+    //   "binding": "RESEARCH_SERVICE",
+    //   "service": "rjmlaird-research"
+    // }
+  ]
 }
