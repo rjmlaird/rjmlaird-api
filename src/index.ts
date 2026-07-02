@@ -2,6 +2,9 @@ import { Hono } from "hono";
 import { json } from "./lib/jsonResponse";
 import { get } from "./lib/data";
 
+import { handleWebDAV } from "./routes/webdav";
+import { handleResearch } from "./routes/research";
+
 const app = new Hono<{ Bindings: Env }>();
 
 /**
@@ -13,6 +16,7 @@ app.get("/health", (c) => {
   return c.json({
     status: "ok",
     service: "rjmlaird-api",
+    timestamp: new Date().toISOString(),
   });
 });
 
@@ -82,7 +86,7 @@ app.get("/", (c) => {
 <body>
   <div class="wrap">
     <h1>rjmlaird API</h1>
-    <p>GitHub-powered CV + dynamic JSON API (Cloudflare Workers)</p>
+    <p>GitHub-powered CV + research + storage API (Cloudflare Workers)</p>
 
     <div class="card">
       <strong>Core Collections</strong>
@@ -108,6 +112,21 @@ app.get("/", (c) => {
     </div>
 
     <div class="card">
+      <strong>Research System (NEW)</strong>
+
+      <div class="endpoint"><span><span class="method">GET</span>/v1/research/papers</span></div>
+      <div class="endpoint"><span><span class="method">POST</span>/v1/research/ingest</span></div>
+    </div>
+
+    <div class="card">
+      <strong>Storage Layer (NEW)</strong>
+
+      <div class="endpoint"><span><span class="method">GET</span>/v1/webdav/*</span></div>
+      <div class="endpoint"><span><span class="method">PUT</span>/v1/webdav/*</span></div>
+      <div class="endpoint"><span><span class="method">DELETE</span>/v1/webdav/*</span></div>
+    </div>
+
+    <div class="card">
       <strong>System</strong>
 
       <div class="endpoint"><span><span class="method">GET</span>/health</span></div>
@@ -122,9 +141,27 @@ app.get("/", (c) => {
 
 /**
  * -----------------------
- * DYNAMIC COLLECTION API
+ * WEBDAV (ZOTERO STORAGE LAYER)
  * -----------------------
- * NO endpoint files needed
+ * Zotero → WebDAV → R2
+ */
+app.all("/v1/webdav/*", async (c) => {
+  return handleWebDAV(c.req.raw, c.env);
+});
+
+/**
+ * -----------------------
+ * RESEARCH API (INTELLIGENCE LAYER)
+ * -----------------------
+ */
+app.all("/v1/research/*", async (c) => {
+  return handleResearch(c.req.raw, c.env);
+});
+
+/**
+ * -----------------------
+ * DYNAMIC COLLECTION API (LEGACY CV SYSTEM)
+ * -----------------------
  */
 app.get("/api/:collection", async (c) => {
   const collection = c.req.param("collection");
