@@ -1,5 +1,5 @@
 {
-  "name": "rjmlaird-api-production",
+  "name": "rjmlaird-api",
   "version": "0.1.0",
   "private": true,
   "engines": {
