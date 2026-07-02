@@ -7,12 +7,14 @@ export interface R2ObjectMeta {
 }
 
 /**
- * Store object in R2
+ * -----------------------
+ * PUT OBJECT
+ * -----------------------
  */
 export async function putR2Object(
-  env: any,
+  env: Env,
   key: string,
-  body: ArrayBuffer,
+  body: ArrayBuffer | ReadableStream,
   contentType?: string
 ) {
   return env.R2.put(key, body, {
@@ -23,37 +25,62 @@ export async function putR2Object(
 }
 
 /**
- * Retrieve object from R2
+ * -----------------------
+ * GET OBJECT
+ * -----------------------
  */
-export async function getR2Object(env: any, key: string) {
+export async function getR2Object(env: Env, key: string) {
   const obj = await env.R2.get(key);
 
   if (!obj) return null;
 
   return {
-    body: obj.body,
+    body: obj.body, // NOTE: ReadableStream (correct for WebDAV)
     size: obj.size,
     etag: obj.etag,
-    contentType: obj.httpMetadata?.contentType || null,
+    contentType: obj.httpMetadata?.contentType ?? null,
   };
 }
 
 /**
- * Delete object from R2
+ * -----------------------
+ * DELETE OBJECT
+ * -----------------------
  */
-export async function deleteR2Object(env: any, key: string) {
+export async function deleteR2Object(env: Env, key: string) {
   return env.R2.delete(key);
 }
 
 /**
- * List objects by prefix (useful for Zotero collections)
+ * -----------------------
+ * LIST OBJECTS (SAFE PAGINATION)
+ * -----------------------
  */
-export async function listR2Objects(env: any, prefix: string) {
-  const result = await env.R2.list({ prefix });
+export async function listR2Objects(
+  env: Env,
+  prefix?: string
+): Promise<R2ObjectMeta[]> {
+  const allObjects: R2ObjectMeta[] = [];
 
-  return result.objects.map((obj: any) => ({
-    key: obj.key,
-    size: obj.size,
-    uploaded: obj.uploaded,
-  }));
+  let cursor: string | undefined = undefined;
+
+  do {
+    const result = await env.R2.list({
+      prefix,
+      cursor,
+      limit: 1000,
+    });
+
+    for (const obj of result.objects) {
+      allObjects.push({
+        key: obj.key,
+        size: obj.size,
+        uploaded: obj.uploaded,
+      });
+    }
+
+    cursor = result.truncated ? result.cursor : undefined;
+  } while (cursor);
+
+  return allObjects;
 }
