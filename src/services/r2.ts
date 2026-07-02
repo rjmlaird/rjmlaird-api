@@ -2,19 +2,17 @@ export interface R2ObjectMeta {
   key: string;
   size?: number;
   etag?: string;
-  uploaded?: Date;
+  uploaded?: string;
   contentType?: string | null;
 }
 
 /**
- * -----------------------
  * PUT OBJECT
- * -----------------------
  */
 export async function putR2Object(
   env: Env,
   key: string,
-  body: ArrayBuffer | ReadableStream,
+  body: ArrayBuffer | ArrayBufferView | ReadableStream,
   contentType?: string
 ) {
   return env.R2.put(key, body, {
@@ -25,9 +23,7 @@ export async function putR2Object(
 }
 
 /**
- * -----------------------
  * GET OBJECT
- * -----------------------
  */
 export async function getR2Object(env: Env, key: string) {
   const obj = await env.R2.get(key);
@@ -35,7 +31,7 @@ export async function getR2Object(env: Env, key: string) {
   if (!obj) return null;
 
   return {
-    body: obj.body, // NOTE: ReadableStream (correct for WebDAV)
+    body: obj.body,
     size: obj.size,
     etag: obj.etag,
     contentType: obj.httpMetadata?.contentType ?? null,
@@ -43,18 +39,14 @@ export async function getR2Object(env: Env, key: string) {
 }
 
 /**
- * -----------------------
  * DELETE OBJECT
- * -----------------------
  */
 export async function deleteR2Object(env: Env, key: string) {
   return env.R2.delete(key);
 }
 
 /**
- * -----------------------
- * LIST OBJECTS (SAFE PAGINATION)
- * -----------------------
+ * LIST OBJECTS
  */
 export async function listR2Objects(
   env: Env,

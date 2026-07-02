@@ -11,7 +11,7 @@ export const storage = {
   r2: {
     put: (
       key: string,
-      body: ArrayBuffer | ReadableStream,
+      body: ArrayBuffer | Uint8Array | ReadableStream,
       env: Env,
       contentType?: string
     ) => r2.putR2Object(env, key, body, contentType),
@@ -32,7 +32,7 @@ export const storage = {
   zotero: {
     put: (
       path: string,
-      body: ArrayBuffer,
+      body: ArrayBuffer | Uint8Array | ReadableStream,
       env: Env,
       contentType?: string
     ) => zotero.zoteroPut(env, path, body, contentType),

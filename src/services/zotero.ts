@@ -14,8 +14,10 @@ const BASE_PREFIX = "zotero/";
  * Build structured key for Zotero files
  */
 export function buildZoteroKey(path: string) {
-  // normalise slashes
-  const clean = path.startsWith("/") ? path.slice(1) : path;
+  const clean = path
+    .replace(/^\/+/, "")
+    .replace(/\/+/g, "/");
+
   return `${BASE_PREFIX}${clean}`;
 }
 
@@ -23,9 +25,9 @@ export function buildZoteroKey(path: string) {
  * Upload file coming from Zotero WebDAV
  */
 export async function zoteroPut(
-  env: any,
+  env: Env,
   path: string,
-  body: ArrayBuffer,
+  body: ArrayBuffer | ArrayBufferView | ReadableStream,
   contentType?: string
 ) {
   const key = buildZoteroKey(path);
@@ -36,7 +38,7 @@ export async function zoteroPut(
 /**
  * Retrieve file for Zotero
  */
-export async function zoteroGet(env: any, path: string) {
+export async function zoteroGet(env: Env, path: string) {
   const key = buildZoteroKey(path);
   return getR2Object(env, key);
 }
@@ -44,21 +46,20 @@ export async function zoteroGet(env: any, path: string) {
 /**
  * Delete file from Zotero storage
  */
-export async function zoteroDelete(env: any, path: string) {
+export async function zoteroDelete(env: Env, path: string) {
   const key = buildZoteroKey(path);
   return deleteR2Object(env, key);
 }
 
 /**
- * List Zotero "folders" (collections)
+ * List Zotero collections (flat view of R2 keys)
  */
-export async function zoteroList(env: any, prefix = "") {
+export async function zoteroList(env: Env, prefix = "") {
   return listR2Objects(env, `${BASE_PREFIX}${prefix}`);
 }
 
 /**
- * Normalise Zotero collection structure
- * (future-proofing for research graph)
+ * Parse Zotero path into logical components
  */
 export function parseZoteroPath(path: string) {
   const clean = path.replace(/^\/+/, "");
