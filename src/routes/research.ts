@@ -1,36 +1,25 @@
 import { json } from "../lib/jsonResponse";
 import { storage } from "../services/storage";
 
-/**
- * Research API router
- * Sources:
- * - Zotero (WebDAV → R2)
- * - Zenodo imports (future)
- * - Mendeley imports (future)
- */
 export async function handleResearch(request: Request, env: Env) {
   const url = new URL(request.url);
   const path = url.pathname.replace("/v1/research", "");
 
   /**
-   * ----------------------------------------
-   * GET /v1/research/papers
-   * ----------------------------------------
+   * GET /papers
    */
   if (path === "/papers" && request.method === "GET") {
     const items = await storage.r2.list("papers/", env);
 
     return json({
       source: "r2",
-      count: items.length,
-      items,
+      count: items?.length ?? 0,
+      items: items ?? [],
     });
   }
 
   /**
-   * ----------------------------------------
-   * GET /v1/research/paper/:id
-   * ----------------------------------------
+   * GET /paper/:id
    */
   if (path.startsWith("/paper/") && request.method === "GET") {
     const key = path.replace("/paper/", "");
@@ -49,9 +38,7 @@ export async function handleResearch(request: Request, env: Env) {
   }
 
   /**
-   * ----------------------------------------
-   * POST /v1/research/ingest
-   * ----------------------------------------
+   * POST /ingest
    */
   if (path === "/ingest" && request.method === "POST") {
     const body = (await request.json()) as {
@@ -68,7 +55,6 @@ export async function handleResearch(request: Request, env: Env) {
       createdAt: new Date().toISOString(),
     };
 
-    // Optional: persist metadata into R2 (future upgrade)
     await storage.r2.put(
       `papers/${record.id}.json`,
       new TextEncoder().encode(JSON.stringify(record)),
