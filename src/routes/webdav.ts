@@ -4,23 +4,26 @@ const BASE_PREFIX = "zotero/";
 
 /**
  * =========================
- * PATH HELPERS
+ * PATH NORMALISATION
  * =========================
  */
 function normalizePath(raw: string) {
   return decodeURIComponent(raw)
     .replace(/^\/(v1\/)?webdav\/?/, "")
     .replace(/^\/+/, "")
-    .replace(/^zotero\/?/, ""); // allow /webdav/zotero or /webdav
+    .replace(/^zotero\/?/, ""); // supports /webdav/zotero and /webdav
 }
 
+/**
+ * Build R2 key
+ */
 function toKey(path: string | null) {
-  if (!path || path.length === 0) return null;
+  if (!path) return null;
   return `${BASE_PREFIX}${path}`;
 }
 
 /**
- * Convert R2 object -> WebDAV item
+ * Ensure stable href formatting
  */
 function toHref(key: string) {
   return `/webdav/${key.replace(BASE_PREFIX, "").replace(/\/\.folder$/, "")}`;
@@ -37,9 +40,11 @@ export async function handleWebDAV(request: Request, env: any) {
   const path = normalizePath(url.pathname);
   const key = toKey(path);
 
+  const isRoot = !path || path.length === 0;
+
   /**
    * =========================
-   * OPTIONS (required)
+   * OPTIONS (required for Zotero + macOS + Windows)
    * =========================
    */
   if (request.method === "OPTIONS") {
@@ -56,23 +61,7 @@ export async function handleWebDAV(request: Request, env: any) {
 
   /**
    * =========================
-   * ROOT (MUST NEVER FAIL)
-   * /webdav OR /webdav/zotero
-   * =========================
-   */
-  if (!path || path === "zotero") {
-    return new Response("WebDAV root", {
-      status: 200,
-      headers: {
-        DAV: "1,2",
-        "Content-Type": "text/plain",
-      },
-    });
-  }
-
-  /**
-   * =========================
-   * LOCK (Zotero requires it)
+   * LOCK / UNLOCK (Zotero requires presence)
    * =========================
    */
   if (request.method === "LOCK") {
@@ -97,24 +86,44 @@ export async function handleWebDAV(request: Request, env: any) {
 
   /**
    * =========================
-   * FILE LOOKUP
+   * ROOT (CRITICAL: must never fail)
+   * /webdav OR /webdav/zotero
+   * =========================
+   */
+  if (isRoot || path === "zotero") {
+    return new Response("WebDAV root", {
+      status: 200,
+      headers: {
+        "Content-Type": "text/plain",
+        DAV: "1,2",
+      },
+    });
+  }
+
+  /**
+   * =========================
+   * LOOKUP OBJECT
    * =========================
    */
   const obj = key ? await storage.r2.get(key, env) : null;
 
   /**
    * =========================
-   * PROPFIND (CRITICAL FIXED VERSION)
+   * PROPFIND (Zotero-critical behaviour)
    * =========================
    */
   if (request.method === "PROPFIND") {
+    const depth = request.headers.get("Depth") ?? "1";
+
     const prefix = key ? key + "/" : BASE_PREFIX;
 
     const items = await storage.r2.list(prefix, env);
 
     const responses: string[] = [];
 
-    // SELF NODE
+    /**
+     * SELF NODE (VERY IMPORTANT: prevents Zotero sync bug)
+     */
     responses.push(`
 <d:response>
   <d:href>/webdav/${path}</d:href>
@@ -128,7 +137,9 @@ export async function handleWebDAV(request: Request, env: any) {
   </d:propstat>
 </d:response>`);
 
-    // CHILDREN (FIXED: correct R2 list shape)
+    /**
+     * CHILDREN
+     */
     for (const item of items) {
       const clean = item.key.replace(BASE_PREFIX, "");
       const isFolder = item.key.endsWith("/.folder");
