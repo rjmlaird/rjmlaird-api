@@ -103,6 +103,10 @@ function badRequest() {
   return new Response("Bad request", { status: 400 });
 }
 
+function forbidden() {
+  return new Response("Forbidden", { status: 403 });
+}
+
 function conflict() {
   return new Response("Conflict", { status: 409 });
 }
@@ -223,6 +227,12 @@ async function exists(key: string, env: any): Promise<DavNode | null> {
   return null;
 }
 
+async function collectionExists(key: string, env: any): Promise<boolean> {
+  if (key === BASE_PREFIX) return true;
+  const node = await exists(key, env);
+  return !!node && node.kind === "collection";
+}
+
 async function parentExists(pathKey: string, env: any): Promise<boolean> {
   const parent = pathKey.includes("/")
     ? pathKey.slice(0, pathKey.lastIndexOf("/"))
@@ -266,6 +276,10 @@ async function collectCollectionKeysRecursive(prefixKey: string, env: any): Prom
   const prefix = `${prefixKey}/`;
   const items = normalizeList(await storage.r2.list(prefix, env));
   return items.map((x) => x.key).filter(nonNullable);
+}
+
+function rootNode(): DavNode {
+  return { key: BASE_PREFIX, kind: "collection", etag: etagFor(BASE_PREFIX, 0) };
 }
 
 export async function handleWebDAV(request: Request, env: any) {
@@ -356,9 +370,11 @@ export async function handleWebDAV(request: Request, env: any) {
     return preconditionFailed();
   }
 
-  const current = key
-    ? await exists(key, env)
-    : ({ key: BASE_PREFIX, kind: "collection" } as DavNode);
+  const current = root
+    ? rootNode()
+    : key
+      ? await exists(key, env)
+      : null;
 
   if (request.method === "PROPFIND") {
     if (!current) return notFound();
@@ -422,6 +438,7 @@ export async function handleWebDAV(request: Request, env: any) {
 
   if (request.method === "MKCOL") {
     if (!key) return badRequest();
+    if (root) return methodNotAllowed();
     if (current) return conflict();
     if (!(await parentExists(key, env))) return conflict();
 
@@ -431,6 +448,7 @@ export async function handleWebDAV(request: Request, env: any) {
 
   if (request.method === "PUT") {
     if (!key) return badRequest();
+    if (root) return methodNotAllowed();
 
     const lockResp = await requireWriteLock(key, request, env);
     if (lockResp) return lockResp;
@@ -452,7 +470,14 @@ export async function handleWebDAV(request: Request, env: any) {
   }
 
   if (request.method === "GET") {
-    if (!current || current.kind === "collection") return notFound();
+    if (!current) return notFound();
+
+    if (current.kind === "collection") {
+      if (root) {
+        return new Response("WebDAV root", { status: 200, headers: { DAV: DAV_HEADER } });
+      }
+      return methodNotAllowed();
+    }
 
     const obj = await storage.r2.get(key!, env);
     if (!obj) return notFound();
@@ -470,6 +495,7 @@ export async function handleWebDAV(request: Request, env: any) {
 
   if (request.method === "DELETE") {
     if (!current) return notFound();
+    if (root) return forbidden();
 
     const lockResp = await requireWriteLock(key!, request, env);
     if (lockResp) return lockResp;
