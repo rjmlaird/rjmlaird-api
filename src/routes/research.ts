@@ -3,6 +3,7 @@ import { storage } from "../services/storage";
 
 const PAPERS_PREFIX = "papers";
 const ZOTERO_PAGE_LIMIT = 50;
+const ZOTERO_SYNC_MAX_PAGES = 10;
 const MAX_SCAN_ITEMS = 200;
 const MAX_RESULTS = 100;
 const MAX_BODY_TEXT = 200_000;
@@ -197,25 +198,50 @@ async function fetchZoteroPage(env: ResearchEnv, start: number, limit: number) {
   return Array.isArray(data) ? (data as ZoteroItem[]) : [];
 }
 
-async function syncZoteroPageToR2(env: ResearchEnv, start = 0, limit = ZOTERO_PAGE_LIMIT) {
+async function syncZoteroBatchToR2(env: ResearchEnv, start = 0, limit = ZOTERO_PAGE_LIMIT) {
   const pageLimit = clamp(limit, 1, ZOTERO_PAGE_LIMIT);
-  const page = await fetchZoteroPage(env, start, pageLimit);
-  const written: Array<{ key: string; record: PaperRecord }> = [];
+  let currentStart = clamp(start, 0, 1_000_000);
+  let pages = 0;
+  let fetched = 0;
+  let written = 0;
+  const items: Array<{ key: string; record: PaperRecord }> = [];
 
-  for (const item of page) {
-    const record = zoteroToPaper(item);
-    if (!record) continue;
-    const key = await writePaperRecord(env, record);
-    written.push({ key, record });
+  while (pages < ZOTERO_SYNC_MAX_PAGES) {
+    const page = await fetchZoteroPage(env, currentStart, pageLimit);
+    pages += 1;
+    fetched += page.length;
+
+    for (const item of page) {
+      const record = zoteroToPaper(item);
+      if (!record) continue;
+      const key = await writePaperRecord(env, record);
+      written += 1;
+      items.push({ key, record });
+    }
+
+    if (page.length < pageLimit) {
+      return {
+        fetched,
+        written,
+        start,
+        limit: pageLimit,
+        pages,
+        nextStart: null,
+        items,
+      };
+    }
+
+    currentStart += pageLimit;
   }
 
   return {
-    fetched: page.length,
-    written: written.length,
+    fetched,
+    written,
     start,
     limit: pageLimit,
-    nextStart: page.length === pageLimit ? start + pageLimit : null,
-    items: written,
+    pages,
+    nextStart: currentStart,
+    items,
   };
 }
 
@@ -324,7 +350,7 @@ export async function handleResearch(request: Request, env: ResearchEnv) {
       try {
         const start = clamp(body.zotero?.start ?? 0, 0, 1_000_000);
         const limit = clamp(body.zotero?.limit ?? ZOTERO_PAGE_LIMIT, 1, ZOTERO_PAGE_LIMIT);
-        const result = await syncZoteroPageToR2(env, start, limit);
+        const result = await syncZoteroBatchToR2(env, start, limit);
 
         return json(
           {
@@ -373,12 +399,14 @@ export async function handleResearch(request: Request, env: ResearchEnv) {
       title: record?.title ?? null,
     }));
 
-    const edges = records.flatMap(({ item, record }) =>
-      (record?.links ?? []).slice(0, 20).map((target) => ({
-        from: item.key,
-        to: target,
-      }))
-    ).slice(0, 500);
+    const edges = records
+      .flatMap(({ item, record }) =>
+        (record?.links ?? []).slice(0, 20).map((target) => ({
+          from: item.key,
+          to: target,
+        }))
+      )
+      .slice(0, 500);
 
     return json({
       nodes: nodes.slice(0, MAX_SCAN_ITEMS),
