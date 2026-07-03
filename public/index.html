@@ -1,4 +1,5 @@
-<!doctype html>
+app.get("/", (c) => {
+  return c.html(`<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
@@ -7,46 +8,180 @@
   <title>rjmlaird API</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.17.14/swagger-ui.css" crossorigin="anonymous">
   <style>
+    :root {
+      --bg: #07111f;
+      --panel: #0b1730;
+      --panel-2: #0f1f3d;
+      --border: #1f335d;
+      --text: #e5eefc;
+      --muted: #9ab0d1;
+      --accent: #7dd3fc;
+      --accent-2: #60a5fa;
+    }
+
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: system-ui, sans-serif;
-      background: #0b0f17;
-      color: #e5e7eb;
+      background:
+        radial-gradient(circle at top, rgba(96,165,250,0.14), transparent 28%),
+        linear-gradient(180deg, #06101d 0%, #07111f 100%);
+      color: var(--text);
     }
-    .topbar {
-      max-width: 1200px;
+
+    .shell {
+      max-width: 1280px;
       margin: 0 auto;
-      padding: 32px 20px 12px;
+      padding: 32px 20px 48px;
     }
-    .topbar h1 { margin: 0 0 6px; }
-    .topbar p { margin: 0; color: #9ca3af; }
-    .panel {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 16px 20px 48px;
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.4fr auto;
+      gap: 20px;
+      align-items: end;
+      margin-bottom: 20px;
     }
-    .swagger-shell {
-      background: #111827;
-      border: 1px solid #1f2937;
-      border-radius: 12px;
+
+    .brand h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: -0.03em;
+    }
+
+    .brand p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      max-width: 62ch;
+    }
+
+    .meta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .chip {
+      border: 1px solid var(--border);
+      background: rgba(15, 31, 61, 0.75);
+      color: var(--text);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+    }
+
+    .docs-card {
+      border: 1px solid var(--border);
+      background: rgba(11, 23, 48, 0.78);
+      border-radius: 18px;
       overflow: hidden;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+      backdrop-filter: blur(10px);
     }
+
+    .docs-head {
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(15, 31, 61, 0.6);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .docs-head strong {
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+    }
+
+    .docs-head a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
     #swagger-ui {
       background: #fff;
+      min-height: 70vh;
     }
+
     .swagger-ui .topbar {
       display: none;
+    }
+
+    .swagger-ui {
+      background: #fff;
+    }
+
+    .swagger-ui .info .title small {
+      display: none;
+    }
+
+    .swagger-ui .info {
+      margin: 0;
+      padding: 18px 18px 0;
+    }
+
+    .swagger-ui .scheme-container {
+      background: #f8fbff;
+      border-bottom: 1px solid #e4ecf7;
+      box-shadow: none;
+      padding: 14px 18px;
+    }
+
+    .swagger-ui .opblock {
+      border-radius: 12px;
+      margin: 0 0 12px;
+      box-shadow: none;
+    }
+
+    .swagger-ui .opblock.opblock-get {
+      border-color: #bfe8ff;
+    }
+
+    .swagger-ui .opblock.opblock-post {
+      border-color: #c7f0d8;
+    }
+
+    .swagger-ui .opblock-summary {
+      padding: 10px 14px;
+    }
+
+    .swagger-ui .btn {
+      border-radius: 10px;
+    }
+
+    @media (max-width: 720px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .meta {
+        justify-content: flex-start;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="topbar">
-    <h1>rjmlaird API</h1>
-    <p>GitHub-powered CV + dynamic JSON API (Cloudflare Workers)</p>
-  </div>
+  <div class="shell">
+    <div class="hero">
+      <div class="brand">
+        <h1>rjmlaird API</h1>
+        <p>GitHub-powered CV + research + WebDAV API, documented live through Swagger UI.</p>
+      </div>
+      <div class="meta">
+        <div class="chip">Cloudflare Workers</div>
+        <div class="chip">OpenAPI 3.1</div>
+        <div class="chip">Live docs</div>
+      </div>
+    </div>
 
-  <div class="panel">
-    <div class="swagger-shell">
+    <div class="docs-card">
+      <div class="docs-head">
+        <strong>API Reference</strong>
+        <a href="/openapi.json" target="_blank" rel="noreferrer">Open raw spec</a>
+      </div>
       <div id="swagger-ui"></div>
     </div>
   </div>
@@ -59,10 +194,14 @@
         url: '/openapi.json',
         dom_id: '#swagger-ui',
         deepLinking: true,
+        layout: 'BaseLayout',
+        docExpansion: 'list',
+        filter: true,
+        displayRequestDuration: true,
         presets: [SwaggerUIBundle.presets.apis],
-        layout: 'BaseLayout'
       });
     };
   </script>
 </body>
-</html>
+</html>`);
+});
