@@ -1,0 +1,326 @@
+{
+  "certifications": [
+    {
+      "id": 1,
+      "name": "Certificate in Professional Digital Marketing",
+      "issuer": "Chartered Institute of Marketing (CIM)",
+      "type": "Certification",
+      "category": "Marketing"
+    },
+    {
+      "id": 2,
+      "name": "Marketing Strategy Masterclass",
+      "issuer": "Chartered Institute of Marketing (CIM)",
+      "type": "Certification",
+      "category": "Marketing"
+    },
+    {
+      "id": 3,
+      "name": "Applied Marketing",
+      "issuer": "Chartered Institute of Marketing (CIM)",
+      "type": "Certification",
+      "category": "Marketing"
+    },
+    {
+      "id": 4,
+      "name": "Copywriting Masterclass",
+      "issuer": "Chartered Institute of Marketing (CIM)",
+      "type": "Certification",
+      "category": "Writing"
+    },
+    {
+      "id": 5,
+      "name": "Planning Campaigns",
+      "issuer": "Chartered Institute of Marketing (CIM)",
+      "type": "Certification",
+      "category": "Marketing"
+    },
+    {
+      "id": 6,
+      "name": "Digital Marketing Techniques",
+      "issuer": "Chartered Institute of Marketing (CIM)",
+      "type": "Certification",
+      "category": "Marketing"
+    },
+    {
+      "id": 7,
+      "name": "Digital Copywriting for Websites",
+      "issuer": "Chartered Institute of Marketing (CIM)",
+      "type": "Certification",
+      "category": "Writing"
+    },
+    {
+      "id": 8,
+      "name": "Marketing Fundamentals",
+      "issuer": "Chartered Institute of Marketing (CIM)",
+      "type": "Certification",
+      "category": "Marketing"
+    },
+    {
+      "id": 9,
+      "name": "Equity, Diversity and Inclusion: Series 1",
+      "issuer": "Chartered Institute of Public Relations (CIPR)",
+      "type": "Certification",
+      "category": "Communications"
+    },
+    {
+      "id": 10,
+      "name": "Introduction to PR",
+      "issuer": "Chartered Institute of Public Relations (CIPR)",
+      "type": "Certification",
+      "category": "Communications"
+    },
+    {
+      "id": 11,
+      "name": "Emergency First Aid at Work",
+      "issuer": "First Aid",
+      "type": "Certification",
+      "category": "Health & Safety"
+    },
+    {
+      "id": 12,
+      "name": "Business",
+      "issuer": "Rebel Business School",
+      "type": "Certification",
+      "category": "Business"
+    },
+    {
+      "id": 13,
+      "name": "Level 1 Award In Enterprising Skills and Employability",
+      "issuer": "Rebel Business School",
+      "type": "Certification",
+      "category": "Business"
+    },
+    {
+      "id": 14,
+      "name": "Level 1 Award in Understanding Enterprise",
+      "issuer": "Rebel Business School",
+      "type": "Certification",
+      "category": "Business"
+    },
+    {
+      "id": 15,
+      "name": "Enterprise Design Thinking Practitioner",
+      "issuer": "IBM",
+      "type": "Certification",
+      "category": "Product & Strategy"
+    },
+    {
+      "id": 16,
+      "name": "Enterprise Design Thinking Co-Creator",
+      "issuer": "IBM",
+      "type": "Certification",
+      "category": "Product & Strategy"
+    },
+    {
+      "id": 17,
+      "name": "APM Associate",
+      "issuer": "Association for Project Management (APM)",
+      "type": "Certification",
+      "category": "Project Management"
+    },
+    {
+      "id": 18,
+      "name": "Project Management Training",
+      "issuer": "Die Beratung Judith Andresen",
+      "type": "Training",
+      "category": "Project Management"
+    },
+    {
+      "id": 19,
+      "name": "Google Analytics",
+      "issuer": "Google",
+      "type": "Certification",
+      "category": "Analytics"
+    },
+    {
+      "id": 20,
+      "name": "Fundamentals of Digital Marketing",
+      "issuer": "Google",
+      "type": "Certification",
+      "category": "Marketing"
+    },
+    {
+      "id": 21,
+      "name": "Google News Initiative Training Center Certification",
+      "issuer": "Google",
+      "type": "Certification",
+      "category": "Media"
+    },
+    {
+      "id": 22,
+      "name": "Content Marketing",
+      "issuer": "HubSpot Academy",
+      "type": "Certification",
+      "category": "Marketing"
+    },
+    {
+      "id": 23,
+      "name": "Inbound Marketing",
+      "issuer": "HubSpot Academy",
+      "type": "Certification",
+      "category": "Marketing"
+    },
+    {
+      "id": 24,
+      "name": "Social Media Marketing",
+      "issuer": "HubSpot Academy",
+      "type": "Certification",
+      "category": "Marketing"
+    },
+    {
+      "id": 25,
+      "name": "Green Digital Skills Certificate",
+      "issuer": "INCO Academy",
+      "type": "Certification",
+      "category": "Sustainability"
+    },
+    {
+      "id": 26,
+      "name": "Official ISC2 Certified in Cybersecurity (CC) Self-Paced Training - 1M",
+      "issuer": "International Information System Security Certification Consortium (ISC2)",
+      "type": "Training",
+      "category": "Cybersecurity"
+    },
+    {
+      "id": 27,
+      "name": "Certified in Cybersecurity (CC)",
+      "issuer": "International Information System Security Certification Consortium (ISC2)",
+      "type": "Certification",
+      "category": "Cybersecurity"
+    },
+    {
+      "id": 28,
+      "name": "Data Privacy & Protection: Compliance Requirements",
+      "issuer": "International Information System Security Certification Consortium (ISC2)",
+      "type": "Certification",
+      "category": "Cybersecurity"
+    },
+    {
+      "id": 29,
+      "name": "Supply Chain Security Fundamentals",
+      "issuer": "International Information System Security Certification Consortium (ISC2)",
+      "type": "Certification",
+      "category": "Cybersecurity"
+    },
+    {
+      "id": 30,
+      "name": "Introduction to Denial of Service Attacks",
+      "issuer": "International Information System Security Certification Consortium (ISC2)",
+      "type": "Certification",
+      "category": "Cybersecurity"
+    },
+    {
+      "id": 31,
+      "name": "Security in the IoT Ecosystem",
+      "issuer": "Open Systems Intelligence",
+      "type": "Certification",
+      "category": "Cybersecurity"
+    },
+    {
+      "id": 32,
+      "name": "Communication",
+      "issuer": "LinkedIn Learning",
+      "type": "Certification",
+      "category": "Communication"
+    },
+    {
+      "id": 33,
+      "name": "Amplifying Your Message Through Storytelling",
+      "issuer": "LinkedIn Learning",
+      "type": "Certification",
+      "category": "Communication"
+    },
+    {
+      "id": 34,
+      "name": "Communicate to Influence",
+      "issuer": "LinkedIn Learning",
+      "type": "Certification",
+      "category": "Communication"
+    },
+    {
+      "id": 35,
+      "name": "Communicating Across Cultures",
+      "issuer": "LinkedIn Learning",
+      "type": "Certification",
+      "category": "Communication"
+    },
+    {
+      "id": 36,
+      "name": "Agile Project Leadership",
+      "issuer": "LinkedIn Learning",
+      "type": "Certification",
+      "category": "Leadership"
+    },
+    {
+      "id": 37,
+      "name": "Leadership Foundations: Styles & Models",
+      "issuer": "LinkedIn Learning",
+      "type": "Certification",
+      "category": "Leadership"
+    },
+    {
+      "id": 38,
+      "name": "Building Resilience",
+      "issuer": "LinkedIn Learning",
+      "type": "Certification",
+      "category": "Leadership"
+    },
+    {
+      "id": 39,
+      "name": "Strategic Planning Foundations",
+      "issuer": "LinkedIn Learning",
+      "type": "Certification",
+      "category": "Strategy"
+    },
+    {
+      "id": 40,
+      "name": "Lean Technology Strategy",
+      "issuer": "LinkedIn Learning",
+      "type": "Certification",
+      "category": "Strategy"
+    },
+    {
+      "id": 41,
+      "name": "Video Strategies for High Engagement",
+      "issuer": "LinkedIn Learning",
+      "type": "Certification",
+      "category": "Marketing"
+    },
+    {
+      "id": 42,
+      "name": "5G Technology Strategy",
+      "issuer": "LinkedIn Learning",
+      "type": "Certification",
+      "category": "Technical"
+    },
+    {
+      "id": 43,
+      "name": "Introduction to Digital Twins",
+      "issuer": "LinkedIn Learning",
+      "type": "Certification",
+      "category": "Technical"
+    },
+    {
+      "id": 44,
+      "name": "Introduction to ESG",
+      "issuer": "LinkedIn Learning",
+      "type": "Certification",
+      "category": "Sustainability"
+    },
+    {
+      "id": 45,
+      "name": "Satellite Internet & Communications",
+      "issuer": "LinkedIn Learning",
+      "type": "Certification",
+      "category": "Space & Technology"
+    },
+    {
+      "id": 46,
+      "name": "Effective Communication in the Workplace",
+      "issuer": "The Open University",
+      "type": "Certification",
+      "category": "Communication"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "icon": "◐",
+    "meta": "Neurodiversity · Inclusion · Space sector",
+    "title": "Space for Neurodiversity",
+    "description": "Making the space sector genuinely accessible through structural change and community building.",
+    "points": [
+      "Employer engagement frameworks",
+      "Open-source community platform",
+      "Sector-wide research",
+      "Advocacy and events"
+    ],
+    "status": "Active initiative",
+    "cta": "Get involved →",
+    "link": "/contact",
+    "color": "var(--violet)"
+  }
+]

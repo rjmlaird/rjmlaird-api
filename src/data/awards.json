@@ -1,0 +1,208 @@
+{
+  "awards": [
+    {
+      "id": "uk-space-conference-2019-panel",
+      "title": "Invited Panellist",
+      "issuer": "UK Space Conference",
+      "year": 2019,
+      "type": "conference_participation",
+      "role": "Panellist",
+      "event": "UK Space Conference 2019",
+      "session_title": "The Changing Landscape of Funding and Finance: Policies, Players and Partners",
+      "keywords": [
+        "Space Policy",
+        "Space Funding",
+        "Space Industry Strategy",
+        "Conference Speaker",
+        "UK Space Sector",
+        "Industry Engagement"
+      ],
+      "entities": [
+        "UK Space Conference"
+      ]
+    },
+
+    {
+      "id": "communicator-awards-2017-esa",
+      "title": "Award of Excellence",
+      "issuer": "The Communicator Awards",
+      "year": 2017,
+      "type": "award",
+      "project": "Lunar Exploration Interactive Documentary",
+      "category": "User Interface / Features",
+      "client": "European Space Agency",
+      "keywords": [
+        "Science Communication",
+        "Interactive Media",
+        "UX Design",
+        "Space Outreach",
+        "ESA Communication",
+        "Digital Storytelling"
+      ],
+      "entities": [
+        "European Space Agency",
+        "The Communicator Awards"
+      ]
+    },
+
+    {
+      "id": "isu-ssp-scholarship-2013",
+      "title": "Scholarship Recipient",
+      "issuer": "International Space University",
+      "year": 2013,
+      "value": "€16,500",
+      "programme": "Space Studies Programme (SSP)",
+      "funded_by": [
+        "UK Space Agency",
+        "European Space Agency"
+      ],
+      "keywords": [
+        "Space Studies Programme",
+        "Space Education",
+        "Satellite Applications",
+        "International Collaboration",
+        "Space Policy Training"
+      ],
+      "entities": [
+        "International Space University",
+        "UK Space Agency",
+        "European Space Agency"
+      ]
+    },
+
+    {
+      "id": "ras-grant-sgc-2012",
+      "title": "Grant Recipient",
+      "issuer": "Royal Astronomical Society",
+      "year": 2012,
+      "event": "Space Generation Congress",
+      "location": "Naples, Italy",
+      "keywords": [
+        "Astronomy",
+        "Space Generation Congress",
+        "Research Funding",
+        "Scientific Outreach",
+        "Early Career Research"
+      ],
+      "entities": [
+        "Royal Astronomical Society",
+        "Space Generation Congress"
+      ]
+    },
+
+    {
+      "id": "eso-observing-time-ntt-2010",
+      "title": "Observing Time Award (Co-I)",
+      "issuer": "European Southern Observatory",
+      "year": 2010,
+      "instrument": "New Technology Telescope (NTT)",
+      "location": "La Silla, Chile",
+      "duration": "3 nights",
+      "research_area": "YORP effect on small asteroids",
+      "keywords": [
+        "Observational Astronomy",
+        "Asteroids",
+        "Planetary Science",
+        "Telescope Time Allocation",
+        "Scientific Research",
+        "ESO"
+      ],
+      "entities": [
+        "European Southern Observatory"
+      ]
+    },
+
+    {
+      "id": "palomar-observing-time-2010",
+      "title": "Observing Time Award (Co-I)",
+      "issuer": "Palomar Observatory",
+      "year": 2010,
+      "instrument": "Hale Telescope (5m)",
+      "location": "California, USA",
+      "duration": "2 nights",
+      "research_area": "SEPPCoN Survey",
+      "keywords": [
+        "Astronomy",
+        "Cometary Science",
+        "Observational Data",
+        "Planetary Science",
+        "Space Research"
+      ],
+      "entities": [
+        "Palomar Observatory"
+      ]
+    },
+
+    {
+      "id": "ras-iya-2009-rep",
+      "title": "UK Student Representative",
+      "issuer": "Royal Astronomical Society",
+      "year": 2009,
+      "event": "International Year of Astronomy Opening Ceremony",
+      "location": "UNESCO, Paris",
+      "keywords": [
+        "Science Diplomacy",
+        "Astronomy Outreach",
+        "Youth Representation",
+        "Space Advocacy",
+        "International Collaboration"
+      ],
+      "entities": [
+        "Royal Astronomical Society",
+        "UNESCO"
+      ]
+    },
+
+    {
+      "id": "sir-arthur-clarke-nomination-2010",
+      "title": "Nominee",
+      "issuer": "British Interplanetary Society",
+      "year": 2010,
+      "award": "Sir Arthur Clarke Awards",
+      "keywords": [
+        "Space Innovation",
+        "Space Industry Recognition",
+        "Science Communication",
+        "UK Space Sector"
+      ],
+      "entities": [
+        "British Interplanetary Society"
+      ]
+    },
+
+    {
+      "id": "sure-fellowship-leicester",
+      "title": "SURE Fellowship",
+      "issuer": "University of Leicester",
+      "year": 2007,
+      "keywords": [
+        "Astrophysics Research",
+        "Student Fellowship",
+        "Scientific Research",
+        "Data Analysis",
+        "University Research Grant"
+      ],
+      "entities": [
+        "University of Leicester"
+      ]
+    },
+
+    {
+      "id": "school-awards-early",
+      "title": "Academic & Service Awards",
+      "issuer": "Skegness Grammar School",
+      "year": 2005,
+      "items": [
+        "Magdalen Cup for Science",
+        "King Prize for Service"
+      ],
+      "keywords": [
+        "Academic Excellence",
+        "Science Achievement",
+        "Leadership",
+        "Service Award",
+        "Early Academic Achievement"
+      ]
+    }
+  ]
+}

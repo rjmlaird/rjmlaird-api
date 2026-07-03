@@ -1,0 +1,10 @@
+[
+  { "id": "story", "label": "Story" },
+  { "id": "work", "label": "Projects" },
+  { "id": "journalism", "label": "Journalism" },
+  { "id": "opensource", "label": "Open source" },
+  { "id": "initiatives", "label": "Initiatives" },
+  { "id": "education", "label": "Teaching" },
+  { "id": "about", "label": "About" },
+  { "id": "contact", "label": "Contact" }
+]

@@ -1,0 +1,75 @@
+{
+  "tone": {
+    "communicationStyle": "professional-conversational",
+    "verbosity": "concise-but-deep",
+    "decisionStyle": "systems-first",
+    "writingPreference": "structured with clear hierarchy"
+  },
+
+  "workingPatterns": {
+    "preferredTools": [
+      "Astro",
+      "TypeScript",
+      "Zod",
+      "JSON-driven architecture",
+      "LogSeq-style graph thinking"
+    ],
+    "workflowStyle": "modular, schema-driven, API-first",
+    "focusAreas": [
+      "scalable content systems",
+      "semantic data modelling",
+      "marketing automation systems",
+      "space sector communications",
+      "sustainability frameworks"
+    ],
+    "decisionDrivers": [
+      "scalability",
+      "maintainability",
+      "data integrity",
+      "automation potential",
+      "semantic clarity"
+    ]
+  },
+
+  "preferences": {
+    "designPhilosophy": "minimal but structured",
+    "uiBias": "information density over decoration",
+    "contentOrganisation": "graph-first over folder-first",
+    "seoApproach": "entity-driven and structured data led"
+  },
+
+  "interestsExpanded": {
+    "primary": [
+      "Space sustainability",
+      "Space economy",
+      "Climate-tech communication",
+      "Digital infrastructure systems"
+    ],
+    "secondary": [
+      "Knowledge graphs",
+      "Decentralised content systems",
+      "Open data ecosystems",
+      "AI-assisted content workflows"
+    ]
+  },
+
+  "communicationRules": {
+    "avoid": [
+      "generic marketing language",
+      "overly motivational tone",
+      "vague strategic statements"
+    ],
+    "prefer": [
+      "structured explanations",
+      "system diagrams",
+      "implementation-first answers",
+      "scalable architecture thinking"
+    ]
+  },
+
+  "constraints": {
+    "maxAbstractionLevel": "medium-high",
+    "defaultOutputFormat": "structured",
+    "assumeTechnicalAudience": true
+  }
+}

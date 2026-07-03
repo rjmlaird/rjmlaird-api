@@ -1,0 +1,68 @@
+[
+   {
+      "id": 1,
+      "title": "Full-Stack Development",
+      "list": [
+         "Frontend & Backend Engineering",
+         "API Design & Integration",
+         "Database Architecture",
+         "Responsive Web Applications",
+         "Real-time Features & WebSockets"
+      ]
+   },
+   {
+      "id": 2,
+      "title": "Cloud & DevOps",
+      "list": [
+         "Cloud Infrastructure Design",
+         "Infrastructure as Code",
+         "CI/CD Pipeline Automation",
+         "Containerization & Orchestration",
+         "Blue-Green & Zero-Downtime Deployments"
+      ]
+   },
+   {
+      "id": 3,
+      "title": "AI/ML & MLOps",
+      "list": [
+         "End-to-End ML Pipelines",
+         "Model Training & Deployment",
+         "LLM Integration & RAG Systems",
+         "MLOps Automation & Monitoring",
+         "Data Analysis & Visualization"
+      ]
+   },
+   {
+      "id": 4,
+      "title": "AI Agents & Tooling",
+      "list": [
+         "MCP Server Development",
+         "Agent Skills & Workflow Design",
+         "AI-Powered Developer Tools",
+         "Automation & Productivity Systems",
+         "Open Source Community Building"
+      ]
+   },
+   {
+      "id": 5,
+      "title": "Cloud Consulting",
+      "list": [
+         "Cloud Migration Strategy",
+         "Architecture Design & Review",
+         "Security & Compliance Hardening",
+         "Cost Optimization",
+         "Performance Tuning"
+      ]
+   },
+   {
+      "id": 6,
+      "title": "Competitive Programming",
+      "list": [
+         "Algorithm Design & Analysis",
+         "Dynamic Programming",
+         "2000+ Problems Solved",
+         "LeetCode Knight Rating",
+         "Contest Strategy & Mentoring"
+      ]
+   }
+]

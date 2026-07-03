@@ -216,6 +216,7 @@ app.get("/openapi.json", (c) => {
                   "memberships",
                   "reviews",
                   "experience",
+                  "education",
                 ],
               },
               description: "The CV collection name.",

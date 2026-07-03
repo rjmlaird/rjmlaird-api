@@ -1,0 +1,59 @@
+{
+  "institution": "University of Kent",
+  "location": "Canterbury, UK",
+  "programmes": [
+    {
+      "id": "kent-fy-physics-foundation",
+      "programme": "Physics Foundation Year",
+      "level": "foundation",
+      "modules": [
+        {
+          "code": "PH020",
+          "title": "Algebra and Arithmetic",
+          "level": 3,
+          "credits": 15,
+          "term": "Winter 2009/10",
+          "type": "mathematics",
+          "tags": ["algebra", "mathematics", "foundations", "physics-prep"]
+        },
+        {
+          "code": "PH020",
+          "title": "Algebra and Arithmetic",
+          "level": 3,
+          "credits": 15,
+          "term": "Winter 2011/12",
+          "type": "mathematics",
+          "tags": ["algebra", "mathematics", "foundations", "physics-prep"]
+        },
+        {
+          "code": "PS370",
+          "title": "Skills for Physicists",
+          "level": 4,
+          "credits": 15,
+          "term": "Winter 2009/10",
+          "type": "skills",
+          "tags": ["problem-solving", "experimental-skills", "data-analysis", "physics-foundations"]
+        },
+        {
+          "code": "PH302",
+          "title": "Computing Skills",
+          "level": 4,
+          "credits": 15,
+          "term": "Winter 2011/12",
+          "type": "computing",
+          "tags": ["python", "programming", "numerical-methods", "scientific-computing"]
+        }
+      ]
+    }
+  ],
+
+  "summary": {
+    "focus": "Foundational physics education bridging mathematics, computation, and core scientific reasoning.",
+    "skills_developed": [
+      "Mathematical reasoning",
+      "Computational problem solving",
+      "Scientific data interpretation",
+      "Physics methodology fundamentals"
+    ]
+  }
+}

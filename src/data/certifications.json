@@ -1,0 +1,106 @@
+{
+  "certifications": [
+    {
+      "organisation": "Chartered Institute of Marketing (CIM)",
+      "items": [
+        "Certificate in Professional Digital Marketing",
+        "Marketing Strategy Masterclass",
+        "Applied Marketing",
+        "Copywriting Masterclass",
+        "Planning Campaigns",
+        "Digital Marketing Techniques",
+        "Digital Copywriting for Websites",
+        "Marketing Fundamentals"
+      ]
+    },
+    {
+      "organisation": "Chartered Institute of Public Relations (CIPR)",
+      "items": [
+        "Equity, Diversity and Inclusion: Series 1",
+        "Introduction to PR"
+      ]
+    },
+    {
+      "organisation": "First Aid (UK)",
+      "items": [
+        "First Aid",
+        "Emergency First Aid at Work"
+      ]
+    },
+    {
+      "organisation": "Rebel Business School",
+      "url": "https://therebelschool.com",
+      "items": [
+        "Level 1 Award in Enterprising Skills and Employability",
+        "Level 1 Award in Understanding Enterprise",
+        "Enterprise Design Thinking Practitioner",
+        "Enterprise Design Thinking Co-Creator"
+      ]
+    },
+    {
+      "organisation": "Association for Project Management (APM)",
+      "items": [
+        "APM Associate",
+        "Project Management Training (Die Beratung Judith Andresen)"
+      ]
+    },
+    {
+      "organisation": "Google",
+      "items": [
+        "Google Analytics Certification",
+        "Fundamentals of Digital Marketing",
+        "Google News Initiative Training Center Certification"
+      ]
+    },
+    {
+      "organisation": "HubSpot Academy",
+      "items": [
+        "Content Marketing",
+        "Inbound Marketing",
+        "Social Media Marketing"
+      ]
+    },
+    {
+      "organisation": "INCO Academy",
+      "items": [
+        "Green Digital Skills Certificate"
+      ]
+    },
+    {
+      "organisation": "ISC2 (International Information System Security Certification Consortium)",
+      "items": [
+        "Certified in Cybersecurity (CC)",
+        "Certified in Cybersecurity (CC) Self-Paced Training - 1M",
+        "Data Privacy & Protection: Compliance Requirements",
+        "Supply Chain Security Fundamentals",
+        "Introduction to Denial of Service Attacks",
+        "Open Systems Intelligence",
+        "Security in the IoT Ecosystem"
+      ]
+    },
+    {
+      "organisation": "LinkedIn Learning",
+      "items": [
+        "Amplifying Your Message Through Storytelling",
+        "Communicate to Influence",
+        "Communicating Across Cultures",
+        "Agile Project Leadership",
+        "Leadership Foundations: Styles & Models",
+        "Building Resilience",
+        "Strategic Planning Foundations",
+        "Lean Technology Strategy",
+        "Video Strategies for High Engagement",
+        "5G Technology Strategy",
+        "Introduction to Digital Twins",
+        "Introduction to ESG",
+        "Satellite Internet & Communications"
+      ]
+    },
+    {
+      "organisation": "The Open University",
+      "items": [
+        "Effective Communication in the Workplace"
+      ]
+    }
+  ]
+}
