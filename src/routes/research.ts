@@ -2,6 +2,7 @@ import { json } from "../lib/jsonResponse";
 import { storage } from "../services/storage";
 
 const PAPERS_PREFIX = "papers";
+const ZOTERO_PAGE_LIMIT = 100;
 
 type IngestBody = {
   source?: string;
@@ -131,7 +132,7 @@ function zoteroToPaper(item: ZoteroItem): PaperRecord | null {
   };
 }
 
-async function fetchZoteroItems(env: ResearchEnv, since?: number, limit?: number) {
+async function fetchZoteroPage(env: ResearchEnv, start: number, limit: number) {
   const userId = env.ZOTERO_USER_ID;
   const apiKey = env.ZOTERO_API_KEY;
 
@@ -140,8 +141,8 @@ async function fetchZoteroItems(env: ResearchEnv, since?: number, limit?: number
   }
 
   const url = new URL(`https://api.zotero.org/users/${userId}/items`);
-  if (since) url.searchParams.set("since", String(since));
-  if (limit) url.searchParams.set("limit", String(limit));
+  url.searchParams.set("start", String(start));
+  url.searchParams.set("limit", String(limit));
 
   const res = await fetch(url.toString(), {
     headers: {
@@ -156,6 +157,22 @@ async function fetchZoteroItems(env: ResearchEnv, since?: number, limit?: number
   }
 
   return (await res.json()) as ZoteroItem[];
+}
+
+async function fetchZoteroItems(env: ResearchEnv, since?: number, limit?: number) {
+  const all: ZoteroItem[] = [];
+  let start = since ?? 0;
+  const pageLimit = Math.min(limit ?? ZOTERO_PAGE_LIMIT, ZOTERO_PAGE_LIMIT);
+
+  while (true) {
+    const page = await fetchZoteroPage(env, start, pageLimit);
+    all.push(...page);
+
+    if (page.length < pageLimit) break;
+    start += pageLimit;
+  }
+
+  return all;
 }
 
 async function syncZoteroToR2(env: ResearchEnv, since?: number, limit?: number) {
