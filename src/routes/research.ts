@@ -1,15 +1,25 @@
 import { json } from "../lib/jsonResponse";
 import { storage } from "../services/storage";
 
+type IngestBody = {
+  source?: string;
+  title?: string;
+  tags?: string[];
+};
+
+const PAPERS_PREFIX = "papers";
+
 export async function handleResearch(request: Request, env: Env) {
   const url = new URL(request.url);
   const path = url.pathname.replace("/v1/research", "");
 
   /**
+   * ----------------------------------------
    * GET /papers
+   * ----------------------------------------
    */
   if (path === "/papers" && request.method === "GET") {
-    const items = await storage.r2.list("papers/", env);
+    const items = await storage.r2.list(`${PAPERS_PREFIX}/`, env);
 
     return json({
       source: "r2",
@@ -19,15 +29,26 @@ export async function handleResearch(request: Request, env: Env) {
   }
 
   /**
+   * ----------------------------------------
    * GET /paper/:id
+   * ----------------------------------------
    */
   if (path.startsWith("/paper/") && request.method === "GET") {
-    const key = path.replace("/paper/", "");
+    const id = path.replace("/paper/", "");
 
-    const item = await storage.r2.get(`papers/${key}`, env);
+    // IMPORTANT: match ingestion format (.json)
+    const key = `${PAPERS_PREFIX}/${id}.json`;
+
+    const item = await storage.r2.get(key, env);
 
     if (!item) {
-      return json({ error: "Not found" }, 404);
+      return json(
+        {
+          error: "Not found",
+          key,
+        },
+        404
+      );
     }
 
     return json({
@@ -38,25 +59,27 @@ export async function handleResearch(request: Request, env: Env) {
   }
 
   /**
+   * ----------------------------------------
    * POST /ingest
+   * ----------------------------------------
    */
   if (path === "/ingest" && request.method === "POST") {
-    const body = (await request.json()) as {
-      source?: string;
-      title?: string;
-      tags?: string[];
-    };
+    const body = (await request.json()) as IngestBody;
+
+    const id = crypto.randomUUID();
 
     const record = {
-      id: crypto.randomUUID(),
+      id,
       source: body.source ?? "unknown",
       title: body.title ?? null,
       tags: body.tags ?? [],
       createdAt: new Date().toISOString(),
     };
 
+    const key = `${PAPERS_PREFIX}/${id}.json`;
+
     await storage.r2.put(
-      `papers/${record.id}.json`,
+      key,
       new TextEncoder().encode(JSON.stringify(record)),
       env,
       "application/json"
@@ -64,9 +87,21 @@ export async function handleResearch(request: Request, env: Env) {
 
     return json({
       status: "ingested",
+      key,
       record,
     });
   }
 
-  return json({ error: "Not found" }, 404);
+  /**
+   * ----------------------------------------
+   * FALLBACK
+   * ----------------------------------------
+   */
+  return json(
+    {
+      error: "Not found",
+      path,
+    },
+    404
+  );
 }

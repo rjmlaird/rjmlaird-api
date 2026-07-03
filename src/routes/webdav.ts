@@ -1,11 +1,16 @@
 export async function handleWebDAV(request: Request, env: any) {
-  const key = new URL(request.url)
-    .pathname
-    .replace(/^\/v1\/webdav\/?/, "");
+  const url = new URL(request.url);
 
-  if (!key) {
+  // normalise path safely (removes /v1/webdav and leading slash issues)
+  let key = url.pathname.replace(/^\/v1\/webdav\/?/, "");
+
+  // prevent accidental empty string collisions
+  if (key === "") {
     return new Response("WebDAV root", { status: 200 });
   }
+
+  // optional but IMPORTANT: ensure no leading slash survives
+  key = key.replace(/^\/+/, "");
 
   switch (request.method) {
     case "PUT": {
@@ -14,7 +19,7 @@ export async function handleWebDAV(request: Request, env: any) {
       await env.R2.put(key, body, {
         httpMetadata: {
           contentType:
-            request.headers.get("content-type") || "application/octet-stream",
+            request.headers.get("content-type") ?? "application/octet-stream",
         },
       });
 
@@ -23,13 +28,16 @@ export async function handleWebDAV(request: Request, env: any) {
 
     case "GET": {
       const obj = await env.R2.get(key);
-      if (!obj) return new Response("Not found", { status: 404 });
+
+      if (!obj) {
+        return new Response(`Not found: ${key}`, { status: 404 });
+      }
 
       return new Response(obj.body, {
         headers: {
           "Content-Type":
-            obj.httpMetadata?.contentType || "application/octet-stream",
-          "ETag": obj.etag || "",
+            obj.httpMetadata?.contentType ?? "application/octet-stream",
+          ETag: obj.etag ?? "",
         },
       });
     }

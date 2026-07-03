@@ -2,7 +2,7 @@ export interface R2ObjectMeta {
   key: string;
   size?: number;
   etag?: string;
-  uploaded?: string;
+  uploaded?: string; // ISO string (normalized)
   contentType?: string | null;
 }
 
@@ -17,7 +17,7 @@ export async function putR2Object(
 ) {
   return env.R2.put(key, body, {
     httpMetadata: {
-      contentType: contentType || "application/octet-stream",
+      contentType: contentType ?? "application/octet-stream",
     },
   });
 }
@@ -46,15 +46,15 @@ export async function deleteR2Object(env: Env, key: string) {
 }
 
 /**
- * LIST OBJECTS
+ * LIST OBJECTS (PAGINATED SAFE)
  */
 export async function listR2Objects(
   env: Env,
   prefix?: string
 ): Promise<R2ObjectMeta[]> {
-  const allObjects: R2ObjectMeta[] = [];
+  const all: R2ObjectMeta[] = [];
 
-  let cursor: string | undefined = undefined;
+  let cursor: string | undefined;
 
   do {
     const result = await env.R2.list({
@@ -63,16 +63,17 @@ export async function listR2Objects(
       limit: 1000,
     });
 
-  for (const obj of result.objects) {
-    allObjects.push({
-      key: obj.key,
-      size: obj.size,
-      uploaded: obj.uploaded?.toISOString(),
-    });
-  }
+    for (const obj of result.objects) {
+      all.push({
+        key: obj.key,
+        size: obj.size,
+        etag: obj.etag,
+        uploaded: obj.uploaded ? obj.uploaded.toISOString() : undefined,
+      });
+    }
 
     cursor = result.truncated ? result.cursor : undefined;
   } while (cursor);
 
-  return allObjects;
+  return all;
 }
