@@ -310,14 +310,14 @@
   <script>
     window.onload = () => {
       window.ui = SwaggerUIBundle({
-        url: '/openapi.json',
-        dom_id: '#swagger-ui',
+        url: "/openapi.json",
+        dom_id: "#swagger-ui",
         deepLinking: true,
-        layout: 'BaseLayout',
-        docExpansion: 'list',
-        filter: true,
+        layout: "BaseLayout",
+        docExpansion: "list",
+        filter: false,
         displayRequestDuration: true,
-        presets: [SwaggerUIBundle.presets.apis]
+        presets: [SwaggerUIBundle.presets.apis],
       });
     };
   </script>
