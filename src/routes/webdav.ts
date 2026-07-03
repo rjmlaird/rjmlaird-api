@@ -2,7 +2,8 @@ import { storage } from "../services/storage";
 
 const BASE_PREFIX = "zotero";
 const DAV_HEADER = "1,2";
-const ALLOW_HEADER = "OPTIONS, GET, PUT, DELETE, PROPFIND, HEAD, MKCOL, LOCK, UNLOCK";
+const ALLOW_HEADER =
+  "OPTIONS, GET, PUT, DELETE, PROPFIND, HEAD, MKCOL, LOCK, UNLOCK";
 const LOCK_TIMEOUT_SECONDS = 300;
 
 type DavKind = "file" | "collection";
@@ -67,12 +68,12 @@ function normalizeList(result: any): any[] {
   return [];
 }
 
-function isCollectionMarkerKey(key: string): boolean {
-  return key.endsWith("/.folder");
+function nonNullable<T>(value: T | null | undefined): value is T {
+  return value !== null && value !== undefined;
 }
 
-function isCollectionKey(key: string): boolean {
-  return key === BASE_PREFIX || isCollectionMarkerKey(key);
+function isCollectionMarkerKey(key: string): boolean {
+  return key.endsWith("/.folder");
 }
 
 function etagFor(key: string, size = 0): string {
@@ -83,11 +84,7 @@ function sortByKey(items: any[]) {
   return [...items].sort((a, b) => String(a.key).localeCompare(String(b.key)));
 }
 
-function xmlResponse(
-  body: string,
-  status: number,
-  headers: Record<string, string> = {}
-) {
+function xmlResponse(body: string, status: number, headers: Record<string, string> = {}) {
   return new Response(body, {
     status,
     headers: {
@@ -136,15 +133,13 @@ function unauthorized() {
 }
 
 function parseAuthorizationHeader(request: Request): boolean {
-  const auth = request.headers.get("authorization");
-  return !!auth;
+  return !!request.headers.get("authorization");
 }
 
 function parseIfHeader(request: Request): string[] {
   const value = request.headers.get("if");
   if (!value) return [];
-  const matches = [...value.matchAll(/<([^>]+)>/g)];
-  return matches.map((m) => m[1]);
+  return [...value.matchAll(/<([^>]+)>/g)].map((m) => m[1]).filter(nonNullable);
 }
 
 function getLockTokenFromHeaders(request: Request): string | null {
@@ -152,7 +147,9 @@ function getLockTokenFromHeaders(request: Request): string | null {
   if (lockToken) return lockToken.replace(/^<|>$/g, "").trim();
 
   const ifTokens = parseIfHeader(request);
-  return ifTokens.find((token) => token.startsWith("urn:uuid:") || token.startsWith("opaquelocktoken:")) ?? null;
+  return ifTokens.find(
+    (token) => token.startsWith("urn:uuid:") || token.startsWith("opaquelocktoken:")
+  ) ?? null;
 }
 
 function lockKey(key: string): string {
@@ -163,8 +160,7 @@ async function getLockRecord(key: string, env: any): Promise<LockRecord | null> 
   const raw = await storage.r2.get(lockKey(key), env);
   if (!raw) return null;
 
-  const text = await raw.text?.();
-  if (!text) return null;
+  const text = await new Response(raw.body).text();
 
   try {
     const parsed = JSON.parse(text) as LockRecord;
@@ -181,7 +177,12 @@ async function getLockRecord(key: string, env: any): Promise<LockRecord | null> 
 }
 
 async function setLockRecord(record: LockRecord, env: any): Promise<void> {
-  await storage.r2.put(lockKey(record.key), JSON.stringify(record), env, "application/json");
+  await storage.r2.put(
+    lockKey(record.key),
+    new TextEncoder().encode(JSON.stringify(record)),
+    env,
+    "application/json"
+  );
 }
 
 async function deleteLockRecord(key: string, env: any): Promise<void> {
@@ -264,7 +265,7 @@ async function listCollectionChildren(current: DavNode, env: any): Promise<any[]
 async function collectCollectionKeysRecursive(prefixKey: string, env: any): Promise<string[]> {
   const prefix = `${prefixKey}/`;
   const items = normalizeList(await storage.r2.list(prefix, env));
-  return items.map((x) => x.key).filter(Boolean);
+  return items.map((x) => x.key).filter(nonNullable);
 }
 
 export async function handleWebDAV(request: Request, env: any) {
@@ -296,7 +297,7 @@ export async function handleWebDAV(request: Request, env: any) {
       const supplied = getLockTokenFromHeaders(request);
       if (!supplied || supplied !== existing.token) return locked();
 
-      const refreshed = {
+      const refreshed: LockRecord = {
         ...existing,
         expiresAt: Date.now() + LOCK_TIMEOUT_SECONDS * 1000,
       };
