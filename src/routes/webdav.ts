@@ -1,6 +1,6 @@
 import { storage } from "../services/storage";
 
-const BASE_PREFIX = "zotero/";
+const BASE_PREFIX = "zotero";
 
 /**
  * =========================
@@ -9,9 +9,11 @@ const BASE_PREFIX = "zotero/";
  */
 function normalizePath(raw: string) {
   return decodeURIComponent(raw)
-    .replace(/^\/(v1\/)?webdav\/?/, "")
     .replace(/^\/+/, "")
-    .replace(/^zotero\/?/, "");
+    .replace(/^v1\/webdav\/?/, "")
+    .replace(/^webdav\/?/, "")
+    .replace(/^zotero\/?/, "")
+    .replace(/\/+$/, "");
 }
 
 /**
@@ -19,14 +21,15 @@ function normalizePath(raw: string) {
  */
 function toKey(path: string | null) {
   if (!path) return null;
-  return `${BASE_PREFIX}${path}`;
+  return `${BASE_PREFIX}/${path}`;
 }
 
 /**
- * Canonical WebDAV href
+ * WebDAV href builder
  */
 function toHref(path: string) {
-  return `/webdav/${path}`;
+  if (!path) return "/webdav/zotero";
+  return `/webdav/zotero/${path}`;
 }
 
 /**
@@ -36,11 +39,13 @@ function toHref(path: string) {
  */
 export async function handleWebDAV(request: Request, env: any) {
   const url = new URL(request.url);
-
   const path = normalizePath(url.pathname);
   const key = toKey(path);
 
-  const isRoot = !path || path.length === 0;
+  const isRoot =
+    !path ||
+    path === "" ||
+    path === "zotero";
 
   /**
    * =========================
@@ -61,14 +66,20 @@ export async function handleWebDAV(request: Request, env: any) {
 
   /**
    * =========================
-   * LOCK / UNLOCK
+   * LOCK (Zotero compatibility)
    * =========================
    */
   if (request.method === "LOCK") {
     return new Response(
       `<?xml version="1.0" encoding="utf-8"?>
 <d:prop xmlns:d="DAV:">
-  <d:lockdiscovery/>
+  <d:lockdiscovery>
+    <d:activelock>
+      <d:locktoken>
+        <d:href>urn:uuid:fake-lock-token</d:href>
+      </d:locktoken>
+    </d:activelock>
+  </d:lockdiscovery>
 </d:prop>`,
       {
         status: 200,
@@ -86,42 +97,37 @@ export async function handleWebDAV(request: Request, env: any) {
 
   /**
    * =========================
-   * ROOT (CRITICAL FIX)
+   * ROOT
    * =========================
    */
   if (isRoot) {
     return new Response("WebDAV root", {
       status: 200,
       headers: {
-        "Content-Type": "text/plain",
         DAV: "1,2",
+        "Content-Type": "text/plain",
       },
     });
   }
 
-  /**
-   * =========================
-   * LOOKUP
-   * =========================
-   */
   const obj = key ? await storage.r2.get(key, env) : null;
 
   /**
    * =========================
-   * PROPFIND (FIXED ZOTERO CONTRACT)
+   * PROPFIND (CORE FIX)
    * =========================
    */
   if (request.method === "PROPFIND") {
     const depth = request.headers.get("Depth") ?? "1";
 
-    const prefix = key ? `${key}/` : BASE_PREFIX;
+    const prefix = key ? `${key}/` : `${BASE_PREFIX}/`;
 
     const items = await storage.r2.list(prefix, env);
 
     const responses: string[] = [];
 
     /**
-     * SELF NODE (FIXED: full DAV compliance)
+     * SELF NODE (ALWAYS REQUIRED)
      */
     responses.push(`
 <d:response>
@@ -130,32 +136,29 @@ export async function handleWebDAV(request: Request, env: any) {
     <d:prop>
       <d:resourcetype><d:collection/></d:resourcetype>
       <d:displayname>${path || "zotero"}</d:displayname>
-      <d:getetag>"zotero-root"</d:getetag>
+      <d:getetag>"root"</d:getetag>
       <d:getcontentlength>0</d:getcontentlength>
-      <d:getlastmodified>Thu, 01 Jan 1970 00:00:00 GMT</d:getlastmodified>
     </d:prop>
     <d:status>HTTP/1.1 200 OK</d:status>
   </d:propstat>
 </d:response>`);
 
     /**
-     * CHILDREN (Depth-aware)
+     * CHILDREN
      */
     if (depth !== "0") {
-      for (const item of items) {
-        const clean = item.key.replace(BASE_PREFIX, "");
-        const isFolder = item.key.endsWith("/.folder");
+      for (const item of items.objects ?? items) {
+        const clean = item.key.replace(`${BASE_PREFIX}/`, "");
+        const isFolder = clean.endsWith("/");
 
         responses.push(`
 <d:response>
-  <d:href>${toHref(clean.replace(/\/\.folder$/, ""))}</d:href>
+  <d:href>${toHref(clean.replace(/\/$/, ""))}</d:href>
   <d:propstat>
     <d:prop>
       <d:resourcetype>${isFolder ? "<d:collection/>" : ""}</d:resourcetype>
-      <d:displayname>${clean}</d:displayname>
       <d:getcontentlength>${item.size ?? 0}</d:getcontentlength>
       <d:getetag>${item.etag ?? ""}</d:getetag>
-      <d:getlastmodified>Thu, 01 Jan 1970 00:00:00 GMT</d:getlastmodified>
     </d:prop>
     <d:status>HTTP/1.1 200 OK</d:status>
   </d:propstat>
@@ -204,7 +207,7 @@ ${responses.join("\n")}
   if (request.method === "MKCOL") {
     if (!key) return new Response("Bad request", { status: 400 });
 
-    await storage.r2.put(`${key}/.folder`, new Uint8Array([]), env);
+    await storage.r2.put(`${key}/`, new Uint8Array([]), env);
 
     return new Response("Created", { status: 201 });
   }
