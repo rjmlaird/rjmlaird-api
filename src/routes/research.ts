@@ -120,14 +120,15 @@ function normalizeZoteroTags(tags?: Array<{ tag?: string } | string>) {
 
 function zoteroToPaper(item: ZoteroItem): PaperRecord | null {
   const data = item.data;
-  if (!data?.key) return null;
+  const zoteroKey = data?.key ?? item.key;
+  if (!zoteroKey) return null;
 
   return {
-    id: data.key,
+    id: zoteroKey,
     source: "zotero",
-    title: typeof data.title === "string" && data.title.trim() ? data.title.trim() : null,
-    tags: normalizeZoteroTags(data.tags),
-    createdAt: typeof data.date === "string" && data.date.trim() ? data.date : new Date().toISOString(),
+    title: typeof data?.title === "string" && data.title.trim() ? data.title.trim() : null,
+    tags: normalizeZoteroTags(data?.tags),
+    createdAt: typeof data?.date === "string" && data.date.trim() ? data.date : new Date().toISOString(),
     links: [],
   };
 }
@@ -182,6 +183,7 @@ async function syncZoteroToR2(env: ResearchEnv, since?: number, limit?: number) 
   for (const item of items) {
     const record = zoteroToPaper(item);
     if (!record) continue;
+
     const key = await writePaperRecord(env, record);
     written.push({ key, record });
   }
