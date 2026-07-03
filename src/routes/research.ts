@@ -16,23 +16,11 @@ const PAPERS_PREFIX = "papers";
  */
 function normalizeR2List(result: unknown): any[] {
   if (!result) return [];
-
   if (Array.isArray(result)) return result;
 
-  if (
-    typeof result === "object" &&
-    result !== null &&
-    Array.isArray((result as any).objects)
-  ) {
-    return (result as any).objects;
-  }
-
-  if (
-    typeof result === "object" &&
-    result !== null &&
-    Array.isArray((result as any).keys)
-  ) {
-    return (result as any).keys;
+  if (typeof result === "object" && result !== null) {
+    if (Array.isArray((result as any).objects)) return (result as any).objects;
+    if (Array.isArray((result as any).keys)) return (result as any).keys;
   }
 
   return [];
@@ -40,22 +28,30 @@ function normalizeR2List(result: unknown): any[] {
 
 /**
  * ----------------------------------------
- * HANDLER
+ * PATH EXTRACTOR (Request-based)
  * ----------------------------------------
- * IMPORTANT:
- * Hono already strips `/v1/research`
- * We only work with the wildcard param.
  */
-export async function handleResearch(c: any, env: Env) {
-  const path = "/" + (c.req.param("*") || "");
-  const method = c.req.method;
+function getPath(request: Request): string {
+  const url = new URL(request.url);
+
+  return url.pathname
+    .replace(/^\/v1\/research\/?/, "")
+    .replace(/\/+$/, "");
+}
+
+/**
+ * ----------------------------------------
+ * HANDLER (REQUEST ONLY)
+ * ----------------------------------------
+ */
+export async function handleResearch(request: Request, env: Env) {
+  const path = getPath(request);
+  const method = request.method;
 
   /**
-   * ================================
    * ROOT
-   * ================================
    */
-  if ((path === "/" || path === "") && method === "GET") {
+  if ((path === "" || path === "/") && method === "GET") {
     return json({
       service: "research",
       endpoints: ["/papers", "/paper/:id", "/ingest"],
@@ -63,11 +59,9 @@ export async function handleResearch(c: any, env: Env) {
   }
 
   /**
-   * ================================
    * LIST PAPERS
-   * ================================
    */
-  if (path === "/papers" && method === "GET") {
+  if (path === "papers" && method === "GET") {
     const raw = await storage.r2.list(`${PAPERS_PREFIX}/`, env);
     const items = normalizeR2List(raw);
 
@@ -79,12 +73,10 @@ export async function handleResearch(c: any, env: Env) {
   }
 
   /**
-   * ================================
    * GET PAPER
-   * ================================
    */
-  if (path.startsWith("/paper/") && method === "GET") {
-    const id = path.replace("/paper/", "").replace(/\/+$/, "");
+  if (path.startsWith("paper/") && method === "GET") {
+    const id = path.replace("paper/", "");
     const key = `${PAPERS_PREFIX}/${id}.json`;
 
     const item = await storage.r2.get(key, env);
@@ -102,12 +94,10 @@ export async function handleResearch(c: any, env: Env) {
   }
 
   /**
-   * ================================
    * INGEST
-   * ================================
    */
-  if (path === "/ingest" && method === "POST") {
-    const body = (await c.req.json()) as IngestBody;
+  if (path === "ingest" && method === "POST") {
+    const body = (await request.json()) as IngestBody;
 
     const id = crypto.randomUUID();
 
@@ -136,9 +126,7 @@ export async function handleResearch(c: any, env: Env) {
   }
 
   /**
-   * ================================
    * FALLBACK
-   * ================================
    */
   return json(
     {
