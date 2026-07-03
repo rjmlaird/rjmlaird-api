@@ -2,10 +2,7 @@
   "name": "rjmlaird-api",
   "main": "src/index.ts",
   "compatibility_date": "2026-07-02",
-  "limits": {
-    "cpu_ms": 100,
-    "subrequests": 150
-  },
+
   "r2_buckets": [
     {
       "binding": "R2",
