@@ -17,7 +17,7 @@ function normalizePath(raw: string): string {
 }
 
 /**
- * R2 key builder
+ * Key builder
  */
 function toKey(path: string | null): string | null {
   if (!path) return null;
@@ -25,7 +25,7 @@ function toKey(path: string | null): string | null {
 }
 
 /**
- * Stable WebDAV href
+ * Stable href generator
  */
 function toHref(path: string): string {
   if (!path) return "/webdav/zotero";
@@ -33,7 +33,7 @@ function toHref(path: string): string {
 }
 
 /**
- * Normalize R2 list result safely (CRITICAL FIX for TS2339 issue)
+ * Safe R2 list normaliser (Cloudflare-proof)
  */
 function normalizeList(result: any): any[] {
   if (!result) return [];
@@ -44,10 +44,26 @@ function normalizeList(result: any): any[] {
 }
 
 /**
- * Folder detection strategy (R2-safe)
+ * Folder detection (strict)
  */
 function isFolderKey(key: string): boolean {
   return key.endsWith("/.folder");
+}
+
+/**
+ * Stable etag generator (prevents Zotero re-sync loops)
+ */
+function makeEtag(item: any): string {
+  const base = item.key || "unknown";
+  const size = item.size ?? 0;
+  return `"${base}:${size}"`;
+}
+
+/**
+ * Deterministic sort (CRITICAL for Zotero stability)
+ */
+function sortItems(items: any[]) {
+  return items.sort((a, b) => a.key.localeCompare(b.key));
 }
 
 /**
@@ -81,17 +97,19 @@ export async function handleWebDAV(request: Request, env: any) {
 
   /**
    * =========================
-   * LOCK / UNLOCK (Zotero stub)
+   * LOCK / UNLOCK (stable stub)
    * =========================
    */
   if (request.method === "LOCK") {
+    const token = `urn:uuid:${crypto.randomUUID()}`;
+
     return new Response(
       `<?xml version="1.0" encoding="utf-8"?>
 <d:prop xmlns:d="DAV:">
   <d:lockdiscovery>
     <d:activelock>
       <d:locktoken>
-        <d:href>urn:uuid:fake-lock-token</d:href>
+        <d:href>${token}</d:href>
       </d:locktoken>
     </d:activelock>
   </d:lockdiscovery>
@@ -126,7 +144,7 @@ export async function handleWebDAV(request: Request, env: any) {
 
   /**
    * =========================
-   * PROPFIND
+   * PROPFIND (Zotero-grade stable)
    * =========================
    */
   if (request.method === "PROPFIND") {
@@ -135,7 +153,10 @@ export async function handleWebDAV(request: Request, env: any) {
     const prefix = key ? `${key}/` : `${BASE_PREFIX}/`;
     const rawList = await storage.r2.list(prefix, env);
 
-    const items = normalizeList(rawList);
+    let items = normalizeList(rawList);
+
+    // CRITICAL: deterministic ordering (prevents sync loops)
+    items = sortItems(items);
 
     const responses: string[] = [];
 
@@ -175,7 +196,7 @@ export async function handleWebDAV(request: Request, env: any) {
         folder ? "<d:collection/>" : ""
       }</d:resourcetype>
       <d:displayname>${clean}</d:displayname>
-      <d:getetag>"${item.etag || item.key}"</d:getetag>
+      <d:getetag>${makeEtag(item)}</d:getetag>
       <d:getcontentlength>${item.size ?? 0}</d:getcontentlength>
     </d:prop>
     <d:status>HTTP/1.1 200 OK</d:status>
@@ -211,14 +232,14 @@ ${responses.join("\n")}
       status: 200,
       headers: {
         "Content-Length": String(obj.size ?? 0),
-        ETag: obj.etag ?? "",
+        ETag: obj.etag ?? makeEtag({ key, size: obj.size }),
       },
     });
   }
 
   /**
    * =========================
-   * MKCOL
+   * MKCOL (safe folder creation)
    * =========================
    */
   if (request.method === "MKCOL") {
