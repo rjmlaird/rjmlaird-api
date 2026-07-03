@@ -308,18 +308,16 @@
   <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.17.14/swagger-ui-bundle.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.17.14/swagger-ui-standalone-preset.js" crossorigin="anonymous"></script>
   <script>
-    window.onload = () => {
-      window.ui = SwaggerUIBundle({
-        url: "/openapi.json",
-        dom_id: "#swagger-ui",
-        deepLinking: true,
-        layout: "BaseLayout",
-        docExpansion: "list",
-        filter: false,
-        displayRequestDuration: true,
-        presets: [SwaggerUIBundle.presets.apis],
-      });
-    };
+  window.ui = SwaggerUIBundle({
+    url: "/openapi.json",
+    dom_id: "#swagger-ui",
+    deepLinking: true,
+    layout: "BaseLayout",
+    docExpansion: "list",
+    filter: false,
+    displayRequestDuration: true,
+    presets: [SwaggerUIBundle.presets.apis],
+  });
   </script>
 </body>
 </html>
