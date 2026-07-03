@@ -5,10 +5,6 @@ on:
     branches:
       - master
 
-  pull_request:
-    branches:
-      - master
-
   workflow_dispatch: {}
 
 concurrency:
@@ -36,19 +32,24 @@ jobs:
       - name: Type check
         run: npm run check
 
-      - name: Generate Worker types
+      - name: Generate Cloudflare types
         run: npm run cf-typegen
 
-      - name: Deploy Worker
-        run: npx wrangler deploy
+      - name: Validate Cloudflare auth (debug safe)
+        run: npx wrangler whoami
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+
+      - name: Deploy Worker (idempotent)
+        run: npx wrangler deploy --minify
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
-      - name: Show deployments (safe)
-        run: npx wrangler deployments list || echo "No deployments yet"
+      - name: Show deployments (non-blocking)
+        run: npx wrangler deployments list || true
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
 
-      - name: Deployment success notice
-        run: echo "🚀 Worker deployed successfully"
+      - name: Done
+        run: echo "🚀 Deployment complete"
