@@ -9,22 +9,53 @@ type IngestBody = {
 
 const PAPERS_PREFIX = "papers";
 
-export async function handleResearch(request: Request, env: Env) {
+/**
+ * Normalise research path safely
+ */
+function getPath(request: Request): string {
   const url = new URL(request.url);
-  const path = url.pathname.replace("/v1/research", "");
+
+  return url.pathname
+    .replace(/^\/v1\/research\/?/, "/")
+    .replace(/\/+$/, "");
+}
+
+export async function handleResearch(request: Request, env: Env) {
+  const path = getPath(request);
+  const method = request.method;
+
+  /**
+   * ----------------------------------------
+   * ROOT: GET /v1/research
+   * ----------------------------------------
+   */
+  if ((path === "/" || path === "") && method === "GET") {
+    return json({
+      service: "research",
+      endpoints: [
+        "/papers",
+        "/paper/:id",
+        "/ingest",
+      ],
+    });
+  }
 
   /**
    * ----------------------------------------
    * GET /papers
    * ----------------------------------------
    */
-  if (path === "/papers" && request.method === "GET") {
-    const items = await storage.r2.list(`${PAPERS_PREFIX}/`, env);
+  if (path === "/papers" && method === "GET") {
+    const result = await storage.r2.list(`${PAPERS_PREFIX}/`, env);
+
+    const items = Array.isArray(result)
+      ? result
+      : result.objects ?? [];
 
     return json({
       source: "r2",
-      count: items?.length ?? 0,
-      items: items ?? [],
+      count: items.length,
+      items,
     });
   }
 
@@ -33,10 +64,9 @@ export async function handleResearch(request: Request, env: Env) {
    * GET /paper/:id
    * ----------------------------------------
    */
-  if (path.startsWith("/paper/") && request.method === "GET") {
-    const id = path.replace("/paper/", "");
+  if (path.startsWith("/paper/") && method === "GET") {
+    const id = path.replace("/paper/", "").replace(/\/+$/, "");
 
-    // IMPORTANT: match ingestion format (.json)
     const key = `${PAPERS_PREFIX}/${id}.json`;
 
     const item = await storage.r2.get(key, env);
@@ -53,8 +83,9 @@ export async function handleResearch(request: Request, env: Env) {
 
     return json({
       key,
-      size: item.size,
-      contentType: item.contentType,
+      size: item.size ?? null,
+      contentType: item.contentType ?? null,
+      body: item.body ?? null,
     });
   }
 
@@ -63,7 +94,7 @@ export async function handleResearch(request: Request, env: Env) {
    * POST /ingest
    * ----------------------------------------
    */
-  if (path === "/ingest" && request.method === "POST") {
+  if (path === "/ingest" && method === "POST") {
     const body = (await request.json()) as IngestBody;
 
     const id = crypto.randomUUID();
