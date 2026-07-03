@@ -6,24 +6,41 @@ import {
 } from "./r2";
 
 /**
- * Base storage prefix for Zotero data in R2
+ * ======================================================
+ * SINGLE SOURCE OF TRUTH PREFIX
+ * ======================================================
  */
-const BASE_PREFIX = "zotero/";
+const BASE_PREFIX = "zotero";
 
 /**
- * Build structured key for Zotero files
+ * Normalize a Zotero path into a safe R2 key segment
+ * (IMPORTANT: no double-prefixing allowed)
  */
-export function buildZoteroKey(path: string) {
+function normalizePath(path: string): string {
   const clean = decodeURIComponent(path)
     .trim()
     .replace(/^\/+/, "")
+    .replace(/^zotero\/?/, "") // 🔥 prevents zotero/zotero bug
     .replace(/\/+/g, "/");
 
-  return `${BASE_PREFIX}${clean}`;
+  return clean;
 }
 
 /**
- * Upload file coming from Zotero WebDAV
+ * Build final R2 key
+ */
+export function buildZoteroKey(path: string) {
+  const normalized = normalizePath(path);
+
+  if (!normalized) {
+    return BASE_PREFIX;
+  }
+
+  return `${BASE_PREFIX}/${normalized}`;
+}
+
+/**
+ * PUT
  */
 export async function zoteroPut(
   env: Env,
@@ -36,7 +53,7 @@ export async function zoteroPut(
 }
 
 /**
- * Retrieve file for Zotero
+ * GET
  */
 export async function zoteroGet(env: Env, path: string) {
   const key = buildZoteroKey(path);
@@ -44,7 +61,7 @@ export async function zoteroGet(env: Env, path: string) {
 }
 
 /**
- * Delete file from Zotero storage
+ * DELETE
  */
 export async function zoteroDelete(env: Env, path: string) {
   const key = buildZoteroKey(path);
@@ -52,23 +69,24 @@ export async function zoteroDelete(env: Env, path: string) {
 }
 
 /**
- * List Zotero collections (flat view of R2 keys)
+ * LIST
  */
 export async function zoteroList(env: Env, prefix = "") {
+  const normalized = normalizePath(prefix);
+
   return listR2Objects(
     env,
-    prefix ? `${BASE_PREFIX}${prefix.replace(/^\/+/, "")}` : BASE_PREFIX
+    normalized ? `${BASE_PREFIX}/${normalized}` : `${BASE_PREFIX}`
   );
 }
 
 /**
- * Parse Zotero path into logical components
+ * Parse path into logical structure (safe debug utility)
  */
 export function parseZoteroPath(path: string) {
-  const clean = decodeURIComponent(path)
-    .replace(/^\/+/, "");
+  const clean = normalizePath(path);
 
-  const parts = clean.split("/");
+  const parts = clean.split("/").filter(Boolean);
 
   return {
     collection: parts[0] || null,

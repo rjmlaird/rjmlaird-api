@@ -3,14 +3,35 @@ import { storage } from "../services/storage";
 export async function handleWebDAV(request: Request, env: any) {
   const url = new URL(request.url);
 
-  // Normalise path once
-  let key = url.pathname.replace(/^\/v1\/webdav\/?/, "");
-  key = decodeURIComponent(key).replace(/^\/+/, "");
+  /**
+   * ======================================================
+   * PATH PARSING (CRITICAL FIX)
+   * ======================================================
+   */
+  const rawPath = url.pathname
+    .replace(/^\/v1\/webdav\/?/, "")
+    .replace(/^\/+/, "");
+
+  const parts = decodeURIComponent(rawPath).split("/");
+
+  const [root, ...rest] = parts;
 
   /**
-   * =========================
-   * ROOT (Zotero discovery ping)
-   * =========================
+   * ======================================================
+   * ZOTERO MOUNT CHECK
+   * ======================================================
+   */
+  if (root !== "zotero") {
+    return new Response("Not found", { status: 404 });
+  }
+
+  const key = rest.join("/");
+
+  /**
+   * ======================================================
+   * ROOT (Zotero checks this constantly)
+   * /v1/webdav/zotero
+   * ======================================================
    */
   if (!key) {
     return new Response("WebDAV root", {
@@ -23,9 +44,9 @@ export async function handleWebDAV(request: Request, env: any) {
   }
 
   /**
-   * =========================
-   * PROPFIND (CRITICAL)
-   * =========================
+   * ======================================================
+   * PROPFIND
+   * ======================================================
    */
   if (request.method === "PROPFIND") {
     const obj = await storage.zotero.get(key, env);
@@ -35,7 +56,7 @@ export async function handleWebDAV(request: Request, env: any) {
         `<?xml version="1.0" encoding="utf-8"?>
 <d:multistatus xmlns:d="DAV:">
   <d:response>
-    <d:href>/${key}</d:href>
+    <d:href>/${rawPath}</d:href>
     <d:status>HTTP/1.1 404 Not Found</d:status>
   </d:response>
 </d:multistatus>`,
@@ -52,7 +73,7 @@ export async function handleWebDAV(request: Request, env: any) {
       `<?xml version="1.0" encoding="utf-8"?>
 <d:multistatus xmlns:d="DAV:">
   <d:response>
-    <d:href>/${key}</d:href>
+    <d:href>/${rawPath}</d:href>
     <d:propstat>
       <d:prop>
         <d:resourcetype/>
@@ -74,9 +95,9 @@ export async function handleWebDAV(request: Request, env: any) {
   }
 
   /**
-   * =========================
+   * ======================================================
    * HEAD
-   * =========================
+   * ======================================================
    */
   if (request.method === "HEAD") {
     const obj = await storage.zotero.get(key, env);
@@ -94,12 +115,11 @@ export async function handleWebDAV(request: Request, env: any) {
   }
 
   /**
-   * =========================
-   * MKCOL
-   * =========================
+   * ======================================================
+   * MKCOL (folders)
+   * ======================================================
    */
   if (request.method === "MKCOL") {
-    // folder placeholder (R2 is flat)
     await storage.zotero.put(
       `${key}/.folder`,
       new Uint8Array([]),
@@ -111,9 +131,9 @@ export async function handleWebDAV(request: Request, env: any) {
   }
 
   /**
-   * =========================
-   * PUT
-   * =========================
+   * ======================================================
+   * PUT (upload)
+   * ======================================================
    */
   if (request.method === "PUT") {
     const body = await request.arrayBuffer();
@@ -129,9 +149,9 @@ export async function handleWebDAV(request: Request, env: any) {
   }
 
   /**
-   * =========================
-   * GET
-   * =========================
+   * ======================================================
+   * GET (download)
+   * ======================================================
    */
   if (request.method === "GET") {
     const obj = await storage.zotero.get(key, env);
@@ -142,8 +162,7 @@ export async function handleWebDAV(request: Request, env: any) {
 
     return new Response(obj.body, {
       headers: {
-        "Content-Type":
-          obj.contentType ?? "application/octet-stream",
+        "Content-Type": obj.contentType ?? "application/octet-stream",
         "ETag": obj.etag ?? "",
         "DAV": "1,2",
       },
@@ -151,9 +170,9 @@ export async function handleWebDAV(request: Request, env: any) {
   }
 
   /**
-   * =========================
+   * ======================================================
    * DELETE
-   * =========================
+   * ======================================================
    */
   if (request.method === "DELETE") {
     await storage.zotero.del(key, env);
