@@ -19,7 +19,6 @@ type DavNode = {
 type LockRecord = {
   token: string;
   key: string;
-  owner?: string;
   expiresAt: number;
 };
 
@@ -95,35 +94,8 @@ function xmlResponse(body: string, status: number, headers: Record<string, strin
   });
 }
 
-function notFound() {
-  return new Response("Not found", { status: 404 });
-}
-
-function badRequest() {
-  return new Response("Bad request", { status: 400 });
-}
-
-function forbidden() {
-  return new Response("Forbidden", { status: 403 });
-}
-
-function conflict() {
-  return new Response("Conflict", { status: 409 });
-}
-
-function preconditionFailed() {
-  return new Response("Precondition failed", { status: 412 });
-}
-
-function locked() {
-  return new Response("Locked", { status: 423 });
-}
-
-function methodNotAllowed() {
-  return new Response("Method not allowed", {
-    status: 405,
-    headers: { Allow: ALLOW_HEADER, DAV: DAV_HEADER },
-  });
+function plain(status: number, body: string) {
+  return new Response(body, { status, headers: { DAV: DAV_HEADER } });
 }
 
 function unauthorized() {
@@ -133,6 +105,37 @@ function unauthorized() {
       "WWW-Authenticate": 'Basic realm="Zotero WebDAV", charset="UTF-8"',
       DAV: DAV_HEADER,
     },
+  });
+}
+
+function notFound() {
+  return plain(404, "Not found");
+}
+
+function badRequest() {
+  return plain(400, "Bad request");
+}
+
+function forbidden() {
+  return plain(403, "Forbidden");
+}
+
+function conflict() {
+  return plain(409, "Conflict");
+}
+
+function preconditionFailed() {
+  return plain(412, "Precondition failed");
+}
+
+function locked() {
+  return plain(423, "Locked");
+}
+
+function methodNotAllowed() {
+  return new Response("Method not allowed", {
+    status: 405,
+    headers: { Allow: ALLOW_HEADER, DAV: DAV_HEADER },
   });
 }
 
@@ -151,9 +154,12 @@ function getLockTokenFromHeaders(request: Request): string | null {
   if (lockToken) return lockToken.replace(/^<|>$/g, "").trim();
 
   const ifTokens = parseIfHeader(request);
-  return ifTokens.find(
-    (token) => token.startsWith("urn:uuid:") || token.startsWith("opaquelocktoken:")
-  ) ?? null;
+  return (
+    ifTokens.find(
+      (token) =>
+        token.startsWith("urn:uuid:") || token.startsWith("opaquelocktoken:")
+    ) ?? null
+  );
 }
 
 function lockKey(key: string): string {
@@ -165,7 +171,6 @@ async function getLockRecord(key: string, env: any): Promise<LockRecord | null> 
   if (!raw) return null;
 
   const text = await new Response(raw.body).text();
-
   try {
     const parsed = JSON.parse(text) as LockRecord;
     if (!parsed?.token || !parsed?.key) return null;
@@ -227,10 +232,8 @@ async function exists(key: string, env: any): Promise<DavNode | null> {
   return null;
 }
 
-async function collectionExists(key: string, env: any): Promise<boolean> {
-  if (key === BASE_PREFIX) return true;
-  const node = await exists(key, env);
-  return !!node && node.kind === "collection";
+function rootNode(): DavNode {
+  return { key: BASE_PREFIX, kind: "collection", etag: etagFor(BASE_PREFIX, 0) };
 }
 
 async function parentExists(pathKey: string, env: any): Promise<boolean> {
@@ -278,19 +281,19 @@ async function collectCollectionKeysRecursive(prefixKey: string, env: any): Prom
   return items.map((x) => x.key).filter(nonNullable);
 }
 
-function rootNode(): DavNode {
-  return { key: BASE_PREFIX, kind: "collection", etag: etagFor(BASE_PREFIX, 0) };
+async function authOr401(request: Request): Promise<Response | null> {
+  return parseAuthorizationHeader(request) ? null : unauthorized();
 }
 
 export async function handleWebDAV(request: Request, env: any) {
+  const auth = await authOr401(request);
+  if (auth) return auth;
+
   const url = new URL(request.url);
   const path = normalizePath(url.pathname);
   const key = path ? toKey(path) : BASE_PREFIX;
   const root = path === "" || path === BASE_PREFIX;
-
-  if (!parseAuthorizationHeader(request)) {
-    return unauthorized();
-  }
+  const current = root ? rootNode() : key ? await exists(key, env) : null;
 
   if (request.method === "OPTIONS") {
     return new Response(null, {
@@ -339,7 +342,6 @@ export async function handleWebDAV(request: Request, env: any) {
       key,
       expiresAt: Date.now() + LOCK_TIMEOUT_SECONDS * 1000,
     };
-
     await setLockRecord(record, env);
 
     return xmlResponse(
@@ -361,20 +363,12 @@ export async function handleWebDAV(request: Request, env: any) {
   if (request.method === "UNLOCK") {
     const token = getLockTokenFromHeaders(request);
     const record = await getLockRecord(key!, env);
-
     if (record && token && token === record.token) {
       await deleteLockRecord(key!, env);
       return new Response(null, { status: 204, headers: { DAV: DAV_HEADER } });
     }
-
     return preconditionFailed();
   }
-
-  const current = root
-    ? rootNode()
-    : key
-      ? await exists(key, env)
-      : null;
 
   if (request.method === "PROPFIND") {
     if (!current) return notFound();
@@ -420,11 +414,9 @@ export async function handleWebDAV(request: Request, env: any) {
 
   if (request.method === "HEAD") {
     if (!current) return notFound();
-
     if (current.kind === "collection") {
       return new Response(null, { status: 200, headers: { DAV: DAV_HEADER } });
     }
-
     return new Response(null, {
       status: 200,
       headers: {
@@ -471,12 +463,10 @@ export async function handleWebDAV(request: Request, env: any) {
 
   if (request.method === "GET") {
     if (!current) return notFound();
-
     if (current.kind === "collection") {
-      if (root) {
-        return new Response("WebDAV root", { status: 200, headers: { DAV: DAV_HEADER } });
-      }
-      return methodNotAllowed();
+      return root
+        ? new Response("WebDAV root", { status: 200, headers: { DAV: DAV_HEADER } })
+        : methodNotAllowed();
     }
 
     const obj = await storage.r2.get(key!, env);
@@ -507,13 +497,11 @@ export async function handleWebDAV(request: Request, env: any) {
       }
       await storage.r2.del(`${current.key}/.folder`, env);
       await deleteLockRecord(current.key, env);
-
       return new Response(null, { status: 204, headers: { DAV: DAV_HEADER } });
     }
 
     await storage.r2.del(key!, env);
     await deleteLockRecord(key!, env);
-
     return new Response(null, { status: 204, headers: { DAV: DAV_HEADER } });
   }
 
