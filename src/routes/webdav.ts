@@ -59,7 +59,7 @@ function toKey(path: string | null): string | null {
 
 function toHref(path: string): string {
   const cleaned = path.replace(/^\/+/, "").replace(/\/+$/, "");
-  return cleaned ? `/webdav/zotero/${encodeURI(cleaned)}` : "/webdav/zotero";
+  return cleaned ? `/webdav/zotero/${encodeURI(cleaned)}` : "/webdav/zotero/";
 }
 
 function normalizeList(result: any): any[] {
@@ -308,6 +308,8 @@ async function parentExists(pathKey: string, env: any): Promise<boolean> {
   const parent = pathKey.includes("/")
     ? pathKey.slice(0, pathKey.lastIndexOf("/"))
     : BASE_PREFIX;
+
+  if (!parent || parent === BASE_PREFIX) return true;
   return !!(await exists(parent, env));
 }
 
@@ -392,7 +394,7 @@ export async function handleWebDAV(request: Request, env: any) {
       if (existing) {
         const supplied = getLockTokenFromHeaders(request);
         if (!supplied || supplied !== existing.token) {
-          response = lockedResponse(`/webdav/${path || BASE_PREFIX}`);
+          response = lockedResponse(`/webdav/${path || BASE_PREFIX}/`);
         } else {
           const refreshed: LockRecord = {
             ...existing,
@@ -453,7 +455,7 @@ export async function handleWebDAV(request: Request, env: any) {
     } else {
       const depth = request.headers.get("Depth") ?? "1";
       const responses: string[] = [];
-      const selfPath = root ? BASE_PREFIX : path;
+      const selfPath = root ? "" : path;
       const selfDisplay = root ? "zotero" : path.split("/").pop() ?? "zotero";
       responses.push(propfindItem(current, selfPath, selfDisplay));
 
