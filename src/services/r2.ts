@@ -7,6 +7,14 @@ export interface R2ObjectMeta {
 }
 
 /**
+ * OPTIONAL: centralised key normalisation hook
+ * (useful for WebDAV + Zotero consistency)
+ */
+function normaliseKey(key: string) {
+  return key.replace(/^\/+/, "").replace(/\/+/g, "/");
+}
+
+/**
  * PUT OBJECT
  */
 export async function putR2Object(
@@ -15,7 +23,9 @@ export async function putR2Object(
   body: ArrayBuffer | ArrayBufferView | ReadableStream,
   contentType?: string
 ) {
-  return env.R2.put(key, body, {
+  const safeKey = normaliseKey(key);
+
+  return env.R2.put(safeKey, body, {
     httpMetadata: {
       contentType: contentType ?? "application/octet-stream",
     },
@@ -26,7 +36,9 @@ export async function putR2Object(
  * GET OBJECT
  */
 export async function getR2Object(env: Env, key: string) {
-  const obj = await env.R2.get(key);
+  const safeKey = normaliseKey(key);
+
+  const obj = await env.R2.get(safeKey);
 
   if (!obj) return null;
 
@@ -42,11 +54,13 @@ export async function getR2Object(env: Env, key: string) {
  * DELETE OBJECT
  */
 export async function deleteR2Object(env: Env, key: string) {
-  return env.R2.delete(key);
+  const safeKey = normaliseKey(key);
+
+  return env.R2.delete(safeKey);
 }
 
 /**
- * LIST OBJECTS (SAFE PAGINATION)
+ * LIST OBJECTS (SAFE + GUARDED PAGINATION)
  */
 export async function listR2Objects(
   env: Env,
@@ -54,11 +68,19 @@ export async function listR2Objects(
 ): Promise<R2ObjectMeta[]> {
   const all: R2ObjectMeta[] = [];
 
-  let cursor: string | undefined;
+  let cursor: string | undefined = undefined;
+  let iteration = 0;
+
+  const safePrefix = prefix ? normaliseKey(prefix) : undefined;
 
   do {
+    iteration++;
+
+    // safety guard (prevents infinite loops if API behaves unexpectedly)
+    if (iteration > 100) break;
+
     const result = await env.R2.list({
-      prefix,
+      prefix: safePrefix,
       cursor,
       limit: 1000,
     });
