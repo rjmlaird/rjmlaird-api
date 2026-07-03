@@ -8,9 +8,9 @@ import { handleResearch } from "./routes/research";
 const app = new Hono<{ Bindings: Env }>();
 
 /**
- * =======================
+ * ======================================================
  * HEALTH CHECK
- * =======================
+ * ======================================================
  */
 app.get("/health", (c) => {
   return c.json({
@@ -21,12 +21,13 @@ app.get("/health", (c) => {
 });
 
 /**
- * =======================
+ * ======================================================
  * ROOT LANDING
- * =======================
+ * ======================================================
  */
 app.get("/", (c) => {
-  return c.html(`<!doctype html>
+  return c.html(`
+<!doctype html>
 <html>
 <head>
   <meta charset="utf-8"/>
@@ -40,86 +41,70 @@ app.get("/", (c) => {
 <body>
   <h1>rjmlaird API</h1>
   <p>Status: <strong>running</strong></p>
+
   <ul>
     <li><code>/health</code></li>
-    <li><code>/webdav/*</code> (Zotero)</li>
-    <li><code>/v1/webdav/*</code> (legacy)</li>
+    <li><code>/webdav/*</code></li>
+    <li><code>/v1/webdav/*</code></li>
     <li><code>/v1/research</code></li>
     <li><code>/v1/research/*</code></li>
     <li><code>/v1/debug</code></li>
   </ul>
 </body>
-</html>`);
+</html>
+  `);
 });
 
 /**
- * =======================
- * WEBDAV CORE WRAPPER
- * =======================
+ * ======================================================
+ * WEB HANDLERS
+ * ======================================================
  */
-async function webdavHandler(c: any) {
+const webdavHandler = async (c: any) => {
   try {
     return await handleWebDAV(c.req.raw, c.env);
   } catch (err) {
     console.error("WebDAV error:", err);
     return c.text("WebDAV internal error", 500);
   }
-}
+};
+
+const researchHandler = async (c: any) => {
+  try {
+    return await handleResearch(c.req.raw, c.env);
+  } catch (err) {
+    console.error("Research API error:", err);
+    return c.json(
+      {
+        error: "Research internal error",
+        message: err instanceof Error ? err.message : String(err),
+      },
+      500
+    );
+  }
+};
 
 /**
- * =======================
+ * ======================================================
  * WEBDAV ROUTES
- * =======================
+ * ======================================================
  */
-app.all("/webdav", webdavHandler);
-app.all("/webdav/", webdavHandler);
 app.all("/webdav/*", webdavHandler);
-
-app.all("/v1/webdav", webdavHandler);
-app.all("/v1/webdav/", webdavHandler);
 app.all("/v1/webdav/*", webdavHandler);
 
 /**
- * =======================
- * RESEARCH API (FIXED)
- * =======================
- * IMPORTANT: include BOTH root + wildcard
+ * ======================================================
+ * RESEARCH ROUTES
+ * ======================================================
+ * IMPORTANT: single source of truth routing
  */
-
-// root endpoint (THIS WAS MISSING)
-app.all("/v1/research", async (c) => {
-  try {
-    return await handleResearch(c.req.raw, c.env);
-  } catch (err) {
-    console.error("Research API error:", err);
-    return c.text("Research internal error", 500);
-  }
-});
-
-// slash variant (optional but safe)
-app.all("/v1/research/", async (c) => {
-  try {
-    return await handleResearch(c.req.raw, c.env);
-  } catch (err) {
-    console.error("Research API error:", err);
-    return c.text("Research internal error", 500);
-  }
-});
-
-// wildcard routes
-app.all("/v1/research/*", async (c) => {
-  try {
-    return await handleResearch(c.req.raw, c.env);
-  } catch (err) {
-    console.error("Research API error:", err);
-    return c.text("Research internal error", 500);
-  }
-});
+app.all("/v1/research/*", researchHandler);
+app.all("/v1/research", researchHandler);
 
 /**
- * =======================
+ * ======================================================
  * DEBUG
- * =======================
+ * ======================================================
  */
 app.get("/v1/debug", (c) => {
   return c.json({
@@ -132,9 +117,9 @@ app.get("/v1/debug", (c) => {
 });
 
 /**
- * =======================
+ * ======================================================
  * LEGACY API
- * =======================
+ * ======================================================
  */
 app.get("/api/:collection", async (c) => {
   const collection = c.req.param("collection");
