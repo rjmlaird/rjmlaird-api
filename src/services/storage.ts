@@ -6,12 +6,12 @@ import * as zotero from "./zotero";
  */
 export const storage = {
   /**
-   * Raw R2 storage
+   * Raw R2 storage (no opinion on structure)
    */
   r2: {
     put: (
       key: string,
-      body: ArrayBuffer | Uint8Array | ReadableStream,
+      body: ArrayBuffer | ArrayBufferView | ReadableStream,
       env: Env,
       contentType?: string
     ) => r2.putR2Object(env, key, body, contentType),
@@ -27,23 +27,24 @@ export const storage = {
   },
 
   /**
-   * Zotero WebDAV storage
+   * Zotero WebDAV storage (namespaced + protocol-aware)
    */
   zotero: {
     put: (
       path: string,
-      body: ArrayBuffer | Uint8Array | ReadableStream,
+      body: ArrayBuffer | ArrayBufferView | ReadableStream,
       env: Env,
       contentType?: string
-    ) => zotero.zoteroPut(env, path, body, contentType),
+    ) =>
+      zotero.zoteroPut(env, `zotero/${path}`, body, contentType),
 
     get: (path: string, env: Env) =>
-      zotero.zoteroGet(env, path),
+      zotero.zoteroGet(env, `zotero/${path}`),
 
     del: (path: string, env: Env) =>
-      zotero.zoteroDelete(env, path),
+      zotero.zoteroDelete(env, `zotero/${path}`),
 
     list: (prefix: string | undefined, env: Env) =>
-      zotero.zoteroList(env, prefix),
+      zotero.zoteroList(env, `zotero/${prefix ?? ""}`),
   },
 };

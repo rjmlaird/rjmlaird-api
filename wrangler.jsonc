@@ -8,12 +8,5 @@
       "binding": "R2",
       "bucket_name": "zotero-library"
     }
-  ],
-
-  "routes": [
-    {
-      "pattern": "api.rjmlaird.co.uk/*",
-      "zone_name": "rjmlaird.co.uk"
-    }
   ]
 }

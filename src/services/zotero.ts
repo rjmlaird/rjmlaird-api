@@ -14,7 +14,8 @@ const BASE_PREFIX = "zotero/";
  * Build structured key for Zotero files
  */
 export function buildZoteroKey(path: string) {
-  const clean = path
+  const clean = decodeURIComponent(path)
+    .trim()
     .replace(/^\/+/, "")
     .replace(/\/+/g, "/");
 
@@ -31,7 +32,6 @@ export async function zoteroPut(
   contentType?: string
 ) {
   const key = buildZoteroKey(path);
-
   return putR2Object(env, key, body, contentType);
 }
 
@@ -55,14 +55,18 @@ export async function zoteroDelete(env: Env, path: string) {
  * List Zotero collections (flat view of R2 keys)
  */
 export async function zoteroList(env: Env, prefix = "") {
-  return listR2Objects(env, `${BASE_PREFIX}${prefix}`);
+  return listR2Objects(
+    env,
+    prefix ? `${BASE_PREFIX}${prefix.replace(/^\/+/, "")}` : BASE_PREFIX
+  );
 }
 
 /**
  * Parse Zotero path into logical components
  */
 export function parseZoteroPath(path: string) {
-  const clean = path.replace(/^\/+/, "");
+  const clean = decodeURIComponent(path)
+    .replace(/^\/+/, "");
 
   const parts = clean.split("/");
 

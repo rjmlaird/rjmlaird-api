@@ -1,16 +1,25 @@
 export async function handleWebDAV(request: Request, env: any) {
   const url = new URL(request.url);
 
-  // normalise path safely (removes /v1/webdav and leading slash issues)
-  let key = url.pathname.replace(/^\/v1\/webdav\/?/, "");
+  // strip base path
+  let rawKey = url.pathname.replace(/^\/v1\/webdav\/?/, "");
 
-  // prevent accidental empty string collisions
-  if (key === "") {
+  // root request (Zotero checks this)
+  if (rawKey === "") {
     return new Response("WebDAV root", { status: 200 });
   }
 
-  // optional but IMPORTANT: ensure no leading slash survives
-  key = key.replace(/^\/+/, "");
+  // remove leading slashes
+  rawKey = rawKey.replace(/^\/+/, "");
+
+  /**
+   * IMPORTANT:
+   * Zotero uses a pseudo-folder like /zotero/...
+   * We normalise everything into an R2 namespace.
+   */
+  const key = rawKey.startsWith("zotero/")
+    ? rawKey
+    : `zotero/${rawKey}`;
 
   switch (request.method) {
     case "PUT": {

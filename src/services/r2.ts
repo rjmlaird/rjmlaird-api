@@ -2,7 +2,7 @@ export interface R2ObjectMeta {
   key: string;
   size?: number;
   etag?: string;
-  uploaded?: string; // ISO string (normalized)
+  uploaded?: string;
   contentType?: string | null;
 }
 
@@ -46,7 +46,7 @@ export async function deleteR2Object(env: Env, key: string) {
 }
 
 /**
- * LIST OBJECTS (PAGINATED SAFE)
+ * LIST OBJECTS (SAFE PAGINATION)
  */
 export async function listR2Objects(
   env: Env,
@@ -68,7 +68,7 @@ export async function listR2Objects(
         key: obj.key,
         size: obj.size,
         etag: obj.etag,
-        uploaded: obj.uploaded ? obj.uploaded.toISOString() : undefined,
+        uploaded: obj.uploaded,
       });
     }
 

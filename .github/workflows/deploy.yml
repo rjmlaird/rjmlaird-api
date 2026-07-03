@@ -35,13 +35,14 @@ jobs:
       - name: Generate Cloudflare types
         run: npm run cf-typegen
 
-      - name: Validate Cloudflare auth (debug safe)
+      # Optional but safer than "whoami" in CI
+      - name: Validate Wrangler auth (light check)
         run: npx wrangler whoami
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
 
       - name: Deploy Worker (idempotent)
-        run: npx wrangler deploy --minify
+        run: npx wrangler deploy --minify --keep-vars
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
