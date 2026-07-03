@@ -17,31 +17,37 @@ function normalizePath(raw: string): string {
 }
 
 /**
- * ======================================================
- * KEY HELPERS
- * ======================================================
+ * R2 key builder
  */
 function toKey(path: string | null): string | null {
   if (!path) return null;
   return `${BASE_PREFIX}/${path}`;
 }
 
-function isFolderKey(key: string) {
-  return key.endsWith("/.folder");
-}
-
-function cleanKey(key: string) {
-  return key
-    .replace(`${BASE_PREFIX}/`, "")
-    .replace(/\/\.folder$/, "");
-}
-
-function href(path: string) {
+/**
+ * Stable WebDAV href
+ */
+function toHref(path: string): string {
+  if (!path) return "/webdav/zotero";
   return `/webdav/zotero/${path}`;
 }
 
-function etagFor(key: string, size?: number) {
-  return `"${key}-${size ?? 0}"`;
+/**
+ * Normalize R2 list result safely (CRITICAL FIX for TS2339 issue)
+ */
+function normalizeList(result: any): any[] {
+  if (!result) return [];
+  if (Array.isArray(result)) return result;
+  if (Array.isArray(result.objects)) return result.objects;
+  if (Array.isArray(result.keys)) return result.keys;
+  return [];
+}
+
+/**
+ * Folder detection strategy (R2-safe)
+ */
+function isFolderKey(key: string): boolean {
+  return key.endsWith("/.folder");
 }
 
 /**
@@ -57,9 +63,9 @@ export async function handleWebDAV(request: Request, env: any) {
   const isRoot = !path;
 
   /**
-   * ======================================================
+   * =========================
    * OPTIONS
-   * ======================================================
+   * =========================
    */
   if (request.method === "OPTIONS") {
     return new Response(null, {
@@ -74,9 +80,9 @@ export async function handleWebDAV(request: Request, env: any) {
   }
 
   /**
-   * ======================================================
-   * LOCK / UNLOCK (Zotero compatibility layer)
-   * ======================================================
+   * =========================
+   * LOCK / UNLOCK (Zotero stub)
+   * =========================
    */
   if (request.method === "LOCK") {
     return new Response(
@@ -92,7 +98,10 @@ export async function handleWebDAV(request: Request, env: any) {
 </d:prop>`,
       {
         status: 200,
-        headers: { "Content-Type": "application/xml", DAV: "1,2" },
+        headers: {
+          "Content-Type": "application/xml",
+          DAV: "1,2",
+        },
       }
     );
   }
@@ -102,57 +111,46 @@ export async function handleWebDAV(request: Request, env: any) {
   }
 
   /**
-   * ======================================================
+   * =========================
    * ROOT
-   * ======================================================
+   * =========================
    */
   if (isRoot) {
     return new Response("WebDAV root", {
       status: 200,
-      headers: { DAV: "1,2", "Content-Type": "text/plain" },
+      headers: { DAV: "1,2" },
     });
   }
 
-  /**
-   * ======================================================
-   * OBJECT LOOKUP
-   * ======================================================
-   */
   const obj = key ? await storage.r2.get(key, env) : null;
 
   /**
-   * ======================================================
-   * PROPFIND (CORE ZOTERO COMPATIBILITY)
-   * ======================================================
+   * =========================
+   * PROPFIND
+   * =========================
    */
   if (request.method === "PROPFIND") {
     const depth = request.headers.get("Depth") ?? "1";
 
     const prefix = key ? `${key}/` : `${BASE_PREFIX}/`;
+    const rawList = await storage.r2.list(prefix, env);
 
-    const listResult = await storage.r2.list(prefix, env);
-
-    // FIX: R2 list can be array OR { objects }
-    const items: any[] = Array.isArray(listResult)
-      ? listResult
-      : (listResult as any)?.objects ?? [];
+    const items = normalizeList(rawList);
 
     const responses: string[] = [];
 
     /**
-     * SELF NODE (CRITICAL FOR ZOTERO)
+     * SELF NODE
      */
     responses.push(`
 <d:response>
-  <d:href>${href(path)}</d:href>
+  <d:href>${toHref(path)}</d:href>
   <d:propstat>
     <d:prop>
       <d:resourcetype><d:collection/></d:resourcetype>
       <d:displayname>${path || "zotero"}</d:displayname>
-      <d:getetag>"${path || "root"}"</d:getetag>
+      <d:getetag>"root"</d:getetag>
       <d:getcontentlength>0</d:getcontentlength>
-      <d:creationdate>1970-01-01T00:00:00Z</d:creationdate>
-      <d:getlastmodified>Thu, 01 Jan 1970 00:00:00 GMT</d:getlastmodified>
     </d:prop>
     <d:status>HTTP/1.1 200 OK</d:status>
   </d:propstat>
@@ -163,20 +161,22 @@ export async function handleWebDAV(request: Request, env: any) {
      */
     if (depth !== "0") {
       for (const item of items) {
-        const clean = cleanKey(item.key);
+        const clean = item.key.replace(`${BASE_PREFIX}/`, "");
         const folder = isFolderKey(item.key);
+
+        const href = toHref(clean.replace(/\/\.folder$/, ""));
 
         responses.push(`
 <d:response>
-  <d:href>${href(clean)}</d:href>
+  <d:href>${href}</d:href>
   <d:propstat>
     <d:prop>
-      <d:resourcetype>${folder ? "<d:collection/>" : ""}</d:resourcetype>
+      <d:resourcetype>${
+        folder ? "<d:collection/>" : ""
+      }</d:resourcetype>
       <d:displayname>${clean}</d:displayname>
-      <d:getetag>${etagFor(item.key, item.size)}</d:getetag>
+      <d:getetag>"${item.etag || item.key}"</d:getetag>
       <d:getcontentlength>${item.size ?? 0}</d:getcontentlength>
-      <d:creationdate>1970-01-01T00:00:00Z</d:creationdate>
-      <d:getlastmodified>1970-01-01T00:00:00Z</d:getlastmodified>
     </d:prop>
     <d:status>HTTP/1.1 200 OK</d:status>
   </d:propstat>
@@ -191,15 +191,18 @@ ${responses.join("\n")}
 </d:multistatus>`,
       {
         status: 207,
-        headers: { "Content-Type": "application/xml", DAV: "1,2" },
+        headers: {
+          "Content-Type": "application/xml",
+          DAV: "1,2",
+        },
       }
     );
   }
 
   /**
-   * ======================================================
+   * =========================
    * HEAD
-   * ======================================================
+   * =========================
    */
   if (request.method === "HEAD") {
     if (!obj) return new Response(null, { status: 404 });
@@ -209,15 +212,14 @@ ${responses.join("\n")}
       headers: {
         "Content-Length": String(obj.size ?? 0),
         ETag: obj.etag ?? "",
-        "Content-Type": obj.contentType ?? "application/octet-stream",
       },
     });
   }
 
   /**
-   * ======================================================
+   * =========================
    * MKCOL
-   * ======================================================
+   * =========================
    */
   if (request.method === "MKCOL") {
     if (!key) return new Response("Bad request", { status: 400 });
@@ -228,9 +230,9 @@ ${responses.join("\n")}
   }
 
   /**
-   * ======================================================
+   * =========================
    * PUT
-   * ======================================================
+   * =========================
    */
   if (request.method === "PUT") {
     if (!key) return new Response("Bad request", { status: 400 });
@@ -248,9 +250,9 @@ ${responses.join("\n")}
   }
 
   /**
-   * ======================================================
+   * =========================
    * GET
-   * ======================================================
+   * =========================
    */
   if (request.method === "GET") {
     if (!obj) return new Response("Not found", { status: 404 });
@@ -264,9 +266,9 @@ ${responses.join("\n")}
   }
 
   /**
-   * ======================================================
+   * =========================
    * DELETE
-   * ======================================================
+   * =========================
    */
   if (request.method === "DELETE") {
     if (!key) return new Response("Bad request", { status: 400 });
