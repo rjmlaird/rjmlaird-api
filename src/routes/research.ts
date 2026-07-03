@@ -10,6 +10,10 @@ type IngestBody = {
   id?: string;
   createdAt?: string;
   links?: string[];
+  zotero?: {
+    since?: number;
+    limit?: number;
+  };
 };
 
 type PaperRecord = {
@@ -19,6 +23,21 @@ type PaperRecord = {
   tags: string[];
   createdAt: string;
   links: string[];
+};
+
+type ZoteroItem = {
+  key?: string;
+  data?: {
+    key?: string;
+    itemType?: string;
+    title?: string;
+    date?: string;
+    tags?: Array<{ tag?: string } | string>;
+    collections?: string[];
+    links?: {
+      alternate?: { href?: string };
+    };
+  };
 };
 
 type R2Item = {
@@ -79,26 +98,78 @@ async function readPaperRecord(env: Env, key: string): Promise<PaperRecord | nul
   }
 }
 
-function paperToGraphNode(item: R2Item, record: PaperRecord | null) {
+async function writePaperRecord(env: Env, record: PaperRecord) {
+  const key = `${PAPERS_PREFIX}/${record.id}.json`;
+  const bytes = new TextEncoder().encode(JSON.stringify(record));
+  await storage.r2.put(key, bytes, env, "application/json");
+  return key;
+}
+
+function normalizeZoteroTags(tags: ZoteroItem["data"]["tags"]) {
+  if (!Array.isArray(tags)) return [];
+  return tags
+    .map((t) => (typeof t === "string" ? t : t?.tag))
+    .filter((t): t is string => Boolean(t));
+}
+
+function zoteroToPaper(item: ZoteroItem): PaperRecord | null {
+  const data = item.data;
+  if (!data?.key) return null;
+
+  const title = typeof data.title === "string" && data.title.trim() ? data.title.trim() : null;
+
   return {
-    id: item.key,
-    size: item.size ?? 0,
-    title: record?.title ?? null,
+    id: data.key,
+    source: "zotero",
+    title,
+    tags: normalizeZoteroTags(data.tags),
+    createdAt: typeof data.date === "string" && data.date.trim() ? data.date : new Date().toISOString(),
+    links: [],
   };
 }
 
-function paperToTimelineEvent(item: R2Item, record: PaperRecord | null) {
-  return {
-    id: item.key,
-    timestamp: record?.createdAt ?? null,
-  };
+async function fetchZoteroItems(env: Env, since?: number, limit?: number) {
+  const userId = env.ZOTERO_USER_ID;
+  const apiKey = env.ZOTERO_API_KEY;
+
+  if (!userId || !apiKey) {
+    throw new Error("Missing Zotero credentials");
+  }
+
+  const url = new URL(`https://api.zotero.org/users/${userId}/items`);
+  if (since) url.searchParams.set("since", String(since));
+  if (limit) url.searchParams.set("limit", String(limit));
+
+  const res = await fetch(url.toString(), {
+    headers: {
+      "Zotero-API-Key": apiKey,
+      Accept: "application/json",
+    },
+  });
+
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`Zotero API error ${res.status}: ${text}`);
+  }
+
+  return (await res.json()) as ZoteroItem[];
 }
 
-function paperToExportItem(item: R2Item, record: PaperRecord | null) {
+async function syncZoteroToR2(env: Env, since?: number, limit?: number) {
+  const items = await fetchZoteroItems(env, since, limit);
+  const written: Array<{ key: string; record: PaperRecord }> = [];
+
+  for (const item of items) {
+    const record = zoteroToPaper(item);
+    if (!record) continue;
+    const key = await writePaperRecord(env, record);
+    written.push({ key, record });
+  }
+
   return {
-    key: item.key,
-    title: record?.title ?? item.key,
-    createdAt: record?.createdAt ?? null,
+    fetched: items.length,
+    written: written.length,
+    items: written,
   };
 }
 
@@ -128,8 +199,8 @@ export async function handleResearch(request: Request, env: Env) {
 
     const items = await listPaperItems(env);
     const q = query.toLowerCase();
-
     const results = [];
+
     for (const item of items) {
       const record = await readPaperRecord(env, item.key);
       const haystack = JSON.stringify({ item, record }).toLowerCase();
@@ -185,6 +256,24 @@ export async function handleResearch(request: Request, env: Env) {
 
   if (path === "ingest" && method === "POST") {
     const body = (await readJsonBody<IngestBody>(request)) ?? {};
+
+    if (body.source === "zotero") {
+      try {
+        const result = await syncZoteroToR2(env, body.zotero?.since, body.zotero?.limit);
+        return json(
+          {
+            status: "synced",
+            source: "zotero",
+            ...result,
+          },
+          201
+        );
+      } catch (error) {
+        const message = error instanceof Error ? error.message : "Unknown Zotero sync error";
+        return json({ error: "Zotero sync failed", message }, 500);
+      }
+    }
+
     const id = body.id?.trim() || crypto.randomUUID();
     const createdAt = body.createdAt ?? new Date().toISOString();
 
@@ -197,10 +286,7 @@ export async function handleResearch(request: Request, env: Env) {
       links: Array.isArray(body.links) ? body.links : [],
     };
 
-    const key = `${PAPERS_PREFIX}/${id}.json`;
-    const bytes = new TextEncoder().encode(JSON.stringify(record));
-
-    await storage.r2.put(key, bytes, env, "application/json");
+    const key = await writePaperRecord(env, record);
 
     return json(
       {
@@ -219,7 +305,11 @@ export async function handleResearch(request: Request, env: Env) {
     );
 
     return json({
-      nodes: records.map(([item, record]) => paperToGraphNode(item, record)),
+      nodes: records.map(([item, record]) => ({
+        id: item.key,
+        size: item.size ?? 0,
+        title: record?.title ?? null,
+      })),
       edges: records.flatMap(([item, record]) =>
         (record?.links ?? []).map((target) => ({
           from: item.key,
@@ -237,7 +327,10 @@ export async function handleResearch(request: Request, env: Env) {
 
     return json({
       events: records
-        .map(([item, record]) => paperToTimelineEvent(item, record))
+        .map(([item, record]) => ({
+          id: item.key,
+          timestamp: record?.createdAt ?? null,
+        }))
         .filter((event) => event.timestamp),
     });
   }
@@ -257,7 +350,11 @@ export async function handleResearch(request: Request, env: Env) {
 
     return json({
       version: "0.1",
-      items: records.map(([item, record]) => paperToExportItem(item, record)),
+      items: records.map(([item, record]) => ({
+        key: item.key,
+        title: record?.title ?? item.key,
+        createdAt: record?.createdAt ?? null,
+      })),
     });
   }
 
