@@ -72,6 +72,9 @@ export async function handleWebDAV(request: Request, env: any) {
     <d:propstat>
       <d:prop>
         <d:resourcetype><d:collection/></d:resourcetype>
+        <d:getetag>"root"</d:getetag>
+        <d:getcontentlength>0</d:getcontentlength>
+        <d:getlastmodified>Thu, 01 Jan 1970 00:00:00 GMT</d:getlastmodified>
       </d:prop>
       <d:status>HTTP/1.1 200 OK</d:status>
     </d:propstat>
