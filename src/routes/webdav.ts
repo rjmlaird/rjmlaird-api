@@ -171,8 +171,16 @@ function preconditionFailed() {
   return plain(412, "Precondition failed");
 }
 
-function locked() {
-  return plain(423, "Locked");
+function lockedResponse(href: string) {
+  return xmlResponse(
+    `<?xml version="1.0" encoding="utf-8"?>
+<D:error xmlns:D="DAV:">
+  <D:lock-token-submitted>
+    <D:href>${escapeXml(href)}</D:href>
+  </D:lock-token-submitted>
+</D:error>`,
+    423
+  );
 }
 
 function methodNotAllowed() {
@@ -270,7 +278,7 @@ async function requireWriteLock(key: string, request: Request, env: any): Promis
   const record = await getLockRecord(key, env);
   if (!record) return null;
   const supplied = getLockTokenFromHeaders(request);
-  if (!supplied || supplied !== record.token) return locked();
+  if (!supplied || supplied !== record.token) return lockedResponse(`/webdav/${key}`);
   return null;
 }
 
@@ -344,24 +352,6 @@ async function authOr401(request: Request): Promise<Response | null> {
   return parseAuthorizationHeader(request) ? null : unauthorized();
 }
 
-function mkcolResponseForTarget(path: string, current: DavNode | null, env: any): Promise<Response> | Response {
-  if (path === "" || path === BASE_PREFIX) {
-    return new Response(null, { status: 405, headers: { DAV: DAV_HEADER } });
-  }
-  if (current) {
-    return new Response(null, { status: 405, headers: { DAV: DAV_HEADER } });
-  }
-  return Promise.resolve((async () => {
-    const key = toKey(path);
-    if (!key) return new Response(null, { status: 405, headers: { DAV: DAV_HEADER } });
-    if (!(await parentExists(key, env))) {
-      return new Response(null, { status: 409, headers: { DAV: DAV_HEADER } });
-    }
-    await storage.r2.put(`${key}/.folder`, new Uint8Array([]), env);
-    return new Response(null, { status: 201, headers: { DAV: DAV_HEADER } });
-  })());
-}
-
 export async function handleWebDAV(request: Request, env: any) {
   const reqCtx = requestContext(request);
   const bodyPreview = await readBodyPreview(request);
@@ -402,7 +392,7 @@ export async function handleWebDAV(request: Request, env: any) {
       if (existing) {
         const supplied = getLockTokenFromHeaders(request);
         if (!supplied || supplied !== existing.token) {
-          response = locked();
+          response = lockedResponse(`/webdav/${path || BASE_PREFIX}`);
         } else {
           const refreshed: LockRecord = {
             ...existing,
