@@ -3,15 +3,13 @@ import { storage } from "../services/storage";
 
 const PAPERS_PREFIX = "papers";
 
-/**
- * ======================================================
- * TYPES
- * ======================================================
- */
 type IngestBody = {
   source?: string;
   title?: string;
   tags?: string[];
+  id?: string;
+  createdAt?: string;
+  links?: string[];
 };
 
 type R2Item = {
@@ -23,65 +21,55 @@ type R2Item = {
     title?: string;
     createdAt?: string;
     links?: string[];
+    source?: string;
+    tags?: string[];
   };
 };
 
-/**
- * ======================================================
- * SAFE R2 LIST NORMALISER
- * ======================================================
- */
 function normalizeR2List(result: unknown): R2Item[] {
   if (!result) return [];
   if (Array.isArray(result)) return result as R2Item[];
 
   if (typeof result === "object" && result !== null) {
-    const r = result as any;
-
-    if (Array.isArray(r.objects)) return r.objects;
-    if (Array.isArray(r.keys)) return r.keys;
+    const r = result as Record<string, unknown>;
+    if (Array.isArray(r.objects)) return r.objects as R2Item[];
+    if (Array.isArray(r.keys)) return r.keys as R2Item[];
   }
 
   return [];
 }
 
-/**
- * ======================================================
- * ROUTE PARSER
- * ======================================================
- */
 function getRoute(request: Request) {
   const url = new URL(request.url);
-
   const path = url.pathname.replace(/^\/v1\/research\/?/, "");
   const query = url.searchParams.get("q");
-
   return { path, query };
 }
 
-/**
- * ======================================================
- * SAFE METADATA ACCESSOR (FIXES TS18048)
- * ======================================================
- */
 function getMeta(item: R2Item) {
   return item.metadata ?? {};
 }
 
-/**
- * ======================================================
- * HANDLER
- * ======================================================
- */
+async function readJsonBody<T>(request: Request): Promise<T | null> {
+  const contentType = request.headers.get("content-type") ?? "";
+  if (!contentType.toLowerCase().includes("application/json")) return null;
+
+  try {
+    return (await request.json()) as T;
+  } catch {
+    return null;
+  }
+}
+
+async function listPapers(env: Env) {
+  const raw = await storage.r2.list(`${PAPERS_PREFIX}/`, env);
+  return normalizeR2List(raw);
+}
+
 export async function handleResearch(request: Request, env: Env) {
-  const method = request.method;
+  const method = request.method.toUpperCase();
   const { path, query } = getRoute(request);
 
-  /**
-   * ======================================================
-   * ROOT
-   * ======================================================
-   */
   if (!path) {
     return json({
       service: "research",
@@ -99,19 +87,12 @@ export async function handleResearch(request: Request, env: Env) {
     });
   }
 
-  /**
-   * ======================================================
-   * SEARCH
-   * ======================================================
-   */
   if (path === "search") {
     if (!query) {
       return json({ error: "Missing ?q=" }, 400);
     }
 
-    const raw = await storage.r2.list(`${PAPERS_PREFIX}/`, env);
-    const items = normalizeR2List(raw);
-
+    const items = await listPapers(env);
     const q = query.toLowerCase();
 
     const results = items.filter((item) =>
@@ -125,67 +106,56 @@ export async function handleResearch(request: Request, env: Env) {
     });
   }
 
-  /**
-   * ======================================================
-   * LIST PAPERS
-   * ======================================================
-   */
   if (path === "papers") {
-    const raw = await storage.r2.list(`${PAPERS_PREFIX}/`, env);
-    const items = normalizeR2List(raw);
-
+    const items = await listPapers(env);
     return json({
       count: items.length,
       items,
     });
   }
 
-  /**
-   * ======================================================
-   * SINGLE PAPER
-   * ======================================================
-   */
   if (path.startsWith("paper/")) {
-    const id = path.replace("paper/", "");
-    const key = `${PAPERS_PREFIX}/${id}.json`;
+    const id = path.replace("paper/", "").trim();
+    if (!id) {
+      return json({ error: "Missing paper id" }, 400);
+    }
 
+    const key = `${PAPERS_PREFIX}/${id}.json`;
     const item = await storage.r2.get(key, env);
 
     if (!item) {
       return json({ error: "Not found", key }, 404);
     }
 
+    const body = item.body ? await item.text() : null;
+
     return json({
       key,
       size: item.size ?? 0,
       contentType: item.contentType ?? "application/json",
-      body: item.body ?? null,
+      body,
     });
   }
 
-  /**
-   * ======================================================
-   * INGEST
-   * ======================================================
-   */
   if (path === "ingest" && method === "POST") {
-    const body = (await request.json()) as IngestBody;
-
-    const id = crypto.randomUUID();
+    const body = (await readJsonBody<IngestBody>(request)) ?? {};
+    const id = body.id?.trim() || crypto.randomUUID();
+    const createdAt = body.createdAt ?? new Date().toISOString();
 
     const record = {
       id,
       source: body.source ?? "unknown",
       title: body.title ?? null,
-      tags: body.tags ?? [],
-      createdAt: new Date().toISOString(),
+      tags: Array.isArray(body.tags) ? body.tags : [],
+      createdAt,
+      links: Array.isArray(body.links) ? body.links : [],
     };
 
     const key = `${PAPERS_PREFIX}/${id}.json`;
 
     await storage.r2.put(
       key,
-      new TextEncoder().encode(JSON.stringify(record)),
+      JSON.stringify(record),
       env,
       "application/json"
     );
@@ -194,22 +164,15 @@ export async function handleResearch(request: Request, env: Env) {
       status: "ingested",
       key,
       record,
-    });
+    }, 201);
   }
 
-  /**
-   * ======================================================
-   * GRAPH
-   * ======================================================
-   */
   if (path === "graph") {
-    const raw = await storage.r2.list(`${PAPERS_PREFIX}/`, env);
-    const items = normalizeR2List(raw);
+    const items = await listPapers(env);
 
     return json({
       nodes: items.map((i) => {
         const meta = getMeta(i);
-
         return {
           id: i.key,
           size: i.size ?? 0,
@@ -218,7 +181,6 @@ export async function handleResearch(request: Request, env: Env) {
       }),
       edges: items.flatMap((i) => {
         const meta = getMeta(i);
-
         return (meta.links ?? []).map((target: string) => ({
           from: i.key,
           to: target,
@@ -227,20 +189,13 @@ export async function handleResearch(request: Request, env: Env) {
     });
   }
 
-  /**
-   * ======================================================
-   * TIMELINE
-   * ======================================================
-   */
   if (path === "timeline") {
-    const raw = await storage.r2.list(`${PAPERS_PREFIX}/`, env);
-    const items = normalizeR2List(raw);
+    const items = await listPapers(env);
 
     return json({
       events: items
         .map((i) => {
           const meta = getMeta(i);
-
           return {
             id: i.key,
             timestamp: meta.createdAt ?? null,
@@ -250,11 +205,6 @@ export async function handleResearch(request: Request, env: Env) {
     });
   }
 
-  /**
-   * ======================================================
-   * ENTITIES (placeholder)
-   * ======================================================
-   */
   if (path === "entities") {
     return json({
       entities: [],
@@ -262,20 +212,13 @@ export async function handleResearch(request: Request, env: Env) {
     });
   }
 
-  /**
-   * ======================================================
-   * ZOTERO EXPORT
-   * ======================================================
-   */
   if (path === "export/zotero") {
-    const raw = await storage.r2.list(`${PAPERS_PREFIX}/`, env);
-    const items = normalizeR2List(raw);
+    const items = await listPapers(env);
 
     return json({
       version: "0.1",
       items: items.map((i) => {
         const meta = getMeta(i);
-
         return {
           key: i.key,
           title: meta.title ?? i.key,
@@ -285,11 +228,6 @@ export async function handleResearch(request: Request, env: Env) {
     });
   }
 
-  /**
-   * ======================================================
-   * FALLBACK
-   * ======================================================
-   */
   return json(
     {
       error: "Not found",
