@@ -22,41 +22,6 @@ app.get("/health", (c) => {
 
 /**
  * ======================================================
- * ROOT LANDING
- * ======================================================
- */
-app.get("/", (c) => {
-  return c.html(`
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>rjmlaird API</title>
-  <style>
-    body { font-family: system-ui, sans-serif; padding: 2rem; }
-    code { background: #f4f4f4; padding: 2px 6px; border-radius: 4px; }
-  </style>
-</head>
-<body>
-  <h1>rjmlaird API</h1>
-  <p>Status: <strong>running</strong></p>
-
-  <ul>
-    <li><code>/health</code></li>
-    <li><code>/webdav/*</code></li>
-    <li><code>/v1/webdav/*</code></li>
-    <li><code>/v1/research</code></li>
-    <li><code>/v1/research/*</code></li>
-    <li><code>/v1/debug</code></li>
-  </ul>
-</body>
-</html>
-  `);
-});
-
-/**
- * ======================================================
  * WEB HANDLERS
  * ======================================================
  */

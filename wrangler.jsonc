@@ -2,7 +2,10 @@
   "name": "rjmlaird-api",
   "main": "src/index.ts",
   "compatibility_date": "2026-07-02",
-
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "single-page-application"
+  },
   "r2_buckets": [
     {
       "binding": "R2",
