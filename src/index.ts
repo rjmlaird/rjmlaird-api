@@ -44,6 +44,7 @@ app.get("/", (c) => {
     <li><code>/health</code></li>
     <li><code>/webdav/*</code> (Zotero)</li>
     <li><code>/v1/webdav/*</code> (legacy)</li>
+    <li><code>/v1/research</code></li>
     <li><code>/v1/research/*</code></li>
     <li><code>/v1/debug</code></li>
   </ul>
@@ -67,26 +68,45 @@ async function webdavHandler(c: any) {
 
 /**
  * =======================
- * WEBDAV (ROBUST ROUTES)
+ * WEBDAV ROUTES
  * =======================
- * Covers ALL edge cases Zotero may hit
  */
-
-// primary
 app.all("/webdav", webdavHandler);
 app.all("/webdav/", webdavHandler);
 app.all("/webdav/*", webdavHandler);
 
-// legacy
 app.all("/v1/webdav", webdavHandler);
 app.all("/v1/webdav/", webdavHandler);
 app.all("/v1/webdav/*", webdavHandler);
 
 /**
  * =======================
- * RESEARCH API
+ * RESEARCH API (FIXED)
  * =======================
+ * IMPORTANT: include BOTH root + wildcard
  */
+
+// root endpoint (THIS WAS MISSING)
+app.all("/v1/research", async (c) => {
+  try {
+    return await handleResearch(c.req.raw, c.env);
+  } catch (err) {
+    console.error("Research API error:", err);
+    return c.text("Research internal error", 500);
+  }
+});
+
+// slash variant (optional but safe)
+app.all("/v1/research/", async (c) => {
+  try {
+    return await handleResearch(c.req.raw, c.env);
+  } catch (err) {
+    console.error("Research API error:", err);
+    return c.text("Research internal error", 500);
+  }
+});
+
+// wildcard routes
 app.all("/v1/research/*", async (c) => {
   try {
     return await handleResearch(c.req.raw, c.env);
