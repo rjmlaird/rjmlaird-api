@@ -12,7 +12,6 @@ const PAPERS_PREFIX = "papers";
 /**
  * ----------------------------------------
  * SAFE R2 LIST NORMALISER
- * (fixes TS inference + runtime mismatch)
  * ----------------------------------------
  */
 function normalizeR2List(result: unknown): any[] {
@@ -28,20 +27,24 @@ function normalizeR2List(result: unknown): any[] {
     return (result as any).objects;
   }
 
+  if (
+    typeof result === "object" &&
+    result !== null &&
+    Array.isArray((result as any).keys)
+  ) {
+    return (result as any).keys;
+  }
+
   return [];
 }
 
 /**
  * ----------------------------------------
- * PATH NORMALISATION
+ * ROUTE PARSER (IMPORTANT FIX)
  * ----------------------------------------
  */
-function getPath(request: Request): string {
-  const url = new URL(request.url);
-
-  return url.pathname
-    .replace(/^\/v1\/research\/?/, "/")
-    .replace(/\/+$/, "");
+function getRoute(path: string): string {
+  return path.replace(/\/+$/, "") || "/";
 }
 
 /**
@@ -50,7 +53,10 @@ function getPath(request: Request): string {
  * ----------------------------------------
  */
 export async function handleResearch(request: Request, env: Env) {
-  const path = getPath(request);
+  const url = new URL(request.url);
+
+  // IMPORTANT: DO NOT strip /v1/research here anymore
+  const path = getRoute(url.pathname.replace("/v1/research", ""));
   const method = request.method;
 
   /**
@@ -58,7 +64,7 @@ export async function handleResearch(request: Request, env: Env) {
    * ROOT
    * ================================
    */
-  if ((path === "/" || path === "") && method === "GET") {
+  if (path === "/" && method === "GET") {
     return json({
       service: "research",
       endpoints: ["/papers", "/paper/:id", "/ingest"],
@@ -84,11 +90,11 @@ export async function handleResearch(request: Request, env: Env) {
 
   /**
    * ================================
-   * GET PAPER BY ID
+   * GET PAPER
    * ================================
    */
   if (path.startsWith("/paper/") && method === "GET") {
-    const id = path.replace("/paper/", "").replace(/\/+$/, "");
+    const id = path.replace("/paper/", "");
 
     const key = `${PAPERS_PREFIX}/${id}.json`;
 
@@ -114,7 +120,7 @@ export async function handleResearch(request: Request, env: Env) {
 
   /**
    * ================================
-   * INGEST PAPER
+   * INGEST
    * ================================
    */
   if (path === "/ingest" && method === "POST") {
@@ -156,6 +162,7 @@ export async function handleResearch(request: Request, env: Env) {
       error: "Not found",
       path,
       method,
+      hint: "Check /v1/research/papers or /v1/research/",
     },
     404
   );
