@@ -17,19 +17,31 @@ function normalizePath(raw: string): string {
 }
 
 /**
- * Convert logical path → R2 key
+ * ======================================================
+ * KEY HELPERS
+ * ======================================================
  */
 function toKey(path: string | null): string | null {
   if (!path) return null;
   return `${BASE_PREFIX}/${path}`;
 }
 
-/**
- * WebDAV href helper
- */
-function toHref(path: string): string {
-  if (!path) return "/webdav/zotero";
+function isFolderKey(key: string) {
+  return key.endsWith("/.folder");
+}
+
+function cleanKey(key: string) {
+  return key
+    .replace(`${BASE_PREFIX}/`, "")
+    .replace(/\/\.folder$/, "");
+}
+
+function href(path: string) {
   return `/webdav/zotero/${path}`;
+}
+
+function etagFor(key: string, size?: number) {
+  return `"${key}-${size ?? 0}"`;
 }
 
 /**
@@ -42,8 +54,7 @@ export async function handleWebDAV(request: Request, env: any) {
 
   const path = normalizePath(url.pathname);
   const key = toKey(path);
-
-  const isRoot = !path || path.length === 0;
+  const isRoot = !path;
 
   /**
    * ======================================================
@@ -64,7 +75,7 @@ export async function handleWebDAV(request: Request, env: any) {
 
   /**
    * ======================================================
-   * LOCK / UNLOCK
+   * LOCK / UNLOCK (Zotero compatibility layer)
    * ======================================================
    */
   if (request.method === "LOCK") {
@@ -81,10 +92,7 @@ export async function handleWebDAV(request: Request, env: any) {
 </d:prop>`,
       {
         status: 200,
-        headers: {
-          "Content-Type": "application/xml",
-          DAV: "1,2",
-        },
+        headers: { "Content-Type": "application/xml", DAV: "1,2" },
       }
     );
   }
@@ -95,29 +103,26 @@ export async function handleWebDAV(request: Request, env: any) {
 
   /**
    * ======================================================
-   * ROOT (Zotero entrypoint)
+   * ROOT
    * ======================================================
    */
   if (isRoot) {
     return new Response("WebDAV root", {
       status: 200,
-      headers: {
-        DAV: "1,2",
-        "Content-Type": "text/plain",
-      },
+      headers: { DAV: "1,2", "Content-Type": "text/plain" },
     });
   }
 
   /**
    * ======================================================
-   * LOAD OBJECT
+   * OBJECT LOOKUP
    * ======================================================
    */
   const obj = key ? await storage.r2.get(key, env) : null;
 
   /**
    * ======================================================
-   * PROPFIND (ZOTERO CORE)
+   * PROPFIND (CORE ZOTERO COMPATIBILITY)
    * ======================================================
    */
   if (request.method === "PROPFIND") {
@@ -127,25 +132,27 @@ export async function handleWebDAV(request: Request, env: any) {
 
     const listResult = await storage.r2.list(prefix, env);
 
-    // SAFE NORMALISATION (FIXES TS + runtime mismatch)
+    // FIX: R2 list can be array OR { objects }
     const items: any[] = Array.isArray(listResult)
       ? listResult
-      : (listResult as any).objects ?? [];
+      : (listResult as any)?.objects ?? [];
 
     const responses: string[] = [];
 
     /**
-     * SELF NODE (REQUIRED)
+     * SELF NODE (CRITICAL FOR ZOTERO)
      */
     responses.push(`
 <d:response>
-  <d:href>${toHref(path)}</d:href>
+  <d:href>${href(path)}</d:href>
   <d:propstat>
     <d:prop>
       <d:resourcetype><d:collection/></d:resourcetype>
       <d:displayname>${path || "zotero"}</d:displayname>
       <d:getetag>"${path || "root"}"</d:getetag>
       <d:getcontentlength>0</d:getcontentlength>
+      <d:creationdate>1970-01-01T00:00:00Z</d:creationdate>
+      <d:getlastmodified>Thu, 01 Jan 1970 00:00:00 GMT</d:getlastmodified>
     </d:prop>
     <d:status>HTTP/1.1 200 OK</d:status>
   </d:propstat>
@@ -156,24 +163,20 @@ export async function handleWebDAV(request: Request, env: any) {
      */
     if (depth !== "0") {
       for (const item of items) {
-        const clean = item.key.replace(`${BASE_PREFIX}/`, "");
-        const isFolder = clean.endsWith("/");
-
-        const etag = `"${item.key}-${item.size ?? 0}"`;
+        const clean = cleanKey(item.key);
+        const folder = isFolderKey(item.key);
 
         responses.push(`
 <d:response>
-  <d:href>${toHref(clean.replace(/\/$/, ""))}</d:href>
+  <d:href>${href(clean)}</d:href>
   <d:propstat>
     <d:prop>
-      ${
-        isFolder
-          ? "<d:resourcetype><d:collection/></d:resourcetype>"
-          : "<d:resourcetype/>"
-      }
+      <d:resourcetype>${folder ? "<d:collection/>" : ""}</d:resourcetype>
       <d:displayname>${clean}</d:displayname>
-      <d:getetag>${etag}</d:getetag>
+      <d:getetag>${etagFor(item.key, item.size)}</d:getetag>
       <d:getcontentlength>${item.size ?? 0}</d:getcontentlength>
+      <d:creationdate>1970-01-01T00:00:00Z</d:creationdate>
+      <d:getlastmodified>1970-01-01T00:00:00Z</d:getlastmodified>
     </d:prop>
     <d:status>HTTP/1.1 200 OK</d:status>
   </d:propstat>
@@ -188,10 +191,7 @@ ${responses.join("\n")}
 </d:multistatus>`,
       {
         status: 207,
-        headers: {
-          "Content-Type": "application/xml",
-          DAV: "1,2",
-        },
+        headers: { "Content-Type": "application/xml", DAV: "1,2" },
       }
     );
   }
