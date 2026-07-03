@@ -28,9 +28,32 @@ app.get("/openapi.json", (c) => {
         url: "https://api.rjmlaird.co.uk",
       },
     ],
+    tags: [
+      {
+        name: "System",
+        description: "Health and API metadata",
+      },
+      {
+        name: "Debug",
+        description: "Debug endpoints",
+      },
+      {
+        name: "Research",
+        description: "Research API endpoints",
+      },
+      {
+        name: "WebDAV",
+        description: "WebDAV access",
+      },
+      {
+        name: "Legacy",
+        description: "Older collection-based API",
+      },
+    ],
     paths: {
       "/health": {
         get: {
+          tags: ["System"],
           summary: "Health check",
           responses: {
             "200": {
@@ -41,6 +64,7 @@ app.get("/openapi.json", (c) => {
       },
       "/v1/debug": {
         get: {
+          tags: ["Debug"],
           summary: "Debug status",
           responses: {
             "200": {
@@ -51,6 +75,7 @@ app.get("/openapi.json", (c) => {
       },
       "/v1/research": {
         get: {
+          tags: ["Research"],
           summary: "Research API root",
           responses: {
             "200": {
@@ -61,6 +86,7 @@ app.get("/openapi.json", (c) => {
       },
       "/v1/research/search": {
         get: {
+          tags: ["Research"],
           summary: "Search stored papers",
           parameters: [
             {
@@ -78,6 +104,7 @@ app.get("/openapi.json", (c) => {
       },
       "/v1/research/papers": {
         get: {
+          tags: ["Research"],
           summary: "List papers",
           responses: {
             "200": { description: "Paper list" },
@@ -86,6 +113,7 @@ app.get("/openapi.json", (c) => {
       },
       "/v1/research/paper/{id}": {
         get: {
+          tags: ["Research"],
           summary: "Get one paper",
           parameters: [
             {
@@ -103,6 +131,7 @@ app.get("/openapi.json", (c) => {
       },
       "/v1/research/graph": {
         get: {
+          tags: ["Research"],
           summary: "Paper graph",
           responses: {
             "200": { description: "Graph data" },
@@ -111,6 +140,7 @@ app.get("/openapi.json", (c) => {
       },
       "/v1/research/timeline": {
         get: {
+          tags: ["Research"],
           summary: "Paper timeline",
           responses: {
             "200": { description: "Timeline data" },
@@ -119,6 +149,7 @@ app.get("/openapi.json", (c) => {
       },
       "/v1/research/entities": {
         get: {
+          tags: ["Research"],
           summary: "Extract entities",
           responses: {
             "200": { description: "Entity data" },
@@ -127,6 +158,7 @@ app.get("/openapi.json", (c) => {
       },
       "/v1/research/export/zotero": {
         get: {
+          tags: ["Research"],
           summary: "Export to Zotero format",
           responses: {
             "200": { description: "Export payload" },
@@ -135,6 +167,7 @@ app.get("/openapi.json", (c) => {
       },
       "/v1/research/ingest": {
         post: {
+          tags: ["Research"],
           summary: "Ingest a record or sync Zotero page",
           responses: {
             "201": { description: "Ingested" },
@@ -144,6 +177,7 @@ app.get("/openapi.json", (c) => {
       },
       "/webdav/{path}": {
         get: {
+          tags: ["WebDAV"],
           summary: "WebDAV endpoint",
           responses: {
             "200": { description: "WebDAV response" },
@@ -152,6 +186,7 @@ app.get("/openapi.json", (c) => {
       },
       "/api/{collection}": {
         get: {
+          tags: ["Legacy"],
           summary: "Legacy collection fetch",
           parameters: [
             {
@@ -171,29 +206,6 @@ app.get("/openapi.json", (c) => {
   });
 });
 
-const webdavHandler = async (c: any) => {
-  try {
-    return await handleWebDAV(c.req.raw, c.env);
-  } catch (err) {
-    console.error("WebDAV error:", err);
-    return c.text("WebDAV internal error", 500);
-  }
-};
-
-const researchHandler = async (c: any) => {
-  try {
-    return await handleResearch(c.req.raw, c.env);
-  } catch (err) {
-    console.error("Research API error:", err);
-    return c.json(
-      {
-        error: "Research internal error",
-        message: err instanceof Error ? err.message : String(err),
-      },
-      500
-    );
-  }
-};
 
 app.all("/webdav/*", webdavHandler);
 app.all("/v1/webdav/*", webdavHandler);
