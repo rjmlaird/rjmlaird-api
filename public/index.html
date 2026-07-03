@@ -1,11 +1,12 @@
-
-
-<!doctype html>
-<html>
+app.get("/", (c) => {
+  return c.html(`<!doctype html>
+<html lang="en">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="rjmlaird API"/>
   <title>rjmlaird API</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.17.14/swagger-ui.css" crossorigin="anonymous">
   <style>
     body {
       margin: 0;
@@ -13,85 +14,57 @@
       background: #0b0f17;
       color: #e5e7eb;
     }
-
-    .wrap {
-      max-width: 960px;
-      margin: auto;
-      padding: 48px 20px;
+    .topbar {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 20px 12px;
     }
-
-    h1 { margin-bottom: 6px; }
-    p { color: #9ca3af; margin-top: 0; }
-
-    .card {
+    .topbar h1 { margin: 0 0 6px; }
+    .topbar p { margin: 0; color: #9ca3af; }
+    .panel {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 20px 48px;
+    }
+    .swagger-shell {
       background: #111827;
       border: 1px solid #1f2937;
       border-radius: 12px;
-      padding: 16px;
-      margin-top: 16px;
+      overflow: hidden;
     }
-
-    .endpoint {
-      display: flex;
-      justify-content: space-between;
-      padding: 8px 0;
-      font-family: monospace;
-      border-bottom: 1px solid #1f2937;
+    #swagger-ui {
+      background: #fff;
     }
-
-    .endpoint:last-child {
-      border-bottom: none;
-    }
-
-    .method {
-      color: #38bdf8;
-      font-weight: bold;
-      margin-right: 8px;
-    }
-
-    a {
-      color: #38bdf8;
-      text-decoration: none;
+    .swagger-ui .topbar {
+      display: none;
     }
   </style>
 </head>
-
 <body>
-  <div class="wrap">
+  <div class="topbar">
     <h1>rjmlaird API</h1>
     <p>GitHub-powered CV + dynamic JSON API (Cloudflare Workers)</p>
-
-    <div class="card">
-      <strong>Core Collections</strong>
-
-      <div class="endpoint"><span><span class="method">GET</span>/api/profile</span></div>
-      <div class="endpoint"><span><span class="method">GET</span>/api/experience</span></div>
-      <div class="endpoint"><span><span class="method">GET</span>/api/projects</span></div>
-      <div class="endpoint"><span><span class="method">GET</span>/api/memberships</span></div>
-      <div class="endpoint"><span><span class="method">GET</span>/api/reviews</span></div>
-      <div class="endpoint"><span><span class="method">GET</span>/api/skills</span></div>
-    </div>
-
-    <div class="card">
-      <strong>Dynamic API</strong>
-
-      <div class="endpoint">
-        <span><span class="method">GET</span>/api/:collection</span>
-      </div>
-
-      <p style="margin-top:10px; color:#9ca3af;">
-        Example: <code>/api/projects</code>, <code>/api/experience</code>
-      </p>
-    </div>
-
-    <div class="card">
-      <strong>System</strong>
-
-      <div class="endpoint"><span><span class="method">GET</span>/health</span></div>
-      <div class="endpoint"><span><span class="method">GET</span>/openapi.json</span></div>
-    </div>
-
   </div>
+
+  <div class="panel">
+    <div class="swagger-shell">
+      <div id="swagger-ui"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.17.14/swagger-ui-bundle.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.17.14/swagger-ui-standalone-preset.js" crossorigin="anonymous"></script>
+  <script>
+    window.onload = () => {
+      window.ui = SwaggerUIBundle({
+        url: '/openapi.json',
+        dom_id: '#swagger-ui',
+        deepLinking: true,
+        presets: [SwaggerUIBundle.presets.apis],
+        layout: 'BaseLayout'
+      });
+    };
+  </script>
 </body>
-</html>
-  
+</html>`);
+});
