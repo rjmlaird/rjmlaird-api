@@ -22,7 +22,7 @@ app.get("/health", (c) => {
 
 /**
  * =======================
- * ROOT API LANDING PAGE
+ * ROOT LANDING
  * =======================
  */
 app.get("/", (c) => {
@@ -40,11 +40,10 @@ app.get("/", (c) => {
 <body>
   <h1>rjmlaird API</h1>
   <p>Status: <strong>running</strong></p>
-  <p>Endpoints:</p>
   <ul>
     <li><code>/health</code></li>
-    <li><code>/webdav/*</code> (Zotero compatible)</li>
-    <li><code>/v1/webdav/*</code> (legacy API path)</li>
+    <li><code>/webdav/*</code> (Zotero)</li>
+    <li><code>/v1/webdav/*</code> (legacy)</li>
     <li><code>/v1/research/*</code></li>
     <li><code>/v1/debug</code></li>
   </ul>
@@ -54,31 +53,34 @@ app.get("/", (c) => {
 
 /**
  * =======================
- * WEBDAV (PRIMARY ZOTERO ENTRYPOINT)
+ * WEBDAV CORE WRAPPER
  * =======================
  */
-app.all("/webdav/*", async (c) => {
+async function webdavHandler(c: any) {
   try {
     return await handleWebDAV(c.req.raw, c.env);
   } catch (err) {
-    console.error("WebDAV error (/webdav):", err);
+    console.error("WebDAV error:", err);
     return c.text("WebDAV internal error", 500);
   }
-});
+}
 
 /**
  * =======================
- * WEBDAV (LEGACY / INTERNAL API)
+ * WEBDAV (ROBUST ROUTES)
  * =======================
+ * Covers ALL edge cases Zotero may hit
  */
-app.all("/v1/webdav/*", async (c) => {
-  try {
-    return await handleWebDAV(c.req.raw, c.env);
-  } catch (err) {
-    console.error("WebDAV error (/v1/webdav):", err);
-    return c.text("WebDAV internal error", 500);
-  }
-});
+
+// primary
+app.all("/webdav", webdavHandler);
+app.all("/webdav/", webdavHandler);
+app.all("/webdav/*", webdavHandler);
+
+// legacy
+app.all("/v1/webdav", webdavHandler);
+app.all("/v1/webdav/", webdavHandler);
+app.all("/v1/webdav/*", webdavHandler);
 
 /**
  * =======================
@@ -96,7 +98,7 @@ app.all("/v1/research/*", async (c) => {
 
 /**
  * =======================
- * DEBUG ENDPOINT
+ * DEBUG
  * =======================
  */
 app.get("/v1/debug", (c) => {
@@ -111,7 +113,7 @@ app.get("/v1/debug", (c) => {
 
 /**
  * =======================
- * LEGACY CONTENT API
+ * LEGACY API
  * =======================
  */
 app.get("/api/:collection", async (c) => {
