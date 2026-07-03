@@ -77,57 +77,47 @@ export async function handleWebDAV(request: Request, env: any) {
    * =========================
    */
   if (request.method === "PROPFIND") {
-    const depth = request.headers.get("Depth") ?? "1";
+  const depth = request.headers.get("Depth") ?? "1";
 
-    const parent = path;
-    const prefix = `${BASE_PREFIX}${parent ? parent + "/" : ""}`;
+  const prefix = `${BASE_PREFIX}${path ? path + "/" : ""}`;
 
-    // LIST MODE (Depth: 1)
-    if (depth === "1") {
-      const list = await storage.r2.list(prefix, env);
+  const items = await storage.r2.list(prefix, env);
 
-      const responses = list.map((item: any) => {
-        const name = item.key.replace(BASE_PREFIX, "");
+  const responses = items.map((item: any) => {
+    const isFolder = item.key.endsWith("/.folder");
 
-        return `
+    const cleanPath = item.key
+      .replace(BASE_PREFIX, "")
+      .replace(/\/\.folder$/, "");
+
+    return `
   <d:response>
-    <d:href>/${name}</d:href>
+    <d:href>/webdav/${cleanPath}</d:href>
     <d:propstat>
       <d:prop>
-        <d:resourcetype>${item.key.endsWith("/") ? "<d:collection/>" : ""}</d:resourcetype>
+        <d:resourcetype>${isFolder ? "<d:collection/>" : ""}</d:resourcetype>
         <d:getcontentlength>${item.size ?? 0}</d:getcontentlength>
         <d:getetag>${item.etag ?? ""}</d:getetag>
       </d:prop>
       <d:status>HTTP/1.1 200 OK</d:status>
     </d:propstat>
   </d:response>`;
-      });
+  });
 
-      return xmlResponse(207, responses.join("\n"), url.pathname);
+  return new Response(
+    `<?xml version="1.0" encoding="utf-8"?>
+<d:multistatus xmlns:d="DAV:">
+${responses.join("\n")}
+</d:multistatus>`,
+    {
+      status: 207,
+      headers: {
+        "Content-Type": "application/xml",
+        DAV: "1,2",
+      },
     }
-
-    // SINGLE RESOURCE (Depth: 0)
-    if (!obj) {
-      return xmlResponse(404, "", url.pathname);
-    }
-
-    return xmlResponse(
-      207,
-      `
-  <d:response>
-    <d:href>${url.pathname}</d:href>
-    <d:propstat>
-      <d:prop>
-        <d:resourcetype/>
-        <d:getcontentlength>${obj.size ?? 0}</d:getcontentlength>
-        <d:getetag>${obj.etag ?? ""}</d:getetag>
-      </d:prop>
-      <d:status>HTTP/1.1 200 OK</d:status>
-    </d:propstat>
-  </d:response>`,
-      url.pathname
-    );
-  }
+  );
+}
 
   /**
    * =========================
