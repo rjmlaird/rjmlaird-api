@@ -19,12 +19,16 @@ type R2Item = {
   size?: number;
   etag?: string;
   uploaded?: string;
-  metadata?: Record<string, any>;
+  metadata?: {
+    title?: string;
+    createdAt?: string;
+    links?: string[];
+  };
 };
 
 /**
  * ======================================================
- * SAFE R2 NORMALISER
+ * SAFE R2 LIST NORMALISER
  * ======================================================
  */
 function normalizeR2List(result: unknown): R2Item[] {
@@ -33,6 +37,7 @@ function normalizeR2List(result: unknown): R2Item[] {
 
   if (typeof result === "object" && result !== null) {
     const r = result as any;
+
     if (Array.isArray(r.objects)) return r.objects;
     if (Array.isArray(r.keys)) return r.keys;
   }
@@ -51,7 +56,16 @@ function getRoute(request: Request) {
   const path = url.pathname.replace(/^\/v1\/research\/?/, "");
   const query = url.searchParams.get("q");
 
-  return { path, query, url };
+  return { path, query };
+}
+
+/**
+ * ======================================================
+ * SAFE METADATA ACCESSOR (FIXES TS18048)
+ * ======================================================
+ */
+function getMeta(item: R2Item) {
+  return item.metadata ?? {};
 }
 
 /**
@@ -72,16 +86,16 @@ export async function handleResearch(request: Request, env: Env) {
     return json({
       service: "research",
       version: "1.0",
-      endpoints: {
-        search: "/search?q=",
-        papers: "/papers",
-        paper: "/paper/:id",
-        graph: "/graph",
-        timeline: "/timeline",
-        entities: "/entities",
-        export: "/export/zotero",
-        ingest: "/ingest",
-      },
+      endpoints: [
+        "/search?q=",
+        "/papers",
+        "/paper/:id",
+        "/graph",
+        "/timeline",
+        "/entities",
+        "/export/zotero",
+        "/ingest",
+      ],
     });
   }
 
@@ -100,10 +114,9 @@ export async function handleResearch(request: Request, env: Env) {
 
     const q = query.toLowerCase();
 
-    const results = items.filter((item) => {
-      const blob = JSON.stringify(item).toLowerCase();
-      return blob.includes(q);
-    });
+    const results = items.filter((item) =>
+      JSON.stringify(item).toLowerCase().includes(q)
+    );
 
     return json({
       query,
@@ -152,21 +165,20 @@ export async function handleResearch(request: Request, env: Env) {
 
   /**
    * ======================================================
-   * INGEST (IMPORTANT: adds real timestamp for timeline)
+   * INGEST
    * ======================================================
    */
   if (path === "ingest" && method === "POST") {
     const body = (await request.json()) as IngestBody;
 
     const id = crypto.randomUUID();
-    const timestamp = new Date().toISOString();
 
     const record = {
       id,
       source: body.source ?? "unknown",
       title: body.title ?? null,
       tags: body.tags ?? [],
-      createdAt: timestamp,
+      createdAt: new Date().toISOString(),
     };
 
     const key = `${PAPERS_PREFIX}/${id}.json`;
@@ -178,12 +190,16 @@ export async function handleResearch(request: Request, env: Env) {
       "application/json"
     );
 
-    return json({ status: "ingested", key, record });
+    return json({
+      status: "ingested",
+      key,
+      record,
+    });
   }
 
   /**
    * ======================================================
-   * GRAPH (now meaningful)
+   * GRAPH
    * ======================================================
    */
   if (path === "graph") {
@@ -191,25 +207,29 @@ export async function handleResearch(request: Request, env: Env) {
     const items = normalizeR2List(raw);
 
     return json({
-      nodes: items.map((i) => ({
-        id: i.key,
-        size: i.size ?? 0,
-        title: i.metadata?.title ?? null,
-      })),
-      edges: items
-        .filter((i) => i.metadata?.links)
-        .flatMap((i) =>
-          (i.metadata.links || []).map((target: string) => ({
-            from: i.key,
-            to: target,
-          }))
-        ),
+      nodes: items.map((i) => {
+        const meta = getMeta(i);
+
+        return {
+          id: i.key,
+          size: i.size ?? 0,
+          title: meta.title ?? null,
+        };
+      }),
+      edges: items.flatMap((i) => {
+        const meta = getMeta(i);
+
+        return (meta.links ?? []).map((target: string) => ({
+          from: i.key,
+          to: target,
+        }));
+      }),
     });
   }
 
   /**
    * ======================================================
-   * TIMELINE (now real)
+   * TIMELINE
    * ======================================================
    */
   if (path === "timeline") {
@@ -218,30 +238,33 @@ export async function handleResearch(request: Request, env: Env) {
 
     return json({
       events: items
-        .map((i) => ({
-          id: i.key,
-          timestamp: i.metadata?.createdAt ?? null,
-        }))
+        .map((i) => {
+          const meta = getMeta(i);
+
+          return {
+            id: i.key,
+            timestamp: meta.createdAt ?? null,
+          };
+        })
         .filter((e) => e.timestamp),
     });
   }
 
   /**
    * ======================================================
-   * ENTITIES (placeholder, structured future hook)
+   * ENTITIES (placeholder)
    * ======================================================
    */
   if (path === "entities") {
     return json({
       entities: [],
       extracted: false,
-      note: "entity layer not yet enabled",
     });
   }
 
   /**
    * ======================================================
-   * ZOTERO EXPORT (stable mapping)
+   * ZOTERO EXPORT
    * ======================================================
    */
   if (path === "export/zotero") {
@@ -250,14 +273,23 @@ export async function handleResearch(request: Request, env: Env) {
 
     return json({
       version: "0.1",
-      items: items.map((i) => ({
-        key: i.key,
-        title: i.metadata?.title ?? i.key,
-        createdAt: i.metadata?.createdAt ?? null,
-      })),
+      items: items.map((i) => {
+        const meta = getMeta(i);
+
+        return {
+          key: i.key,
+          title: meta.title ?? i.key,
+          createdAt: meta.createdAt ?? null,
+        };
+      }),
     });
   }
 
+  /**
+   * ======================================================
+   * FALLBACK
+   * ======================================================
+   */
   return json(
     {
       error: "Not found",
