@@ -3,52 +3,43 @@ import { storage } from "../services/storage";
 const BASE_PREFIX = "zotero/";
 
 /**
- * ======================================================
- * PATH NORMALISATION
- * ======================================================
+ * =========================
+ * PATH HELPERS
+ * =========================
  */
-function normalizePath(rawPath: string) {
-  return decodeURIComponent(rawPath)
+function normalizePath(raw: string) {
+  return decodeURIComponent(raw)
     .replace(/^\/(v1\/)?webdav\/?/, "")
     .replace(/^\/+/, "")
-    .replace(/^zotero\/?/, ""); // prevents /zotero/zotero duplication
+    .replace(/^zotero\/?/, ""); // allow /webdav/zotero or /webdav
 }
 
-/**
- * Build R2 key safely
- */
-function toKey(path: string) {
-  if (!path) return null;
+function toKey(path: string | null) {
+  if (!path || path.length === 0) return null;
   return `${BASE_PREFIX}${path}`;
 }
 
 /**
- * Detect folder entries
- */
-function isFolderKey(key: string) {
-  return key.endsWith("/.folder");
-}
-
-/**
- * Convert R2 listing → WebDAV path
+ * Convert R2 object -> WebDAV item
  */
 function toHref(key: string) {
-  return `/webdav/zotero/${key.replace(BASE_PREFIX, "").replace(/\/\.folder$/, "")}`;
+  return `/webdav/${key.replace(BASE_PREFIX, "").replace(/\/\.folder$/, "")}`;
 }
 
 /**
- * ======================================================
- * WEB DAV HANDLER (ZOTERO COMPATIBLE)
- * ======================================================
+ * =========================
+ * WEBDAV HANDLER
+ * =========================
  */
 export async function handleWebDAV(request: Request, env: any) {
   const url = new URL(request.url);
+
   const path = normalizePath(url.pathname);
   const key = toKey(path);
 
   /**
    * =========================
-   * OPTIONS (required by Zotero + macOS)
+   * OPTIONS (required)
    * =========================
    */
   if (request.method === "OPTIONS") {
@@ -56,7 +47,8 @@ export async function handleWebDAV(request: Request, env: any) {
       status: 200,
       headers: {
         DAV: "1,2",
-        Allow: "OPTIONS, GET, PUT, DELETE, PROPFIND, HEAD, MKCOL",
+        Allow:
+          "OPTIONS, GET, PUT, DELETE, PROPFIND, HEAD, MKCOL, LOCK, UNLOCK",
         "MS-Author-Via": "DAV",
       },
     });
@@ -64,64 +56,95 @@ export async function handleWebDAV(request: Request, env: any) {
 
   /**
    * =========================
-   * ROOT (/webdav/zotero/)
+   * ROOT (MUST NEVER FAIL)
+   * /webdav OR /webdav/zotero
    * =========================
    */
-  if (!path) {
+  if (!path || path === "zotero") {
     return new Response("WebDAV root", {
       status: 200,
       headers: {
-        "Content-Type": "text/plain",
         DAV: "1,2",
+        "Content-Type": "text/plain",
       },
     });
   }
 
   /**
-   * ======================================================
-   * PROPFIND (CRITICAL FOR ZOTERO DISCOVERY)
-   * ======================================================
+   * =========================
+   * LOCK (Zotero requires it)
+   * =========================
+   */
+  if (request.method === "LOCK") {
+    return new Response(
+      `<?xml version="1.0" encoding="utf-8"?>
+<d:prop xmlns:d="DAV:">
+  <d:lockdiscovery/>
+</d:prop>`,
+      {
+        status: 200,
+        headers: {
+          "Content-Type": "application/xml",
+          DAV: "1,2",
+        },
+      }
+    );
+  }
+
+  if (request.method === "UNLOCK") {
+    return new Response(null, { status: 204 });
+  }
+
+  /**
+   * =========================
+   * FILE LOOKUP
+   * =========================
+   */
+  const obj = key ? await storage.r2.get(key, env) : null;
+
+  /**
+   * =========================
+   * PROPFIND (CRITICAL FIXED VERSION)
+   * =========================
    */
   if (request.method === "PROPFIND") {
-    const prefix = `${BASE_PREFIX}${path ? path + "/" : ""}`;
+    const prefix = key ? key + "/" : BASE_PREFIX;
 
     const items = await storage.r2.list(prefix, env);
 
     const responses: string[] = [];
 
-    // SELF NODE (Zotero requires this)
+    // SELF NODE
     responses.push(`
-  <d:response>
-    <d:href>/webdav/zotero/${path}</d:href>
-    <d:propstat>
-      <d:prop>
-        <d:resourcetype><d:collection/></d:resourcetype>
-        <d:getetag>"root"</d:getetag>
-        <d:getcontentlength>0</d:getcontentlength>
-        <d:getlastmodified>Thu, 01 Jan 1970 00:00:00 GMT</d:getlastmodified>
-      </d:prop>
-      <d:status>HTTP/1.1 200 OK</d:status>
-    </d:propstat>
-  </d:response>`);
+<d:response>
+  <d:href>/webdav/${path}</d:href>
+  <d:propstat>
+    <d:prop>
+      <d:resourcetype><d:collection/></d:resourcetype>
+      <d:getetag>"root"</d:getetag>
+      <d:getcontentlength>0</d:getcontentlength>
+    </d:prop>
+    <d:status>HTTP/1.1 200 OK</d:status>
+  </d:propstat>
+</d:response>`);
 
-    // CHILDREN
+    // CHILDREN (FIXED: correct R2 list shape)
     for (const item of items) {
       const clean = item.key.replace(BASE_PREFIX, "");
-
-      const folder = isFolderKey(item.key);
+      const isFolder = item.key.endsWith("/.folder");
 
       responses.push(`
-  <d:response>
-    <d:href>/webdav/zotero/${clean.replace(/\/\.folder$/, "")}</d:href>
-    <d:propstat>
-      <d:prop>
-        <d:resourcetype>${folder ? "<d:collection/>" : ""}</d:resourcetype>
-        <d:getcontentlength>${item.size ?? 0}</d:getcontentlength>
-        <d:getetag>${item.etag ?? ""}</d:getetag>
-      </d:prop>
-      <d:status>HTTP/1.1 200 OK</d:status>
-    </d:propstat>
-  </d:response>`);
+<d:response>
+  <d:href>/webdav/${clean.replace(/\/\.folder$/, "")}</d:href>
+  <d:propstat>
+    <d:prop>
+      <d:resourcetype>${isFolder ? "<d:collection/>" : ""}</d:resourcetype>
+      <d:getcontentlength>${item.size ?? 0}</d:getcontentlength>
+      <d:getetag>${item.etag ?? ""}</d:getetag>
+    </d:prop>
+    <d:status>HTTP/1.1 200 OK</d:status>
+  </d:propstat>
+</d:response>`);
     }
 
     return new Response(
@@ -145,7 +168,6 @@ ${responses.join("\n")}
    * =========================
    */
   if (request.method === "HEAD") {
-    const obj = key ? await storage.r2.get(key, env) : null;
     if (!obj) return new Response(null, { status: 404 });
 
     return new Response(null, {
@@ -154,7 +176,6 @@ ${responses.join("\n")}
         "Content-Length": String(obj.size ?? 0),
         ETag: obj.etag ?? "",
         "Content-Type": obj.contentType ?? "application/octet-stream",
-        DAV: "1,2",
       },
     });
   }
@@ -165,9 +186,9 @@ ${responses.join("\n")}
    * =========================
    */
   if (request.method === "MKCOL") {
-    const folderKey = `${key}/.folder`;
+    if (!key) return new Response("Bad request", { status: 400 });
 
-    await storage.r2.put(folderKey, new Uint8Array([]), env);
+    await storage.r2.put(`${key}/.folder`, new Uint8Array([]), env);
 
     return new Response("Created", { status: 201 });
   }
@@ -178,10 +199,12 @@ ${responses.join("\n")}
    * =========================
    */
   if (request.method === "PUT") {
+    if (!key) return new Response("Bad request", { status: 400 });
+
     const body = await request.arrayBuffer();
 
     await storage.r2.put(
-      key!,
+      key,
       body,
       env,
       request.headers.get("content-type") ?? "application/octet-stream"
@@ -196,14 +219,12 @@ ${responses.join("\n")}
    * =========================
    */
   if (request.method === "GET") {
-    const obj = key ? await storage.r2.get(key, env) : null;
     if (!obj) return new Response("Not found", { status: 404 });
 
     return new Response(obj.body, {
       headers: {
         "Content-Type": obj.contentType ?? "application/octet-stream",
         ETag: obj.etag ?? "",
-        DAV: "1,2",
       },
     });
   }
@@ -222,8 +243,6 @@ ${responses.join("\n")}
 
   return new Response("Method not supported", {
     status: 405,
-    headers: {
-      DAV: "1,2",
-    },
+    headers: { DAV: "1,2" },
   });
 }
