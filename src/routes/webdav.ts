@@ -2,35 +2,53 @@ import { storage } from "../services/storage";
 
 const BASE_PREFIX = "zotero/";
 
-function buildKey(rawPath: string) {
-  const clean = decodeURIComponent(rawPath)
+/**
+ * Normalize WebDAV path
+ */
+function normalizePath(rawPath: string) {
+  return decodeURIComponent(rawPath)
     .replace(/^\/(v1\/)?webdav\/?/, "")
     .replace(/^\/+/, "");
+}
 
-  return clean ? `${BASE_PREFIX}${clean}` : null;
+/**
+ * Convert WebDAV path → R2 key
+ */
+function toKey(path: string) {
+  if (!path || path.length === 0) return null;
+  return `${BASE_PREFIX}${path}`;
+}
+
+/**
+ * Extract parent directory
+ */
+function getParent(path: string) {
+  const parts = path.split("/");
+  parts.pop();
+  return parts.length ? parts.join("/") : "";
 }
 
 /**
  * =========================
- * WEB DAV HANDLER (ZOTERO SAFE)
+ * WEBDAV HANDLER (ZOTERO FULL COMPAT)
  * =========================
  */
 export async function handleWebDAV(request: Request, env: any) {
   const url = new URL(request.url);
-
-  const key = buildKey(url.pathname);
+  const path = normalizePath(url.pathname);
+  const key = toKey(path);
 
   /**
    * =========================
-   * OPTIONS (required by Zotero discovery)
+   * OPTIONS (required by Zotero + macOS clients)
    * =========================
    */
   if (request.method === "OPTIONS") {
     return new Response(null, {
       status: 200,
       headers: {
-        "DAV": "1,2",
-        "Allow": "OPTIONS, GET, PUT, DELETE, PROPFIND, HEAD",
+        DAV: "1,2",
+        Allow: "OPTIONS, GET, PUT, DELETE, PROPFIND, HEAD, MKCOL",
         "MS-Author-Via": "DAV",
       },
     });
@@ -38,41 +56,77 @@ export async function handleWebDAV(request: Request, env: any) {
 
   /**
    * =========================
-   * ROOT / COLLECTION ROOT
+   * ROOT (NEVER FAIL THIS)
    * =========================
    */
-  if (!key) {
+  if (!path || path === "") {
     return new Response("WebDAV root", {
       status: 200,
       headers: {
         "Content-Type": "text/plain",
-        "DAV": "1,2",
+        DAV: "1,2",
       },
     });
   }
 
-  const obj = await storage.r2.get(key, env);
+  const obj = key ? await storage.r2.get(key, env) : null;
 
   /**
    * =========================
-   * PROPFIND (Zotero discovery core)
+   * PROPFIND (CRITICAL FOR ZOTERO)
    * =========================
    */
   if (request.method === "PROPFIND") {
-    if (!obj) {
-      return new Response(xml404(url.pathname), {
-        status: 404,
-        headers: { "Content-Type": "application/xml" },
+    const depth = request.headers.get("Depth") ?? "1";
+
+    const parent = path;
+    const prefix = `${BASE_PREFIX}${parent ? parent + "/" : ""}`;
+
+    // LIST MODE (Depth: 1)
+    if (depth === "1") {
+      const list = await storage.r2.list(prefix, env);
+
+      const responses = list.map((item: any) => {
+        const name = item.key.replace(BASE_PREFIX, "");
+
+        return `
+  <d:response>
+    <d:href>/${name}</d:href>
+    <d:propstat>
+      <d:prop>
+        <d:resourcetype>${item.key.endsWith("/") ? "<d:collection/>" : ""}</d:resourcetype>
+        <d:getcontentlength>${item.size ?? 0}</d:getcontentlength>
+        <d:getetag>${item.etag ?? ""}</d:getetag>
+      </d:prop>
+      <d:status>HTTP/1.1 200 OK</d:status>
+    </d:propstat>
+  </d:response>`;
       });
+
+      return xmlResponse(207, responses.join("\n"), url.pathname);
     }
 
-    return new Response(xml207(url.pathname, obj), {
-      status: 207,
-      headers: {
-        "Content-Type": "application/xml",
-        "DAV": "1,2",
-      },
-    });
+    // SINGLE RESOURCE (Depth: 0)
+    if (!obj) {
+      return xmlResponse(404, "", url.pathname);
+    }
+
+    return xmlResponse(
+      207,
+      `
+  <d:response>
+    <d:href>${url.pathname}</d:href>
+    <d:propstat>
+      <d:prop>
+        <d:resourcetype/>
+        <d:getcontentlength>${obj.size ?? 0}</d:getcontentlength>
+        <d:getetag>${obj.etag ?? ""}</d:getetag>
+      </d:prop>
+      <d:status>HTTP/1.1 200 OK</d:status>
+    </d:propstat>
+  </d:response>`,
+      url.pathname
+    );
   }
 
   /**
@@ -87,39 +141,41 @@ export async function handleWebDAV(request: Request, env: any) {
       status: 200,
       headers: {
         "Content-Length": String(obj.size ?? 0),
-        "ETag": obj.etag ?? "",
+        ETag: obj.etag ?? "",
         "Content-Type": obj.contentType ?? "application/octet-stream",
+        DAV: "1,2",
       },
     });
   }
 
   /**
    * =========================
-   * GET
+   * MKCOL (folders)
    * =========================
    */
-  if (request.method === "GET") {
-    if (!obj) return new Response(`Not found`, { status: 404 });
+  if (request.method === "MKCOL") {
+    const folderKey = `${key}/.folder`;
 
-    return new Response(obj.body, {
-      headers: {
-        "Content-Type": obj.contentType ?? "application/octet-stream",
-        "ETag": obj.etag ?? "",
-        "DAV": "1,2",
-      },
-    });
+    await storage.r2.put(
+      folderKey,
+      new Uint8Array([]),
+      env,
+      "application/octet-stream"
+    );
+
+    return new Response("Created", { status: 201 });
   }
 
   /**
    * =========================
-   * PUT
+   * PUT (upload)
    * =========================
    */
   if (request.method === "PUT") {
     const body = await request.arrayBuffer();
 
     await storage.r2.put(
-      key,
+      key!,
       body,
       env,
       request.headers.get("content-type") ?? "application/octet-stream"
@@ -130,10 +186,29 @@ export async function handleWebDAV(request: Request, env: any) {
 
   /**
    * =========================
+   * GET
+   * =========================
+   */
+  if (request.method === "GET") {
+    if (!obj) return new Response("Not found", { status: 404 });
+
+    return new Response(obj.body, {
+      headers: {
+        "Content-Type": obj.contentType ?? "application/octet-stream",
+        ETag: obj.etag ?? "",
+        DAV: "1,2",
+      },
+    });
+  }
+
+  /**
+   * =========================
    * DELETE
    * =========================
    */
   if (request.method === "DELETE") {
+    if (!key) return new Response("Bad request", { status: 400 });
+
     await storage.r2.del(key, env);
     return new Response("Deleted", { status: 200 });
   }
@@ -141,39 +216,28 @@ export async function handleWebDAV(request: Request, env: any) {
   return new Response("Method not supported", {
     status: 405,
     headers: {
-      "DAV": "1,2",
+      DAV: "1,2",
     },
   });
 }
 
 /**
  * =========================
- * XML HELPERS
+ * XML RESPONSE HELPER
  * =========================
  */
-function xml404(path: string) {
-  return `<?xml version="1.0" encoding="utf-8"?>
+function xmlResponse(status: number, body: string, path: string) {
+  return new Response(
+    `<?xml version="1.0" encoding="utf-8"?>
 <d:multistatus xmlns:d="DAV:">
-  <d:response>
-    <d:href>${path}</d:href>
-    <d:status>HTTP/1.1 404 Not Found</d:status>
-  </d:response>
-</d:multistatus>`;
-}
-
-function xml207(path: string, obj: any) {
-  return `<?xml version="1.0" encoding="utf-8"?>
-<d:multistatus xmlns:d="DAV:">
-  <d:response>
-    <d:href>${path}</d:href>
-    <d:propstat>
-      <d:prop>
-        <d:resourcetype/>
-        <d:getcontentlength>${obj.size ?? 0}</d:getcontentlength>
-        <d:getetag>${obj.etag ?? ""}</d:getetag>
-      </d:prop>
-      <d:status>HTTP/1.1 200 OK</d:status>
-    </d:propstat>
-  </d:response>
-</d:multistatus>`;
+${body}
+</d:multistatus>`,
+    {
+      status,
+      headers: {
+        "Content-Type": "application/xml",
+        DAV: "1,2",
+      },
+    }
+  );
 }
