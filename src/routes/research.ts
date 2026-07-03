@@ -88,9 +88,7 @@ export async function handleResearch(request: Request, env: Env) {
   }
 
   if (path === "search") {
-    if (!query) {
-      return json({ error: "Missing ?q=" }, 400);
-    }
+    if (!query) return json({ error: "Missing ?q=" }, 400);
 
     const items = await listPapers(env);
     const q = query.toLowerCase();
@@ -116,24 +114,18 @@ export async function handleResearch(request: Request, env: Env) {
 
   if (path.startsWith("paper/")) {
     const id = path.replace("paper/", "").trim();
-    if (!id) {
-      return json({ error: "Missing paper id" }, 400);
-    }
+    if (!id) return json({ error: "Missing paper id" }, 400);
 
     const key = `${PAPERS_PREFIX}/${id}.json`;
     const item = await storage.r2.get(key, env);
 
-    if (!item) {
-      return json({ error: "Not found", key }, 404);
-    }
-
-    const body = item.body ? await item.text() : null;
+    if (!item) return json({ error: "Not found", key }, 404);
 
     return json({
       key,
       size: item.size ?? 0,
       contentType: item.contentType ?? "application/json",
-      body,
+      body: null,
     });
   }
 
@@ -152,19 +144,18 @@ export async function handleResearch(request: Request, env: Env) {
     };
 
     const key = `${PAPERS_PREFIX}/${id}.json`;
+    const bytes = new TextEncoder().encode(JSON.stringify(record));
 
-    await storage.r2.put(
-      key,
-      JSON.stringify(record),
-      env,
-      "application/json"
+    await storage.r2.put(key, bytes, env, "application/json");
+
+    return json(
+      {
+        status: "ingested",
+        key,
+        record,
+      },
+      201
     );
-
-    return json({
-      status: "ingested",
-      key,
-      record,
-    }, 201);
   }
 
   if (path === "graph") {
