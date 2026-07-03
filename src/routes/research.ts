@@ -40,31 +40,22 @@ function normalizeR2List(result: unknown): any[] {
 
 /**
  * ----------------------------------------
- * ROUTE PARSER (IMPORTANT FIX)
- * ----------------------------------------
- */
-function getRoute(path: string): string {
-  return path.replace(/\/+$/, "") || "/";
-}
-
-/**
- * ----------------------------------------
  * HANDLER
  * ----------------------------------------
+ * IMPORTANT:
+ * Hono already strips `/v1/research`
+ * We only work with the wildcard param.
  */
-export async function handleResearch(request: Request, env: Env) {
-  const url = new URL(request.url);
-
-  // IMPORTANT: DO NOT strip /v1/research here anymore
-  const path = getRoute(url.pathname.replace("/v1/research", ""));
-  const method = request.method;
+export async function handleResearch(c: any, env: Env) {
+  const path = "/" + (c.req.param("*") || "");
+  const method = c.req.method;
 
   /**
    * ================================
    * ROOT
    * ================================
    */
-  if (path === "/" && method === "GET") {
+  if ((path === "/" || path === "") && method === "GET") {
     return json({
       service: "research",
       endpoints: ["/papers", "/paper/:id", "/ingest"],
@@ -78,7 +69,6 @@ export async function handleResearch(request: Request, env: Env) {
    */
   if (path === "/papers" && method === "GET") {
     const raw = await storage.r2.list(`${PAPERS_PREFIX}/`, env);
-
     const items = normalizeR2List(raw);
 
     return json({
@@ -94,20 +84,13 @@ export async function handleResearch(request: Request, env: Env) {
    * ================================
    */
   if (path.startsWith("/paper/") && method === "GET") {
-    const id = path.replace("/paper/", "");
-
+    const id = path.replace("/paper/", "").replace(/\/+$/, "");
     const key = `${PAPERS_PREFIX}/${id}.json`;
 
     const item = await storage.r2.get(key, env);
 
     if (!item) {
-      return json(
-        {
-          error: "Not found",
-          key,
-        },
-        404
-      );
+      return json({ error: "Not found", key }, 404);
     }
 
     return json({
@@ -124,7 +107,7 @@ export async function handleResearch(request: Request, env: Env) {
    * ================================
    */
   if (path === "/ingest" && method === "POST") {
-    const body = (await request.json()) as IngestBody;
+    const body = (await c.req.json()) as IngestBody;
 
     const id = crypto.randomUUID();
 
@@ -162,7 +145,6 @@ export async function handleResearch(request: Request, env: Env) {
       error: "Not found",
       path,
       method,
-      hint: "Check /v1/research/papers or /v1/research/",
     },
     404
   );
