@@ -207,6 +207,30 @@ app.get("/openapi.json", (c) => {
 });
 
 
+const webdavHandler = async (c: any) => {
+  try {
+    return await handleWebDAV(c.req.raw, c.env);
+  } catch (err) {
+    console.error("WebDAV error:", err);
+    return c.text("WebDAV internal error", 500);
+  }
+};
+
+const researchHandler = async (c: any) => {
+  try {
+    return await handleResearch(c.req.raw, c.env);
+  } catch (err) {
+    console.error("Research API error:", err);
+    return c.json(
+      {
+        error: "Research internal error",
+        message: err instanceof Error ? err.message : String(err),
+      },
+      500
+    );
+  }
+};
+
 app.all("/webdav/*", webdavHandler);
 app.all("/v1/webdav/*", webdavHandler);
 
