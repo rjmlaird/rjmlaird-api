@@ -48,6 +48,11 @@ type R2Item = {
   metadata?: Record<string, unknown>;
 };
 
+type ResearchEnv = Env & {
+  ZOTERO_USER_ID?: string;
+  ZOTERO_API_KEY?: string;
+};
+
 function normalizeR2List(result: unknown): R2Item[] {
   if (!result) return [];
   if (Array.isArray(result)) return result as R2Item[];
@@ -79,12 +84,12 @@ async function readJsonBody<T>(request: Request): Promise<T | null> {
   }
 }
 
-async function listPaperItems(env: Env) {
+async function listPaperItems(env: ResearchEnv) {
   const raw = await storage.r2.list(`${PAPERS_PREFIX}/`, env);
   return normalizeR2List(raw);
 }
 
-async function readPaperRecord(env: Env, key: string): Promise<PaperRecord | null> {
+async function readPaperRecord(env: ResearchEnv, key: string): Promise<PaperRecord | null> {
   const obj = await storage.r2.get(key, env);
   if (!obj?.body) return null;
 
@@ -98,14 +103,14 @@ async function readPaperRecord(env: Env, key: string): Promise<PaperRecord | nul
   }
 }
 
-async function writePaperRecord(env: Env, record: PaperRecord) {
+async function writePaperRecord(env: ResearchEnv, record: PaperRecord) {
   const key = `${PAPERS_PREFIX}/${record.id}.json`;
   const bytes = new TextEncoder().encode(JSON.stringify(record));
   await storage.r2.put(key, bytes, env, "application/json");
   return key;
 }
 
-function normalizeZoteroTags(tags: ZoteroItem["data"]["tags"]) {
+function normalizeZoteroTags(tags?: Array<{ tag?: string } | string>) {
   if (!Array.isArray(tags)) return [];
   return tags
     .map((t) => (typeof t === "string" ? t : t?.tag))
@@ -116,19 +121,17 @@ function zoteroToPaper(item: ZoteroItem): PaperRecord | null {
   const data = item.data;
   if (!data?.key) return null;
 
-  const title = typeof data.title === "string" && data.title.trim() ? data.title.trim() : null;
-
   return {
     id: data.key,
     source: "zotero",
-    title,
+    title: typeof data.title === "string" && data.title.trim() ? data.title.trim() : null,
     tags: normalizeZoteroTags(data.tags),
     createdAt: typeof data.date === "string" && data.date.trim() ? data.date : new Date().toISOString(),
     links: [],
   };
 }
 
-async function fetchZoteroItems(env: Env, since?: number, limit?: number) {
+async function fetchZoteroItems(env: ResearchEnv, since?: number, limit?: number) {
   const userId = env.ZOTERO_USER_ID;
   const apiKey = env.ZOTERO_API_KEY;
 
@@ -155,7 +158,7 @@ async function fetchZoteroItems(env: Env, since?: number, limit?: number) {
   return (await res.json()) as ZoteroItem[];
 }
 
-async function syncZoteroToR2(env: Env, since?: number, limit?: number) {
+async function syncZoteroToR2(env: ResearchEnv, since?: number, limit?: number) {
   const items = await fetchZoteroItems(env, since, limit);
   const written: Array<{ key: string; record: PaperRecord }> = [];
 
@@ -173,7 +176,7 @@ async function syncZoteroToR2(env: Env, since?: number, limit?: number) {
   };
 }
 
-export async function handleResearch(request: Request, env: Env) {
+export async function handleResearch(request: Request, env: ResearchEnv) {
   const method = request.method.toUpperCase();
   const { path, query } = getRoute(request);
 
