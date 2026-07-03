@@ -43,11 +43,11 @@ export async function handleWebDAV(request: Request, env: any) {
   const path = normalizePath(url.pathname);
   const key = toKey(path);
 
-  const isRoot = !path || path === "zotero";
+  const isRoot = !path || path.length === 0;
 
   /**
    * ======================================================
-   * OPTIONS (required by Zotero / clients)
+   * OPTIONS
    * ======================================================
    */
   if (request.method === "OPTIONS") {
@@ -64,7 +64,7 @@ export async function handleWebDAV(request: Request, env: any) {
 
   /**
    * ======================================================
-   * LOCK / UNLOCK (Zotero compatibility)
+   * LOCK / UNLOCK
    * ======================================================
    */
   if (request.method === "LOCK") {
@@ -95,7 +95,7 @@ export async function handleWebDAV(request: Request, env: any) {
 
   /**
    * ======================================================
-   * ROOT
+   * ROOT (Zotero entrypoint)
    * ======================================================
    */
   if (isRoot) {
@@ -117,7 +117,7 @@ export async function handleWebDAV(request: Request, env: any) {
 
   /**
    * ======================================================
-   * PROPFIND (Zotero-critical)
+   * PROPFIND (ZOTERO CORE)
    * ======================================================
    */
   if (request.method === "PROPFIND") {
@@ -127,7 +127,7 @@ export async function handleWebDAV(request: Request, env: any) {
 
     const listResult = await storage.r2.list(prefix, env);
 
-    // NORMALISE R2 LIST SHAPE SAFELY
+    // SAFE NORMALISATION (FIXES TS + runtime mismatch)
     const items: any[] = Array.isArray(listResult)
       ? listResult
       : (listResult as any).objects ?? [];
@@ -135,7 +135,7 @@ export async function handleWebDAV(request: Request, env: any) {
     const responses: string[] = [];
 
     /**
-     * SELF NODE (MANDATORY)
+     * SELF NODE (REQUIRED)
      */
     responses.push(`
 <d:response>
@@ -144,7 +144,7 @@ export async function handleWebDAV(request: Request, env: any) {
     <d:prop>
       <d:resourcetype><d:collection/></d:resourcetype>
       <d:displayname>${path || "zotero"}</d:displayname>
-      <d:getetag>"root"</d:getetag>
+      <d:getetag>"${path || "root"}"</d:getetag>
       <d:getcontentlength>0</d:getcontentlength>
     </d:prop>
     <d:status>HTTP/1.1 200 OK</d:status>
@@ -159,14 +159,21 @@ export async function handleWebDAV(request: Request, env: any) {
         const clean = item.key.replace(`${BASE_PREFIX}/`, "");
         const isFolder = clean.endsWith("/");
 
+        const etag = `"${item.key}-${item.size ?? 0}"`;
+
         responses.push(`
 <d:response>
   <d:href>${toHref(clean.replace(/\/$/, ""))}</d:href>
   <d:propstat>
     <d:prop>
-      <d:resourcetype>${isFolder ? "<d:collection/>" : ""}</d:resourcetype>
+      ${
+        isFolder
+          ? "<d:resourcetype><d:collection/></d:resourcetype>"
+          : "<d:resourcetype/>"
+      }
+      <d:displayname>${clean}</d:displayname>
+      <d:getetag>${etag}</d:getetag>
       <d:getcontentlength>${item.size ?? 0}</d:getcontentlength>
-      <d:getetag>${item.etag ?? ""}</d:getetag>
     </d:prop>
     <d:status>HTTP/1.1 200 OK</d:status>
   </d:propstat>
@@ -215,7 +222,7 @@ ${responses.join("\n")}
   if (request.method === "MKCOL") {
     if (!key) return new Response("Bad request", { status: 400 });
 
-    await storage.r2.put(`${key}/`, new Uint8Array([]), env);
+    await storage.r2.put(`${key}/.folder`, new Uint8Array([]), env);
 
     return new Response("Created", { status: 201 });
   }
