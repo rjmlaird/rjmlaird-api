@@ -10,7 +10,31 @@ type IngestBody = {
 const PAPERS_PREFIX = "papers";
 
 /**
- * Normalise research path safely
+ * ----------------------------------------
+ * SAFE R2 LIST NORMALISER
+ * (fixes TS inference + runtime mismatch)
+ * ----------------------------------------
+ */
+function normalizeR2List(result: unknown): any[] {
+  if (!result) return [];
+
+  if (Array.isArray(result)) return result;
+
+  if (
+    typeof result === "object" &&
+    result !== null &&
+    Array.isArray((result as any).objects)
+  ) {
+    return (result as any).objects;
+  }
+
+  return [];
+}
+
+/**
+ * ----------------------------------------
+ * PATH NORMALISATION
+ * ----------------------------------------
  */
 function getPath(request: Request): string {
   const url = new URL(request.url);
@@ -20,37 +44,36 @@ function getPath(request: Request): string {
     .replace(/\/+$/, "");
 }
 
+/**
+ * ----------------------------------------
+ * HANDLER
+ * ----------------------------------------
+ */
 export async function handleResearch(request: Request, env: Env) {
   const path = getPath(request);
   const method = request.method;
 
   /**
-   * ----------------------------------------
-   * ROOT: GET /v1/research
-   * ----------------------------------------
+   * ================================
+   * ROOT
+   * ================================
    */
   if ((path === "/" || path === "") && method === "GET") {
     return json({
       service: "research",
-      endpoints: [
-        "/papers",
-        "/paper/:id",
-        "/ingest",
-      ],
+      endpoints: ["/papers", "/paper/:id", "/ingest"],
     });
   }
 
   /**
-   * ----------------------------------------
-   * GET /papers
-   * ----------------------------------------
+   * ================================
+   * LIST PAPERS
+   * ================================
    */
   if (path === "/papers" && method === "GET") {
-    const result = await storage.r2.list(`${PAPERS_PREFIX}/`, env);
+    const raw = await storage.r2.list(`${PAPERS_PREFIX}/`, env);
 
-    const items = Array.isArray(result)
-      ? result
-      : result.objects ?? [];
+    const items = normalizeR2List(raw);
 
     return json({
       source: "r2",
@@ -60,9 +83,9 @@ export async function handleResearch(request: Request, env: Env) {
   }
 
   /**
-   * ----------------------------------------
-   * GET /paper/:id
-   * ----------------------------------------
+   * ================================
+   * GET PAPER BY ID
+   * ================================
    */
   if (path.startsWith("/paper/") && method === "GET") {
     const id = path.replace("/paper/", "").replace(/\/+$/, "");
@@ -83,16 +106,16 @@ export async function handleResearch(request: Request, env: Env) {
 
     return json({
       key,
-      size: item.size ?? null,
-      contentType: item.contentType ?? null,
+      size: item.size ?? 0,
+      contentType: item.contentType ?? "application/json",
       body: item.body ?? null,
     });
   }
 
   /**
-   * ----------------------------------------
-   * POST /ingest
-   * ----------------------------------------
+   * ================================
+   * INGEST PAPER
+   * ================================
    */
   if (path === "/ingest" && method === "POST") {
     const body = (await request.json()) as IngestBody;
@@ -124,14 +147,15 @@ export async function handleResearch(request: Request, env: Env) {
   }
 
   /**
-   * ----------------------------------------
+   * ================================
    * FALLBACK
-   * ----------------------------------------
+   * ================================
    */
   return json(
     {
       error: "Not found",
       path,
+      method,
     },
     404
   );
