@@ -3,11 +3,11 @@ import { storage } from "../services/storage";
 const BASE_PREFIX = "zotero";
 
 /**
- * =========================
+ * ======================================================
  * PATH NORMALISATION
- * =========================
+ * ======================================================
  */
-function normalizePath(raw: string) {
+function normalizePath(raw: string): string {
   return decodeURIComponent(raw)
     .replace(/^\/+/, "")
     .replace(/^v1\/webdav\/?/, "")
@@ -17,40 +17,38 @@ function normalizePath(raw: string) {
 }
 
 /**
- * Build R2 key
+ * Convert logical path → R2 key
  */
-function toKey(path: string | null) {
+function toKey(path: string | null): string | null {
   if (!path) return null;
   return `${BASE_PREFIX}/${path}`;
 }
 
 /**
- * WebDAV href builder
+ * WebDAV href helper
  */
-function toHref(path: string) {
+function toHref(path: string): string {
   if (!path) return "/webdav/zotero";
   return `/webdav/zotero/${path}`;
 }
 
 /**
- * =========================
+ * ======================================================
  * WEBDAV HANDLER
- * =========================
+ * ======================================================
  */
 export async function handleWebDAV(request: Request, env: any) {
   const url = new URL(request.url);
+
   const path = normalizePath(url.pathname);
   const key = toKey(path);
 
-  const isRoot =
-    !path ||
-    path === "" ||
-    path === "zotero";
+  const isRoot = !path || path === "zotero";
 
   /**
-   * =========================
-   * OPTIONS
-   * =========================
+   * ======================================================
+   * OPTIONS (required by Zotero / clients)
+   * ======================================================
    */
   if (request.method === "OPTIONS") {
     return new Response(null, {
@@ -65,9 +63,9 @@ export async function handleWebDAV(request: Request, env: any) {
   }
 
   /**
-   * =========================
-   * LOCK (Zotero compatibility)
-   * =========================
+   * ======================================================
+   * LOCK / UNLOCK (Zotero compatibility)
+   * ======================================================
    */
   if (request.method === "LOCK") {
     return new Response(
@@ -96,9 +94,9 @@ export async function handleWebDAV(request: Request, env: any) {
   }
 
   /**
-   * =========================
+   * ======================================================
    * ROOT
-   * =========================
+   * ======================================================
    */
   if (isRoot) {
     return new Response("WebDAV root", {
@@ -110,24 +108,34 @@ export async function handleWebDAV(request: Request, env: any) {
     });
   }
 
+  /**
+   * ======================================================
+   * LOAD OBJECT
+   * ======================================================
+   */
   const obj = key ? await storage.r2.get(key, env) : null;
 
   /**
-   * =========================
-   * PROPFIND (CORE FIX)
-   * =========================
+   * ======================================================
+   * PROPFIND (Zotero-critical)
+   * ======================================================
    */
   if (request.method === "PROPFIND") {
     const depth = request.headers.get("Depth") ?? "1";
 
     const prefix = key ? `${key}/` : `${BASE_PREFIX}/`;
 
-    const items = await storage.r2.list(prefix, env);
+    const listResult = await storage.r2.list(prefix, env);
+
+    // NORMALISE R2 LIST SHAPE SAFELY
+    const items: any[] = Array.isArray(listResult)
+      ? listResult
+      : (listResult as any).objects ?? [];
 
     const responses: string[] = [];
 
     /**
-     * SELF NODE (ALWAYS REQUIRED)
+     * SELF NODE (MANDATORY)
      */
     responses.push(`
 <d:response>
@@ -147,7 +155,7 @@ export async function handleWebDAV(request: Request, env: any) {
      * CHILDREN
      */
     if (depth !== "0") {
-      for (const item of items.objects ?? items) {
+      for (const item of items) {
         const clean = item.key.replace(`${BASE_PREFIX}/`, "");
         const isFolder = clean.endsWith("/");
 
@@ -182,9 +190,9 @@ ${responses.join("\n")}
   }
 
   /**
-   * =========================
+   * ======================================================
    * HEAD
-   * =========================
+   * ======================================================
    */
   if (request.method === "HEAD") {
     if (!obj) return new Response(null, { status: 404 });
@@ -200,9 +208,9 @@ ${responses.join("\n")}
   }
 
   /**
-   * =========================
+   * ======================================================
    * MKCOL
-   * =========================
+   * ======================================================
    */
   if (request.method === "MKCOL") {
     if (!key) return new Response("Bad request", { status: 400 });
@@ -213,9 +221,9 @@ ${responses.join("\n")}
   }
 
   /**
-   * =========================
+   * ======================================================
    * PUT
-   * =========================
+   * ======================================================
    */
   if (request.method === "PUT") {
     if (!key) return new Response("Bad request", { status: 400 });
@@ -233,9 +241,9 @@ ${responses.join("\n")}
   }
 
   /**
-   * =========================
+   * ======================================================
    * GET
-   * =========================
+   * ======================================================
    */
   if (request.method === "GET") {
     if (!obj) return new Response("Not found", { status: 404 });
@@ -249,9 +257,9 @@ ${responses.join("\n")}
   }
 
   /**
-   * =========================
+   * ======================================================
    * DELETE
-   * =========================
+   * ======================================================
    */
   if (request.method === "DELETE") {
     if (!key) return new Response("Bad request", { status: 400 });
