@@ -184,27 +184,39 @@ app.get("/openapi.json", (c) => {
           },
         },
       },
-      "/api/{collection}": {
-        get: {
-          tags: ["Legacy"],
-          summary: "Legacy collection fetch",
-          parameters: [
-            {
-              name: "collection",
-              in: "path",
-              required: true,
-              schema: { type: "string" },
-            },
+     "/api/{collection}": {
+  get: {
+    tags: ["Legacy"],
+    summary: "Fetch CV collection data",
+    description:
+      "Returns one of the CV collections such as organisations, profile, projects, skills, memberships, or reviews.",
+    parameters: [
+      {
+        name: "collection",
+        in: "path",
+        required: true,
+        schema: {
+          type: "string",
+          enum: [
+            "organisations",
+            "profile",
+            "projects",
+            "skills",
+            "memberships",
+            "reviews",
+            "experience",
           ],
-          responses: {
-            "200": { description: "Collection data" },
-            "404": { description: "Collection not found" },
-          },
         },
+        description: "The CV collection name.",
       },
+    ],
+    responses: {
+      "200": { description: "Collection data" },
+      "404": { description: "Collection not found" },
     },
-  });
-});
+  },
+},
+
 
 
 const webdavHandler = async (c: any) => {
