@@ -5,6 +5,7 @@ const DAV_HEADER = "1,2";
 const ALLOW_HEADER =
   "OPTIONS, GET, PUT, DELETE, PROPFIND, HEAD, MKCOL, LOCK, UNLOCK";
 const LOCK_TIMEOUT_SECONDS = 300;
+const DEBUG_DAV = true;
 
 type DavKind = "file" | "collection";
 
@@ -21,6 +22,8 @@ type LockRecord = {
   key: string;
   expiresAt: number;
 };
+
+type LogLevel = "debug" | "info" | "warn" | "error";
 
 function escapeXml(value: string): string {
   return value
@@ -81,6 +84,46 @@ function etagFor(key: string, size = 0): string {
 
 function sortByKey(items: any[]) {
   return [...items].sort((a, b) => String(a.key).localeCompare(String(b.key)));
+}
+
+function redactHeaderValue(name: string, value: string): string {
+  const n = name.toLowerCase();
+  if (
+    n === "authorization" ||
+    n === "cookie" ||
+    n === "set-cookie" ||
+    n.includes("password") ||
+    (n.includes("token") && n !== "lock-token") ||
+    (n.includes("secret") && n !== "lock-token") ||
+    (n.includes("key") && n !== "dav")
+  ) {
+    return "[redacted]";
+  }
+  return value;
+}
+
+function headersToObject(headers: Headers): Record<string, string> {
+  const out: Record<string, string> = {};
+  for (const [k, v] of headers) out[k.toLowerCase()] = redactHeaderValue(k, v);
+  return out;
+}
+
+function previewText(body: string, max = 512): string {
+  return body.length > max ? body.slice(0, max) + "…" : body;
+}
+
+async function readBodyPreview(request: Request, max = 512): Promise<string | null> {
+  const ct = request.headers.get("content-type") ?? "";
+  if (request.method === "GET" || request.method === "HEAD" || request.method === "DELETE") return null;
+  if (!ct && request.method !== "LOCK" && request.method !== "PROPFIND" && request.method !== "MKCOL") return null;
+  try {
+    const clone = request.clone();
+    const text = await clone.text();
+    if (!text) return null;
+    return previewText(text, max);
+  } catch {
+    return null;
+  }
 }
 
 function xmlResponse(body: string, status: number, headers: Record<string, string> = {}) {
@@ -152,7 +195,6 @@ function parseIfHeader(request: Request): string[] {
 function getLockTokenFromHeaders(request: Request): string | null {
   const lockToken = request.headers.get("lock-token");
   if (lockToken) return lockToken.replace(/^<|>$/g, "").trim();
-
   const ifTokens = parseIfHeader(request);
   return (
     ifTokens.find(
@@ -166,10 +208,36 @@ function lockKey(key: string): string {
   return `locks/${key}`;
 }
 
+function logEvent(level: LogLevel, event: string, data: Record<string, unknown>) {
+  if (!DEBUG_DAV) return;
+  console.log(
+    JSON.stringify({
+      ts: new Date().toISOString(),
+      level,
+      event,
+      ...data,
+    })
+  );
+}
+
+function requestContext(request: Request) {
+  const url = new URL(request.url);
+  return {
+    method: request.method,
+    url: request.url,
+    path: url.pathname,
+    query: url.search,
+    headers: headersToObject(request.headers),
+    authPresent: !!request.headers.get("authorization"),
+    userAgent: request.headers.get("user-agent"),
+    cfRay: request.headers.get("cf-ray"),
+    cfConnectingIp: request.headers.get("cf-connecting-ip"),
+  };
+}
+
 async function getLockRecord(key: string, env: any): Promise<LockRecord | null> {
   const raw = await storage.r2.get(lockKey(key), env);
   if (!raw) return null;
-
   const text = await new Response(raw.body).text();
   try {
     const parsed = JSON.parse(text) as LockRecord;
@@ -201,10 +269,8 @@ async function deleteLockRecord(key: string, env: any): Promise<void> {
 async function requireWriteLock(key: string, request: Request, env: any): Promise<Response | null> {
   const record = await getLockRecord(key, env);
   if (!record) return null;
-
   const supplied = getLockTokenFromHeaders(request);
   if (!supplied || supplied !== record.token) return locked();
-
   return null;
 }
 
@@ -219,16 +285,10 @@ async function exists(key: string, env: any): Promise<DavNode | null> {
       etag: obj.etag ?? undefined,
     };
   }
-
   const marker = await storage.r2.get(`${key}/.folder`, env);
   if (marker) {
-    return {
-      key,
-      kind: "collection",
-      etag: etagFor(`${key}/.folder`, 0),
-    };
+    return { key, kind: "collection", etag: etagFor(`${key}/.folder`, 0) };
   }
-
   return null;
 }
 
@@ -240,7 +300,6 @@ async function parentExists(pathKey: string, env: any): Promise<boolean> {
   const parent = pathKey.includes("/")
     ? pathKey.slice(0, pathKey.lastIndexOf("/"))
     : BASE_PREFIX;
-
   return !!(await exists(parent, env));
 }
 
@@ -286,8 +345,19 @@ async function authOr401(request: Request): Promise<Response | null> {
 }
 
 export async function handleWebDAV(request: Request, env: any) {
+  const reqCtx = requestContext(request);
+  const bodyPreview = await readBodyPreview(request);
+
+  logEvent("info", "dav.request", {
+    ...reqCtx,
+    bodyPreview,
+  });
+
   const auth = await authOr401(request);
-  if (auth) return auth;
+  if (auth) {
+    logEvent("warn", "dav.response", { ...reqCtx, status: 401, dav: DAV_HEADER });
+    return auth;
+  }
 
   const url = new URL(request.url);
   const path = normalizePath(url.pathname);
@@ -295,8 +365,10 @@ export async function handleWebDAV(request: Request, env: any) {
   const root = path === "" || path === BASE_PREFIX;
   const current = root ? rootNode() : key ? await exists(key, env) : null;
 
+  let response: Response;
+
   if (request.method === "OPTIONS") {
-    return new Response(null, {
+    response = new Response(null, {
       status: 204,
       headers: {
         DAV: DAV_HEADER,
@@ -304,24 +376,23 @@ export async function handleWebDAV(request: Request, env: any) {
         "MS-Author-Via": "DAV",
       },
     });
-  }
-
-  if (request.method === "LOCK") {
-    if (!key) return badRequest();
-
-    const existing = await getLockRecord(key, env);
-    if (existing) {
-      const supplied = getLockTokenFromHeaders(request);
-      if (!supplied || supplied !== existing.token) return locked();
-
-      const refreshed: LockRecord = {
-        ...existing,
-        expiresAt: Date.now() + LOCK_TIMEOUT_SECONDS * 1000,
-      };
-      await setLockRecord(refreshed, env);
-
-      return xmlResponse(
-        `<?xml version="1.0" encoding="utf-8"?>
+  } else if (request.method === "LOCK") {
+    if (!key) {
+      response = badRequest();
+    } else {
+      const existing = await getLockRecord(key, env);
+      if (existing) {
+        const supplied = getLockTokenFromHeaders(request);
+        if (!supplied || supplied !== existing.token) {
+          response = locked();
+        } else {
+          const refreshed: LockRecord = {
+            ...existing,
+            expiresAt: Date.now() + LOCK_TIMEOUT_SECONDS * 1000,
+          };
+          await setLockRecord(refreshed, env);
+          response = xmlResponse(
+            `<?xml version="1.0" encoding="utf-8"?>
 <d:prop xmlns:d="DAV:">
   <d:lockdiscovery>
     <d:activelock>
@@ -331,21 +402,20 @@ export async function handleWebDAV(request: Request, env: any) {
     </d:activelock>
   </d:lockdiscovery>
 </d:prop>`,
-        200,
-        { "Lock-Token": `<${existing.token}>` }
-      );
-    }
-
-    const token = `urn:uuid:${crypto.randomUUID()}`;
-    const record: LockRecord = {
-      token,
-      key,
-      expiresAt: Date.now() + LOCK_TIMEOUT_SECONDS * 1000,
-    };
-    await setLockRecord(record, env);
-
-    return xmlResponse(
-      `<?xml version="1.0" encoding="utf-8"?>
+            200,
+            { "Lock-Token": `<${existing.token}>` }
+          );
+        }
+      } else {
+        const token = `urn:uuid:${crypto.randomUUID()}`;
+        const record: LockRecord = {
+          token,
+          key,
+          expiresAt: Date.now() + LOCK_TIMEOUT_SECONDS * 1000,
+        };
+        await setLockRecord(record, env);
+        response = xmlResponse(
+          `<?xml version="1.0" encoding="utf-8"?>
 <d:prop xmlns:d="DAV:">
   <d:lockdiscovery>
     <d:activelock>
@@ -355,155 +425,169 @@ export async function handleWebDAV(request: Request, env: any) {
     </d:activelock>
   </d:lockdiscovery>
 </d:prop>`,
-      200,
-      { "Lock-Token": `<${token}>` }
-    );
-  }
-
-  if (request.method === "UNLOCK") {
+          200,
+          { "Lock-Token": `<${token}>` }
+        );
+      }
+    }
+  } else if (request.method === "UNLOCK") {
     const token = getLockTokenFromHeaders(request);
     const record = await getLockRecord(key!, env);
     if (record && token && token === record.token) {
       await deleteLockRecord(key!, env);
-      return new Response(null, { status: 204, headers: { DAV: DAV_HEADER } });
+      response = new Response(null, { status: 204, headers: { DAV: DAV_HEADER } });
+    } else {
+      response = preconditionFailed();
     }
-    return preconditionFailed();
-  }
+  } else if (request.method === "PROPFIND") {
+    if (!current) {
+      response = notFound();
+    } else {
+      const depth = request.headers.get("Depth") ?? "1";
+      const responses: string[] = [];
+      const selfPath = root ? BASE_PREFIX : path;
+      const selfDisplay = root ? "zotero" : path.split("/").pop() ?? "zotero";
+      responses.push(propfindItem(current, selfPath, selfDisplay));
 
-  if (request.method === "PROPFIND") {
-    if (!current) return notFound();
+      if (depth !== "0" && current.kind === "collection") {
+        const children = await listCollectionChildren(current, env);
+        for (const item of children) {
+          if (!item?.key) continue;
+          if (item.key === `${current.key}/.folder`) continue;
 
-    const depth = request.headers.get("Depth") ?? "1";
-    const responses: string[] = [];
+          const rel = item.key.startsWith(`${BASE_PREFIX}/`)
+            ? item.key.slice(BASE_PREFIX.length + 1)
+            : item.key;
 
-    const selfPath = root ? BASE_PREFIX : path;
-    const selfDisplay = root ? "zotero" : path.split("/").pop() ?? "zotero";
-    responses.push(propfindItem(current, selfPath, selfDisplay));
+          const isCollection = isCollectionMarkerKey(item.key);
+          const hrefPath = isCollection ? rel.replace(/\/\.folder$/, "") : rel;
+          const display = hrefPath.split("/").pop() ?? hrefPath;
 
-    if (depth !== "0" && current.kind === "collection") {
-      const children = await listCollectionChildren(current, env);
+          const node: DavNode = isCollection
+            ? { key: item.key, kind: "collection", etag: item.etag }
+            : {
+                key: item.key,
+                kind: "file",
+                size: item.size ?? 0,
+                contentType: item.contentType,
+                etag: item.etag,
+              };
 
-      for (const item of children) {
-        if (!item?.key) continue;
-        if (item.key === `${current.key}/.folder`) continue;
+          responses.push(propfindItem(node, hrefPath, display));
+        }
+      }
 
-        const rel = item.key.startsWith(`${BASE_PREFIX}/`)
-          ? item.key.slice(BASE_PREFIX.length + 1)
-          : item.key;
-
-        const isCollection = isCollectionMarkerKey(item.key);
-        const hrefPath = isCollection ? rel.replace(/\/\.folder$/, "") : rel;
-        const display = hrefPath.split("/").pop() ?? hrefPath;
-
-        const node: DavNode = isCollection
-          ? { key: item.key, kind: "collection", etag: item.etag }
-          : {
-              key: item.key,
-              kind: "file",
-              size: item.size ?? 0,
-              contentType: item.contentType,
-              etag: item.etag,
-            };
-
-        responses.push(propfindItem(node, hrefPath, display));
+      response = xmlResponse(propfindCollectionBody(responses), 207);
+    }
+  } else if (request.method === "HEAD") {
+    if (!current) {
+      response = notFound();
+    } else if (current.kind === "collection") {
+      response = new Response(null, { status: 200, headers: { DAV: DAV_HEADER } });
+    } else {
+      response = new Response(null, {
+        status: 200,
+        headers: {
+          "Content-Length": String(current.size ?? 0),
+          "Content-Type": current.contentType ?? "application/octet-stream",
+          ETag: current.etag ?? etagFor(current.key, current.size ?? 0),
+          DAV: DAV_HEADER,
+        },
+      });
+    }
+  } else if (request.method === "MKCOL") {
+    if (!key) {
+      response = badRequest();
+    } else if (root) {
+      response = methodNotAllowed();
+    } else if (current) {
+      response = conflict();
+    } else if (!(await parentExists(key, env))) {
+      response = conflict();
+    } else {
+      await storage.r2.put(`${key}/.folder`, new Uint8Array([]), env);
+      response = new Response(null, { status: 201, headers: { DAV: DAV_HEADER } });
+    }
+  } else if (request.method === "PUT") {
+    if (!key) {
+      response = badRequest();
+    } else if (root) {
+      response = methodNotAllowed();
+    } else {
+      const lockResp = await requireWriteLock(key, request, env);
+      if (lockResp) {
+        response = lockResp;
+      } else if (key !== BASE_PREFIX && !(await parentExists(key, env))) {
+        response = conflict();
+      } else {
+        const body = await request.arrayBuffer();
+        await storage.r2.put(
+          key,
+          body,
+          env,
+          request.headers.get("content-type") ?? "application/octet-stream"
+        );
+        response = new Response(null, {
+          status: current ? 200 : 201,
+          headers: { DAV: DAV_HEADER },
+        });
       }
     }
-
-    return xmlResponse(propfindCollectionBody(responses), 207);
-  }
-
-  if (request.method === "HEAD") {
-    if (!current) return notFound();
-    if (current.kind === "collection") {
-      return new Response(null, { status: 200, headers: { DAV: DAV_HEADER } });
-    }
-    return new Response(null, {
-      status: 200,
-      headers: {
-        "Content-Length": String(current.size ?? 0),
-        "Content-Type": current.contentType ?? "application/octet-stream",
-        ETag: current.etag ?? etagFor(current.key, current.size ?? 0),
-        DAV: DAV_HEADER,
-      },
-    });
-  }
-
-  if (request.method === "MKCOL") {
-    if (!key) return badRequest();
-    if (root) return methodNotAllowed();
-    if (current) return conflict();
-    if (!(await parentExists(key, env))) return conflict();
-
-    await storage.r2.put(`${key}/.folder`, new Uint8Array([]), env);
-    return new Response(null, { status: 201, headers: { DAV: DAV_HEADER } });
-  }
-
-  if (request.method === "PUT") {
-    if (!key) return badRequest();
-    if (root) return methodNotAllowed();
-
-    const lockResp = await requireWriteLock(key, request, env);
-    if (lockResp) return lockResp;
-
-    if (key !== BASE_PREFIX && !(await parentExists(key, env))) return conflict();
-
-    const body = await request.arrayBuffer();
-    await storage.r2.put(
-      key,
-      body,
-      env,
-      request.headers.get("content-type") ?? "application/octet-stream"
-    );
-
-    return new Response(null, {
-      status: current ? 200 : 201,
-      headers: { DAV: DAV_HEADER },
-    });
-  }
-
-  if (request.method === "GET") {
-    if (!current) return notFound();
-    if (current.kind === "collection") {
-      return root
+  } else if (request.method === "GET") {
+    if (!current) {
+      response = notFound();
+    } else if (current.kind === "collection") {
+      response = root
         ? new Response("WebDAV root", { status: 200, headers: { DAV: DAV_HEADER } })
         : methodNotAllowed();
-    }
-
-    const obj = await storage.r2.get(key!, env);
-    if (!obj) return notFound();
-
-    return new Response(obj.body, {
-      status: 200,
-      headers: {
-        "Content-Type": obj.contentType ?? "application/octet-stream",
-        ETag: obj.etag ?? etagFor(key!, obj.size ?? 0),
-        "Content-Length": String(obj.size ?? 0),
-        DAV: DAV_HEADER,
-      },
-    });
-  }
-
-  if (request.method === "DELETE") {
-    if (!current) return notFound();
-    if (root) return forbidden();
-
-    const lockResp = await requireWriteLock(key!, request, env);
-    if (lockResp) return lockResp;
-
-    if (current.kind === "collection") {
-      const children = await collectCollectionKeysRecursive(current.key, env);
-      for (const childKey of children) {
-        await storage.r2.del(childKey, env);
+    } else {
+      const obj = await storage.r2.get(key!, env);
+      if (!obj) {
+        response = notFound();
+      } else {
+        response = new Response(obj.body, {
+          status: 200,
+          headers: {
+            "Content-Type": obj.contentType ?? "application/octet-stream",
+            ETag: obj.etag ?? etagFor(key!, obj.size ?? 0),
+            "Content-Length": String(obj.size ?? 0),
+            DAV: DAV_HEADER,
+          },
+        });
       }
-      await storage.r2.del(`${current.key}/.folder`, env);
-      await deleteLockRecord(current.key, env);
-      return new Response(null, { status: 204, headers: { DAV: DAV_HEADER } });
     }
-
-    await storage.r2.del(key!, env);
-    await deleteLockRecord(key!, env);
-    return new Response(null, { status: 204, headers: { DAV: DAV_HEADER } });
+  } else if (request.method === "DELETE") {
+    if (!current) {
+      response = notFound();
+    } else if (root) {
+      response = forbidden();
+    } else {
+      const lockResp = await requireWriteLock(key!, request, env);
+      if (lockResp) {
+        response = lockResp;
+      } else if (current.kind === "collection") {
+        const children = await collectCollectionKeysRecursive(current.key, env);
+        for (const childKey of children) {
+          await storage.r2.del(childKey, env);
+        }
+        await storage.r2.del(`${current.key}/.folder`, env);
+        await deleteLockRecord(current.key, env);
+        response = new Response(null, { status: 204, headers: { DAV: DAV_HEADER } });
+      } else {
+        await storage.r2.del(key!, env);
+        await deleteLockRecord(key!, env);
+        response = new Response(null, { status: 204, headers: { DAV: DAV_HEADER } });
+      }
+    }
+  } else {
+    response = methodNotAllowed();
   }
 
-  return methodNotAllowed();
+  logEvent("info", "dav.response", {
+    ...reqCtx,
+    status: response.status,
+    responseHeaders: headersToObject(response.headers),
+  });
+
+  return response;
 }
