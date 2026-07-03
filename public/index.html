@@ -1,5 +1,4 @@
-app.get("/", (c) => {
-  return c.html(`<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
@@ -15,8 +14,9 @@ app.get("/", (c) => {
       --panel-3: rgba(7, 17, 31, 0.92);
       --border: #1f335d;
       --border-soft: #273d6c;
-      --text: #e5eefc;
-      --muted: #9ab0d1;
+      --text: #f8fafc;
+      --text-2: #dbe7f5;
+      --muted: #cbd5e1;
       --accent: #7dd3fc;
       --accent-2: #60a5fa;
       --accent-3: #22c55e;
@@ -59,11 +59,12 @@ app.get("/", (c) => {
       font-size: 1.95rem;
       line-height: 1.05;
       letter-spacing: -0.04em;
+      color: var(--text);
     }
 
     .brand p {
       margin: 8px 0 0;
-      color: var(--muted);
+      color: var(--text-2);
       max-width: 66ch;
       line-height: 1.5;
     }
@@ -131,6 +132,10 @@ app.get("/", (c) => {
       color: var(--text) !important;
     }
 
+    .swagger-ui * {
+      color: inherit;
+    }
+
     .swagger-ui .topbar {
       display: none !important;
     }
@@ -157,7 +162,13 @@ app.get("/", (c) => {
     .swagger-ui .parameter__type,
     .swagger-ui .parameter__name,
     .swagger-ui .response-col_description,
-    .swagger-ui .response-col_status {
+    .swagger-ui .response-col_status,
+    .swagger-ui .tab li,
+    .swagger-ui .tab button,
+    .swagger-ui label,
+    .swagger-ui .model-title,
+    .swagger-ui .model,
+    .swagger-ui .renderedMarkdown {
       color: var(--muted) !important;
     }
 
@@ -177,6 +188,10 @@ app.get("/", (c) => {
     .swagger-ui .btn {
       background: rgba(15, 31, 61, 0.85) !important;
       border-color: var(--border-soft) !important;
+      color: var(--text) !important;
+    }
+
+    .swagger-ui .btn span {
       color: var(--text) !important;
     }
 
@@ -325,5 +340,4 @@ app.get("/", (c) => {
     };
   </script>
 </body>
-</html>`);
-});
+</html>
