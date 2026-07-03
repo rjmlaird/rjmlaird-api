@@ -301,39 +301,6 @@
 </head>
 
 <body>
-  <div class="wrap">
-    <h1>rjmlaird API</h1>
-    <p>GitHub-powered CV + dynamic JSON API (Cloudflare Workers)</p>
-
-    <div class="card">
-      <strong>Core Collections</strong>
-      <div class="endpoint"><span><span class="method">GET</span><span class="path">/api/profile</span></span></div>
-      <div class="endpoint"><span><span class="method">GET</span><span class="path">/api/experience</span></span></div>
-      <div class="endpoint"><span><span class="method">GET</span><span class="path">/api/projects</span></span></div>
-      <div class="endpoint"><span><span class="method">GET</span><span class="path">/api/memberships</span></span></div>
-      <div class="endpoint"><span><span class="method">GET</span><span class="path">/api/reviews</span></span></div>
-      <div class="endpoint"><span><span class="method">GET</span><span class="path">/api/skills</span></span></div>
-    </div>
-
-    <div class="card">
-      <strong>Dynamic API</strong>
-      <div class="endpoint">
-        <span><span class="method">GET</span><span class="path">/api/:collection</span></span>
-      </div>
-      <p style="margin-top:10px; color:#9ca3af;">
-        Example: <code>/api/projects</code>, <code>/api/experience</code>
-      </p>
-    </div>
-
-    <div class="card">
-      <strong>System</strong>
-      <div class="endpoint"><span><span class="method">GET</span><span class="path">/health</span></span></div>
-      <div class="endpoint"><span><span class="method">GET</span><span class="path">/openapi.json</span></span></div>
-    </div>
-
-    <div id="swagger-ui"></div>
-  </div>
-
   <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.17.14/swagger-ui-bundle.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.17.14/swagger-ui-standalone-preset.js" crossorigin="anonymous"></script>
   <script>
