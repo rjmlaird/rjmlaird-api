@@ -38,16 +38,16 @@ app.get("/openapi.json", (c) => {
         description: "Debug endpoints",
       },
       {
+        name: "CV",
+        description: "Profile, organisations, projects, skills, and other CV collections",
+      },
+      {
         name: "Research",
         description: "Research API endpoints",
       },
       {
         name: "WebDAV",
         description: "WebDAV access",
-      },
-      {
-        name: "Legacy",
-        description: "Older collection-based API",
       },
     ],
     paths: {
@@ -94,6 +94,7 @@ app.get("/openapi.json", (c) => {
               in: "query",
               required: true,
               schema: { type: "string" },
+              description: "Search term.",
             },
           ],
           responses: {
@@ -121,6 +122,7 @@ app.get("/openapi.json", (c) => {
               in: "path",
               required: true,
               schema: { type: "string" },
+              description: "Paper identifier.",
             },
           ],
           responses: {
@@ -179,44 +181,55 @@ app.get("/openapi.json", (c) => {
         get: {
           tags: ["WebDAV"],
           summary: "WebDAV endpoint",
+          parameters: [
+            {
+              name: "path",
+              in: "path",
+              required: true,
+              schema: { type: "string" },
+              description: "WebDAV path.",
+            },
+          ],
           responses: {
             "200": { description: "WebDAV response" },
           },
         },
       },
-     "/api/{collection}": {
-  get: {
-    tags: ["Legacy"],
-    summary: "Fetch CV collection data",
-    description:
-      "Returns one of the CV collections such as organisations, profile, projects, skills, memberships, or reviews.",
-    parameters: [
-      {
-        name: "collection",
-        in: "path",
-        required: true,
-        schema: {
-          type: "string",
-          enum: [
-            "organisations",
-            "profile",
-            "projects",
-            "skills",
-            "memberships",
-            "reviews",
-            "experience",
+      "/api/{collection}": {
+        get: {
+          tags: ["CV"],
+          summary: "Fetch CV collection data",
+          description:
+            "Returns one of the CV collections such as organisations, profile, projects, skills, memberships, reviews, or experience.",
+          parameters: [
+            {
+              name: "collection",
+              in: "path",
+              required: true,
+              schema: {
+                type: "string",
+                enum: [
+                  "organisations",
+                  "profile",
+                  "projects",
+                  "skills",
+                  "memberships",
+                  "reviews",
+                  "experience",
+                ],
+              },
+              description: "The CV collection name.",
+            },
           ],
+          responses: {
+            "200": { description: "Collection data" },
+            "404": { description: "Collection not found" },
+          },
         },
-        description: "The CV collection name.",
       },
-    ],
-    responses: {
-      "200": { description: "Collection data" },
-      "404": { description: "Collection not found" },
     },
-  },
-}
-
+  });
+});
 
 const webdavHandler = async (c: any) => {
   try {
