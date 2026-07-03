@@ -12,7 +12,7 @@ type IngestBody = {
   createdAt?: string;
   links?: string[];
   zotero?: {
-    since?: number;
+    start?: number;
     limit?: number;
   };
 };
@@ -160,37 +160,24 @@ async function fetchZoteroPage(env: ResearchEnv, start: number, limit: number) {
   return (await res.json()) as ZoteroItem[];
 }
 
-async function fetchZoteroItems(env: ResearchEnv, since?: number, limit?: number) {
-  const all: ZoteroItem[] = [];
-  let start = since ?? 0;
-  const pageLimit = Math.min(limit ?? ZOTERO_PAGE_LIMIT, ZOTERO_PAGE_LIMIT);
-
-  while (true) {
-    const page = await fetchZoteroPage(env, start, pageLimit);
-    all.push(...page);
-
-    if (page.length < pageLimit) break;
-    start += pageLimit;
-  }
-
-  return all;
-}
-
-async function syncZoteroToR2(env: ResearchEnv, since?: number, limit?: number) {
-  const items = await fetchZoteroItems(env, since, limit);
+async function syncZoteroPageToR2(env: ResearchEnv, start = 0, limit = ZOTERO_PAGE_LIMIT) {
+  const pageLimit = Math.min(limit, ZOTERO_PAGE_LIMIT);
+  const page = await fetchZoteroPage(env, start, pageLimit);
   const written: Array<{ key: string; record: PaperRecord }> = [];
 
-  for (const item of items) {
+  for (const item of page) {
     const record = zoteroToPaper(item);
     if (!record) continue;
-
     const key = await writePaperRecord(env, record);
     written.push({ key, record });
   }
 
   return {
-    fetched: items.length,
+    fetched: page.length,
     written: written.length,
+    start,
+    limit: pageLimit,
+    nextStart: page.length === pageLimit ? start + pageLimit : null,
     items: written,
   };
 }
@@ -281,7 +268,9 @@ export async function handleResearch(request: Request, env: ResearchEnv) {
 
     if (body.source === "zotero") {
       try {
-        const result = await syncZoteroToR2(env, body.zotero?.since, body.zotero?.limit);
+        const start = body.zotero?.start ?? 0;
+        const limit = body.zotero?.limit ?? ZOTERO_PAGE_LIMIT;
+        const result = await syncZoteroPageToR2(env, start, limit);
         return json(
           {
             status: "synced",
