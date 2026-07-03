@@ -96,8 +96,18 @@ function clamp(n: number, min: number, max: number) {
   return Math.max(min, Math.min(max, n));
 }
 
-function normalizeText(value: unknown) {
-  return safeTrim(value);
+function normalizeStringArray(values?: string[]) {
+  if (!Array.isArray(values)) return [];
+
+  const out: string[] = [];
+  for (const value of values) {
+    if (typeof value !== "string") continue;
+    const trimmed = value.trim();
+    if (!trimmed) continue;
+    out.push(trimmed);
+  }
+
+  return Array.from(new Set(out)).slice(0, 20);
 }
 
 async function listPaperItems(env: ResearchEnv, limit = MAX_SCAN_ITEMS) {
@@ -129,23 +139,17 @@ async function writePaperRecord(env: ResearchEnv, record: PaperRecord) {
 
 function normalizeZoteroTags(tags?: Array<{ tag?: string } | string>) {
   if (!Array.isArray(tags)) return [];
-  const out = tags
-    .map((t) => (typeof t === "string" ? t : t?.tag))
-    .filter((t): t is string => Boolean(t && t.trim()))
-    .map((t) => t.trim());
+
+  const out: string[] = [];
+  for (const tag of tags) {
+    const value = typeof tag === "string" ? tag : tag?.tag;
+    if (typeof value !== "string") continue;
+    const trimmed = value.trim();
+    if (!trimmed) continue;
+    out.push(trimmed);
+  }
 
   return Array.from(new Set(out)).slice(0, 20);
-}
-
-function normalizeStringArray(values?: string[]) {
-  if (!Array.isArray(values)) return [];
-  return Array.from(
-    new Set(
-      values
-        .filter((v): v is string => typeof v === "string" && v.trim())
-        .map((v) => v.trim())
-    )
-  ).slice(0, 20);
 }
 
 function zoteroToPaper(item: ZoteroItem): PaperRecord | null {
@@ -153,14 +157,14 @@ function zoteroToPaper(item: ZoteroItem): PaperRecord | null {
   const zoteroKey = safeTrim(data?.key ?? item.key);
   if (!zoteroKey) return null;
 
-  const altLink = normalizeText(data?.links?.alternate?.href);
+  const altLink = safeTrim(data?.links?.alternate?.href);
 
   return {
     id: zoteroKey,
     source: "zotero",
-    title: normalizeText(data?.title) || null,
+    title: safeTrim(data?.title) || null,
     tags: normalizeZoteroTags(data?.tags),
-    createdAt: normalizeText(data?.date) || new Date().toISOString(),
+    createdAt: safeTrim(data?.date) || new Date().toISOString(),
     links: altLink ? [altLink] : [],
   };
 }
@@ -266,6 +270,7 @@ export async function handleResearch(request: Request, env: ResearchEnv) {
           record,
         });
       }
+
       if (results.length >= MAX_RESULTS) break;
     }
 
@@ -341,7 +346,7 @@ export async function handleResearch(request: Request, env: ResearchEnv) {
     const record: PaperRecord = {
       id,
       source: safeTrim(body.source) || "unknown",
-      title: normalizeText(body.title) || null,
+      title: safeTrim(body.title) || null,
       tags: normalizeStringArray(body.tags),
       createdAt,
       links: normalizeStringArray(body.links),
@@ -361,6 +366,7 @@ export async function handleResearch(request: Request, env: ResearchEnv) {
 
   if (path === "graph") {
     const records = await scanPaperRecords(env);
+
     const nodes = records.map(({ item, record }) => ({
       id: item.key,
       size: item.size ?? 0,
@@ -368,12 +374,10 @@ export async function handleResearch(request: Request, env: ResearchEnv) {
     }));
 
     const edges = records.flatMap(({ item, record }) =>
-      (record?.links ?? [])
-        .slice(0, 20)
-        .map((target) => ({
-          from: item.key,
-          to: target,
-        }))
+      (record?.links ?? []).slice(0, 20).map((target) => ({
+        from: item.key,
+        to: target,
+      }))
     ).slice(0, 500);
 
     return json({
@@ -392,7 +396,7 @@ export async function handleResearch(request: Request, env: ResearchEnv) {
           id: item.key,
           timestamp: record?.createdAt ?? null,
         }))
-        .filter((event) => Boolean(event.timestamp))
+        .filter((event): event is { id: string; timestamp: string } => Boolean(event.timestamp))
         .slice(0, MAX_SCAN_ITEMS),
       scanned: records.length,
     });
