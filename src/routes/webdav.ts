@@ -1,3 +1,5 @@
+import { storage } from "../services/storage";
+
 export async function handleWebDAV(request: Request, env: any) {
   const url = new URL(request.url);
 
@@ -5,7 +7,11 @@ export async function handleWebDAV(request: Request, env: any) {
   let key = url.pathname.replace(/^\/v1\/webdav\/?/, "");
   key = decodeURIComponent(key).replace(/^\/+/, "");
 
-  // Root request (Zotero checks this constantly)
+  /**
+   * =========================
+   * ROOT (Zotero discovery ping)
+   * =========================
+   */
   if (!key) {
     return new Response("WebDAV root", {
       status: 200,
@@ -18,22 +24,21 @@ export async function handleWebDAV(request: Request, env: any) {
 
   /**
    * =========================
-   * PROPFIND (CRITICAL FOR ZOTERO)
+   * PROPFIND (CRITICAL)
    * =========================
-   * Zotero uses this to discover files/folders
    */
   if (request.method === "PROPFIND") {
-    const obj = await env.R2.get(`zotero/${key}`);
+    const obj = await storage.zotero.get(key, env);
 
     if (!obj) {
       return new Response(
         `<?xml version="1.0" encoding="utf-8"?>
-        <d:multistatus xmlns:d="DAV:">
-          <d:response>
-            <d:href>/${key}</d:href>
-            <d:status>HTTP/1.1 404 Not Found</d:status>
-          </d:response>
-        </d:multistatus>`,
+<d:multistatus xmlns:d="DAV:">
+  <d:response>
+    <d:href>/${key}</d:href>
+    <d:status>HTTP/1.1 404 Not Found</d:status>
+  </d:response>
+</d:multistatus>`,
         {
           status: 404,
           headers: {
@@ -45,19 +50,19 @@ export async function handleWebDAV(request: Request, env: any) {
 
     return new Response(
       `<?xml version="1.0" encoding="utf-8"?>
-      <d:multistatus xmlns:d="DAV:">
-        <d:response>
-          <d:href>/${key}</d:href>
-          <d:propstat>
-            <d:prop>
-              <d:resourcetype/>
-              <d:getcontentlength>${obj.size}</d:getcontentlength>
-              <d:getetag>${obj.etag ?? ""}</d:getetag>
-            </d:prop>
-            <d:status>HTTP/1.1 200 OK</d:status>
-          </d:propstat>
-        </d:response>
-      </d:multistatus>`,
+<d:multistatus xmlns:d="DAV:">
+  <d:response>
+    <d:href>/${key}</d:href>
+    <d:propstat>
+      <d:prop>
+        <d:resourcetype/>
+        <d:getcontentlength>${obj.size ?? 0}</d:getcontentlength>
+        <d:getetag>${obj.etag ?? ""}</d:getetag>
+      </d:prop>
+      <d:status>HTTP/1.1 200 OK</d:status>
+    </d:propstat>
+  </d:response>
+</d:multistatus>`,
       {
         status: 207,
         headers: {
@@ -70,64 +75,66 @@ export async function handleWebDAV(request: Request, env: any) {
 
   /**
    * =========================
-   * HEAD (SYNC CHECK)
+   * HEAD
    * =========================
    */
   if (request.method === "HEAD") {
-    const obj = await env.R2.get(`zotero/${key}`);
+    const obj = await storage.zotero.get(key, env);
 
-    if (!obj) {
-      return new Response(null, { status: 404 });
-    }
+    if (!obj) return new Response(null, { status: 404 });
 
     return new Response(null, {
       status: 200,
       headers: {
         "Content-Length": String(obj.size ?? 0),
         "ETag": obj.etag ?? "",
-        "Content-Type": obj.httpMetadata?.contentType ?? "application/octet-stream",
+        "Content-Type": obj.contentType ?? "application/octet-stream",
       },
     });
   }
 
   /**
    * =========================
-   * MKCOL (folder creation)
+   * MKCOL
    * =========================
-   * Zotero expects folder semantics even though R2 is flat
    */
   if (request.method === "MKCOL") {
-    // We simulate folders as zero-byte markers
-    await env.R2.put(`zotero/${key}/.folder`, new Uint8Array([]));
+    // folder placeholder (R2 is flat)
+    await storage.zotero.put(
+      `${key}/.folder`,
+      new Uint8Array([]),
+      env,
+      "application/octet-stream"
+    );
 
     return new Response("Created", { status: 201 });
   }
 
   /**
    * =========================
-   * PUT (upload file)
+   * PUT
    * =========================
    */
   if (request.method === "PUT") {
     const body = await request.arrayBuffer();
 
-    await env.R2.put(`zotero/${key}`, body, {
-      httpMetadata: {
-        contentType:
-          request.headers.get("content-type") || "application/octet-stream",
-      },
-    });
+    await storage.zotero.put(
+      key,
+      body,
+      env,
+      request.headers.get("content-type") ?? "application/octet-stream"
+    );
 
     return new Response("Created", { status: 201 });
   }
 
   /**
    * =========================
-   * GET (download file)
+   * GET
    * =========================
    */
   if (request.method === "GET") {
-    const obj = await env.R2.get(`zotero/${key}`);
+    const obj = await storage.zotero.get(key, env);
 
     if (!obj) {
       return new Response(`Not found: ${key}`, { status: 404 });
@@ -136,7 +143,7 @@ export async function handleWebDAV(request: Request, env: any) {
     return new Response(obj.body, {
       headers: {
         "Content-Type":
-          obj.httpMetadata?.contentType ?? "application/octet-stream",
+          obj.contentType ?? "application/octet-stream",
         "ETag": obj.etag ?? "",
         "DAV": "1,2",
       },
@@ -149,7 +156,7 @@ export async function handleWebDAV(request: Request, env: any) {
    * =========================
    */
   if (request.method === "DELETE") {
-    await env.R2.delete(`zotero/${key}`);
+    await storage.zotero.del(key, env);
     return new Response("Deleted");
   }
 
