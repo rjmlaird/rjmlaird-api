@@ -12,18 +12,21 @@ type IngestBody = {
   links?: string[];
 };
 
+type PaperRecord = {
+  id: string;
+  source: string;
+  title: string | null;
+  tags: string[];
+  createdAt: string;
+  links: string[];
+};
+
 type R2Item = {
   key: string;
   size?: number;
   etag?: string;
   uploaded?: string;
-  metadata?: {
-    title?: string;
-    createdAt?: string;
-    links?: string[];
-    source?: string;
-    tags?: string[];
-  };
+  metadata?: Record<string, unknown>;
 };
 
 function normalizeR2List(result: unknown): R2Item[] {
@@ -46,10 +49,6 @@ function getRoute(request: Request) {
   return { path, query };
 }
 
-function getMeta(item: R2Item) {
-  return item.metadata ?? {};
-}
-
 async function readJsonBody<T>(request: Request): Promise<T | null> {
   const contentType = request.headers.get("content-type") ?? "";
   if (!contentType.toLowerCase().includes("application/json")) return null;
@@ -61,9 +60,46 @@ async function readJsonBody<T>(request: Request): Promise<T | null> {
   }
 }
 
-async function listPapers(env: Env) {
+async function listPaperItems(env: Env) {
   const raw = await storage.r2.list(`${PAPERS_PREFIX}/`, env);
   return normalizeR2List(raw);
+}
+
+async function readPaperRecord(env: Env, key: string): Promise<PaperRecord | null> {
+  const obj = await storage.r2.get(key, env);
+  if (!obj?.body) return null;
+
+  const text = await new Response(obj.body).text();
+  if (!text.trim()) return null;
+
+  try {
+    return JSON.parse(text) as PaperRecord;
+  } catch {
+    return null;
+  }
+}
+
+function paperToGraphNode(item: R2Item, record: PaperRecord | null) {
+  return {
+    id: item.key,
+    size: item.size ?? 0,
+    title: record?.title ?? null,
+  };
+}
+
+function paperToTimelineEvent(item: R2Item, record: PaperRecord | null) {
+  return {
+    id: item.key,
+    timestamp: record?.createdAt ?? null,
+  };
+}
+
+function paperToExportItem(item: R2Item, record: PaperRecord | null) {
+  return {
+    key: item.key,
+    title: record?.title ?? item.key,
+    createdAt: record?.createdAt ?? null,
+  };
 }
 
 export async function handleResearch(request: Request, env: Env) {
@@ -90,12 +126,21 @@ export async function handleResearch(request: Request, env: Env) {
   if (path === "search") {
     if (!query) return json({ error: "Missing ?q=" }, 400);
 
-    const items = await listPapers(env);
+    const items = await listPaperItems(env);
     const q = query.toLowerCase();
 
-    const results = items.filter((item) =>
-      JSON.stringify(item).toLowerCase().includes(q)
-    );
+    const results = [];
+    for (const item of items) {
+      const record = await readPaperRecord(env, item.key);
+      const haystack = JSON.stringify({ item, record }).toLowerCase();
+      if (haystack.includes(q)) {
+        results.push({
+          key: item.key,
+          size: item.size ?? 0,
+          record,
+        });
+      }
+    }
 
     return json({
       query,
@@ -105,10 +150,21 @@ export async function handleResearch(request: Request, env: Env) {
   }
 
   if (path === "papers") {
-    const items = await listPapers(env);
+    const items = await listPaperItems(env);
+    const results = [];
+
+    for (const item of items) {
+      const record = await readPaperRecord(env, item.key);
+      results.push({
+        key: item.key,
+        size: item.size ?? 0,
+        record,
+      });
+    }
+
     return json({
-      count: items.length,
-      items,
+      count: results.length,
+      items: results,
     });
   }
 
@@ -117,15 +173,13 @@ export async function handleResearch(request: Request, env: Env) {
     if (!id) return json({ error: "Missing paper id" }, 400);
 
     const key = `${PAPERS_PREFIX}/${id}.json`;
-    const item = await storage.r2.get(key, env);
+    const record = await readPaperRecord(env, key);
 
-    if (!item) return json({ error: "Not found", key }, 404);
+    if (!record) return json({ error: "Not found", key }, 404);
 
     return json({
       key,
-      size: item.size ?? 0,
-      contentType: item.contentType ?? "application/json",
-      body: null,
+      record,
     });
   }
 
@@ -134,7 +188,7 @@ export async function handleResearch(request: Request, env: Env) {
     const id = body.id?.trim() || crypto.randomUUID();
     const createdAt = body.createdAt ?? new Date().toISOString();
 
-    const record = {
+    const record: PaperRecord = {
       id,
       source: body.source ?? "unknown",
       title: body.title ?? null,
@@ -159,40 +213,32 @@ export async function handleResearch(request: Request, env: Env) {
   }
 
   if (path === "graph") {
-    const items = await listPapers(env);
+    const items = await listPaperItems(env);
+    const records = await Promise.all(
+      items.map(async (item) => [item, await readPaperRecord(env, item.key)] as const)
+    );
 
     return json({
-      nodes: items.map((i) => {
-        const meta = getMeta(i);
-        return {
-          id: i.key,
-          size: i.size ?? 0,
-          title: meta.title ?? null,
-        };
-      }),
-      edges: items.flatMap((i) => {
-        const meta = getMeta(i);
-        return (meta.links ?? []).map((target: string) => ({
-          from: i.key,
+      nodes: records.map(([item, record]) => paperToGraphNode(item, record)),
+      edges: records.flatMap(([item, record]) =>
+        (record?.links ?? []).map((target) => ({
+          from: item.key,
           to: target,
-        }));
-      }),
+        }))
+      ),
     });
   }
 
   if (path === "timeline") {
-    const items = await listPapers(env);
+    const items = await listPaperItems(env);
+    const records = await Promise.all(
+      items.map(async (item) => [item, await readPaperRecord(env, item.key)] as const)
+    );
 
     return json({
-      events: items
-        .map((i) => {
-          const meta = getMeta(i);
-          return {
-            id: i.key,
-            timestamp: meta.createdAt ?? null,
-          };
-        })
-        .filter((e) => e.timestamp),
+      events: records
+        .map(([item, record]) => paperToTimelineEvent(item, record))
+        .filter((event) => event.timestamp),
     });
   }
 
@@ -204,18 +250,14 @@ export async function handleResearch(request: Request, env: Env) {
   }
 
   if (path === "export/zotero") {
-    const items = await listPapers(env);
+    const items = await listPaperItems(env);
+    const records = await Promise.all(
+      items.map(async (item) => [item, await readPaperRecord(env, item.key)] as const)
+    );
 
     return json({
       version: "0.1",
-      items: items.map((i) => {
-        const meta = getMeta(i);
-        return {
-          key: i.key,
-          title: meta.title ?? i.key,
-          createdAt: meta.createdAt ?? null,
-        };
-      }),
+      items: records.map(([item, record]) => paperToExportItem(item, record)),
     });
   }
 
