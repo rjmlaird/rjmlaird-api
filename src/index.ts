@@ -215,8 +215,7 @@ app.get("/openapi.json", (c) => {
       "404": { description: "Collection not found" },
     },
   },
-},
-
+}
 
 
 const webdavHandler = async (c: any) => {
