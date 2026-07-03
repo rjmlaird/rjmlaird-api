@@ -344,6 +344,24 @@ async function authOr401(request: Request): Promise<Response | null> {
   return parseAuthorizationHeader(request) ? null : unauthorized();
 }
 
+function mkcolResponseForTarget(path: string, current: DavNode | null, env: any): Promise<Response> | Response {
+  if (path === "" || path === BASE_PREFIX) {
+    return new Response(null, { status: 405, headers: { DAV: DAV_HEADER } });
+  }
+  if (current) {
+    return new Response(null, { status: 405, headers: { DAV: DAV_HEADER } });
+  }
+  return Promise.resolve((async () => {
+    const key = toKey(path);
+    if (!key) return new Response(null, { status: 405, headers: { DAV: DAV_HEADER } });
+    if (!(await parentExists(key, env))) {
+      return new Response(null, { status: 409, headers: { DAV: DAV_HEADER } });
+    }
+    await storage.r2.put(`${key}/.folder`, new Uint8Array([]), env);
+    return new Response(null, { status: 201, headers: { DAV: DAV_HEADER } });
+  })());
+}
+
 export async function handleWebDAV(request: Request, env: any) {
   const reqCtx = requestContext(request);
   const bodyPreview = await readBodyPreview(request);
@@ -496,17 +514,22 @@ export async function handleWebDAV(request: Request, env: any) {
       });
     }
   } else if (request.method === "MKCOL") {
-    if (!key) {
-      response = badRequest();
+    if (!path) {
+      response = new Response(null, { status: 405, headers: { DAV: DAV_HEADER } });
     } else if (root) {
-      response = methodNotAllowed();
+      response = new Response(null, { status: 405, headers: { DAV: DAV_HEADER } });
     } else if (current) {
-      response = conflict();
-    } else if (!(await parentExists(key, env))) {
-      response = conflict();
+      response = new Response(null, { status: 405, headers: { DAV: DAV_HEADER } });
     } else {
-      await storage.r2.put(`${key}/.folder`, new Uint8Array([]), env);
-      response = new Response(null, { status: 201, headers: { DAV: DAV_HEADER } });
+      const targetKey = toKey(path);
+      if (!targetKey) {
+        response = new Response(null, { status: 405, headers: { DAV: DAV_HEADER } });
+      } else if (!(await parentExists(targetKey, env))) {
+        response = new Response(null, { status: 409, headers: { DAV: DAV_HEADER } });
+      } else {
+        await storage.r2.put(`${targetKey}/.folder`, new Uint8Array([]), env);
+        response = new Response(null, { status: 201, headers: { DAV: DAV_HEADER } });
+      }
     }
   } else if (request.method === "PUT") {
     if (!key) {
