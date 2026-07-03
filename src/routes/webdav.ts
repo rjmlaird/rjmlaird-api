@@ -2,37 +2,17 @@ import { storage } from "../services/storage";
 
 const BASE_PREFIX = "zotero/";
 
-/**
- * Normalize WebDAV path
- */
 function normalizePath(rawPath: string) {
   return decodeURIComponent(rawPath)
     .replace(/^\/(v1\/)?webdav\/?/, "")
     .replace(/^\/+/, "");
 }
 
-/**
- * Convert WebDAV path → R2 key
- */
 function toKey(path: string) {
-  if (!path || path.length === 0) return null;
+  if (!path) return null;
   return `${BASE_PREFIX}${path}`;
 }
 
-/**
- * Extract parent directory
- */
-function getParent(path: string) {
-  const parts = path.split("/");
-  parts.pop();
-  return parts.length ? parts.join("/") : "";
-}
-
-/**
- * =========================
- * WEBDAV HANDLER (ZOTERO FULL COMPAT)
- * =========================
- */
 export async function handleWebDAV(request: Request, env: any) {
   const url = new URL(request.url);
   const path = normalizePath(url.pathname);
@@ -40,7 +20,7 @@ export async function handleWebDAV(request: Request, env: any) {
 
   /**
    * =========================
-   * OPTIONS (required by Zotero + macOS clients)
+   * OPTIONS (Zotero + desktop clients)
    * =========================
    */
   if (request.method === "OPTIONS") {
@@ -56,10 +36,10 @@ export async function handleWebDAV(request: Request, env: any) {
 
   /**
    * =========================
-   * ROOT (NEVER FAIL THIS)
+   * ROOT
    * =========================
    */
-  if (!path || path === "") {
+  if (!path) {
     return new Response("WebDAV root", {
       status: 200,
       headers: {
@@ -69,30 +49,42 @@ export async function handleWebDAV(request: Request, env: any) {
     });
   }
 
-  const obj = key ? await storage.r2.get(key, env) : null;
-
   /**
    * =========================
-   * PROPFIND (CRITICAL FOR ZOTERO)
+   * PROPFIND (CORE FIXED LOGIC)
    * =========================
    */
   if (request.method === "PROPFIND") {
-  const depth = request.headers.get("Depth") ?? "1";
+    const depth = request.headers.get("Depth") ?? "1";
 
-  const prefix = `${BASE_PREFIX}${path ? path + "/" : ""}`;
+    const prefix = `${BASE_PREFIX}${path ? path + "/" : ""}`;
+    const items = await storage.r2.list(prefix, env);
 
-  const items = await storage.r2.list(prefix, env);
+    // ALWAYS include current directory as a node
+    const selfHref = `/webdav/${path}`;
 
-  const responses = items.map((item: any) => {
-    const isFolder = item.key.endsWith("/.folder");
+    const responses = [];
 
-    const cleanPath = item.key
-      .replace(BASE_PREFIX, "")
-      .replace(/\/\.folder$/, "");
-
-    return `
+    // 1. SELF NODE (CRITICAL FOR ZOTERO)
+    responses.push(`
   <d:response>
-    <d:href>/webdav/${cleanPath}</d:href>
+    <d:href>${selfHref}</d:href>
+    <d:propstat>
+      <d:prop>
+        <d:resourcetype><d:collection/></d:resourcetype>
+      </d:prop>
+      <d:status>HTTP/1.1 200 OK</d:status>
+    </d:propstat>
+  </d:response>`);
+
+    // 2. CHILD NODES
+    for (const item of items) {
+      const clean = item.key.replace(BASE_PREFIX, "");
+      const isFolder = item.key.endsWith("/.folder");
+
+      responses.push(`
+  <d:response>
+    <d:href>/webdav/${clean.replace(/\/\.folder$/, "")}</d:href>
     <d:propstat>
       <d:prop>
         <d:resourcetype>${isFolder ? "<d:collection/>" : ""}</d:resourcetype>
@@ -101,23 +93,23 @@ export async function handleWebDAV(request: Request, env: any) {
       </d:prop>
       <d:status>HTTP/1.1 200 OK</d:status>
     </d:propstat>
-  </d:response>`;
-  });
+  </d:response>`);
+    }
 
-  return new Response(
-    `<?xml version="1.0" encoding="utf-8"?>
+    return new Response(
+      `<?xml version="1.0" encoding="utf-8"?>
 <d:multistatus xmlns:d="DAV:">
 ${responses.join("\n")}
 </d:multistatus>`,
-    {
-      status: 207,
-      headers: {
-        "Content-Type": "application/xml",
-        DAV: "1,2",
-      },
-    }
-  );
-}
+      {
+        status: 207,
+        headers: {
+          "Content-Type": "application/xml",
+          DAV: "1,2",
+        },
+      }
+    );
+  }
 
   /**
    * =========================
@@ -125,6 +117,7 @@ ${responses.join("\n")}
    * =========================
    */
   if (request.method === "HEAD") {
+    const obj = key ? await storage.r2.get(key, env) : null;
     if (!obj) return new Response(null, { status: 404 });
 
     return new Response(null, {
@@ -140,7 +133,7 @@ ${responses.join("\n")}
 
   /**
    * =========================
-   * MKCOL (folders)
+   * MKCOL
    * =========================
    */
   if (request.method === "MKCOL") {
@@ -158,7 +151,7 @@ ${responses.join("\n")}
 
   /**
    * =========================
-   * PUT (upload)
+   * PUT
    * =========================
    */
   if (request.method === "PUT") {
@@ -180,6 +173,7 @@ ${responses.join("\n")}
    * =========================
    */
   if (request.method === "GET") {
+    const obj = key ? await storage.r2.get(key, env) : null;
     if (!obj) return new Response("Not found", { status: 404 });
 
     return new Response(obj.body, {
@@ -209,25 +203,4 @@ ${responses.join("\n")}
       DAV: "1,2",
     },
   });
-}
-
-/**
- * =========================
- * XML RESPONSE HELPER
- * =========================
- */
-function xmlResponse(status: number, body: string, path: string) {
-  return new Response(
-    `<?xml version="1.0" encoding="utf-8"?>
-<d:multistatus xmlns:d="DAV:">
-${body}
-</d:multistatus>`,
-    {
-      status,
-      headers: {
-        "Content-Type": "application/xml",
-        DAV: "1,2",
-      },
-    }
-  );
 }

@@ -7,36 +7,33 @@ import {
 
 /**
  * ======================================================
- * SINGLE SOURCE OF TRUTH PREFIX
+ * SINGLE SOURCE OF TRUTH
  * ======================================================
  */
-const BASE_PREFIX = "zotero";
+const BASE_PREFIX = "zotero/";
 
 /**
- * Normalize a Zotero path into a safe R2 key segment
- * (IMPORTANT: no double-prefixing allowed)
+ * Normalize incoming WebDAV path
  */
 function normalizePath(path: string): string {
-  const clean = decodeURIComponent(path)
+  return decodeURIComponent(path)
     .trim()
     .replace(/^\/+/, "")
-    .replace(/^zotero\/?/, "") // 🔥 prevents zotero/zotero bug
+    .replace(/^zotero\/?/, "")
     .replace(/\/+/g, "/");
-
-  return clean;
 }
 
 /**
- * Build final R2 key
+ * Build safe R2 key
  */
-export function buildZoteroKey(path: string) {
+export function buildZoteroKey(path: string): string {
   const normalized = normalizePath(path);
 
   if (!normalized) {
-    return BASE_PREFIX;
+    return BASE_PREFIX; // root folder marker
   }
 
-  return `${BASE_PREFIX}/${normalized}`;
+  return `${BASE_PREFIX}${normalized}`;
 }
 
 /**
@@ -74,18 +71,18 @@ export async function zoteroDelete(env: Env, path: string) {
 export async function zoteroList(env: Env, prefix = "") {
   const normalized = normalizePath(prefix);
 
-  return listR2Objects(
-    env,
-    normalized ? `${BASE_PREFIX}/${normalized}` : `${BASE_PREFIX}`
-  );
+  const finalPrefix = normalized
+    ? `${BASE_PREFIX}${normalized}/`
+    : BASE_PREFIX;
+
+  return listR2Objects(env, finalPrefix);
 }
 
 /**
- * Parse path into logical structure (safe debug utility)
+ * Debug path parser
  */
 export function parseZoteroPath(path: string) {
   const clean = normalizePath(path);
-
   const parts = clean.split("/").filter(Boolean);
 
   return {
