@@ -53,7 +53,7 @@ export type CvCollection =
   | "tools"
   | "unCountries";
 
-const SECTION_KEYS: CvCollection[] = [
+const SECTION_KEYS = [
   "achievements",
   "awards",
   "certifications",
@@ -79,9 +79,9 @@ const SECTION_KEYS: CvCollection[] = [
   "teaching",
   "tools",
   "unCountries",
-];
+] as const satisfies readonly CvCollection[];
 
-const cvData: Record<CvCollection, unknown> = {
+const cvData = {
   achievements,
   awards,
   certifications,
@@ -107,14 +107,14 @@ const cvData: Record<CvCollection, unknown> = {
   teaching,
   tools,
   unCountries,
-};
+} satisfies Record<CvCollection, unknown>;
 
 function safeTrim(value: unknown) {
   return typeof value === "string" ? value.trim() : "";
 }
 
 function isCollection(value: string): value is CvCollection {
-  return (SECTION_KEYS as string[]).includes(value);
+  return (SECTION_KEYS as readonly string[]).includes(value);
 }
 
 function getRoute(request: Request) {
@@ -145,9 +145,7 @@ export async function handleCv(request: Request, _env: Env) {
   }
 
   if (path === "sections") {
-    return json({
-      sections: SECTION_KEYS,
-    });
+    return json({ sections: SECTION_KEYS });
   }
 
   if (path === "list") {
@@ -161,9 +159,7 @@ export async function handleCv(request: Request, _env: Env) {
   }
 
   if (path === "full") {
-    return json({
-      sections: cvData,
-    });
+    return json({ sections: cvData });
   }
 
   if (path === "search") {

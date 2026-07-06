@@ -33,7 +33,7 @@ import { unCountries } from "./data/unCountries";
 
 const app = new Hono<{ Bindings: Env }>();
 
-const cvData: Record<CvCollection, unknown> = {
+const cvData = {
   achievements,
   awards,
   certifications,
@@ -59,9 +59,35 @@ const cvData: Record<CvCollection, unknown> = {
   teaching,
   tools,
   unCountries,
-};
+} satisfies Record<CvCollection, unknown>;
 
-const cvCollections = Object.keys(cvData) as CvCollection[];
+const cvCollections = [
+  "achievements",
+  "awards",
+  "certifications",
+  "contact",
+  "credentials",
+  "credly",
+  "education",
+  "events",
+  "eventsAttending",
+  "experience",
+  "initiatives",
+  "languages",
+  "memberships",
+  "organisations",
+  "personal",
+  "profile",
+  "projects",
+  "reviews",
+  "services",
+  "skills",
+  "socials",
+  "talks",
+  "teaching",
+  "tools",
+  "unCountries",
+] as const satisfies readonly CvCollection[];
 
 app.get("/health", (c) => {
   return c.json({
@@ -79,32 +105,13 @@ app.get("/openapi.json", (c) => {
       version: "1.0.0",
       description: "GitHub-powered CV + research + WebDAV API",
     },
-    servers: [
-      {
-        url: "https://api.rjmlaird.co.uk",
-      },
-    ],
+    servers: [{ url: "https://api.rjmlaird.co.uk" }],
     tags: [
-      {
-        name: "System",
-        description: "Health and API metadata",
-      },
-      {
-        name: "Debug",
-        description: "Debug endpoints",
-      },
-      {
-        name: "CV",
-        description: "Profile, organisations, projects, skills, and other CV collections",
-      },
-      {
-        name: "Research",
-        description: "Research API endpoints",
-      },
-      {
-        name: "WebDAV",
-        description: "WebDAV access",
-      },
+      { name: "System", description: "Health and API metadata" },
+      { name: "Debug", description: "Debug endpoints" },
+      { name: "CV", description: "Profile, organisations, projects, skills, and other CV collections" },
+      { name: "Research", description: "Research API endpoints" },
+      { name: "WebDAV", description: "WebDAV access" },
     ],
     paths: {
       "/health": {

@@ -2,8 +2,10 @@
   "skills": {
     "strategy_marketing_growth": {
       "label": "Strategy, Marketing & Growth",
+      "kind": "mixed",
       "keywords": [
         "Digital Marketing Strategy",
+        "Marketing Strategy",
         "SEO",
         "Content Marketing",
         "Social Media Strategy",
@@ -16,11 +18,22 @@
         "Conversion Optimisation",
         "Growth Strategy",
         "Data-Driven Marketing",
-        "Sustainable Marketing"
+        "Sustainable Marketing",
+        "Customer Journey Mapping",
+        "Positioning",
+        "Market Research",
+        "Go-to-Market Strategy",
+        "Product Marketing",
+        "SEO Copywriting",
+        "Email Marketing",
+        "Lifecycle Marketing",
+        "Marketing Automation",
+        "Community Growth"
       ]
     },
     "communications_editorial_pr": {
       "label": "Communications, PR & Editorial",
+      "kind": "mixed",
       "keywords": [
         "Strategic Communications",
         "Science Communication",
@@ -34,11 +47,24 @@
         "Event Communications",
         "Webinar Production",
         "Narrative Development",
-        "Content Strategy"
+        "Content Strategy",
+        "Copywriting",
+        "Editing",
+        "Proofreading",
+        "Tone of Voice",
+        "Speechwriting",
+        "Reputation Management",
+        "Internal Communications",
+        "External Communications",
+        "Message Development",
+        "Storytelling",
+        "Copy Editing",
+        "Information Design"
       ]
     },
     "space_climate_science": {
       "label": "Space, Astronomy & Climate",
+      "kind": "mixed",
       "keywords": [
         "Space Industry Communications",
         "Earth Observation",
@@ -57,11 +83,19 @@
         "Climate Advocacy",
         "Net Zero Communication",
         "ESG Strategy",
-        "Sustainability Reporting"
+        "Sustainability Reporting",
+        "Climate Risk",
+        "Climate Data",
+        "Remote Sensing",
+        "Geospatial Data",
+        "Earth System Science",
+        "Atmospheric Science",
+        "Scientific Literacy"
       ]
     },
     "data_analytics_research": {
       "label": "Data, Analytics & Research",
+      "kind": "mixed",
       "keywords": [
         "Google Analytics 4 (GA4)",
         "Matomo Analytics",
@@ -79,11 +113,20 @@
         "Literature Review",
         "Observational Astronomy",
         "Academic Publishing",
-        "Peer-reviewed Research"
+        "Peer-reviewed Research",
+        "Quantitative Analysis",
+        "Qualitative Analysis",
+        "Data Cleaning",
+        "Data Modelling",
+        "Statistical Analysis",
+        "Research Design",
+        "Survey Analysis",
+        "Experiment Design"
       ]
     },
     "languages_programming": {
       "label": "Languages & Programming",
+      "kind": "hard",
       "keywords": [
         "Python",
         "JavaScript",
@@ -99,11 +142,19 @@
         "HTML/CSS",
         "Fortran",
         "IDL",
-        "MATLAB"
+        "MATLAB",
+        "Bash",
+        "Shell Scripting",
+        "LaTeX",
+        "Node.js",
+        "PHP",
+        "Ruby",
+        "Haskell"
       ]
     },
     "frontend_ux": {
       "label": "Frontend & UX",
+      "kind": "hard",
       "keywords": [
         "React",
         "Next.js",
@@ -117,16 +168,29 @@
         "WordPress",
         "Drupal",
         "Figma",
-        "Canva"
+        "Canva",
+        "UX Design",
+        "UI Design",
+        "Responsive Design",
+        "Information Architecture",
+        "Accessibility",
+        "Design Systems",
+        "Prototyping",
+        "Wireframing",
+        "User Flows",
+        "CMS Management",
+        "Content Modelling"
       ]
     },
     "backend_cloud_devops": {
       "label": "Backend, Cloud & DevOps",
+      "kind": "hard",
       "keywords": [
         "Node.js",
         "Express.js",
         "FastAPI",
         "REST API",
+        "GraphQL",
         "MongoDB",
         "PostgreSQL",
         "MySQL",
@@ -152,11 +216,22 @@
         "UNIX Systems",
         "Git",
         "VS Code",
-        "Postman"
+        "Postman",
+        "Cloudflare Workers",
+        "Hono",
+        "Wrangler",
+        "R2",
+        "KV",
+        "D1",
+        "Edge Functions",
+        "API Design",
+        "System Architecture",
+        "Testing"
       ]
     },
     "ai_ml_automation_tooling": {
       "label": "AI/ML, Automation & Tooling",
+      "kind": "hard",
       "keywords": [
         "AWS SageMaker",
         "AWS Bedrock",
@@ -164,9 +239,12 @@
         "TensorFlow",
         "PyTorch",
         "Scikit-learn",
-        "Pandas / NumPy",
-        "LSTM / Neural Networks",
-        "OpenCV / Image Processing",
+        "Pandas",
+        "NumPy",
+        "LSTM",
+        "Neural Networks",
+        "OpenCV",
+        "Image Processing",
         "Deep Learning",
         "MLOps",
         "LLM APIs",
@@ -179,11 +257,16 @@
         "AI Agent Frameworks",
         "SonarQube",
         "Jupyter Notebook",
-        "API Integration"
+        "API Integration",
+        "Prompt Engineering",
+        "Workflow Automation",
+        "Model Evaluation",
+        "Feature Engineering"
       ]
     },
     "delivery_leadership_collaboration": {
       "label": "Delivery, Leadership & Collaboration",
+      "kind": "soft",
       "keywords": [
         "Project Management",
         "Programme Management",
@@ -213,40 +296,72 @@
         "Teamwork",
         "Time Management",
         "Attention to Detail",
-        "Analytical Thinking"
+        "Analytical Thinking",
+        "Negotiation",
+        "Conflict Resolution",
+        "Decision Making",
+        "Presentation Skills",
+        "Facilitation",
+        "Coordination",
+        "Collaboration",
+        "Empathy"
       ]
     },
     "areas_of_interest": {
       "label": "Areas of Interest",
+      "kind": "mixed",
       "keywords": [
         "Full-Stack Development",
         "AI/ML Engineering",
         "DevOps & Cloud",
         "Open Source",
         "AI Agents & MCP",
-        "Game Development"
+        "Game Development",
+        "Data Engineering",
+        "Product Strategy",
+        "Digital Systems",
+        "Automation",
+        "Open Data",
+        "Knowledge Management"
       ]
     },
     "cs_fundamentals": {
       "label": "Computer Science Fundamentals",
+      "kind": "hard",
       "keywords": [
         "Data Structures & Algorithms",
         "Object-Oriented Programming",
         "Computer Networks",
         "Operating Systems",
         "Software Engineering",
-        "Database Management Systems"
+        "Database Management Systems",
+        "Concurrency",
+        "Version Control",
+        "Testing Principles",
+        "Design Patterns",
+        "Algorithms",
+        "Computational Thinking"
       ]
     },
     "soft_skills": {
       "label": "Professional Skills",
+      "kind": "soft",
       "keywords": [
         "Leadership",
         "Problem Solving",
         "Communication",
         "Teamwork",
         "Critical Thinking",
-        "Adaptability"
+        "Adaptability",
+        "Curiosity",
+        "Initiative",
+        "Reliability",
+        "Organisation",
+        "Resilience",
+        "Self-management",
+        "Accountability",
+        "Listening",
+        "Creativity"
       ]
     }
   }
