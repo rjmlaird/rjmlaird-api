@@ -1,4 +1,4 @@
-export type tools = {
+export type Tool = {
   slug: string;
   name: string;
   description: string;
@@ -11,7 +11,7 @@ export type tools = {
   image: string;
 };
 
-const tools = [
+export const tools: readonly Tool[] = [
   {
     slug: "hubspot",
     name: "HubSpot",
@@ -205,5 +205,3 @@ const tools = [
     image: "/logos/tools/google-analytics.png",
   },
 ] as const;
-
-export default tools;

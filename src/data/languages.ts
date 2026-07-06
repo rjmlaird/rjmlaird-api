@@ -1,4 +1,4 @@
-export type languages = {
+export type Language = {
   name: string;
   level: string;
   proficiency: number;
