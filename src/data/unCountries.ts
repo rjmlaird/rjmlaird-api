@@ -1,4 +1,4 @@
-export const UN_COUNTRIES = [
+export const unCountries = [
   "Afghanistan",
   "Albania",
   "Algeria",

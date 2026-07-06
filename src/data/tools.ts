@@ -1,4 +1,4 @@
-export type Tool = {
+export type tools = {
   slug: string;
   name: string;
   description: string;
