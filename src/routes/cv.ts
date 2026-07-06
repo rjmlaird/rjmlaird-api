@@ -1,9 +1,32 @@
 import { json } from "../lib/jsonResponse";
-import { storage } from "../services/storage";
 
-const CV_PREFIX = "cv";
+import achievements from "../data/achievements.json";
+import awards from "../data/awards.json";
+import certifications from "../data/certifications.json";
+import contact from "../data/contact.json";
+import credentials from "../data/credentials.json";
+import credly from "../data/credly.json";
+import education from "../data/education.json";
+import events from "../data/events.json";
+import eventsAttending from "../data/eventsAttending.json";
+import experience from "../data/experience.json";
+import initiatives from "../data/initiatives.json";
+import { languages } from "../data/languages";
+import memberships from "../data/memberships.json";
+import organisations from "../data/organisations.json";
+import personal from "../data/personal.json";
+import profile from "../data/profile.json";
+import projects from "../data/projects.json";
+import reviews from "../data/reviews.json";
+import services from "../data/services.json";
+import skills from "../data/skills.json";
+import socials from "../data/socials.json";
+import talks from "../data/talks.json";
+import teaching from "../data/teaching.json";
+import { tools } from "../data/tools";
+import { unCountries } from "../data/unCountries";
 
-type CvSection =
+export type CvCollection =
   | "achievements"
   | "awards"
   | "certifications"
@@ -11,6 +34,8 @@ type CvSection =
   | "credentials"
   | "credly"
   | "education"
+  | "events"
+  | "eventsAttending"
   | "experience"
   | "initiatives"
   | "languages"
@@ -26,8 +51,9 @@ type CvSection =
   | "talks"
   | "teaching"
   | "tools"
+  | "unCountries";
 
-const SECTION_KEYS: CvSection[] = [
+const SECTION_KEYS: CvCollection[] = [
   "achievements",
   "awards",
   "certifications",
@@ -35,6 +61,8 @@ const SECTION_KEYS: CvSection[] = [
   "credentials",
   "credly",
   "education",
+  "events",
+  "eventsAttending",
   "experience",
   "initiatives",
   "languages",
@@ -50,38 +78,43 @@ const SECTION_KEYS: CvSection[] = [
   "talks",
   "teaching",
   "tools",
+  "unCountries",
 ];
 
-type R2Item = {
-  key: string;
-  size?: number;
-  etag?: string;
-  uploaded?: string;
-  metadata?: Record<string, unknown>;
+const cvData: Record<CvCollection, unknown> = {
+  achievements,
+  awards,
+  certifications,
+  contact,
+  credentials,
+  credly,
+  education,
+  events,
+  eventsAttending,
+  experience,
+  initiatives,
+  languages,
+  memberships,
+  organisations,
+  personal,
+  profile,
+  projects,
+  reviews,
+  services,
+  skills,
+  socials,
+  talks,
+  teaching,
+  tools,
+  unCountries,
 };
 
-type CvRecord = {
-  id: string;
-  section: CvSection;
-  title?: string | null;
-  updatedAt?: string | null;
-  source?: string | null;
-  data: unknown;
-};
+function safeTrim(value: unknown) {
+  return typeof value === "string" ? value.trim() : "";
+}
 
-type CvEnv = Env & {
-  CV_PREFIX?: string;
-};
-
-function normalizeR2List(result: unknown): R2Item[] {
-  if (!result) return [];
-  if (Array.isArray(result)) return result as R2Item[];
-  if (typeof result === "object" && result !== null) {
-    const r = result as Record<string, unknown>;
-    if (Array.isArray(r.objects)) return r.objects as R2Item[];
-    if (Array.isArray(r.keys)) return r.keys as R2Item[];
-  }
-  return [];
+function isCollection(value: string): value is CvCollection {
+  return (SECTION_KEYS as string[]).includes(value);
 }
 
 function getRoute(request: Request) {
@@ -91,59 +124,7 @@ function getRoute(request: Request) {
   return { path, query, url };
 }
 
-function safeTrim(value: unknown) {
-  return typeof value === "string" ? value.trim() : "";
-}
-
-async function readJsonBody<T>(request: Request): Promise<T | null> {
-  const contentType = request.headers.get("content-type") ?? "";
-  if (!contentType.toLowerCase().includes("application/json")) return null;
-
-  try {
-    return (await request.json()) as T;
-  } catch {
-    return null;
-  }
-}
-
-async function listCvItems(env: CvEnv) {
-  const prefix = env.CV_PREFIX ?? CV_PREFIX;
-  const raw = await storage.r2.list(`${prefix}/`, env);
-  return normalizeR2List(raw);
-}
-
-async function readCvRecord(env: CvEnv, key: string): Promise<CvRecord | null> {
-  const obj = await storage.r2.get(key, env);
-  if (!obj?.body) return null;
-
-  const text = await new Response(obj.body).text();
-  if (!text) return null;
-
-  try {
-    return JSON.parse(text) as CvRecord;
-  } catch {
-    return null;
-  }
-}
-
-async function writeCvRecord(env: CvEnv, record: CvRecord) {
-  const prefix = env.CV_PREFIX ?? CV_PREFIX;
-  const key = `${prefix}/${record.section}.json`;
-  const bytes = new TextEncoder().encode(JSON.stringify(record));
-  await storage.r2.put(key, bytes, env, "application/json");
-  return key;
-}
-
-function isSection(value: string): value is CvSection {
-  return (SECTION_KEYS as string[]).includes(value);
-}
-
-function sectionFromPath(path: string): CvSection | null {
-  const cleaned = safeTrim(path).replace(/^section\//, "").replace(/\.json$/, "");
-  return isSection(cleaned) ? cleaned : null;
-}
-
-export async function handleCv(request: Request, env: CvEnv) {
+export async function handleCv(request: Request, _env: Env) {
   const method = request.method.toUpperCase();
   const { path, query } = getRoute(request);
 
@@ -154,37 +135,34 @@ export async function handleCv(request: Request, env: CvEnv) {
       sections: SECTION_KEYS,
       endpoints: [
         "/v1/cv",
+        "/v1/cv/sections",
         "/v1/cv/list",
         "/v1/cv/full",
         "/v1/cv/section/:section",
         "/v1/cv/search?q=",
-        "/v1/cv/ingest",
       ],
     });
   }
 
-  if (path === "list") {
-    const items = await listCvItems(env);
-
+  if (path === "sections") {
     return json({
-      count: items.length,
-      items: items.slice(0, 200),
+      sections: SECTION_KEYS,
+    });
+  }
+
+  if (path === "list") {
+    return json({
+      count: SECTION_KEYS.length,
+      items: SECTION_KEYS.map((section) => ({
+        section,
+        hasData: cvData[section] !== undefined,
+      })),
     });
   }
 
   if (path === "full") {
-    const items = await listCvItems(env);
-    const sections: Record<string, unknown> = {};
-
-    for (const item of items) {
-      const record = await readCvRecord(env, item.key);
-      if (!record) continue;
-      sections[record.section] = record.data;
-    }
-
     return json({
-      sectionCount: Object.keys(sections).length,
-      sections,
+      sections: cvData,
     });
   }
 
@@ -192,81 +170,43 @@ export async function handleCv(request: Request, env: CvEnv) {
     const q = safeTrim(query).toLowerCase();
     if (!q) return json({ error: "Missing ?q=" }, 400);
 
-    const items = await listCvItems(env);
-    const results: Array<{ key: string; size: number; record: CvRecord | null }> = [];
-
-    for (const item of items) {
-      const record = await readCvRecord(env, item.key);
-      const haystack = JSON.stringify({ key: item.key, record }).toLowerCase();
-      if (haystack.includes(q)) {
-        results.push({
-          key: item.key,
-          size: item.size ?? 0,
-          record,
-        });
-      }
-    }
+    const results = SECTION_KEYS.filter((section) =>
+      JSON.stringify(cvData[section]).toLowerCase().includes(q)
+    ).map((section) => ({
+      section,
+      data: cvData[section],
+    }));
 
     return json({
       query: q,
       count: results.length,
-      results: results.slice(0, 100),
+      results,
     });
   }
 
-  const section = sectionFromPath(path);
-  if (section && method === "GET") {
-    const key = `${env.CV_PREFIX ?? CV_PREFIX}/${section}.json`;
-    const record = await readCvRecord(env, key);
-
-    if (!record) {
-      return json({ error: "Not found", key }, 404);
-    }
-
-    return json({
-      key,
-      record,
-    });
-  }
-
-  if (path === "ingest" && method === "POST") {
-    const body = (await readJsonBody<Partial<CvRecord>>(request)) ?? {};
-    const sectionValue = safeTrim(body.section);
-
-    if (!isSection(sectionValue)) {
+  if (path.startsWith("section/")) {
+    const section = safeTrim(path.replace(/^section\//, ""));
+    if (!isCollection(section)) {
       return json(
         {
-          error: "Invalid or missing section",
+          error: "Not found",
+          section,
           allowed: SECTION_KEYS,
         },
-        400
+        404
       );
     }
 
-    const record: CvRecord = {
-      id: safeTrim(body.id) || sectionValue,
-      section: sectionValue,
-      title: body.title ?? null,
-      updatedAt: safeTrim(body.updatedAt) || new Date().toISOString(),
-      source: body.source ?? null,
-      data: body.data ?? null,
-    };
-
-    const key = await writeCvRecord(env, record);
-
-    return json(
-      {
-        status: "ingested",
-        key,
-        record,
-      },
-      201
-    );
+    return json({
+      section,
+      data: cvData[section],
+    });
   }
 
-  if (path === "sections") {
+  if (isCollection(path) && method === "GET") {
     return json({
-      sections: SECTION_KEYS,
+      section: path,
+      data: cvData[path],
     });
   }
 
@@ -281,7 +221,7 @@ export async function handleCv(request: Request, env: CvEnv) {
 }
 
 export default {
-  async fetch(request: Request, env: CvEnv, ctx: ExecutionContext) {
+  async fetch(request: Request, env: Env, _ctx: ExecutionContext) {
     const url = new URL(request.url);
 
     if (url.pathname.startsWith("/v1/cv")) {

@@ -3,7 +3,7 @@ import { json } from "./lib/jsonResponse";
 
 import { handleWebDAV } from "./routes/webdav";
 import { handleResearch } from "./routes/research";
-import { handleCv } from "./routes/cv";
+import { handleCv, type CvCollection } from "./routes/cv";
 
 import achievements from "./data/achievements.json";
 import awards from "./data/awards.json";
@@ -16,7 +16,7 @@ import events from "./data/events.json";
 import eventsAttending from "./data/eventsAttending.json";
 import experience from "./data/experience.json";
 import initiatives from "./data/initiatives.json";
-import languages from "./data/languages";
+import { languages } from "./data/languages";
 import memberships from "./data/memberships.json";
 import organisations from "./data/organisations.json";
 import personal from "./data/personal.json";
@@ -28,13 +28,12 @@ import skills from "./data/skills.json";
 import socials from "./data/socials.json";
 import talks from "./data/talks.json";
 import teaching from "./data/teaching.json";
-import tools from "./data/tools";
-import unCountries from "./data/unCountries";
-import type { CvCollection } from "./routes/cv";
+import { tools } from "./data/tools";
+import { unCountries } from "./data/unCountries";
 
 const app = new Hono<{ Bindings: Env }>();
 
-const cvData = {
+const cvData: Record<CvCollection, unknown> = {
   achievements,
   awards,
   certifications,
@@ -60,7 +59,7 @@ const cvData = {
   teaching,
   tools,
   unCountries,
-} satisfies Record<CvCollection, unknown>;
+};
 
 const cvCollections = Object.keys(cvData) as CvCollection[];
 
@@ -112,66 +111,42 @@ app.get("/openapi.json", (c) => {
         get: {
           tags: ["System"],
           summary: "Health check",
-          responses: {
-            "200": {
-              description: "API is running",
-            },
-          },
+          responses: { "200": { description: "API is running" } },
         },
       },
       "/v1/debug": {
         get: {
           tags: ["Debug"],
           summary: "Debug status",
-          responses: {
-            "200": {
-              description: "Debug information",
-            },
-          },
+          responses: { "200": { description: "Debug information" } },
         },
       },
       "/v1/cv": {
         get: {
           tags: ["CV"],
           summary: "CV API root",
-          responses: {
-            "200": {
-              description: "CV service info",
-            },
-          },
+          responses: { "200": { description: "CV service info" } },
         },
       },
       "/v1/cv/sections": {
         get: {
           tags: ["CV"],
           summary: "List CV sections",
-          responses: {
-            "200": {
-              description: "Supported CV sections",
-            },
-          },
+          responses: { "200": { description: "Supported CV sections" } },
         },
       },
       "/v1/cv/list": {
         get: {
           tags: ["CV"],
           summary: "List stored CV records",
-          responses: {
-            "200": {
-              description: "CV records",
-            },
-          },
+          responses: { "200": { description: "CV records" } },
         },
       },
       "/v1/cv/full": {
         get: {
           tags: ["CV"],
           summary: "Return merged CV payload",
-          responses: {
-            "200": {
-              description: "Merged CV data",
-            },
-          },
+          responses: { "200": { description: "Merged CV data" } },
         },
       },
       "/v1/cv/section/{section}": {
@@ -183,10 +158,7 @@ app.get("/openapi.json", (c) => {
               name: "section",
               in: "path",
               required: true,
-              schema: {
-                type: "string",
-                enum: cvCollections,
-              },
+              schema: { type: "string", enum: cvCollections },
               description: "Section name.",
             },
           ],
@@ -219,11 +191,7 @@ app.get("/openapi.json", (c) => {
         get: {
           tags: ["Research"],
           summary: "Research API root",
-          responses: {
-            "200": {
-              description: "Research service info",
-            },
-          },
+          responses: { "200": { description: "Research service info" } },
         },
       },
       "/v1/research/search": {
@@ -249,9 +217,7 @@ app.get("/openapi.json", (c) => {
         get: {
           tags: ["Research"],
           summary: "List papers",
-          responses: {
-            "200": { description: "Paper list" },
-          },
+          responses: { "200": { description: "Paper list" } },
         },
       },
       "/v1/research/paper/{id}": {
@@ -277,36 +243,28 @@ app.get("/openapi.json", (c) => {
         get: {
           tags: ["Research"],
           summary: "Paper graph",
-          responses: {
-            "200": { description: "Graph data" },
-          },
+          responses: { "200": { description: "Graph data" } },
         },
       },
       "/v1/research/timeline": {
         get: {
           tags: ["Research"],
           summary: "Paper timeline",
-          responses: {
-            "200": { description: "Timeline data" },
-          },
+          responses: { "200": { description: "Timeline data" } },
         },
       },
       "/v1/research/entities": {
         get: {
           tags: ["Research"],
           summary: "Extract entities",
-          responses: {
-            "200": { description: "Entity data" },
-          },
+          responses: { "200": { description: "Entity data" } },
         },
       },
       "/v1/research/export/zotero": {
         get: {
           tags: ["Research"],
           summary: "Export to Zotero format",
-          responses: {
-            "200": { description: "Export payload" },
-          },
+          responses: { "200": { description: "Export payload" } },
         },
       },
       "/v1/research/ingest": {
@@ -332,9 +290,7 @@ app.get("/openapi.json", (c) => {
               description: "WebDAV path.",
             },
           ],
-          responses: {
-            "200": { description: "WebDAV response" },
-          },
+          responses: { "200": { description: "WebDAV response" } },
         },
       },
       "/api/{collection}": {
@@ -348,10 +304,7 @@ app.get("/openapi.json", (c) => {
               name: "collection",
               in: "path",
               required: true,
-              schema: {
-                type: "string",
-                enum: cvCollections,
-              },
+              schema: { type: "string", enum: cvCollections },
               description: "The CV collection name.",
             },
           ],
