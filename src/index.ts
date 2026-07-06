@@ -1,42 +1,68 @@
 import { Hono } from "hono";
 import { json } from "./lib/jsonResponse";
-import { get } from "./lib/data";
 
 import { handleWebDAV } from "./routes/webdav";
 import { handleResearch } from "./routes/research";
 import { handleCv } from "./routes/cv";
 
+import achievements from "./data/achievements.json";
+import awards from "./data/awards.json";
+import certifications from "./data/certifications.json";
+import contact from "./data/contact.json";
+import credentials from "./data/credentials.json";
+import credly from "./data/credly.json";
+import education from "./data/education.json";
+import events from "./data/events.json";
+import eventsAttending from "./data/eventsAttending.json";
+import experience from "./data/experience.json";
+import initiatives from "./data/initiatives.json";
+import languages from "./data/languages";
+import memberships from "./data/memberships.json";
+import organisations from "./data/organisations.json";
+import personal from "./data/personal.json";
+import profile from "./data/profile.json";
+import projects from "./data/projects.json";
+import reviews from "./data/reviews.json";
+import services from "./data/services.json";
+import skills from "./data/skills.json";
+import socials from "./data/socials.json";
+import talks from "./data/talks.json";
+import teaching from "./data/teaching.json";
+import tools from "./data/tools";
+import unCountries from "./data/unCountries";
+import type { CvCollection } from "./routes/cv";
+
 const app = new Hono<{ Bindings: Env }>();
 
-const cvCollections = [
-  "achievements",
-  "awards",
-  "certifications",
-  "contact",
-  "credentials",
-  "credly",
-  "education",
-  "events",
-  "eventsAttending",
-  "experience",
-  "initiatives",
-  "languages",
-  "memberships",
-  "organisations",
-  "personal",
-  "profile",
-  "projects",
-  "reviews",
-  "services",
-  "skills",
-  "socials",
-  "talks",
-  "teaching",
-  "tools",
-  "unCountries",
-] as const;
+const cvData = {
+  achievements,
+  awards,
+  certifications,
+  contact,
+  credentials,
+  credly,
+  education,
+  events,
+  eventsAttending,
+  experience,
+  initiatives,
+  languages,
+  memberships,
+  organisations,
+  personal,
+  profile,
+  projects,
+  reviews,
+  services,
+  skills,
+  socials,
+  talks,
+  teaching,
+  tools,
+  unCountries,
+} satisfies Record<CvCollection, unknown>;
 
-type CvCollection = (typeof cvCollections)[number];
+const cvCollections = Object.keys(cvData) as CvCollection[];
 
 app.get("/health", (c) => {
   return c.json({
@@ -104,7 +130,6 @@ app.get("/openapi.json", (c) => {
           },
         },
       },
-
       "/v1/cv": {
         get: {
           tags: ["CV"],
@@ -149,6 +174,28 @@ app.get("/openapi.json", (c) => {
           },
         },
       },
+      "/v1/cv/section/{section}": {
+        get: {
+          tags: ["CV"],
+          summary: "Get one CV section",
+          parameters: [
+            {
+              name: "section",
+              in: "path",
+              required: true,
+              schema: {
+                type: "string",
+                enum: cvCollections,
+              },
+              description: "Section name.",
+            },
+          ],
+          responses: {
+            "200": { description: "Section record" },
+            "404": { description: "Not found" },
+          },
+        },
+      },
       "/v1/cv/search": {
         get: {
           tags: ["CV"],
@@ -168,39 +215,6 @@ app.get("/openapi.json", (c) => {
           },
         },
       },
-      "/v1/cv/section/{section}": {
-        get: {
-          tags: ["CV"],
-          summary: "Get one CV section",
-          parameters: [
-            {
-              name: "section",
-              in: "path",
-              required: true,
-              schema: {
-                type: "string",
-                enum: [...cvCollections],
-              },
-              description: "Section name.",
-            },
-          ],
-          responses: {
-            "200": { description: "Section record" },
-            "404": { description: "Not found" },
-          },
-        },
-      },
-      "/v1/cv/ingest": {
-        post: {
-          tags: ["CV"],
-          summary: "Ingest a CV section record",
-          responses: {
-            "201": { description: "Ingested" },
-            "400": { description: "Invalid section" },
-          },
-        },
-      },
-
       "/v1/research": {
         get: {
           tags: ["Research"],
@@ -305,7 +319,6 @@ app.get("/openapi.json", (c) => {
           },
         },
       },
-
       "/webdav/{path}": {
         get: {
           tags: ["WebDAV"],
@@ -324,7 +337,6 @@ app.get("/openapi.json", (c) => {
           },
         },
       },
-
       "/api/{collection}": {
         get: {
           tags: ["CV"],
@@ -338,7 +350,7 @@ app.get("/openapi.json", (c) => {
               required: true,
               schema: {
                 type: "string",
-                enum: [...cvCollections],
+                enum: cvCollections,
               },
               description: "The CV collection name.",
             },
@@ -426,18 +438,7 @@ app.get("/api/:collection", async (c) => {
     );
   }
 
-  try {
-    const data = await get(`${collection}.json`);
-    return json(data);
-  } catch {
-    return json(
-      {
-        error: "Collection not found",
-        collection,
-      },
-      404
-    );
-  }
+  return json(cvData[collection]);
 });
 
 export default app;
