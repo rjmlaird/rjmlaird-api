@@ -4,8 +4,39 @@ import { get } from "./lib/data";
 
 import { handleWebDAV } from "./routes/webdav";
 import { handleResearch } from "./routes/research";
+import { handleCv } from "./routes/cv";
 
 const app = new Hono<{ Bindings: Env }>();
+
+const cvCollections = [
+  "achievements",
+  "awards",
+  "certifications",
+  "contact",
+  "credentials",
+  "credly",
+  "education",
+  "events",
+  "eventsAttending",
+  "experience",
+  "initiatives",
+  "languages",
+  "memberships",
+  "organisations",
+  "personal",
+  "profile",
+  "projects",
+  "reviews",
+  "services",
+  "skills",
+  "socials",
+  "talks",
+  "teaching",
+  "tools",
+  "unCountries",
+] as const;
+
+type CvCollection = (typeof cvCollections)[number];
 
 app.get("/health", (c) => {
   return c.json({
@@ -73,6 +104,103 @@ app.get("/openapi.json", (c) => {
           },
         },
       },
+
+      "/v1/cv": {
+        get: {
+          tags: ["CV"],
+          summary: "CV API root",
+          responses: {
+            "200": {
+              description: "CV service info",
+            },
+          },
+        },
+      },
+      "/v1/cv/sections": {
+        get: {
+          tags: ["CV"],
+          summary: "List CV sections",
+          responses: {
+            "200": {
+              description: "Supported CV sections",
+            },
+          },
+        },
+      },
+      "/v1/cv/list": {
+        get: {
+          tags: ["CV"],
+          summary: "List stored CV records",
+          responses: {
+            "200": {
+              description: "CV records",
+            },
+          },
+        },
+      },
+      "/v1/cv/full": {
+        get: {
+          tags: ["CV"],
+          summary: "Return merged CV payload",
+          responses: {
+            "200": {
+              description: "Merged CV data",
+            },
+          },
+        },
+      },
+      "/v1/cv/search": {
+        get: {
+          tags: ["CV"],
+          summary: "Search CV records",
+          parameters: [
+            {
+              name: "q",
+              in: "query",
+              required: true,
+              schema: { type: "string" },
+              description: "Search term.",
+            },
+          ],
+          responses: {
+            "200": { description: "Search results" },
+            "400": { description: "Missing query" },
+          },
+        },
+      },
+      "/v1/cv/section/{section}": {
+        get: {
+          tags: ["CV"],
+          summary: "Get one CV section",
+          parameters: [
+            {
+              name: "section",
+              in: "path",
+              required: true,
+              schema: {
+                type: "string",
+                enum: [...cvCollections],
+              },
+              description: "Section name.",
+            },
+          ],
+          responses: {
+            "200": { description: "Section record" },
+            "404": { description: "Not found" },
+          },
+        },
+      },
+      "/v1/cv/ingest": {
+        post: {
+          tags: ["CV"],
+          summary: "Ingest a CV section record",
+          responses: {
+            "201": { description: "Ingested" },
+            "400": { description: "Invalid section" },
+          },
+        },
+      },
+
       "/v1/research": {
         get: {
           tags: ["Research"],
@@ -177,6 +305,7 @@ app.get("/openapi.json", (c) => {
           },
         },
       },
+
       "/webdav/{path}": {
         get: {
           tags: ["WebDAV"],
@@ -195,6 +324,7 @@ app.get("/openapi.json", (c) => {
           },
         },
       },
+
       "/api/{collection}": {
         get: {
           tags: ["CV"],
@@ -208,16 +338,7 @@ app.get("/openapi.json", (c) => {
               required: true,
               schema: {
                 type: "string",
-                enum: [
-                  "organisations",
-                  "profile",
-                  "projects",
-                  "skills",
-                  "memberships",
-                  "reviews",
-                  "experience",
-                  "education",
-                ],
+                enum: [...cvCollections],
               },
               description: "The CV collection name.",
             },
@@ -256,24 +377,54 @@ const researchHandler = async (c: any) => {
   }
 };
 
+const cvHandler = async (c: any) => {
+  try {
+    return await handleCv(c.req.raw, c.env);
+  } catch (err) {
+    console.error("CV API error:", err);
+    return c.json(
+      {
+        error: "CV internal error",
+        message: err instanceof Error ? err.message : String(err),
+      },
+      500
+    );
+  }
+};
+
 app.all("/webdav/*", webdavHandler);
 app.all("/v1/webdav/*", webdavHandler);
 
 app.all("/v1/research/*", researchHandler);
 app.all("/v1/research", researchHandler);
 
+app.all("/v1/cv/*", cvHandler);
+app.all("/v1/cv", cvHandler);
+
 app.get("/v1/debug", (c) => {
   return c.json({
     status: "ok",
     webdav: true,
     research: true,
+    cv: true,
     r2Bound: Boolean(c.env.R2),
     timestamp: new Date().toISOString(),
   });
 });
 
 app.get("/api/:collection", async (c) => {
-  const collection = c.req.param("collection");
+  const collection = c.req.param("collection") as CvCollection;
+
+  if (!cvCollections.includes(collection)) {
+    return json(
+      {
+        error: "Collection not found",
+        collection,
+        allowed: cvCollections,
+      },
+      404
+    );
+  }
 
   try {
     const data = await get(`${collection}.json`);
