@@ -7,8 +7,9 @@
   },
   "scripts": {
     "dev": "wrangler dev",
-    "deploy": "wrangler deploy",
+    "build": "tsc --noEmit",
     "check": "tsc --noEmit",
+    "deploy": "wrangler deploy",
     "cf-typegen": "wrangler types",
     "prepare": "wrangler types"
   },
