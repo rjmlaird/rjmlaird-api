@@ -1,28 +1,30 @@
 {
-  "skills": {
-    "strategy_marketing_growth": {
+  "domain_expertise": [
+    {
+      "id": "marketing_growth",
       "label": "Strategy, Marketing & Growth",
-      "kind": "mixed",
-      "keywords": [
-        "Digital Marketing Strategy",
+      "core": [
         "Marketing Strategy",
+        "Digital Marketing",
         "SEO",
         "Content Marketing",
-        "Social Media Strategy",
         "Brand Strategy",
-        "Lead Generation",
-        "Inbound Marketing",
-        "Campaign Planning",
+        "Go-to-Market Strategy",
         "B2B Marketing",
+        "Campaign Planning",
+        "Lead Generation",
+        "Positioning"
+      ],
+      "broader": [
+        "Social Media Strategy",
+        "Inbound Marketing",
         "Audience Development",
         "Conversion Optimisation",
         "Growth Strategy",
         "Data-Driven Marketing",
         "Sustainable Marketing",
         "Customer Journey Mapping",
-        "Positioning",
         "Market Research",
-        "Go-to-Market Strategy",
         "Product Marketing",
         "SEO Copywriting",
         "Email Marketing",
@@ -31,52 +33,52 @@
         "Community Growth"
       ]
     },
-    "communications_editorial_pr": {
+    {
+      "id": "comms_pr_editorial",
       "label": "Communications, PR & Editorial",
-      "kind": "mixed",
-      "keywords": [
+      "core": [
         "Strategic Communications",
         "Science Communication",
         "Technical Writing",
         "Public Relations",
         "Media Relations",
-        "Editorial Planning",
-        "Press Release Writing",
-        "Stakeholder Engagement",
-        "Corporate Communications",
-        "Event Communications",
-        "Webinar Production",
-        "Narrative Development",
-        "Content Strategy",
         "Copywriting",
         "Editing",
+        "Content Strategy"
+      ],
+      "broader": [
+        "Editorial Planning",
+        "Press Release Writing",
+        "Corporate & Stakeholder Communications",
+        "Internal Communications",
+        "Event Communications",
+        "Webinar Production",
+        "Storytelling & Narrative Development",
         "Proofreading",
         "Tone of Voice",
         "Speechwriting",
         "Reputation Management",
-        "Internal Communications",
-        "External Communications",
         "Message Development",
-        "Storytelling",
-        "Copy Editing",
         "Information Design"
       ]
     },
-    "space_climate_science": {
+    {
+      "id": "space_climate",
       "label": "Space, Astronomy & Climate",
-      "kind": "mixed",
-      "keywords": [
+      "core": [
         "Space Industry Communications",
         "Earth Observation",
-        "Satellite Applications",
-        "Space Policy Awareness",
         "ESA Business Applications",
         "Copernicus Programme",
+        "Satellite Applications",
+        "Climate Services from Space",
+        "Astronomy Communication"
+      ],
+      "broader": [
+        "Space Policy Awareness",
         "Space Outreach",
-        "Astronomy Communication",
         "Scientific Research Communication",
         "Space Innovation Ecosystems",
-        "Climate Services from Space",
         "Space Entrepreneurship",
         "Climate Tech Communication",
         "Environmental Communication",
@@ -93,276 +95,127 @@
         "Scientific Literacy"
       ]
     },
-    "data_analytics_research": {
+    {
+      "id": "data_analytics_research",
       "label": "Data, Analytics & Research",
-      "kind": "mixed",
-      "keywords": [
+      "core": [
         "Google Analytics 4 (GA4)",
-        "Matomo Analytics",
         "Data Visualisation",
-        "Performance Analytics",
         "Marketing Analytics",
         "KPI Tracking",
+        "Dashboard Reporting",
+        "Data Cleaning",
+        "Scientific Research",
+        "Literature Review"
+      ],
+      "broader": [
+        "Matomo Analytics",
+        "Performance Analytics",
         "User Behaviour Analysis",
         "A/B Testing",
-        "Dashboard Reporting",
         "SEO Analytics",
         "Campaign Measurement",
-        "Scientific Research",
         "Data Interpretation",
-        "Literature Review",
         "Observational Astronomy",
         "Academic Publishing",
-        "Peer-reviewed Research",
+        "Peer-Reviewed Research",
         "Quantitative Analysis",
         "Qualitative Analysis",
-        "Data Cleaning",
         "Data Modelling",
         "Statistical Analysis",
         "Research Design",
         "Survey Analysis",
         "Experiment Design"
       ]
-    },
-    "languages_programming": {
-      "label": "Languages & Programming",
-      "kind": "hard",
-      "keywords": [
-        "Python",
-        "JavaScript",
-        "TypeScript",
-        "C++",
-        "Java",
-        "SQL",
-        "HCL",
-        "C#",
-        "R",
-        "HTML",
-        "CSS",
-        "HTML/CSS",
-        "Fortran",
-        "IDL",
-        "MATLAB",
-        "Bash",
-        "Shell Scripting",
-        "LaTeX",
-        "Node.js",
-        "PHP",
-        "Ruby",
-        "Haskell"
-      ]
-    },
-    "frontend_ux": {
-      "label": "Frontend & UX",
-      "kind": "hard",
-      "keywords": [
-        "React",
-        "Next.js",
-        "Vite",
-        "Tailwind CSS",
-        "Three.js",
-        "Motion",
-        "Redux",
-        "Material-UI",
-        "Astro",
-        "WordPress",
-        "Drupal",
-        "Figma",
-        "Canva",
-        "UX Design",
-        "UI Design",
-        "Responsive Design",
-        "Information Architecture",
-        "Accessibility",
-        "Design Systems",
-        "Prototyping",
-        "Wireframing",
-        "User Flows",
-        "CMS Management",
-        "Content Modelling"
-      ]
-    },
-    "backend_cloud_devops": {
-      "label": "Backend, Cloud & DevOps",
-      "kind": "hard",
-      "keywords": [
-        "Node.js",
-        "Express.js",
-        "FastAPI",
-        "REST API",
-        "GraphQL",
-        "MongoDB",
-        "PostgreSQL",
-        "MySQL",
-        "Redis",
-        "SQLite",
-        "AWS (EC2, ECS, S3, Lambda, RDS, CloudFront)",
-        "AWS (CodePipeline, CodeBuild, CodeDeploy)",
-        "AWS (VPC, ALB, SNS, EventBridge, CloudWatch)",
-        "AWS (CloudFormation, X-Ray, Detective)",
-        "AWS (Organizations, SCPs, GuardDuty, Security Hub)",
-        "Terraform",
-        "Docker",
-        "Ansible",
-        "GitHub Actions",
-        "Jenkins",
-        "CI/CD Pipelines",
-        "Blue-Green Deployment",
-        "AWS CDK",
-        "AWS Step Functions",
-        "Infrastructure as Code",
-        "Linux",
-        "macOS",
-        "UNIX Systems",
-        "Git",
-        "VS Code",
-        "Postman",
-        "Cloudflare Workers",
-        "Hono",
-        "Wrangler",
-        "R2",
-        "KV",
-        "D1",
-        "Edge Functions",
-        "API Design",
-        "System Architecture",
-        "Testing"
-      ]
-    },
-    "ai_ml_automation_tooling": {
-      "label": "AI/ML, Automation & Tooling",
-      "kind": "hard",
-      "keywords": [
-        "AWS SageMaker",
-        "AWS Bedrock",
-        "Amazon Q",
-        "TensorFlow",
-        "PyTorch",
-        "Scikit-learn",
-        "Pandas",
-        "NumPy",
-        "LSTM",
-        "Neural Networks",
-        "OpenCV",
-        "Image Processing",
-        "Deep Learning",
-        "MLOps",
-        "LLM APIs",
-        "RAG Pipelines",
-        "Claude Code",
-        "Kiro",
-        "Cursor AI",
-        "GitHub Copilot",
-        "MCP Protocol",
-        "AI Agent Frameworks",
-        "SonarQube",
-        "Jupyter Notebook",
-        "API Integration",
-        "Prompt Engineering",
-        "Workflow Automation",
-        "Model Evaluation",
-        "Feature Engineering"
-      ]
-    },
-    "delivery_leadership_collaboration": {
-      "label": "Delivery, Leadership & Collaboration",
-      "kind": "soft",
-      "keywords": [
-        "Project Management",
-        "Programme Management",
-        "Agile Methodologies",
-        "Stakeholder Management",
-        "Cross-functional Teams",
-        "Workflow Optimisation",
-        "Risk Management",
-        "Sprint Planning",
-        "Roadmapping",
-        "OKR Planning",
-        "Resource Allocation",
-        "Team Leadership",
-        "Strategic Leadership",
-        "Organisational Development",
-        "Change Management",
-        "Partnership Development",
-        "Mentoring",
-        "Public Speaking",
-        "Workshop Facilitation",
-        "Community Building",
-        "Communication",
-        "Problem Solving",
-        "Critical Thinking",
-        "Creativity",
-        "Adaptability",
-        "Teamwork",
-        "Time Management",
-        "Attention to Detail",
-        "Analytical Thinking",
-        "Negotiation",
-        "Conflict Resolution",
-        "Decision Making",
-        "Presentation Skills",
-        "Facilitation",
-        "Coordination",
-        "Collaboration",
-        "Empathy"
-      ]
-    },
-    "areas_of_interest": {
-      "label": "Areas of Interest",
-      "kind": "mixed",
-      "keywords": [
-        "Full-Stack Development",
-        "AI/ML Engineering",
-        "DevOps & Cloud",
-        "Open Source",
-        "AI Agents & MCP",
-        "Game Development",
-        "Data Engineering",
-        "Product Strategy",
-        "Digital Systems",
-        "Automation",
-        "Open Data",
-        "Knowledge Management"
-      ]
-    },
-    "cs_fundamentals": {
-      "label": "Computer Science Fundamentals",
-      "kind": "hard",
-      "keywords": [
-        "Data Structures & Algorithms",
-        "Object-Oriented Programming",
-        "Computer Networks",
-        "Operating Systems",
-        "Software Engineering",
-        "Database Management Systems",
-        "Concurrency",
-        "Version Control",
-        "Testing Principles",
-        "Design Patterns",
-        "Algorithms",
-        "Computational Thinking"
-      ]
-    },
-    "soft_skills": {
-      "label": "Professional Skills",
-      "kind": "soft",
-      "keywords": [
-        "Leadership",
-        "Problem Solving",
-        "Communication",
-        "Teamwork",
-        "Critical Thinking",
-        "Adaptability",
-        "Curiosity",
-        "Initiative",
-        "Reliability",
-        "Organisation",
-        "Resilience",
-        "Self-management",
-        "Accountability",
-        "Listening",
-        "Creativity"
-      ]
     }
-  }
+  ],
+
+  "technical_skills": [
+    {
+      "id": "languages",
+      "label": "Languages & Programming",
+      "core": ["Python", "TypeScript", "JavaScript", "HTML/CSS", "SQL"],
+      "broader": ["C++", "Java", "C#", "R", "Bash / Shell Scripting", "LaTeX", "MATLAB", "IDL", "Fortran"]
+    },
+    {
+      "id": "frontend",
+      "label": "Frontend & UX",
+      "core": ["Astro", "Tailwind CSS", "React", "Vite"],
+      "broader": ["Next.js", "Three.js", "Redux", "Figma", "Canva", "UX/UI Design", "Responsive Design", "Information Architecture", "Accessibility", "Wireframing & Prototyping", "CMS Management (WordPress/Drupal)"]
+    },
+    {
+      "id": "backend_cloud",
+      "label": "Backend, Cloud & DevOps",
+      "core": ["Node.js", "REST API Design", "Cloudflare Workers", "Git", "GitHub Actions / CI/CD"],
+      "broader": ["Express.js", "FastAPI", "GraphQL", "PostgreSQL", "MongoDB", "Redis", "SQLite", "Docker", "Terraform", "Infrastructure as Code", "AWS (EC2, S3, Lambda, CloudFront, RDS)", "AWS (CodePipeline, CloudFormation, EventBridge)"]
+    },
+    {
+      "id": "ai_ml_automation",
+      "label": "AI/ML & Automation Tooling",
+      "core": ["Prompt Engineering", "LLM APIs", "Workflow Automation", "Claude Code", "GitHub Copilot"],
+      "broader": ["RAG Pipelines", "AI Agent Frameworks", "MCP Protocol", "TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "NumPy", "Jupyter Notebook", "Model Evaluation", "Feature Engineering"]
+    },
+    {
+      "id": "data_science_tools",
+      "label": "Scientific & Data Tooling",
+      "core": ["Pandas", "Skyfield", "OCR Pipelines", "Data Cleaning & Taxonomy Design"],
+      "broader": ["NumPy", "Streamlit"]
+    },
+    {
+      "id": "apis_integrations",
+      "label": "APIs & Integrations",
+      "core": ["Notion API", "HubSpot API", "GitHub API"],
+      "broader": ["Stripe API", "Zotero API", "Google APIs"]
+    },
+    {
+      "id": "cs_fundamentals",
+      "label": "Computer Science Fundamentals",
+      "core": ["Data Structures & Algorithms", "Object-Oriented Programming", "Version Control"],
+      "broader": ["Computer Networks", "Operating Systems", "Database Management Systems", "Design Patterns", "Testing Principles"]
+    }
+  ],
+
+  "practices": [
+    "Information Architecture & Content Modelling",
+    "Sustainable / Low-Carbon Digital Standards",
+    "Applied AI Workflows",
+    "Impact Measurement & SDG Frameworks"
+  ],
+
+  "leadership_and_collaboration": {
+    "label": "Leadership, Delivery & Collaboration",
+    "core": [
+      "Project & Programme Management",
+      "Stakeholder Management",
+      "Team Leadership",
+      "Agile Methodologies",
+      "Cross-Functional Collaboration",
+      "Public Speaking & Presentation"
+    ],
+    "broader": [
+      "Change Management",
+      "Roadmapping & OKR Planning",
+      "Risk Management",
+      "Partnership Development",
+      "Mentoring",
+      "Workshop Facilitation",
+      "Community Building",
+      "Negotiation",
+      "Conflict Resolution",
+      "Critical & Analytical Thinking",
+      "Adaptability",
+      "Attention to Detail"
+    ]
+  },
+
+  "areas_of_interest": [
+    "Full-Stack Development",
+    "AI/ML Engineering",
+    "AI Agents & MCP",
+    "Open Source",
+    "Data Engineering",
+    "Digital Systems & Automation",
+    "Open Data",
+    "Knowledge Management"
+  ]
 }

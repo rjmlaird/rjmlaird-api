@@ -3,103 +3,240 @@
     {
       "organisation": "Chartered Institute of Marketing (CIM)",
       "items": [
-        "Certificate in Professional Digital Marketing",
-        "Marketing Strategy Masterclass",
-        "Applied Marketing",
-        "Copywriting Masterclass",
-        "Planning Campaigns",
-        "Digital Marketing Techniques",
-        "Digital Copywriting for Websites",
-        "Marketing Fundamentals"
+        {
+          "name": "Certificate in Professional Digital Marketing",
+          "url": "https://docs.rjmlaird.co.uk/certifications/cim/certificate-in-professional-digital-marketing"
+        },
+        {
+          "name": "Marketing Strategy Masterclass",
+          "url": "https://docs.rjmlaird.co.uk/certifications/cim/marketing-strategy-masterclass"
+        },
+        {
+          "name": "Applied Marketing",
+          "url": "https://docs.rjmlaird.co.uk/certifications/cim/applied-marketing"
+        },
+        {
+          "name": "Copywriting Masterclass",
+          "url": "https://docs.rjmlaird.co.uk/certifications/cim/copywriting-masterclass"
+        },
+        {
+          "name": "Planning Campaigns",
+          "url": "https://docs.rjmlaird.co.uk/certifications/cim/planning-campaigns"
+        },
+        {
+          "name": "Digital Marketing Techniques",
+          "url": "https://docs.rjmlaird.co.uk/certifications/cim/digital-marketing-techniques"
+        },
+        {
+          "name": "Digital Copywriting for Websites",
+          "url": "https://docs.rjmlaird.co.uk/certifications/cim/digital-copywriting-for-websites"
+        },
+        {
+          "name": "Marketing Fundamentals",
+          "url": "https://docs.rjmlaird.co.uk/certifications/cim/marketing-fundamentals"
+        }
       ]
     },
     {
       "organisation": "Chartered Institute of Public Relations (CIPR)",
       "items": [
-        "Equity, Diversity and Inclusion: Series 1",
-        "Introduction to PR"
+        {
+          "name": "Equity, Diversity and Inclusion: Series 1",
+          "url": "https://docs.rjmlaird.co.uk/certifications/cipr/equity-diversity-inclusion-series-1"
+        },
+        {
+          "name": "Introduction to PR",
+          "url": "https://docs.rjmlaird.co.uk/certifications/cipr/introduction-to-pr"
+        }
       ]
     },
     {
       "organisation": "First Aid (UK)",
       "items": [
-        "First Aid",
-        "Emergency First Aid at Work"
+        {
+          "name": "First Aid",
+          "url": "https://docs.rjmlaird.co.uk/certifications/first-aid-uk/first-aid"
+        },
+        {
+          "name": "Emergency First Aid at Work",
+          "url": "https://docs.rjmlaird.co.uk/certifications/first-aid-uk/emergency-first-aid-at-work"
+        }
       ]
     },
     {
       "organisation": "Rebel Business School",
-      "url": "https://therebelschool.com",
       "items": [
-        "Level 1 Award in Enterprising Skills and Employability",
-        "Level 1 Award in Understanding Enterprise",
-        "Enterprise Design Thinking Practitioner",
-        "Enterprise Design Thinking Co-Creator"
+        {
+          "name": "Level 1 Award in Enterprising Skills and Employability",
+          "url": "https://docs.rjmlaird.co.uk/certifications/rebel-business-school/level-1-award-in-enterprising-skills-and-employability"
+        },
+        {
+          "name": "Level 1 Award in Understanding Enterprise",
+          "url": "https://docs.rjmlaird.co.uk/certifications/rebel-business-school/level-1-award-in-understanding-enterprise"
+        },
+        {
+          "name": "Enterprise Design Thinking Practitioner",
+          "url": "https://docs.rjmlaird.co.uk/certifications/rebel-business-school/enterprise-design-thinking-practitioner"
+        },
+        {
+          "name": "Enterprise Design Thinking Co-Creator",
+          "url": "https://docs.rjmlaird.co.uk/certifications/rebel-business-school/enterprise-design-thinking-co-creator"
+        }
       ]
     },
     {
       "organisation": "Association for Project Management (APM)",
       "items": [
-        "APM Associate",
-        "Project Management Training (Die Beratung Judith Andresen)"
+        {
+          "name": "APM Associate",
+          "url": "https://docs.rjmlaird.co.uk/certifications/apm/apm-associate"
+        },
+        {
+          "name": "Project Management Training (Die Beratung Judith Andresen)",
+          "url": "https://docs.rjmlaird.co.uk/certifications/apm/project-management-training-die-beratung-judith-andresen"
+        }
       ]
     },
     {
       "organisation": "Google",
       "items": [
-        "Google Analytics Certification",
-        "Fundamentals of Digital Marketing",
-        "Google News Initiative Training Center Certification"
+        {
+          "name": "Google Analytics Certification",
+          "url": "https://docs.rjmlaird.co.uk/certifications/google/google-analytics-certification"
+        },
+        {
+          "name": "Fundamentals of Digital Marketing",
+          "url": "https://docs.rjmlaird.co.uk/certifications/google/fundamentals-of-digital-marketing"
+        },
+        {
+          "name": "Google News Initiative Training Center Certification",
+          "url": "https://docs.rjmlaird.co.uk/certifications/google/google-news-initiative-training-center-certification"
+        }
       ]
     },
     {
       "organisation": "HubSpot Academy",
       "items": [
-        "Content Marketing",
-        "Inbound Marketing",
-        "Social Media Marketing"
+        {
+          "name": "Content Marketing",
+          "url": "https://docs.rjmlaird.co.uk/certifications/hubspot-academy/content-marketing"
+        },
+        {
+          "name": "Inbound Marketing",
+          "url": "https://docs.rjmlaird.co.uk/certifications/hubspot-academy/inbound-marketing"
+        },
+        {
+          "name": "Social Media Marketing",
+          "url": "https://docs.rjmlaird.co.uk/certifications/hubspot-academy/social-media-marketing"
+        }
       ]
     },
     {
       "organisation": "INCO Academy",
       "items": [
-        "Green Digital Skills Certificate"
+        {
+          "name": "Green Digital Skills Certificate",
+          "url": "https://docs.rjmlaird.co.uk/certifications/inco-academy/green-digital-skills-certificate"
+        }
       ]
     },
     {
       "organisation": "ISC2 (International Information System Security Certification Consortium)",
       "items": [
-        "Certified in Cybersecurity (CC)",
-        "Certified in Cybersecurity (CC) Self-Paced Training - 1M",
-        "Data Privacy & Protection: Compliance Requirements",
-        "Supply Chain Security Fundamentals",
-        "Introduction to Denial of Service Attacks",
-        "Open Systems Intelligence",
-        "Security in the IoT Ecosystem"
+        {
+          "name": "Certified in Cybersecurity (CC)",
+          "url": "https://docs.rjmlaird.co.uk/certifications/isc2/certified-in-cybersecurity-cc"
+        },
+        {
+          "name": "Certified in Cybersecurity (CC) Self-Paced Training - 1M",
+          "url": "https://docs.rjmlaird.co.uk/certifications/isc2/certified-in-cybersecurity-cc-self-paced-training-1m"
+        },
+        {
+          "name": "Data Privacy & Protection: Compliance Requirements",
+          "url": "https://docs.rjmlaird.co.uk/certifications/isc2/data-privacy-protection-compliance-requirements"
+        },
+        {
+          "name": "Supply Chain Security Fundamentals",
+          "url": "https://docs.rjmlaird.co.uk/certifications/isc2/supply-chain-security-fundamentals"
+        },
+        {
+          "name": "Introduction to Denial of Service Attacks",
+          "url": "https://docs.rjmlaird.co.uk/certifications/isc2/introduction-to-denial-of-service-attacks"
+        },
+        {
+          "name": "Open Systems Intelligence",
+          "url": "https://docs.rjmlaird.co.uk/certifications/isc2/open-systems-intelligence"
+        },
+        {
+          "name": "Security in the IoT Ecosystem",
+          "url": "https://docs.rjmlaird.co.uk/certifications/isc2/security-in-the-iot-ecosystem"
+        }
       ]
     },
     {
       "organisation": "LinkedIn Learning",
       "items": [
-        "Amplifying Your Message Through Storytelling",
-        "Communicate to Influence",
-        "Communicating Across Cultures",
-        "Agile Project Leadership",
-        "Leadership Foundations: Styles & Models",
-        "Building Resilience",
-        "Strategic Planning Foundations",
-        "Lean Technology Strategy",
-        "Video Strategies for High Engagement",
-        "5G Technology Strategy",
-        "Introduction to Digital Twins",
-        "Introduction to ESG",
-        "Satellite Internet & Communications"
+        {
+          "name": "Amplifying Your Message Through Storytelling",
+          "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/amplifying-your-message-through-storytelling"
+        },
+        {
+          "name": "Communicate to Influence",
+          "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/communicate-to-influence"
+        },
+        {
+          "name": "Communicating Across Cultures",
+          "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/communicating-across-cultures"
+        },
+        {
+          "name": "Agile Project Leadership",
+          "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/agile-project-leadership"
+        },
+        {
+          "name": "Leadership Foundations: Styles & Models",
+          "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/leadership-foundations-styles-and-models"
+        },
+        {
+          "name": "Building Resilience",
+          "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/building-resilience"
+        },
+        {
+          "name": "Strategic Planning Foundations",
+          "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/strategic-planning-foundations"
+        },
+        {
+          "name": "Lean Technology Strategy",
+          "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/lean-technology-strategy"
+        },
+        {
+          "name": "Video Strategies for High Engagement",
+          "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/video-strategies-for-high-engagement"
+        },
+        {
+          "name": "5G Technology Strategy",
+          "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/5g-technology-strategy"
+        },
+        {
+          "name": "Introduction to Digital Twins",
+          "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/introduction-to-digital-twins"
+        },
+        {
+          "name": "Introduction to ESG",
+          "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/introduction-to-esg"
+        },
+        {
+          "name": "Satellite Internet & Communications",
+          "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/satellite-internet-and-communications"
+        }
       ]
     },
     {
       "organisation": "The Open University",
       "items": [
-        "Effective Communication in the Workplace"
+        {
+          "name": "Effective Communication in the Workplace",
+          "url": "https://docs.rjmlaird.co.uk/certifications/the-open-university/effective-communication-in-the-workplace"
+        }
       ]
     }
   ]

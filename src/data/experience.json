@@ -1,13 +1,14 @@
   [
     {
       "id": "exp-green-orbit-founder",
-      "organisation": "green-orbit-digital",
+      "organisation": "Green Orbit Digital",
       "role": "Founder & Director",
       "employmentType": "Founder",
       "startDate": "2023-10",
       "endDate": null,
       "current": true,
-      "location": "Leicester, United Kingdom",
+      "city": "Leicester",
+      "country": "United Kingdom",
       "workMode": "Hybrid",
       "summary": "Founded and lead a specialist marketing agency helping organisations across the space sector integrate sustainability into brand strategy, communications and digital marketing.",
       "responsibilities": [
@@ -50,7 +51,8 @@
       "startDate": "2023-03",
       "endDate": "2023-10",
       "current": false,
-      "location": "United Kingdom",
+      "city": "Leicester",
+      "country": "United Kingdom",
       "workMode": "Remote",
       "summary": "Dedicated time to professional development following a personal bereavement, completing professional qualifications and specialist communications training.",
       "responsibilities": [
@@ -85,14 +87,15 @@
 
     {
       "id": "exp-he-space",
-      "organisation": "he-space",
+      "organisation": "HE Space for European Space Agency",
       "role": "Marketing & Communications Manager",
       "employmentType": "Contract",
       "startDate": "2021-08",
       "endDate": "2023-02",
       "current": false,
-      "location": "United Kingdom",
-      "workMode": "Remote",
+      "city": "Harwell",
+      "country": "United Kingdom",
+      "workMode": "Hybrid",
       "summary": "Managed marketing, editorial and stakeholder communications supporting ESA Business Applications and Space Solutions.",
       "responsibilities": [
         "Produced editorial content for ESA Business Applications communications.",
@@ -124,13 +127,14 @@
 
     {
       "id": "exp-freelance",
-      "organisation": "self-employed",
+      "organisation": "Self-Employed",
       "role": "Freelance Marketing & Communications Consultant",
       "employmentType": "Freelance",
       "startDate": "2018-07",
       "endDate": "2021-07",
       "current": false,
-      "location": "United Kingdom",
+      "city": "Leicester",
+      "country": "United Kingdom",
       "workMode": "Remote",
       "summary": "Delivered editorial, social media, training and communications projects for academic institutions, commercial organisations and European space programmes.",
       "responsibilities": [
@@ -161,13 +165,14 @@
 
     {
       "id": "exp-powering-space",
-      "organisation": "powering-space",
+      "organisation": "Powering Space C.I.C.",
       "role": "Co-Founder & Director",
       "employmentType": "Founder",
       "startDate": "2019-01",
       "endDate": "2022-12",
       "current": false,
-      "location": "Remote",
+      "city": "Leicester",
+      "country": "United Kingdom",
       "workMode": "Remote",
       "summary": "Co-founded an international network supporting space communicators through collaboration, events and professional development.",
       "responsibilities": [
@@ -197,13 +202,14 @@
     },
     {
       "id": "exp-rr-space",
-      "organisation": "rr-space",
+      "organisation": "R&R Space",
       "role": "Co-Founder & Director",
       "employmentType": "Founder",
       "startDate": "2018-01",
       "endDate": "2021-12",
       "current": false,
-      "location": "United Kingdom",
+      "city": "Leicester",
+      "country": "United Kingdom",
       "workMode": "Hybrid",
       "summary": "Co-founded a space sector outreach and training company focused on developing engagement programmes, events and skills development initiatives.",
       "responsibilities": [
@@ -234,13 +240,14 @@
 
     {
       "id": "exp-design-and-data",
-      "organisation": "design-and-data",
+      "organisation": "Design and Data",
       "role": "Editor",
       "employmentType": "Contract",
       "startDate": "2015-07",
       "endDate": "2021-07",
       "current": false,
-      "location": "Remote / Europe",
+      "city": "Cologne",
+      "country": "Germany",
       "workMode": "Remote",
       "summary": "Led editorial production and multimedia storytelling for space-related publications, including video scripts, interviews and digital content.",
       "responsibilities": [
@@ -270,14 +277,15 @@
 
     {
       "id": "exp-bloodhound-ssc",
-      "organisation": "bloodhound-ssc",
+      "organisation": "Bloodhound SSC",
       "role": "STEM Communicator",
       "employmentType": "Contract",
       "startDate": "2005-09",
       "endDate": "2009-07",
       "current": false,
-      "location": "United Kingdom",
-      "workMode": "On-site",
+      "city": "Bristol",
+      "country": "United Kingdom",
+      "workMode": "Hybrid",
       "summary": "Delivered STEM outreach programmes and educational content supporting engineering communication and public engagement initiatives.",
       "responsibilities": [
         "Created educational resources for the BLAST learning platform.",
@@ -305,13 +313,15 @@
 
     {
       "id": "exp-eso-intern",
-      "organisation": "eso",
+      "organisation": "European Southern Observatory",
+      "department": "Education and Public Outreach Department (ePOD)",
       "role": "Science Communication Intern",
       "employmentType": "Internship",
       "startDate": "2014-01",
       "endDate": "2014-06",
       "current": false,
-      "location": "Garching, Germany",
+      "city": "Munich",
+      "country": "Germany",
       "workMode": "On-site",
       "summary": "Supported science communication and outreach activities for the European Southern Observatory.",
       "responsibilities": [
@@ -340,14 +350,15 @@
 
     {
       "id": "exp-unawe-intern",
-      "organisation": "unawe",
+      "organisation": "Universe Awareness",
       "role": "Intern (Space Scoop)",
       "employmentType": "Internship",
       "startDate": "2013-10",
       "endDate": "2014-01",
       "current": false,
-      "location": "Leiden, Netherlands",
-      "workMode": "Remote",
+      "city": "Leiden",
+      "country": "Netherlands",
+      "workMode": "On-site",
       "summary": "Worked on expanding distribution and accessibility of children's astronomy communication content.",
       "responsibilities": [
         "Researched content syndication strategies for youth science communication.",
@@ -374,14 +385,15 @@
     },
     {
       "id": "exp-sgac-intern",
-      "organisation": "sgac",
+      "organisation": "Space Generation Advisory Council (SGAC)",
       "role": "Intern",
       "employmentType": "Internship",
       "startDate": "2013-01",
       "endDate": "2013-04",
       "current": false,
-      "location": "International",
-      "workMode": "Remote",
+      "city": "Vienna",
+      "country": "Austria",
+      "workMode": "On-site",
       "summary": "Supported operations, reporting, and policy engagement activities within a global space policy organisation.",
       "responsibilities": [
         "Contributed to organisational reporting and programme support.",
@@ -409,13 +421,15 @@
 
     {
       "id": "exp-university-kent-demonstrator",
-      "organisation": "university-of-kent",
+      "organisation": "University of Kent",
+      "department": "School of Physical Sciences",
       "role": "Postgraduate Demonstrator",
       "employmentType": "Academic",
       "startDate": "2009-09",
       "endDate": "2012-07",
       "current": false,
-      "location": "Canterbury, United Kingdom",
+      "city": "Canterbury",
+      "country": "United Kingdom",
       "workMode": "On-site",
       "summary": "Delivered undergraduate teaching and academic support across physics modules.",
       "responsibilities": [
@@ -444,13 +458,14 @@
 
     {
       "id": "exp-sepnet-outreach",
-      "organisation": "sepnet",
+      "organisation": "South-East Physics Network (SEPnet)",
       "role": "Outreach Support",
       "employmentType": "Contract",
       "startDate": "2009-09",
       "endDate": "2012-07",
       "current": false,
-      "location": "United Kingdom",
+      "city": "Canterbury",
+      "country": "United Kingdom",
       "workMode": "On-site",
       "summary": "Delivered physics outreach activities and public engagement events across schools and institutions.",
       "responsibilities": [
@@ -479,13 +494,15 @@
 
     {
       "id": "exp-uol-space-research-tech",
-      "organisation": "space-research-centre-uol",
+      "organisation": "University of Leicester",
+      "department": "Space Research Centre",
       "role": "Technician",
       "employmentType": "Academic",
       "startDate": "2009-09",
       "endDate": "2012-07",
       "current": false,
-      "location": "Leicester, United Kingdom",
+      "city": "Leicester",
+      "country": "United Kingdom",
       "workMode": "On-site",
       "summary": "Supported satellite instrumentation research and calibration data analysis.",
       "responsibilities": [
@@ -514,13 +531,14 @@
 
     {
       "id": "exp-brockington-college-student-associate",
-      "organisation": "brockington-college",
+      "organisation": "Brockington College",
       "role": "Student Associate",
       "employmentType": "Placement",
       "startDate": "2008-06",
       "endDate": "2008-07",
       "current": false,
-      "location": "Leicestershire, United Kingdom",
+      "city": "Leicester",
+      "country": "United Kingdom",
       "workMode": "On-site",
       "summary": "Supported science education delivery for secondary school students through classroom and lab-based activities.",
       "responsibilities": [
@@ -548,13 +566,15 @@
 
     {
       "id": "exp-uol-physics-summer-research",
-      "organisation": "physics-and-astronomy-uol",
+      "organisation": "University of Leicester",
+      "department": "Department of Physics and Astronomy",
       "role": "Technician (Summer Research)",
       "employmentType": "Research Placement",
       "startDate": "2008-06",
       "endDate": "2008-07",
       "current": false,
-      "location": "Leicester, United Kingdom",
+      "city": "Leicester",
+      "country": "United Kingdom",
       "workMode": "On-site",
       "summary": "Conducted undergraduate research in astrophysics focusing on spectral analysis of white dwarf systems.",
       "responsibilities": [
