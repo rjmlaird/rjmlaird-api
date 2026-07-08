@@ -7,7 +7,6 @@ import education from "../data/education.json";
 import experience from "../data/experience.json";
 import { languages } from "../data/languages";
 import memberships from "../data/memberships.json";
-import organisations from "../data/organisations.json";
 import profile from "../data/profile.json";
 import skills from "../data/skills.json";
 import teaching from "../data/teaching.json";
@@ -21,7 +20,6 @@ export type CvCollection =
   | "experience"
   | "languages"
   | "memberships"
-  | "organisations"
   | "profile"
   | "skills"
   | "teaching"
@@ -35,7 +33,6 @@ const SECTION_KEYS = [
   "experience",
   "languages",
   "memberships",
-  "organisations",
   "profile",
   "skills",
   "teaching",
@@ -50,7 +47,6 @@ const cvData = {
   experience,
   languages,
   memberships,
-  organisations,
   profile,
   skills,
   teaching,
