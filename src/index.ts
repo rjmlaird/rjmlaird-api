@@ -20,6 +20,7 @@ import profile from "./data/profile.json";
 import skills from "./data/skills.json";
 import teaching from "./data/teaching.json";
 import { tools } from "./data/tools";
+import volunteering from "./data/volunteering.json";
 
 const app = new Hono<{ Bindings: Env }>();
 
@@ -35,6 +36,7 @@ const cvData = {
   skills,
   teaching,
   tools,
+  volunteering,
 } satisfies Record<CvCollection, unknown>;
 
 const cvCollections = [
@@ -49,6 +51,7 @@ const cvCollections = [
   "skills",
   "teaching",
   "tools",
+  "volunteering",
 ] as const satisfies readonly CvCollection[];
 
 const webdavHandler = async (c: any) => {
