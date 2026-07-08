@@ -4,6 +4,8 @@ import { json } from "./lib/jsonResponse";
 import { handleWebDAV } from "./routes/webdav";
 import { handleResearch } from "./routes/research";
 import { handleCv, type CvCollection } from "./routes/cv";
+import { handlePortfolio, type PortfolioCollection } from "./routes/portfolio";
+import { handleContact, type ContactCollection } from "./routes/contact";
 
 import achievements from "./data/achievements.json";
 import awards from "./data/awards.json";
@@ -89,6 +91,19 @@ const cvCollections = [
   "unCountries",
 ] as const satisfies readonly CvCollection[];
 
+const portfolioCollections = [
+  "articles",
+  "initiatives",
+  "projects",
+  "research",
+  "services",
+  "talks",
+  "teaching",
+  "reviews",
+] as const satisfies readonly PortfolioCollection[];
+
+const contactCollections = ["contact", "socials"] as const satisfies readonly ContactCollection[];
+
 app.get("/health", (c) => {
   return c.json({
     status: "ok",
@@ -103,13 +118,15 @@ app.get("/openapi.json", (c) => {
     info: {
       title: "rjmlaird API",
       version: "1.0.0",
-      description: "GitHub-powered CV + research + WebDAV API",
+      description: "GitHub-powered CV + portfolio + contact + research + WebDAV API",
     },
     servers: [{ url: "https://api.rjmlaird.co.uk" }],
     tags: [
       { name: "System", description: "Health and API metadata" },
       { name: "Debug", description: "Debug endpoints" },
       { name: "CV", description: "Profile, organisations, projects, skills, and other CV collections" },
+      { name: "Portfolio", description: "Articles, research, projects, initiatives, and related portfolio collections" },
+      { name: "Contact", description: "Contact details and social profiles" },
       { name: "Research", description: "Research API endpoints" },
       { name: "WebDAV", description: "WebDAV access" },
     ],
@@ -191,6 +208,119 @@ app.get("/openapi.json", (c) => {
           responses: {
             "200": { description: "Search results" },
             "400": { description: "Missing query" },
+          },
+        },
+      },
+      "/v1/portfolio": {
+        get: {
+          tags: ["Portfolio"],
+          summary: "Portfolio API root",
+          responses: { "200": { description: "Portfolio service info" } },
+        },
+      },
+      "/v1/portfolio/sections": {
+        get: {
+          tags: ["Portfolio"],
+          summary: "List portfolio sections",
+          responses: { "200": { description: "Supported portfolio sections" } },
+        },
+      },
+      "/v1/portfolio/list": {
+        get: {
+          tags: ["Portfolio"],
+          summary: "List stored portfolio records",
+          responses: { "200": { description: "Portfolio records" } },
+        },
+      },
+      "/v1/portfolio/full": {
+        get: {
+          tags: ["Portfolio"],
+          summary: "Return merged portfolio payload",
+          responses: { "200": { description: "Merged portfolio data" } },
+        },
+      },
+      "/v1/portfolio/section/{section}": {
+        get: {
+          tags: ["Portfolio"],
+          summary: "Get one portfolio section",
+          parameters: [
+            {
+              name: "section",
+              in: "path",
+              required: true,
+              schema: { type: "string", enum: portfolioCollections },
+              description: "Portfolio section name.",
+            },
+          ],
+          responses: {
+            "200": { description: "Section record" },
+            "404": { description: "Not found" },
+          },
+        },
+      },
+      "/v1/portfolio/search": {
+        get: {
+          tags: ["Portfolio"],
+          summary: "Search portfolio records",
+          parameters: [
+            {
+              name: "q",
+              in: "query",
+              required: true,
+              schema: { type: "string" },
+              description: "Search term.",
+            },
+          ],
+          responses: {
+            "200": { description: "Search results" },
+            "400": { description: "Missing query" },
+          },
+        },
+      },
+      "/v1/contact": {
+        get: {
+          tags: ["Contact"],
+          summary: "Contact API root",
+          responses: { "200": { description: "Contact service info" } },
+        },
+      },
+      "/v1/contact/sections": {
+        get: {
+          tags: ["Contact"],
+          summary: "List contact sections",
+          responses: { "200": { description: "Supported contact sections" } },
+        },
+      },
+      "/v1/contact/list": {
+        get: {
+          tags: ["Contact"],
+          summary: "List stored contact records",
+          responses: { "200": { description: "Contact records" } },
+        },
+      },
+      "/v1/contact/full": {
+        get: {
+          tags: ["Contact"],
+          summary: "Return merged contact payload",
+          responses: { "200": { description: "Merged contact data" } },
+        },
+      },
+      "/v1/contact/section/{section}": {
+        get: {
+          tags: ["Contact"],
+          summary: "Get one contact section",
+          parameters: [
+            {
+              name: "section",
+              in: "path",
+              required: true,
+              schema: { type: "string", enum: contactCollections },
+              description: "Contact section name.",
+            },
+          ],
+          responses: {
+            "200": { description: "Section record" },
+            "404": { description: "Not found" },
           },
         },
       },
@@ -364,6 +494,36 @@ const cvHandler = async (c: any) => {
   }
 };
 
+const portfolioHandler = async (c: any) => {
+  try {
+    return await handlePortfolio(c.req.raw, c.env);
+  } catch (err) {
+    console.error("Portfolio API error:", err);
+    return c.json(
+      {
+        error: "Portfolio internal error",
+        message: err instanceof Error ? err.message : String(err),
+      },
+      500
+    );
+  }
+};
+
+const contactHandler = async (c: any) => {
+  try {
+    return await handleContact(c.req.raw, c.env);
+  } catch (err) {
+    console.error("Contact API error:", err);
+    return c.json(
+      {
+        error: "Contact internal error",
+        message: err instanceof Error ? err.message : String(err),
+      },
+      500
+    );
+  }
+};
+
 app.all("/webdav/*", webdavHandler);
 app.all("/v1/webdav/*", webdavHandler);
 
@@ -373,12 +533,20 @@ app.all("/v1/research", researchHandler);
 app.all("/v1/cv/*", cvHandler);
 app.all("/v1/cv", cvHandler);
 
+app.all("/v1/portfolio/*", portfolioHandler);
+app.all("/v1/portfolio", portfolioHandler);
+
+app.all("/v1/contact/*", contactHandler);
+app.all("/v1/contact", contactHandler);
+
 app.get("/v1/debug", (c) => {
   return c.json({
     status: "ok",
     webdav: true,
     research: true,
     cv: true,
+    portfolio: true,
+    contact: true,
     r2Bound: Boolean(c.env.R2),
     timestamp: new Date().toISOString(),
   });

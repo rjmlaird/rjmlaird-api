@@ -1,93 +1,78 @@
 import type { APIRoute } from "astro";
 import { json } from "../lib/jsonResponse";
 
-import awards from "../data/awards.json";
-import certifications from "../data/certifications.json";
-import education from "../data/education.json";
-import experience from "../data/experience.json";
-import { languages } from "../data/languages";
-import memberships from "../data/memberships.json";
-import organisations from "../data/organisations.json";
-import profile from "../data/profile.json";
-import skills from "../data/skills.json";
+import articles from "../data/articles.json";
+import initiatives from "../data/initiatives.json";
+import projects from "../data/projects.json";
+import research from "../data/research.json";
+import services from "../data/services.json";
+import talks from "../data/talks.json";
 import teaching from "../data/teaching.json";
-import { tools } from "../data/tools";
+import reviews from "../data/reviews.json";
 
-export type CvCollection =
-  | "awards"
-  | "certifications"
-  | "credly"
-  | "education"
-  | "experience"
-  | "languages"
-  | "memberships"
-  | "organisations"
-  | "profile"
-  | "skills"
+export type PortfolioCollection =
+  | "articles"
+  | "initiatives"
+  | "projects"
+  | "research"
+  | "services"
+  | "talks"
   | "teaching"
-  | "tools";
+  | "reviews";
 
 const SECTION_KEYS = [
-  "awards",
-  "certifications",
-  "credly",
-  "education",
-  "experience",
-  "languages",
-  "memberships",
-  "organisations",
-  "profile",
-  "skills",
+  "articles",
+  "initiatives",
+  "projects",
+  "research",
+  "services",
+  "talks",
   "teaching",
-  "tools",
-] as const satisfies readonly CvCollection[];
+  "reviews",
+] as const satisfies readonly PortfolioCollection[];
 
-const cvData = {
-  awards,
-  certifications,
-  credly: [],
-  education,
-  experience,
-  languages,
-  memberships,
-  organisations,
-  profile,
-  skills,
+const portfolioData = {
+  articles,
+  initiatives,
+  projects,
+  research,
+  services,
+  talks,
   teaching,
-  tools,
-} satisfies Record<CvCollection, unknown>;
+  reviews,
+} satisfies Record<PortfolioCollection, unknown>;
 
 function safeTrim(value: unknown) {
   return typeof value === "string" ? value.trim() : "";
 }
 
-function isCollection(value: string): value is CvCollection {
+function isCollection(value: string): value is PortfolioCollection {
   return (SECTION_KEYS as readonly string[]).includes(value);
 }
 
 function getRoute(request: Request) {
   const url = new URL(request.url);
-  const path = url.pathname.replace(/^\/v1\/cv\/?/, "");
+  const path = url.pathname.replace(/^\/v1\/portfolio\/?/, "");
   const query = url.searchParams.get("q");
   return { path, query, url };
 }
 
-export async function handleCv(request: Request, _env: Env) {
+export async function handlePortfolio(request: Request, _env: Env) {
   const method = request.method.toUpperCase();
   const { path, query } = getRoute(request);
 
   if (!path) {
     return json({
-      service: "cv",
+      service: "portfolio",
       version: "1.0",
       sections: SECTION_KEYS,
       endpoints: [
-        "/v1/cv",
-        "/v1/cv/sections",
-        "/v1/cv/list",
-        "/v1/cv/full",
-        "/v1/cv/section/:section",
-        "/v1/cv/search?q=",
+        "/v1/portfolio",
+        "/v1/portfolio/sections",
+        "/v1/portfolio/list",
+        "/v1/portfolio/full",
+        "/v1/portfolio/section/:section",
+        "/v1/portfolio/search?q=",
       ],
     });
   }
@@ -101,13 +86,13 @@ export async function handleCv(request: Request, _env: Env) {
       count: SECTION_KEYS.length,
       items: SECTION_KEYS.map((section) => ({
         section,
-        hasData: cvData[section] !== undefined,
+        hasData: portfolioData[section] !== undefined,
       })),
     });
   }
 
   if (path === "full") {
-    return json({ sections: cvData });
+    return json({ sections: portfolioData });
   }
 
   if (path === "search") {
@@ -115,10 +100,10 @@ export async function handleCv(request: Request, _env: Env) {
     if (!q) return json({ error: "Missing ?q=" }, 400);
 
     const results = SECTION_KEYS.filter((section) =>
-      JSON.stringify(cvData[section]).toLowerCase().includes(q)
+      JSON.stringify(portfolioData[section]).toLowerCase().includes(q)
     ).map((section) => ({
       section,
-      data: cvData[section],
+      data: portfolioData[section],
     }));
 
     return json({
@@ -143,14 +128,14 @@ export async function handleCv(request: Request, _env: Env) {
 
     return json({
       section,
-      data: cvData[section],
+      data: portfolioData[section],
     });
   }
 
   if (isCollection(path) && method === "GET") {
     return json({
       section: path,
-      data: cvData[path],
+      data: portfolioData[path],
     });
   }
 
@@ -165,5 +150,5 @@ export async function handleCv(request: Request, _env: Env) {
 }
 
 export const GET: APIRoute = async ({ request, locals }) => {
-  return handleCv(request, locals as Env);
+  return handlePortfolio(request, locals as Env);
 };
