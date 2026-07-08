@@ -1,39 +1,25 @@
 import { json } from "../lib/jsonResponse";
-import articles from "../data/articles.json";
+
 import initiatives from "../data/initiatives.json";
-import projects from "../data/projects.json";
-import research from "../data/research.json";
-import services from "../data/services.json";
-import teaching from "../data/teaching.json";
 import reviews from "../data/reviews.json";
+import teaching from "../data/teaching.json";
 
 export type PortfolioCollection =
-  | "articles"
   | "initiatives"
-  | "projects"
-  | "research"
-  | "services"
-  | "teaching"
-  | "reviews";
+  | "reviews"
+  | "teaching";
 
 const SECTION_KEYS = [
-  "articles",
   "initiatives",
-  "projects",
-  "research",
-  "services",
-  "teaching",
   "reviews",
+  "teaching",
 ] as const satisfies readonly PortfolioCollection[];
 
 const portfolioData = {
-  articles,
   initiatives,
-  projects,
-  research,
+  reviews,
   services,
   teaching,
-  reviews,
 } satisfies Record<PortfolioCollection, unknown>;
 
 function safeTrim(value: unknown) {
@@ -71,9 +57,7 @@ export async function handlePortfolio(request: Request, _env: Env) {
     });
   }
 
-  if (path === "sections") {
-    return json({ sections: SECTION_KEYS });
-  }
+  if (path === "sections") return json({ sections: SECTION_KEYS });
 
   if (path === "list") {
     return json({
@@ -85,9 +69,7 @@ export async function handlePortfolio(request: Request, _env: Env) {
     });
   }
 
-  if (path === "full") {
-    return json({ sections: portfolioData });
-  }
+  if (path === "full") return json({ sections: portfolioData });
 
   if (path === "search") {
     const q = safeTrim(query).toLowerCase();
@@ -95,50 +77,23 @@ export async function handlePortfolio(request: Request, _env: Env) {
 
     const results = SECTION_KEYS.filter((section) =>
       JSON.stringify(portfolioData[section]).toLowerCase().includes(q)
-    ).map((section) => ({
-      section,
-      data: portfolioData[section],
-    }));
+    ).map((section) => ({ section, data: portfolioData[section] }));
 
-    return json({
-      query: q,
-      count: results.length,
-      results,
-    });
+    return json({ query: q, count: results.length, results });
   }
 
   if (path.startsWith("section/")) {
     const section = safeTrim(path.replace(/^section\//, ""));
     if (!isCollection(section)) {
-      return json(
-        {
-          error: "Not found",
-          section,
-          allowed: SECTION_KEYS,
-        },
-        404
-      );
+      return json({ error: "Not found", section, allowed: SECTION_KEYS }, 404);
     }
 
-    return json({
-      section,
-      data: portfolioData[section],
-    });
+    return json({ section, data: portfolioData[section] });
   }
 
   if (isCollection(path) && method === "GET") {
-    return json({
-      section: path,
-      data: portfolioData[path],
-    });
+    return json({ section: path, data: portfolioData[path] });
   }
 
-  return json(
-    {
-      error: "Not found",
-      path,
-      method,
-    },
-    404
-  );
+  return json({ error: "Not found", path, method }, 404);
 }

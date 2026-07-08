@@ -1,8 +1,8 @@
-import type { APIRoute } from "astro";
 import { json } from "../lib/jsonResponse";
 
 import awards from "../data/awards.json";
 import certifications from "../data/certifications.json";
+import credly from "../data/credly.json";
 import education from "../data/education.json";
 import experience from "../data/experience.json";
 import { languages } from "../data/languages";
@@ -42,7 +42,7 @@ const SECTION_KEYS = [
 const cvData = {
   awards,
   certifications,
-  credly: [],
+  credly,
   education,
   experience,
   languages,
@@ -65,7 +65,7 @@ function getRoute(request: Request) {
   const url = new URL(request.url);
   const path = url.pathname.replace(/^\/v1\/cv\/?/, "");
   const query = url.searchParams.get("q");
-  return { path, query, url };
+  return { path, query };
 }
 
 export async function handleCv(request: Request, _env: Env) {
@@ -88,9 +88,7 @@ export async function handleCv(request: Request, _env: Env) {
     });
   }
 
-  if (path === "sections") {
-    return json({ sections: SECTION_KEYS });
-  }
+  if (path === "sections") return json({ sections: SECTION_KEYS });
 
   if (path === "list") {
     return json({
@@ -102,9 +100,7 @@ export async function handleCv(request: Request, _env: Env) {
     });
   }
 
-  if (path === "full") {
-    return json({ sections: cvData });
-  }
+  if (path === "full") return json({ sections: cvData });
 
   if (path === "search") {
     const q = safeTrim(query).toLowerCase();
@@ -112,54 +108,23 @@ export async function handleCv(request: Request, _env: Env) {
 
     const results = SECTION_KEYS.filter((section) =>
       JSON.stringify(cvData[section]).toLowerCase().includes(q)
-    ).map((section) => ({
-      section,
-      data: cvData[section],
-    }));
+    ).map((section) => ({ section, data: cvData[section] }));
 
-    return json({
-      query: q,
-      count: results.length,
-      results,
-    });
+    return json({ query: q, count: results.length, results });
   }
 
   if (path.startsWith("section/")) {
     const section = safeTrim(path.replace(/^section\//, ""));
     if (!isCollection(section)) {
-      return json(
-        {
-          error: "Not found",
-          section,
-          allowed: SECTION_KEYS,
-        },
-        404
-      );
+      return json({ error: "Not found", section, allowed: SECTION_KEYS }, 404);
     }
 
-    return json({
-      section,
-      data: cvData[section],
-    });
+    return json({ section, data: cvData[section] });
   }
 
   if (isCollection(path) && method === "GET") {
-    return json({
-      section: path,
-      data: cvData[path],
-    });
+    return json({ section: path, data: cvData[path] });
   }
 
-  return json(
-    {
-      error: "Not found",
-      path,
-      method,
-    },
-    404
-  );
+  return json({ error: "Not found", path, method }, 404);
 }
-
-export const GET: APIRoute = async ({ request, locals }) => {
-  return handleCv(request, locals as Env);
-};
