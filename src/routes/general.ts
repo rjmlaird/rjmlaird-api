@@ -5,12 +5,12 @@ import { unCountries } from "../data/unCountries";
 
 export type GeneralCollection = "organisations" | "unCountries";
 
-const SECTION_KEYS = ["organisations", "unCountries"] as const;
+const SECTION_KEYS = ["organisations", "unCountries"] as const satisfies readonly GeneralCollection[];
 
 const generalData = {
   organisations,
   unCountries,
-};
+} satisfies Record<GeneralCollection, unknown>;
 
 function safeTrim(value: unknown) {
   return typeof value === "string" ? value.trim() : "";

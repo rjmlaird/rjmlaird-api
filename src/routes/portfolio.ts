@@ -1,14 +1,11 @@
-import type { APIRoute } from "astro";
-import { json } from "./lib/jsonResponse";
-
-import articles from "./data/articles.json";
-import initiatives from "./data/initiatives.json";
-import projects from "./data/projects.json";
-import research from "./data/research.json";
-import services from "./data/services.json";
-import talks from "./data/talks.json";
-import teaching from "./data/teaching.json";
-import reviews from "./data/reviews.json";
+import { json } from "../lib/jsonResponse";
+import articles from "../data/articles.json";
+import initiatives from "../data/initiatives.json";
+import projects from "../data/projects.json";
+import research from "../data/research.json";
+import services from "../data/services.json";
+import teaching from "../data/teaching.json";
+import reviews from "../data/reviews.json";
 
 export type PortfolioCollection =
   | "articles"
@@ -16,7 +13,6 @@ export type PortfolioCollection =
   | "projects"
   | "research"
   | "services"
-  | "talks"
   | "teaching"
   | "reviews";
 
@@ -26,7 +22,6 @@ const SECTION_KEYS = [
   "projects",
   "research",
   "services",
-  "talks",
   "teaching",
   "reviews",
 ] as const satisfies readonly PortfolioCollection[];
@@ -37,7 +32,6 @@ const portfolioData = {
   projects,
   research,
   services,
-  talks,
   teaching,
   reviews,
 } satisfies Record<PortfolioCollection, unknown>;
@@ -54,7 +48,7 @@ function getRoute(request: Request) {
   const url = new URL(request.url);
   const path = url.pathname.replace(/^\/v1\/portfolio\/?/, "");
   const query = url.searchParams.get("q");
-  return { path, query, url };
+  return { path, query };
 }
 
 export async function handlePortfolio(request: Request, _env: Env) {
@@ -148,7 +142,3 @@ export async function handlePortfolio(request: Request, _env: Env) {
     404
   );
 }
-
-export const GET: APIRoute = async ({ request, locals }) => {
-  return handlePortfolio(request, locals as Env);
-};

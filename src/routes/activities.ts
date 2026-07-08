@@ -6,13 +6,13 @@ import talks from "../data/talks.json";
 
 export type ActivitiesCollection = "events" | "eventsAttending" | "talks";
 
-const SECTION_KEYS = ["events", "eventsAttending", "talks"] as const;
+const SECTION_KEYS = ["events", "eventsAttending", "talks"] as const satisfies readonly ActivitiesCollection[];
 
 const activitiesData = {
   events,
   eventsAttending,
   talks,
-};
+} satisfies Record<ActivitiesCollection, unknown>;
 
 function safeTrim(value: unknown) {
   return typeof value === "string" ? value.trim() : "";

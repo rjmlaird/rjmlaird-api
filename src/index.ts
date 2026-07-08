@@ -11,23 +11,15 @@ import { handleGeneral } from "./routes/general";
 
 import awards from "./data/awards.json";
 import certifications from "./data/certifications.json";
-import contact from "./data/contact.json";
-import credentials from "./data/credentials.json";
 import credly from "./data/credly.json";
 import education from "./data/education.json";
 import experience from "./data/experience.json";
-import initiatives from "./data/initiatives.json";
 import { languages } from "./data/languages";
 import memberships from "./data/memberships.json";
-import personal from "./data/personal.json";
 import profile from "./data/profile.json";
-import reviews from "./data/reviews.json";
-import services from "./data/services.json";
 import skills from "./data/skills.json";
-import socials from "./data/socials.json";
 import teaching from "./data/teaching.json";
 import { tools } from "./data/tools";
-import { unCountries } from "./data/unCountries";
 
 const app = new Hono<{ Bindings: Env }>();
 
@@ -58,6 +50,105 @@ const cvCollections = [
   "teaching",
   "tools",
 ] as const satisfies readonly CvCollection[];
+
+const webdavHandler = async (c: any) => {
+  try {
+    return await handleWebDAV(c.req.raw, c.env);
+  } catch (err) {
+    console.error("WebDAV error:", err);
+    return c.text("WebDAV internal error", 500);
+  }
+};
+
+const researchHandler = async (c: any) => {
+  try {
+    return await handleResearch(c.req.raw, c.env);
+  } catch (err) {
+    console.error("Research API error:", err);
+    return c.json(
+      {
+        error: "Research internal error",
+        message: err instanceof Error ? err.message : String(err),
+      },
+      500
+    );
+  }
+};
+
+const cvHandler = async (c: any) => {
+  try {
+    return await handleCv(c.req.raw, c.env);
+  } catch (err) {
+    console.error("CV API error:", err);
+    return c.json(
+      {
+        error: "CV internal error",
+        message: err instanceof Error ? err.message : String(err),
+      },
+      500
+    );
+  }
+};
+
+const portfolioHandler = async (c: any) => {
+  try {
+    return await handlePortfolio(c.req.raw, c.env);
+  } catch (err) {
+    console.error("Portfolio API error:", err);
+    return c.json(
+      {
+        error: "Portfolio internal error",
+        message: err instanceof Error ? err.message : String(err),
+      },
+      500
+    );
+  }
+};
+
+const contactHandler = async (c: any) => {
+  try {
+    return await handleContact(c.req.raw, c.env);
+  } catch (err) {
+    console.error("Contact API error:", err);
+    return c.json(
+      {
+        error: "Contact internal error",
+        message: err instanceof Error ? err.message : String(err),
+      },
+      500
+    );
+  }
+};
+
+const activitiesHandler = async (c: any) => {
+  try {
+    return await handleActivities(c.req.raw, c.env);
+  } catch (err) {
+    console.error("Activities API error:", err);
+    return c.json(
+      {
+        error: "Activities internal error",
+        message: err instanceof Error ? err.message : String(err),
+      },
+      500
+    );
+  }
+};
+
+const generalHandler = async (c: any) => {
+  try {
+    return await handleGeneral(c.req.raw, c.env);
+  } catch (err) {
+    console.error("General API error:", err);
+    return c.json(
+      {
+        error: "General internal error",
+        message: err instanceof Error ? err.message : String(err),
+      },
+      500
+    );
+  }
+};
 
 app.get("/health", (c) =>
   c.json({
@@ -103,16 +194,32 @@ app.get("/openapi.json", (c) =>
         },
       },
       "/v1/cv": {
-        get: { tags: ["CV"], summary: "CV API root", responses: { "200": { description: "CV service info" } } },
+        get: {
+          tags: ["CV"],
+          summary: "CV API root",
+          responses: { "200": { description: "CV service info" } },
+        },
       },
       "/v1/cv/sections": {
-        get: { tags: ["CV"], summary: "List CV sections", responses: { "200": { description: "Supported CV sections" } } },
+        get: {
+          tags: ["CV"],
+          summary: "List CV sections",
+          responses: { "200": { description: "Supported CV sections" } },
+        },
       },
       "/v1/cv/list": {
-        get: { tags: ["CV"], summary: "List stored CV records", responses: { "200": { description: "CV records" } } },
+        get: {
+          tags: ["CV"],
+          summary: "List stored CV records",
+          responses: { "200": { description: "CV records" } },
+        },
       },
       "/v1/cv/full": {
-        get: { tags: ["CV"], summary: "Return merged CV payload", responses: { "200": { description: "Merged CV data" } } },
+        get: {
+          tags: ["CV"],
+          summary: "Return merged CV payload",
+          responses: { "200": { description: "Merged CV data" } },
+        },
       },
       "/v1/cv/section/{section}": {
         get: {
@@ -132,18 +239,33 @@ app.get("/openapi.json", (c) =>
           responses: { "200": { description: "Search results" }, "400": { description: "Missing query" } },
         },
       },
-
       "/v1/portfolio": {
-        get: { tags: ["Portfolio"], summary: "Portfolio API root", responses: { "200": { description: "Portfolio service info" } } },
+        get: {
+          tags: ["Portfolio"],
+          summary: "Portfolio API root",
+          responses: { "200": { description: "Portfolio service info" } },
+        },
       },
       "/v1/portfolio/sections": {
-        get: { tags: ["Portfolio"], summary: "List portfolio sections", responses: { "200": { description: "Supported portfolio sections" } } },
+        get: {
+          tags: ["Portfolio"],
+          summary: "List portfolio sections",
+          responses: { "200": { description: "Supported portfolio sections" } },
+        },
       },
       "/v1/portfolio/list": {
-        get: { tags: ["Portfolio"], summary: "List stored portfolio records", responses: { "200": { description: "Portfolio records" } } },
+        get: {
+          tags: ["Portfolio"],
+          summary: "List stored portfolio records",
+          responses: { "200": { description: "Portfolio records" } },
+        },
       },
       "/v1/portfolio/full": {
-        get: { tags: ["Portfolio"], summary: "Return merged portfolio payload", responses: { "200": { description: "Merged portfolio data" } } },
+        get: {
+          tags: ["Portfolio"],
+          summary: "Return merged portfolio payload",
+          responses: { "200": { description: "Merged portfolio data" } },
+        },
       },
       "/v1/portfolio/section/{section}": {
         get: {
@@ -161,18 +283,33 @@ app.get("/openapi.json", (c) =>
           responses: { "200": { description: "Search results" }, "400": { description: "Missing query" } },
         },
       },
-
       "/v1/contact": {
-        get: { tags: ["Contact"], summary: "Contact API root", responses: { "200": { description: "Contact service info" } } },
+        get: {
+          tags: ["Contact"],
+          summary: "Contact API root",
+          responses: { "200": { description: "Contact service info" } },
+        },
       },
       "/v1/contact/sections": {
-        get: { tags: ["Contact"], summary: "List contact sections", responses: { "200": { description: "Supported contact sections" } } },
+        get: {
+          tags: ["Contact"],
+          summary: "List contact sections",
+          responses: { "200": { description: "Supported contact sections" } },
+        },
       },
       "/v1/contact/list": {
-        get: { tags: ["Contact"], summary: "List stored contact records", responses: { "200": { description: "Contact records" } } },
+        get: {
+          tags: ["Contact"],
+          summary: "List stored contact records",
+          responses: { "200": { description: "Contact records" } },
+        },
       },
       "/v1/contact/full": {
-        get: { tags: ["Contact"], summary: "Return merged contact payload", responses: { "200": { description: "Merged contact data" } } },
+        get: {
+          tags: ["Contact"],
+          summary: "Return merged contact payload",
+          responses: { "200": { description: "Merged contact data" } },
+        },
       },
       "/v1/contact/section/{section}": {
         get: {
@@ -182,18 +319,33 @@ app.get("/openapi.json", (c) =>
           responses: { "200": { description: "Section record" }, "404": { description: "Not found" } },
         },
       },
-
       "/v1/activities": {
-        get: { tags: ["Activities"], summary: "Activities API root", responses: { "200": { description: "Activities service info" } } },
+        get: {
+          tags: ["Activities"],
+          summary: "Activities API root",
+          responses: { "200": { description: "Activities service info" } },
+        },
       },
       "/v1/activities/sections": {
-        get: { tags: ["Activities"], summary: "List activities sections", responses: { "200": { description: "Supported activities sections" } } },
+        get: {
+          tags: ["Activities"],
+          summary: "List activities sections",
+          responses: { "200": { description: "Supported activities sections" } },
+        },
       },
       "/v1/activities/list": {
-        get: { tags: ["Activities"], summary: "List stored activities records", responses: { "200": { description: "Activities records" } } },
+        get: {
+          tags: ["Activities"],
+          summary: "List stored activities records",
+          responses: { "200": { description: "Activities records" } },
+        },
       },
       "/v1/activities/full": {
-        get: { tags: ["Activities"], summary: "Return merged activities payload", responses: { "200": { description: "Merged activities data" } } },
+        get: {
+          tags: ["Activities"],
+          summary: "Return merged activities payload",
+          responses: { "200": { description: "Merged activities data" } },
+        },
       },
       "/v1/activities/section/{section}": {
         get: {
@@ -211,18 +363,33 @@ app.get("/openapi.json", (c) =>
           responses: { "200": { description: "Search results" }, "400": { description: "Missing query" } },
         },
       },
-
       "/v1/general": {
-        get: { tags: ["General"], summary: "General API root", responses: { "200": { description: "General service info" } } },
+        get: {
+          tags: ["General"],
+          summary: "General API root",
+          responses: { "200": { description: "General service info" } },
+        },
       },
       "/v1/general/sections": {
-        get: { tags: ["General"], summary: "List general sections", responses: { "200": { description: "Supported general sections" } } },
+        get: {
+          tags: ["General"],
+          summary: "List general sections",
+          responses: { "200": { description: "Supported general sections" } },
+        },
       },
       "/v1/general/list": {
-        get: { tags: ["General"], summary: "List stored general records", responses: { "200": { description: "General records" } } },
+        get: {
+          tags: ["General"],
+          summary: "List stored general records",
+          responses: { "200": { description: "General records" } },
+        },
       },
       "/v1/general/full": {
-        get: { tags: ["General"], summary: "Return merged general payload", responses: { "200": { description: "Merged general data" } } },
+        get: {
+          tags: ["General"],
+          summary: "Return merged general payload",
+          responses: { "200": { description: "Merged general data" } },
+        },
       },
       "/v1/general/section/{section}": {
         get: {
@@ -240,9 +407,12 @@ app.get("/openapi.json", (c) =>
           responses: { "200": { description: "Search results" }, "400": { description: "Missing query" } },
         },
       },
-
       "/v1/research": {
-        get: { tags: ["Research"], summary: "Research API root", responses: { "200": { description: "Research service info" } } },
+        get: {
+          tags: ["Research"],
+          summary: "Research API root",
+          responses: { "200": { description: "Research service info" } },
+        },
       },
       "/v1/research/search": {
         get: {
@@ -253,7 +423,11 @@ app.get("/openapi.json", (c) =>
         },
       },
       "/v1/research/papers": {
-        get: { tags: ["Research"], summary: "List papers", responses: { "200": { description: "Paper list" } } },
+        get: {
+          tags: ["Research"],
+          summary: "List papers",
+          responses: { "200": { description: "Paper list" } },
+        },
       },
       "/v1/research/paper/{id}": {
         get: {
@@ -264,19 +438,39 @@ app.get("/openapi.json", (c) =>
         },
       },
       "/v1/research/graph": {
-        get: { tags: ["Research"], summary: "Paper graph", responses: { "200": { description: "Graph data" } } },
+        get: {
+          tags: ["Research"],
+          summary: "Paper graph",
+          responses: { "200": { description: "Graph data" } },
+        },
       },
       "/v1/research/timeline": {
-        get: { tags: ["Research"], summary: "Paper timeline", responses: { "200": { description: "Timeline data" } } },
+        get: {
+          tags: ["Research"],
+          summary: "Paper timeline",
+          responses: { "200": { description: "Timeline data" } },
+        },
       },
       "/v1/research/entities": {
-        get: { tags: ["Research"], summary: "Extract entities", responses: { "200": { description: "Entity data" } } },
+        get: {
+          tags: ["Research"],
+          summary: "Extract entities",
+          responses: { "200": { description: "Entity data" } },
+        },
       },
       "/v1/research/export/zotero": {
-        get: { tags: ["Research"], summary: "Export to Zotero format", responses: { "200": { description: "Export payload" } } },
+        get: {
+          tags: ["Research"],
+          summary: "Export to Zotero format",
+          responses: { "200": { description: "Export payload" } },
+        },
       },
       "/v1/research/ingest": {
-        post: { tags: ["Research"], summary: "Ingest a record or sync Zotero page", responses: { "201": { description: "Ingested" }, "500": { description: "Ingest failed" } } },
+        post: {
+          tags: ["Research"],
+          summary: "Ingest a record or sync Zotero page",
+          responses: { "201": { description: "Ingested" }, "500": { description: "Ingest failed" } },
+        },
       },
       "/webdav/{path}": {
         get: {
@@ -297,69 +491,6 @@ app.get("/openapi.json", (c) =>
     },
   })
 );
-
-const webdavHandler = async (c: any) => {
-  try {
-    return await handleWebDAV(c.req.raw, c.env);
-  } catch (err) {
-    console.error("WebDAV error:", err);
-    return c.text("WebDAV internal error", 500);
-  }
-};
-
-const researchHandler = async (c: any) => {
-  try {
-    return await handleResearch(c.req.raw, c.env);
-  } catch (err) {
-    console.error("Research API error:", err);
-    return c.json({ error: "Research internal error", message: err instanceof Error ? err.message : String(err) }, 500);
-  }
-};
-
-const cvHandler = async (c: any) => {
-  try {
-    return await handleCv(c.req.raw, c.env);
-  } catch (err) {
-    console.error("CV API error:", err);
-    return c.json({ error: "CV internal error", message: err instanceof Error ? err.message : String(err) }, 500);
-  }
-};
-
-const portfolioHandler = async (c: any) => {
-  try {
-    return await handlePortfolio(c.req.raw, c.env);
-  } catch (err) {
-    console.error("Portfolio API error:", err);
-    return c.json({ error: "Portfolio internal error", message: err instanceof Error ? err.message : String(err) }, 500);
-  }
-};
-
-const contactHandler = async (c: any) => {
-  try {
-    return await handleContact(c.req.raw, c.env);
-  } catch (err) {
-    console.error("Contact API error:", err);
-    return c.json({ error: "Contact internal error", message: err instanceof Error ? err.message : String(err) }, 500);
-  }
-};
-
-const activitiesHandler = async (c: any) => {
-  try {
-    return await handleActivities(c.req.raw, c.env);
-  } catch (err) {
-    console.error("Activities API error:", err);
-    return c.json({ error: "Activities internal error", message: err instanceof Error ? err.message : String(err) }, 500);
-  }
-};
-
-const generalHandler = async (c: any) => {
-  try {
-    return await handleGeneral(c.req.raw, c.env);
-  } catch (err) {
-    console.error("General API error:", err);
-    return c.json({ error: "General internal error", message: err instanceof Error ? err.message : String(err) }, 500);
-  }
-};
 
 app.all("/webdav/*", webdavHandler);
 app.all("/v1/webdav/*", webdavHandler);
