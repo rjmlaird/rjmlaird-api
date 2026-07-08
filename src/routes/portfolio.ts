@@ -1,14 +1,14 @@
 import type { APIRoute } from "astro";
-import { json } from "../lib/jsonResponse";
+import { json } from "./lib/jsonResponse";
 
-import articles from "../data/articles.json";
-import initiatives from "../data/initiatives.json";
-import projects from "../data/projects.json";
-import research from "../data/research.json";
-import services from "../data/services.json";
-import talks from "../data/talks.json";
-import teaching from "../data/teaching.json";
-import reviews from "../data/reviews.json";
+import articles from "./data/articles.json";
+import initiatives from "./data/initiatives.json";
+import projects from "./data/projects.json";
+import research from "./data/research.json";
+import services from "./data/services.json";
+import talks from "./data/talks.json";
+import teaching from "./data/teaching.json";
+import reviews from "./data/reviews.json";
 
 export type PortfolioCollection =
   | "articles"

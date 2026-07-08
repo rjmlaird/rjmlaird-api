@@ -1,8 +1,8 @@
 // src/routes/activities.ts
-import { json } from "./lib/jsonResponse";
-import events from "./data/events.json";
-import eventsAttending from "./data/eventsAttending.json";
-import talks from "./data/talks.json";
+import { json } from "../lib/jsonResponse";
+import events from "../data/events.json";
+import eventsAttending from "../data/eventsAttending.json";
+import talks from "../data/talks.json";
 
 export type ActivitiesCollection = "events" | "eventsAttending" | "talks";
 
