@@ -3,6 +3,7 @@ import { json } from "../lib/jsonResponse";
 import initiatives from "../data/initiatives.json";
 import reviews from "../data/reviews.json";
 import teaching from "../data/teaching.json";
+import research from "../data/publications.bib";
 
 export type PortfolioCollection =
   | "initiatives"
