@@ -11,7 +11,7 @@ import profile from "../data/profile.json";
 import skills from "../data/skills.json";
 import teaching from "../data/teaching.json";
 import { tools } from "../data/tools";
-import { volunteering } from "../data/volunteering.json";
+import volunteering from "../data/volunteering.json";
 
 export type CvCollection =
   | "awards"
