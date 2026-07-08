@@ -1,18 +1,66 @@
 [
   {
     "icon": "◐",
-    "meta": "Neurodiversity · Inclusion · Space sector",
-    "title": "Space for Neurodiversity",
-    "description": "Making the space sector genuinely accessible through structural change and community building.",
+    "meta": "Trust · Transparency · Responsible practice",
+    "title": "Space Integrity Initiative",
+    "description": "A global framework strengthening trust, transparency, and responsible practice across the space sector.",
     "points": [
-      "Employer engagement frameworks",
-      "Open-source community platform",
-      "Sector-wide research",
-      "Advocacy and events"
+      "Sector-wide principles and guidance",
+      "Community of signatories and partners",
+      "Practical trust and governance tools",
+      "Collaborative standards and advocacy"
+    ],
+    "status": "Global framework",
+    "cta": "Learn more →",
+    "link": "https://spaceintegrity.org",
+    "color": "var(--violet)"
+  },
+  {
+    "icon": "◐",
+    "meta": "Consulting · Strategy · Space sector growth",
+    "title": "R&R Space",
+    "description": "Strategic support for organisations working across the space sector, with a focus on growth, positioning, and impact.",
+    "points": [
+      "Space-sector strategy and advisory",
+      "Partnership and market development",
+      "Communications and positioning",
+      "Project and initiative support"
+    ],
+    "status": "Advisory partner",
+    "cta": "Explore services →",
+    "link": "/contact",
+    "color": "var(--cyan)"
+  },
+  {
+    "icon": "◐",
+    "meta": "Innovation · Sustainability · Applications",
+    "title": "Powering Space",
+    "description": "A platform focused on enabling practical space applications that support sustainability, innovation, and real-world outcomes.",
+    "points": [
+      "Applied space innovation",
+      "Sustainability-focused initiatives",
+      "Cross-sector collaboration",
+      "Impact-led storytelling"
     ],
     "status": "Active initiative",
-    "cta": "Get involved →",
+    "cta": "Discover more →",
     "link": "/contact",
-    "color": "var(--violet)"
+    "color": "var(--blue)"
+  },
+  {
+    "icon": "◐",
+    "meta": "Community · Policy · Impact",
+    "title": "Space Impact Forum",
+    "description": "A convening platform for responsible innovation, bringing together industry, policy, and civil society around sustainable space.",
+    "points": [
+      "Panels, roundtables, and workshops",
+      "Responsible space and sustainability",
+      "Cross-sector networking",
+      "Actionable policy and practice"
+    ],
+    "status": "Annual forum",
+    "cta": "Join the forum →",
+    "link": "https://spaceimpactforum.com",
+    "color": "var(--green)"
   }
 ]
