@@ -3,7 +3,7 @@ import { json } from "../lib/jsonResponse";
 import initiatives from "../data/initiatives.json";
 import reviews from "../data/reviews.json";
 import teaching from "../data/teaching.json";
-import publicationsBib from "../data/publications.bib?raw";
+import publicationsText from "../data/publications.txt";
 
 export type PortfolioCollection =
   | "initiatives"
@@ -22,7 +22,7 @@ const portfolioData = {
   initiatives,
   reviews,
   teaching,
-  research: publicationsBib,
+  research: publicationsText,
 } satisfies Record<PortfolioCollection, unknown>;
 
 function safeTrim(value: unknown) {
@@ -87,7 +87,7 @@ export async function handlePortfolio(request: Request, _env: Env) {
   }
 
   if (path === "publications.bib" && method === "GET") {
-    return new Response(publicationsBib, {
+    return new Response(publicationsText, {
       headers: {
         "content-type": "text/plain; charset=utf-8",
         "cache-control": "public, max-age=3600",
