@@ -18,7 +18,6 @@ const SECTION_KEYS = [
 const portfolioData = {
   initiatives,
   reviews,
-  services,
   teaching,
 } satisfies Record<PortfolioCollection, unknown>;
 
