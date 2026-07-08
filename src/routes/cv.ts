@@ -24,7 +24,7 @@ export type CvCollection =
   | "profile"
   | "skills"
   | "teaching"
-  | "tools";
+  | "tools"
   | "volunteering";
 
 const SECTION_KEYS = [
