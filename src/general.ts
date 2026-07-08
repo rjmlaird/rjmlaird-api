@@ -1,7 +1,7 @@
 // src/routes/general.ts
-import { json } from "../lib/jsonResponse";
-import organisations from "../data/organisations.json";
-import { unCountries } from "../data/unCountries";
+import { json } from "./lib/jsonResponse";
+import organisations from "./data/organisations.json";
+import { unCountries } from "./data/unCountries";
 
 export type GeneralCollection = "organisations" | "unCountries";
 
