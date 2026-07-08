@@ -16,5 +16,5 @@
     "types": ["./worker-configuration.d.ts", "@types/node", "node"]
   },
   "exclude": ["node_modules", "dist", "tests"],
-  "include": ["src", "worker-configuration.d.ts", "vite-env.d.ts"]
+  "include": ["src", "worker-configuration.d.ts"]
 }

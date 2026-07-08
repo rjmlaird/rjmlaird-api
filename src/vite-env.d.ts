@@ -1,6 +1,6 @@
 /// <reference types="vite/client" />
 
-declare module "*.bib?raw" {
+declare module "*.txt" {
   const content: string;
   export default content;
 }
