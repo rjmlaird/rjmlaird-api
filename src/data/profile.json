@@ -2,15 +2,67 @@
   "name": "Ryan Laird",
   "preferredName": "Ryan",
   "pronouns": "he/him",
-
   "headline": "Director | Sustainable Marketing in the Space Sector",
-
   "biography": "Director and founder of Green Orbit Digital, specialising in sustainable marketing systems for the global space sector. Focused on data-led growth strategies aligned with environmental responsibility across the space ecosystem.",
-
   "location": "Leicester, United Kingdom",
-
   "email": "ryan@greenorbit.space",
   "website": "https://greenorbit.space",
+  "avatar": "/images/profile/ryan-laird.jpg",
+  "role": "Director of Green Orbit Digital — elevating brands with tailored strategies and sustainable marketing solutions for the space sector.",
+  "credentials": "MPhys (Hons) · MInstP · CMktr · MCIPR",
+  "summary": [
+    "Results-driven communications and marketing professional with over a decade of experience in the space industry. As a Chartered Marketer (CMktr), I have led numerous successful campaigns, driving brand growth and engagement through data-informed strategy, content creation, and audience-focused communications. I combine technical knowledge in physics and space studies with marketing, digital strategy, and public relations to communicate complex topics clearly and persuasively across diverse audiences.",
+    "Beyond Green Orbit Digital, I maintain a portfolio of projects spanning software development, marketing, and space research, bridging disciplines to create meaningful connections between complex subjects and the audiences they serve."
+  ],
+  "tags": [
+    "Digital Marketing",
+    "SEO",
+    "Content Marketing",
+    "Social Media Strategy",
+    "Lead Generation",
+    "Sustainability",
+    "Space Industry",
+    "Earth Observation",
+    "Brand Strategy",
+    "Data Analytics",
+    "Project Management",
+    "Leadership"
+  ],
+  "portfolioLinks": [
+    {
+      "label": "Green Orbit Difiral",
+      "href": "https://greenorbit.space"
+    },
+    {
+      "label": "Space Integrity Initiative",
+      "href": "https://spaceintegrity.org"
+    },
+    {
+      "label": "Space Impact Forum",
+      "href": "https://spaceimpactforum.com"
+    },
+    {
+      "label": "Space for Neurodiversity",
+      "href": "https://spaceforneurodiversity.org"
+    },
+    {
+      "label": "CV",
+      "href": "https://cv.rjmlaird.co.uk"
+    },
+    {
+      "label": "Dev",
+      "href": "https://dev.rjmlaird.co.uk"
+    },
 
-  "avatar": "/images/profile/ryan-laird.jpg"
+  ],
+  "contact": [
+    {
+      "label": "E-mail",
+      "href": "mailto:mail@rjmlaird.co.uk"
+    },
+    {
+      "label": "ORCID",
+      "href": "https://orcid.org/0000-0002-5992-684X"
+    }
+  ]
 }
