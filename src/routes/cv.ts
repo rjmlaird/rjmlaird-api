@@ -11,6 +11,7 @@ import profile from "../data/profile.json";
 import skills from "../data/skills.json";
 import teaching from "../data/teaching.json";
 import { tools } from "../data/tools";
+import { volunteering } from "../data/volunteering.json";
 
 export type CvCollection =
   | "awards"
@@ -24,6 +25,7 @@ export type CvCollection =
   | "skills"
   | "teaching"
   | "tools";
+  | "volunteering";
 
 const SECTION_KEYS = [
   "awards",
@@ -37,6 +39,7 @@ const SECTION_KEYS = [
   "skills",
   "teaching",
   "tools",
+  "volunteering",
 ] as const satisfies readonly CvCollection[];
 
 const cvData = {
@@ -51,6 +54,7 @@ const cvData = {
   skills,
   teaching,
   tools,
+  volunteering,
 } satisfies Record<CvCollection, unknown>;
 
 function safeTrim(value: unknown) {
