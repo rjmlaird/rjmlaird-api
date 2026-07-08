@@ -1,20 +1,18 @@
 // src/routes/activities.ts
-import type { APIRoute } from "astro";
 import { json } from "../lib/jsonResponse";
-
 import events from "../data/events.json";
 import eventsAttending from "../data/eventsAttending.json";
 import talks from "../data/talks.json";
 
 export type ActivitiesCollection = "events" | "eventsAttending" | "talks";
 
-const SECTION_KEYS = ["events", "eventsAttending", "talks"] as const satisfies readonly ActivitiesCollection[];
+const SECTION_KEYS = ["events", "eventsAttending", "talks"] as const;
 
 const activitiesData = {
   events,
   eventsAttending,
   talks,
-} satisfies Record<ActivitiesCollection, unknown>;
+};
 
 function safeTrim(value: unknown) {
   return typeof value === "string" ? value.trim() : "";
@@ -28,7 +26,7 @@ function getRoute(request: Request) {
   const url = new URL(request.url);
   const path = url.pathname.replace(/^\/v1\/activities\/?/, "");
   const query = url.searchParams.get("q");
-  return { path, query, url };
+  return { path, query };
 }
 
 export async function handleActivities(request: Request, _env: Env) {
@@ -51,9 +49,7 @@ export async function handleActivities(request: Request, _env: Env) {
     });
   }
 
-  if (path === "sections") {
-    return json({ sections: SECTION_KEYS });
-  }
+  if (path === "sections") return json({ sections: SECTION_KEYS });
 
   if (path === "list") {
     return json({
@@ -65,9 +61,7 @@ export async function handleActivities(request: Request, _env: Env) {
     });
   }
 
-  if (path === "full") {
-    return json({ sections: activitiesData });
-  }
+  if (path === "full") return json({ sections: activitiesData });
 
   if (path === "search") {
     const q = safeTrim(query).toLowerCase();
@@ -75,54 +69,23 @@ export async function handleActivities(request: Request, _env: Env) {
 
     const results = SECTION_KEYS.filter((section) =>
       JSON.stringify(activitiesData[section]).toLowerCase().includes(q)
-    ).map((section) => ({
-      section,
-      data: activitiesData[section],
-    }));
+    ).map((section) => ({ section, data: activitiesData[section] }));
 
-    return json({
-      query: q,
-      count: results.length,
-      results,
-    });
+    return json({ query: q, count: results.length, results });
   }
 
   if (path.startsWith("section/")) {
     const section = safeTrim(path.replace(/^section\//, ""));
     if (!isCollection(section)) {
-      return json(
-        {
-          error: "Not found",
-          section,
-          allowed: SECTION_KEYS,
-        },
-        404
-      );
+      return json({ error: "Not found", section, allowed: SECTION_KEYS }, 404);
     }
 
-    return json({
-      section,
-      data: activitiesData[section],
-    });
+    return json({ section, data: activitiesData[section] });
   }
 
   if (isCollection(path) && method === "GET") {
-    return json({
-      section: path,
-      data: activitiesData[path],
-    });
+    return json({ section: path, data: activitiesData[path] });
   }
 
-  return json(
-    {
-      error: "Not found",
-      path,
-      method,
-    },
-    404
-  );
+  return json({ error: "Not found", path, method }, 404);
 }
-
-export const GET: APIRoute = async ({ request, locals }) => {
-  return handleActivities(request, locals as Env);
-};

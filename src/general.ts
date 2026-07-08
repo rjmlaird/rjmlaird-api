@@ -1,18 +1,16 @@
 // src/routes/general.ts
-import type { APIRoute } from "astro";
 import { json } from "../lib/jsonResponse";
-
 import organisations from "../data/organisations.json";
 import { unCountries } from "../data/unCountries";
 
 export type GeneralCollection = "organisations" | "unCountries";
 
-const SECTION_KEYS = ["organisations", "unCountries"] as const satisfies readonly GeneralCollection[];
+const SECTION_KEYS = ["organisations", "unCountries"] as const;
 
 const generalData = {
   organisations,
   unCountries,
-} satisfies Record<GeneralCollection, unknown>;
+};
 
 function safeTrim(value: unknown) {
   return typeof value === "string" ? value.trim() : "";
@@ -26,7 +24,7 @@ function getRoute(request: Request) {
   const url = new URL(request.url);
   const path = url.pathname.replace(/^\/v1\/general\/?/, "");
   const query = url.searchParams.get("q");
-  return { path, query, url };
+  return { path, query };
 }
 
 export async function handleGeneral(request: Request, _env: Env) {
@@ -49,9 +47,7 @@ export async function handleGeneral(request: Request, _env: Env) {
     });
   }
 
-  if (path === "sections") {
-    return json({ sections: SECTION_KEYS });
-  }
+  if (path === "sections") return json({ sections: SECTION_KEYS });
 
   if (path === "list") {
     return json({
@@ -63,9 +59,7 @@ export async function handleGeneral(request: Request, _env: Env) {
     });
   }
 
-  if (path === "full") {
-    return json({ sections: generalData });
-  }
+  if (path === "full") return json({ sections: generalData });
 
   if (path === "search") {
     const q = safeTrim(query).toLowerCase();
@@ -73,54 +67,23 @@ export async function handleGeneral(request: Request, _env: Env) {
 
     const results = SECTION_KEYS.filter((section) =>
       JSON.stringify(generalData[section]).toLowerCase().includes(q)
-    ).map((section) => ({
-      section,
-      data: generalData[section],
-    }));
+    ).map((section) => ({ section, data: generalData[section] }));
 
-    return json({
-      query: q,
-      count: results.length,
-      results,
-    });
+    return json({ query: q, count: results.length, results });
   }
 
   if (path.startsWith("section/")) {
     const section = safeTrim(path.replace(/^section\//, ""));
     if (!isCollection(section)) {
-      return json(
-        {
-          error: "Not found",
-          section,
-          allowed: SECTION_KEYS,
-        },
-        404
-      );
+      return json({ error: "Not found", section, allowed: SECTION_KEYS }, 404);
     }
 
-    return json({
-      section,
-      data: generalData[section],
-    });
+    return json({ section, data: generalData[section] });
   }
 
   if (isCollection(path) && method === "GET") {
-    return json({
-      section: path,
-      data: generalData[path],
-    });
+    return json({ section: path, data: generalData[path] });
   }
 
-  return json(
-    {
-      error: "Not found",
-      path,
-      method,
-    },
-    404
-  );
+  return json({ error: "Not found", path, method }, 404);
 }
-
-export const GET: APIRoute = async ({ request, locals }) => {
-  return handleGeneral(request, locals as Env);
-};

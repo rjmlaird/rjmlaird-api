@@ -133,12 +133,7 @@ app.get("/openapi.json", (c) =>
           tags: ["CV"],
           summary: "Get one CV section",
           parameters: [
-            {
-              name: "section",
-              in: "path",
-              required: true,
-              schema: { type: "string", enum: cvCollections },
-            },
+            { name: "section", in: "path", required: true, schema: { type: "string", enum: cvCollections } },
           ],
           responses: { "200": { description: "Section record" }, "404": { description: "Not found" } },
         },
@@ -168,14 +163,7 @@ app.get("/openapi.json", (c) =>
         get: {
           tags: ["Portfolio"],
           summary: "Get one portfolio section",
-          parameters: [
-            {
-              name: "section",
-              in: "path",
-              required: true,
-              schema: { type: "string" },
-            },
-          ],
+          parameters: [{ name: "section", in: "path", required: true, schema: { type: "string" } }],
           responses: { "200": { description: "Section record" }, "404": { description: "Not found" } },
         },
       },
@@ -204,14 +192,7 @@ app.get("/openapi.json", (c) =>
         get: {
           tags: ["Contact"],
           summary: "Get one contact section",
-          parameters: [
-            {
-              name: "section",
-              in: "path",
-              required: true,
-              schema: { type: "string", enum: ["contact", "socials"] },
-            },
-          ],
+          parameters: [{ name: "section", in: "path", required: true, schema: { type: "string", enum: ["contact", "socials"] } }],
           responses: { "200": { description: "Section record" }, "404": { description: "Not found" } },
         },
       },
@@ -232,14 +213,7 @@ app.get("/openapi.json", (c) =>
         get: {
           tags: ["Activities"],
           summary: "Get one activities section",
-          parameters: [
-            {
-              name: "section",
-              in: "path",
-              required: true,
-              schema: { type: "string", enum: ["events", "eventsAttending", "talks"] },
-            },
-          ],
+          parameters: [{ name: "section", in: "path", required: true, schema: { type: "string", enum: ["events", "eventsAttending", "talks"] } }],
           responses: { "200": { description: "Section record" }, "404": { description: "Not found" } },
         },
       },
@@ -268,14 +242,7 @@ app.get("/openapi.json", (c) =>
         get: {
           tags: ["General"],
           summary: "Get one general section",
-          parameters: [
-            {
-              name: "section",
-              in: "path",
-              required: true,
-              schema: { type: "string", enum: ["organisations", "unCountries"] },
-            },
-          ],
+          parameters: [{ name: "section", in: "path", required: true, schema: { type: "string", enum: ["organisations", "unCountries"] } }],
           responses: { "200": { description: "Section record" }, "404": { description: "Not found" } },
         },
       },
