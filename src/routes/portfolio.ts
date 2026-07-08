@@ -3,6 +3,7 @@ import { json } from "../lib/jsonResponse";
 import initiatives from "../data/initiatives.json";
 import reviews from "../data/reviews.json";
 import teaching from "../data/teaching.json";
+import publicationsBib from "../data/publications.bib?raw";
 
 export type PortfolioCollection =
   | "initiatives"
@@ -21,9 +22,8 @@ const portfolioData = {
   initiatives,
   reviews,
   teaching,
-} satisfies Record<Exclude<PortfolioCollection, "research">, unknown>;
-
-let publicationsBibCache = "";
+  research: publicationsBib,
+} satisfies Record<PortfolioCollection, unknown>;
 
 function safeTrim(value: unknown) {
   return typeof value === "string" ? value.trim() : "";
@@ -38,22 +38,6 @@ function getRoute(request: Request) {
   const path = url.pathname.replace(/^\/v1\/portfolio\/?/, "");
   const query = url.searchParams.get("q");
   return { path, query };
-}
-
-async function loadPublicationsBib() {
-  if (publicationsBibCache) return publicationsBibCache;
-
-  const res = await fetch("https://api.rjmlaird.co.uk/api/publications.bib", {
-    headers: { accept: "text/plain, application/octet-stream;q=0.9, */*;q=0.8" },
-  });
-
-  if (!res.ok) {
-    publicationsBibCache = "";
-    return publicationsBibCache;
-  }
-
-  publicationsBibCache = await res.text();
-  return publicationsBibCache;
 }
 
 export async function handlePortfolio(request: Request, _env: Env) {
@@ -84,35 +68,26 @@ export async function handlePortfolio(request: Request, _env: Env) {
       count: SECTION_KEYS.length,
       items: SECTION_KEYS.map((section) => ({
         section,
-        hasData: section === "research" ? true : portfolioData[section] !== undefined,
+        hasData: portfolioData[section] !== undefined,
       })),
     });
   }
 
-  if (path === "full") {
-    return json({ sections: { ...portfolioData, research: true } });
-  }
+  if (path === "full") return json({ sections: portfolioData });
 
   if (path === "search") {
     const q = safeTrim(query).toLowerCase();
     if (!q) return json({ error: "Missing ?q=" }, 400);
 
-    const results = SECTION_KEYS.filter((section) => {
-      if (section === "research") return q.includes("bib") || q.includes("publication");
-      return JSON.stringify(portfolioData[section]).toLowerCase().includes(q);
-    }).map((section) => ({
-      section,
-      data: section === "research" ? { endpoint: "/v1/portfolio/publications.bib" } : portfolioData[section],
-    }));
+    const results = SECTION_KEYS.filter((section) =>
+      JSON.stringify(portfolioData[section]).toLowerCase().includes(q)
+    ).map((section) => ({ section, data: portfolioData[section] }));
 
     return json({ query: q, count: results.length, results });
   }
 
   if (path === "publications.bib" && method === "GET") {
-    const bibtex = await loadPublicationsBib();
-    if (!bibtex) return json({ error: "Not found", path }, 404);
-
-    return new Response(bibtex, {
+    return new Response(publicationsBib, {
       headers: {
         "content-type": "text/plain; charset=utf-8",
         "cache-control": "public, max-age=3600",
@@ -126,18 +101,10 @@ export async function handlePortfolio(request: Request, _env: Env) {
       return json({ error: "Not found", section, allowed: SECTION_KEYS }, 404);
     }
 
-    if (section === "research") {
-      return json({ section, data: { endpoint: "/v1/portfolio/publications.bib" } });
-    }
-
     return json({ section, data: portfolioData[section] });
   }
 
   if (isCollection(path) && method === "GET") {
-    if (path === "research") {
-      return json({ section: "research", data: { endpoint: "/v1/portfolio/publications.bib" } });
-    }
-
     return json({ section: path, data: portfolioData[path] });
   }
 
