@@ -1,15 +1,13 @@
 // src/routes/activities.ts
 import { json } from "../lib/jsonResponse";
-import events from "../data/events.json";
 import eventsAttending from "../data/eventsAttending.json";
 import talks from "../data/talks.json";
 
-export type ActivitiesCollection = "events" | "eventsAttending" | "talks";
+export type ActivitiesCollection = "eventsAttending" | "talks";
 
-const SECTION_KEYS = ["events", "eventsAttending", "talks"] as const satisfies readonly ActivitiesCollection[];
+const SECTION_KEYS = ["eventsAttending", "talks"] as const satisfies readonly ActivitiesCollection[];
 
 const activitiesData = {
-  events,
   eventsAttending,
   talks,
 } satisfies Record<ActivitiesCollection, unknown>;
