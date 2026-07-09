@@ -61,6 +61,15 @@ export async function handlePortfolio(request: Request, _env: Env) {
     });
   }
 
+  if (path === "publications.bib" && method === "GET") {
+    return new Response(publicationsText, {
+      headers: {
+        "content-type": "text/plain; charset=utf-8",
+        "cache-control": "public, max-age=3600",
+      },
+    });
+  }
+
   if (path === "sections") return json({ sections: SECTION_KEYS });
 
   if (path === "list") {
@@ -84,15 +93,6 @@ export async function handlePortfolio(request: Request, _env: Env) {
     ).map((section) => ({ section, data: portfolioData[section] }));
 
     return json({ query: q, count: results.length, results });
-  }
-
-  if (path === "publications.bib" && method === "GET") {
-    return new Response(publicationsText, {
-      headers: {
-        "content-type": "text/plain; charset=utf-8",
-        "cache-control": "public, max-age=3600",
-      },
-    });
   }
 
   if (path.startsWith("section/")) {
