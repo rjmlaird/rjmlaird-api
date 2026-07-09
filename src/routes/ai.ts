@@ -1,9 +1,15 @@
-import type { APIRoute } from "astro";
+import { Hono } from "hono";
+import { z } from "zod";
 
-export const prerender = false;
+type Env = {
+  API_BASE_URL?: string;
+  ANTHROPIC_API_KEY?: string;
+  OPENAI_API_KEY?: string;
+  GEMINI_API_KEY?: string;
+  PERPLEXITY_API_KEY?: string;
+};
 
 type Provider = "claude" | "openai" | "gemini" | "perplexity";
-type ContextSource = "/api/cv.json" | "/api/projects.json" | "/api/publications.json";
 
 type RequestBody = {
   question?: string;
@@ -19,22 +25,14 @@ type AnthropicResponse = {
 };
 
 type OpenAIResponse = {
-  choices?: Array<{
-    message?: {
-      content?: string;
-    };
-  }>;
+  choices?: Array<{ message?: { content?: string } }>;
 };
 
 type GeminiResponse = {
-  candidates?: Array<{
-    content?: {
-      parts?: Array<{ text?: string }>;
-    };
-  }>;
+  candidates?: Array<{ content?: { parts?: Array<{ text?: string }> } }>;
 };
 
-type PerplexityResponse = OpenAIResponse;
+const aiApp = new Hono<{ Bindings: Env }>();
 
 const DEFAULT_PROVIDER: Provider = "claude";
 const MAX_TOKENS = 1000;
@@ -46,30 +44,18 @@ const MODELS: Record<Provider, string> = {
   perplexity: "sonar-pro",
 };
 
-const CONTEXT_SOURCES: ContextSource[] = [
-  "/api/cv.json",
-  "/api/projects.json",
-  "/api/publications.json",
-];
+const CONTEXT_SOURCES = ["/api/cv.json", "/api/projects.json", "/api/publications.json"] as const;
 
-const ENV_KEYS: Record<Provider, string> = {
+const ENV_KEYS: Record<Provider, keyof Env> = {
   claude: "ANTHROPIC_API_KEY",
   openai: "OPENAI_API_KEY",
   gemini: "GEMINI_API_KEY",
   perplexity: "PERPLEXITY_API_KEY",
 };
 
-function getEnv(key: string): string | undefined {
-  const globalEnv = globalThis as typeof globalThis & {
-    importMetaEnv?: Record<string, string | undefined>;
-    __env?: Record<string, string | undefined>;
-  };
-
-  return (
-    globalEnv.__env?.[key] ??
-    globalEnv.importMetaEnv?.[key] ??
-    undefined
-  );
+async function fetchJson<T>(res: Response): Promise<T | null> {
+  if (!res.ok) return null;
+  return (await res.json()) as T;
 }
 
 async function fetchContext(origin: string): Promise<string> {
@@ -78,11 +64,7 @@ async function fetchContext(origin: string): Promise<string> {
       const res = await fetch(`${origin}${path}`, {
         headers: { accept: "application/json" },
       });
-
-      if (!res.ok) {
-        throw new Error(`${path} returned ${res.status}`);
-      }
-
+      if (!res.ok) throw new Error(`${path} returned ${res.status}`);
       const data = (await res.json()) as unknown;
       return `## Source: ${path}\n${JSON.stringify(data)}`;
     })
@@ -208,66 +190,49 @@ async function callPerplexity(question: string, systemPrompt: string, apiKey: st
 
   if (!res.ok) throw new Error(`Perplexity API ${res.status}: ${await res.text()}`);
 
-  const data = (await res.json()) as PerplexityResponse;
+  const data = (await res.json()) as OpenAIResponse;
   const answer = data.choices?.[0]?.message?.content?.trim();
 
   return { answer: answer || "No answer generated." };
 }
 
-const ADAPTERS: Record<
-  Provider,
-  (question: string, systemPrompt: string, apiKey: string) => Promise<AdapterResult>
-> = {
+const ADAPTERS: Record<Provider, (question: string, systemPrompt: string, apiKey: string) => Promise<AdapterResult>> = {
   claude: callClaude,
   openai: callOpenAI,
   gemini: callGemini,
   perplexity: callPerplexity,
 };
 
-export const POST: APIRoute = async ({ request, url }) => {
-  let body: RequestBody;
-
-  try {
-    body = (await request.json()) as RequestBody;
-  } catch {
-    return jsonError("Invalid JSON body", 400);
-  }
+aiApp.post("/", async (c) => {
+  const body = (await c.req.json().catch(() => null)) as RequestBody | null;
+  if (!body) return c.json({ error: "Invalid JSON body" }, 400);
 
   const question = body.question?.trim();
-  if (!question) return jsonError("Missing 'question' field", 400);
-  if (question.length > 2000) return jsonError("Question too long (max 2000 chars)", 400);
+  if (!question) return c.json({ error: "Missing 'question' field" }, 400);
+  if (question.length > 2000) return c.json({ error: "Question too long (max 2000 chars)" }, 400);
 
-  const providerInput = (body.provider?.trim().toLowerCase() || DEFAULT_PROVIDER) as Provider;
-  if (!(providerInput in ADAPTERS)) {
-    return jsonError(
-      `Unknown provider '${providerInput}'. Valid options: ${Object.keys(ADAPTERS).join(", ")}`,
+  const provider = ((body.provider?.trim().toLowerCase() || DEFAULT_PROVIDER) as Provider);
+  if (!(provider in ADAPTERS)) {
+    return c.json(
+      { error: `Unknown provider '${provider}'. Valid options: ${Object.keys(ADAPTERS).join(", ")}` },
       400
     );
   }
 
-  const apiKey = getEnv(ENV_KEYS[providerInput]);
-  if (!apiKey) {
-    return jsonError(`Provider '${providerInput}' is not configured`, 503);
-  }
+  const apiKey = c.env[ENV_KEYS[provider]];
+  if (!apiKey) return c.json({ error: `Provider '${provider}' is not configured` }, 503);
 
-  const context = await fetchContext(url.origin);
+  const context = await fetchContext(c.req.url);
   const systemPrompt = buildSystemPrompt(context);
 
   try {
-    const result = await ADAPTERS[providerInput](question, systemPrompt, apiKey);
-    return new Response(JSON.stringify({ answer: result.answer, provider: providerInput }), {
-      status: 200,
-      headers: { "content-type": "application/json" },
-    });
+    const result = await ADAPTERS[provider](question, systemPrompt, apiKey);
+    return c.json({ answer: result.answer, provider });
   } catch (err) {
-    console.error(`AI endpoint failure (${providerInput})`, err);
-    return jsonError("AI service temporarily unavailable", 502);
+    console.error(`AI endpoint failure (${provider})`, err);
+    return c.json({ error: "AI service temporarily unavailable" }, 502);
   }
-};
+});
 
-function jsonError(message: string, status: number): Response {
-  return new Response(JSON.stringify({ error: message }), {
-    status,
-    headers: { "content-type": "application/json" },
-  });
-}
+export { aiApp };
+export default aiApp;

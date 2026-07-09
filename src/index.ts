@@ -8,7 +8,7 @@ import { handlePortfolio } from "./routes/portfolio";
 import { handleContact } from "./routes/contact";
 import { handleActivities } from "./routes/activities";
 import { handleGeneral } from "./routes/general";
-import { handleAi } from "./routes/ai";
+import { aiApp } from "./routes/ai";
 
 import awards from "./data/awards.json";
 import certifications from "./data/certifications.json";
@@ -209,8 +209,7 @@ app.all("/v1/activities", activitiesHandler);
 app.all("/v1/general/*", generalHandler);
 app.all("/v1/general", generalHandler);
 
-app.all("/v1/ai/*", async (c) => handleAi(c.req.raw, c.env));
-app.all("/v1/ai", async (c) => handleAi(c.req.raw, c.env));
+app.route("/v1/ai", aiApp);
 
 app.get("/v1/debug", (c) =>
   c.json({
