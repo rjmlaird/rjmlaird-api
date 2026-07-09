@@ -1,25 +1,40 @@
-// src/pages/api/ai.ts
-//
-// Multi-provider AI endpoint for rjmlaird.co.uk
-// Accepts a question about Ryan and answers it using a chosen LLM provider,
-// grounded in site content pulled from the existing resilient API data layer.
-//
-// Providers: claude (default), openai, gemini, perplexity
-// Select via request body: { "question": "...", "provider": "openai" }
-//
-// Secrets required (set only the ones you plan to use):
-//   wrangler secret put ANTHROPIC_API_KEY
-//   wrangler secret put OPENAI_API_KEY
-//   wrangler secret put GEMINI_API_KEY
-//   wrangler secret put PERPLEXITY_API_KEY
-//
-// Assumes: Cloudflare adapter. Falls back to import.meta.env for local dev.
-
 import type { APIRoute } from "astro";
 
 export const prerender = false;
 
 type Provider = "claude" | "openai" | "gemini" | "perplexity";
+type ContextSource = "/api/cv.json" | "/api/projects.json" | "/api/publications.json";
+
+type RequestBody = {
+  question?: string;
+  provider?: string;
+};
+
+type AdapterResult = {
+  answer: string;
+};
+
+type AnthropicResponse = {
+  content?: Array<{ type?: string; text?: string }>;
+};
+
+type OpenAIResponse = {
+  choices?: Array<{
+    message?: {
+      content?: string;
+    };
+  }>;
+};
+
+type GeminiResponse = {
+  candidates?: Array<{
+    content?: {
+      parts?: Array<{ text?: string }>;
+    };
+  }>;
+};
+
+type PerplexityResponse = OpenAIResponse;
 
 const DEFAULT_PROVIDER: Provider = "claude";
 const MAX_TOKENS = 1000;
@@ -31,26 +46,30 @@ const MODELS: Record<Provider, string> = {
   perplexity: "sonar-pro",
 };
 
-// Endpoints on your own site that supply grounding context.
-// Perplexity does its own live web search, so context matters less there,
-// but we still pass it for consistency of answers across providers.
-const CONTEXT_SOURCES = [
+const CONTEXT_SOURCES: ContextSource[] = [
   "/api/cv.json",
   "/api/projects.json",
   "/api/publications.json",
-] as const;
+];
 
-interface RequestBody {
-  question?: string;
-  provider?: string;
-}
+const ENV_KEYS: Record<Provider, string> = {
+  claude: "ANTHROPIC_API_KEY",
+  openai: "OPENAI_API_KEY",
+  gemini: "GEMINI_API_KEY",
+  perplexity: "PERPLEXITY_API_KEY",
+};
 
-interface AdapterResult {
-  answer: string;
-}
+function getEnv(key: string): string | undefined {
+  const globalEnv = globalThis as typeof globalThis & {
+    importMetaEnv?: Record<string, string | undefined>;
+    __env?: Record<string, string | undefined>;
+  };
 
-function getEnv(request: Request, key: string): string | undefined {
-  return (request as any).cf?.env?.[key] ?? (import.meta.env as any)[key];
+  return (
+    globalEnv.__env?.[key] ??
+    globalEnv.importMetaEnv?.[key] ??
+    undefined
+  );
 }
 
 async function fetchContext(origin: string): Promise<string> {
@@ -59,8 +78,12 @@ async function fetchContext(origin: string): Promise<string> {
       const res = await fetch(`${origin}${path}`, {
         headers: { accept: "application/json" },
       });
-      if (!res.ok) throw new Error(`${path} returned ${res.status}`);
-      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(`${path} returned ${res.status}`);
+      }
+
+      const data = (await res.json()) as unknown;
       return `## Source: ${path}\n${JSON.stringify(data)}`;
     })
   );
@@ -70,11 +93,11 @@ async function fetchContext(origin: string): Promise<string> {
     .map((r) => r.value);
 
   if (succeeded.length === 0) {
-    return (
-      "## Fallback context\nRyan Laird is a space sector marketing consultant, " +
-      "science communicator, and open-source developer running Green Orbit Digital. " +
-      "Full CV data is temporarily unavailable."
-    );
+    return [
+      "## Fallback context",
+      "Ryan Laird is a web developer and science communicator working on digital products, content systems, and API-driven sites.",
+      "Full CV data is temporarily unavailable.",
+    ].join("\n");
   }
 
   return succeeded.join("\n\n");
@@ -82,27 +105,16 @@ async function fetchContext(origin: string): Promise<string> {
 
 function buildSystemPrompt(context: string): string {
   return [
-    "You are the site assistant for rjmlaird.co.uk, answering questions about Ryan Laird",
-    "for visitors (recruiters, collaborators, journalists, etc).",
-    "Answer only from the CONTEXT below. If the context doesn't cover something,",
-    "say you don't have that information rather than guessing.",
-    "Keep answers concise (2-4 sentences) and factual. Do not invent skills,",
-    "job titles, or achievements not present in the context.",
+    "You are the site assistant for rjmlaird.co.uk, answering questions about Ryan Laird.",
+    "Answer only from the CONTEXT below. If the context doesn't cover something, say you don't have that information rather than guessing.",
+    "Keep answers concise and factual. Do not invent skills, job titles, or achievements not present in the context.",
     "",
     "CONTEXT:",
     context,
   ].join("\n");
 }
 
-// ---- Provider adapters -----------------------------------------------
-// Each adapter takes (question, systemPrompt, apiKey) and returns a
-// normalized { answer } shape, or throws on failure.
-
-async function callClaude(
-  question: string,
-  systemPrompt: string,
-  apiKey: string
-): Promise<AdapterResult> {
+async function callClaude(question: string, systemPrompt: string, apiKey: string): Promise<AdapterResult> {
   const res = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: {
@@ -117,21 +129,20 @@ async function callClaude(
       messages: [{ role: "user", content: question }],
     }),
   });
+
   if (!res.ok) throw new Error(`Claude API ${res.status}: ${await res.text()}`);
-  const data = await res.json();
+
+  const data = (await res.json()) as AnthropicResponse;
   const answer = data.content
-    ?.filter((b: any) => b.type === "text")
-    .map((b: any) => b.text)
+    ?.filter((b) => b.type === "text")
+    .map((b) => b.text ?? "")
     .join("\n")
     .trim();
+
   return { answer: answer || "No answer generated." };
 }
 
-async function callOpenAI(
-  question: string,
-  systemPrompt: string,
-  apiKey: string
-): Promise<AdapterResult> {
+async function callOpenAI(question: string, systemPrompt: string, apiKey: string): Promise<AdapterResult> {
   const res = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {
@@ -147,17 +158,16 @@ async function callOpenAI(
       ],
     }),
   });
+
   if (!res.ok) throw new Error(`OpenAI API ${res.status}: ${await res.text()}`);
-  const data = await res.json();
+
+  const data = (await res.json()) as OpenAIResponse;
   const answer = data.choices?.[0]?.message?.content?.trim();
+
   return { answer: answer || "No answer generated." };
 }
 
-async function callGemini(
-  question: string,
-  systemPrompt: string,
-  apiKey: string
-): Promise<AdapterResult> {
+async function callGemini(question: string, systemPrompt: string, apiKey: string): Promise<AdapterResult> {
   const res = await fetch(
     `https://generativelanguage.googleapis.com/v1beta/models/${MODELS.gemini}:generateContent?key=${apiKey}`,
     {
@@ -170,17 +180,16 @@ async function callGemini(
       }),
     }
   );
+
   if (!res.ok) throw new Error(`Gemini API ${res.status}: ${await res.text()}`);
-  const data = await res.json();
+
+  const data = (await res.json()) as GeminiResponse;
   const answer = data.candidates?.[0]?.content?.parts?.[0]?.text?.trim();
+
   return { answer: answer || "No answer generated." };
 }
 
-async function callPerplexity(
-  question: string,
-  systemPrompt: string,
-  apiKey: string
-): Promise<AdapterResult> {
+async function callPerplexity(question: string, systemPrompt: string, apiKey: string): Promise<AdapterResult> {
   const res = await fetch("https://api.perplexity.ai/chat/completions", {
     method: "POST",
     headers: {
@@ -196,9 +205,12 @@ async function callPerplexity(
       ],
     }),
   });
+
   if (!res.ok) throw new Error(`Perplexity API ${res.status}: ${await res.text()}`);
-  const data = await res.json();
+
+  const data = (await res.json()) as PerplexityResponse;
   const answer = data.choices?.[0]?.message?.content?.trim();
+
   return { answer: answer || "No answer generated." };
 }
 
@@ -212,19 +224,11 @@ const ADAPTERS: Record<
   perplexity: callPerplexity,
 };
 
-const ENV_KEYS: Record<Provider, string> = {
-  claude: "ANTHROPIC_API_KEY",
-  openai: "OPENAI_API_KEY",
-  gemini: "GEMINI_API_KEY",
-  perplexity: "PERPLEXITY_API_KEY",
-};
-
-// ---- Route handler -----------------------------------------------------
-
 export const POST: APIRoute = async ({ request, url }) => {
   let body: RequestBody;
+
   try {
-    body = await request.json();
+    body = (await request.json()) as RequestBody;
   } catch {
     return jsonError("Invalid JSON body", 400);
   }
@@ -234,14 +238,14 @@ export const POST: APIRoute = async ({ request, url }) => {
   if (question.length > 2000) return jsonError("Question too long (max 2000 chars)", 400);
 
   const providerInput = (body.provider?.trim().toLowerCase() || DEFAULT_PROVIDER) as Provider;
-  if (!ADAPTERS[providerInput]) {
+  if (!(providerInput in ADAPTERS)) {
     return jsonError(
       `Unknown provider '${providerInput}'. Valid options: ${Object.keys(ADAPTERS).join(", ")}`,
       400
     );
   }
 
-  const apiKey = getEnv(request, ENV_KEYS[providerInput]);
+  const apiKey = getEnv(ENV_KEYS[providerInput]);
   if (!apiKey) {
     return jsonError(`Provider '${providerInput}' is not configured`, 503);
   }
@@ -251,10 +255,10 @@ export const POST: APIRoute = async ({ request, url }) => {
 
   try {
     const result = await ADAPTERS[providerInput](question, systemPrompt, apiKey);
-    return new Response(
-      JSON.stringify({ answer: result.answer, provider: providerInput }),
-      { status: 200, headers: { "content-type": "application/json" } }
-    );
+    return new Response(JSON.stringify({ answer: result.answer, provider: providerInput }), {
+      status: 200,
+      headers: { "content-type": "application/json" },
+    });
   } catch (err) {
     console.error(`AI endpoint failure (${providerInput})`, err);
     return jsonError("AI service temporarily unavailable", 502);
