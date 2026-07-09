@@ -2,15 +2,14 @@
   "name": "Ryan Laird",
   "preferredName": "Ryan",
   "pronouns": "he/him",
-  "headline": "Director | Sustainable Marketing in the Space Sector",
-  "biography": "Director and founder of Green Orbit Digital, specialising in sustainable marketing systems for the global space sector. Focused on data-led growth strategies aligned with environmental responsibility across the space ecosystem.",
+  "headline": "Strategic and Sustainable Marketing in the Space Sector",
   "location": "Leicester, United Kingdom",
   "email": "ryan@greenorbit.space",
-  "website": "https://greenorbit.space",
   "avatar": "/images/profile/ryan-laird.jpg",
-  "role": "Director of Green Orbit Digital — elevating brands with tailored strategies and sustainable marketing solutions for the space sector.",
+  "role": "Director, Green Orbit Digital.",
   "credentials": "MPhys (Hons) · MInstP · CMktr · MCIPR",
-  "summary": [
+  "biography": [
+    "Director and founder of Green Orbit Digital, specialising in sustainable marketing systems for the global space sector. Focused on data-led growth strategies aligned with environmental responsibility across the space ecosystem.",
     "Results-driven communications and marketing professional with over a decade of experience in the space industry. As a Chartered Marketer (CMktr), I have led numerous successful campaigns, driving brand growth and engagement through data-informed strategy, content creation, and audience-focused communications. I combine technical knowledge in physics and space studies with marketing, digital strategy, and public relations to communicate complex topics clearly and persuasively across diverse audiences.",
     "Beyond Green Orbit Digital, I maintain a portfolio of projects spanning software development, marketing, and space research, bridging disciplines to create meaningful connections between complex subjects and the audiences they serve."
   ],
@@ -30,7 +29,7 @@
   ],
   "portfolioLinks": [
     {
-      "label": "Green Orbit Difiral",
+      "label": "Green Orbit Digital",
       "href": "https://greenorbit.space"
     },
     {
