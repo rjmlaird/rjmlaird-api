@@ -8,6 +8,7 @@ import { handlePortfolio } from "./routes/portfolio";
 import { handleContact } from "./routes/contact";
 import { handleActivities } from "./routes/activities";
 import { handleGeneral } from "./routes/general";
+import { handleAi } from "./routes/ai";
 
 import awards from "./data/awards.json";
 import certifications from "./data/certifications.json";
@@ -149,6 +150,7 @@ app.get("/openapi.json", (c) =>
       { name: "General", description: "Organisations and UN countries" },
       { name: "Research", description: "Research API endpoints" },
       { name: "WebDAV", description: "WebDAV access" },
+      { name: "AI", description: "Grounded AI assistant" },
     ],
     paths: {
       "/v1/cv/section/{section}": {
@@ -207,6 +209,9 @@ app.all("/v1/activities", activitiesHandler);
 app.all("/v1/general/*", generalHandler);
 app.all("/v1/general", generalHandler);
 
+app.all("/v1/ai/*", async (c) => handleAi(c.req.raw, c.env));
+app.all("/v1/ai", async (c) => handleAi(c.req.raw, c.env));
+
 app.get("/v1/debug", (c) =>
   c.json({
     status: "ok",
@@ -217,6 +222,7 @@ app.get("/v1/debug", (c) =>
     contact: true,
     activities: true,
     general: true,
+    ai: true,
     timestamp: new Date().toISOString(),
   })
 );
