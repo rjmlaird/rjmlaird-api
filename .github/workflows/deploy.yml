@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-  workflow_dispatch: {}
+  workflow_dispatch:
 
 concurrency:
   group: cloudflare-worker-production
@@ -12,6 +12,7 @@ concurrency:
 
 permissions:
   contents: read
+  deployments: write
 
 jobs:
   deploy:
@@ -34,24 +35,28 @@ jobs:
 
       - name: Generate Cloudflare types
         run: npx wrangler types
+        working-directory: apps/api
 
       - name: Type check
-        run: npm run check
+        run: npm run check -w apps/api
 
       - name: Validate Wrangler auth
         run: npx wrangler whoami
+        working-directory: apps/api
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
       - name: Deploy Worker
         run: npx wrangler deploy --minify --keep-vars
+        working-directory: apps/api
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
       - name: Show deployments
         run: npx wrangler deployments list || true
+        working-directory: apps/api
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
