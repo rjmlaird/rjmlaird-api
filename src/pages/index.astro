@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="rjmlaird API" description="rjmlaird API">
+  <div id="swagger-ui"></div>
+
+  <script>
+    window.ui = SwaggerUIBundle({
+      url: "/openapi.json",
+      dom_id: "#swagger-ui",
+      deepLinking: true,
+      layout: "BaseLayout",
+      docExpansion: "list",
+      filter: false,
+      displayRequestDuration: true,
+      presets: [SwaggerUIBundle.presets.apis],
+    });
+  </script>
+</Layout>
