@@ -12,5 +12,11 @@
       "binding": "R2",
       "bucket_name": "zotero-library"
     }
+  ],
+  "routes": [
+    {
+      "pattern": "api.rjmlaird.co.uk",
+      "custom_domain": true
+    }
   ]
 }
