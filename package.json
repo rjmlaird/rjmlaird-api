@@ -1,26 +1,23 @@
 {
-  "name": "rjmlaird-api",
-  "version": "0.1.0",
+  "name": "rjmlaird",
   "private": true,
-  "engines": {
-    "node": ">=22"
-  },
+  "workspaces": [
+    "apps/*"
+  ],
   "scripts": {
-    "dev": "wrangler dev",
-    "build": "tsc --noEmit",
-    "check": "tsc --noEmit",
-    "deploy": "wrangler deploy",
-    "cf-typegen": "wrangler types",
-    "prepare": "wrangler types"
+    "dev:api": "npm run dev -w apps/api",
+    "dev:site": "npm run dev -w apps/site",
+    "build:api": "npm run build -w apps/api",
+    "build:site": "npm run build -w apps/site",
+    "preview:site": "npm run preview -w apps/site",
+    "deploy:api": "npm run deploy -w apps/api"
   },
-  "dependencies": {
-    "chanfana": "3.3.0",
-    "hono": "^4.12.27",
-    "zod": "4.3.6"
-  },
-  "devDependencies": {
-    "@types/node": "25.9.4",
-    "typescript": "5.7.3",
-    "wrangler": "4.106.0"
+  "allowScripts": {
+    "esbuild@0.27.7": true,
+    "esbuild@0.28.1": true,
+    "esbuild@0.25.12": true,
+    "fsevents@2.3.3": true,
+    "sharp@0.34.5": true,
+    "workerd@1.20260630.1": true
   }
 }
