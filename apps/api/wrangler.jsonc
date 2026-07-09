@@ -14,5 +14,11 @@
       "binding": "R2",
       "bucket_name": "zotero-library"
     }
-  ]
+  ],
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "../site/dist",
+    "run_worker_first": true,
+    "not_found_handling": "404-page"
+  }
 }
