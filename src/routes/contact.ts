@@ -1,14 +1,12 @@
 import { json } from "../lib/jsonResponse";
 
-import contact from "../data/contact.json";
 import socials from "../data/socials.json";
 
-export type ContactCollection = "contact" | "socials";
+export type ContactCollection = "socials";
 
-const SECTION_KEYS = ["contact", "socials"] as const satisfies readonly ContactCollection[];
+const SECTION_KEYS = ["socials"] as const satisfies readonly ContactCollection[];
 
 const contactData = {
-  contact,
   socials,
 } satisfies Record<ContactCollection, unknown>;
 

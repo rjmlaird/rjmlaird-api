@@ -14,12 +14,17 @@ import certifications from "./data/certifications.json";
 import credly from "./data/credly.json";
 import education from "./data/education.json";
 import experience from "./data/experience.json";
+import initiatives from "./data/initiatives.json";
 import { languages } from "./data/languages";
 import memberships from "./data/memberships.json";
+import organisations from "./data/organisations.json";
 import profile from "./data/profile.json";
+import publications from "./data/publications.txt";
 import skills from "./data/skills.json";
 import teaching from "./data/teaching.json";
 import { tools } from "./data/tools";
+import { unCountries } from "./data/unCountries";
+import videos from "./data/videos.json";
 import volunteering from "./data/volunteering.json";
 
 const app = new Hono<{ Bindings: Env }>();
@@ -177,6 +182,13 @@ app.get("/openapi.json", (c) =>
         },
       },
     },
+  })
+);
+
+app.get("/v1/portfolio/publications.bib", (c) =>
+  c.text(publications, 200, {
+    "content-type": "text/plain; charset=utf-8",
+    "cache-control": "public, max-age=3600",
   })
 );
 
