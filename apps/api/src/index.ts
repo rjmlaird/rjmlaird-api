@@ -60,68 +60,30 @@ const cvCollections = [
   "volunteering",
 ] as const satisfies readonly CvCollection[];
 
-const webdavHandler = async (c: any) => {
-  try {
-    return await handleWebDAV(c.req.raw, c.env);
-  } catch (err) {
-    console.error("WebDAV error:", err);
-    return c.text("WebDAV internal error", 500);
-  }
-};
+const withErrorHandling =
+  <T extends any[]>(name: string, fn: (c: any) => Promise<Response>) =>
+  async (c: any) => {
+    try {
+      return await fn(c);
+    } catch (err) {
+      console.error(`${name} error:`, err);
+      return c.json(
+        {
+          error: `${name} internal error`,
+          message: err instanceof Error ? err.message : String(err),
+        },
+        500
+      );
+    }
+  };
 
-const researchHandler = async (c: any) => {
-  try {
-    return await handleResearch(c.req.raw, c.env);
-  } catch (err) {
-    console.error("Research API error:", err);
-    return c.json({ error: "Research internal error", message: err instanceof Error ? err.message : String(err) }, 500);
-  }
-};
-
-const cvHandler = async (c: any) => {
-  try {
-    return await handleCv(c.req.raw, c.env);
-  } catch (err) {
-    console.error("CV API error:", err);
-    return c.json({ error: "CV internal error", message: err instanceof Error ? err.message : String(err) }, 500);
-  }
-};
-
-const portfolioHandler = async (c: any) => {
-  try {
-    return await handlePortfolio(c.req.raw, c.env);
-  } catch (err) {
-    console.error("Portfolio API error:", err);
-    return c.json({ error: "Portfolio internal error", message: err instanceof Error ? err.message : String(err) }, 500);
-  }
-};
-
-const contactHandler = async (c: any) => {
-  try {
-    return await handleContact(c.req.raw, c.env);
-  } catch (err) {
-    console.error("Contact API error:", err);
-    return c.json({ error: "Contact internal error", message: err instanceof Error ? err.message : String(err) }, 500);
-  }
-};
-
-const activitiesHandler = async (c: any) => {
-  try {
-    return await handleActivities(c.req.raw, c.env);
-  } catch (err) {
-    console.error("Activities API error:", err);
-    return c.json({ error: "Activities internal error", message: err instanceof Error ? err.message : String(err) }, 500);
-  }
-};
-
-const generalHandler = async (c: any) => {
-  try {
-    return await handleGeneral(c.req.raw, c.env);
-  } catch (err) {
-    console.error("General API error:", err);
-    return c.json({ error: "General internal error", message: err instanceof Error ? err.message : String(err) }, 500);
-  }
-};
+const webdavHandler = withErrorHandling("WebDAV", (c) => handleWebDAV(c.req.raw, c.env));
+const researchHandler = withErrorHandling("Research API", (c) => handleResearch(c.req.raw, c.env));
+const cvHandler = withErrorHandling("CV API", (c) => handleCv(c.req.raw, c.env));
+const portfolioHandler = withErrorHandling("Portfolio", (c) => handlePortfolio(c.req.raw, c.env));
+const contactHandler = withErrorHandling("Contact", (c) => handleContact(c.req.raw, c.env));
+const activitiesHandler = withErrorHandling("Activities", (c) => handleActivities(c.req.raw, c.env));
+const generalHandler = withErrorHandling("General", (c) => handleGeneral(c.req.raw, c.env));
 
 app.get("/health", (c) =>
   c.json({
@@ -139,7 +101,11 @@ app.get("/openapi.json", (c) =>
       version: "1.0.0",
       description: "GitHub-powered CV + portfolio + contact + research + WebDAV API",
     },
-    servers: [{ url: "https://api.rjmlaird.co.uk" }],
+    servers: [
+      {
+        url: "https://api.rjmlaird.co.uk",
+      },
+    ],
     tags: [
       { name: "System", description: "Health and API metadata" },
       { name: "Debug", description: "Debug endpoints" },
@@ -156,7 +122,14 @@ app.get("/openapi.json", (c) =>
       "/v1/cv/section/{section}": {
         get: {
           tags: ["CV"],
-          parameters: [{ name: "section", in: "path", required: true, schema: { type: "string", enum: cvCollections } }],
+          parameters: [
+            {
+              name: "section",
+              in: "path",
+              required: true,
+              schema: { type: "string", enum: cvCollections },
+            },
+          ],
         },
       },
       "/v1/portfolio/section/{section}": {
@@ -168,19 +141,40 @@ app.get("/openapi.json", (c) =>
       "/v1/contact/section/{section}": {
         get: {
           tags: ["Contact"],
-          parameters: [{ name: "section", in: "path", required: true, schema: { type: "string", enum: ["contact", "socials"] } }],
+          parameters: [
+            {
+              name: "section",
+              in: "path",
+              required: true,
+              schema: { type: "string", enum: ["contact", "socials"] },
+            },
+          ],
         },
       },
       "/v1/activities/section/{section}": {
         get: {
           tags: ["Activities"],
-          parameters: [{ name: "section", in: "path", required: true, schema: { type: "string", enum: ["events", "eventsAttending", "talks"] } }],
+          parameters: [
+            {
+              name: "section",
+              in: "path",
+              required: true,
+              schema: { type: "string", enum: ["events", "eventsAttending", "talks"] },
+            },
+          ],
         },
       },
       "/v1/general/section/{section}": {
         get: {
           tags: ["General"],
-          parameters: [{ name: "section", in: "path", required: true, schema: { type: "string", enum: ["organisations", "unCountries"] } }],
+          parameters: [
+            {
+              name: "section",
+              in: "path",
+              required: true,
+              schema: { type: "string", enum: ["organisations", "unCountries"] },
+            },
+          ],
         },
       },
     },
