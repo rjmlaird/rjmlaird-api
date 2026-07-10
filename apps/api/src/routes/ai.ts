@@ -198,13 +198,15 @@ async function callPerplexity(question: string, systemPrompt: string, apiKey: st
   return { answer: answer || "No answer generated." };
 }
 
-const ADAPTERS: Record<Provider, (question: string, systemPrompt: string, apiKey: string) => Promise<AdapterResult>> =
-  {
-    claude: callClaude,
-    openai: callOpenAI,
-    gemini: callGemini,
-    perplexity: callPerplexity,
-  };
+const ADAPTERS: Record<
+  Provider,
+  (question: string, systemPrompt: string, apiKey: string) => Promise<AdapterResult>
+> = {
+  claude: callClaude,
+  openai: callOpenAI,
+  gemini: callGemini,
+  perplexity: callPerplexity,
+};
 
 aiApp.post("/", async (c) => {
   const body = await c.req.json().catch(() => null);
