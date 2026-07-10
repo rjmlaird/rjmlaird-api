@@ -1,7 +1,7 @@
 import { Hono } from "hono";
 import { storage } from "../services/storage";
 
-const webdav = new Hono<{ Bindings: Env }>().basePath("/webdav");
+const webdav = new Hono<{ Bindings: Env }>();
 
 const BASE_PREFIX = "zotero";
 const DAV_HEADER = "1,2";
@@ -14,9 +14,21 @@ type LockRecord = {
   expiresAt: number;
 };
 
-type DavNode =
-  | { kind: "file"; key: string; size: number; contentType?: string; etag?: string }
-  | { kind: "collection"; key: string; etag?: string };
+type DavFile = {
+  kind: "file";
+  key: string;
+  size: number;
+  contentType?: string;
+  etag?: string;
+};
+
+type DavCollection = {
+  kind: "collection";
+  key: string;
+  etag?: string;
+};
+
+type DavNode = DavFile | DavCollection;
 
 function escapeXml(value: string) {
   return value
@@ -50,12 +62,17 @@ function plain(body: string, status: number, headers: Record<string, string> = {
 
 function normalizePath(pathname: string) {
   const clean = pathname.replace(/^\/+/, "");
-  const base = clean.startsWith("webdav/") ? clean.slice("webdav/".length) : clean === "webdav" ? "" : clean;
-  const stripped = base
+  const withoutWebdav =
+    clean === "webdav"
+      ? ""
+      : clean.startsWith("webdav/")
+        ? clean.slice("webdav/".length)
+        : clean;
+
+  return withoutWebdav
     .replace(/^v1\/webdav\/?/, "")
     .replace(/^zotero\/?/, "")
     .replace(/\/+$/, "");
-  return stripped;
 }
 
 function toKey(path: string | null) {
@@ -70,11 +87,17 @@ function etagFor(key: string, size = 0) {
 
 function listArray(result: unknown): Array<{ key: string; size?: number; contentType?: string; etag?: string }> {
   if (!result) return [];
-  if (Array.isArray(result)) return result as Array<{ key: string; size?: number; contentType?: string; etag?: string }>;
+  if (Array.isArray(result)) {
+    return result as Array<{ key: string; size?: number; contentType?: string; etag?: string }>;
+  }
   if (typeof result === "object" && result !== null) {
     const r = result as Record<string, unknown>;
-    if (Array.isArray(r.objects)) return r.objects as Array<{ key: string; size?: number; contentType?: string; etag?: string }>;
-    if (Array.isArray(r.keys)) return r.keys as Array<{ key: string; size?: number; contentType?: string; etag?: string }>;
+    if (Array.isArray(r.objects)) {
+      return r.objects as Array<{ key: string; size?: number; contentType?: string; etag?: string }>;
+    }
+    if (Array.isArray(r.keys)) {
+      return r.keys as Array<{ key: string; size?: number; contentType?: string; etag?: string }>;
+    }
   }
   return [];
 }
@@ -175,7 +198,8 @@ webdav.all("*", async (c) => {
   const pathname = normalizePath(new URL(request.url).pathname);
   const key = toKey(pathname || null);
   const root = !pathname;
-  const current = root
+
+  const current: DavNode | null = root
     ? { kind: "collection", key: BASE_PREFIX, etag: etagFor(BASE_PREFIX, 0) }
     : await exists(key, c.env);
 
@@ -262,21 +286,29 @@ webdav.all("*", async (c) => {
           const hrefPath = isCollection ? rel.replace(/\/\.folder$/, "") : rel;
           const display = hrefPath.split("/").pop() ?? hrefPath;
 
-          responses.push(
-            propfindItem(
-              isCollection
-                ? { kind: "collection", key: item.key, etag: item.etag }
-                : {
-                    kind: "file",
-                    key: item.key,
-                    size: item.size ?? 0,
-                    contentType: item.contentType,
-                    etag: item.etag,
-                  },
-              hrefPath,
-              display
-            )
-          );
+          if (isCollection) {
+            responses.push(
+              propfindItem(
+                { kind: "collection", key: item.key, etag: item.etag },
+                hrefPath,
+                display
+              )
+            );
+          } else {
+            responses.push(
+              propfindItem(
+                {
+                  kind: "file",
+                  key: item.key,
+                  size: item.size ?? 0,
+                  contentType: item.contentType,
+                  etag: item.etag,
+                },
+                hrefPath,
+                display
+              )
+            );
+          }
         }
       }
 
