@@ -79,6 +79,7 @@ app.get("/api/:collection", (c) => {
 });
 
 app.get("/", (c) => c.text("rjmlaird API"));
-app.all("*", (c) => c.notFound());
+
+app.notFound((c) => c.text("Not found", 404));
 
 export default app;
