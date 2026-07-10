@@ -1,7 +1,7 @@
 import { Hono } from "hono";
 import { storage } from "../services/storage";
 
-const webdav = new Hono<{ Bindings: Env }>();
+const webdav = new Hono<{ Bindings: Env }>().basePath("/webdav");
 
 const BASE_PREFIX = "zotero";
 const DAV_HEADER = "1,2";
@@ -49,16 +49,17 @@ function plain(body: string, status: number, headers: Record<string, string> = {
 }
 
 function normalizePath(pathname: string) {
-  return pathname
-    .replace(/^\/+/, "")
+  const clean = pathname.replace(/^\/+/, "");
+  const base = clean.startsWith("webdav/") ? clean.slice("webdav/".length) : clean === "webdav" ? "" : clean;
+  const stripped = base
     .replace(/^v1\/webdav\/?/, "")
-    .replace(/^webdav\/?/, "")
     .replace(/^zotero\/?/, "")
     .replace(/\/+$/, "");
+  return stripped;
 }
 
 function toKey(path: string | null) {
-  if (!path) return null;
+  if (!path) return BASE_PREFIX;
   const cleaned = path.replace(/^\/+/, "").replace(/\/+$/, "");
   return cleaned ? `${BASE_PREFIX}/${cleaned}` : BASE_PREFIX;
 }
@@ -69,17 +70,11 @@ function etagFor(key: string, size = 0) {
 
 function listArray(result: unknown): Array<{ key: string; size?: number; contentType?: string; etag?: string }> {
   if (!result) return [];
-  if (Array.isArray(result)) {
-    return result as Array<{ key: string; size?: number; contentType?: string; etag?: string }>;
-  }
+  if (Array.isArray(result)) return result as Array<{ key: string; size?: number; contentType?: string; etag?: string }>;
   if (typeof result === "object" && result !== null) {
     const r = result as Record<string, unknown>;
-    if (Array.isArray(r.objects)) {
-      return r.objects as Array<{ key: string; size?: number; contentType?: string; etag?: string }>;
-    }
-    if (Array.isArray(r.keys)) {
-      return r.keys as Array<{ key: string; size?: number; contentType?: string; etag?: string }>;
-    }
+    if (Array.isArray(r.objects)) return r.objects as Array<{ key: string; size?: number; contentType?: string; etag?: string }>;
+    if (Array.isArray(r.keys)) return r.keys as Array<{ key: string; size?: number; contentType?: string; etag?: string }>;
   }
   return [];
 }
@@ -178,13 +173,11 @@ webdav.all("*", async (c) => {
   }
 
   const pathname = normalizePath(new URL(request.url).pathname);
-  const key = pathname ? toKey(pathname) : BASE_PREFIX;
-  const root = !pathname || pathname === BASE_PREFIX;
+  const key = toKey(pathname || null);
+  const root = !pathname;
   const current = root
     ? { kind: "collection", key: BASE_PREFIX, etag: etagFor(BASE_PREFIX, 0) }
-    : key
-      ? await exists(key, c.env)
-      : null;
+    : await exists(key, c.env);
 
   switch (request.method) {
     case "OPTIONS":
@@ -338,9 +331,10 @@ webdav.all("*", async (c) => {
       if (!current) return plain("Not found", 404);
 
       if (current.kind === "collection") {
-        return root
-          ? new Response("WebDAV root", { status: 200, headers: { DAV: DAV_HEADER } })
-          : new Response("Method not allowed", { status: 405, headers: { DAV: DAV_HEADER, Allow: ALLOW_HEADER } });
+        return new Response(null, {
+          status: 405,
+          headers: { DAV: DAV_HEADER, Allow: ALLOW_HEADER },
+        });
       }
 
       const obj = await storage.r2.get(key, c.env);
