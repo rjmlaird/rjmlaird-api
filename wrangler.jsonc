@@ -15,12 +15,6 @@
       "bucket_name": "zotero-library"
     }
   ],
-  "assets": {
-    "binding": "ASSETS",
-    "directory": "../site",
-    "run_worker_first": true,
-    "not_found_handling": "404-page"
-  },
   "observability": {
     "enabled": false,
     "head_sampling_rate": 1,
