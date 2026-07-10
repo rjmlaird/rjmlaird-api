@@ -1,3 +1,4 @@
+import { Hono } from "hono";
 import { json } from "../lib/jsonResponse";
 
 import awards from "../data/awards.json";
@@ -57,6 +58,8 @@ const cvData = {
   volunteering,
 } satisfies Record<CvCollection, unknown>;
 
+const app = new Hono<{ Bindings: Env }>();
+
 function safeTrim(value: unknown) {
   return typeof value === "string" ? value.trim() : "";
 }
@@ -72,8 +75,8 @@ function getRoute(request: Request) {
   return { path, query };
 }
 
-export async function handleCv(request: Request, _env: Env) {
-  const method = request.method.toUpperCase();
+app.get("*", async (c) => {
+  const request = c.req.raw;
   const { path, query } = getRoute(request);
 
   if (!path) {
@@ -126,9 +129,11 @@ export async function handleCv(request: Request, _env: Env) {
     return json({ section, data: cvData[section] });
   }
 
-  if (isCollection(path) && method === "GET") {
+  if (isCollection(path)) {
     return json({ section: path, data: cvData[path] });
   }
 
-  return json({ error: "Not found", path, method }, 404);
-}
+  return json({ error: "Not found", path, method: request.method }, 404);
+});
+
+export default app;

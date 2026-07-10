@@ -1,3 +1,4 @@
+import { Hono } from "hono";
 import { json } from "../lib/jsonResponse";
 
 import socials from "../data/socials.json";
@@ -9,6 +10,8 @@ const SECTION_KEYS = ["socials"] as const satisfies readonly ContactCollection[]
 const contactData = {
   socials,
 } satisfies Record<ContactCollection, unknown>;
+
+const app = new Hono<{ Bindings: Env }>();
 
 function safeTrim(value: unknown) {
   return typeof value === "string" ? value.trim() : "";
@@ -25,9 +28,10 @@ function getRoute(request: Request) {
   return { path, query };
 }
 
-export async function handleContact(request: Request, _env: Env) {
-  const method = request.method.toUpperCase();
+app.get("*", async (c) => {
+  const request = c.req.raw;
   const { path, query } = getRoute(request);
+  const method = request.method.toUpperCase();
 
   if (!path) {
     return json({
@@ -79,9 +83,11 @@ export async function handleContact(request: Request, _env: Env) {
     return json({ section, data: contactData[section] });
   }
 
-  if (isCollection(path) && method === "GET") {
+  if (isCollection(path)) {
     return json({ section: path, data: contactData[path] });
   }
 
   return json({ error: "Not found", path, method }, 404);
-}
+});
+
+export default app;

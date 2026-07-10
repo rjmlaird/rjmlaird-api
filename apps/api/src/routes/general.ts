@@ -1,4 +1,4 @@
-// src/routes/general.ts
+import { Hono } from "hono";
 import { json } from "../lib/jsonResponse";
 import organisations from "../data/organisations.json";
 import { unCountries } from "../data/unCountries";
@@ -11,6 +11,8 @@ const generalData = {
   organisations,
   unCountries,
 } satisfies Record<GeneralCollection, unknown>;
+
+const app = new Hono<{ Bindings: Env }>();
 
 function safeTrim(value: unknown) {
   return typeof value === "string" ? value.trim() : "";
@@ -27,9 +29,10 @@ function getRoute(request: Request) {
   return { path, query };
 }
 
-export async function handleGeneral(request: Request, _env: Env) {
-  const method = request.method.toUpperCase();
+app.get("*", async (c) => {
+  const request = c.req.raw;
   const { path, query } = getRoute(request);
+  const method = request.method.toUpperCase();
 
   if (!path) {
     return json({
@@ -81,9 +84,11 @@ export async function handleGeneral(request: Request, _env: Env) {
     return json({ section, data: generalData[section] });
   }
 
-  if (isCollection(path) && method === "GET") {
+  if (isCollection(path)) {
     return json({ section: path, data: generalData[path] });
   }
 
   return json({ error: "Not found", path, method }, 404);
-}
+});
+
+export default app;

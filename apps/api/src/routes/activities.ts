@@ -1,4 +1,4 @@
-// src/routes/activities.ts
+import { Hono } from "hono";
 import { json } from "../lib/jsonResponse";
 import eventsAttending from "../data/eventsAttending.json";
 import talks from "../data/talks.json";
@@ -11,6 +11,8 @@ const activitiesData = {
   eventsAttending,
   talks,
 } satisfies Record<ActivitiesCollection, unknown>;
+
+const app = new Hono<{ Bindings: Env }>();
 
 function safeTrim(value: unknown) {
   return typeof value === "string" ? value.trim() : "";
@@ -27,8 +29,8 @@ function getRoute(request: Request) {
   return { path, query };
 }
 
-export async function handleActivities(request: Request, _env: Env) {
-  const method = request.method.toUpperCase();
+app.get("*", async (c) => {
+  const request = c.req.raw;
   const { path, query } = getRoute(request);
 
   if (!path) {
@@ -81,9 +83,11 @@ export async function handleActivities(request: Request, _env: Env) {
     return json({ section, data: activitiesData[section] });
   }
 
-  if (isCollection(path) && method === "GET") {
+  if (isCollection(path)) {
     return json({ section: path, data: activitiesData[path] });
   }
 
-  return json({ error: "Not found", path, method }, 404);
-}
+  return json({ error: "Not found", path, method: request.method }, 404);
+});
+
+export default app;
