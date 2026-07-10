@@ -62,8 +62,7 @@ async function fetchContext(origin: string): Promise<string> {
       });
       if (!res.ok) throw new Error(`${path} returned ${res.status}`);
       const data = await res.json();
-      return `## Source: ${path}
-${JSON.stringify(data)}`;
+      return `## Source: ${path}\n${JSON.stringify(data)}`;
     })
   );
 
@@ -76,13 +75,10 @@ ${JSON.stringify(data)}`;
       "## Fallback context",
       "Ryan Laird is a web developer and science communicator working on digital products, content systems, and API-driven sites.",
       "Full CV data is temporarily unavailable.",
-    ].join("
-");
+    ].join("\n");
   }
 
-  return succeeded.join("
-
-");
+  return succeeded.join("\n\n");
 }
 
 function buildSystemPrompt(context: string): string {
@@ -93,8 +89,7 @@ function buildSystemPrompt(context: string): string {
     "",
     "CONTEXT:",
     context,
-  ].join("
-");
+  ].join("\n");
 }
 
 async function callClaude(question: string, systemPrompt: string, apiKey: string): Promise<AdapterResult> {
@@ -119,8 +114,7 @@ async function callClaude(question: string, systemPrompt: string, apiKey: string
   const answer = data.content
     ?.filter((b) => b.type === "text")
     .map((b) => b.text ?? "")
-    .join("
-")
+    .join("\n")
     .trim();
 
   return { answer: answer || "No answer generated." };

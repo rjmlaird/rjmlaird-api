@@ -50,16 +50,16 @@ function plain(body: string, status: number, headers: Record<string, string> = {
 
 function normalizePath(pathname: string) {
   return pathname
-    .replace(/^/+/, "")
-    .replace(/^v1/webdav/?/, "")
-    .replace(/^webdav/?/, "")
-    .replace(/^zotero/?/, "")
-    .replace(//+$/, "");
+    .replace(/^\/+/, "")
+    .replace(/^v1\/webdav\/?/, "")
+    .replace(/^webdav\/?/, "")
+    .replace(/^zotero\/?/, "")
+    .replace(/\/+$/, "");
 }
 
 function toKey(path: string | null) {
   if (!path) return null;
-  const cleaned = path.replace(/^/+/, "").replace(//+$/, "");
+  const cleaned = path.replace(/^\/+/, "").replace(/\/+$/, "");
   return cleaned ? `${BASE_PREFIX}/${cleaned}` : BASE_PREFIX;
 }
 
@@ -142,7 +142,7 @@ async function parentExists(key: string, env: Env) {
 }
 
 function hrefFromPath(path: string) {
-  const cleaned = path.replace(/^/+/, "").replace(//+$/, "");
+  const cleaned = path.replace(/^\/+/, "").replace(/\/+$/, "");
   return cleaned ? `/webdav/zotero/${encodeURI(cleaned)}` : "/webdav/zotero/";
 }
 
@@ -152,24 +152,11 @@ function propfindItem(node: DavNode, requestPath: string, displayname: string) {
   const etag = node.etag ?? etagFor(node.key, node.kind === "file" ? node.size : 0);
   const len = node.kind === "collection" ? 0 : node.size;
 
-  return `
-<d:response>
-  <d:href>${escapeXml(href)}</d:href>
-  <d:propstat>
-    <d:prop>
-      <d:resourcetype>${resType}</d:resourcetype>
-      <d:displayname>${escapeXml(displayname)}</d:displayname>
-      <d:getetag>${escapeXml(etag)}</d:getetag>
-      <d:getcontentlength>${len}</d:getcontentlength>
-    </d:prop>
-    <d:status>HTTP/1.1 200 OK</d:status>
-  </d:propstat>
-</d:response>`;
+  return `\n<d:response>\n  <d:href>${escapeXml(href)}</d:href>\n  <d:propstat>\n    <d:prop>\n      <d:resourcetype>${resType}</d:resourcetype>\n      <d:displayname>${escapeXml(displayname)}</d:displayname>\n      <d:getetag>${escapeXml(etag)}</d:getetag>\n      <d:getcontentlength>${len}</d:getcontentlength>\n    </d:prop>\n    <d:status>HTTP/1.1 200 OK</d:status>\n  </d:propstat>\n</d:response>`;
 }
 
 function multistatus(items: string[]) {
-  return `<?xml version="1.0" encoding="utf-8"?>
-<d:multistatus xmlns:d="DAV:">${items.join("")}</d:multistatus>`;
+  return `<?xml version="1.0" encoding="utf-8"?>\n<d:multistatus xmlns:d="DAV:">${items.join("")}</d:multistatus>`;
 }
 
 function parseLockToken(request: Request) {
@@ -218,12 +205,7 @@ webdav.all("*", async (c) => {
         const supplied = parseLockToken(request);
         if (supplied !== existing.token) {
           return xml(
-            `<?xml version="1.0" encoding="utf-8"?>
-<D:error xmlns:D="DAV:">
-  <D:lock-token-submitted>
-    <D:href>${escapeXml(`/webdav/${pathname || BASE_PREFIX}/`)}</D:href>
-  </D:lock-token-submitted>
-</D:error>`,
+            `<?xml version="1.0" encoding="utf-8"?>\n<D:error xmlns:D="DAV:">\n  <D:lock-token-submitted>\n    <D:href>${escapeXml(`/webdav/${pathname || BASE_PREFIX}/`)}</D:href>\n  </D:lock-token-submitted>\n</D:error>`,
             423
           );
         }
@@ -232,16 +214,7 @@ webdav.all("*", async (c) => {
         await setLockRecord(existing, c.env);
 
         return xml(
-          `<?xml version="1.0" encoding="utf-8"?>
-<d:prop xmlns:d="DAV:">
-  <d:lockdiscovery>
-    <d:activelock>
-      <d:locktoken>
-        <d:href>${escapeXml(existing.token)}</d:href>
-      </d:locktoken>
-    </d:activelock>
-  </d:lockdiscovery>
-</d:prop>`,
+          `<?xml version="1.0" encoding="utf-8"?>\n<d:prop xmlns:d="DAV:">\n  <d:lockdiscovery>\n    <d:activelock>\n      <d:locktoken>\n        <d:href>${escapeXml(existing.token)}</d:href>\n      </d:locktoken>\n    </d:activelock>\n  </d:lockdiscovery>\n</d:prop>`,
           200,
           { "Lock-Token": `<${existing.token}>` }
         );
@@ -258,16 +231,7 @@ webdav.all("*", async (c) => {
       );
 
       return xml(
-        `<?xml version="1.0" encoding="utf-8"?>
-<d:prop xmlns:d="DAV:">
-  <d:lockdiscovery>
-    <d:activelock>
-      <d:locktoken>
-        <d:href>${escapeXml(token)}</d:href>
-      </d:locktoken>
-    </d:activelock>
-  </d:lockdiscovery>
-</d:prop>`,
+        `<?xml version="1.0" encoding="utf-8"?>\n<d:prop xmlns:d="DAV:">\n  <d:lockdiscovery>\n    <d:activelock>\n      <d:locktoken>\n        <d:href>${escapeXml(token)}</d:href>\n      </d:locktoken>\n    </d:activelock>\n  </d:lockdiscovery>\n</d:prop>`,
         200,
         { "Lock-Token": `<${token}>` }
       );
@@ -302,7 +266,7 @@ webdav.all("*", async (c) => {
             ? item.key.slice(BASE_PREFIX.length + 1)
             : item.key;
           const isCollection = item.key.endsWith("/.folder");
-          const hrefPath = isCollection ? rel.replace(//.folder$/, "") : rel;
+          const hrefPath = isCollection ? rel.replace(/\/\.folder$/, "") : rel;
           const display = hrefPath.split("/").pop() ?? hrefPath;
 
           responses.push(
@@ -358,12 +322,7 @@ webdav.all("*", async (c) => {
       const token = parseLockToken(request);
       if (lock && token !== lock.token) {
         return xml(
-          `<?xml version="1.0" encoding="utf-8"?>
-<D:error xmlns:D="DAV:">
-  <D:lock-token-submitted>
-    <D:href>${escapeXml(`/webdav/${key}`)}</D:href>
-  </D:lock-token-submitted>
-</D:error>`,
+          `<?xml version="1.0" encoding="utf-8"?>\n<D:error xmlns:D="DAV:">\n  <D:lock-token-submitted>\n    <D:href>${escapeXml(`/webdav/${key}`)}</D:href>\n  </D:lock-token-submitted>\n</D:error>`,
           423
         );
       }
@@ -406,12 +365,7 @@ webdav.all("*", async (c) => {
       const token = parseLockToken(request);
       if (lock && token !== lock.token) {
         return xml(
-          `<?xml version="1.0" encoding="utf-8"?>
-<D:error xmlns:D="DAV:">
-  <D:lock-token-submitted>
-    <D:href>${escapeXml(`/webdav/${key}`)}</D:href>
-  </D:lock-token-submitted>
-</D:error>`,
+          `<?xml version="1.0" encoding="utf-8"?>\n<D:error xmlns:D="DAV:">\n  <D:lock-token-submitted>\n    <D:href>${escapeXml(`/webdav/${key}`)}</D:href>\n  </D:lock-token-submitted>\n</D:error>`,
           423
         );
       }
