@@ -1,9 +1,9 @@
+import { Hono } from "hono";
 import { storage } from "../services/storage";
 
 const BASE_PREFIX = "zotero";
 const DAV_HEADER = "1,2";
-const ALLOW_HEADER =
-  "OPTIONS, GET, PUT, DELETE, PROPFIND, HEAD, MKCOL, LOCK, UNLOCK";
+const ALLOW_HEADER = "OPTIONS, GET, PUT, DELETE, PROPFIND, HEAD, MKCOL, LOCK, UNLOCK";
 const LOCK_TIMEOUT_SECONDS = 300;
 const DEBUG_DAV = true;
 
@@ -25,6 +25,10 @@ type LockRecord = {
 
 type LogLevel = "debug" | "info" | "warn" | "error";
 
+type WebDAVEnv = Env;
+
+const webdav = new Hono<{ Bindings: WebDAVEnv }>();
+
 function escapeXml(value: string): string {
   return value
     .replace(/&/g, "&amp;")
@@ -44,29 +48,32 @@ function safeDecode(path: string): string {
 
 function normalizePath(raw: string): string {
   return safeDecode(raw)
-    .replace(/^\/+/, "")
-    .replace(/^v1\/webdav\/?/, "")
-    .replace(/^webdav\/?/, "")
-    .replace(/^zotero\/?/, "")
-    .replace(/\/+$/, "");
+    .replace(/^/+/, "")
+    .replace(/^v1/webdav/?/, "")
+    .replace(/^webdav/?/, "")
+    .replace(/^zotero/?/, "")
+    .replace(//+$/, "");
 }
 
 function toKey(path: string | null): string | null {
   if (!path) return null;
-  const cleaned = path.replace(/^\/+/, "").replace(/\/+$/, "");
+  const cleaned = path.replace(/^/+/, "").replace(//+$/, "");
   return cleaned ? `${BASE_PREFIX}/${cleaned}` : BASE_PREFIX;
 }
 
 function toHref(path: string): string {
-  const cleaned = path.replace(/^\/+/, "").replace(/\/+$/, "");
+  const cleaned = path.replace(/^/+/, "").replace(//+$/, "");
   return cleaned ? `/webdav/zotero/${encodeURI(cleaned)}` : "/webdav/zotero/";
 }
 
-function normalizeList(result: any): any[] {
+function normalizeList(result: unknown): any[] {
   if (!result) return [];
   if (Array.isArray(result)) return result;
-  if (Array.isArray(result.objects)) return result.objects;
-  if (Array.isArray(result.keys)) return result.keys;
+  if (typeof result === "object" && result) {
+    const r = result as Record<string, unknown>;
+    if (Array.isArray(r.objects)) return r.objects;
+    if (Array.isArray(r.keys)) return r.keys;
+  }
   return [];
 }
 
@@ -116,9 +123,9 @@ async function readBodyPreview(request: Request, max = 512): Promise<string | nu
   const ct = request.headers.get("content-type") ?? "";
   if (request.method === "GET" || request.method === "HEAD" || request.method === "DELETE") return null;
   if (!ct && request.method !== "LOCK" && request.method !== "PROPFIND" && request.method !== "MKCOL") return null;
+
   try {
-    const clone = request.clone();
-    const text = await clone.text();
+    const text = await request.clone().text();
     if (!text) return null;
     return previewText(text, max);
   } catch {
@@ -204,12 +211,7 @@ function getLockTokenFromHeaders(request: Request): string | null {
   const lockToken = request.headers.get("lock-token");
   if (lockToken) return lockToken.replace(/^<|>$/g, "").trim();
   const ifTokens = parseIfHeader(request);
-  return (
-    ifTokens.find(
-      (token) =>
-        token.startsWith("urn:uuid:") || token.startsWith("opaquelocktoken:")
-    ) ?? null
-  );
+  return ifTokens.find((token) => token.startsWith("urn:uuid:") || token.startsWith("opaquelocktoken:")) ?? null;
 }
 
 function lockKey(key: string): string {
@@ -218,14 +220,7 @@ function lockKey(key: string): string {
 
 function logEvent(level: LogLevel, event: string, data: Record<string, unknown>) {
   if (!DEBUG_DAV) return;
-  console.log(
-    JSON.stringify({
-      ts: new Date().toISOString(),
-      level,
-      event,
-      ...data,
-    })
-  );
+  console.log(JSON.stringify({ ts: new Date().toISOString(), level, event, ...data }));
 }
 
 function requestContext(request: Request) {
@@ -243,9 +238,10 @@ function requestContext(request: Request) {
   };
 }
 
-async function getLockRecord(key: string, env: any): Promise<LockRecord | null> {
+async function getLockRecord(key: string, env: WebDAVEnv): Promise<LockRecord | null> {
   const raw = await storage.r2.get(lockKey(key), env);
-  if (!raw) return null;
+  if (!raw?.body) return null;
+
   const text = await new Response(raw.body).text();
   try {
     const parsed = JSON.parse(text) as LockRecord;
@@ -261,20 +257,15 @@ async function getLockRecord(key: string, env: any): Promise<LockRecord | null> 
   }
 }
 
-async function setLockRecord(record: LockRecord, env: any): Promise<void> {
-  await storage.r2.put(
-    lockKey(record.key),
-    new TextEncoder().encode(JSON.stringify(record)),
-    env,
-    "application/json"
-  );
+async function setLockRecord(record: LockRecord, env: WebDAVEnv): Promise<void> {
+  await storage.r2.put(lockKey(record.key), new TextEncoder().encode(JSON.stringify(record)), env, "application/json");
 }
 
-async function deleteLockRecord(key: string, env: any): Promise<void> {
+async function deleteLockRecord(key: string, env: WebDAVEnv): Promise<void> {
   await storage.r2.del(lockKey(key), env);
 }
 
-async function requireWriteLock(key: string, request: Request, env: any): Promise<Response | null> {
+async function requireWriteLock(key: string, request: Request, env: WebDAVEnv): Promise<Response | null> {
   const record = await getLockRecord(key, env);
   if (!record) return null;
   const supplied = getLockTokenFromHeaders(request);
@@ -282,7 +273,7 @@ async function requireWriteLock(key: string, request: Request, env: any): Promis
   return null;
 }
 
-async function exists(key: string, env: any): Promise<DavNode | null> {
+async function exists(key: string, env: WebDAVEnv): Promise<DavNode | null> {
   const obj = await storage.r2.get(key, env);
   if (obj) {
     return {
@@ -293,10 +284,12 @@ async function exists(key: string, env: any): Promise<DavNode | null> {
       etag: obj.etag ?? undefined,
     };
   }
+
   const marker = await storage.r2.get(`${key}/.folder`, env);
   if (marker) {
     return { key, kind: "collection", etag: etagFor(`${key}/.folder`, 0) };
   }
+
   return null;
 }
 
@@ -304,11 +297,8 @@ function rootNode(): DavNode {
   return { key: BASE_PREFIX, kind: "collection", etag: etagFor(BASE_PREFIX, 0) };
 }
 
-async function parentExists(pathKey: string, env: any): Promise<boolean> {
-  const parent = pathKey.includes("/")
-    ? pathKey.slice(0, pathKey.lastIndexOf("/"))
-    : BASE_PREFIX;
-
+async function parentExists(pathKey: string, env: WebDAVEnv): Promise<boolean> {
+  const parent = pathKey.includes("/") ? pathKey.slice(0, pathKey.lastIndexOf("/")) : BASE_PREFIX;
   if (!parent || parent === BASE_PREFIX) return true;
   return !!(await exists(parent, env));
 }
@@ -339,34 +329,28 @@ function propfindCollectionBody(responses: string[]): string {
 <d:multistatus xmlns:d="DAV:">${responses.join("")}</d:multistatus>`;
 }
 
-async function listCollectionChildren(current: DavNode, env: any): Promise<any[]> {
+async function listCollectionChildren(current: DavNode, env: WebDAVEnv): Promise<any[]> {
   const prefix = current.key === BASE_PREFIX ? `${BASE_PREFIX}/` : `${current.key}/`;
   return sortByKey(normalizeList(await storage.r2.list(prefix, env)));
 }
 
-async function collectCollectionKeysRecursive(prefixKey: string, env: any): Promise<string[]> {
-  const prefix = `${prefixKey}/`;
-  const items = normalizeList(await storage.r2.list(prefix, env));
+async function collectCollectionKeysRecursive(prefixKey: string, env: WebDAVEnv): Promise<string[]> {
+  const items = normalizeList(await storage.r2.list(`${prefixKey}/`, env));
   return items.map((x) => x.key).filter(nonNullable);
 }
 
-async function authOr401(request: Request): Promise<Response | null> {
-  return parseAuthorizationHeader(request) ? null : unauthorized();
-}
-
-export async function handleWebDAV(request: Request, env: any) {
+webdav.all("*", async (c) => {
+  const request = c.req.raw;
+  const env = c.env;
   const reqCtx = requestContext(request);
   const bodyPreview = await readBodyPreview(request);
 
-  logEvent("info", "dav.request", {
-    ...reqCtx,
-    bodyPreview,
-  });
+  logEvent("info", "dav.request", { ...reqCtx, bodyPreview });
 
-  const auth = await authOr401(request);
-  if (auth) {
+  const auth = parseAuthorizationHeader(request);
+  if (!auth) {
     logEvent("warn", "dav.response", { ...reqCtx, status: 401, dav: DAV_HEADER });
-    return auth;
+    return unauthorized();
   }
 
   const url = new URL(request.url);
@@ -380,11 +364,7 @@ export async function handleWebDAV(request: Request, env: any) {
   if (request.method === "OPTIONS") {
     response = new Response(null, {
       status: 204,
-      headers: {
-        DAV: DAV_HEADER,
-        Allow: ALLOW_HEADER,
-        "MS-Author-Via": "DAV",
-      },
+      headers: { DAV: DAV_HEADER, Allow: ALLOW_HEADER, "MS-Author-Via": "DAV" },
     });
   } else if (request.method === "LOCK") {
     if (!key) {
@@ -396,10 +376,7 @@ export async function handleWebDAV(request: Request, env: any) {
         if (!supplied || supplied !== existing.token) {
           response = lockedResponse(`/webdav/${path || BASE_PREFIX}/`);
         } else {
-          const refreshed: LockRecord = {
-            ...existing,
-            expiresAt: Date.now() + LOCK_TIMEOUT_SECONDS * 1000,
-          };
+          const refreshed: LockRecord = { ...existing, expiresAt: Date.now() + LOCK_TIMEOUT_SECONDS * 1000 };
           await setLockRecord(refreshed, env);
           response = xmlResponse(
             `<?xml version="1.0" encoding="utf-8"?>
@@ -418,11 +395,7 @@ export async function handleWebDAV(request: Request, env: any) {
         }
       } else {
         const token = `urn:uuid:${crypto.randomUUID()}`;
-        const record: LockRecord = {
-          token,
-          key,
-          expiresAt: Date.now() + LOCK_TIMEOUT_SECONDS * 1000,
-        };
+        const record: LockRecord = { token, key, expiresAt: Date.now() + LOCK_TIMEOUT_SECONDS * 1000 };
         await setLockRecord(record, env);
         response = xmlResponse(
           `<?xml version="1.0" encoding="utf-8"?>
@@ -442,7 +415,7 @@ export async function handleWebDAV(request: Request, env: any) {
     }
   } else if (request.method === "UNLOCK") {
     const token = getLockTokenFromHeaders(request);
-    const record = await getLockRecord(key!, env);
+    const record = key ? await getLockRecord(key, env) : null;
     if (record && token && token === record.token) {
       await deleteLockRecord(key!, env);
       response = new Response(null, { status: 204, headers: { DAV: DAV_HEADER } });
@@ -465,23 +438,14 @@ export async function handleWebDAV(request: Request, env: any) {
           if (!item?.key) continue;
           if (item.key === `${current.key}/.folder`) continue;
 
-          const rel = item.key.startsWith(`${BASE_PREFIX}/`)
-            ? item.key.slice(BASE_PREFIX.length + 1)
-            : item.key;
-
+          const rel = item.key.startsWith(`${BASE_PREFIX}/`) ? item.key.slice(BASE_PREFIX.length + 1) : item.key;
           const isCollection = isCollectionMarkerKey(item.key);
-          const hrefPath = isCollection ? rel.replace(/\/\.folder$/, "") : rel;
+          const hrefPath = isCollection ? rel.replace(//.folder$/, "") : rel;
           const display = hrefPath.split("/").pop() ?? hrefPath;
 
           const node: DavNode = isCollection
             ? { key: item.key, kind: "collection", etag: item.etag }
-            : {
-                key: item.key,
-                kind: "file",
-                size: item.size ?? 0,
-                contentType: item.contentType,
-                etag: item.etag,
-              };
+            : { key: item.key, kind: "file", size: item.size ?? 0, contentType: item.contentType, etag: item.etag };
 
           responses.push(propfindItem(node, hrefPath, display));
         }
@@ -506,11 +470,7 @@ export async function handleWebDAV(request: Request, env: any) {
       });
     }
   } else if (request.method === "MKCOL") {
-    if (!path) {
-      response = new Response(null, { status: 405, headers: { DAV: DAV_HEADER } });
-    } else if (root) {
-      response = new Response(null, { status: 405, headers: { DAV: DAV_HEADER } });
-    } else if (current) {
+    if (!path || root || current) {
       response = new Response(null, { status: 405, headers: { DAV: DAV_HEADER } });
     } else {
       const targetKey = toKey(path);
@@ -536,28 +496,18 @@ export async function handleWebDAV(request: Request, env: any) {
         response = conflict();
       } else {
         const body = await request.arrayBuffer();
-        await storage.r2.put(
-          key,
-          body,
-          env,
-          request.headers.get("content-type") ?? "application/octet-stream"
-        );
-        response = new Response(null, {
-          status: current ? 200 : 201,
-          headers: { DAV: DAV_HEADER },
-        });
+        await storage.r2.put(key, body, env, request.headers.get("content-type") ?? "application/octet-stream");
+        response = new Response(null, { status: current ? 200 : 201, headers: { DAV: DAV_HEADER } });
       }
     }
   } else if (request.method === "GET") {
     if (!current) {
       response = notFound();
     } else if (current.kind === "collection") {
-      response = root
-        ? new Response("WebDAV root", { status: 200, headers: { DAV: DAV_HEADER } })
-        : methodNotAllowed();
+      response = root ? new Response("WebDAV root", { status: 200, headers: { DAV: DAV_HEADER } }) : methodNotAllowed();
     } else {
       const obj = await storage.r2.get(key!, env);
-      if (!obj) {
+      if (!obj?.body) {
         response = notFound();
       } else {
         response = new Response(obj.body, {
@@ -598,11 +548,8 @@ export async function handleWebDAV(request: Request, env: any) {
     response = methodNotAllowed();
   }
 
-  logEvent("info", "dav.response", {
-    ...reqCtx,
-    status: response.status,
-    responseHeaders: headersToObject(response.headers),
-  });
-
+  logEvent("info", "dav.response", { ...reqCtx, status: response.status, responseHeaders: headersToObject(response.headers) });
   return response;
-}
+});
+
+export default webdav;
