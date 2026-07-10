@@ -190,16 +190,22 @@ app.get("/v1/portfolio/publications.bib", (c) =>
 
 app.all("/webdav/*", webdavHandler);
 app.all("/v1/webdav/*", webdavHandler);
+
 app.all("/v1/research/*", researchHandler);
 app.all("/v1/research", researchHandler);
+
 app.all("/v1/cv/*", cvHandler);
 app.all("/v1/cv", cvHandler);
+
 app.all("/v1/portfolio/*", portfolioHandler);
 app.all("/v1/portfolio", portfolioHandler);
+
 app.all("/v1/contact/*", contactHandler);
 app.all("/v1/contact", contactHandler);
+
 app.all("/v1/activities/*", activitiesHandler);
 app.all("/v1/activities", activitiesHandler);
+
 app.all("/v1/general/*", generalHandler);
 app.all("/v1/general", generalHandler);
 
