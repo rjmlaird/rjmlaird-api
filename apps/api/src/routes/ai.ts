@@ -11,11 +11,6 @@ type Env = {
 
 type Provider = "claude" | "openai" | "gemini" | "perplexity";
 
-type RequestBody = {
-  question?: string;
-  provider?: string;
-};
-
 type AdapterResult = {
   answer: string;
 };
@@ -35,6 +30,7 @@ type GeminiResponse = {
 const aiApp = new Hono<{ Bindings: Env }>();
 
 const DEFAULT_PROVIDER: Provider = "claude";
+const MAX_QUESTION_LENGTH = 2000;
 const MAX_TOKENS = 1000;
 
 const MODELS: Record<Provider, string> = {
@@ -53,10 +49,10 @@ const ENV_KEYS: Record<Provider, keyof Env> = {
   perplexity: "PERPLEXITY_API_KEY",
 };
 
-async function fetchJson<T>(res: Response): Promise<T | null> {
-  if (!res.ok) return null;
-  return (await res.json()) as T;
-}
+const RequestSchema = z.object({
+  question: z.string().trim().min(1).max(MAX_QUESTION_LENGTH),
+  provider: z.enum(["claude", "openai", "gemini", "perplexity"]).optional(),
+});
 
 async function fetchContext(origin: string): Promise<string> {
   const results = await Promise.allSettled(
@@ -65,8 +61,9 @@ async function fetchContext(origin: string): Promise<string> {
         headers: { accept: "application/json" },
       });
       if (!res.ok) throw new Error(`${path} returned ${res.status}`);
-      const data = (await res.json()) as unknown;
-      return `## Source: ${path}\n${JSON.stringify(data)}`;
+      const data = await res.json();
+      return `## Source: ${path}
+${JSON.stringify(data)}`;
     })
   );
 
@@ -79,10 +76,13 @@ async function fetchContext(origin: string): Promise<string> {
       "## Fallback context",
       "Ryan Laird is a web developer and science communicator working on digital products, content systems, and API-driven sites.",
       "Full CV data is temporarily unavailable.",
-    ].join("\n");
+    ].join("
+");
   }
 
-  return succeeded.join("\n\n");
+  return succeeded.join("
+
+");
 }
 
 function buildSystemPrompt(context: string): string {
@@ -93,7 +93,8 @@ function buildSystemPrompt(context: string): string {
     "",
     "CONTEXT:",
     context,
-  ].join("\n");
+  ].join("
+");
 }
 
 async function callClaude(question: string, systemPrompt: string, apiKey: string): Promise<AdapterResult> {
@@ -118,7 +119,8 @@ async function callClaude(question: string, systemPrompt: string, apiKey: string
   const answer = data.content
     ?.filter((b) => b.type === "text")
     .map((b) => b.text ?? "")
-    .join("\n")
+    .join("
+")
     .trim();
 
   return { answer: answer || "No answer generated." };
@@ -196,38 +198,39 @@ async function callPerplexity(question: string, systemPrompt: string, apiKey: st
   return { answer: answer || "No answer generated." };
 }
 
-const ADAPTERS: Record<Provider, (question: string, systemPrompt: string, apiKey: string) => Promise<AdapterResult>> = {
-  claude: callClaude,
-  openai: callOpenAI,
-  gemini: callGemini,
-  perplexity: callPerplexity,
-};
+const ADAPTERS: Record<Provider, (question: string, systemPrompt: string, apiKey: string) => Promise<AdapterResult>> =
+  {
+    claude: callClaude,
+    openai: callOpenAI,
+    gemini: callGemini,
+    perplexity: callPerplexity,
+  };
 
 aiApp.post("/", async (c) => {
-  const body = (await c.req.json().catch(() => null)) as RequestBody | null;
+  const body = await c.req.json().catch(() => null);
   if (!body) return c.json({ error: "Invalid JSON body" }, 400);
 
-  const question = body.question?.trim();
-  if (!question) return c.json({ error: "Missing 'question' field" }, 400);
-  if (question.length > 2000) return c.json({ error: "Question too long (max 2000 chars)" }, 400);
-
-  const provider = ((body.provider?.trim().toLowerCase() || DEFAULT_PROVIDER) as Provider);
-  if (!(provider in ADAPTERS)) {
-    return c.json(
-      { error: `Unknown provider '${provider}'. Valid options: ${Object.keys(ADAPTERS).join(", ")}` },
-      400
-    );
+  const parsed = RequestSchema.safeParse(body);
+  if (!parsed.success) {
+    const issue = parsed.error.issues[0];
+    return c.json({ error: issue?.message ?? "Invalid request body" }, 400);
   }
+
+  const { question, provider: requestedProvider } = parsed.data;
+  const provider = (requestedProvider ?? DEFAULT_PROVIDER) as Provider;
 
   const apiKey = c.env[ENV_KEYS[provider]];
   if (!apiKey) return c.json({ error: `Provider '${provider}' is not configured` }, 503);
 
-  const context = await fetchContext(c.req.url);
-  const systemPrompt = buildSystemPrompt(context);
-
   try {
+    const context = await fetchContext(c.req.url);
+    const systemPrompt = buildSystemPrompt(context);
     const result = await ADAPTERS[provider](question, systemPrompt, apiKey);
-    return c.json({ answer: result.answer, provider });
+
+    return c.json({
+      answer: result.answer,
+      provider,
+    });
   } catch (err) {
     console.error(`AI endpoint failure (${provider})`, err);
     return c.json({ error: "AI service temporarily unavailable" }, 502);
