@@ -4,6 +4,7 @@ import { storage } from "../services/storage";
 const webdav = new Hono<{ Bindings: Env }>();
 
 const BASE_PREFIX = "zotero";
+const MOUNT_PREFIX = "/webdav";
 const DAV_HEADER = "1,2";
 const ALLOW_HEADER = "OPTIONS, GET, PUT, DELETE, PROPFIND, HEAD, MKCOL, LOCK, UNLOCK";
 const LOCK_TIMEOUT_SECONDS = 300;
@@ -61,16 +62,17 @@ function plain(body: string, status: number, headers: Record<string, string> = {
 }
 
 function normalizePath(pathname: string) {
-  const clean = pathname.replace(/^\/+/, "");
-  const withoutWebdav =
-    clean === "webdav"
+  const path = pathname.replace(/^\/+/, "");
+  const afterMount =
+    path === "webdav"
       ? ""
-      : clean.startsWith("webdav/")
-        ? clean.slice("webdav/".length)
-        : clean;
+      : path.startsWith("webdav/")
+        ? path.slice("webdav/".length)
+        : path.startsWith("v1/webdav/")
+          ? path.slice("v1/webdav/".length)
+          : path;
 
-  return withoutWebdav
-    .replace(/^v1\/webdav\/?/, "")
+  return afterMount
     .replace(/^zotero\/?/, "")
     .replace(/\/+$/, "");
 }
@@ -87,17 +89,11 @@ function etagFor(key: string, size = 0) {
 
 function listArray(result: unknown): Array<{ key: string; size?: number; contentType?: string; etag?: string }> {
   if (!result) return [];
-  if (Array.isArray(result)) {
-    return result as Array<{ key: string; size?: number; contentType?: string; etag?: string }>;
-  }
+  if (Array.isArray(result)) return result as Array<{ key: string; size?: number; contentType?: string; etag?: string }>;
   if (typeof result === "object" && result !== null) {
     const r = result as Record<string, unknown>;
-    if (Array.isArray(r.objects)) {
-      return r.objects as Array<{ key: string; size?: number; contentType?: string; etag?: string }>;
-    }
-    if (Array.isArray(r.keys)) {
-      return r.keys as Array<{ key: string; size?: number; contentType?: string; etag?: string }>;
-    }
+    if (Array.isArray(r.objects)) return r.objects as Array<{ key: string; size?: number; contentType?: string; etag?: string }>;
+    if (Array.isArray(r.keys)) return r.keys as Array<{ key: string; size?: number; contentType?: string; etag?: string }>;
   }
   return [];
 }
@@ -161,7 +157,7 @@ async function parentExists(key: string, env: Env) {
 
 function hrefFromPath(path: string) {
   const cleaned = path.replace(/^\/+/, "").replace(/\/+$/, "");
-  return cleaned ? `/webdav/zotero/${encodeURI(cleaned)}` : "/webdav/zotero/";
+  return cleaned ? `${MOUNT_PREFIX}/zotero/${encodeURI(cleaned)}` : `${MOUNT_PREFIX}/zotero/`;
 }
 
 function propfindItem(node: DavNode, requestPath: string, displayname: string) {
@@ -215,14 +211,12 @@ webdav.all("*", async (c) => {
       });
 
     case "LOCK": {
-      if (!key) return plain("Bad request", 400);
-
       const existing = await getLockRecord(key, c.env);
       if (existing) {
         const supplied = parseLockToken(request);
         if (supplied !== existing.token) {
           return xml(
-            `<?xml version="1.0" encoding="utf-8"?>\n<D:error xmlns:D="DAV:">\n  <D:lock-token-submitted>\n    <D:href>${escapeXml(`/webdav/${pathname || BASE_PREFIX}/`)}</D:href>\n  </D:lock-token-submitted>\n</D:error>`,
+            `<?xml version="1.0" encoding="utf-8"?>\n<D:error xmlns:D="DAV:">\n  <D:lock-token-submitted>\n    <D:href>${escapeXml(`${MOUNT_PREFIX}/${pathname || BASE_PREFIX}/`)}</D:href>\n  </D:lock-token-submitted>\n</D:error>`,
             423
           );
         }
@@ -255,7 +249,6 @@ webdav.all("*", async (c) => {
     }
 
     case "UNLOCK": {
-      if (!key) return plain("Precondition failed", 412);
       const record = await getLockRecord(key, c.env);
       const token = parseLockToken(request);
       if (record && token === record.token) {
@@ -277,38 +270,33 @@ webdav.all("*", async (c) => {
       if (depth !== "0" && current.kind === "collection") {
         const list = listArray(await storage.r2.list(`${current.key}/`, c.env));
         for (const item of list) {
-          if (!item?.key || item.key === `${current.key}/.folder`) continue;
+          if (!item?.key || !item.key.startsWith(`${BASE_PREFIX}/`)) continue;
+          if (item.key === `${current.key}/.folder`) continue;
 
-          const rel = item.key.startsWith(`${BASE_PREFIX}/`)
-            ? item.key.slice(BASE_PREFIX.length + 1)
-            : item.key;
+          const rel = item.key.slice(BASE_PREFIX.length + 1);
           const isCollection = item.key.endsWith("/.folder");
           const hrefPath = isCollection ? rel.replace(/\/\.folder$/, "") : rel;
           const display = hrefPath.split("/").pop() ?? hrefPath;
 
-          if (isCollection) {
-            responses.push(
-              propfindItem(
-                { kind: "collection", key: item.key, etag: item.etag },
-                hrefPath,
-                display
-              )
-            );
-          } else {
-            responses.push(
-              propfindItem(
-                {
-                  kind: "file",
-                  key: item.key,
-                  size: item.size ?? 0,
-                  contentType: item.contentType,
-                  etag: item.etag,
-                },
-                hrefPath,
-                display
-              )
-            );
-          }
+          responses.push(
+            isCollection
+              ? propfindItem(
+                  { kind: "collection", key: item.key, etag: item.etag },
+                  hrefPath,
+                  display
+                )
+              : propfindItem(
+                  {
+                    kind: "file",
+                    key: item.key,
+                    size: item.size ?? 0,
+                    contentType: item.contentType,
+                    etag: item.etag,
+                  },
+                  hrefPath,
+                  display
+                )
+          );
         }
       }
 
@@ -333,26 +321,24 @@ webdav.all("*", async (c) => {
     case "MKCOL": {
       if (!pathname || root || current) return new Response(null, { status: 405, headers: { DAV: DAV_HEADER } });
       const targetKey = toKey(pathname);
-      if (!targetKey) return new Response(null, { status: 405, headers: { DAV: DAV_HEADER } });
       if (!(await parentExists(targetKey, c.env))) return new Response(null, { status: 409, headers: { DAV: DAV_HEADER } });
       await storage.r2.put(`${targetKey}/.folder`, new Uint8Array([]), c.env);
       return new Response(null, { status: 201, headers: { DAV: DAV_HEADER } });
     }
 
     case "PUT": {
-      if (!key) return plain("Bad request", 400);
       if (root) return new Response("Method not allowed", { status: 405, headers: { DAV: DAV_HEADER, Allow: ALLOW_HEADER } });
 
       const lock = await getLockRecord(key, c.env);
       const token = parseLockToken(request);
       if (lock && token !== lock.token) {
         return xml(
-          `<?xml version="1.0" encoding="utf-8"?>\n<D:error xmlns:D="DAV:">\n  <D:lock-token-submitted>\n    <D:href>${escapeXml(`/webdav/${key}`)}</D:href>\n  </D:lock-token-submitted>\n</D:error>`,
+          `<?xml version="1.0" encoding="utf-8"?>\n<D:error xmlns:D="DAV:">\n  <D:lock-token-submitted>\n    <D:href>${escapeXml(`${MOUNT_PREFIX}/${key}`)}</D:href>\n  </D:lock-token-submitted>\n</D:error>`,
           423
         );
       }
 
-      if (key !== BASE_PREFIX && !(await parentExists(key, c.env))) return plain("Conflict", 409);
+      if (!(await parentExists(key, c.env))) return plain("Conflict", 409);
 
       const body = await request.arrayBuffer();
       await storage.r2.put(key, body, c.env, request.headers.get("content-type") ?? "application/octet-stream");
@@ -391,7 +377,7 @@ webdav.all("*", async (c) => {
       const token = parseLockToken(request);
       if (lock && token !== lock.token) {
         return xml(
-          `<?xml version="1.0" encoding="utf-8"?>\n<D:error xmlns:D="DAV:">\n  <D:lock-token-submitted>\n    <D:href>${escapeXml(`/webdav/${key}`)}</D:href>\n  </D:lock-token-submitted>\n</D:error>`,
+          `<?xml version="1.0" encoding="utf-8"?>\n<D:error xmlns:D="DAV:">\n  <D:lock-token-submitted>\n    <D:href>${escapeXml(`${MOUNT_PREFIX}/${key}`)}</D:href>\n  </D:lock-token-submitted>\n</D:error>`,
           423
         );
       }
