@@ -57,6 +57,42 @@ const cvCollections = [
   "volunteering",
 ] as const;
 
+const openapiSpec = {
+  openapi: "3.0.0",
+  info: {
+    title: "rjmlaird API",
+    version: "1.0.0",
+    description: "GitHub-powered CV + portfolio + contact + research + WebDAV API.",
+  },
+  servers: [{ url: "/" }],
+  paths: {
+    "/api/{collection}": {
+      get: {
+        summary: "Get CV collection",
+        parameters: [
+          {
+            name: "collection",
+            in: "path",
+            required: true,
+            schema: {
+              type: "string",
+              enum: cvCollections,
+            },
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Collection data",
+          },
+          "404": {
+            description: "Collection not found",
+          },
+        },
+      },
+    },
+  },
+};
+
 app.route("/system", system);
 app.route("/debug", debug);
 app.route("/webdav", webdav);
@@ -78,7 +114,37 @@ app.get("/api/:collection", (c) => {
   return json(cvData[collection]);
 });
 
-app.get("/", (c) => c.text("rjmlaird API"));
+app.get("/openapi.json", (c) => c.json(openapiSpec));
+
+app.get("/", (c) =>
+  c.html(`<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="rjmlaird API" />
+    <title>rjmlaird API</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.17.14/swagger-ui.css" crossorigin="anonymous" />
+  </head>
+  <body>
+    <div id="swagger-ui"></div>
+    <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.17.14/swagger-ui-bundle.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.17.14/swagger-ui-standalone-preset.js" crossorigin="anonymous"></script>
+    <script>
+      window.ui = SwaggerUIBundle({
+        url: "/openapi.json",
+        dom_id: "#swagger-ui",
+        deepLinking: true,
+        layout: "BaseLayout",
+        docExpansion: "list",
+        filter: false,
+        displayRequestDuration: true,
+        presets: [SwaggerUIBundle.presets.apis],
+      });
+    </script>
+  </body>
+</html>`),
+);
 
 app.notFound((c) => c.text("Not found", 404));
 
