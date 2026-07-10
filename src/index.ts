@@ -66,6 +66,26 @@ const openapiSpec = {
   },
   servers: [{ url: "/" }],
   paths: {
+    "/": {
+      get: {
+        summary: "API landing page",
+        responses: {
+          "200": {
+            description: "Swagger UI landing page",
+          },
+        },
+      },
+    },
+    "/openapi.json": {
+      get: {
+        summary: "OpenAPI document",
+        responses: {
+          "200": {
+            description: "OpenAPI JSON document",
+          },
+        },
+      },
+    },
     "/api/{collection}": {
       get: {
         summary: "Get CV collection",
@@ -90,8 +110,118 @@ const openapiSpec = {
         },
       },
     },
+    "/v1/research": {
+      get: {
+        summary: "Research API",
+        responses: {
+          "200": { description: "OK" },
+        },
+      },
+    },
+    "/v1/cv": {
+      get: {
+        summary: "CV API",
+        responses: {
+          "200": { description: "OK" },
+        },
+      },
+    },
+    "/v1/portfolio": {
+      get: {
+        summary: "Portfolio API",
+        responses: {
+          "200": { description: "OK" },
+        },
+      },
+    },
+    "/v1/contact": {
+      post: {
+        summary: "Contact API",
+        responses: {
+          "200": { description: "OK" },
+        },
+      },
+    },
+    "/v1/activities": {
+      get: {
+        summary: "Activities API",
+        responses: {
+          "200": { description: "OK" },
+        },
+      },
+    },
+    "/v1/general": {
+      get: {
+        summary: "General API",
+        responses: {
+          "200": { description: "OK" },
+        },
+      },
+    },
+    "/v1/ai": {
+      post: {
+        summary: "AI endpoint",
+        responses: {
+          "200": { description: "OK" },
+        },
+      },
+    },
+    "/webdav": {
+      options: {
+        summary: "WebDAV options",
+        responses: {
+          "204": { description: "No Content" },
+        },
+      },
+      get: {
+        summary: "WebDAV get",
+        responses: {
+          "200": { description: "OK" },
+          "404": { description: "Not found" },
+        },
+      },
+      put: {
+        summary: "WebDAV put",
+        responses: {
+          "200": { description: "Updated" },
+          "201": { description: "Created" },
+        },
+      },
+      delete: {
+        summary: "WebDAV delete",
+        responses: {
+          "204": { description: "Deleted" },
+        },
+      },
+      propfind: {
+        summary: "WebDAV propfind",
+        responses: {
+          "207": { description: "Multi-Status" },
+        },
+      },
+      mkcol: {
+        summary: "WebDAV mkcol",
+        responses: {
+          "201": { description: "Collection created" },
+        },
+      },
+      lock: {
+        summary: "WebDAV lock",
+        responses: {
+          "200": { description: "Locked" },
+          "423": { description: "Locked" },
+        },
+      },
+      unlock: {
+        summary: "WebDAV unlock",
+        responses: {
+          "204": { description: "Unlocked" },
+        },
+      },
+    },
   },
 };
+
 
 app.route("/system", system);
 app.route("/debug", debug);
