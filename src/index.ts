@@ -57,10 +57,9 @@ const cvCollections = [
   "volunteering",
 ] as const;
 
-app.route("/", system);
-app.route("/", debug);
+app.route("/system", system);
+app.route("/debug", debug);
 app.route("/webdav", webdav);
-app.route("/v1/webdav", webdav);
 app.route("/v1/research", research);
 app.route("/v1/cv", cv);
 app.route("/v1/portfolio", portfolio);
@@ -79,6 +78,7 @@ app.get("/api/:collection", (c) => {
   return json(cvData[collection]);
 });
 
-app.get("*", (c) => c.env.ASSETS.fetch(c.req.raw));
+app.get("/", (c) => c.text("rjmlaird API"));
+app.all("*", (c) => c.notFound());
 
 export default app;
