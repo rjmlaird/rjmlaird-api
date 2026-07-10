@@ -1,3 +1,4 @@
+import { Hono } from "hono";
 import { json } from "../lib/jsonResponse";
 import { storage } from "../services/storage";
 
@@ -58,6 +59,10 @@ type ResearchEnv = Env & {
   ZOTERO_API_KEY?: string;
 };
 
+const research = new Hono<{ Bindings: ResearchEnv }>();
+
+const routeRoot = "/v1/research";
+
 function normalizeR2List(result: unknown): R2Item[] {
   if (!result) return [];
   if (Array.isArray(result)) return result as R2Item[];
@@ -71,9 +76,42 @@ function normalizeR2List(result: unknown): R2Item[] {
   return [];
 }
 
+function safeTrim(value: unknown) {
+  return typeof value === "string" ? value.trim() : "";
+}
+
+function clamp(n: number, min: number, max: number) {
+  return Math.max(min, Math.min(max, n));
+}
+
+function normalizeStringArray(values?: string[]) {
+  if (!Array.isArray(values)) return [];
+  return Array.from(
+    new Set(
+      values
+        .filter((v): v is string => typeof v === "string")
+        .map((v) => v.trim())
+        .filter(Boolean)
+    )
+  ).slice(0, 20);
+}
+
+function normalizeZoteroTags(tags?: Array<{ tag?: string } | string>) {
+  if (!Array.isArray(tags)) return [];
+  return Array.from(
+    new Set(
+      tags
+        .map((tag) => (typeof tag === "string" ? tag : tag?.tag))
+        .filter((v): v is string => typeof v === "string")
+        .map((v) => v.trim())
+        .filter(Boolean)
+    )
+  ).slice(0, 20);
+}
+
 function getRoute(request: Request) {
   const url = new URL(request.url);
-  const path = url.pathname.replace(/^\/v1\/research\/?/, "");
+  const path = url.pathname.replace(new RegExp(`^${routeRoot}/?`), "");
   const query = url.searchParams.get("q");
   return { path, query };
 }
@@ -87,28 +125,6 @@ async function readJsonBody<T>(request: Request): Promise<T | null> {
   } catch {
     return null;
   }
-}
-
-function safeTrim(value: unknown) {
-  return typeof value === "string" ? value.trim() : "";
-}
-
-function clamp(n: number, min: number, max: number) {
-  return Math.max(min, Math.min(max, n));
-}
-
-function normalizeStringArray(values?: string[]) {
-  if (!Array.isArray(values)) return [];
-
-  const out: string[] = [];
-  for (const value of values) {
-    if (typeof value !== "string") continue;
-    const trimmed = value.trim();
-    if (!trimmed) continue;
-    out.push(trimmed);
-  }
-
-  return Array.from(new Set(out)).slice(0, 20);
 }
 
 async function listPaperItems(env: ResearchEnv, limit = MAX_SCAN_ITEMS) {
@@ -138,21 +154,6 @@ async function writePaperRecord(env: ResearchEnv, record: PaperRecord) {
   return key;
 }
 
-function normalizeZoteroTags(tags?: Array<{ tag?: string } | string>) {
-  if (!Array.isArray(tags)) return [];
-
-  const out: string[] = [];
-  for (const tag of tags) {
-    const value = typeof tag === "string" ? tag : tag?.tag;
-    if (typeof value !== "string") continue;
-    const trimmed = value.trim();
-    if (!trimmed) continue;
-    out.push(trimmed);
-  }
-
-  return Array.from(new Set(out)).slice(0, 20);
-}
-
 function zoteroToPaper(item: ZoteroItem): PaperRecord | null {
   const data = item.data;
   const zoteroKey = safeTrim(data?.key ?? item.key);
@@ -174,9 +175,7 @@ async function fetchZoteroPage(env: ResearchEnv, start: number, limit: number) {
   const userId = env.ZOTERO_USER_ID;
   const apiKey = env.ZOTERO_API_KEY;
 
-  if (!userId || !apiKey) {
-    throw new Error("Missing Zotero credentials");
-  }
+  if (!userId || !apiKey) throw new Error("Missing Zotero credentials");
 
   const url = new URL(`https://api.zotero.org/users/${userId}/items`);
   url.searchParams.set("start", String(clamp(start, 0, 1_000_000)));
@@ -214,35 +213,20 @@ async function syncZoteroBatchToR2(env: ResearchEnv, start = 0, limit = ZOTERO_P
     for (const item of page) {
       const record = zoteroToPaper(item);
       if (!record) continue;
+
       const key = await writePaperRecord(env, record);
       written += 1;
       items.push({ key, record });
     }
 
     if (page.length < pageLimit) {
-      return {
-        fetched,
-        written,
-        start,
-        limit: pageLimit,
-        pages,
-        nextStart: null,
-        items,
-      };
+      return { fetched, written, start, limit: pageLimit, pages, nextStart: null, items };
     }
 
     currentStart += pageLimit;
   }
 
-  return {
-    fetched,
-    written,
-    start,
-    limit: pageLimit,
-    pages,
-    nextStart: currentStart,
-    items,
-  };
+  return { fetched, written, start, limit: pageLimit, pages, nextStart: currentStart, items };
 }
 
 async function scanPaperRecords(env: ResearchEnv) {
@@ -250,215 +234,172 @@ async function scanPaperRecords(env: ResearchEnv) {
   const records: Array<{ item: R2Item; record: PaperRecord | null }> = [];
 
   for (const item of items) {
-    records.push({
-      item,
-      record: await readPaperRecord(env, item.key),
-    });
+    records.push({ item, record: await readPaperRecord(env, item.key) });
   }
 
   return records;
 }
 
-export async function handleResearch(request: Request, env: ResearchEnv) {
-  const method = request.method.toUpperCase();
-  const { path, query } = getRoute(request);
-  const q = safeTrim(query).toLowerCase();
+research.get("/", (c) =>
+  json({
+    service: "research",
+    version: "1.0",
+    endpoints: [
+      "/search?q=",
+      "/papers",
+      "/paper/:id",
+      "/graph",
+      "/timeline",
+      "/entities",
+      "/export/zotero",
+      "/ingest",
+    ],
+  })
+);
 
-  if (!path) {
-    return json({
-      service: "research",
-      version: "1.0",
-      endpoints: [
-        "/search?q=",
-        "/papers",
-        "/paper/:id",
-        "/graph",
-        "/timeline",
-        "/entities",
-        "/export/zotero",
-        "/ingest",
-      ],
-    });
-  }
+research.get("/search", async (c) => {
+  const q = safeTrim(c.req.query("q")).toLowerCase();
+  if (!q) return json({ error: "Missing ?q=" }, 400);
 
-  if (path === "search") {
-    if (!q) return json({ error: "Missing ?q=" }, 400);
+  const records = await scanPaperRecords(c.env);
+  const results: Array<{ key: string; size: number; record: PaperRecord | null }> = [];
 
-    const records = await scanPaperRecords(env);
-    const results: Array<{ key: string; size: number; record: PaperRecord | null }> = [];
-
-    for (const { item, record } of records) {
-      const haystack = JSON.stringify({ key: item.key, record }).toLowerCase();
-      if (haystack.includes(q)) {
-        results.push({
-          key: item.key,
-          size: item.size ?? 0,
-          record,
-        });
-      }
-
-      if (results.length >= MAX_RESULTS) break;
+  for (const { item, record } of records) {
+    const haystack = JSON.stringify({ key: item.key, record }).toLowerCase();
+    if (haystack.includes(q)) {
+      results.push({ key: item.key, size: item.size ?? 0, record });
     }
-
-    return json({
-      query: q,
-      count: results.length,
-      limit: MAX_RESULTS,
-      scanned: records.length,
-      results,
-    });
+    if (results.length >= MAX_RESULTS) break;
   }
 
-  if (path === "papers") {
-    const items = await listPaperItems(env);
-    const results: Array<{ key: string; size: number; record: PaperRecord | null }> = [];
+  return json({
+    query: q,
+    count: results.length,
+    limit: MAX_RESULTS,
+    scanned: records.length,
+    results,
+  });
+});
 
-    for (const item of items) {
-      results.push({
+research.get("/papers", async (c) => {
+  const items = await listPaperItems(c.env);
+  const results: Array<{ key: string; size: number; record: PaperRecord | null }> = [];
+
+  for (const item of items) {
+    results.push({ key: item.key, size: item.size ?? 0, record: await readPaperRecord(c.env, item.key) });
+  }
+
+  return json({ count: results.length, scanned: items.length, items: results });
+});
+
+research.get("/paper/:id", async (c) => {
+  const id = safeTrim(c.req.param("id"));
+  if (!id) return json({ error: "Missing paper id" }, 400);
+
+  const key = `${PAPERS_PREFIX}/${id}.json`;
+  const record = await readPaperRecord(c.env, key);
+
+  if (!record) return json({ error: "Not found", key }, 404);
+
+  return json({ key, record });
+});
+
+research.post("/ingest", async (c) => {
+  const body = (await readJsonBody<IngestBody>(c.req.raw)) ?? {};
+
+  if (body.source === "zotero") {
+    try {
+      const start = clamp(body.zotero?.start ?? 0, 0, 1_000_000);
+      const limit = clamp(body.zotero?.limit ?? ZOTERO_PAGE_LIMIT, 1, ZOTERO_PAGE_LIMIT);
+      const result = await syncZoteroBatchToR2(c.env, start, limit);
+
+      return json({ status: "synced", source: "zotero", ...result }, 201);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "Unknown Zotero sync error";
+      return json({ error: "Zotero sync failed", message }, 500);
+    }
+  }
+
+  const id = safeTrim(body.id) || crypto.randomUUID();
+  const createdAt = safeTrim(body.createdAt) || new Date().toISOString();
+
+  const record: PaperRecord = {
+    id,
+    source: safeTrim(body.source) || "unknown",
+    title: safeTrim(body.title) || null,
+    tags: normalizeStringArray(body.tags),
+    createdAt,
+    links: normalizeStringArray(body.links),
+  };
+
+  const key = await writePaperRecord(c.env, record);
+
+  return json({ status: "ingested", key, record }, 201);
+});
+
+research.get("/graph", async (c) => {
+  const records = await scanPaperRecords(c.env);
+
+  const nodes = records.map(({ item, record }) => ({
+    id: item.key,
+    size: item.size ?? 0,
+    title: record?.title ?? null,
+  }));
+
+  const edges = records
+    .flatMap(({ item, record }) =>
+      (record?.links ?? []).slice(0, 20).map((target) => ({
+        from: item.key,
+        to: target,
+      }))
+    )
+    .slice(0, 500);
+
+  return json({ nodes: nodes.slice(0, MAX_SCAN_ITEMS), edges, scanned: records.length });
+});
+
+research.get("/timeline", async (c) => {
+  const records = await scanPaperRecords(c.env);
+
+  return json({
+    events: records
+      .map(({ item, record }) => ({
+        id: item.key,
+        timestamp: record?.createdAt ?? null,
+      }))
+      .filter((event): event is { id: string; timestamp: string } => Boolean(event.timestamp))
+      .slice(0, MAX_SCAN_ITEMS),
+    scanned: records.length,
+  });
+});
+
+research.get("/entities", () => json({ entities: [], extracted: false }));
+
+research.get("/export/zotero", async (c) => {
+  const records = await scanPaperRecords(c.env);
+
+  return json({
+    version: "0.1",
+    items: records
+      .map(({ item, record }) => ({
         key: item.key,
-        size: item.size ?? 0,
-        record: await readPaperRecord(env, item.key),
-      });
-    }
+        title: record?.title ?? item.key,
+        createdAt: record?.createdAt ?? null,
+      }))
+      .slice(0, MAX_SCAN_ITEMS),
+    scanned: records.length,
+  });
+});
 
-    return json({
-      count: results.length,
-      scanned: items.length,
-      items: results,
-    });
-  }
-
-  if (path.startsWith("paper/")) {
-    const id = safeTrim(path.replace("paper/", ""));
-    if (!id) return json({ error: "Missing paper id" }, 400);
-
-    const key = `${PAPERS_PREFIX}/${id}.json`;
-    const record = await readPaperRecord(env, key);
-
-    if (!record) return json({ error: "Not found", key }, 404);
-
-    return json({
-      key,
-      record,
-    });
-  }
-
-  if (path === "ingest" && method === "POST") {
-    const body = (await readJsonBody<IngestBody>(request)) ?? {};
-
-    if (body.source === "zotero") {
-      try {
-        const start = clamp(body.zotero?.start ?? 0, 0, 1_000_000);
-        const limit = clamp(body.zotero?.limit ?? ZOTERO_PAGE_LIMIT, 1, ZOTERO_PAGE_LIMIT);
-        const result = await syncZoteroBatchToR2(env, start, limit);
-
-        return json(
-          {
-            status: "synced",
-            source: "zotero",
-            ...result,
-          },
-          201
-        );
-      } catch (error) {
-        const message = error instanceof Error ? error.message : "Unknown Zotero sync error";
-        return json({ error: "Zotero sync failed", message }, 500);
-      }
-    }
-
-    const id = safeTrim(body.id) || crypto.randomUUID();
-    const createdAt = safeTrim(body.createdAt) || new Date().toISOString();
-
-    const record: PaperRecord = {
-      id,
-      source: safeTrim(body.source) || "unknown",
-      title: safeTrim(body.title) || null,
-      tags: normalizeStringArray(body.tags),
-      createdAt,
-      links: normalizeStringArray(body.links),
-    };
-
-    const key = await writePaperRecord(env, record);
-
-    return json(
-      {
-        status: "ingested",
-        key,
-        record,
-      },
-      201
-    );
-  }
-
-  if (path === "graph") {
-    const records = await scanPaperRecords(env);
-
-    const nodes = records.map(({ item, record }) => ({
-      id: item.key,
-      size: item.size ?? 0,
-      title: record?.title ?? null,
-    }));
-
-    const edges = records
-      .flatMap(({ item, record }) =>
-        (record?.links ?? []).slice(0, 20).map((target) => ({
-          from: item.key,
-          to: target,
-        }))
-      )
-      .slice(0, 500);
-
-    return json({
-      nodes: nodes.slice(0, MAX_SCAN_ITEMS),
-      edges,
-      scanned: records.length,
-    });
-  }
-
-  if (path === "timeline") {
-    const records = await scanPaperRecords(env);
-
-    return json({
-      events: records
-        .map(({ item, record }) => ({
-          id: item.key,
-          timestamp: record?.createdAt ?? null,
-        }))
-        .filter((event): event is { id: string; timestamp: string } => Boolean(event.timestamp))
-        .slice(0, MAX_SCAN_ITEMS),
-      scanned: records.length,
-    });
-  }
-
-  if (path === "entities") {
-    return json({
-      entities: [],
-      extracted: false,
-    });
-  }
-
-  if (path === "export/zotero") {
-    const records = await scanPaperRecords(env);
-
-    return json({
-      version: "0.1",
-      items: records
-        .map(({ item, record }) => ({
-          key: item.key,
-          title: record?.title ?? item.key,
-          createdAt: record?.createdAt ?? null,
-        }))
-        .slice(0, MAX_SCAN_ITEMS),
-      scanned: records.length,
-    });
-  }
-
-  return json(
+research.all("*", (c) =>
+  json(
     {
       error: "Not found",
-      path,
-      method,
+      path: new URL(c.req.url).pathname,
+      method: c.req.method.toUpperCase(),
     },
     404
-  );
-}
+  )
+);
+
+export default research;
