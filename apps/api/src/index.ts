@@ -61,7 +61,7 @@ const cvCollections = [
 ] as const satisfies readonly CvCollection[];
 
 const withErrorHandling =
-  <T extends any[]>(name: string, fn: (c: any) => Promise<Response>) =>
+  (name: string, fn: (c: any) => Promise<Response>) =>
   async (c: any) => {
     try {
       return await fn(c);
@@ -228,6 +228,10 @@ app.get("/api/:collection", async (c) => {
   }
 
   return json(cvData[collection]);
+});
+
+app.get("*", async (c) => {
+  return c.env.ASSETS.fetch(c.req.raw);
 });
 
 export default app;
