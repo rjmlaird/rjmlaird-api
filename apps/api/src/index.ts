@@ -59,13 +59,14 @@ const cvCollections = [
 
 app.route("/", system);
 app.route("/", debug);
-app.route("/", webdav);
-app.route("/", research);
-app.route("/", cv);
-app.route("/", portfolio);
-app.route("/", contact);
-app.route("/", activities);
-app.route("/", general);
+app.route("/webdav", webdav);
+app.route("/v1/webdav", webdav);
+app.route("/v1/research", research);
+app.route("/v1/cv", cv);
+app.route("/v1/portfolio", portfolio);
+app.route("/v1/contact", contact);
+app.route("/v1/activities", activities);
+app.route("/v1/general", general);
 app.route("/v1/ai", aiApp);
 
 app.get("/api/:collection", (c) => {

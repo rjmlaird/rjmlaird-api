@@ -2,14 +2,11 @@
   "name": "rjmlaird",
   "private": true,
   "workspaces": [
-    "apps/*"
+    "apps/api"
   ],
   "scripts": {
     "dev:api": "npm run dev -w apps/api",
-    "dev:site": "npm run dev -w apps/site",
     "build:api": "npm run build -w apps/api",
-    "build:site": "npm run build -w apps/site",
-    "preview:site": "npm run preview -w apps/site",
     "deploy:api": "npm run deploy -w apps/api"
   },
   "allowScripts": {

@@ -17,7 +17,7 @@
   ],
   "assets": {
     "binding": "ASSETS",
-    "directory": "../site/dist",
+    "directory": "../site",
     "run_worker_first": true,
     "not_found_handling": "404-page"
   },
