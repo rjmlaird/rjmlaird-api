@@ -1,0 +1,63 @@
+{
+  "values": [
+    {
+      "id": "integrity",
+      "title": "Integrity",
+      "keywords": ["principle", "honesty", "trustworthiness"],
+      "description": "Act consistently with moral principles; be honest and dependable in word and deed.",
+      "do": ["Speak truthfully and transparently", "Admit mistakes and correct them promptly"],
+      "dont": ["Withhold important information", "Make promises you cannot keep"],
+      "tags": ["ethics", "trust"]
+    },
+    {
+      "id": "decency",
+      "title": "Decency",
+      "keywords": ["fairness", "kindness", "respect"],
+      "description": "Treat others with fairness, kindness and basic human respect in all interactions.",
+      "do": ["Listen actively and treat people equitably", "Use polite language and considerate actions"],
+      "dont": ["Dismiss others' experiences", "Use demeaning or exclusionary language"],
+      "tags": ["respect", "empathy"]
+    },
+    {
+      "id": "curiosity",
+      "title": "Curiosity (Intellectual Honesty)",
+      "keywords": ["learning", "question", "honesty", "open-mindedness"],
+      "description": "Pursue learning with humility — question assumptions, seek evidence, and be willing to update views.",
+      "do": ["Ask thoughtful questions", "Share sources and acknowledge uncertainty"],
+      "dont": ["Cling to beliefs despite evidence", "Suppress dissenting perspectives"],
+      "tags": ["learning", "critical-thinking"]
+    },
+    {
+      "id": "responsibility",
+      "title": "Responsibility (Personal & Collective)",
+      "keywords": ["accountability", "stewardship", "ownership"],
+      "description": "Take ownership for actions and their impacts, both as individuals and as part of a community.",
+      "do": ["Own mistakes and make reparations", "Consider environmental and social impacts of choices"],
+      "dont": ["Shift blame to others", "Ignore long-term consequences"],
+      "tags": ["accountability", "stewardship"]
+    },
+    {
+      "id": "contribution",
+      "title": "Contribution / Service",
+      "keywords": ["helping", "growth", "impact"],
+      "description": "Focus on creating positive, tangible value for others through service, mentorship, and practical work.",
+      "do": ["Share time and skills to help others grow", "Build tools and resources that scale impact"],
+      "dont": ["Hoard knowledge or resources", "Prioritise credit over outcomes"],
+      "tags": ["service", "mentorship"]
+    },
+    {
+      "id": "sustainability",
+      "title": "Sustainability (Long-Term Thinking)",
+      "keywords": ["foresight", "durability", "ethical stewardship"],
+      "description": "Plan and act with long-term health and fairness in mind, prioritising durability and ethical resource use.",
+      "do": ["Evaluate long-term trade-offs", "Design for resilience and minimal harm"],
+      "dont": ["Opt for short-term gains that cause lasting harm", "Ignore broader ecological impacts"],
+      "tags": ["long-term", "environment"]
+    }
+  ],
+  "meta": {
+    "updated": "2026-07-08",
+    "format": "notion-friendly",
+    "note": "Each value includes keywords, a concise description, practical 'do' and 'don't' examples for use on a Vision & Strategy page, and tags for filtering."
+  }
+}

@@ -76,6 +76,16 @@ const openapiSpec = {
         },
       },
     },
+    "/health": {
+      get: {
+        summary: "Health check",
+        responses: {
+          "200": {
+            description: "Healthy",
+          },
+        },
+      },
+    },
     "/openapi.json": {
       get: {
         summary: "OpenAPI document",
@@ -222,6 +232,13 @@ const openapiSpec = {
   },
 };
 
+app.get("/health", (c) =>
+  c.json({
+    status: "ok",
+    service: "rjmlaird-api",
+    timestamp: new Date().toISOString(),
+  })
+);
 
 app.route("/system", system);
 app.route("/debug", debug);
