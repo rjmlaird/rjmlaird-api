@@ -246,6 +246,37 @@
           "Design Patterns",
           "Testing Principles"
         ]
+      },
+      {
+        "id": "open_data_km",
+        "label": "Open Data & Knowledge Management",
+        "skills": [
+          "Data Catalogs",
+          "Dataset Documentation",
+          "Metadata Standards",
+          "Metadata Management",
+          "Taxonomy Design",
+          "Ontology Design",
+          "Linked Data",
+          "Knowledge Graphs",
+          "RDF",
+          "RDFS",
+          "OWL",
+          "SKOS",
+          "SHACL",
+          "SPARQL",
+          "JSON-LD",
+          "DCAT",
+          "PROV-O",
+          "VOID",
+          "Schema.org",
+          "CKAN",
+          "RDF4J",
+          "Apache Jena",
+          "Protégé",
+          "GraphDB",
+          "YASGUI"
+        ]
       }
     ],
     "practices": [
