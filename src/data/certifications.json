@@ -378,7 +378,7 @@
       "imageUrl": null
     },
     {
-      "badgeId": "linkedin-lean-tech-strategy",
+      "id": "linkedin-lean-tech-strategy",
       "name": "Lean Technology Strategy",
       "type": "Badge",
       "issuer": "LinkedIn Learning",
