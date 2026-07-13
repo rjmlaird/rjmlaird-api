@@ -39,10 +39,7 @@
         "ESA Communication",
         "Digital Storytelling"
       ],
-      "entities": [
-        "European Space Agency",
-        "The Communicator Awards"
-      ]
+      "relatedExperience": ["exp-design-and-data"]
     },
 
     {
@@ -63,11 +60,7 @@
         "International Collaboration",
         "Space Policy Training"
       ],
-      "entities": [
-        "International Space University",
-        "UK Space Agency",
-        "European Space Agency"
-      ]
+       "relatedEducation": ["edu-isu-ssp"]
     },
 
     {
@@ -107,9 +100,7 @@
         "Scientific Research",
         "ESO"
       ],
-      "entities": [
-        "European Southern Observatory"
-      ]
+       "relatedEducation": ["edu-kent-astronomy"]
     },
 
     {
@@ -128,9 +119,7 @@
         "Planetary Science",
         "Space Research"
       ],
-      "entities": [
-        "Palomar Observatory"
-      ]
+       "relatedEducation": ["edu-kent-astronomy"]
     },
 
     {
@@ -147,10 +136,7 @@
         "Space Advocacy",
         "International Collaboration"
       ],
-      "entities": [
-        "Royal Astronomical Society",
-        "UNESCO"
-      ]
+       "relatedEducation": ["edu-leicester-mphys"]
     },
 
     {
@@ -182,27 +168,32 @@
         "Data Analysis",
         "University Research Grant"
       ],
-      "entities": [
-        "University of Leicester"
-      ]
+      "relatedEducation": ["edu-leicester-mphys"]
     },
 
     {
       "id": "school-awards-early",
-      "title": "Academic & Service Awards",
+      "title": "Magdalen Cup for Science",
       "issuer": "Skegness Grammar School",
       "year": 2005,
-      "items": [
-        "Magdalen Cup for Science",
-        "King Prize for Service"
-      ],
       "keywords": [
         "Academic Excellence",
         "Science Achievement",
+        "Early Academic Achievement"
+      ],
+      "relatedEducation": ["edu-skegness-grammar"]
+    },
+    {
+      "id": "school-awards-early",
+      "title": "King Prize for Service",
+      "issuer": "Skegness Grammar School",
+      "year": 2005,
+      "keywords": [
         "Leadership",
         "Service Award",
         "Early Academic Achievement"
-      ]
+      ],
+      "relatedEducation": ["edu-skegness-grammar"]
     }
   ]
 }
