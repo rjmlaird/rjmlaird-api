@@ -17,9 +17,7 @@
         "UK Space Sector",
         "Industry Engagement"
       ],
-      "entities": [
-        "UK Space Conference"
-      ]
+      "relatedExperience": ["exp-rr-space"]
     },
 
     {
@@ -77,10 +75,7 @@
         "Scientific Outreach",
         "Early Career Research"
       ],
-      "entities": [
-        "Royal Astronomical Society",
-        "Space Generation Congress"
-      ]
+      "relatedVolunteering": ["vol-ukseds-secretary"]
     },
 
     {
@@ -91,7 +86,7 @@
       "instrument": "New Technology Telescope (NTT)",
       "location": "La Silla, Chile",
       "duration": "3 nights",
-      "research_area": "YORP effect on small asteroids",
+      "summary": "YORP effect on small asteroids",
       "keywords": [
         "Observational Astronomy",
         "Asteroids",
@@ -111,7 +106,7 @@
       "instrument": "Hale Telescope (5m)",
       "location": "California, USA",
       "duration": "2 nights",
-      "research_area": "SEPPCoN Survey",
+      "summary": "SEPPCoN",
       "keywords": [
         "Astronomy",
         "Cometary Science",
@@ -123,12 +118,13 @@
     },
 
     {
-      "id": "ras-iya-2009-rep",
-      "title": "UK Student Representative",
+      "id": "ras-iya2009-rep",
+      "title": "UK Student Representative IYA2009",
       "issuer": "Royal Astronomical Society",
       "year": 2009,
       "event": "International Year of Astronomy Opening Ceremony",
       "location": "UNESCO, Paris",
+      "summary": "IYA2009",
       "keywords": [
         "Science Diplomacy",
         "Astronomy Outreach",
@@ -145,15 +141,14 @@
       "issuer": "British Interplanetary Society",
       "year": 2010,
       "award": "Sir Arthur Clarke Awards",
+      "summary": "Nominated for outreach efforts.",
       "keywords": [
         "Space Innovation",
         "Space Industry Recognition",
         "Science Communication",
         "UK Space Sector"
       ],
-      "entities": [
-        "British Interplanetary Society"
-      ]
+      "relatedVolunteering": ["vol-ukseds-secretary"]
     },
 
     {
