@@ -418,7 +418,7 @@
       "Knowledge Management",
       "Open Data"
     ],
-    "relatedAwards": "awards-excellence-2017-esa",
+    "relatedAwards": ["awards-excellence-2017-esa"],
     "featured": true,
     "order": 7
   },

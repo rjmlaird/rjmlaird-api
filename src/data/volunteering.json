@@ -13,7 +13,6 @@
     "achievements": [],
     "skills": [],
     "projects": [],
-    "relatedAwards": "",
     "featured": false,
     "order": 1
   },
@@ -31,7 +30,6 @@
     "achievements": [],
     "skills": [],
     "projects": [],
-    "relatedAwards": "",
     "featured": false,
     "order": 1
   },
@@ -49,7 +47,6 @@
     "achievements": [],
     "skills": [],
     "projects": [],
-    "relatedAwards": "",
     "featured": false,
     "order": 2
   },
@@ -70,7 +67,6 @@
     "clients": [],
     "articles": [],
     "talks": [],
-    "relatedAwards": "",
     "featured": false,
     "order": 3
   },
@@ -91,7 +87,7 @@
     "clients": [],
     "articles": [],
     "talks": [],
-    "relatedAwards": "award-ras-sgc-2012",
+    "relatedAwards": ["award-ras-sgc-2012"],
     "featured": false,
     "order": 4
   },
@@ -184,7 +180,6 @@
     "clients": [],
     "articles": [],
     "talks": [],
-    "relatedAwards": "",
     "featured": false,
     "order": 7
   },
@@ -205,7 +200,6 @@
     "clients": [],
     "articles": [],
     "talks": [],
-    "relatedAwards": "",
     "featured": false,
     "order": 8
   },
@@ -226,7 +220,6 @@
     "clients": [],
     "articles": [],
     "talks": [],
-    "relatedAwards": "",
     "featured": false,
     "order": 9
   }
