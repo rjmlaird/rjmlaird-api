@@ -317,5 +317,51 @@
     "media": [],
     "featured": false,
     "order": 5
-  }
+  },
+{
+  "id": "edu-skegness-grammar",
+  "institution": "Skegness Grammar School",
+  "role": "Student",
+  "qualification": "A-levels and GCSEs",
+  "field": "Mathematics, Further Mathematics, Physics, Chemistry, French, Spanish, English Language, English Literature, Biology, Geography",
+  "institutionType": "Grammar School",
+  "startDate": "1998-09",
+  "endDate": "2005-06",
+  "current": false,
+  "city": "Skegness",
+  "country": "United Kingdom",
+  "summary": "Attended Skegness Grammar School from 1998 to 2005. Completed A-levels in Mathematics, Further Mathematics, Additional Further Mathematics, Physics and Chemistry in 2005, and GCSEs in 2003 including French A*, Spanish A, English Language A, English Literature A, Physics A, Chemistry A, Biology A, Geography B, and Mathematics A*.",
+  "keyActivities": [
+    "Studied a broad science and mathematics curriculum.",
+    "Completed advanced mathematics and physics qualifications at A-level.",
+    "Achieved strong GCSE results across languages, sciences, humanities, and mathematics."
+  ],
+  "achievements": [
+    "A-levels in Mathematics, Further Mathematics, Additional Further Mathematics, Physics and Chemistry.",
+    "GCSEs including French A*, Spanish A, English Language A, English Literature A, Physics A, Chemistry A, Biology A, Geography B, and Mathematics A*."
+  ],
+  "skills": [
+    "Mathematical Reasoning",
+    "Scientific Literacy",
+    "Analytical Thinking",
+    "Written Communication",
+    "Language Learning",
+    "Problem Solving"
+  ],
+  "domainExpertise": [],
+  "technicalSkills": [],
+  "practices": [],
+  "leadershipAndCollaboration": [],
+  "areasOfInterest": [],
+  "projects": [],
+  "clients": [],
+  "articles": [],
+  "talks": [],
+  "awards": [],
+  "certifications": [],
+  "technologies": [],
+  "media": [],
+  "featured": false,
+  "order": 1
+}
 ]
