@@ -1,11 +1,11 @@
 {
   "awards": [
     {
-      "id": "uk-space-conference-2019-panel",
+      "id": "awards-uk-space-2019-panel",
       "title": "Invited Panellist",
       "issuer": "UK Space Conference",
       "year": 2019,
-      "type": "conference_participation",
+      "type": "speaker invitation",
       "role": "Panellist",
       "event": "UK Space Conference 2019",
       "session_title": "The Changing Landscape of Funding and Finance: Policies, Players and Partners",
@@ -21,7 +21,7 @@
     },
 
     {
-      "id": "communicator-awards-2017-esa",
+      "id": "awards-excellence-2017-esa",
       "title": "Award of Excellence",
       "issuer": "The Communicator Awards",
       "year": 2017,
@@ -41,16 +41,16 @@
     },
 
     {
-      "id": "isu-ssp-scholarship-2013",
+      "id": "award-isu-ssp-2013",
       "title": "Scholarship Recipient",
-      "issuer": "International Space University",
-      "year": 2013,
-      "value": "€16,500",
-      "programme": "Space Studies Programme (SSP)",
-      "funded_by": [
+      "issuer": [
         "UK Space Agency",
         "European Space Agency"
       ],
+      "type": "scholarship",
+      "year": 2013,
+      "value": "€16,500",
+      "programme": "Space Studies Programme (SSP)",
       "keywords": [
         "Space Studies Programme",
         "Space Education",
@@ -62,10 +62,11 @@
     },
 
     {
-      "id": "ras-grant-sgc-2012",
-      "title": "Grant Recipient",
+      "id": "award-ras-sgc-2012",
+      "title": "Education & Outreach Small Grant",
       "issuer": "Royal Astronomical Society",
       "year": 2012,
+      "type": "grant",
       "event": "Space Generation Congress",
       "location": "Naples, Italy",
       "keywords": [
@@ -79,10 +80,11 @@
     },
 
     {
-      "id": "eso-observing-time-ntt-2010",
+      "id": "award-eso-ntt-2010",
       "title": "Observing Time Award (Co-I)",
       "issuer": "European Southern Observatory",
       "year": 2010,
+      "type": "grant",
       "instrument": "New Technology Telescope (NTT)",
       "location": "La Silla, Chile",
       "duration": "3 nights",
@@ -99,10 +101,11 @@
     },
 
     {
-      "id": "palomar-observing-time-2010",
+      "id": "award-palomar-2010",
       "title": "Observing Time Award (Co-I)",
       "issuer": "Palomar Observatory",
       "year": 2010,
+      "type": "grant",
       "instrument": "Hale Telescope (5m)",
       "location": "California, USA",
       "duration": "2 nights",
@@ -118,10 +121,11 @@
     },
 
     {
-      "id": "ras-iya2009-rep",
+      "id": "award-ras-iya2009-rep",
       "title": "UK Student Representative IYA2009",
       "issuer": "Royal Astronomical Society",
       "year": 2009,
+      "type": "award",
       "event": "International Year of Astronomy Opening Ceremony",
       "location": "UNESCO, Paris",
       "summary": "IYA2009",
@@ -136,10 +140,11 @@
     },
 
     {
-      "id": "sir-arthur-clarke-nomination-2010",
+      "id": "award-arthur-clarke",
       "title": "Nominee",
       "issuer": "British Interplanetary Society",
       "year": 2010,
+      "type": "award",
       "award": "Sir Arthur Clarke Awards",
       "summary": "Nominated for outreach efforts.",
       "keywords": [
@@ -152,10 +157,11 @@
     },
 
     {
-      "id": "sure-fellowship-leicester",
+      "id": "award-sure-2007",
       "title": "SURE Fellowship",
       "issuer": "University of Leicester",
       "year": 2007,
+      "type": "fellowship",
       "keywords": [
         "Astrophysics Research",
         "Student Fellowship",
@@ -167,10 +173,11 @@
     },
 
     {
-      "id": "school-awards-early",
+      "id": "award-sgs-magdalen",
       "title": "Magdalen Cup for Science",
       "issuer": "Skegness Grammar School",
       "year": 2005,
+      "type": "award",
       "keywords": [
         "Academic Excellence",
         "Science Achievement",
@@ -179,10 +186,11 @@
       "relatedEducation": ["edu-skegness-grammar"]
     },
     {
-      "id": "school-awards-early",
+      "id": "award-sgs-king",
       "title": "King Prize for Service",
       "issuer": "Skegness Grammar School",
       "year": 2005,
+      "type": "award",
       "keywords": [
         "Leadership",
         "Service Award",
