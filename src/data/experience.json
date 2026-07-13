@@ -10,7 +10,7 @@
     "city": "Leicester",
     "country": "United Kingdom",
     "workMode": "Hybrid",
-    "summary": "Founded and lead a specialist sustainable marketing and communications agency helping organisations across the space and technology sectors strengthen brand strategy, digital visibility, and audience engagement. Green Orbit Digital combines SEO, content strategy, analytics, and low-carbon web thinking to help mission-led organisations communicate more effectively and grow responsibly [web:38][web:34].",
+    "summary": "Founded and lead a specialist sustainable marketing and communications agency helping organisations across the space, technology, and mission-driven sectors strengthen brand strategy, digital visibility, and audience engagement. Green Orbit Digital combines SEO, content strategy, analytics, and low-carbon web thinking to support measurable growth and responsible marketing [web:38][web:34][web:33].",
     "responsibilities": [
       "Develop marketing, communications, and PR strategies for organisations operating across the space and Earth observation sectors.",
       "Deliver sustainable marketing programmes aligned with environmental best practice and Carbon Literacy principles.",
@@ -34,6 +34,41 @@
       "Stakeholder Engagement",
       "Digital Strategy",
       "Low-Carbon Web Development"
+    ],
+    "domainExpertise": [
+      "marketing_growth",
+      "comms_pr_editorial",
+      "space_climate"
+    ],
+    "technicalSkills": [
+      "Astro",
+      "React",
+      "Node.js",
+      "GitHub Actions / CI/CD",
+      "Google Analytics 4 (GA4)"
+    ],
+    "practices": [
+      "Information Architecture & Content Modelling",
+      "Sustainable / Low-Carbon Digital Standards",
+      "Applied AI Workflows",
+      "Impact Measurement & SDG Frameworks"
+    ],
+    "leadershipAndCollaboration": [
+      "Project & Programme Management",
+      "Stakeholder Management",
+      "Team Leadership",
+      "Agile Methodologies",
+      "Cross-Functional Collaboration",
+      "Public Speaking & Presentation"
+    ],
+    "areasOfInterest": [
+      "Full-Stack Development",
+      "AI/ML Engineering",
+      "Open Source",
+      "Data Engineering",
+      "Digital Systems & Automation",
+      "Open Data",
+      "Knowledge Management"
     ],
     "projects": [],
     "clients": [],
@@ -74,6 +109,23 @@
       "Digital Communications",
       "SEO Writing",
       "Editorial Skills"
+    ],
+    "domainExpertise": [
+      "marketing_growth",
+      "comms_pr_editorial"
+    ],
+    "technicalSkills": [],
+    "practices": [
+      "Applied AI Workflows"
+    ],
+    "leadershipAndCollaboration": [
+      "Critical & Analytical Thinking",
+      "Adaptability",
+      "Attention to Detail"
+    ],
+    "areasOfInterest": [
+      "Knowledge Management",
+      "Open Source"
     ],
     "projects": [],
     "clients": [],
@@ -122,6 +174,29 @@
       "Space Sector Communications",
       "Campaign Management"
     ],
+    "domainExpertise": [
+      "comms_pr_editorial",
+      "space_climate"
+    ],
+    "technicalSkills": [
+      "Google Analytics 4 (GA4)",
+      "Content Marketing",
+      "CRM & personalised journeys"
+    ],
+    "practices": [
+      "Information Architecture & Content Modelling",
+      "Impact Measurement & SDG Frameworks"
+    ],
+    "leadershipAndCollaboration": [
+      "Project & Programme Management",
+      "Stakeholder Management",
+      "Cross-Functional Collaboration",
+      "Workshop Facilitation"
+    ],
+    "areasOfInterest": [
+      "Open Data",
+      "Knowledge Management"
+    ],
     "projects": [],
     "clients": [
       "esa-business-applications"
@@ -167,6 +242,33 @@
       "Science Communication",
       "Campaign Delivery"
     ],
+    "domainExpertise": [
+      "marketing_growth",
+      "comms_pr_editorial",
+      "space_climate"
+    ],
+    "technicalSkills": [
+      "WordPress/Drupal",
+      "Google Analytics 4 (GA4)",
+      "SEO",
+      "Content Marketing"
+    ],
+    "practices": [
+      "Information Architecture & Content Modelling",
+      "Sustainable / Low-Carbon Digital Standards",
+      "Impact Measurement & SDG Frameworks"
+    ],
+    "leadershipAndCollaboration": [
+      "Project & Programme Management",
+      "Stakeholder Management",
+      "Cross-Functional Collaboration",
+      "Workshop Facilitation"
+    ],
+    "areasOfInterest": [
+      "Open Source",
+      "Digital Systems & Automation",
+      "Knowledge Management"
+    ],
     "projects": [],
     "clients": [],
     "articles": [],
@@ -207,6 +309,30 @@
       "Event Programming",
       "Stakeholder Engagement",
       "Network Development"
+    ],
+    "domainExpertise": [
+      "comms_pr_editorial",
+      "space_climate"
+    ],
+    "technicalSkills": [
+      "Git",
+      "GitHub",
+      "WordPress/Drupal"
+    ],
+    "practices": [
+      "Information Architecture & Content Modelling",
+      "Impact Measurement & SDG Frameworks"
+    ],
+    "leadershipAndCollaboration": [
+      "Project & Programme Management",
+      "Team Leadership",
+      "Cross-Functional Collaboration",
+      "Public Speaking & Presentation",
+      "Community Building"
+    ],
+    "areasOfInterest": [
+      "Open Source",
+      "Knowledge Management"
     ],
     "projects": [],
     "clients": [],
@@ -249,6 +375,25 @@
       "STEM Communication",
       "Education Delivery"
     ],
+    "domainExpertise": [
+      "space_climate",
+      "comms_pr_editorial"
+    ],
+    "technicalSkills": [],
+    "practices": [
+      "Impact Measurement & SDG Frameworks"
+    ],
+    "leadershipAndCollaboration": [
+      "Project & Programme Management",
+      "Stakeholder Management",
+      "Team Leadership",
+      "Workshop Facilitation",
+      "Community Building"
+    ],
+    "areasOfInterest": [
+      "Scientific Research",
+      "Open Data"
+    ],
     "projects": [],
     "clients": [],
     "articles": [],
@@ -289,6 +434,28 @@
       "Video Production",
       "Content Strategy",
       "Digital Publishing"
+    ],
+    "domainExpertise": [
+      "comms_pr_editorial",
+      "space_climate"
+    ],
+    "technicalSkills": [
+      "HTML/CSS",
+      "WordPress/Drupal",
+      "Canva"
+    ],
+    "practices": [
+      "Information Architecture & Content Modelling",
+      "Sustainable / Low-Carbon Digital Standards"
+    ],
+    "leadershipAndCollaboration": [
+      "Cross-Functional Collaboration",
+      "Attention to Detail",
+      "Critical & Analytical Thinking"
+    ],
+    "areasOfInterest": [
+      "Knowledge Management",
+      "Open Data"
     ],
     "projects": [],
     "clients": [],
@@ -331,6 +498,26 @@
       "Science Outreach",
       "Educational Content"
     ],
+    "domainExpertise": [
+      "comms_pr_editorial",
+      "data_analytics_research"
+    ],
+    "technicalSkills": [
+      "Content Marketing",
+      "Information Architecture",
+      "Accessibility"
+    ],
+    "practices": [
+      "Information Architecture & Content Modelling"
+    ],
+    "leadershipAndCollaboration": [
+      "Public Speaking & Presentation",
+      "Cross-Functional Collaboration"
+    ],
+    "areasOfInterest": [
+      "Scientific Research",
+      "Knowledge Management"
+    ],
     "projects": [],
     "clients": [],
     "articles": [],
@@ -354,7 +541,7 @@
     "city": "Munich",
     "country": "Germany",
     "workMode": "On-site",
-    "summary": "Supported science communication and outreach activities for the European Southern Observatory. Produced news releases, photo releases, web content, and video scripts while contributing to educational materials, exhibitions, and public engagement campaigns [web:37][web:38].",
+    "summary": "Supported science communication and outreach activities for the European Southern Observatory. Produced news releases, photo releases, web content, and video scripts while contributing to educational materials, exhibitions, and public engagement campaigns [web:37].",
     "responsibilities": [
       "Produced news releases, photo releases, and web content.",
       "Assisted with video scripts and educational materials.",
@@ -372,6 +559,26 @@
       "Editorial Production",
       "Web Content",
       "Science Storytelling"
+    ],
+    "domainExpertise": [
+      "comms_pr_editorial",
+      "space_climate"
+    ],
+    "technicalSkills": [
+      "HTML/CSS",
+      "Content Marketing",
+      "Accessibility"
+    ],
+    "practices": [
+      "Information Architecture & Content Modelling"
+    ],
+    "leadershipAndCollaboration": [
+      "Cross-Functional Collaboration",
+      "Attention to Detail"
+    ],
+    "areasOfInterest": [
+      "Scientific Research",
+      "Knowledge Management"
     ],
     "projects": [],
     "clients": [],
@@ -414,6 +621,22 @@
       "Youth Engagement",
       "Astronomy Communication"
     ],
+    "domainExpertise": [
+      "comms_pr_editorial",
+      "space_climate"
+    ],
+    "technicalSkills": [],
+    "practices": [
+      "Information Architecture & Content Modelling"
+    ],
+    "leadershipAndCollaboration": [
+      "Critical & Analytical Thinking",
+      "Attention to Detail"
+    ],
+    "areasOfInterest": [
+      "Knowledge Management",
+      "Open Data"
+    ],
     "projects": [],
     "clients": [],
     "articles": [],
@@ -453,6 +676,24 @@
       "Event Support",
       "International Collaboration",
       "Programme Coordination"
+    ],
+    "domainExpertise": [
+      "space_climate",
+      "comms_pr_editorial"
+    ],
+    "technicalSkills": [],
+    "practices": [
+      "Impact Measurement & SDG Frameworks"
+    ],
+    "leadershipAndCollaboration": [
+      "Project & Programme Management",
+      "Stakeholder Management",
+      "Cross-Functional Collaboration",
+      "Public Speaking & Presentation"
+    ],
+    "areasOfInterest": [
+      "Open Data",
+      "Knowledge Management"
     ],
     "projects": [],
     "clients": [],
@@ -495,6 +736,26 @@
       "Physics Education",
       "Tutorial Delivery"
     ],
+    "domainExpertise": [
+      "data_analytics_research"
+    ],
+    "technicalSkills": [
+      "Python",
+      "LaTeX",
+      "Data Interpretation"
+    ],
+    "practices": [
+      "Information Architecture & Content Modelling"
+    ],
+    "leadershipAndCollaboration": [
+      "Mentoring",
+      "Public Speaking & Presentation",
+      "Critical & Analytical Thinking"
+    ],
+    "areasOfInterest": [
+      "Scientific Research",
+      "Open Data"
+    ],
     "projects": [],
     "clients": [],
     "articles": [],
@@ -534,6 +795,25 @@
       "Presentation",
       "Outreach Delivery",
       "Physics Outreach"
+    ],
+    "domainExpertise": [
+      "comms_pr_editorial",
+      "space_climate"
+    ],
+    "technicalSkills": [
+      "Accessibility",
+      "Content Marketing"
+    ],
+    "practices": [
+      "Information Architecture & Content Modelling"
+    ],
+    "leadershipAndCollaboration": [
+      "Public Speaking & Presentation",
+      "Workshop Facilitation"
+    ],
+    "areasOfInterest": [
+      "Scientific Literacy",
+      "Knowledge Management"
     ],
     "projects": [],
     "clients": [],
@@ -577,6 +857,27 @@
       "Data Visualisation",
       "Research Support"
     ],
+    "domainExpertise": [
+      "data_analytics_research",
+      "space_climate"
+    ],
+    "technicalSkills": [
+      "Python",
+      "Pandas",
+      "Data Visualisation",
+      "Scientific Research"
+    ],
+    "practices": [
+      "Impact Measurement & SDG Frameworks"
+    ],
+    "leadershipAndCollaboration": [
+      "Critical & Analytical Thinking",
+      "Attention to Detail"
+    ],
+    "areasOfInterest": [
+      "Open Data",
+      "Data Engineering"
+    ],
     "projects": [],
     "clients": [],
     "articles": [],
@@ -616,6 +917,21 @@
       "Science Communication",
       "Lesson Support",
       "Practical Science"
+    ],
+    "domainExpertise": [
+      "comms_pr_editorial"
+    ],
+    "technicalSkills": [],
+    "practices": [
+      "Information Architecture & Content Modelling"
+    ],
+    "leadershipAndCollaboration": [
+      "Workshop Facilitation",
+      "Cross-Functional Collaboration"
+    ],
+    "areasOfInterest": [
+      "Scientific Literacy",
+      "Knowledge Management"
     ],
     "projects": [],
     "clients": [],
@@ -657,6 +973,26 @@
       "Data Reduction",
       "Research Methods",
       "Data Interpretation"
+    ],
+    "domainExpertise": [
+      "data_analytics_research",
+      "space_climate"
+    ],
+    "technicalSkills": [
+      "Python",
+      "Data Cleaning & Taxonomy Design",
+      "Scientific Research"
+    ],
+    "practices": [
+      "Information Architecture & Content Modelling"
+    ],
+    "leadershipAndCollaboration": [
+      "Critical & Analytical Thinking",
+      "Attention to Detail"
+    ],
+    "areasOfInterest": [
+      "Scientific Research",
+      "Open Data"
     ],
     "projects": [],
     "clients": [],

@@ -11,17 +11,17 @@
     "current": false,
     "city": "Bristol",
     "country": "United Kingdom",
-    "summary": "Completed a Masters-level science communication module focused on online and media writing for non-academic audiences. Developed SEO-conscious science writing skills, including story identification from research, audience-specific writing, press release production, blog and feature writing, and techniques for improving the visibility of digital content across social media and online channels.",
+    "summary": "Completed a Masters-level science communication module focused on writing for non-academic audiences, with training in online science writing, audience adaptation, narrative structure, risk and statistics communication, press release writing, and making science content more visible online. The assessed portfolio encouraged flexible writing across multiple genres and audiences, aligned to real-world science communication practice [web:1][web:7].",
     "responsibilities": [
-      "Identified compelling stories in scientific research and translated them into accessible public-facing content.",
-      "Adapted tone, structure, and style for different audiences, formats, and communication goals.",
-      "Produced science writing in multiple genres, including blogs, features, news stories, and press releases.",
-      "Applied online science communication techniques to improve discoverability and audience reach.",
-      "Evaluated how to communicate risk, statistics, and technical concepts clearly and accurately."
+      "Identified research stories and translated them into clear public-facing content.",
+      "Adapted writing style, structure, and tone for different audiences and formats.",
+      "Produced science writing in formats such as blog posts, features, news stories, and press releases.",
+      "Applied best practice in online science communication and audience engagement.",
+      "Evaluated how to communicate scientific uncertainty, risk, and statistics effectively."
     ],
     "achievements": [
-      "Completed a 2,500-word portfolio demonstrating flexible writing for non-specialist audiences.",
-      "Strengthened the ability to write clearly about science for digital-first and public audiences."
+      "Completed a 2,500-word science writing portfolio.",
+      "Strengthened practical skills in digital-first science communication."
     ],
     "skills": [
       "Science Communication",
@@ -29,11 +29,25 @@
       "Audience Adaptation",
       "Digital Media",
       "Editorial Skills",
-      "SEO Writing",
-      "Science Blogging",
+      "SEO Copywriting",
       "Press Release Writing",
-      "Public Engagement",
-      "Research Communication"
+      "Storytelling & Narrative Development"
+    ],
+    "domainExpertise": [
+      "comms_pr_editorial",
+      "space_climate"
+    ],
+    "technicalSkills": [],
+    "practices": [
+      "Information Architecture & Content Modelling"
+    ],
+    "leadershipAndCollaboration": [
+      "Critical & Analytical Thinking",
+      "Attention to Detail"
+    ],
+    "areasOfInterest": [
+      "Open Source",
+      "Knowledge Management"
     ],
     "projects": [],
     "clients": [],
@@ -58,17 +72,16 @@
     "current": false,
     "city": "Loughborough",
     "country": "United Kingdom",
-    "summary": "Completed a professionally recognised digital marketing qualification covering campaign planning, content marketing, and social media marketing. Built practical, SEO-aware marketing skills aligned to contemporary digital strategy, audience targeting, and performance-led content delivery.",
+    "summary": "Completed a professionally recognised digital marketing qualification covering marketing impact, planning integrated campaigns, content marketing, and social media marketing. Built practical capability in campaign planning, channel strategy, audience targeting, and performance-led digital communication [web:2].",
     "responsibilities": [
-      "Planned and evaluated integrated digital marketing campaigns.",
-      "Applied marketing strategy across content, search, and social media channels.",
-      "Developed audience-focused messaging and positioning.",
-      "Used analytical thinking to support campaign decisions and review performance.",
-      "Worked with core digital marketing principles relevant to modern online visibility."
+      "Studied core digital marketing concepts and campaign planning methods.",
+      "Applied content marketing and social media marketing principles.",
+      "Developed audience-focused messaging and campaign thinking.",
+      "Used analytical judgement to assess marketing performance and impact."
     ],
     "achievements": [
       "Achieved the CIM Level 4 Certificate in Professional Digital Marketing.",
-      "Built a strong foundation in practical, industry-recognised digital marketing."
+      "Built a strong foundation in modern digital and content marketing practice."
     ],
     "skills": [
       "Digital Marketing",
@@ -76,10 +89,23 @@
       "Marketing Strategy",
       "Content Marketing",
       "Analytics",
-      "SEO",
-      "Social Media Marketing",
-      "Audience Targeting",
-      "Marketing Evaluation"
+      "Social Media Strategy",
+      "Lead Generation",
+      "Positioning"
+    ],
+    "domainExpertise": [
+      "marketing_growth"
+    ],
+    "technicalSkills": [],
+    "practices": [
+      "Impact Measurement & SDG Frameworks"
+    ],
+    "leadershipAndCollaboration": [
+      "Critical & Analytical Thinking"
+    ],
+    "areasOfInterest": [
+      "Full-Stack Development",
+      "Knowledge Management"
     ],
     "projects": [],
     "clients": [],
@@ -106,17 +132,16 @@
     "current": false,
     "city": "Strasbourg",
     "country": "France",
-    "summary": "Completed an intensive interdisciplinary space studies programme covering technical, operational, and societal aspects of the space sector. Contributed to the AMBIEnT project, exploring affordable microsatellite-based internet access and environmental monitoring, and developed collaborative problem-solving skills in an international, project-based environment.",
+    "summary": "Completed an intensive interdisciplinary space studies programme focused on space applications, systems thinking, and collaborative problem solving. Contributed to the AMBIEnT project on affordable microsatellite-based internet access and environmental monitoring, strengthening understanding of space-sector innovation, technical feasibility, and mission-level collaboration.",
     "responsibilities": [
-      "Worked on the AMBIEnT project focused on microsatellite-based connectivity and environmental monitoring.",
+      "Worked on the AMBIEnT project: Affordable Microsatellite-Based Internet Access and Environmental Monitoring.",
       "Applied systems thinking to space applications and mission concepts.",
-      "Collaborated across disciplines in an international team setting.",
-      "Assessed the feasibility and practical value of space-enabled services.",
-      "Contributed to team-based research, discussion, and presentation work."
+      "Collaborated across disciplines in an international project environment.",
+      "Evaluated the technical and societal value of proposed space services."
     ],
     "achievements": [
-      "Contributed to an interdisciplinary space project on microsatellite applications.",
-      "Developed a broader understanding of the technical and societal value of space systems."
+      "Contributed to an interdisciplinary project exploring microsatellite applications.",
+      "Built experience in international collaboration on a space-sector concept."
     ],
     "skills": [
       "Space Applications",
@@ -125,8 +150,25 @@
       "Systems Thinking",
       "Interdisciplinary Collaboration",
       "Mission Concepts",
-      "Space Policy Awareness",
       "Technical Communication"
+    ],
+    "domainExpertise": [
+      "space_climate",
+      "comms_pr_editorial"
+    ],
+    "technicalSkills": [],
+    "practices": [
+      "Information Architecture & Content Modelling"
+    ],
+    "leadershipAndCollaboration": [
+      "Project & Programme Management",
+      "Cross-Functional Collaboration",
+      "Public Speaking & Presentation"
+    ],
+    "areasOfInterest": [
+      "AI/ML Engineering",
+      "Open Data",
+      "Knowledge Management"
     ],
     "projects": [
       "AMBIEnT - Affordable Microsatellite-Based Internet Access and Environmental Monitoring"
@@ -153,13 +195,12 @@
     "current": false,
     "city": "Leicester",
     "country": "United Kingdom",
-    "summary": "Completed an integrated master's degree in physics with astrophysics, combining core physics, mathematics, and specialist astrophysics study. Built strong analytical and scientific problem-solving skills through rigorous academic training and research-oriented study.",
+    "summary": "Completed an integrated master's degree in physics with astrophysics, combining core physics, mathematics, and specialist astronomy study. Developed strong analytical, mathematical, and scientific computing skills through rigorous quantitative training and research preparation [web:11][web:62].",
     "responsibilities": [
       "Studied core physics topics alongside specialist astrophysics modules.",
       "Applied mathematics to scientific modelling and problem solving.",
       "Developed scientific computing and data analysis skills.",
-      "Strengthened understanding of physical systems through advanced quantitative study.",
-      "Prepared for research and technical work in science-related roles."
+      "Strengthened understanding of physical systems through advanced quantitative study."
     ],
     "achievements": [
       "Completed an MPhys degree with astrophysics specialism.",
@@ -174,6 +215,27 @@
       "Problem Solving",
       "Modelling",
       "Research Preparation"
+    ],
+    "domainExpertise": [
+      "data_analytics_research",
+      "space_climate"
+    ],
+    "technicalSkills": [
+      "Python",
+      "LaTeX",
+      "Data Structures & Algorithms"
+    ],
+    "practices": [
+      "Applied AI Workflows"
+    ],
+    "leadershipAndCollaboration": [
+      "Critical & Analytical Thinking",
+      "Attention to Detail"
+    ],
+    "areasOfInterest": [
+      "Data Engineering",
+      "Open Data",
+      "AI/ML Engineering"
     ],
     "projects": [],
     "clients": [],
@@ -198,7 +260,7 @@
     "current": false,
     "city": "Canterbury",
     "country": "United Kingdom",
-    "summary": "Conducted doctoral research on Jupiter-family comets within the SEPPCoN collaboration, analysing optical and thermal infrared data from major observatories including the VLT, Palomar, Keck, and Spitzer. Investigated comet size, spin, albedo, thermal behaviour, and composition, contributing to the wider scientific understanding of small-body populations and solar system evolution.",
+    "summary": "Conducted doctoral research on Jupiter-family comets within the SEPPCoN collaboration, analysing optical and thermal infrared observations from major observatories including VLT, Palomar, Keck, and Spitzer. Investigated comet size, spin, albedo, thermal behaviour, and composition, contributing to scientific understanding of small-body populations and observational astronomy [web:22][web:62].",
     "responsibilities": [
       "Analysed astronomical datasets from optical and thermal infrared observations.",
       "Processed and interpreted comet imagery and observational data.",
@@ -220,6 +282,30 @@
       "Research Writing",
       "Scientific Computing",
       "Data Interpretation"
+    ],
+    "domainExpertise": [
+      "data_analytics_research",
+      "space_climate"
+    ],
+    "technicalSkills": [
+      "Python",
+      "IDL",
+      "MATLAB",
+      "LaTeX",
+      "Data Cleaning & Taxonomy Design"
+    ],
+    "practices": [
+      "Information Architecture & Content Modelling"
+    ],
+    "leadershipAndCollaboration": [
+      "Project & Programme Management",
+      "Cross-Functional Collaboration",
+      "Critical & Analytical Thinking"
+    ],
+    "areasOfInterest": [
+      "Open Data",
+      "Scientific Research",
+      "Knowledge Management"
     ],
     "projects": [],
     "clients": [],
