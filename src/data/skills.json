@@ -1,221 +1,683 @@
 {
-  "domain_expertise": [
-    {
-      "id": "marketing_growth",
-      "label": "Strategy, Marketing & Growth",
-      "core": [
-        "Marketing Strategy",
-        "Digital Marketing",
-        "SEO",
-        "Content Marketing",
-        "Brand Strategy",
-        "Go-to-Market Strategy",
-        "B2B Marketing",
-        "Campaign Planning",
-        "Lead Generation",
-        "Positioning"
-      ],
-      "broader": [
-        "Social Media Strategy",
-        "Inbound Marketing",
-        "Audience Development",
-        "Conversion Optimisation",
-        "Growth Strategy",
-        "Data-Driven Marketing",
-        "Sustainable Marketing",
-        "Customer Journey Mapping",
-        "Market Research",
-        "Product Marketing",
-        "SEO Copywriting",
-        "Email Marketing",
-        "Lifecycle Marketing",
-        "Marketing Automation",
-        "Community Growth"
-      ]
-    },
-    {
-      "id": "comms_pr_editorial",
-      "label": "Communications, PR & Editorial",
-      "core": [
-        "Strategic Communications",
-        "Science Communication",
-        "Technical Writing",
-        "Public Relations",
-        "Media Relations",
-        "Copywriting",
-        "Editing",
-        "Content Strategy"
-      ],
-      "broader": [
-        "Editorial Planning",
-        "Press Release Writing",
-        "Corporate & Stakeholder Communications",
-        "Internal Communications",
-        "Event Communications",
-        "Webinar Production",
-        "Storytelling & Narrative Development",
-        "Proofreading",
-        "Tone of Voice",
-        "Speechwriting",
-        "Reputation Management",
-        "Message Development",
-        "Information Design"
-      ]
-    },
-    {
-      "id": "space_climate",
-      "label": "Space, Astronomy & Climate",
-      "core": [
-        "Space Industry Communications",
-        "Earth Observation",
-        "ESA Business Applications",
-        "Copernicus Programme",
-        "Satellite Applications",
-        "Climate Services from Space",
-        "Astronomy Communication"
-      ],
-      "broader": [
-        "Space Policy Awareness",
-        "Space Outreach",
-        "Scientific Research Communication",
-        "Space Innovation Ecosystems",
-        "Space Entrepreneurship",
-        "Climate Tech Communication",
-        "Environmental Communication",
-        "Climate Advocacy",
-        "Net Zero Communication",
-        "ESG Strategy",
-        "Sustainability Reporting",
-        "Climate Risk",
-        "Climate Data",
-        "Remote Sensing",
-        "Geospatial Data",
-        "Earth System Science",
-        "Atmospheric Science",
-        "Scientific Literacy"
-      ]
-    },
-    {
-      "id": "data_analytics_research",
-      "label": "Data, Analytics & Research",
-      "core": [
-        "Google Analytics 4 (GA4)",
-        "Data Visualisation",
-        "Marketing Analytics",
-        "KPI Tracking",
-        "Dashboard Reporting",
-        "Data Cleaning",
-        "Scientific Research",
-        "Literature Review"
-      ],
-      "broader": [
-        "Matomo Analytics",
-        "Performance Analytics",
-        "User Behaviour Analysis",
-        "A/B Testing",
-        "SEO Analytics",
-        "Campaign Measurement",
-        "Data Interpretation",
-        "Observational Astronomy",
-        "Academic Publishing",
-        "Peer-Reviewed Research",
-        "Quantitative Analysis",
-        "Qualitative Analysis",
-        "Data Modelling",
-        "Statistical Analysis",
-        "Research Design",
-        "Survey Analysis",
-        "Experiment Design"
-      ]
-    }
-  ],
-
-  "technical_skills": [
-    {
-      "id": "languages",
-      "label": "Languages & Programming",
-      "core": ["Python", "TypeScript", "JavaScript", "HTML/CSS", "SQL"],
-      "broader": ["C++", "Java", "C#", "R", "Bash / Shell Scripting", "LaTeX", "MATLAB", "IDL", "Fortran"]
-    },
-    {
-      "id": "frontend",
-      "label": "Frontend & UX",
-      "core": ["Astro", "Tailwind CSS", "React", "Vite"],
-      "broader": ["Next.js", "Three.js", "Redux", "Figma", "Canva", "UX/UI Design", "Responsive Design", "Information Architecture", "Accessibility", "Wireframing & Prototyping", "CMS Management (WordPress/Drupal)"]
-    },
-    {
-      "id": "backend_cloud",
-      "label": "Backend, Cloud & DevOps",
-      "core": ["Node.js", "REST API Design", "Cloudflare Workers", "Git", "GitHub Actions / CI/CD"],
-      "broader": ["Express.js", "FastAPI", "GraphQL", "PostgreSQL", "MongoDB", "Redis", "SQLite", "Docker", "Terraform", "Infrastructure as Code", "AWS (EC2, S3, Lambda, CloudFront, RDS)", "AWS (CodePipeline, CloudFormation, EventBridge)"]
-    },
-    {
-      "id": "ai_ml_automation",
-      "label": "AI/ML & Automation Tooling",
-      "core": ["Prompt Engineering", "LLM APIs", "Workflow Automation", "Claude Code", "GitHub Copilot"],
-      "broader": ["RAG Pipelines", "AI Agent Frameworks", "MCP Protocol", "TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "NumPy", "Jupyter Notebook", "Model Evaluation", "Feature Engineering"]
-    },
-    {
-      "id": "data_science_tools",
-      "label": "Scientific & Data Tooling",
-      "core": ["Pandas", "Skyfield", "OCR Pipelines", "Data Cleaning & Taxonomy Design"],
-      "broader": ["NumPy", "Streamlit"]
-    },
-    {
-      "id": "apis_integrations",
-      "label": "APIs & Integrations",
-      "core": ["Notion API", "HubSpot API", "GitHub API"],
-      "broader": ["Stripe API", "Zotero API", "Google APIs"]
-    },
-    {
-      "id": "cs_fundamentals",
-      "label": "Computer Science Fundamentals",
-      "core": ["Data Structures & Algorithms", "Object-Oriented Programming", "Version Control"],
-      "broader": ["Computer Networks", "Operating Systems", "Database Management Systems", "Design Patterns", "Testing Principles"]
-    }
-  ],
-
-  "practices": [
-    "Information Architecture & Content Modelling",
-    "Sustainable / Low-Carbon Digital Standards",
-    "Applied AI Workflows",
-    "Impact Measurement & SDG Frameworks"
-  ],
-
-  "leadership_and_collaboration": {
-    "label": "Leadership, Delivery & Collaboration",
-    "core": [
-      "Project & Programme Management",
-      "Stakeholder Management",
-      "Team Leadership",
-      "Agile Methodologies",
-      "Cross-Functional Collaboration",
-      "Public Speaking & Presentation"
+  "taxonomy": {
+    "domain_expertise": [
+      {
+        "id": "marketing_growth",
+        "label": "Strategy, Marketing & Growth",
+        "core": [
+          "Marketing Strategy",
+          "Digital Marketing",
+          "SEO",
+          "Content Marketing",
+          "Brand Strategy",
+          "Go-to-Market Strategy",
+          "B2B Marketing",
+          "Campaign Planning",
+          "Lead Generation",
+          "Positioning"
+        ],
+        "broader": [
+          "Social Media Strategy",
+          "Inbound Marketing",
+          "Audience Development",
+          "Conversion Optimisation",
+          "Growth Strategy",
+          "Data-Driven Marketing",
+          "Sustainable Marketing",
+          "Customer Journey Mapping",
+          "Market Research",
+          "Product Marketing",
+          "SEO Copywriting",
+          "Email Marketing",
+          "Lifecycle Marketing",
+          "Marketing Automation",
+          "Community Growth"
+        ]
+      },
+      {
+        "id": "comms_pr_editorial",
+        "label": "Communications, PR & Editorial",
+        "core": [
+          "Strategic Communications",
+          "Science Communication",
+          "Technical Writing",
+          "Public Relations",
+          "Media Relations",
+          "Copywriting",
+          "Editing",
+          "Content Strategy"
+        ],
+        "broader": [
+          "Editorial Planning",
+          "Press Release Writing",
+          "Corporate & Stakeholder Communications",
+          "Internal Communications",
+          "Event Communications",
+          "Webinar Production",
+          "Storytelling & Narrative Development",
+          "Proofreading",
+          "Tone of Voice",
+          "Speechwriting",
+          "Reputation Management",
+          "Message Development",
+          "Information Design"
+        ]
+      },
+      {
+        "id": "space_climate",
+        "label": "Space, Astronomy & Climate",
+        "core": [
+          "Space Industry Communications",
+          "Earth Observation",
+          "ESA Business Applications",
+          "Copernicus Programme",
+          "Satellite Applications",
+          "Climate Services from Space",
+          "Astronomy Communication"
+        ],
+        "broader": [
+          "Space Policy Awareness",
+          "Space Outreach",
+          "Scientific Research Communication",
+          "Space Innovation Ecosystems",
+          "Space Entrepreneurship",
+          "Climate Tech Communication",
+          "Environmental Communication",
+          "Climate Advocacy",
+          "Net Zero Communication",
+          "ESG Strategy",
+          "Sustainability Reporting",
+          "Climate Risk",
+          "Climate Data",
+          "Remote Sensing",
+          "Geospatial Data",
+          "Earth System Science",
+          "Atmospheric Science",
+          "Scientific Literacy"
+        ]
+      },
+      {
+        "id": "data_analytics_research",
+        "label": "Data, Analytics & Research",
+        "core": [
+          "Google Analytics 4 (GA4)",
+          "Data Visualisation",
+          "Marketing Analytics",
+          "KPI Tracking",
+          "Dashboard Reporting",
+          "Data Cleaning",
+          "Scientific Research",
+          "Literature Review"
+        ],
+        "broader": [
+          "Matomo Analytics",
+          "Performance Analytics",
+          "User Behaviour Analysis",
+          "A/B Testing",
+          "SEO Analytics",
+          "Campaign Measurement",
+          "Data Interpretation",
+          "Observational Astronomy",
+          "Academic Publishing",
+          "Peer-Reviewed Research",
+          "Quantitative Analysis",
+          "Qualitative Analysis",
+          "Data Modelling",
+          "Statistical Analysis",
+          "Research Design",
+          "Survey Analysis",
+          "Experiment Design"
+        ]
+      }
     ],
-    "broader": [
-      "Change Management",
-      "Roadmapping & OKR Planning",
-      "Risk Management",
-      "Partnership Development",
-      "Mentoring",
-      "Workshop Facilitation",
-      "Community Building",
-      "Negotiation",
-      "Conflict Resolution",
-      "Critical & Analytical Thinking",
-      "Adaptability",
-      "Attention to Detail"
+    "technical_skills": [
+      {
+        "id": "languages",
+        "label": "Languages & Programming",
+        "core": ["Python", "TypeScript", "JavaScript", "HTML/CSS", "SQL"],
+        "broader": ["C++", "Java", "C#", "R", "Bash / Shell Scripting", "LaTeX", "MATLAB", "IDL", "Fortran"]
+      },
+      {
+        "id": "frontend",
+        "label": "Frontend & UX",
+        "core": ["Astro", "Tailwind CSS", "React", "Vite"],
+        "broader": ["Next.js", "Three.js", "Redux", "Figma", "Canva", "UX/UI Design", "Responsive Design", "Information Architecture", "Accessibility", "Wireframing & Prototyping", "CMS Management (WordPress/Drupal)"]
+      },
+      {
+        "id": "backend_cloud",
+        "label": "Backend, Cloud & DevOps",
+        "core": ["Node.js", "REST API Design", "Cloudflare Workers", "Git", "GitHub Actions / CI/CD"],
+        "broader": ["Express.js", "FastAPI", "GraphQL", "PostgreSQL", "MongoDB", "Redis", "SQLite", "Docker", "Terraform", "Infrastructure as Code", "AWS (EC2, S3, Lambda, CloudFront, RDS)", "AWS (CodePipeline, CloudFormation, EventBridge)"]
+      },
+      {
+        "id": "ai_ml_automation",
+        "label": "AI/ML & Automation Tooling",
+        "core": ["Prompt Engineering", "LLM APIs", "Workflow Automation", "Claude Code", "GitHub Copilot"],
+        "broader": ["RAG Pipelines", "AI Agent Frameworks", "MCP Protocol", "TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "NumPy", "Jupyter Notebook", "Model Evaluation", "Feature Engineering"]
+      },
+      {
+        "id": "data_science_tools",
+        "label": "Scientific & Data Tooling",
+        "core": ["Pandas", "Skyfield", "OCR Pipelines", "Data Cleaning & Taxonomy Design"],
+        "broader": ["NumPy", "Streamlit"]
+      },
+      {
+        "id": "apis_integrations",
+        "label": "APIs & Integrations",
+        "core": ["Notion API", "HubSpot API", "GitHub API"],
+        "broader": ["Stripe API", "Zotero API", "Google APIs"]
+      },
+      {
+        "id": "cs_fundamentals",
+        "label": "Computer Science Fundamentals",
+        "core": ["Data Structures & Algorithms", "Object-Oriented Programming", "Version Control"],
+        "broader": ["Computer Networks", "Operating Systems", "Database Management Systems", "Design Patterns", "Testing Principles"]
+      }
+    ],
+    "practices": [
+      "Information Architecture & Content Modelling",
+      "Sustainable / Low-Carbon Digital Standards",
+      "Applied AI Workflows",
+      "Impact Measurement & SDG Frameworks"
+    ],
+    "leadership_and_collaboration": {
+      "label": "Leadership, Delivery & Collaboration",
+      "core": [
+        "Project & Programme Management",
+        "Stakeholder Management",
+        "Team Leadership",
+        "Agile Methodologies",
+        "Cross-Functional Collaboration",
+        "Public Speaking & Presentation"
+      ],
+      "broader": [
+        "Change Management",
+        "Roadmapping & OKR Planning",
+        "Risk Management",
+        "Partnership Development",
+        "Mentoring",
+        "Workshop Facilitation",
+        "Community Building",
+        "Negotiation",
+        "Conflict Resolution",
+        "Critical & Analytical Thinking",
+        "Adaptability",
+        "Attention to Detail"
+      ]
+    },
+    "areas_of_interest": [
+      "Full-Stack Development",
+      "AI/ML Engineering",
+      "AI Agents & MCP",
+      "Open Source",
+      "Data Engineering",
+      "Digital Systems & Automation",
+      "Open Data",
+      "Knowledge Management"
     ]
   },
-
-  "areas_of_interest": [
-    "Full-Stack Development",
-    "AI/ML Engineering",
-    "AI Agents & MCP",
-    "Open Source",
-    "Data Engineering",
-    "Digital Systems & Automation",
-    "Open Data",
-    "Knowledge Management"
+  "skills": [
+    {
+      "id": "science_communication",
+      "label": "Science Communication",
+      "category": "comms_pr_editorial",
+      "count": 5
+    },
+    {
+      "id": "other",
+      "label": "Other",
+      "category": null,
+      "count": null
+    },
+    {
+      "id": "astrophysics",
+      "label": "Astrophysics",
+      "category": "data_analytics_research",
+      "count": 2
+    },
+    {
+      "id": "content_strategy",
+      "label": "Content Strategy",
+      "category": "comms_pr_editorial",
+      "count": 2
+    },
+    {
+      "id": "event_management",
+      "label": "Event Management",
+      "category": "leadership_and_collaboration",
+      "count": 2
+    },
+    {
+      "id": "partnership_development",
+      "label": "Partnership Development",
+      "category": "leadership_and_collaboration",
+      "count": 2
+    },
+    {
+      "id": "public_engagement",
+      "label": "Public Engagement",
+      "category": "comms_pr_editorial",
+      "count": 2
+    },
+    {
+      "id": "scientific_computing",
+      "label": "Scientific Computing",
+      "category": "data_analytics_research",
+      "count": 2
+    },
+    {
+      "id": "academic_mentoring",
+      "label": "Academic Mentoring",
+      "category": "leadership_and_collaboration",
+      "count": null
+    },
+    {
+      "id": "analytics",
+      "label": "Analytics",
+      "category": "data_analytics_research",
+      "count": null
+    },
+    {
+      "id": "assessment",
+      "label": "Assessment",
+      "category": "leadership_and_collaboration",
+      "count": null
+    },
+    {
+      "id": "astronomical_data_analysis",
+      "label": "Astronomical Data Analysis",
+      "category": "data_analytics_research",
+      "count": null
+    },
+    {
+      "id": "audience_adaptation",
+      "label": "Audience Adaptation",
+      "category": "comms_pr_editorial",
+      "count": null
+    },
+    {
+      "id": "calibration",
+      "label": "Calibration",
+      "category": "data_analytics_research",
+      "count": null
+    },
+    {
+      "id": "campaign_planning",
+      "label": "Campaign Planning",
+      "category": "marketing_growth",
+      "count": null
+    },
+    {
+      "id": "classroom_assistance",
+      "label": "Classroom Assistance",
+      "category": "leadership_and_collaboration",
+      "count": null
+    },
+    {
+      "id": "collaborative_research",
+      "label": "Collaborative Research",
+      "category": "data_analytics_research",
+      "count": null
+    },
+    {
+      "id": "communications_strategy",
+      "label": "Communications Strategy",
+      "category": "comms_pr_editorial",
+      "count": null
+    },
+    {
+      "id": "content_adaptation",
+      "label": "Content Adaptation",
+      "category": "comms_pr_editorial",
+      "count": null
+    },
+    {
+      "id": "content_development",
+      "label": "Content Development",
+      "category": "comms_pr_editorial",
+      "count": null
+    },
+    {
+      "id": "content_marketing",
+      "label": "Content Marketing",
+      "category": "marketing_growth",
+      "count": null
+    },
+    {
+      "id": "content_syndication",
+      "label": "Content Syndication",
+      "category": "comms_pr_editorial",
+      "count": null
+    },
+    {
+      "id": "content_writing",
+      "label": "Content Writing",
+      "category": "comms_pr_editorial",
+      "count": null
+    },
+    {
+      "id": "course_development",
+      "label": "Course Development",
+      "category": "leadership_and_collaboration",
+      "count": null
+    },
+    {
+      "id": "data_reduction",
+      "label": "Data Reduction",
+      "category": "data_analytics_research",
+      "count": null
+    },
+    {
+      "id": "digital_communications",
+      "label": "Digital Communications",
+      "category": "comms_pr_editorial",
+      "count": null
+    },
+    {
+      "id": "digital_marketing",
+      "label": "Digital Marketing",
+      "category": "marketing_growth",
+      "count": null
+    },
+    {
+      "id": "digital_media",
+      "label": "Digital Media",
+      "category": "comms_pr_editorial",
+      "count": null
+    },
+    {
+      "id": "editorial_leadership",
+      "label": "Editorial Leadership",
+      "category": "comms_pr_editorial",
+      "count": null
+    },
+    {
+      "id": "editorial_management",
+      "label": "Editorial Management",
+      "category": "comms_pr_editorial",
+      "count": null
+    },
+    {
+      "id": "editorial_production",
+      "label": "Editorial Production",
+      "category": "comms_pr_editorial",
+      "count": null
+    },
+    {
+      "id": "editorial_skills",
+      "label": "Editorial Skills",
+      "category": "comms_pr_editorial",
+      "count": null
+    },
+    {
+      "id": "editorial_strategy",
+      "label": "Editorial Strategy",
+      "category": "comms_pr_editorial",
+      "count": null
+    },
+    {
+      "id": "education",
+      "label": "Education",
+      "category": "leadership_and_collaboration",
+      "count": null
+    },
+    {
+      "id": "education_support",
+      "label": "Education Support",
+      "category": "leadership_and_collaboration",
+      "count": null
+    },
+    {
+      "id": "event_programming",
+      "label": "Event Programming",
+      "category": "leadership_and_collaboration",
+      "count": null
+    },
+    {
+      "id": "event_support",
+      "label": "Event Support",
+      "category": "leadership_and_collaboration",
+      "count": null
+    },
+    {
+      "id": "image_processing",
+      "label": "Image Processing",
+      "category": "data_analytics_research",
+      "count": null
+    },
+    {
+      "id": "instrumentation",
+      "label": "Instrumentation",
+      "category": "data_analytics_research",
+      "count": null
+    },
+    {
+      "id": "interdisciplinary_collaboration",
+      "label": "Interdisciplinary Collaboration",
+      "category": "leadership_and_collaboration",
+      "count": null
+    },
+    {
+      "id": "international_collaboration",
+      "label": "International Collaboration",
+      "category": "leadership_and_collaboration",
+      "count": null
+    },
+    {
+      "id": "lead_generation",
+      "label": "Lead Generation",
+      "category": "marketing_growth",
+      "count": null
+    },
+    {
+      "id": "marketing",
+      "label": "Marketing",
+      "category": "marketing_growth",
+      "count": null
+    },
+    {
+      "id": "marketing_strategy",
+      "label": "Marketing Strategy",
+      "category": "marketing_growth",
+      "count": null
+    },
+    {
+      "id": "mathematics",
+      "label": "Mathematics",
+      "category": "data_analytics_research",
+      "count": null
+    },
+    {
+      "id": "multimedia_storytelling",
+      "label": "Multimedia Storytelling",
+      "category": "comms_pr_editorial",
+      "count": null
+    },
+    {
+      "id": "observational_astronomy",
+      "label": "Observational Astronomy",
+      "category": "space_climate",
+      "count": null
+    },
+    {
+      "id": "outreach",
+      "label": "Outreach",
+      "category": "comms_pr_editorial",
+      "count": null
+    },
+    {
+      "id": "outreach_delivery",
+      "label": "Outreach Delivery",
+      "category": "leadership_and_collaboration",
+      "count": null
+    },
+    {
+      "id": "physics_education",
+      "label": "Physics Education",
+      "category": "data_analytics_research",
+      "count": null
+    },
+    {
+      "id": "physics_fundamentals",
+      "label": "Physics Fundamentals",
+      "category": "data_analytics_research",
+      "count": null
+    },
+    {
+      "id": "presentation",
+      "label": "Presentation",
+      "category": "leadership_and_collaboration",
+      "count": null
+    },
+    {
+      "id": "press_writing",
+      "label": "Press Writing",
+      "category": "comms_pr_editorial",
+      "count": null
+    },
+    {
+      "id": "professional_development",
+      "label": "Professional Development",
+      "category": "leadership_and_collaboration",
+      "count": null
+    },
+    {
+      "id": "programme_development",
+      "label": "Programme Development",
+      "category": "leadership_and_collaboration",
+      "count": null
+    },
+    {
+      "id": "public_outreach",
+      "label": "Public Outreach",
+      "category": "comms_pr_editorial",
+      "count": null
+    },
+    {
+      "id": "reporting",
+      "label": "Reporting",
+      "category": "data_analytics_research",
+      "count": null
+    },
+    {
+      "id": "research",
+      "label": "Research",
+      "category": "data_analytics_research",
+      "count": null
+    },
+    {
+      "id": "research_methods",
+      "label": "Research Methods",
+      "category": "data_analytics_research",
+      "count": null
+    },
+    {
+      "id": "satellite_systems",
+      "label": "Satellite Systems",
+      "category": "space_climate",
+      "count": null
+    },
+    {
+      "id": "science_education",
+      "label": "Science Education",
+      "category": "leadership_and_collaboration",
+      "count": null
+    },
+    {
+      "id": "scriptwriting",
+      "label": "Scriptwriting",
+      "category": "comms_pr_editorial",
+      "count": null
+    },
+    {
+      "id": "social_media",
+      "label": "Social Media",
+      "category": "marketing_growth",
+      "count": null
+    },
+    {
+      "id": "social_media_strategy",
+      "label": "Social Media Strategy",
+      "category": "marketing_growth",
+      "count": null
+    },
+    {
+      "id": "space_applications",
+      "label": "Space Applications",
+      "category": "space_climate",
+      "count": null
+    },
+    {
+      "id": "space_policy",
+      "label": "Space Policy",
+      "category": "space_climate",
+      "count": null
+    },
+    {
+      "id": "spectral_analysis",
+      "label": "Spectral Analysis",
+      "category": "data_analytics_research",
+      "count": null
+    },
+    {
+      "id": "stakeholder_management",
+      "label": "Stakeholder Management",
+      "category": "leadership_and_collaboration",
+      "count": null
+    },
+    {
+      "id": "stem_communication",
+      "label": "STEM Communication",
+      "category": "comms_pr_editorial",
+      "count": null
+    },
+    {
+      "id": "systems_thinking",
+      "label": "Systems Thinking",
+      "category": "leadership_and_collaboration",
+      "count": null
+    },
+    {
+      "id": "teaching",
+      "label": "Teaching",
+      "category": "leadership_and_collaboration",
+      "count": null
+    },
+    {
+      "id": "team_projects",
+      "label": "Team Projects",
+      "category": "leadership_and_collaboration",
+      "count": null
+    },
+    {
+      "id": "technical_communications",
+      "label": "Technical Communications",
+      "category": "comms_pr_editorial",
+      "count": null
+    },
+    {
+      "id": "thermal_infrared_analysis",
+      "label": "Thermal Infrared Analysis",
+      "category": "data_analytics_research",
+      "count": null
+    },
+    {
+      "id": "video_production",
+      "label": "Video Production",
+      "category": "comms_pr_editorial",
+      "count": null
+    },
+    {
+      "id": "webinar_production",
+      "label": "Webinar Production",
+      "category": "comms_pr_editorial",
+      "count": null
+    },
+    {
+      "id": "workshop_delivery",
+      "label": "Workshop Delivery",
+      "category": "leadership_and_collaboration",
+      "count": null
+    }
   ]
 }
