@@ -11,8 +11,8 @@
     "current": false,
     "city": "Bristol",
     "country": "United Kingdom",
-    "summary": "Completed a Masters-level science communication module focused on writing for non-academic audiences, with training in online science writing, audience adaptation, narrative structure, risk and statistics communication, press release writing, and making science content more visible online. The assessed portfolio encouraged flexible writing across multiple genres and audiences, aligned to real-world science communication practice [web:1][web:7].",
-    "responsibilities": [
+    "summary": "Completed a Masters-level science communication module focused on writing for non-academic audiences, with training in online science writing, audience adaptation, narrative structure, risk and statistics communication, press release writing, and making science content more visible online. The assessed portfolio encouraged flexible writing across multiple genres and audiences, aligned to real-world science communication practice.",
+    "keyActivities": [
       "Identified research stories and translated them into clear public-facing content.",
       "Adapted writing style, structure, and tone for different audiences and formats.",
       "Produced science writing in formats such as blog posts, features, news stories, and press releases.",
@@ -72,8 +72,8 @@
     "current": false,
     "city": "Loughborough",
     "country": "United Kingdom",
-    "summary": "Completed a professionally recognised digital marketing qualification covering marketing impact, planning integrated campaigns, content marketing, and social media marketing. Built practical capability in campaign planning, channel strategy, audience targeting, and performance-led digital communication [web:2].",
-    "responsibilities": [
+    "summary": "Completed a professionally recognised digital marketing qualification covering marketing impact, planning integrated campaigns, content marketing, and social media marketing. Built practical capability in campaign planning, channel strategy, audience targeting, and performance-led digital communication.",
+    "keyActivities": [
       "Studied core digital marketing concepts and campaign planning methods.",
       "Applied content marketing and social media marketing principles.",
       "Developed audience-focused messaging and campaign thinking.",
@@ -133,7 +133,7 @@
     "city": "Strasbourg",
     "country": "France",
     "summary": "Completed an intensive interdisciplinary space studies programme focused on space applications, systems thinking, and collaborative problem solving. Contributed to the AMBIEnT project on affordable microsatellite-based internet access and environmental monitoring, strengthening understanding of space-sector innovation, technical feasibility, and mission-level collaboration.",
-    "responsibilities": [
+    "keyActivities": [
       "Worked on the AMBIEnT project: Affordable Microsatellite-Based Internet Access and Environmental Monitoring.",
       "Applied systems thinking to space applications and mission concepts.",
       "Collaborated across disciplines in an international project environment.",
@@ -195,8 +195,8 @@
     "current": false,
     "city": "Leicester",
     "country": "United Kingdom",
-    "summary": "Completed an integrated master's degree in physics with astrophysics, combining core physics, mathematics, and specialist astronomy study. Developed strong analytical, mathematical, and scientific computing skills through rigorous quantitative training and research preparation [web:11][web:62].",
-    "responsibilities": [
+    "summary": "Completed an integrated master's degree in physics with astrophysics, combining core physics, mathematics, and specialist astronomy study. Developed strong analytical, mathematical, and scientific computing skills through rigorous quantitative training and research preparation.",
+    "keyActivities": [
       "Studied core physics topics alongside specialist astrophysics modules.",
       "Applied mathematics to scientific modelling and problem solving.",
       "Developed scientific computing and data analysis skills.",
@@ -260,8 +260,8 @@
     "current": false,
     "city": "Canterbury",
     "country": "United Kingdom",
-    "summary": "Conducted doctoral research on Jupiter-family comets within the SEPPCoN collaboration, analysing optical and thermal infrared observations from major observatories including VLT, Palomar, Keck, and Spitzer. Investigated comet size, spin, albedo, thermal behaviour, and composition, contributing to scientific understanding of small-body populations and observational astronomy [web:22][web:62].",
-    "responsibilities": [
+    "summary": "Conducted doctoral research on Jupiter-family comets within the SEPPCoN collaboration, analysing optical and thermal infrared observations from major observatories including VLT, Palomar, Keck, and Spitzer. Investigated comet size, spin, albedo, thermal behaviour, and composition, contributing to scientific understanding of small-body populations and observational astronomy.",
+    "keyActivities": [
       "Analysed astronomical datasets from optical and thermal infrared observations.",
       "Processed and interpreted comet imagery and observational data.",
       "Conducted observational astronomy and thermal infrared analysis.",

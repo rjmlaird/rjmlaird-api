@@ -277,6 +277,114 @@
           "GraphDB",
           "YASGUI"
         ]
+      },
+      {
+        "id": "scientific_computing",
+        "label": "Scientific Computing",
+        "subcategories": [
+          {
+            "id": "scientific_computing_data_processing",
+            "label": "Data Processing",
+            "skills": [
+              "Data Reduction",
+              "Calibration",
+              "Image Processing",
+              "Instrumentation",
+              "Research Support"
+            ]
+          },
+          {
+            "id": "scientific_computing_analysis",
+            "label": "Analysis",
+            "skills": [
+              "Analytics",
+              "Assessment",
+              "Data Interpretation",
+              "Mathematics",
+              "Modelling",
+              "Problem Solving",
+              "Research Methods"
+            ]
+          },
+          {
+            "id": "scientific_computing_visualisation",
+            "label": "Visualisation & Reporting",
+            "skills": [
+              "Data Visualisation",
+              "Reporting",
+              "Web Content"
+            ]
+          },
+          {
+            "id": "scientific_computing_research_workflow",
+            "label": "Research Workflow",
+            "skills": [
+              "Research",
+              "Research Preparation",
+              "Research Writing",
+              "Collaborative Research",
+              "Team Projects"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "astrophysics",
+        "label": "Astrophysics",
+        "subcategories": [
+          {
+            "id": "astrophysics_observational_astronomy",
+            "label": "Observational Astronomy",
+            "skills": [
+              "Observational Astronomy",
+              "Astronomy Communication",
+              "Public Outreach",
+              "Space Policy"
+            ]
+          },
+          {
+            "id": "astrophysics_data_analysis",
+            "label": "Data Analysis",
+            "skills": [
+              "Astronomical Data Analysis",
+              "Spectral Analysis",
+              "Thermal Infrared Analysis",
+              "Data Interpretation"
+            ]
+          },
+          {
+            "id": "astrophysics_instrumentation_calibration",
+            "label": "Instrumentation & Calibration",
+            "skills": [
+              "Instrumentation",
+              "Calibration",
+              "Satellite Systems",
+              "Mission Concepts"
+            ]
+          },
+          {
+            "id": "astrophysics_fundamentals",
+            "label": "Fundamentals",
+            "skills": [
+              "Astrophysics",
+              "Physics Fundamentals",
+              "Mathematics",
+              "Modelling",
+              "Science Education"
+            ]
+          },
+          {
+            "id": "astrophysics_scientific_communication",
+            "label": "Scientific Communication",
+            "skills": [
+              "Research Writing",
+              "Press Writing",
+              "Technical Communication",
+              "Presentation",
+              "Science Storytelling"
+            ]
+          }
+        ]
       }
     ],
     "practices": [
@@ -318,7 +426,48 @@
         "Conflict Resolution",
         "Critical & Analytical Thinking",
         "Adaptability",
-        "Attention to Detail"
+        "Attention to Detail",
+        "Event Management",
+        "Event Programming",
+        "Event Support",
+        "Campaign Delivery",
+        "Campaign Management",
+        "Campaign Planning",
+        "Communications Strategy",
+        "Editorial Leadership",
+        "Editorial Management",
+        "Editorial Production",
+        "Editorial Strategy",
+        "Education",
+        "Education Delivery",
+        "Education Support",
+        "Educational Content",
+        "Interdisciplinary Collaboration",
+        "International Collaboration",
+        "Lesson Support",
+        "Network Development",
+        "Outreach",
+        "Outreach Delivery",
+        "Press Writing",
+        "Professional Development",
+        "Programme Coordination",
+        "Programme Development",
+        "Public Engagement",
+        "Public Outreach",
+        "Social Media",
+        "Social Media Strategy",
+        "Teaching",
+        "Tutorial Delivery",
+        "Video Production",
+        "Web Content",
+        "Webinar Production",
+        "Workshop Delivery",
+        "Youth Engagement",
+        "Classroom Assistance",
+        "Course Development",
+        "Presentation",
+        "Practical Science",
+        "STEM Communication"
       ]
     },
     "areas_of_interest": [
