@@ -1,243 +1,453 @@
 {
   "certifications": [
     {
-      "organisation": "Chartered Institute of Marketing (CIM)",
-      "items": [
-        {
-          "name": "Certificate in Professional Digital Marketing",
-          "url": "https://docs.rjmlaird.co.uk/certifications/cim/certificate-in-professional-digital-marketing"
-        },
-        {
-          "name": "Marketing Strategy Masterclass",
-          "url": "https://docs.rjmlaird.co.uk/certifications/cim/marketing-strategy-masterclass"
-        },
-        {
-          "name": "Applied Marketing",
-          "url": "https://docs.rjmlaird.co.uk/certifications/cim/applied-marketing"
-        },
-        {
-          "name": "Copywriting Masterclass",
-          "url": "https://docs.rjmlaird.co.uk/certifications/cim/copywriting-masterclass"
-        },
-        {
-          "name": "Planning Campaigns",
-          "url": "https://docs.rjmlaird.co.uk/certifications/cim/planning-campaigns"
-        },
-        {
-          "name": "Digital Marketing Techniques",
-          "url": "https://docs.rjmlaird.co.uk/certifications/cim/digital-marketing-techniques"
-        },
-        {
-          "name": "Digital Copywriting for Websites",
-          "url": "https://docs.rjmlaird.co.uk/certifications/cim/digital-copywriting-for-websites"
-        },
-        {
-          "name": "Marketing Fundamentals",
-          "url": "https://docs.rjmlaird.co.uk/certifications/cim/marketing-fundamentals"
-        }
-      ]
+      "id": "cim-professional-digital-marketing",
+      "name": "Certificate in Professional Digital Marketing",
+      "type": "Industry Certification",
+      "issuer": "Chartered Institute of Marketing (CIM)",
+      "issueDate": "2022-03-18",
+      "badgeId": "9b363b0c-71e4-4ab6-9c7c-6c02db537c51",
+      "badgeUrl": "https://www.credly.com/badges/9b363b0c-71e4-4ab6-9c7c-6c02db537c51",
+      "level": "Professional",
+      "imageUrl": "https://images.credly.com/images/c1725ecd-8966-4052-9f2a-b0c1ea5f96eb/Digital-Badge_L4_Qual_Certificate_in_Professional_Digital_Marketing.png",
+      "url": "https://docs.rjmlaird.co.uk/certifications/cim/certificate-in-professional-digital-marketing",
     },
     {
-      "organisation": "Chartered Institute of Public Relations (CIPR)",
-      "items": [
-        {
-          "name": "Equity, Diversity and Inclusion: Series 1",
-          "url": "https://docs.rjmlaird.co.uk/certifications/cipr/equity-diversity-inclusion-series-1"
-        },
-        {
-          "name": "Introduction to PR",
-          "url": "https://docs.rjmlaird.co.uk/certifications/cipr/introduction-to-pr"
-        }
-      ]
+      "id": "cim-marketing-strategy-masterclass",
+      "name": "Marketing Strategy Masterclass",
+      "type": "Industry Certification",
+      "issuer": "Chartered Institute of Marketing (CIM) (CIM)",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/cim/marketing-strategy-masterclass",
+      "level": "Professional",
+      "imageUrl": null
     },
     {
-      "organisation": "First Aid (UK)",
-      "items": [
-        {
-          "name": "First Aid",
-          "url": "https://docs.rjmlaird.co.uk/certifications/first-aid-uk/first-aid"
-        },
-        {
-          "name": "Emergency First Aid at Work",
-          "url": "https://docs.rjmlaird.co.uk/certifications/first-aid-uk/emergency-first-aid-at-work"
-        }
-      ]
+      "id": "cim-applied-marketing",
+      "name": "Applied Marketing",
+      "type": "Badge",
+      "issuer": "Chartered Institute of Marketing (CIM)",
+      "issueDate": "2022-03-18",
+      "badgeId": "c8332af1-f0f5-46bf-80b9-c5976681a52b",
+      "badgeUrl": "https://www.credly.com/badges/c8332af1-f0f5-46bf-80b9-c5976681a52b",
+      "imageUrl": "https://images.credly.com/images/fb406356-7f28-48ec-bba4-464178f3ccee/Digital-Badge_L4_Award_Applied_Marketing.png"
     },
     {
-      "organisation": "Rebel Business School",
-      "items": [
-        {
-          "name": "Level 1 Award in Enterprising Skills and Employability",
-          "url": "https://docs.rjmlaird.co.uk/certifications/rebel-business-school/level-1-award-in-enterprising-skills-and-employability"
-        },
-        {
-          "name": "Level 1 Award in Understanding Enterprise",
-          "url": "https://docs.rjmlaird.co.uk/certifications/rebel-business-school/level-1-award-in-understanding-enterprise"
-        },
-        {
-          "name": "Enterprise Design Thinking Practitioner",
-          "url": "https://docs.rjmlaird.co.uk/certifications/rebel-business-school/enterprise-design-thinking-practitioner"
-        },
-        {
-          "name": "Enterprise Design Thinking Co-Creator",
-          "url": "https://docs.rjmlaird.co.uk/certifications/rebel-business-school/enterprise-design-thinking-co-creator"
-        }
-      ]
+      "id": "cim-copywriting-masterclass",
+      "name": "Copywriting Masterclass",
+      "type": "Badge",
+      "issuer": "Chartered Institute of Marketing (CIM)",
+      "issueDate": "2022-08-25",
+      "badgeId": "7b298323-929d-4bda-92a5-3fcce9da5678",
+      "badgeUrl": "https://www.credly.com/badges/7b298323-929d-4bda-92a5-3fcce9da5678",
+      "imageUrl": "https://images.credly.com/images/5c589f5c-07d0-4593-852e-a4e8d5dde543/image.png",
+      "level":"Professional",
     },
     {
-      "organisation": "Association for Project Management (APM)",
-      "items": [
-        {
-          "name": "APM Associate",
-          "url": "https://docs.rjmlaird.co.uk/certifications/apm/apm-associate"
-        },
-        {
-          "name": "Project Management Training (Die Beratung Judith Andresen)",
-          "url": "https://docs.rjmlaird.co.uk/certifications/apm/project-management-training-die-beratung-judith-andresen"
-        }
-      ]
+      "id": "cim-planning-campaigns",
+      "name": "Planning Campaigns",
+      "type": "Badge",
+      "issuer": "Chartered Institute of Marketing (CIM)",
+      "issueDate": "2021-07-05",
+      "badgeId": "ab8f07ff-9a94-4662-a01f-8d060e6a46ca",
+      "badgeUrl": "https://www.credly.com/badges/ab8f07ff-9a94-4662-a01f-8d060e6a46ca",
+      "imageUrl": "https://images.credly.com/images/f52a34a0-5423-4e88-aa2f-4b8b8339e05f/Digital-Badge_L4_Award_Planning_Campaigns.png"
     },
     {
-      "organisation": "Google",
-      "items": [
-        {
-          "name": "Google Analytics Certification",
-          "url": "https://docs.rjmlaird.co.uk/certifications/google/google-analytics-certification"
-        },
-        {
-          "name": "Fundamentals of Digital Marketing",
-          "url": "https://docs.rjmlaird.co.uk/certifications/google/fundamentals-of-digital-marketing"
-        },
-        {
-          "name": "Google News Initiative Training Center Certification",
-          "url": "https://docs.rjmlaird.co.uk/certifications/google/google-news-initiative-training-center-certification"
-        }
-      ]
+      "id": "cim-digital-marketing-techniques",
+      "name": "Digital Marketing Techniques",
+      "type": "Badge",
+      "issuer": "Chartered Institute of Marketing (CIM)",
+      "issueDate": "2021-05-11",
+      "badgeId": "34934015-edf7-4e0c-a234-ce6599f1e837",
+      "badgeUrl": "https://www.credly.com/badges/34934015-edf7-4e0c-a234-ce6599f1e837",
+      "imageUrl": "https://images.credly.com/images/2b27dba9-3b22-4b3b-8bbd-1e9c7416cfb6/Digital-Badge_L4_Award_Digital_Marketing_Techniques.png"
+
     },
     {
-      "organisation": "HubSpot Academy",
-      "items": [
-        {
-          "name": "Content Marketing",
-          "url": "https://docs.rjmlaird.co.uk/certifications/hubspot-academy/content-marketing"
-        },
-        {
-          "name": "Inbound Marketing",
-          "url": "https://docs.rjmlaird.co.uk/certifications/hubspot-academy/inbound-marketing"
-        },
-        {
-          "name": "Social Media Marketing",
-          "url": "https://docs.rjmlaird.co.uk/certifications/hubspot-academy/social-media-marketing"
-        }
-      ]
+      "id": "cim-digital-copywriting-for-websites",
+      "name": "Digital Copywriting for Websites",
+      "type": "Badge",
+      "issuer": "Chartered Institute of Marketing (CIM)",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/cim/digital-copywriting-for-websites",
+      "level": "Professional",
+      "imageUrl": null
     },
     {
-      "organisation": "INCO Academy",
-      "items": [
-        {
-          "name": "Green Digital Skills Certificate",
-          "url": "https://docs.rjmlaird.co.uk/certifications/inco-academy/green-digital-skills-certificate"
-        }
-      ]
+      "id": "cim-marketing-fundamentals",
+      "name": "Marketing Fundamentals",
+      "type": "Badge",
+      "issuer": "Chartered Institute of Marketing (CIM)",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/cim/marketing-fundamentals",
+      "level": "Professional",
+      "imageUrl": null
     },
     {
-      "organisation": "ISC2 (International Information System Security Certification Consortium)",
-      "items": [
-        {
-          "name": "Certified in Cybersecurity (CC)",
-          "url": "https://docs.rjmlaird.co.uk/certifications/isc2/certified-in-cybersecurity-cc"
-        },
-        {
-          "name": "Certified in Cybersecurity (CC) Self-Paced Training - 1M",
-          "url": "https://docs.rjmlaird.co.uk/certifications/isc2/certified-in-cybersecurity-cc-self-paced-training-1m"
-        },
-        {
-          "name": "Data Privacy & Protection: Compliance Requirements",
-          "url": "https://docs.rjmlaird.co.uk/certifications/isc2/data-privacy-protection-compliance-requirements"
-        },
-        {
-          "name": "Supply Chain Security Fundamentals",
-          "url": "https://docs.rjmlaird.co.uk/certifications/isc2/supply-chain-security-fundamentals"
-        },
-        {
-          "name": "Introduction to Denial of Service Attacks",
-          "url": "https://docs.rjmlaird.co.uk/certifications/isc2/introduction-to-denial-of-service-attacks"
-        },
-        {
-          "name": "Open Systems Intelligence",
-          "url": "https://docs.rjmlaird.co.uk/certifications/isc2/open-systems-intelligence"
-        },
-        {
-          "name": "Security in the IoT Ecosystem",
-          "url": "https://docs.rjmlaird.co.uk/certifications/isc2/security-in-the-iot-ecosystem"
-        }
-      ]
+      "id": "cipr-edi-series-1",
+      "name": "Equity, Diversity and Inclusion: Series 1",
+      "type": "Badge",
+      "issuer": "Chartered Institute of Public Relations (CIPR)",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/cipr/equity-diversity-inclusion-series-1",
+      "level": "Professional",
+      "imageUrl": null
     },
     {
-      "organisation": "LinkedIn Learning",
-      "items": [
-        {
-          "name": "Amplifying Your Message Through Storytelling",
-          "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/amplifying-your-message-through-storytelling"
-        },
-        {
-          "name": "Communicate to Influence",
-          "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/communicate-to-influence"
-        },
-        {
-          "name": "Communicating Across Cultures",
-          "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/communicating-across-cultures"
-        },
-        {
-          "name": "Agile Project Leadership",
-          "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/agile-project-leadership"
-        },
-        {
-          "name": "Leadership Foundations: Styles & Models",
-          "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/leadership-foundations-styles-and-models"
-        },
-        {
-          "name": "Building Resilience",
-          "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/building-resilience"
-        },
-        {
-          "name": "Strategic Planning Foundations",
-          "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/strategic-planning-foundations"
-        },
-        {
-          "name": "Lean Technology Strategy",
-          "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/lean-technology-strategy"
-        },
-        {
-          "name": "Video Strategies for High Engagement",
-          "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/video-strategies-for-high-engagement"
-        },
-        {
-          "name": "5G Technology Strategy",
-          "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/5g-technology-strategy"
-        },
-        {
-          "name": "Introduction to Digital Twins",
-          "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/introduction-to-digital-twins"
-        },
-        {
-          "name": "Introduction to ESG",
-          "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/introduction-to-esg"
-        },
-        {
-          "name": "Satellite Internet & Communications",
-          "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/satellite-internet-and-communications"
-        }
-      ]
+      "id": "cipr-introduction-to-pr",
+      "name": "Introduction to PR",
+      "type": "Badge",
+      "issuer": "Chartered Institute of Public Relations (CIPR)",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/cipr/introduction-to-pr",
+      "level": "Professional",
+      "imageUrl": null
     },
     {
-      "organisation": "The Open University",
-      "items": [
-        {
-          "name": "Effective Communication in the Workplace",
-          "url": "https://docs.rjmlaird.co.uk/certifications/the-open-university/effective-communication-in-the-workplace"
-        }
-      ]
+      "id": "first-aid-uk-first-aid",
+      "name": "First Aid",
+      "type": "Certification",
+      "issuer": "First Aid (UK)",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/first-aid-uk/first-aid",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "id": "enterprising-skills-and-employability",
+      "name": "Level 1 Award in Enterprising Skills and Employability",
+      "type": "Badge",
+      "issuer": "Rebel Business School",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/rebel-business-school/level-1-award-in-enterprising-skills-and-employability",
+      "level": "Level 1",
+      "imageUrl": null
+    },
+    {
+      "id": "rebel-understanding-enterprise",
+      "name": "Level 1 Award in Understanding Enterprise",
+      "type": "Badge",
+      "issuer": "Rebel Business School",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/rebel-business-school/level-1-award-in-understanding-enterprise",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "id": "ibm-design-thinking-co-creator",
+      "name": "Enterprise Design Thinking Co-Creator",
+      "type": "Badge",
+      "issuer": "IBM",
+      "issueDate": "2024-02-07",
+      "badgeId": "3e35bc4a-9d66-4c08-9f56-590a8765be63",
+      "badgeUrl": "https://www.credly.com/badges/3e35bc4a-9d66-4c08-9f56-590a8765be63",
+      "imageUrl": "https://images.credly.com/images/2700b813-82b8-4232-9b36-5dcd5cd24584/Badges_v8-08_Co-Creator.png"
+    },
+    {
+      "id": "apm-associate",
+      "name": "APM Associate",
+      "type": "Industry Certification",
+      "issuer": "Association for Project Management (APM)",
+      "issueDate": "2023-03-09",
+      "badgeId": "0da010d9-d7ff-4a71-9ca5-5c472cd8d988",
+      "badgeUrl": "https://www.credly.com/badges/0da010d9-d7ff-4a71-9ca5-5c472cd8d988",
+      "level": "Associate",
+      "imageUrl": "https://images.credly.com/images/200b2ce7-5324-4a8b-bded-be74e1ad4431/image.png",
+      "url": "https://docs.rjmlaird.co.uk/certifications/apm/apm-associate",
+    },
+    {
+      "id": "pm-training-die-beratung-judith-andresen",
+      "name": "Project Management Training",
+      "type": "Badge",
+      "issuer": "Die Beratung Judith Andresen",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/apm/project-management-training-die-beratung-judith-andresen",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "id": "google-ga-cert",
+      "name": "Google Analytics Certification",
+      "type": "Badge",
+      "issuer": "Google",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/google/google-analytics-certification",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "id": "google-digital-marketing",
+      "name": "Fundamentals of Digital Marketing",
+      "type": "Badge",
+      "issuer": "Google",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/google/fundamentals-of-digital-marketing",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "id": "google-news-initiative-cert",
+      "name": "Google News Initiative Training Center Certification",
+      "type": "Badge",
+      "issuer": "Google",
+      "url": "https://docs.rjmlaird.co.uk/certifications/google/google-news-initiative-training-center-certification",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "id": "hubspot-content-marketing",
+      "name": "Content Marketing",
+      "type": "Badge",
+      "issuer": "HubSpot Academy",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/hubspot-academy/content-marketing",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "id": "hubspot-inbound-marketing",
+      "name": "Inbound Marketing",
+      "type": "Badge",
+      "issuer": "HubSpot Academy",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/hubspot-academy/inbound-marketing",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "id": "hubspot-social-media-marketing",
+      "name": "Social Media Marketing",
+      "type": "Badge",
+      "issuer": "HubSpot Academy",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/hubspot-academy/social-media-marketing",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "id": "inco-green-digital-skills",
+      "name": "Green Digital Skills Certificate",
+      "type": "Badge",
+      "issuer": "INCO Academy",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/inco-academy/green-digital-skills-certificate",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "id": "certified-in-cybersecurity-cc",
+      "name": "Certified in Cybersecurity (CC)",
+      "type": "Industry Certification",
+      "issuer": "ISC2 (International Information System Security Certification Consortium)",
+      "issueDate": "2023-05-15",
+      "badgeId": "243eda66-fffa-4e8e-aec9-6c13c12c1767",
+      "badgeUrl": "https://www.credly.com/badges/243eda66-fffa-4e8e-aec9-6c13c12c1767",
+      "expiryDate": "2026-05-31",
+      "imageUrl": "https://images.credly.com/images/2030e43f-8003-4d4b-9630-847add403c87/image.png",
+      "url": "https://docs.rjmlaird.co.uk/certifications/isc2/certified-in-cybersecurity-cc",
+    },
+    {
+      "id": "isc2-cc-self-paced-training-1m",
+      "name": "Certified in Cybersecurity (CC) Self-Paced Training - 1M",
+      "type": "Badge",
+      "issuer": "ISC2 (International Information System Security Certification Consortium)",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/isc2/certified-in-cybersecurity-cc-self-paced-training-1m",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "id": "isc2-data-privacy",
+      "name": "Data Privacy & Protection: Compliance Requirements",
+      "type": "Badge",
+      "issuer": "ISC2 (International Information System Security Certification Consortium)",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/isc2/data-privacy-protection-compliance-requirements",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "id": "isc2-supply-chain",
+      "name": "Supply Chain Security Fundamentals",
+      "type": "Badge",
+      "issuer": "ISC2 (International Information System Security Certification Consortium)",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/isc2/supply-chain-security-fundamentals",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "id": "isc2-intro-to-dos-attacks",
+      "name": "Introduction to Denial of Service Attacks",
+      "type": "Badge",
+      "issuer": "ISC2 (International Information System Security Certification Consortium)",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/isc2/introduction-to-denial-of-service-attacks",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "id": "isc2-open-systems-intelligence",
+      "name": "Open Systems Intelligence",
+      "type": "Badge",
+      "issuer": "ISC2 (International Information System Security Certification Consortium)",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/isc2/open-systems-intelligence",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "id": "isc2-security-in-the-iot-ecosystem",
+      "name": "Security in the IoT Ecosystem",
+      "type": "Badge",
+      "issuer": "ISC2 (International Information System Security Certification Consortium)",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/isc2/security-in-the-iot-ecosystem",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "id": "linkedin-storytelling",
+      "name": "Amplifying Your Message Through Storytelling",
+      "type": "Badge",
+      "issuer": "LinkedIn Learning",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/amplifying-your-message-through-storytelling",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "id": "linkedin-learning-communicate-to-influence",
+      "name": "Communicate to Influence",
+      "type": "Badge",
+      "issuer": "LinkedIn Learning",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/communicate-to-influence",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "id": "linkedin-communicating-across-cultures",
+      "name": "Communicating Across Cultures",
+      "type": "Badge",
+      "issuer": "LinkedIn Learning",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/communicating-across-cultures",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "id": "linkedin-agile-project-leadership",
+      "name": "Agile Project Leadership",
+      "type": "Badge",
+      "issuer": "LinkedIn Learning",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/agile-project-leadership",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "id": "linkedin-leadership-foundations",
+      "name": "Leadership Foundations: Styles & Models",
+      "type": "Badge",
+      "issuer": "LinkedIn Learning",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/leadership-foundations-styles-and-models",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "id": "linkedin-building-resilience",
+      "name": "Building Resilience",
+      "type": "Badge",
+      "issuer": "LinkedIn Learning",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/building-resilience",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "id": "linkedin-strategic-planning",
+      "name": "Strategic Planning Foundations",
+      "type": "Badge",
+      "issuer": "LinkedIn Learning",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/strategic-planning-foundations",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "badgeId": "linkedin-lean-tech-strategy",
+      "name": "Lean Technology Strategy",
+      "type": "Badge",
+      "issuer": "LinkedIn Learning",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/lean-technology-strategy",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "id": "linkedin-video-strategies",
+      "name": "Video Strategies for High Engagement",
+      "type": "Badge",
+      "issuer": "LinkedIn Learning",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/video-strategies-for-high-engagement",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "id": "linkedin-5g-tech-strategy",
+      "name": "5G Technology Strategy",
+      "type": "Badge",
+      "issuer": "LinkedIn Learning",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/5g-technology-strategy",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "id": "linkedin-intro-digital-twins",
+      "name": "Introduction to Digital Twins",
+      "type": "Badge",
+      "issuer": "LinkedIn Learning",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/introduction-to-digital-twins",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "id": "linkedin-intro-esg",
+      "name": "Introduction to ESG",
+      "type": "Badge",
+      "issuer": "LinkedIn Learning",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/introduction-to-esg",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "id": "linkedin-satcomms",
+      "name": "Satellite Internet & Communications",
+      "type": "Badge",
+      "issuer": "LinkedIn Learning",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/linkedin-learning/satellite-internet-and-communications",
+      "level": null,
+      "imageUrl": null
+    },
+    {
+      "id": "open-uni-effective-communication",
+      "name": "Effective Communication in the Workplace",
+      "type": "Certification",
+      "issuer": "The Open University",
+      "issueDate": null,
+      "url": "https://docs.rjmlaird.co.uk/certifications/the-open-university/effective-communication-in-the-workplace",
+      "level": null,
+      "imageUrl": null
     }
-  ]
+  ],
+  "achievements": [],
+  "coding_platform_stats": {}
 }

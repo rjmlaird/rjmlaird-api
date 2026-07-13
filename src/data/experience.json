@@ -70,14 +70,6 @@
       "Open Data",
       "Knowledge Management"
     ],
-    "projects": [],
-    "clients": [],
-    "articles": [],
-    "talks": [],
-    "awards": [],
-    "certifications": [],
-    "technologies": [],
-    "media": [],
     "featured": true,
     "order": 1
   },
@@ -127,10 +119,6 @@
       "Knowledge Management",
       "Open Source"
     ],
-    "projects": [],
-    "clients": [],
-    "articles": [],
-    "talks": [],
     "awards": [
       "chartered-marketer"
     ],
@@ -201,12 +189,6 @@
     "clients": [
       "esa-business-applications"
     ],
-    "articles": [],
-    "talks": [],
-    "awards": [],
-    "certifications": [],
-    "technologies": [],
-    "media": [],
     "featured": true,
     "order": 3
   },
@@ -269,14 +251,6 @@
       "Digital Systems & Automation",
       "Knowledge Management"
     ],
-    "projects": [],
-    "clients": [],
-    "articles": [],
-    "talks": [],
-    "awards": [],
-    "certifications": [],
-    "technologies": [],
-    "media": [],
     "featured": true,
     "order": 4
   },
@@ -335,13 +309,6 @@
       "Knowledge Management"
     ],
     "projects": [],
-    "clients": [],
-    "articles": [],
-    "talks": [],
-    "awards": [],
-    "certifications": [],
-    "technologies": [],
-    "media": [],
     "featured": true,
     "order": 5
   },
@@ -379,7 +346,6 @@
       "space_climate",
       "comms_pr_editorial"
     ],
-    "technicalSkills": [],
     "practices": [
       "Impact Measurement & SDG Frameworks"
     ],
@@ -394,14 +360,9 @@
       "Scientific Research",
       "Open Data"
     ],
-    "projects": [],
-    "clients": [],
-    "articles": [],
-    "talks": [],
-    "awards": [],
-    "certifications": [],
-    "technologies": [],
-    "media": [],
+    "relatedAwards": [
+      "exp-rr-space"
+    ],
     "featured": false,
     "order": 6
   },
@@ -415,7 +376,7 @@
     "current": false,
     "city": "Cologne",
     "country": "Germany",
-    "workMode": "Remote",
+    "workMode": "Hybrid",
     "summary": "Led editorial production and multimedia storytelling for space-related publications, including video scripts, interviews, and digital content. Supported content strategy for science and space communication platforms, helping translate complex topics into compelling stories for online audiences.",
     "responsibilities": [
       "Produced editorial content and video scripts for ESA-related and diplomatic interview series.",
@@ -457,14 +418,7 @@
       "Knowledge Management",
       "Open Data"
     ],
-    "projects": [],
-    "clients": [],
-    "articles": [],
-    "talks": [],
-    "awards": [],
-    "certifications": [],
-    "technologies": [],
-    "media": [],
+    "relatedAwards": "awards-excellence-2017-esa",
     "featured": true,
     "order": 7
   },
@@ -518,14 +472,6 @@
       "Scientific Research",
       "Knowledge Management"
     ],
-    "projects": [],
-    "clients": [],
-    "articles": [],
-    "talks": [],
-    "awards": [],
-    "certifications": [],
-    "technologies": [],
-    "media": [],
     "featured": false,
     "order": 8
   },
@@ -580,14 +526,6 @@
       "Scientific Research",
       "Knowledge Management"
     ],
-    "projects": [],
-    "clients": [],
-    "articles": [],
-    "talks": [],
-    "awards": [],
-    "certifications": [],
-    "technologies": [],
-    "media": [],
     "featured": false,
     "order": 9
   },
@@ -625,7 +563,6 @@
       "comms_pr_editorial",
       "space_climate"
     ],
-    "technicalSkills": [],
     "practices": [
       "Information Architecture & Content Modelling"
     ],
@@ -637,14 +574,6 @@
       "Knowledge Management",
       "Open Data"
     ],
-    "projects": [],
-    "clients": [],
-    "articles": [],
-    "talks": [],
-    "awards": [],
-    "certifications": [],
-    "technologies": [],
-    "media": [],
     "featured": false,
     "order": 10
   },
@@ -681,7 +610,6 @@
       "space_climate",
       "comms_pr_editorial"
     ],
-    "technicalSkills": [],
     "practices": [
       "Impact Measurement & SDG Frameworks"
     ],
@@ -695,19 +623,11 @@
       "Open Data",
       "Knowledge Management"
     ],
-    "projects": [],
-    "clients": [],
-    "articles": [],
-    "talks": [],
-    "awards": [],
-    "certifications": [],
-    "technologies": [],
-    "media": [],
     "featured": false,
     "order": 11
   },
   {
-    "id": "exp-university-kent-demonstrator",
+    "id": "exp-kent-demonstrator",
     "organisation": "University of Kent",
     "department": "School of Physical Sciences",
     "role": "Postgraduate Demonstrator",
@@ -756,14 +676,12 @@
       "Scientific Research",
       "Open Data"
     ],
-    "projects": [],
-    "clients": [],
-    "articles": [],
-    "talks": [],
-    "awards": [],
-    "certifications": [],
-    "technologies": [],
-    "media": [],
+    "relatedTeaching": [
+      "PH020",
+      "PH021",
+      "PS302",
+      "PS370",
+    ],
     "featured": false,
     "order": 12
   },
@@ -815,19 +733,11 @@
       "Scientific Literacy",
       "Knowledge Management"
     ],
-    "projects": [],
-    "clients": [],
-    "articles": [],
-    "talks": [],
-    "awards": [],
-    "certifications": [],
-    "technologies": [],
-    "media": [],
     "featured": false,
     "order": 13
   },
   {
-    "id": "exp-uol-space-research-tech",
+    "id": "exp-uol-gerb",
     "organisation": "University of Leicester",
     "department": "Space Research Centre",
     "role": "Technician",
@@ -878,19 +788,11 @@
       "Open Data",
       "Data Engineering"
     ],
-    "projects": [],
-    "clients": [],
-    "articles": [],
-    "talks": [],
-    "awards": [],
-    "certifications": [],
-    "technologies": [],
-    "media": [],
     "featured": false,
     "order": 14
   },
   {
-    "id": "exp-brockington-college-student-associate",
+    "id": "exp-brockington-college",
     "organisation": "Brockington College",
     "role": "Student Associate",
     "employmentType": "Placement",
@@ -921,7 +823,6 @@
     "domainExpertise": [
       "comms_pr_editorial"
     ],
-    "technicalSkills": [],
     "practices": [
       "Information Architecture & Content Modelling"
     ],
@@ -933,19 +834,11 @@
       "Scientific Literacy",
       "Knowledge Management"
     ],
-    "projects": [],
-    "clients": [],
-    "articles": [],
-    "talks": [],
-    "awards": [],
-    "certifications": [],
-    "technologies": [],
-    "media": [],
     "featured": false,
     "order": 15
   },
   {
-    "id": "exp-uol-physics-summer-research",
+    "id": "exp-uol-research-2008",
     "organisation": "University of Leicester",
     "department": "Department of Physics and Astronomy",
     "role": "Technician (Summer Research)",
@@ -994,14 +887,9 @@
       "Scientific Research",
       "Open Data"
     ],
-    "projects": [],
-    "clients": [],
-    "articles": [],
-    "talks": [],
-    "awards": [],
-    "certifications": [],
-    "technologies": [],
-    "media": [],
+    "relatedAwards": [
+      "award-sure-2007"
+    ],
     "featured": false,
     "order": 16
   }
