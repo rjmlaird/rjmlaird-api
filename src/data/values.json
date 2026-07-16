@@ -3,6 +3,7 @@
     {
       "id": "integrity",
       "title": "Integrity",
+      "icon": "🛡️",
       "keywords": ["principle", "honesty", "trustworthiness"],
       "description": "Act consistently with moral principles; be honest and dependable in word and deed.",
       "do": ["Speak truthfully and transparently", "Admit mistakes and correct them promptly"],
@@ -54,10 +55,5 @@
       "dont": ["Opt for short-term gains that cause lasting harm", "Ignore broader ecological impacts"],
       "tags": ["long-term", "environment"]
     }
-  ],
-  "meta": {
-    "updated": "2026-07-08",
-    "format": "notion-friendly",
-    "note": "Each value includes keywords, a concise description, practical 'do' and 'don't' examples for use on a Vision & Strategy page, and tags for filtering."
-  }
+  ]
 }
