@@ -91,8 +91,8 @@ function normalizeStringArray(values?: string[]) {
       values
         .filter((v): v is string => typeof v === "string")
         .map((v) => v.trim())
-        .filter(Boolean)
-    )
+        .filter(Boolean),
+    ),
   ).slice(0, 20);
 }
 
@@ -104,16 +104,9 @@ function normalizeZoteroTags(tags?: Array<{ tag?: string } | string>) {
         .map((tag) => (typeof tag === "string" ? tag : tag?.tag))
         .filter((v): v is string => typeof v === "string")
         .map((v) => v.trim())
-        .filter(Boolean)
-    )
+        .filter(Boolean),
+    ),
   ).slice(0, 20);
-}
-
-function getRoute(request: Request) {
-  const url = new URL(request.url);
-  const path = url.pathname.replace(new RegExp(`^${routeRoot}/?`), "");
-  const query = url.searchParams.get("q");
-  return { path, query };
 }
 
 async function readJsonBody<T>(request: Request): Promise<T | null> {
@@ -245,16 +238,16 @@ research.get("/", (c) =>
     service: "research",
     version: "1.0",
     endpoints: [
-      "/search?q=",
-      "/papers",
-      "/paper/:id",
-      "/graph",
-      "/timeline",
-      "/entities",
-      "/export/zotero",
-      "/ingest",
+      "/v1/research/search?q=",
+      "/v1/research/papers",
+      "/v1/research/paper/:id",
+      "/v1/research/graph",
+      "/v1/research/timeline",
+      "/v1/research/entities",
+      "/v1/research/export/zotero",
+      "/v1/research/ingest",
     ],
-  })
+  }),
 );
 
 research.get("/search", async (c) => {
@@ -351,7 +344,7 @@ research.get("/graph", async (c) => {
       (record?.links ?? []).slice(0, 20).map((target) => ({
         from: item.key,
         to: target,
-      }))
+      })),
     )
     .slice(0, 500);
 
@@ -395,11 +388,11 @@ research.all("*", (c) =>
   json(
     {
       error: "Not found",
-      path: new URL(c.req.url).pathname,
+      path: c.req.path,
       method: c.req.method.toUpperCase(),
     },
-    404
-  )
+    404,
+  ),
 );
 
 export default research;

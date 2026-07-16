@@ -60,80 +60,67 @@ const cvData = {
 
 const app = new Hono<{ Bindings: Env }>();
 
-function safeTrim(value: unknown) {
-  return typeof value === "string" ? value.trim() : "";
-}
+const isCollection = (value: string): value is CvCollection =>
+  (SECTION_KEYS as readonly string[]).includes(value);
 
-function isCollection(value: string): value is CvCollection {
-  return (SECTION_KEYS as readonly string[]).includes(value);
-}
+app.get("/", (c) =>
+  json({
+    service: "cv",
+    version: "1.0",
+    sections: SECTION_KEYS,
+    endpoints: [
+      "/v1/cv",
+      "/v1/cv/sections",
+      "/v1/cv/list",
+      "/v1/cv/full",
+      "/v1/cv/section/:section",
+      "/v1/cv/:collection",
+      "/v1/cv/search?q=",
+    ],
+  }),
+);
 
-function getRoute(request: Request) {
-  const url = new URL(request.url);
-  const path = url.pathname.replace(/^\/v1\/cv\/?/, "");
-  const query = url.searchParams.get("q");
-  return { path, query };
-}
+app.get("/sections", (c) => json({ sections: SECTION_KEYS }));
 
-app.get("*", async (c) => {
-  const request = c.req.raw;
-  const { path, query } = getRoute(request);
+app.get("/list", (c) =>
+  json({
+    count: SECTION_KEYS.length,
+    items: SECTION_KEYS.map((section) => ({
+      section,
+      hasData: cvData[section] !== undefined,
+    })),
+  }),
+);
 
-  if (!path) {
-    return json({
-      service: "cv",
-      version: "1.0",
-      sections: SECTION_KEYS,
-      endpoints: [
-        "/v1/cv",
-        "/v1/cv/sections",
-        "/v1/cv/list",
-        "/v1/cv/full",
-        "/v1/cv/section/:section",
-        "/v1/cv/search?q=",
-      ],
-    });
+app.get("/full", (c) => json({ sections: cvData }));
+
+app.get("/search", (c) => {
+  const q = c.req.query("q")?.trim().toLowerCase();
+  if (!q) return json({ error: "Missing ?q=" }, 400);
+
+  const results = SECTION_KEYS.filter((section) =>
+    JSON.stringify(cvData[section]).toLowerCase().includes(q),
+  ).map((section) => ({ section, data: cvData[section] }));
+
+  return json({ query: q, count: results.length, results });
+});
+
+app.get("/section/:section", (c) => {
+  const section = c.req.param("section");
+  if (!isCollection(section)) {
+    return json({ error: "Not found", section, allowed: SECTION_KEYS }, 404);
   }
 
-  if (path === "sections") return json({ sections: SECTION_KEYS });
+  return json({ section, data: cvData[section] });
+});
 
-  if (path === "list") {
-    return json({
-      count: SECTION_KEYS.length,
-      items: SECTION_KEYS.map((section) => ({
-        section,
-        hasData: cvData[section] !== undefined,
-      })),
-    });
+app.get("/:collection", (c) => {
+  const collection = c.req.param("collection");
+  if (!isCollection(collection)) {
+    return json({ error: "Not found", collection, allowed: SECTION_KEYS }, 404);
   }
 
-  if (path === "full") return json({ sections: cvData });
-
-  if (path === "search") {
-    const q = safeTrim(query).toLowerCase();
-    if (!q) return json({ error: "Missing ?q=" }, 400);
-
-    const results = SECTION_KEYS.filter((section) =>
-      JSON.stringify(cvData[section]).toLowerCase().includes(q)
-    ).map((section) => ({ section, data: cvData[section] }));
-
-    return json({ query: q, count: results.length, results });
-  }
-
-  if (path.startsWith("section/")) {
-    const section = safeTrim(path.replace(/^section\//, ""));
-    if (!isCollection(section)) {
-      return json({ error: "Not found", section, allowed: SECTION_KEYS }, 404);
-    }
-
-    return json({ section, data: cvData[section] });
-  }
-
-  if (isCollection(path)) {
-    return json({ section: path, data: cvData[path] });
-  }
-
-  return json({ error: "Not found", path, method: request.method }, 404);
+  return json({ section: collection, data: cvData[collection] });
 });
 
 export default app;

@@ -13,6 +13,8 @@ debug.get("/v1/debug", (c) =>
     activities: true,
     general: true,
     ai: true,
+    webhooks: true,
+    cdn: true,
     timestamp: new Date().toISOString(),
   })
 );

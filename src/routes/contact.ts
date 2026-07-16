@@ -13,81 +13,67 @@ const contactData = {
 
 const app = new Hono<{ Bindings: Env }>();
 
-function safeTrim(value: unknown) {
-  return typeof value === "string" ? value.trim() : "";
-}
+const isCollection = (value: string): value is ContactCollection =>
+  (SECTION_KEYS as readonly string[]).includes(value);
 
-function isCollection(value: string): value is ContactCollection {
-  return (SECTION_KEYS as readonly string[]).includes(value);
-}
+app.get("/", (c) =>
+  json({
+    service: "contact",
+    version: "1.0",
+    sections: SECTION_KEYS,
+    endpoints: [
+      "/v1/contact",
+      "/v1/contact/sections",
+      "/v1/contact/list",
+      "/v1/contact/full",
+      "/v1/contact/section/:section",
+      "/v1/contact/:collection",
+      "/v1/contact/search?q=",
+    ],
+  }),
+);
 
-function getRoute(request: Request) {
-  const url = new URL(request.url);
-  const path = url.pathname.replace(/^\/v1\/contact\/?/, "");
-  const query = url.searchParams.get("q");
-  return { path, query };
-}
+app.get("/sections", (c) => json({ sections: SECTION_KEYS }));
 
-app.get("*", async (c) => {
-  const request = c.req.raw;
-  const { path, query } = getRoute(request);
-  const method = request.method.toUpperCase();
+app.get("/list", (c) =>
+  json({
+    count: SECTION_KEYS.length,
+    items: SECTION_KEYS.map((section) => ({
+      section,
+      hasData: contactData[section] !== undefined,
+    })),
+  }),
+);
 
-  if (!path) {
-    return json({
-      service: "contact",
-      version: "1.0",
-      sections: SECTION_KEYS,
-      endpoints: [
-        "/v1/contact",
-        "/v1/contact/sections",
-        "/v1/contact/list",
-        "/v1/contact/full",
-        "/v1/contact/section/:section",
-        "/v1/contact/search?q=",
-      ],
-    });
+app.get("/full", (c) => json({ sections: contactData }));
+
+app.get("/search", (c) => {
+  const q = c.req.query("q")?.trim().toLowerCase();
+  if (!q) return json({ error: "Missing ?q=" }, 400);
+
+  const results = SECTION_KEYS.filter((section) =>
+    JSON.stringify(contactData[section]).toLowerCase().includes(q),
+  ).map((section) => ({ section, data: contactData[section] }));
+
+  return json({ query: q, count: results.length, results });
+});
+
+app.get("/section/:section", (c) => {
+  const section = c.req.param("section");
+  if (!isCollection(section)) {
+    return json({ error: "Not found", section, allowed: SECTION_KEYS }, 404);
   }
 
-  if (path === "sections") return json({ sections: SECTION_KEYS });
+  return json({ section, data: contactData[section] });
+});
 
-  if (path === "list") {
-    return json({
-      count: SECTION_KEYS.length,
-      items: SECTION_KEYS.map((section) => ({
-        section,
-        hasData: contactData[section] !== undefined,
-      })),
-    });
+app.get("/:collection", (c) => {
+  const collection = c.req.param("collection");
+  if (!isCollection(collection)) {
+    return json({ error: "Not found", collection, allowed: SECTION_KEYS }, 404);
   }
 
-  if (path === "full") return json({ sections: contactData });
-
-  if (path === "search") {
-    const q = safeTrim(query).toLowerCase();
-    if (!q) return json({ error: "Missing ?q=" }, 400);
-
-    const results = SECTION_KEYS.filter((section) =>
-      JSON.stringify(contactData[section]).toLowerCase().includes(q)
-    ).map((section) => ({ section, data: contactData[section] }));
-
-    return json({ query: q, count: results.length, results });
-  }
-
-  if (path.startsWith("section/")) {
-    const section = safeTrim(path.replace(/^section\//, ""));
-    if (!isCollection(section)) {
-      return json({ error: "Not found", section, allowed: SECTION_KEYS }, 404);
-    }
-
-    return json({ section, data: contactData[section] });
-  }
-
-  if (isCollection(path)) {
-    return json({ section: path, data: contactData[path] });
-  }
-
-  return json({ error: "Not found", path, method }, 404);
+  return json({ section: collection, data: contactData[collection] });
 });
 
 export default app;

@@ -13,6 +13,10 @@
     {
       "binding": "R2",
       "bucket_name": "zotero-library"
+    },
+    {
+      "binding": "CDN",
+      "bucket_name": "rjmlaird-cdn"
     }
   ],
   "observability": {

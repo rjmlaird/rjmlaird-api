@@ -15,6 +15,7 @@
     "prepare": "wrangler types"
   },
   "dependencies": {
+    "@hubspot/cli": "^8.9.1",
     "chanfana": "3.3.0",
     "hono": "^4.12.27",
     "zod": "4.3.6"

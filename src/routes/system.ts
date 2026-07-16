@@ -62,6 +62,11 @@ system.get("/", (c) =>
       "GET /v1/activities",
       "GET /v1/general",
       "POST /v1/ai",
+      "POST /v1/webhooks/cal",
+      "GET /v1/cdn/list",
+      "GET /v1/cdn/file/{key}",
+      "PUT /v1/cdn/file/{key}",
+      "DELETE /v1/cdn/file/{key}",
       "OPTIONS /webdav",
       "GET /webdav",
       "PUT /webdav",
@@ -98,6 +103,8 @@ system.get("/openapi.json", (c) =>
       { name: "Research", description: "Research API endpoints" },
       { name: "WebDAV", description: "WebDAV access" },
       { name: "AI", description: "Grounded AI assistant" },
+      { name: "Webhooks", description: "Inbound webhooks (Cal.com -> HubSpot sync)" },
+      { name: "CDN", description: "Object storage: upload, download, list, delete" },
     ],
     paths: {
       "/": {

@@ -63,7 +63,7 @@ async function fetchContext(origin: string): Promise<string> {
       if (!res.ok) throw new Error(`${path} returned ${res.status}`);
       const data = await res.json();
       return `## Source: ${path}\n${JSON.stringify(data)}`;
-    })
+    }),
   );
 
   const succeeded = results
@@ -156,7 +156,7 @@ async function callGemini(question: string, systemPrompt: string, apiKey: string
         contents: [{ parts: [{ text: question }] }],
         generationConfig: { maxOutputTokens: MAX_TOKENS },
       }),
-    }
+    },
   );
 
   if (!res.ok) throw new Error(`Gemini API ${res.status}: ${await res.text()}`);
@@ -192,15 +192,21 @@ async function callPerplexity(question: string, systemPrompt: string, apiKey: st
   return { answer: answer || "No answer generated." };
 }
 
-const ADAPTERS: Record<
-  Provider,
-  (question: string, systemPrompt: string, apiKey: string) => Promise<AdapterResult>
-> = {
+const ADAPTERS: Record<Provider, (question: string, systemPrompt: string, apiKey: string) => Promise<AdapterResult>> = {
   claude: callClaude,
   openai: callOpenAI,
   gemini: callGemini,
   perplexity: callPerplexity,
 };
+
+aiApp.get("/", (c) =>
+  c.json({
+    service: "ai",
+    version: "1.0",
+    providers: ["claude", "openai", "gemini", "perplexity"],
+    endpoint: "/v1/ai",
+  }),
+);
 
 aiApp.post("/", async (c) => {
   const body = await c.req.json().catch(() => null);
