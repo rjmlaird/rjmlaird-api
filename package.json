@@ -10,17 +10,15 @@
     "dev": "wrangler dev",
     "build": "tsc --noEmit",
     "check": "tsc --noEmit",
-    "deploy": "wrangler deploy",
-    "cf-typegen": "wrangler types",
-    "prepare": "wrangler types"
+    "deploy": "wrangler deploy"
   },
   "dependencies": {
-    "@hubspot/cli": "^8.9.1",
     "chanfana": "3.3.0",
     "hono": "^4.12.27",
     "zod": "4.3.6"
   },
   "devDependencies": {
+    "@hubspot/cli": "^8.9.1",
     "@types/node": "25.9.4",
     "typescript": "5.7.3",
     "wrangler": "4.106.0"
