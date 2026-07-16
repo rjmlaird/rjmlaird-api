@@ -4,23 +4,30 @@ import { json } from "../lib/jsonResponse";
 import initiatives from "../data/initiatives.json";
 import reviews from "../data/reviews.json";
 import teaching from "../data/teaching.json";
+import projects from "../data/projects.json"; // 1. Import your projects data
 import publicationsText from "../data/publications.txt";
 
-export type PortfolioCollection = "initiatives" | "reviews" | "teaching" | "research";
+// 2. Add 'projects' to your collection type
+export type PortfolioCollection = "initiatives" | "reviews" | "teaching" | "research" | "projects";
 
-const SECTION_KEYS = ["initiatives", "reviews", "teaching", "research"] as const satisfies readonly PortfolioCollection[];
+// 3. Update the keys array
+const SECTION_KEYS = ["initiatives", "reviews", "teaching", "research", "projects"] as const satisfies readonly PortfolioCollection[];
 
 const portfolioData = {
   initiatives,
   reviews,
   teaching,
   research: publicationsText,
+  projects, // 4. Add to the data map
 } satisfies Record<PortfolioCollection, unknown>;
 
 const app = new Hono<{ Bindings: Env }>();
 
 const isCollection = (value: string): value is PortfolioCollection =>
   (SECTION_KEYS as readonly string[]).includes(value);
+
+// ... (Your app.get routes remain functionally identical, 
+// they will now automatically handle 'projects' via the isCollection check)
 
 app.get("/", (c) =>
   json({

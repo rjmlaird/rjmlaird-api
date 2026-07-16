@@ -33,7 +33,7 @@
       "Digital Transformation",
       "Sustainable Web Standards"
     ],
-    "projects": [],
+    "projects": ["green-orbit-workshops","marketing-audit","spaceimpactforum","spaceintegrity"],
     "clients": [],
     "articles": [],
     "talks": [],
@@ -71,6 +71,7 @@
       "Played a critical role in increasing programme visibility and engagement across the ESA Business Applications ecosystem.",
       "Standardized multi-channel content workflows, significantly improving project delivery and editorial throughput."
     ],
+    "projects": ["esa-ba-newsletter","esa-ba-webinars","esa-green-dossier"],
     "skills": [
       "Campaign Management",
       "Technical Communications",
@@ -79,7 +80,6 @@
       "Editorial Planning",
       "Content Marketing"
     ],
-    "projects": [],
     "clients": ["ESA Business Applications"],
     "articles": [],
     "talks": [],
@@ -110,6 +110,7 @@
       "Successfully delivered multi-year contracts for high-prestige European space and environmental initiatives.",
       "Established a reputation for translating complex R&D projects into accessible, high-performing digital marketing assets."
     ],
+    "projects": ["copernicus-hackathon-leics","esotc2018","vortex","windy"],
     "skills": [
       "Strategic Communications",
       "Digital Content Strategy",
@@ -143,7 +144,40 @@
       "Established R&R Space Ltd as a key space-sector outreach initiative.",
       "Successfully converted passive digital interest into active industry engagement."
     ],
-   "projects": ["build4space"],
+   "projects": ["build4space","spaceup-live","spaceupleics2018","spaceupleics2019"],
+    "skills": [
+      "Programme Development",
+      "Outreach",
+      "Event Management",
+      "Partnership Development",
+      "STEM Communication"
+    ],
+    "featured": false,
+    "order": 4
+  },
+    {
+    "id": "exp-powering-space",
+    "organisation": { "name": "Powering Space C.I.C.", "website": "" },
+    "role": "Co-Founder & Director",
+    "employmentType": "Founder",
+    "startDate": "2018-01",
+    "endDate": "2021-12",
+    "current": false,
+    "city": "Leicester",
+    "country": "United Kingdom",
+    "workMode": "Hybrid",
+    "summary": "Co-founded and scaled a space sector outreach and training company focused on developing engagement programmes, events, and skills development initiatives.",
+    "responsibilities": [
+      "Founded and led SpaceUp Leicester, delivering sell-out engagement events with full ownership of venue, supplier, budget, and risk management.",
+      "Launched SpaceUp Live, generating 1,000+ YouTube views and strong engagement from industry professionals.",
+      "Delivered communications for the University of Leicester Copernicus Hackathon, supporting recruitment and awareness.",
+      "Managed end-to-end event delivery across multiple workstreams and deadlines."
+    ],
+    "achievements": [
+      "Established R&R Space Ltd as a key space-sector outreach initiative.",
+      "Successfully converted passive digital interest into active industry engagement."
+    ],
+   "projects": ["impulse2021","lunch-and-learn"],
     "skills": [
       "Programme Development",
       "Outreach",
@@ -176,7 +210,7 @@
       "Delivered high-quality editorial and multimedia content for space-sector communications.",
       "Strengthened narrative and publishing workflows across digital platforms."
     ],
-    "projects": ["aeolus","bake-in-space","bepi-colombo","breezometer"],
+    "projects": ["vega","spaceoneers","rosetta-strato","rosetta-shop","rosetta-philae-animations","riga-airtext","point-iot-mooc","phiweekbootcamp2019","phiweekbootcamp2018","oceanstatereport4","lunar-exp-interactive-docu","living-with-space-40","little-spaceoneers","innospaceweekend2017","aeolus","bake-in-space","bepi-colombo","breezometer","discovair","esa-industry-days","eumetsat-africa","eumetsat-food","gaia"],
     "skills": [
       "Editorial Leadership",
       "Multimedia Storytelling",
@@ -208,7 +242,7 @@
       "Produced education resources widely used in outreach and classroom settings.",
       "Built early experience in STEM communication and public engagement."
     ],
-    "projects": ["bloodhound-blast"],
+    "projects": ["bloodhound-blast","desert-living","knex"],
     "skills": [
       "STEM Communication",
       "Public Engagement",
@@ -239,6 +273,7 @@
       "Developed practical experience in science press and outreach writing.",
       "Contributed to public-facing communications for a world-leading astronomy organisation."
     ],
+    "projects": ["esocast","esa-hubble","esoultrahd"],
     "skills": ["Science Writing", "Press Releases", "Web Content", "Astronomy Communication"],
     "featured": false,
     "order": 7
@@ -349,6 +384,7 @@
       "Maintained and verified data processing workflows."
     ],
     "achievements": ["Contributed to satellite instrumentation support and calibration analysis."],
+    "projects": ["gerb"],
     "skills": ["Data Analysis", "Scientific Computing", "Instrumentation", "Calibration"],
     "featured": false,
     "order": 12

@@ -1,0 +1,1713 @@
+[
+  {
+    "slug": "woodland-qedjw",
+    "id": 41,
+    "title": "QEDJW",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "\n# QEDJW\n\nExperience: Volunteer (https://app.notion.com/p/Volunteer-3813a96540ad804db3dec2b17f84bf41?pvs=21)"
+  },
+  {
+    "slug": "windy",
+    "id": 41,
+    "title": "Windy",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "\nCase studies: European State of the Climate  (https://app.notion.com/p/European-State-of-the-Climate-3813a96540ad80b9b474e68a4ee37de5?pvs=21)\nOrganisations: Design & Data GmbH (https://app.notion.com/p/Design-Data-GmbH-37b3a96540ad80fa8598ebd7f766d9db?pvs=21)\n\n[https://youtu.be/RCWH-Z14Uts?is=1khILDkWx4xljsQn](https://youtu.be/RCWH-Z14Uts?is=1khILDkWx4xljsQn)"
+  },
+  {
+    "slug": "white-dwarves",
+    "id": 41,
+    "title": "White dwarves",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "\nOrganisations: University of Leicester (https://app.notion.com/p/University-of-Leicester-37b3a96540ad80a6b28df9b193fce1c6?pvs=21)"
+  },
+  {
+    "slug": "vortex",
+    "id": 41,
+    "title": "Vortex",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "\n\n\nCase studies: European State of the Climate  (https://app.notion.com/p/European-State-of-the-Climate-3813a96540ad80b9b474e68a4ee37de5?pvs=21)\nOrganisations: Design & Data GmbH (https://app.notion.com/p/Design-Data-GmbH-37b3a96540ad80fa8598ebd7f766d9db?pvs=21)"
+  },
+  {
+    "slug": "vega",
+    "id": 41,
+    "title": "Vega",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "\n\n# \nCase studies: ESA material labs (https://app.notion.com/p/ESA-material-labs-3813a96540ad8026b4a3e506aaa92615?pvs=21)\nOrganisations: Design & Data GmbH (https://app.notion.com/p/Design-Data-GmbH-37b3a96540ad80fa8598ebd7f766d9db?pvs=21)\n\n[https://youtu.be/dO6a3EtuF3U?is=1lUkQiCHpXe-Cp-t](https://youtu.be/dO6a3EtuF3U?is=1lUkQiCHpXe-Cp-t)"
+  },
+  {
+    "slug": "ukspace-startup",
+    "id": 41,
+    "title": "UKspace Startup working group",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "\n# \n\nOrganisations: UK Space (https://app.notion.com/p/UK-Space-37b3a96540ad80438299eef08319f4fb?pvs=21)"
+  },
+  {
+    "slug": "ukseds-charity",
+    "id": 41,
+    "title": "UKSEDS charity status",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "\n\n\nExperience: Vice Chair (https://app.notion.com/p/Vice-Chair-3813a96540ad80da9db6c3c7b9d45d93?pvs=21)"
+  },
+  {
+    "slug": "tp-ambient",
+    "id": 41,
+    "title": "TP Ambient",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# Ambient\n\nOrganisations: International Space University (https://app.notion.com/p/International-Space-University-37b3a96540ad80c99f7dd9e615ab18c7?pvs=21)"
+  },
+  {
+    "slug": "telescope-astrosoc",
+    "id": 41,
+    "title": "Telescope Coordinator - Astrosoc",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "\n# Telescope Coordinator\n\nOrganisations: University of Leicester Astrosoc (https://app.notion.com/p/University-of-Leicester-Astrosoc-3813a96540ad80ffbe73c4394909321c?pvs=21)"
+  },
+  {
+    "slug": "spaceupleics2019",
+    "id": 41,
+    "title": "SpaceUp Leicester 2019",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "\n# \n\nOrganisations: R&R Space (https://app.notion.com/p/R-R-Space-37b3a96540ad80e490b5dbb0a32e58e0?pvs=21)\nPlace: Leicester, England, United Kingdom"
+  },
+  {
+    "slug": "spaceupleics2018",
+    "id": 41,
+    "title": "SpaceUp Leicester 2018",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "\n\n\nOrganisations: R&R Space (https://app.notion.com/p/R-R-Space-37b3a96540ad80e490b5dbb0a32e58e0?pvs=21)\nPlace: Leicester, England, United Kingdom"
+  },
+  {
+    "slug": "spaceup-live",
+    "id": 41,
+    "title": "SpaceUp Live",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "\n# \n\nCase studies: Spaceup Live (https://app.notion.com/p/Spaceup-Live-3813a96540ad80a19986f5d9d0d3ef76?pvs=21)\nClient: SpaceUp (https://app.notion.com/p/SpaceUp-3803a96540ad80c58f5dd9e289030b0c?pvs=21)\nOrganisations: R&R Space (https://app.notion.com/p/R-R-Space-37b3a96540ad80e490b5dbb0a32e58e0?pvs=21)"
+  },
+  {
+    "slug": "spaceoneers",
+    "id": 41,
+    "title": "Spaceoneers",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://spaceoneers.io"
+    },
+    "impact": {},
+    "content": "\n# \n\nArticles: Spaceoneers (https://app.notion.com/p/Spaceoneers-3803a96540ad80549535df4e398304a4?pvs=21)\nCase studies: Spaceoneers (https://app.notion.com/p/Spaceoneers-3813a96540ad80a188dcdcad4ef8e5c5?pvs=21)\nOrganisations: Design & Data GmbH (https://app.notion.com/p/Design-Data-GmbH-37b3a96540ad80fa8598ebd7f766d9db?pvs=21)"
+  },
+  {
+    "slug": "spaceintegrity",
+    "id": 41,
+    "title": "Space Integrity Initiative",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://spaceintegrity.org"
+    },
+    "impact": {},
+    "content": "\n# \n\nOrganisations: Green Orbit Digital (https://app.notion.com/p/Green-Orbit-Digital-37b3a96540ad80cc83b3dece6841552f?pvs=21)\nPlace: Leicester, England, United Kingdom\n"
+  },
+  {
+    "slug": "spaceimpactforum",
+    "id": 41,
+    "title": "Space Impact Forum",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://spaceimpactforum.com"
+    },
+    "impact": {},
+    "content": ""
+  },
+  {
+    "slug": "sgac-asteroid",
+    "id": 41,
+    "title": "SGAC Find An Asteroid Search Campaign",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "\n\nOrganisations: Space Generation Advisory Council (https://app.notion.com/p/Space-Generation-Advisory-Council-37b3a96540ad805886d8ef493cefd3f9?pvs=21)"
+  },
+  {
+    "slug": "seppcon",
+    "id": 41,
+    "title": "SEPPCoN",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "\n# \n\nOrganisations: University of Kent (https://app.notion.com/p/University-of-Kent-37b3a96540ad80f0860fd523996d55e1?pvs=21)"
+  },
+  {
+    "slug": "rosetta-strato",
+    "id": 41,
+    "title": "Rosetta Strato Campaign",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "\n# \n\nCase studies: Rosetta Philae (https://app.notion.com/p/Rosetta-Philae-3813a96540ad806c8fe3cc9164fc35a9?pvs=21)\nOrganisations: Design & Data GmbH (https://app.notion.com/p/Design-Data-GmbH-37b3a96540ad80fa8598ebd7f766d9db?pvs=21)\n\n[https://youtu.be/iYaFGL7dEBk?is=aYOy039ug9GnuNcj](https://youtu.be/iYaFGL7dEBk?is=aYOy039ug9GnuNcj)"
+  },
+  {
+    "slug": "rosetta-shop",
+    "id": 41,
+    "title": "Rosetta Shop",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://rosettashop.eu"
+    },
+    "impact": {},
+    "content": "\n# \n\nCase studies: Rosetta Philae (https://app.notion.com/p/Rosetta-Philae-3813a96540ad806c8fe3cc9164fc35a9?pvs=21)\nOrganisations: Design & Data GmbH (https://app.notion.com/p/Design-Data-GmbH-37b3a96540ad80fa8598ebd7f766d9db?pvs=21)"
+  },
+  {
+    "slug": "rosetta-philae-animations",
+    "id": 41,
+    "title": "Rosetta & Philae animations",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "\n\n# \n\nCase studies: Rosetta Philae (https://app.notion.com/p/Rosetta-Philae-3813a96540ad806c8fe3cc9164fc35a9?pvs=21)\nClient: European Space Agency (https://app.notion.com/p/European-Space-Agency-37b3a96540ad805f9b4cd705f7e7cd42?pvs=21)\nOrganisations: Design & Data GmbH (https://app.notion.com/p/Design-Data-GmbH-37b3a96540ad80fa8598ebd7f766d9db?pvs=21)"
+  },
+  {
+    "slug": "riga-airtext",
+    "id": 41,
+    "title": "Riga Airtext",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "\n# \n\nCase studies: European State of the Climate  (https://app.notion.com/p/European-State-of-the-Climate-3813a96540ad80b9b474e68a4ee37de5?pvs=21)\nOrganisations: Design & Data GmbH (https://app.notion.com/p/Design-Data-GmbH-37b3a96540ad80fa8598ebd7f766d9db?pvs=21)"
+  },
+  {
+    "slug": "point-iot-mooc",
+    "id": 41,
+    "title": "Point.IOT.MOOC",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "\n# \n\nClient: SpaceTec Partners (https://app.notion.com/p/SpaceTec-Partners-3813a96540ad804a87a8cd87ed6e6a24?pvs=21)\nOrganisations: Design & Data GmbH (https://app.notion.com/p/Design-Data-GmbH-37b3a96540ad80fa8598ebd7f766d9db?pvs=21)"
+  },
+  {
+    "slug": "plume",
+    "id": 41,
+    "title": "PLUME (Picosatellite of Leicester University Micrometeoroid Experiment)",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "\n# \n\nExperience: Comms Officer (https://app.notion.com/p/Comms-Officer-3813a96540ad80449b11d385b55de577?pvs=21)\nOrganisations: University of Leicester (https://app.notion.com/p/University-of-Leicester-37b3a96540ad80a6b28df9b193fce1c6?pvs=21)"
+  },
+  {
+    "slug": "phiweekbootcamp2019",
+    "id": 41,
+    "title": "PhiWeek Bootcamp 2019",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nCase studies: PhiWeek Bootcamp (https://app.notion.com/p/PhiWeek-Bootcamp-3813a96540ad80e29281f7c1046f685a?pvs=21)\nClient: European Space Agency (https://app.notion.com/p/European-Space-Agency-37b3a96540ad805f9b4cd705f7e7cd42?pvs=21)\nOrganisations: Design & Data GmbH (https://app.notion.com/p/Design-Data-GmbH-37b3a96540ad80fa8598ebd7f766d9db?pvs=21)\nSectors: Energy (https://app.notion.com/p/Energy-36c3a96540ad80419343c44e3de39fe6?pvs=21)\n\n[https://youtu.be/kbaoIb3s29s?is=Q16BVec5UxT-VImz](https://youtu.be/kbaoIb3s29s?is=Q16BVec5UxT-VImz)"
+  },
+  {
+    "slug": "phiweekbootcamp2018",
+    "id": 41,
+    "title": "PhiWeek Bootcamp 2018",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nCase studies: PhiWeek Bootcamp (https://app.notion.com/p/PhiWeek-Bootcamp-3813a96540ad80e29281f7c1046f685a?pvs=21)\nOrganisations: Design & Data GmbH (https://app.notion.com/p/Design-Data-GmbH-37b3a96540ad80fa8598ebd7f766d9db?pvs=21)"
+  },
+  {
+    "slug": "pan-starrs",
+    "id": 41,
+    "title": "Pan-STARRS Asteroid Search Campaign",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nExperience: Team Lead, UKSEDS Asteroid Chasers (https://app.notion.com/p/Team-Lead-UKSEDS-Asteroid-Chasers-3813a96540ad80289a62fa5eabb7e2c4?pvs=21)\nOrganisations: UKSEDS (https://app.notion.com/p/UKSEDS-37b3a96540ad80c0ab89f463c38899dd?pvs=21)"
+  },
+  {
+    "slug": "oceanstatereport4",
+    "id": 41,
+    "title": "Ocean State Report 4",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "science policy"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nClient: Mercator Ocean (https://app.notion.com/p/Mercator-Ocean-3803a96540ad800d8e8ad96104ca9452?pvs=21)\nOrganisations: Design & Data GmbH (https://app.notion.com/p/Design-Data-GmbH-37b3a96540ad80fa8598ebd7f766d9db?pvs=21)\n\n[https://youtu.be/xlKmSGvqaFo?is=CkpLT3PQgJK1UkrG](https://youtu.be/xlKmSGvqaFo?is=CkpLT3PQgJK1UkrG)"
+  },
+  {
+    "slug": "marketing-audit",
+    "id": 41,
+    "title": "Marketing audit",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nClient: Climate Action Leicester and Leicestershire (https://app.notion.com/p/Climate-Action-Leicester-and-Leicestershire-37b3a96540ad80b1a688f8fa51024706?pvs=21)\nOrganisations: Green Orbit Digital (https://app.notion.com/p/Green-Orbit-Digital-37b3a96540ad80cc83b3dece6841552f?pvs=21)\nSectors: Climate (https://app.notion.com/p/Climate-3803a96540ad80acbe9dfa79689a0dda?pvs=21), Energy (https://app.notion.com/p/Energy-36c3a96540ad80419343c44e3de39fe6?pvs=21), Built Environment (https://app.notion.com/p/Built-Environment-36c3a96540ad805cab01e5d7ec77e9d3?pvs=21)"
+  },
+  {
+    "slug": "lunch-and-learn",
+    "id": 41,
+    "title": "Lunch and Learn",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nOrganisations: Powering Space (https://app.notion.com/p/Powering-Space-3813a96540ad803aaca9c4e1f8e111df?pvs=21)"
+  },
+  {
+    "slug": "lunar-exp-interactive-docu",
+    "id": 41,
+    "title": "Lunar Exploration Interactive Documentary",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nAwards : Award of Excellence - The Communicator Awards (https://app.notion.com/p/Award-of-Excellence-The-Communicator-Awards-3803a96540ad8024b927fce03692a86b?pvs=21)\nOrganisations: Design & Data GmbH (https://app.notion.com/p/Design-Data-GmbH-37b3a96540ad80fa8598ebd7f766d9db?pvs=21)"
+  },
+  {
+    "slug": "living-with-space-40",
+    "id": 41,
+    "title": "Living with Space 4.0",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nClient: European Space Agency (https://app.notion.com/p/European-Space-Agency-37b3a96540ad805f9b4cd705f7e7cd42?pvs=21)\nOrganisations: Design & Data GmbH (https://app.notion.com/p/Design-Data-GmbH-37b3a96540ad80fa8598ebd7f766d9db?pvs=21)\n\n[https://youtu.be/hpBKuqzYnKI?is=pJmzZaCQNSYm1dOC](https://youtu.be/hpBKuqzYnKI?is=pJmzZaCQNSYm1dOC)"
+  },
+  {
+    "slug": "little-spaceoneers",
+    "id": 41,
+    "title": "Little Spaceoneers",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nOrganisations: Design & Data GmbH (https://app.notion.com/p/Design-Data-GmbH-37b3a96540ad80fa8598ebd7f766d9db?pvs=21)"
+  },
+  {
+    "slug": "leicesterspaceweek",
+    "id": 41,
+    "title": "Leicester Space Week",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nOrganisations: Green Orbit Digital (https://app.notion.com/p/Green-Orbit-Digital-37b3a96540ad80cc83b3dece6841552f?pvs=21)\nProject URL: leicesterspaceweek.com"
+  },
+  {
+    "slug": "knex",
+    "id": 41,
+    "title": "K’nex",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nOrganisations: Bloodhound SSC (https://app.notion.com/p/Bloodhound-SSC-37b3a96540ad807bbbe8cead8c8737d3?pvs=21)"
+  },
+  {
+    "slug": "innospaceweekend2017",
+    "id": 41,
+    "title": "InnoSpace Weekend 2017",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nClient: German Aerospace Center (DLR) (https://app.notion.com/p/German-Aerospace-Center-DLR-3803a96540ad8020bb1cd16a20d1a545?pvs=21)\nOrganisations: Design & Data GmbH (https://app.notion.com/p/Design-Data-GmbH-37b3a96540ad80fa8598ebd7f766d9db?pvs=21)\nSectors: Logistics (https://app.notion.com/p/Logistics-3803a96540ad80079662c22d61e9a8ab?pvs=21), Automotive (https://app.notion.com/p/Automotive-3803a96540ad803db297cd7efd3f17d0?pvs=21), Space and Satellite Sector (https://app.notion.com/p/Space-and-Satellite-Sector-36c3a96540ad80918302f1c0b50eb24f?pvs=21)\n\n[https://youtu.be/4DccpiuX9Xw?is=uz0pkk9eU5Yykm0L](https://youtu.be/4DccpiuX9Xw?is=uz0pkk9eU5Yykm0L)\n\n[https://youtu.be/3ifypFNULlM?is=yCdpBEfI-y1RnP9z](https://youtu.be/3ifypFNULlM?is=yCdpBEfI-y1RnP9z)"
+  },
+  {
+    "slug": "impulse2021",
+    "id": 41,
+    "title": "Impulse 2021",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nOrganisations: Powering Space (https://app.notion.com/p/Powering-Space-3813a96540ad803aaca9c4e1f8e111df?pvs=21)"
+  },
+  {
+    "slug": "green-orbit-workshops",
+    "id": 41,
+    "title": "Green Orbit workshops",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nOrganisations: Green Orbit Digital (https://app.notion.com/p/Green-Orbit-Digital-37b3a96540ad80cc83b3dece6841552f?pvs=21)"
+  },
+  {
+    "slug": "gerb",
+    "id": 41,
+    "title": "GERB",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# Gerb\n\nOrganisations: University of Leicester (https://app.notion.com/p/University-of-Leicester-37b3a96540ad80a6b28df9b193fce1c6?pvs=21)"
+  },
+  {
+    "slug": "gaia",
+    "id": 41,
+    "title": "Gaia",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nCase studies: ESA material labs (https://app.notion.com/p/ESA-material-labs-3813a96540ad8026b4a3e506aaa92615?pvs=21)\nClient: European Space Agency (https://app.notion.com/p/European-Space-Agency-37b3a96540ad805f9b4cd705f7e7cd42?pvs=21)\nOrganisations: Design & Data GmbH (https://app.notion.com/p/Design-Data-GmbH-37b3a96540ad80fa8598ebd7f766d9db?pvs=21)\n\n[https://youtu.be/9EB_h6RX0EA?is=iXPLuG-XC0bQCJyQ](https://youtu.be/9EB_h6RX0EA?is=iXPLuG-XC0bQCJyQ)"
+  },
+  {
+    "slug": "eumetsat-food",
+    "id": 41,
+    "title": "Eumetsat food security",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nCase studies: Eumetsat in Africa  (https://app.notion.com/p/Eumetsat-in-Africa-3813a96540ad801c8dafc4f899b81794?pvs=21)\nOrganisations: Design & Data GmbH (https://app.notion.com/p/Design-Data-GmbH-37b3a96540ad80fa8598ebd7f766d9db?pvs=21)\n\n[https://youtu.be/V1qxGUTaQlI?is=--A0vkxekfABrEBc](https://youtu.be/V1qxGUTaQlI?is=--A0vkxekfABrEBc)"
+  },
+  {
+    "slug": "eumetsat-africa",
+    "id": 41,
+    "title": "Eumetsat Africa",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nOrganisations: Design & Data GmbH (https://app.notion.com/p/Design-Data-GmbH-37b3a96540ad80fa8598ebd7f766d9db?pvs=21)"
+  },
+  {
+    "slug": "esoultrahd",
+    "id": 41,
+    "title": "ESO Ultra HD Expedition",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nCase studies: ESO Ultra HD (https://app.notion.com/p/ESO-Ultra-HD-3813a96540ad80a0bc2dd96168f95dea?pvs=21)\nClient: European Southern Observatory (https://app.notion.com/p/European-Southern-Observatory-37b3a96540ad807eb7bbc2a5283e7a66?pvs=21)\nOrganisations: European Southern Observatory (https://app.notion.com/p/European-Southern-Observatory-37b3a96540ad807eb7bbc2a5283e7a66?pvs=21)"
+  },
+  {
+    "slug": "esotc2018",
+    "id": 41,
+    "title": "European State of the Climate 2018",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nClient: ECMWF (https://app.notion.com/p/ECMWF-3803a96540ad80b2b602c677cd95a3f9?pvs=21)\nOrganisations: Design & Data GmbH (https://app.notion.com/p/Design-Data-GmbH-37b3a96540ad80fa8598ebd7f766d9db?pvs=21)\nSectors: Energy (https://app.notion.com/p/Energy-36c3a96540ad80419343c44e3de39fe6?pvs=21), Climate (https://app.notion.com/p/Climate-3803a96540ad80acbe9dfa79689a0dda?pvs=21)"
+  },
+  {
+    "slug": "esa-industry-days",
+    "id": 41,
+    "title": "ESA Industry Days",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nOrganisations: Design & Data GmbH (https://app.notion.com/p/Design-Data-GmbH-37b3a96540ad80fa8598ebd7f766d9db?pvs=21)"
+  },
+  {
+    "slug": "esa-hubble",
+    "id": 41,
+    "title": "ESA Hubble",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nOrganisations: European Southern Observatory (https://app.notion.com/p/European-Southern-Observatory-37b3a96540ad807eb7bbc2a5283e7a66?pvs=21)"
+  },
+  {
+    "slug": "esa-green-dossier",
+    "id": 41,
+    "title": "Green dossier",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "\n# \n\nOrganisations: HE Space Operations (https://app.notion.com/p/HE-Space-Operations-3813a96540ad805e8690df50702e22ba?pvs=21)"
+  },
+  {
+    "slug": "esa-ba-webinars",
+    "id": 41,
+    "title": "ESA Business Applications Webinars",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nClient: European Space Agency (https://app.notion.com/p/European-Space-Agency-37b3a96540ad805f9b4cd705f7e7cd42?pvs=21)\nOrganisations: HE Space Operations (https://app.notion.com/p/HE-Space-Operations-3813a96540ad805e8690df50702e22ba?pvs=21)"
+  },
+  {
+    "slug": "esa-ba-newsletter",
+    "id": 41,
+    "title": "ESA Business Applicarions newsletter",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nOrganisations: HE Space Operations (https://app.notion.com/p/HE-Space-Operations-3813a96540ad805e8690df50702e22ba?pvs=21)"
+  },
+  {
+    "slug": "esocast",
+    "id": 41,
+    "title": "Esocast",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nArticles: Esocast 65 (https://app.notion.com/p/Esocast-65-3803a96540ad80429b64dfcdfef5851f?pvs=21), Esocast 66 (https://app.notion.com/p/Esocast-66-3803a96540ad803d9ed1fb1c2d3f8a6c?pvs=21), Esocast 64 (https://app.notion.com/p/Esocast-64-3803a96540ad8004bb97dc5813c3fa31?pvs=21)\nOrganisations: European Southern Observatory (https://app.notion.com/p/European-Southern-Observatory-37b3a96540ad807eb7bbc2a5283e7a66?pvs=21)"
+  },
+  {
+    "slug": "discovair",
+    "id": 41,
+    "title": "Discovair",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nCase studies: European State of the Climate  (https://app.notion.com/p/European-State-of-the-Climate-3813a96540ad80b9b474e68a4ee37de5?pvs=21)\nOrganisations: Design & Data GmbH (https://app.notion.com/p/Design-Data-GmbH-37b3a96540ad80fa8598ebd7f766d9db?pvs=21)\n\n[https://youtu.be/1r3QI88w4BI?is=6elRbvBmc2HJFfKH](https://youtu.be/1r3QI88w4BI?is=6elRbvBmc2HJFfKH)"
+  },
+  {
+    "slug": "desert-living",
+    "id": 41,
+    "title": "Desert Living",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nOrganisations: Bloodhound SSC (https://app.notion.com/p/Bloodhound-SSC-37b3a96540ad807bbbe8cead8c8737d3?pvs=21)"
+  },
+  {
+    "slug": "copernicus-hackathon-leics",
+    "id": 41,
+    "title": "Copernicus Hackathon",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nClient: University of Leicester (https://app.notion.com/p/University-of-Leicester-37b3a96540ad80a6b28df9b193fce1c6?pvs=21)\nOrganisations: Freelance (https://app.notion.com/p/Freelance-3813a96540ad80549866f8665fe238aa?pvs=21)"
+  },
+  {
+    "slug": "spaceforneurodiversity",
+    "id": 41,
+    "title": "Space for Neurodiversity",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# Campaign\n\nOrganisations: Space for Neurodiversity (https://app.notion.com/p/Space-for-Neurodiversity-3813a96540ad80bdaa0bdb48e82bbf65?pvs=21)"
+  },
+  {
+    "slug": "build4space",
+    "id": 41,
+    "title": "Build4Space",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "\n# \n\nOrganisations: R&R Space (https://app.notion.com/p/R-R-Space-37b3a96540ad80e490b5dbb0a32e58e0?pvs=21)"
+  },
+  {
+    "slug": "breezometer",
+    "id": 41,
+    "title": "Breezometer",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nOrganisations: Design & Data GmbH (https://app.notion.com/p/Design-Data-GmbH-37b3a96540ad80fa8598ebd7f766d9db?pvs=21)\n\n[https://youtu.be/VRv6sqPa2o8?is=BfBOjFiu-O0h_aiY](https://youtu.be/VRv6sqPa2o8?is=BfBOjFiu-O0h_aiY)"
+  },
+  {
+    "slug": "bloodhound-blast",
+    "id": 41,
+    "title": "Bloodhound blast example",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nCase studies: Bloodhound blast (https://app.notion.com/p/Bloodhound-blast-3813a96540ad80438374d5c57614226f?pvs=21)\nOrganisations: Bloodhound SSC (https://app.notion.com/p/Bloodhound-SSC-37b3a96540ad807bbbe8cead8c8737d3?pvs=21)"
+  },
+  {
+    "slug": "bepi-colombo",
+    "id": 41,
+    "title": "Bepi Colombo",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "# \n\nCase studies: ESA material labs (https://app.notion.com/p/ESA-material-labs-3813a96540ad8026b4a3e506aaa92615?pvs=21)\nOrganisations: Design & Data GmbH (https://app.notion.com/p/Design-Data-GmbH-37b3a96540ad80fa8598ebd7f766d9db?pvs=21)\n\n[https://youtu.be/djerGKGiNC4?is=Gi6qlOIEgSixa52-](https://youtu.be/djerGKGiNC4?is=Gi6qlOIEgSixa52-)"
+  },
+  {
+    "slug": "bake-in-space",
+    "id": 41,
+    "title": "Bake In Space",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "\nAwards : INNOspace Masters 2017 (https://app.notion.com/p/INNOspace-Masters-2017-3803a96540ad80da8cc7f62c94dc0eda?pvs=21)\nCase studies: Bake In space (https://app.notion.com/p/Bake-In-space-3813a96540ad803793e9c822a1f6403c?pvs=21)\nOrganisations: Design & Data GmbH (https://app.notion.com/p/Design-Data-GmbH-37b3a96540ad80fa8598ebd7f766d9db?pvs=21)"
+  },
+  {
+    "slug": "aeolus",
+    "id": 41,
+    "title": "Aeolus",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "date": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "content": "\n# \n\nCase studies: ESA material labs (https://app.notion.com/p/ESA-material-labs-3813a96540ad8026b4a3e506aaa92615?pvs=21)\nClient: European Space Agency (https://app.notion.com/p/European-Space-Agency-37b3a96540ad805f9b4cd705f7e7cd42?pvs=21)\nOrganisations: Design & Data GmbH (https://app.notion.com/p/Design-Data-GmbH-37b3a96540ad80fa8598ebd7f766d9db?pvs=21)\n\n[https://youtu.be/OOHS8nN1Hcg?is=FGvsLz2ULXEdDodP](https://youtu.be/OOHS8nN1Hcg?is=FGvsLz2ULXEdDodP)"
+  }
+]
