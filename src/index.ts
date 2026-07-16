@@ -13,6 +13,7 @@ import contact from "./routes/contact";
 import activities from "./routes/activities";
 import general from "./routes/general";
 import { aiApp } from "./routes/ai";
+import { site } from "./routes/site"; // Use curly braces for named exports
 
 // Data imports
 import awards from "./data/awards.json";
@@ -30,7 +31,7 @@ import volunteering from "./data/volunteering.json";
 
 const app = new Hono<{ Bindings: Env }>();
 
-// 1. Enable logging to track where requests are being intercepted
+// 1. Logging Middleware for observability
 app.use("*", logger());
 
 // 2. Centralized Data Registry
@@ -49,7 +50,7 @@ const cvData = {
   volunteering,
 } as const;
 
-// 3. Mount Routes
+// 3. Mount Application Routes
 app.route("/system", system);
 app.route("/debug", debug);
 app.route("/webdav", webdav);
@@ -62,7 +63,6 @@ app.route("/v1/general", general);
 app.route("/v1/ai", aiApp);
 
 // 4. API Collection Endpoint
-// Note: We use dynamic lookup based on the key name
 app.get("/api/:collection", (c) => {
   const collectionKey = c.req.param("collection") as keyof typeof cvData;
 
@@ -80,13 +80,12 @@ app.get("/api/:collection", (c) => {
   );
 });
 
-// 5. Documentation and UI
-// Mount the site routes (covers / and /openapi.json)
+// 5. Mount Site Router (Handles / and /openapi.json)
 app.route("/", site);
 
-// 6. Explicit 404 handling
+// 6. Final Catch-all (Debugging)
 app.notFound((c) => {
-  return c.text("Route not found: " + c.req.path, 404);
+  return c.text(`Route not found: ${c.req.path}`, 404);
 });
 
 export default app;
