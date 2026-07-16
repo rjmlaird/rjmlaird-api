@@ -568,11 +568,6 @@ app.get("/", (c) =>
     </style>
   </head>
   <body>
-    <div class="wrap">
-      <h1>rjmlaird API</h1>
-      <p>GitHub-powered CV + portfolio + contact + research + WebDAV API.</p>
-      <div id="swagger-ui"></div>
-    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.17.14/swagger-ui-bundle.js"
