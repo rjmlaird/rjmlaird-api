@@ -595,7 +595,8 @@ app.get("/", (c) =>
       });
     </script>
   </body>
-</html>
+</html>`),
+);
 
 app.notFound((c) => c.text("Not found", 404));
 
