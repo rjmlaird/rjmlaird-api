@@ -296,6 +296,7 @@
       "Supported outreach strategy for educational astronomy content."
     ],
     "achievements": ["Helped broaden the reach of astronomy content for schools and youth groups."],
+    "projects": ["space-scoop-comms"],
     "skills": ["Content Syndication", "Science Education", "Youth Engagement"],
     "featured": false,
     "order": 8
@@ -318,6 +319,7 @@
       "Engaged with UN COPUOS sessions."
     ],
     "achievements": ["Gained experience in global space policy and international advocacy."],
+    "projects": ["sg-fusion-forum"],
     "skills": ["Space Policy", "International Collaboration", "Programme Coordination"],
     "featured": false,
     "order": 9
@@ -340,6 +342,7 @@
       "Supported curriculum delivery and student mentoring."
     ],
     "achievements": ["Developed experience in academic communication and student support."],
+    "projects": ["standardised-lab-exp"],
     "skills": ["Physics Education", "Teaching", "Mentoring", "Assessment"],
     "featured": false,
     "order": 10
@@ -362,6 +365,7 @@
       "Adapted physics content for public and school audiences."
     ],
     "achievements": ["Built experience in live science presentation and public engagement."],
+    "projects": ["astrodome"],
     "skills": ["Public Engagement", "Science Communication", "Physics Outreach"],
     "featured": false,
     "order": 11
@@ -406,6 +410,7 @@
       "Supported practical science experiments and lesson preparation."
     ],
     "achievements": ["Developed confidence in communicating science to younger students."],
+    "projects": ["school-experiment"],
     "skills": ["Education Support", "Classroom Assistance", "Science Communication"],
     "featured": false,
     "order": 13
@@ -428,6 +433,7 @@
       "Produced research outputs through data interpretation."
     ],
     "achievements": ["Completed an undergraduate summer research placement in astrophysics."],
+    "projects": ["white-dwarves"],
     "skills": ["Astrophysics", "Spectral Analysis", "Data Interpretation"],
     "featured": false,
     "order": 14
