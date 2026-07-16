@@ -36,6 +36,8 @@
       :root{
         --ink:#0B0F1A;--ink2:#0F1520;--card:#141B29;--lift:#1A2236;
         --w:#EDEAE3;
+        /* --m lightened from #6B7A96 -> #7C8AA4: the old value sat at ~4.4:1 on
+           --ink, just under the 4.5:1 AA floor for body-sized text. */
         --m:#7C8AA4;--mb:#8892A4;
         --teal:#00C2A8;--td:rgba(0,194,168,.13);--tb:rgba(0,194,168,.26);
         --amber:#F5A623;--ad:rgba(245,166,35,.11);
@@ -45,6 +47,11 @@
         --sky:#38BDF8;--sd:rgba(56,189,248,.11);
         --bd:rgba(255,255,255,.07);--bm:rgba(255,255,255,.13);
         --focus:#7FE6D4;
+        /* Shared content column width + fluid gutter. Under ~1370px the gutter
+           is a flat 2.5rem, same as before. Past that it grows to keep the
+           column from stretching edge-to-edge on wide/ultrawide monitors —
+           it's just section padding, so full-bleed section backgrounds are
+           untouched; no inner wrapper <div> needed. */
         --content-max:3200px;
         --gutter:max(2.5rem, calc((100% - var(--content-max)) / 2));
         --D:'Space Grotesk',sans-serif;--B:'Inter',sans-serif;
