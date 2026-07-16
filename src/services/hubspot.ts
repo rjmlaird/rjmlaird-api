@@ -1,8 +1,3 @@
-/**
- * HubSpot CRM integration service using the stable Engagement API for meetings
- * and the CRM Objects API for contacts.
- */
-
 export interface CalBookingData {
   email: string;
   firstname?: string;
@@ -10,12 +5,6 @@ export interface CalBookingData {
   phone?: string;
   company?: string;
 }
-
-// Helper to remove empty/null values to avoid "Property is null" validation errors
-const cleanObject = <T extends Record<string, any>>(obj: T): Partial<T> =>
-  Object.fromEntries(
-    Object.entries(obj).filter(([, v]) => v !== undefined && v !== null && v !== "")
-  ) as Partial<T>;
 
 async function hubspotFetch<T>(env: Env, path: string, init: RequestInit): Promise<T> {
   const res = await fetch(`https://api.hubapi.com${path}`, {
@@ -36,13 +25,13 @@ async function hubspotFetch<T>(env: Env, path: string, init: RequestInit): Promi
 }
 
 export async function upsertContact(env: Env, booking: CalBookingData) {
-  const properties = cleanObject({
+  const properties = {
     email: booking.email,
     firstname: booking.firstname,
     lastname: booking.lastname,
     phone: booking.phone,
     company: booking.company,
-  });
+  };
 
   const response = await hubspotFetch<{ results?: Array<{ id: string }> }>(
     env,
@@ -67,7 +56,6 @@ export async function createMeeting(env: Env, input: {
     engagement: {
       type: "MEETING",
       active: true,
-      // Removed ownerId entirely to prevent invalid ID assignment
     },
     associations: {
       contactIds: input.contactId ? [parseInt(input.contactId, 10)] : [],
