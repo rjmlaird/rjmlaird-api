@@ -1,7 +1,23 @@
 import { Hono } from "hono";
 import { json } from "../lib/jsonResponse";
+import { z } from "zod";
 
-import socials from "../data/socials.json";
+// Import local data
+import socialsData from "../data/socials.json";
+
+// Define the social schema for validation
+export const socialSchema = z.object({
+  key: z.string(),
+  name: z.string(),
+  url: z.url(),
+  icon: z.string(),
+  label: z.string(),
+  username: z.string(),
+  type: z.string(),
+});
+
+// Validate the imported JSON data
+const socials = z.array(socialSchema).parse(socialsData);
 
 export type ContactCollection = "socials";
 
@@ -19,7 +35,7 @@ const isCollection = (value: string): value is ContactCollection =>
 app.get("/", (c) =>
   json({
     service: "contact",
-    version: "1.0",
+    version: "1.1",
     sections: SECTION_KEYS,
     endpoints: [
       "/v1/contact",
