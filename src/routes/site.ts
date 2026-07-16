@@ -2,14 +2,12 @@ import { Hono } from "hono";
 
 export const site = new Hono();
 
-// Define the collections used for OpenAPI enum validation
 const cvCollections = [
   "awards", "certifications", "credly", "education", "experience",
   "languages", "memberships", "profile", "skills", "teaching",
   "tools", "volunteering",
 ] as const;
 
-// The OpenAPI Specification Object
 const openapiSpec = {
   openapi: "3.0.0",
   info: {
@@ -19,18 +17,12 @@ const openapiSpec = {
   },
   servers: [{ url: "/" }],
   paths: {
-    "/health": {
-      get: { summary: "Health check", responses: { "200": { description: "Healthy" } } },
-    },
-    "/openapi.json": {
-      get: { summary: "OpenAPI document", responses: { "200": { description: "OpenAPI JSON document" } } },
-    },
+    "/health": { get: { summary: "Health check", responses: { "200": { description: "Healthy" } } } },
+    "/openapi.json": { get: { summary: "OpenAPI document", responses: { "200": { description: "OpenAPI JSON document" } } } },
     "/api/{collection}": {
       get: {
         summary: "Get CV collection",
-        parameters: [
-          { name: "collection", in: "path", required: true, schema: { type: "string", enum: cvCollections } },
-        ],
+        parameters: [{ name: "collection", in: "path", required: true, schema: { type: "string", enum: cvCollections } }],
         responses: { "200": { description: "Collection data" }, "404": { description: "Collection not found" } },
       },
     },
@@ -54,19 +46,10 @@ const openapiSpec = {
   },
 };
 
-// Route: Serve the Spec
 site.get("/openapi.json", (c) => c.json(openapiSpec));
 
-// Route: Health Check
-site.get("/health", (c) =>
-  c.json({
-    status: "ok",
-    service: "rjmlaird-api",
-    timestamp: new Date().toISOString(),
-  })
-);
+site.get("/health", (c) => c.json({ status: "ok", service: "rjmlaird-api", timestamp: new Date().toISOString() }));
 
-// Route: Landing Page (Swagger UI)
 site.get("/", (c) => {
   return c.html(`<!doctype html>
 <html lang="en">
@@ -74,17 +57,34 @@ site.get("/", (c) => {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>rjmlaird API</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.17.14/swagger-ui.css" />
+    <style>
+      :root {
+        --ink:#0B0F1A; --card:#141B29; --lift:#1A2236; --w:#EDEAE3; 
+        --m:#7C8AA4; --sky:#38BDF8; --bd:rgba(255,255,255,.07); --B:'Inter',sans-serif;
+      }
+      body { margin: 0; font-family: var(--B); background: var(--ink); color: var(--w); }
+      .wrap { max-width: 960px; margin: auto; padding: 48px 20px; }
+      
+      /* Theme Integration */
+      .swagger-ui { background: transparent !important; color: var(--w) !important; }
+      .swagger-ui .info .title, .swagger-ui .opblock-summary-path, .swagger-ui label { color: var(--w) !important; }
+      .swagger-ui .opblock { background: var(--card) !important; border: 1px solid var(--bd) !important; }
+      .swagger-ui .opblock-summary-method { background: var(--sky) !important; color: var(--ink) !important; font-weight: bold; }
+      .swagger-ui .btn.execute { background: var(--sky) !important; color: var(--ink) !important; }
+      .swagger-ui .btn { background: var(--lift) !important; color: var(--w) !important; border: 1px solid var(--bd) !important; }
+      .swagger-ui .markdown p, .swagger-ui .renderedMarkdown { color: var(--m) !important; }
+    </style>
   </head>
   <body>
-    <div id="swagger-ui"></div>
+    <div class="wrap"><div id="swagger-ui"></div></div>
     <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.17.14/swagger-ui-bundle.js"></script>
     <script>
       window.ui = SwaggerUIBundle({
         url: "/openapi.json",
         dom_id: "#swagger-ui",
-        layout: "BaseLayout",
+        deepLinking: true,
+        presets: [SwaggerUIBundle.presets.apis],
       });
     </script>
   </body>

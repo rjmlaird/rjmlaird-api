@@ -17,7 +17,13 @@ import { site } from "./routes/site";
 const app = new Hono<{ Bindings: Env }>();
 
 // Serve favicon as a static asset
-app.use("/favicon.svg", serveStatic({ path: "./public/favicon.svg" }));
+app.get("/favicon.svg", async (c) => {
+  const object = await c.env.CDN.get("favicon.svg");
+  if (!object) return c.notFound();
+  
+  c.header("Content-Type", "image/svg+xml");
+  return c.body(object.body);
+});
 
 // Route mounting
 app.route("/system", system);
