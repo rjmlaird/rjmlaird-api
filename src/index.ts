@@ -1,7 +1,6 @@
 import { Hono } from "hono";
 import { json } from "./lib/jsonResponse";
 
-// Routes
 import system from "./routes/system";
 import debug from "./routes/debug";
 import webdav from "./routes/webdav";
@@ -12,10 +11,7 @@ import contact from "./routes/contact";
 import activities from "./routes/activities";
 import general from "./routes/general";
 import { aiApp } from "./routes/ai";
-import cdn from "./routes/cdn";
-import webhooks from "./routes/webhooks";
 
-// Data
 import awards from "./data/awards.json";
 import certifications from "./data/certifications.json";
 import credly from "./data/credly.json";
@@ -32,14 +28,33 @@ import volunteering from "./data/volunteering.json";
 const app = new Hono<{ Bindings: Env }>();
 
 const cvData = {
-  awards, certifications, credly, education, experience, 
-  languages, memberships, profile, skills, teaching, tools, volunteering,
+  awards,
+  certifications,
+  credly,
+  education,
+  experience,
+  languages,
+  memberships,
+  profile,
+  skills,
+  teaching,
+  tools,
+  volunteering,
 } satisfies Record<string, unknown>;
 
-// Corrected: Explicit array literal fixes TS1355
 const cvCollections = [
-  "awards", "certifications", "credly", "education", "experience", 
-  "languages", "memberships", "profile", "skills", "teaching", "tools", "volunteering"
+  "awards",
+  "certifications",
+  "credly",
+  "education",
+  "experience",
+  "languages",
+  "memberships",
+  "profile",
+  "skills",
+  "teaching",
+  "tools",
+  "volunteering",
 ] as const;
 
 const openapiSpec = {
@@ -51,22 +66,180 @@ const openapiSpec = {
   },
   servers: [{ url: "/" }],
   paths: {
-    "/": { get: { summary: "API landing page", responses: { "200": { description: "Swagger UI landing page" } } } },
-    "/health": { get: { summary: "Health check", responses: { "200": { description: "Healthy" } } } },
-    "/openapi.json": { get: { summary: "OpenAPI document", responses: { "200": { description: "OpenAPI JSON document" } } } },
+    "/": {
+      get: {
+        summary: "API landing page",
+        responses: {
+          "200": {
+            description: "Swagger UI landing page",
+          },
+        },
+      },
+    },
+    "/health": {
+      get: {
+        summary: "Health check",
+        responses: {
+          "200": {
+            description: "Healthy",
+          },
+        },
+      },
+    },
+    "/openapi.json": {
+      get: {
+        summary: "OpenAPI document",
+        responses: {
+          "200": {
+            description: "OpenAPI JSON document",
+          },
+        },
+      },
+    },
     "/api/{collection}": {
       get: {
         summary: "Get CV collection",
-        parameters: [{ name: "collection", in: "path", required: true, schema: { type: "string", enum: cvCollections } }],
-        responses: { "200": { description: "Collection data" }, "404": { description: "Collection not found" } },
+        parameters: [
+          {
+            name: "collection",
+            in: "path",
+            required: true,
+            schema: {
+              type: "string",
+              enum: cvCollections,
+            },
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Collection data",
+          },
+          "404": {
+            description: "Collection not found",
+          },
+        },
       },
     },
-    // ... (Remaining OpenAPI paths)
+    "/v1/research": {
+      get: {
+        summary: "Research API",
+        responses: {
+          "200": { description: "OK" },
+        },
+      },
+    },
+    "/v1/cv": {
+      get: {
+        summary: "CV API",
+        responses: {
+          "200": { description: "OK" },
+        },
+      },
+    },
+    "/v1/portfolio": {
+      get: {
+        summary: "Portfolio API",
+        responses: {
+          "200": { description: "OK" },
+        },
+      },
+    },
+    "/v1/contact": {
+      post: {
+        summary: "Contact API",
+        responses: {
+          "200": { description: "OK" },
+        },
+      },
+    },
+    "/v1/activities": {
+      get: {
+        summary: "Activities API",
+        responses: {
+          "200": { description: "OK" },
+        },
+      },
+    },
+    "/v1/general": {
+      get: {
+        summary: "General API",
+        responses: {
+          "200": { description: "OK" },
+        },
+      },
+    },
+    "/v1/ai": {
+      post: {
+        summary: "AI endpoint",
+        responses: {
+          "200": { description: "OK" },
+        },
+      },
+    },
+    "/webdav": {
+      options: {
+        summary: "WebDAV options",
+        responses: {
+          "204": { description: "No Content" },
+        },
+      },
+      get: {
+        summary: "WebDAV get",
+        responses: {
+          "200": { description: "OK" },
+          "404": { description: "Not found" },
+        },
+      },
+      put: {
+        summary: "WebDAV put",
+        responses: {
+          "200": { description: "Updated" },
+          "201": { description: "Created" },
+        },
+      },
+      delete: {
+        summary: "WebDAV delete",
+        responses: {
+          "204": { description: "Deleted" },
+        },
+      },
+      propfind: {
+        summary: "WebDAV propfind",
+        responses: {
+          "207": { description: "Multi-Status" },
+        },
+      },
+      mkcol: {
+        summary: "WebDAV mkcol",
+        responses: {
+          "201": { description: "Collection created" },
+        },
+      },
+      lock: {
+        summary: "WebDAV lock",
+        responses: {
+          "200": { description: "Locked" },
+          "423": { description: "Locked" },
+        },
+      },
+      unlock: {
+        summary: "WebDAV unlock",
+        responses: {
+          "204": { description: "Unlocked" },
+        },
+      },
+    },
   },
 };
 
-// Routes
-app.get("/health", (c) => c.json({ status: "ok", service: "rjmlaird-api", timestamp: new Date().toISOString() }));
+app.get("/health", (c) =>
+  c.json({
+    status: "ok",
+    service: "rjmlaird-api",
+    timestamp: new Date().toISOString(),
+  })
+);
+
 app.route("/system", system);
 app.route("/debug", debug);
 app.route("/webdav", webdav);
@@ -77,24 +250,48 @@ app.route("/v1/contact", contact);
 app.route("/v1/activities", activities);
 app.route("/v1/general", general);
 app.route("/v1/ai", aiApp);
-app.route("/v1/webhooks", webhooks);
-app.route("/v1/cdn", cdn);
 
 app.get("/api/:collection", (c) => {
-  const collection = c.req.param("collection");
-  
-  // Type-safe inclusion check
-  if (!(cvCollections as readonly string[]).includes(collection)) {
-    // Corrected: Ensure json() is called with the data and status
+  const collection = c.req.param("collection") as (typeof cvCollections)[number];
+
+  if (!cvCollections.includes(collection)) {
     return json({ error: "Collection not found", collection, allowed: cvCollections }, 404);
   }
-  
-  return json(cvData[collection as keyof typeof cvData]);
+
+  return json(cvData[collection]);
 });
 
 app.get("/openapi.json", (c) => c.json(openapiSpec));
 
-app.get("/", (c) => c.html("<h1>rjmlaird API</h1>"));
+app.get("/", (c) =>
+  c.html(`<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="rjmlaird API" />
+    <title>rjmlaird API</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.17.14/swagger-ui.css" crossorigin="anonymous" />
+  </head>
+  <body>
+    <div id="swagger-ui"></div>
+    <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.17.14/swagger-ui-bundle.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.17.14/swagger-ui-standalone-preset.js" crossorigin="anonymous"></script>
+    <script>
+      window.ui = SwaggerUIBundle({
+        url: "/openapi.json",
+        dom_id: "#swagger-ui",
+        deepLinking: true,
+        layout: "BaseLayout",
+        docExpansion: "list",
+        filter: false,
+        displayRequestDuration: true,
+        presets: [SwaggerUIBundle.presets.apis],
+      });
+    </script>
+  </body>
+</html>`),
+);
 
 app.notFound((c) => c.text("Not found", 404));
 
