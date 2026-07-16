@@ -143,6 +143,7 @@
       "Established R&R Space Ltd as a key space-sector outreach initiative.",
       "Successfully converted passive digital interest into active industry engagement."
     ],
+   "projects": ["build4space"],
     "skills": [
       "Programme Development",
       "Outreach",
@@ -175,6 +176,7 @@
       "Delivered high-quality editorial and multimedia content for space-sector communications.",
       "Strengthened narrative and publishing workflows across digital platforms."
     ],
+    "projects": ["aeolus","bake-in-space","bepi-colombo","breezometer"],
     "skills": [
       "Editorial Leadership",
       "Multimedia Storytelling",
@@ -190,8 +192,8 @@
     "organisation": { "name": "Bloodhound SSC", "website": "https://www.bloodhoundlsr.com" },
     "role": "STEM Communicator",
     "employmentType": "Contract",
-    "startDate": "2005-09",
-    "endDate": "2009-07",
+    "startDate": "2014-08",
+    "endDate": "2015-07",
     "current": false,
     "city": "Bristol",
     "country": "United Kingdom",
@@ -206,6 +208,7 @@
       "Produced education resources widely used in outreach and classroom settings.",
       "Built early experience in STEM communication and public engagement."
     ],
+    "projects": ["bloodhound-blast"],
     "skills": [
       "STEM Communication",
       "Public Engagement",
