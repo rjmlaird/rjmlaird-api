@@ -1,33 +1,40 @@
 import { Hono } from "hono";
 import { json } from "../lib/jsonResponse";
 
+// Data imports
 import initiatives from "../data/initiatives.json";
 import reviews from "../data/reviews.json";
 import teaching from "../data/teaching.json";
-import projects from "../data/projects.json"; // 1. Import your projects data
+import projects from "../data/projects.json";
 import publicationsText from "../data/publications.txt";
 
-// 2. Add 'projects' to your collection type
-export type PortfolioCollection = "initiatives" | "reviews" | "teaching" | "research" | "projects";
+export type PortfolioCollection = 
+  | "initiatives" 
+  | "reviews" 
+  | "teaching" 
+  | "research" 
+  | "projects";
 
-// 3. Update the keys array
-const SECTION_KEYS = ["initiatives", "reviews", "teaching", "research", "projects"] as const satisfies readonly PortfolioCollection[];
+const SECTION_KEYS = [
+  "initiatives",
+  "reviews",
+  "teaching",
+  "research",
+  "projects",
+] as const satisfies readonly PortfolioCollection[];
 
 const portfolioData = {
   initiatives,
   reviews,
   teaching,
-  research: publicationsText,
-  projects, // 4. Add to the data map
+  research: publicationsText, // Kept as requested
+  projects,
 } satisfies Record<PortfolioCollection, unknown>;
 
 const app = new Hono<{ Bindings: Env }>();
 
 const isCollection = (value: string): value is PortfolioCollection =>
   (SECTION_KEYS as readonly string[]).includes(value);
-
-// ... (Your app.get routes remain functionally identical, 
-// they will now automatically handle 'projects' via the isCollection check)
 
 app.get("/", (c) =>
   json({
@@ -41,18 +48,9 @@ app.get("/", (c) =>
       "/v1/portfolio/full",
       "/v1/portfolio/section/:section",
       "/v1/portfolio/:collection",
+      "/v1/portfolio/project/:slug",
       "/v1/portfolio/search?q=",
-      "/v1/portfolio/publications.bib",
     ],
-  }),
-);
-
-app.get("/publications.bib", (c) =>
-  new Response(publicationsText, {
-    headers: {
-      "content-type": "text/plain; charset=utf-8",
-      "cache-control": "public, max-age=3600",
-    },
   }),
 );
 
@@ -69,6 +67,15 @@ app.get("/list", (c) =>
 );
 
 app.get("/full", (c) => json({ sections: portfolioData }));
+
+// Specific project lookup by slug
+app.get("/project/:slug", (c) => {
+  const slug = c.req.param("slug");
+  const project = (projects as any[]).find((p) => p.slug === slug);
+
+  if (!project) return json({ error: "Project not found", slug }, 404);
+  return json(project);
+});
 
 app.get("/search", (c) => {
   const q = c.req.query("q")?.trim().toLowerCase();
