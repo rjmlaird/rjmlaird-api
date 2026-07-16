@@ -78,6 +78,33 @@ app.route("/v1/general", general);
 app.route("/v1/ai", aiApp);
 
 // 5. API Collection Endpoints
+
+// Backward Compatibility: Legacy support for /api/:collection
+app.get("/api/:collection", (c) => {
+  const collectionKey = c.req.param("collection");
+
+  // Check CV Registry
+  if (collectionKey in cvData) {
+    return json(cvData[collectionKey as keyof typeof cvData]);
+  }
+
+  // Check Portfolio Registry
+  if (collectionKey in portfolioData) {
+    return json(portfolioData[collectionKey as keyof typeof portfolioData]);
+  }
+
+  return json(
+    {
+      error: "Collection not found",
+      received: collectionKey,
+      available_cv: Object.keys(cvData),
+      available_portfolio: Object.keys(portfolioData),
+    },
+    404
+  );
+});
+
+// Explicit Namespaced Endpoints
 app.get("/api/cv/:collection", (c) => {
   const collectionKey = c.req.param("collection") as keyof typeof cvData;
   if (collectionKey in cvData) return json(cvData[collectionKey]);
