@@ -28,6 +28,7 @@ import skills from "./data/skills.json";
 import teaching from "./data/teaching.json";
 import { tools } from "./data/tools";
 import volunteering from "./data/volunteering.json";
+import socials from "./data/socials.json"; // 1. Added Import
 
 // Portfolio Data imports
 import initiatives from "./data/initiatives.json";
@@ -37,10 +38,9 @@ import publicationsText from "./data/publications.txt";
 
 const app = new Hono<{ Bindings: Env }>();
 
-// 1. Logging Middleware
 app.use("*", logger());
 
-// 2. Centralized CV Data Registry
+// 2. Updated CV Data Registry
 const cvData = {
   awards,
   certifications,
@@ -54,9 +54,9 @@ const cvData = {
   teaching,
   tools,
   volunteering,
+  socials, // Added to registry
 } as const;
 
-// 3. Centralized Portfolio Data Registry
 const portfolioData = {
   initiatives,
   reviews,
@@ -65,7 +65,7 @@ const portfolioData = {
   projects,
 } as const;
 
-// 4. Mount Application Routes
+// 3. Mount Routes
 app.route("/system", system);
 app.route("/debug", debug);
 app.route("/webdav", webdav);
@@ -77,52 +77,32 @@ app.route("/v1/activities", activities);
 app.route("/v1/general", general);
 app.route("/v1/ai", aiApp);
 
-// 5. API Collection Endpoints
-
-// Backward Compatibility: Legacy support for /api/:collection
+// 4. API Endpoints
 app.get("/api/:collection", (c) => {
   const collectionKey = c.req.param("collection");
-
-  // Check CV Registry
-  if (collectionKey in cvData) {
-    return json(cvData[collectionKey as keyof typeof cvData]);
-  }
-
-  // Check Portfolio Registry
-  if (collectionKey in portfolioData) {
-    return json(portfolioData[collectionKey as keyof typeof portfolioData]);
-  }
-
-  return json(
-    {
-      error: "Collection not found",
-      received: collectionKey,
-      available_cv: Object.keys(cvData),
-      available_portfolio: Object.keys(portfolioData),
-    },
-    404
-  );
+  if (collectionKey in cvData) return json(cvData[collectionKey as keyof typeof cvData]);
+  if (collectionKey in portfolioData) return json(portfolioData[collectionKey as keyof typeof portfolioData]);
+  return json({ error: "Collection not found", received: collectionKey }, 404);
 });
 
-// Explicit Namespaced Endpoints
+// Explicit: GET /api/cv/socials
 app.get("/api/cv/:collection", (c) => {
   const collectionKey = c.req.param("collection") as keyof typeof cvData;
   if (collectionKey in cvData) return json(cvData[collectionKey]);
-  return json({ error: "CV collection not found", available: Object.keys(cvData) }, 404);
+  return json({ error: "CV collection not found" }, 404);
 });
+
+// Explicit: GET /api/socials (The shortcut you requested)
+app.get("/api/socials", (c) => json(socials));
 
 app.get("/api/portfolio/:collection", (c) => {
   const collectionKey = c.req.param("collection") as keyof typeof portfolioData;
   if (collectionKey in portfolioData) return json(portfolioData[collectionKey]);
-  return json({ error: "Portfolio collection not found", available: Object.keys(portfolioData) }, 404);
+  return json({ error: "Portfolio collection not found" }, 404);
 });
 
-// 6. Mount Site Router
 app.route("/", site);
 
-// 7. Catch-all
-app.notFound((c) => {
-  return c.text(`Route not found: ${c.req.path}`, 404);
-});
+app.notFound((c) => c.text(`Route not found: ${c.req.path}`, 404));
 
 export default app;
