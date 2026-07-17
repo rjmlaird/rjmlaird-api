@@ -1,4 +1,4 @@
-{
+export const toolsData = {
   "categories": [
     {
       "name": "Languages",
@@ -105,4 +105,4 @@
       ]
     }
   ]
-}
+} as const;
