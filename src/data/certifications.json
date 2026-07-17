@@ -1,6 +1,6 @@
 {
   "certifications": [
-    { "id": "ecodemy-certificate", "name": "Ecodemy Certificate of Completion", "cdnId": "f82b4a72-1bfc-44d3-8e7c-4f020d311dfd", "issuer": "Ecodemy", "type": "Industry Certification" },
+    { "id": "ecodemy-certificate", "name": "Climate Change", "cdnId": "f82b4a72-1bfc-44d3-8e7c-4f020d311dfd", "issuer": "Ecodemy", "type": "Industry Certification" },
     { "id": "20101125-epigeum", "name": "Career Planning in the Sciences", "cdnId": "e851d836-091a-414e-b5c3-f08cfac0728f", "issuer": "Epigeum", "type": "Industry Certification" },
     { "id": "research-project-management-cert-rl", "name": "Research Project Management", "cdnId": "ba1e5480-6341-4167-af5e-133e52606533", "issuer": "Epigeum", "type": "Industry Certification" },
     { "id": "ga4-cert", "name": "Google Analytics 4 Certification", "cdnId": "d3a30674-0c04-4611-b528-e79497619462", "issuer": "Google", "type": "Industry Certification" },
@@ -54,7 +54,7 @@
   },
   {
     "id": "space-awarenesss", 
-    "name": "Space Awarenesss", 
+    "name": "Space Education International Workshop", 
     "cdnId": "ec0ca461-f764-4bca-8470-8d1876db1ed6",
     "issuer": "Space Awareness", 
     "type": "Certificate"
@@ -68,7 +68,7 @@
   },    
   {
     "id": "mphys-uol-transcript", 
-    "name": "Physics with Astrophysics MPhys (Hons)", 
+    "name": "Physics with Astrophysics MPhys (Hons) - Transcript", 
     "cdnId": "181bd275-5d15-4cfa-bce7-48e59dd532b2",
     "issuer": "University of Leicester", 
     "type": "Transcript"
@@ -81,8 +81,8 @@
     "type": "Certificate"
   },
   {
-    "id": "u101-ou", 
-    "name": "U101",
+    "id": "design-thinking-ou", 
+    "name": "Design Thinking",
     "cdnId": "67890b7e-9de2-42d4-99c2-1bdcf672d696",
     "issuer": "Open University", 
     "type": "Certificate"

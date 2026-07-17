@@ -1,308 +1,36 @@
 [
-  {
-    "key": "github",
-    "name": "GitHub",
-    "url": "https://github.com/rjmlaird",
-    "icon": "github",
-    "label": "GitHub profile",
-    "username": "rjmlaird",
-    "type": "code"
-  },
-  {
-    "key": "gitlab",
-    "name": "GitLab",
-    "url": "https://gitlab.com/rjmlaird",
-    "icon": "gitlab",
-    "label": "GitLab profile",
-    "username": "rjmlaird",
-    "type": "code"
-  },
-  {
-    "key": "stackoverflow",
-    "name": "Stack Overflow",
-    "url": "https://stackoverflow.com/users/1234567/rjmlaird",
-    "icon": "stack-overflow",
-    "label": "Stack Overflow profile",
-    "username": "rjmlaird",
-    "type": "community"
-  },
-  {
-    "key": "linkedin",
-    "name": "LinkedIn",
-    "url": "https://www.linkedin.com/in/rjmlaird",
-    "icon": "linkedin",
-    "label": "LinkedIn profile",
-    "username": "rjmlaird",
-    "type": "professional"
-  },
-  {
-    "key": "x",
-    "name": "X",
-    "url": "https://x.com/rjmlaird",
-    "icon": "x",
-    "label": "X profile",
-    "username": "rjmlaird",
-    "type": "social"
-  },
-  {
-    "key": "twitter",
-    "name": "Twitter",
-    "url": "https://twitter.com/rjmlaird",
-    "icon": "twitter",
-    "label": "Twitter profile",
-    "username": "rjmlaird",
-    "type": "social"
-  },
-  {
-    "key": "bluesky",
-    "name": "Bluesky",
-    "url": "https://bsky.app/profile/rjmlaird.bsky.social",
-    "icon": "bluesky",
-    "label": "Bluesky profile",
-    "username": "rjmlaird.bsky.social",
-    "type": "social"
-  },
-  {
-    "key": "mastodon",
-    "name": "Mastodon",
-    "url": "https://mastodon.social/@rjmlaird",
-    "icon": "mastodon",
-    "label": "Mastodon profile",
-    "username": "@rjmlaird",
-    "type": "social"
-  },
-  {
-    "key": "instagram",
-    "name": "Instagram",
-    "url": "https://www.instagram.com/rjmlaird/",
-    "icon": "instagram",
-    "label": "Instagram profile",
-    "username": "rjmlaird",
-    "type": "social"
-  },
-  {
-    "key": "facebook",
-    "name": "Facebook",
-    "url": "https://www.facebook.com/rjmlaird",
-    "icon": "facebook",
-    "label": "Facebook profile",
-    "username": "rjmlaird",
-    "type": "social"
-  },
-  {
-    "key": "youtube",
-    "name": "YouTube",
-    "url": "https://www.youtube.com/@rjmlaird",
-    "icon": "youtube",
-    "label": "YouTube channel",
-    "username": "@rjmlaird",
-    "type": "video"
-  },
-  {
-    "key": "tiktok",
-    "name": "TikTok",
-    "url": "https://www.tiktok.com/@rjmlaird",
-    "icon": "tiktok",
-    "label": "TikTok profile",
-    "username": "@rjmlaird",
-    "type": "social"
-  },
-  {
-    "key": "twitch",
-    "name": "Twitch",
-    "url": "https://www.twitch.tv/rjmlaird",
-    "icon": "twitch",
-    "label": "Twitch channel",
-    "username": "rjmlaird",
-    "type": "streaming"
-  },
-  {
-    "key": "threads",
-    "name": "Threads",
-    "url": "https://www.threads.net/@rjmlaird",
-    "icon": "threads",
-    "label": "Threads profile",
-    "username": "@rjmlaird",
-    "type": "social"
-  },
-  {
-    "key": "reddit",
-    "name": "Reddit",
-    "url": "https://www.reddit.com/user/rjmlaird",
-    "icon": "reddit",
-    "label": "Reddit profile",
-    "username": "rjmlaird",
-    "type": "community"
-  },
-  {
-    "key": "discord",
-    "name": "Discord",
-    "url": "https://discord.com/users/your-user-id",
-    "icon": "discord",
-    "label": "Discord profile",
-    "username": "your-user-id",
-    "type": "community"
-  },
-  {
-    "key": "telegram",
-    "name": "Telegram",
-    "url": "https://t.me/rjmlaird",
-    "icon": "telegram",
-    "label": "Telegram profile",
-    "username": "@rjmlaird",
-    "type": "messaging"
-  },
-  {
-    "key": "whatsapp",
-    "name": "WhatsApp",
-    "url": "https://wa.me/441234567890",
-    "icon": "whatsapp",
-    "label": "WhatsApp chat",
-    "username": "+441234567890",
-    "type": "messaging"
-  },
-  {
-    "key": "signal",
-    "name": "Signal",
-    "url": "https://signal.me/#p/+441234567890",
-    "icon": "signal",
-    "label": "Signal contact",
-    "username": "+441234567890",
-    "type": "messaging"
-  },
-  {
-    "key": "medium",
-    "name": "Medium",
-    "url": "https://medium.com/@rjmlaird",
-    "icon": "medium",
-    "label": "Medium profile",
-    "username": "@rjmlaird",
-    "type": "writing"
-  },
-  {
-    "key": "devto",
-    "name": "DEV Community",
-    "url": "https://dev.to/rjmlaird",
-    "icon": "dev",
-    "label": "DEV profile",
-    "username": "rjmlaird",
-    "type": "writing"
-  },
-  {
-    "key": "substack",
-    "name": "Substack",
-    "url": "https://rjmlaird.substack.com",
-    "icon": "substack",
-    "label": "Substack publication",
-    "username": "rjmlaird",
-    "type": "writing"
-  },
-  {
-    "key": "codepen",
-    "name": "CodePen",
-    "url": "https://codepen.io/rjmlaird",
-    "icon": "codepen",
-    "label": "CodePen profile",
-    "username": "rjmlaird",
-    "type": "code"
-  },
-  {
-    "key": "behance",
-    "name": "Behance",
-    "url": "https://www.behance.net/rjmlaird",
-    "icon": "behance",
-    "label": "Behance profile",
-    "username": "rjmlaird",
-    "type": "portfolio"
-  },
-  {
-    "key": "dribbble",
-    "name": "Dribbble",
-    "url": "https://dribbble.com/rjmlaird",
-    "icon": "dribbble",
-    "label": "Dribbble profile",
-    "username": "rjmlaird",
-    "type": "portfolio"
-  },
-  {
-    "key": "pinterest",
-    "name": "Pinterest",
-    "url": "https://www.pinterest.com/rjmlaird",
-    "icon": "pinterest",
-    "label": "Pinterest profile",
-    "username": "rjmlaird",
-    "type": "social"
-  },
-  {
-    "key": "flickr",
-    "name": "Flickr",
-    "url": "https://www.flickr.com/photos/rjmlaird",
-    "icon": "flickr",
-    "label": "Flickr profile",
-    "username": "rjmlaird",
-    "type": "photo"
-  },
-  {
-    "key": "spotify",
-    "name": "Spotify",
-    "url": "https://open.spotify.com/user/rjmlaird",
-    "icon": "spotify",
-    "label": "Spotify profile",
-    "username": "rjmlaird",
-    "type": "music"
-  },
-  {
-    "key": "soundcloud",
-    "name": "SoundCloud",
-    "url": "https://soundcloud.com/rjmlaird",
-    "icon": "soundcloud",
-    "label": "SoundCloud profile",
-    "username": "rjmlaird",
-    "type": "music"
-  },
-  {
-    "key": "orcid",
-    "name": "ORCID",
-    "url": "https://orcid.org/0000-0000-0000-0000",
-    "icon": "orcid",
-    "label": "ORCID profile",
-    "username": "0000-0000-0000-0000",
-    "type": "academic"
-  },
-  {
-    "key": "googlescholar",
-    "name": "Google Scholar",
-    "url": "https://scholar.google.com/citations?user=XXXXXXXXXXX",
-    "icon": "google-scholar",
-    "label": "Google Scholar profile",
-    "username": "XXXXXXXXXXX",
-    "type": "academic"
-  },
-  {
-    "key": "researchgate",
-    "name": "ResearchGate",
-    "url": "https://www.researchgate.net/profile/Ryan_Laird",
-    "icon": "researchgate",
-    "label": "ResearchGate profile",
-    "username": "Ryan_Laird",
-    "type": "academic"
-  },
-  {
-    "key": "academia",
-    "name": "Academia.edu",
-    "url": "https://independent.academia.edu/YourName",
-    "icon": "academia",
-    "label": "Academia.edu profile",
-    "username": "YourName",
-    "type": "academic"
-  },
-  {
-    "key": "webofscience",
-    "name": "Web of Science",
-    "url": "https://www.webofscience.com/",
-    "icon": "web-of-science",
-    "label": "Web of Science profile",
-    "username": "rjmlaird",
-    "type": "academic"
-  }
+  { "key": "github", "name": "GitHub", "url": "https://github.com/rjmlaird", "icon": "github", "label": "GitHub profile", "username": "rjmlaird", "type": "code" },
+  { "key": "gitlab", "name": "GitLab", "url": "https://gitlab.com/rjmlaird", "icon": "gitlab", "label": "GitLab profile", "username": "rjmlaird", "type": "code" },
+  { "key": "stackoverflow", "name": "Stack Overflow", "url": "https://stackoverflow.com/users/1234567/rjmlaird", "icon": "stackoverflow", "label": "Stack Overflow profile", "username": "rjmlaird", "type": "community" },
+  { "key": "linkedin", "name": "LinkedIn", "url": "https://www.linkedin.com/in/rjmlaird", "icon": "linkedin", "label": "LinkedIn profile", "username": "rjmlaird", "type": "professional" },
+  { "key": "x", "name": "X", "url": "https://x.com/rjmlaird", "icon": "x", "label": "X profile", "username": "rjmlaird", "type": "social" },
+  { "key": "twitter", "name": "Twitter", "url": "https://twitter.com/rjmlaird", "icon": "twitter", "label": "Twitter profile", "username": "rjmlaird", "type": "social" },
+  { "key": "bluesky", "name": "Bluesky", "url": "https://bsky.app/profile/rjmlaird.bsky.social", "icon": "bluesky", "label": "Bluesky profile", "username": "rjmlaird.bsky.social", "type": "social" },
+  { "key": "mastodon", "name": "Mastodon", "url": "https://mastodon.social/@rjmlaird", "icon": "mastodon", "label": "Mastodon profile", "username": "@rjmlaird", "type": "social" },
+  { "key": "instagram", "name": "Instagram", "url": "https://www.instagram.com/rjmlaird/", "icon": "instagram", "label": "Instagram profile", "username": "rjmlaird", "type": "social" },
+  { "key": "facebook", "name": "Facebook", "url": "https://www.facebook.com/rjmlaird", "icon": "facebook", "label": "Facebook profile", "username": "rjmlaird", "type": "social" },
+  { "key": "youtube", "name": "YouTube", "url": "https://www.youtube.com/@rjmlaird", "icon": "youtube", "label": "YouTube channel", "username": "@rjmlaird", "type": "video" },
+  { "key": "tiktok", "name": "TikTok", "url": "https://www.tiktok.com/@rjmlaird", "icon": "tiktok", "label": "TikTok profile", "username": "@rjmlaird", "type": "social" },
+  { "key": "twitch", "name": "Twitch", "url": "https://www.twitch.tv/rjmlaird", "icon": "twitch", "label": "Twitch channel", "username": "rjmlaird", "type": "streaming" },
+  { "key": "threads", "name": "Threads", "url": "https://www.threads.net/@rjmlaird", "icon": "threads", "label": "Threads profile", "username": "@rjmlaird", "type": "social" },
+  { "key": "reddit", "name": "Reddit", "url": "https://www.reddit.com/user/rjmlaird", "icon": "reddit", "label": "Reddit profile", "username": "rjmlaird", "type": "community" },
+  { "key": "discord", "name": "Discord", "url": "https://discord.com/users/your-user-id", "icon": "discord", "label": "Discord profile", "username": "your-user-id", "type": "community" },
+  { "key": "telegram", "name": "Telegram", "url": "https://t.me/rjmlaird", "icon": "telegram", "label": "Telegram profile", "username": "@rjmlaird", "type": "messaging" },
+  { "key": "whatsapp", "name": "WhatsApp", "url": "https://wa.me/441234567890", "icon": "whatsapp", "label": "WhatsApp chat", "username": "+441234567890", "type": "messaging" },
+  { "key": "signal", "name": "Signal", "url": "https://signal.me/#p/+441234567890", "icon": "signal", "label": "Signal contact", "username": "+441234567890", "type": "messaging" },
+  { "key": "medium", "name": "Medium", "url": "https://medium.com/@rjmlaird", "icon": "medium", "label": "Medium profile", "username": "@rjmlaird", "type": "writing" },
+  { "key": "devto", "name": "DEV Community", "url": "https://dev.to/rjmlaird", "icon": "devdotto", "label": "DEV profile", "username": "rjmlaird", "type": "writing" },
+  { "key": "substack", "name": "Substack", "url": "https://rjmlaird.substack.com", "icon": "substack", "label": "Substack publication", "username": "rjmlaird", "type": "writing" },
+  { "key": "codepen", "name": "CodePen", "url": "https://codepen.io/rjmlaird", "icon": "codepen", "label": "CodePen profile", "username": "rjmlaird", "type": "code" },
+  { "key": "behance", "name": "Behance", "url": "https://www.behance.net/rjmlaird", "icon": "behance", "label": "Behance profile", "username": "rjmlaird", "type": "portfolio" },
+  { "key": "dribbble", "name": "Dribbble", "url": "https://dribbble.com/rjmlaird", "icon": "dribbble", "label": "Dribbble profile", "username": "rjmlaird", "type": "portfolio" },
+  { "key": "pinterest", "name": "Pinterest", "url": "https://www.pinterest.com/rjmlaird", "icon": "pinterest", "label": "Pinterest profile", "username": "rjmlaird", "type": "social" },
+  { "key": "flickr", "name": "Flickr", "url": "https://www.flickr.com/photos/rjmlaird", "icon": "flickr", "label": "Flickr profile", "username": "rjmlaird", "type": "photo" },
+  { "key": "spotify", "name": "Spotify", "url": "https://open.spotify.com/user/rjmlaird", "icon": "spotify", "label": "Spotify profile", "username": "rjmlaird", "type": "music" },
+  { "key": "soundcloud", "name": "SoundCloud", "url": "https://soundcloud.com/rjmlaird", "icon": "soundcloud", "label": "SoundCloud profile", "username": "rjmlaird", "type": "music" },
+  { "key": "orcid", "name": "ORCID", "url": "https://orcid.org/0000-0000-0000-0000", "icon": "orcid", "label": "ORCID profile", "username": "0000-0000-0000-0000", "type": "academic" },
+  { "key": "googlescholar", "name": "Google Scholar", "url": "https://scholar.google.com/citations?user=XXXXXXXXXXX", "icon": "googlescholar", "label": "Google Scholar profile", "username": "XXXXXXXXXXX", "type": "academic" },
+  { "key": "researchgate", "name": "ResearchGate", "url": "https://www.researchgate.net/profile/Ryan_Laird", "icon": "researchgate", "label": "ResearchGate profile", "username": "Ryan_Laird", "type": "academic" },
+  { "key": "academia", "name": "Academia.edu", "url": "https://independent.academia.edu/YourName", "icon": "academia", "label": "Academia.edu profile", "username": "YourName", "type": "academic" },
+  { "key": "webofscience", "name": "Web of Science", "url": "https://www.webofscience.com/", "icon": "webofscience", "label": "Web of Science profile", "username": "rjmlaird", "type": "academic" }
 ]
