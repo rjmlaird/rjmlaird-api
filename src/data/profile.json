@@ -30,6 +30,10 @@
   ],
   "portfolioLinks": [
     {
+      "label": "Professional Website",
+      "href": "https://rjmlaird.co.uk"
+    },
+    {
       "label": "Green Orbit Digital",
       "href": "https://greenorbit.space"
     },
@@ -44,25 +48,6 @@
     {
       "label": "Space for Neurodiversity",
       "href": "https://spaceforneurodiversity.org"
-    },
-    {
-      "label": "CV",
-      "href": "https://cv.rjmlaird.co.uk"
-    },
-    {
-      "label": "Dev",
-      "href": "https://dev.rjmlaird.co.uk"
-    }
-
-  ],
-  "contact": [
-    {
-      "label": "E-mail",
-      "href": "mailto:mail@rjmlaird.co.uk"
-    },
-    {
-      "label": "ORCID",
-      "href": "https://orcid.org/0000-0002-5992-684X"
     }
   ]
 }
