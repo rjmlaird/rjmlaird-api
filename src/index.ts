@@ -12,6 +12,8 @@ import portfolio from "./routes/portfolio";
 import contact from "./routes/contact";
 import activities from "./routes/activities";
 import general from "./routes/general";
+import cdn from "./routes/cdn";
+import webhooks from "./routes/webhooks";
 import { aiApp } from "./routes/ai";
 import { site } from "./routes/site";
 
@@ -76,6 +78,8 @@ app.route("/v1/contact", contact);
 app.route("/v1/activities", activities);
 app.route("/v1/general", general);
 app.route("/v1/ai", aiApp);
+app.route("/v1/cdn", cdn);
+app.route("/v1/webhooks", webhooks);
 
 // 4. API Endpoints
 app.get("/api/:collection", (c) => {

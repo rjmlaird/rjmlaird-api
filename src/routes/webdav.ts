@@ -1,7 +1,12 @@
 import { Hono } from "hono";
 import { storage } from "../services/storage";
 
-const webdav = new Hono<{ Bindings: Env }>();
+type WebdavEnv = Env & {
+  ZOTERO_WEBDAV_USER?: string;
+  ZOTERO_WEBDAV_PASS?: string;
+};
+
+const webdav = new Hono<{ Bindings: WebdavEnv }>();
 
 const BASE_PREFIX = "zotero";
 const MOUNT_PREFIX = "/webdav";
@@ -51,7 +56,7 @@ function xml(body: string, status: number, headers: Record<string, string> = {})
   });
 }
 
-function plain(body: string, status: number, headers: Record<string, string> = {}) {
+function plain(body: string | null, status: number, headers: Record<string, string> = {}) {
   return new Response(body, {
     status,
     headers: {
@@ -176,10 +181,73 @@ function parseLockToken(request: Request) {
   return token ? token.replace(/^<|>$/g, "").trim() : null;
 }
 
+/** Validates the Authorization header's Basic credentials against the
+ *  configured Zotero WebDAV username/password. Returns true only if both
+ *  are set and match exactly. */
+function checkBasicAuth(request: Request, env: WebdavEnv): boolean {
+  const header = request.headers.get("authorization") ?? "";
+  if (!header.startsWith("Basic ")) return false;
+
+  if (!env.ZOTERO_WEBDAV_USER || !env.ZOTERO_WEBDAV_PASS) return false;
+
+  try {
+    const decoded = atob(header.slice(6));
+    const separatorIndex = decoded.indexOf(":");
+    if (separatorIndex === -1) return false;
+
+    const user = decoded.slice(0, separatorIndex);
+    const pass = decoded.slice(separatorIndex + 1);
+    return user === env.ZOTERO_WEBDAV_USER && pass === env.ZOTERO_WEBDAV_PASS;
+  } catch {
+    return false;
+  }
+}
+
+/** Lists immediate children (files + one-level-deep subfolders) under a
+ *  collection key by scanning R2 keys with that prefix. */
+async function listChildren(
+  collectionKey: string,
+  env: WebdavEnv
+): Promise<Array<{ name: string; node: DavNode }>> {
+  const listPrefix = collectionKey === BASE_PREFIX ? `${BASE_PREFIX}/` : `${collectionKey}/`;
+  const raw = await storage.r2.list(listPrefix, env);
+  const items = listArray(raw);
+
+  const children = new Map<string, { name: string; node: DavNode }>();
+
+  for (const item of items) {
+    if (item.key.startsWith("locks/")) continue; // separate namespace, not part of the tree
+
+    const rest = item.key.slice(listPrefix.length);
+    if (!rest) continue;
+
+    const [first, ...remainder] = rest.split("/");
+    if (!first) continue;
+
+    const childKey = `${collectionKey === BASE_PREFIX ? BASE_PREFIX : collectionKey}/${first}`;
+
+    if (remainder.length > 0) {
+      // Nested deeper — first segment is a subfolder.
+      if (!children.has(first) || children.get(first)!.node.kind !== "collection") {
+        children.set(first, { name: first, node: { kind: "collection", key: childKey, etag: etagFor(childKey, 0) } });
+      }
+    } else if (first === ".folder") {
+      continue; // marker for the current collection itself, not a child
+    } else {
+      children.set(first, {
+        name: first,
+        node: { kind: "file", key: item.key, size: item.size ?? 0, contentType: item.contentType, etag: item.etag },
+      });
+    }
+  }
+
+  return Array.from(children.values());
+}
+
 webdav.all("*", async (c) => {
   const request = c.req.raw;
 
-  if (!request.headers.get("authorization")) {
+  if (!request.headers.get("authorization") || !checkBasicAuth(request, c.env)) {
     return new Response("Unauthorized", {
       status: 401,
       headers: {
@@ -207,7 +275,139 @@ webdav.all("*", async (c) => {
           "MS-Author-Via": "DAV",
         },
       });
-    // keep the rest as-is
+
+    case "HEAD":
+    case "GET": {
+      if (!current) return plain("Not Found", 404);
+      if (current.kind === "collection") {
+        return plain("Cannot GET a collection", 404);
+      }
+
+      const obj = await storage.r2.get(current.key, c.env);
+      if (!obj) return plain("Not Found", 404);
+
+      const headers: Record<string, string> = {
+        "Content-Type": current.contentType ?? "application/octet-stream",
+        "Content-Length": String(current.size),
+        ETag: current.etag ?? etagFor(current.key, current.size),
+      };
+
+      if (request.method === "HEAD") {
+        return plain(null, 200, headers);
+      }
+
+      return new Response(obj.body, { status: 200, headers: { DAV: DAV_HEADER, ...headers } });
+    }
+
+    case "PUT": {
+      if (root) return plain("Cannot PUT to root collection", 405);
+
+      const lock = await getLockRecord(key, c.env);
+      const requestToken = parseLockToken(request);
+      if (lock && lock.token !== requestToken) {
+        return plain("Locked", 423);
+      }
+
+      if (!(await parentExists(key, c.env))) {
+        return plain("Conflict: parent collection does not exist", 409);
+      }
+
+      const contentType = request.headers.get("content-type") ?? "application/octet-stream";
+      const body = await request.arrayBuffer();
+      await storage.r2.put(key, body, c.env, contentType);
+
+      return plain(null, current ? 204 : 201, {
+        ETag: etagFor(key, body.byteLength),
+      });
+    }
+
+    case "DELETE": {
+      if (root) return plain("Cannot DELETE root collection", 405);
+      if (!current) return plain("Not Found", 404);
+
+      const lock = await getLockRecord(key, c.env);
+      const requestToken = parseLockToken(request);
+      if (lock && lock.token !== requestToken) {
+        return plain("Locked", 423);
+      }
+
+      if (current.kind === "collection") {
+        const children = await listChildren(key, c.env);
+        for (const child of children) {
+          await storage.r2.del(child.node.key, c.env);
+        }
+        await storage.r2.del(`${key}/.folder`, c.env);
+      } else {
+        await storage.r2.del(key, c.env);
+      }
+
+      await deleteLockRecord(key, c.env);
+      return plain(null, 204);
+    }
+
+    case "MKCOL": {
+      if (current) return plain("Already exists", 405);
+      if (!(await parentExists(key, c.env))) {
+        return plain("Conflict: parent collection does not exist", 409);
+      }
+
+      await storage.r2.put(`${key}/.folder`, new Uint8Array(0), c.env, "application/x-directory");
+      return plain(null, 201);
+    }
+
+    case "PROPFIND": {
+      if (!current) return plain("Not Found", 404);
+
+      const depthHeader = request.headers.get("depth") ?? "1";
+      const depth = depthHeader === "0" ? 0 : 1; // "infinity" is not supported — treated as 1
+
+      const selfName = root ? "zotero" : key.slice(key.lastIndexOf("/") + 1);
+      const items = [propfindItem(current, pathname, selfName)];
+
+      if (depth === 1 && current.kind === "collection") {
+        const children = await listChildren(key, c.env);
+        for (const child of children) {
+          const childPath = root ? child.name : `${pathname}/${child.name}`;
+          items.push(propfindItem(child.node, childPath, child.name));
+        }
+      }
+
+      return xml(multistatus(items), 207);
+    }
+
+    case "LOCK": {
+      if (root) return plain("Cannot lock root collection", 405);
+
+      const existingLock = await getLockRecord(key, c.env);
+      if (existingLock) {
+        return plain("Locked", 423);
+      }
+
+      const token = `urn:uuid:${crypto.randomUUID()}`;
+      const record: LockRecord = {
+        token,
+        key,
+        expiresAt: Date.now() + LOCK_TIMEOUT_SECONDS * 1000,
+      };
+      await setLockRecord(record, c.env);
+
+      const lockBody = `<?xml version="1.0" encoding="utf-8"?>\n<d:prop xmlns:d="DAV:">\n  <d:lockdiscovery>\n    <d:activelock>\n      <d:locktype><d:write/></d:locktype>\n      <d:lockscope><d:exclusive/></d:lockscope>\n      <d:depth>0</d:depth>\n      <d:timeout>Second-${LOCK_TIMEOUT_SECONDS}</d:timeout>\n      <d:locktoken><d:href>${escapeXml(token)}</d:href></d:locktoken>\n    </d:activelock>\n  </d:lockdiscovery>\n</d:prop>`;
+
+      return xml(lockBody, 200, { "Lock-Token": `<${token}>` });
+    }
+
+    case "UNLOCK": {
+      const requestToken = parseLockToken(request);
+      const lock = await getLockRecord(key, c.env);
+
+      if (!lock || !requestToken || lock.token !== requestToken) {
+        return plain("Lock token mismatch", 409);
+      }
+
+      await deleteLockRecord(key, c.env);
+      return plain(null, 204);
+    }
+
     default:
       return new Response("Method not allowed", {
         status: 405,

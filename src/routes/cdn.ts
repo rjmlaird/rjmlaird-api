@@ -13,8 +13,19 @@ import { json } from "../lib/jsonResponse";
  *   curl https://api.rjmlaird.co.uk/v1/cdn/file/photos/photo.jpg -o photo.jpg
  *
  * GET is public/read-only, since CDN objects are meant to be linked to.
+ *
+ * NOTE: the `webhooks/` prefix is reserved for private data written by
+ * other routes (e.g. Cal.com booking records with attendee emails) and is
+ * blocked from public list/read/write here, even though it lives in the
+ * same bucket.
  */
 const app = new Hono<{ Bindings: Env }>();
+
+const PRIVATE_PREFIX = "webhooks/";
+
+function isPrivateKey(key: string) {
+  return key.startsWith(PRIVATE_PREFIX);
+}
 
 function requireAuth(c: { req: { header: (name: string) => string | undefined }; env: Env }) {
   const header = c.req.header("authorization") ?? "";
@@ -37,13 +48,19 @@ app.get("/", (c) =>
 
 app.get("/list", async (c) => {
   const prefix = c.req.query("prefix") ?? undefined;
+
+  if (prefix && isPrivateKey(prefix)) {
+    return json({ error: "Not found" }, 404);
+  }
+
   const result = await c.env.CDN.list({ prefix, limit: 1000 });
+  const visible = result.objects.filter((o) => !isPrivateKey(o.key));
 
   return json({
     prefix: prefix ?? null,
-    count: result.objects.length,
+    count: visible.length,
     truncated: result.truncated,
-    objects: result.objects.map((o) => ({
+    objects: visible.map((o) => ({
       key: o.key,
       size: o.size,
       etag: o.etag,
@@ -56,6 +73,7 @@ app.get("/list", async (c) => {
 app.get("/file/*", async (c) => {
   const key = c.req.path.replace(/^\/file\//, "");
   if (!key) return json({ error: "Missing key" }, 400);
+  if (isPrivateKey(key)) return json({ error: "Not found", key }, 404);
 
   const obj = await c.env.CDN.get(key);
   if (!obj) return json({ error: "Not found", key }, 404);
@@ -74,6 +92,7 @@ app.put("/file/*", async (c) => {
 
   const key = c.req.path.replace(/^\/file\//, "");
   if (!key) return json({ error: "Missing key" }, 400);
+  if (isPrivateKey(key)) return json({ error: "Reserved key prefix" }, 403);
 
   const contentType = c.req.header("content-type") ?? "application/octet-stream";
   await c.env.CDN.put(key, c.req.raw.body, {
@@ -88,6 +107,7 @@ app.delete("/file/*", async (c) => {
 
   const key = c.req.path.replace(/^\/file\//, "");
   if (!key) return json({ error: "Missing key" }, 400);
+  if (isPrivateKey(key)) return json({ error: "Reserved key prefix" }, 403);
 
   await c.env.CDN.delete(key);
   return json({ ok: true, key, deleted: true });
