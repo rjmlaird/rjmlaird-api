@@ -1,7 +1,7 @@
 [
   { "key": "github", "name": "GitHub", "url": "https://github.com/rjmlaird", "icon": "github", "label": "GitHub profile", "username": "rjmlaird", "type": "code", "color": "#181717" },
   { "key": "gitlab", "name": "GitLab", "url": "https://gitlab.com/rjmlaird", "icon": "gitlab", "label": "GitLab profile", "username": "rjmlaird", "type": "code", "color": "#FC6D26" },
-  { "key": "stackoverflow", "name": "Stack Overflow", "url": "https://stackoverflow.com/users/1234567/rjmlaird", "icon": "stackoverflow", "label": "Stack Overflow profile", "username": "rjmlaird", "type": "community", "color": "#F58025" },
+  { "key": "stackoverflow", "name": "Stack Overflow", "url": "https://stackoverflow.com/users/5563085/rjmlaird", "icon": "stackoverflow", "label": "Stack Overflow profile", "username": "rjmlaird", "type": "community", "color": "#F58025" },
   { "key": "linkedin", "name": "LinkedIn", "url": "https://www.linkedin.com/in/rjmlaird", "icon": "linkedin", "label": "LinkedIn profile", "username": "rjmlaird", "type": "professional", "color": "#0A66C2" },
   { "key": "x", "name": "X", "url": "https://x.com/rjmlaird", "icon": "x", "label": "X profile", "username": "rjmlaird", "type": "social", "color": "#000000" },
   { "key": "twitter", "name": "Twitter", "url": "https://twitter.com/rjmlaird", "icon": "twitter", "label": "Twitter profile", "username": "rjmlaird", "type": "social", "color": "#1DA1F2" },
@@ -14,10 +14,10 @@
   { "key": "twitch", "name": "Twitch", "url": "https://www.twitch.tv/rjmlaird", "icon": "twitch", "label": "Twitch channel", "username": "rjmlaird", "type": "streaming", "color": "#9146FF" },
   { "key": "threads", "name": "Threads", "url": "https://www.threads.net/@rjmlaird", "icon": "threads", "label": "Threads profile", "username": "@rjmlaird", "type": "social", "color": "#000000" },
   { "key": "reddit", "name": "Reddit", "url": "https://www.reddit.com/user/rjmlaird", "icon": "reddit", "label": "Reddit profile", "username": "rjmlaird", "type": "community", "color": "#FF4500" },
-  { "key": "discord", "name": "Discord", "url": "https://discord.com/users/your-user-id", "icon": "discord", "label": "Discord profile", "username": "your-user-id", "type": "community", "color": "#5865F2" },
+  { "key": "discord", "name": "Discord", "url": "https://discord.com/users/rjmlaird", "icon": "discord", "label": "Discord profile", "username": "your-user-id", "type": "community", "color": "#5865F2" },
   { "key": "telegram", "name": "Telegram", "url": "https://t.me/rjmlaird", "icon": "telegram", "label": "Telegram profile", "username": "@rjmlaird", "type": "messaging", "color": "#26A5E4" },
-  { "key": "whatsapp", "name": "WhatsApp", "url": "https://wa.me/441234567890", "icon": "whatsapp", "label": "WhatsApp chat", "username": "+441234567890", "type": "messaging", "color": "#25D366" },
-  { "key": "signal", "name": "Signal", "url": "https://signal.me/#p/+441234567890", "icon": "signal", "label": "Signal contact", "username": "+441234567890", "type": "messaging", "color": "#3A76F0" },
+  { "key": "whatsapp", "name": "WhatsApp", "url": "https://wa.me/447599423050", "icon": "whatsapp", "label": "WhatsApp chat", "username": "+441234567890", "type": "messaging", "color": "#25D366" },
+  { "key": "signal", "name": "Signal", "url": "https://signal.me/#p/+447599423050", "icon": "signal", "label": "Signal contact", "username": "+441234567890", "type": "messaging", "color": "#3A76F0" },
   { "key": "medium", "name": "Medium", "url": "https://medium.com/@rjmlaird", "icon": "medium", "label": "Medium profile", "username": "@rjmlaird", "type": "writing", "color": "#000000" },
   { "key": "devto", "name": "DEV Community", "url": "https://dev.to/rjmlaird", "icon": "devdotto", "label": "DEV profile", "username": "rjmlaird", "type": "writing", "color": "#0A0A0A" },
   { "key": "substack", "name": "Substack", "url": "https://rjmlaird.substack.com", "icon": "substack", "label": "Substack publication", "username": "rjmlaird", "type": "writing", "color": "#FF6719" },
@@ -28,9 +28,9 @@
   { "key": "flickr", "name": "Flickr", "url": "https://www.flickr.com/photos/rjmlaird", "icon": "flickr", "label": "Flickr profile", "username": "rjmlaird", "type": "photo", "color": "#0063DC" },
   { "key": "spotify", "name": "Spotify", "url": "https://open.spotify.com/user/rjmlaird", "icon": "spotify", "label": "Spotify profile", "username": "rjmlaird", "type": "music", "color": "#1DB954" },
   { "key": "soundcloud", "name": "SoundCloud", "url": "https://soundcloud.com/rjmlaird", "icon": "soundcloud", "label": "SoundCloud profile", "username": "rjmlaird", "type": "music", "color": "#FF3300" },
-  { "key": "orcid", "name": "ORCID", "url": "https://orcid.org/0000-0000-0000-0000", "icon": "orcid", "label": "ORCID profile", "username": "0000-0000-0000-0000", "type": "academic", "color": "#A6CE39" },
-  { "key": "googlescholar", "name": "Google Scholar", "url": "https://scholar.google.com/citations?user=XXXXXXXXXXX", "icon": "googlescholar", "label": "Google Scholar profile", "username": "XXXXXXXXXXX", "type": "academic", "color": "#4285F4" },
+  { "key": "orcid", "name": "ORCID", "url": "https://orcid.org/0000-0002-5992-684X", "icon": "orcid", "label": "ORCID profile", "username": "0000-0002-5992-684X", "type": "academic", "color": "#A6CE39" },
+  { "key": "googlescholar", "name": "Google Scholar", "url": "https://scholar.google.com/citations?user=v9lQktoAAAAJ&hl=en", "icon": "googlescholar", "label": "Google Scholar profile", "username": "v9lQktoAAAAJ", "type": "academic", "color": "#4285F4" },
   { "key": "researchgate", "name": "ResearchGate", "url": "https://www.researchgate.net/profile/Ryan_Laird", "icon": "researchgate", "label": "ResearchGate profile", "username": "Ryan_Laird", "type": "academic", "color": "#00CCBB" },
-  { "key": "academia", "name": "Academia.edu", "url": "https://independent.academia.edu/YourName", "icon": "academia", "label": "Academia.edu profile", "username": "YourName", "type": "academic", "color": "#1F4287" },
-  { "key": "webofscience", "name": "Web of Science", "url": "https://www.webofscience.com/", "icon": "webofscience", "label": "Web of Science profile", "username": "rjmlaird", "type": "academic", "color": "#005574" }
+  { "key": "academia", "name": "Academia.edu", "url": "https://isunet.academia.edu/rjmlaird", "icon": "academia", "label": "Academia.edu profile", "username": "rjmlaird", "type": "academic", "color": "#1F4287" },
+  { "key": "webofscience", "name": "Web of Science", "url": "https://www.webofscience.com/wos/author/record/K-3858-2017", "icon": "webofscience", "label": "Web of Science profile", "username": "K-3858-2017", "type": "academic", "color": "#005574" }
 ]
