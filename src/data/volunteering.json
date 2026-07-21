@@ -20,6 +20,25 @@
     "order": 1
   },
   {
+    "id": "vol-leicester-climate",
+    "organisation": "Climate Action Leicester and Leicestershire",
+    "role": "Organising Team",
+    "startDate": "2026-05",
+    "current": true,
+    "city": "Leicester",
+    "country": "United Kingdom",
+    "summary": "",
+    "responsibilities": [],
+    "achievements": [],
+    "skills": [],
+    "projects": [],
+    "relatedAwards": [],
+    "articles": [],
+    "talks": [],
+    "featured": false,
+    "order": 1
+  },
+  {
     "id": "vol-sgac-fusion-forum-2013",
     "organisation": "Space Generation Fusion Forum",
     "role": "Organising Team",
