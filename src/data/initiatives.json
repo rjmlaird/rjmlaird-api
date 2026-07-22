@@ -1,66 +1,200 @@
 [
   {
-    "icon": "◐",
-    "meta": "Trust · Transparency · Responsible practice",
+    "slug": "spaceup-live",
+    "id": 41,
+    "title": "SpaceUp Live",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "caseStudy": "spaceup",
+    "relatedExperience": [
+      "exp-rr-space"
+    ],
+    "content": "\n# \n",
+    "filePath": "src/content/initiatives/spaceup-live.md"
+  },
+  {
+    "slug": "spaceup-live",
+    "id": 41,
+    "title": "SpaceUp Live",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "caseStudy": "spaceup",
+    "relatedExperience": [
+      "exp-rr-space"
+    ],
+    "content": "\n# \n",
+    "filePath": "src/content/initiatives/spaceup-leicester.md"
+  },
+  {
+    "slug": "spaceintegrity",
+    "id": 41,
     "title": "Space Integrity Initiative",
-    "description": "A global framework strengthening trust, transparency, and responsible practice across the space sector.",
-    "points": [
-      "Sector-wide principles and guidance",
-      "Community of signatories and partners",
-      "Practical trust and governance tools",
-      "Collaborative standards and advocacy"
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
     ],
-    "status": "Global framework",
-    "cta": "Learn more →",
-    "link": "https://spaceintegrity.org",
-    "color": "var(--violet)"
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://spaceintegrity.org"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-green-orbit-founder"
+    ],
+    "content": "\n# \n\n",
+    "filePath": "src/content/initiatives/spaceintegrity.md"
   },
   {
-    "icon": "◐",
-    "meta": "Consulting · Strategy · Space sector growth",
-    "title": "R&R Space",
-    "description": "Strategic support for organisations working across the space sector, with a focus on growth, positioning, and impact.",
-    "points": [
-      "Space-sector strategy and advisory",
-      "Partnership and market development",
-      "Communications and positioning",
-      "Project and initiative support"
-    ],
-    "status": "Advisory partner",
-    "cta": "Explore services →",
-    "link": "/contact",
-    "color": "var(--cyan)"
-  },
-  {
-    "icon": "◐",
-    "meta": "Innovation · Sustainability · Applications",
-    "title": "Powering Space",
-    "description": "A platform focused on enabling practical space applications that support sustainability, innovation, and real-world outcomes.",
-    "points": [
-      "Applied space innovation",
-      "Sustainability-focused initiatives",
-      "Cross-sector collaboration",
-      "Impact-led storytelling"
-    ],
-    "status": "Active initiative",
-    "cta": "Discover more →",
-    "link": "/contact",
-    "color": "var(--blue)"
-  },
-  {
-    "icon": "◐",
-    "meta": "Community · Policy · Impact",
+    "slug": "spaceimpactforum",
+    "id": 41,
     "title": "Space Impact Forum",
-    "description": "A convening platform for responsible innovation, bringing together industry, policy, and civil society around sustainable space.",
-    "points": [
-      "Panels, roundtables, and workshops",
-      "Responsible space and sustainability",
-      "Cross-sector networking",
-      "Actionable policy and practice"
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
     ],
-    "status": "Annual forum",
-    "cta": "Join the forum →",
-    "link": "https://spaceimpactforum.com",
-    "color": "var(--green)"
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://spaceimpactforum.com"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-green-orbit-founder"
+    ],
+    "content": "",
+    "filePath": "src/content/initiatives/spaceimpactforum.md"
+  },
+  {
+    "slug": "leicesterspaceweek",
+    "id": 41,
+    "title": "Leicester Space Week",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "live": "https://leicesterspaceweek.com"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-green-orbit-founder"
+    ],
+    "content": "# \n\n",
+    "filePath": "src/content/initiatives/spaceforneurodiversity.md"
+  },
+  {
+    "slug": "leicesterspaceweek",
+    "id": 41,
+    "title": "Leicester Space Week",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2026-07-01T00:00:00.000Z",
+    "tools_tech": [
+      "TypeScript",
+      "Astro",
+      "Zod"
+    ],
+    "features": [
+      "Feature one",
+      "Feature two"
+    ],
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "live": "https://leicesterspaceweek.com"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-green-orbit-founder"
+    ],
+    "content": "# \n\n",
+    "filePath": "src/content/initiatives/leicesterspaceweek.md"
   }
 ]

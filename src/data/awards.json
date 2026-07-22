@@ -18,7 +18,20 @@
       ],
       "relatedExperience": ["exp-rr-space"]
     },
-
+    {
+      "id": "awards-innospace-masters-2017",
+      "title": "ESA BIC Startup Challenge 2017 winner",
+      "issuer": "INNOspace Masters",
+      "year": 2019,
+      "type": "speaker invitation",
+      "keywords": [
+        "bakeinspace",
+        "innospace",
+        "esa",
+        "esa-bic"
+      ],
+      "relatedExperience": ["exp-design-and-data"]
+    },
     {
       "id": "awards-excellence-2017-esa",
       "title": "Award of Excellence",

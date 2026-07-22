@@ -1,0 +1,2191 @@
+{
+  "projects": [
+    {
+      "slug": "woodland-qedjw",
+      "id": 41,
+      "title": "QEDJW",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "tags": [
+        "woodland-trust",
+        "web",
+        "example"
+      ],
+      "links": {
+        "github": "https://github.com/yourname/example-project",
+        "web": "https://www.woodlandtrust.org.uk"
+      },
+      "impact": {},
+      "relatedVolunteering": [
+        "vol-woodland-trust"
+      ],
+      "content": "",
+      "filePath": "src/content/projects/woodland-qedjw.md"
+    },
+    {
+      "slug": "windy",
+      "id": 4,
+      "title": "Windy",
+      "featured": true,
+      "draft": false,
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "tags": [
+        "CAMS",
+        "C3S",
+        "Copernicus"
+      ],
+      "links": {
+        "github": "https://github.com/yourname/example-project"
+      },
+      "impact": {},
+      "caseStudy": "European State of the Climate",
+      "client": "ECMWF",
+      "relatedExperience": [
+        "exp-design-and-data"
+      ],
+      "content": "",
+      "filePath": "src/content/projects/windy.md"
+    },
+    {
+      "slug": "white-dwarves",
+      "id": 41,
+      "title": "White dwarves",
+      "featured": true,
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "web": "https://le.ac.uk"
+      },
+      "impact": {},
+      "institution": "University of Leicester",
+      "relatedExperience": [
+        "exp-uol-research-2008"
+      ],
+      "content": "",
+      "filePath": "src/content/projects/white-dwarves.md"
+    },
+    {
+      "slug": "vortex",
+      "id": 41,
+      "title": "Vortex",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "github": "https://github.com/yourname/example-project",
+        "live": "https://example.com"
+      },
+      "impact": {},
+      "caseStudy": "ESOTC",
+      "relatedExperience": [
+        "exp-design-and-data"
+      ],
+      "content": "",
+      "filePath": "src/content/projects/vortex.md"
+    },
+    {
+      "slug": "vega",
+      "id": 41,
+      "title": "Vega",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "youtubeId": "dO6a3EtuF3U",
+      "links": {
+        "web": "https://example.com",
+        "youtube": "https://youtu.be/dO6a3EtuF3U?is=1lUkQiCHpXe-Cp-t"
+      },
+      "impact": {},
+      "caseStudy": "ESA Material Labs",
+      "client": "European Space Agency",
+      "relatedExperience": [
+        "exp-design-and-data"
+      ],
+      "content": "\n\n# \n\n",
+      "filePath": "src/content/projects/vega.md"
+    },
+    {
+      "slug": "ukspace-startup",
+      "id": 2,
+      "title": "UKspace Startup working group",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "ukspace",
+        "startups",
+        "entrepreneurship"
+      ],
+      "links": {
+        "web": "https://ukspace.org"
+      },
+      "impact": {},
+      "client": "UKspace",
+      "relatedExperience": [
+        "vol-ukspace-startup"
+      ],
+      "content": "\n# ",
+      "filePath": "src/content/projects/ukspace-startup.md"
+    },
+    {
+      "slug": "ukseds-charity",
+      "id": 3,
+      "title": "UKSEDS charity status",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "tags": [
+        "charity",
+        "trustee",
+        "example"
+      ],
+      "links": {
+        "web": "https://ukseds.org"
+      },
+      "impact": {},
+      "relatedVolunteering": [
+        "vol-ukseds-trustee",
+        "vol-ukseds-vc",
+        "vol-ukseds-secretary"
+      ],
+      "content": "",
+      "filePath": "src/content/projects/ukseds-charity.md"
+    },
+    {
+      "slug": "tp-ambient",
+      "id": 41,
+      "title": "TP Ambient",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "github": "https://github.com/yourname/example-project",
+        "web": "https://example.com"
+      },
+      "impact": {},
+      "relatedEducation": [
+        "edu-isu-ssp"
+      ],
+      "content": "# Ambient\n",
+      "filePath": "src/content/projects/tp-ambient.md"
+    },
+    {
+      "slug": "telescope-astrosoc",
+      "id": 41,
+      "title": "Telescope Coordinator - Astrosoc",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "github": "https://github.com/yourname/example-project",
+        "live": "https://example.com"
+      },
+      "impact": {},
+      "content": "\n# Telescope Coordinator\n\nOrganisations: University of Leicester Astrosoc (https://app.notion.com/p/University-of-Leicester-Astrosoc-3813a96540ad80ffbe73c4394909321c?pvs=21)",
+      "filePath": "src/content/projects/telescope-astrosoc.md"
+    },
+    {
+      "slug": "spaceupleics2019",
+      "id": 41,
+      "title": "SpaceUp Leicester 2019",
+      "featured": false,
+      "draft": false,
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "github": "https://github.com/yourname/example-project",
+        "live": "https://example.com"
+      },
+      "impact": {},
+      "caseStudy": "spaceup",
+      "relatedExperience": [
+        "exp-rr-space"
+      ],
+      "content": "",
+      "filePath": "src/content/projects/spaceupleics2019.md"
+    },
+    {
+      "slug": "spaceupleics2018",
+      "id": 41,
+      "title": "SpaceUp Leicester 2018",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "github": "https://github.com/yourname/example-project",
+        "live": "https://spaceupleicester.org.uk"
+      },
+      "impact": {},
+      "relatedExperience": [
+        "exp-rr-space"
+      ],
+      "content": "",
+      "filePath": "src/content/projects/spaceupleics2018.md"
+    },
+    {
+      "slug": "spaceoneers",
+      "id": 41,
+      "title": "Spaceoneers",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "live": "https://spaceoneers.io"
+      },
+      "impact": {},
+      "caseStudies": "spaceoneers",
+      "relatedExperience": [
+        "exp-design-and-data"
+      ],
+      "content": "\n# \n\nArticles: Spaceoneers (https://app.notion.com/p/Spaceoneers-3803a96540ad80549535df4e398304a4?pvs=21)\n",
+      "filePath": "src/content/projects/spaceoneers.md"
+    },
+    {
+      "slug": "sgac-asteroid",
+      "id": 41,
+      "title": "SGAC Find An Asteroid Search Campaign",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "sgac",
+        "asteroid",
+        "example"
+      ],
+      "links": {
+        "github": "https://github.com/yourname/example-project",
+        "live": "https://example.com"
+      },
+      "impact": {},
+      "relatedVolunteering": [
+        "vol-sgac-asteroid-search"
+      ],
+      "content": "\n",
+      "filePath": "src/content/projects/sgac-asteroid.md"
+    },
+    {
+      "slug": "seppcon",
+      "id": 41,
+      "title": "SEPPCoN",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "astronomy",
+        "astrophysics",
+        "phd"
+      ],
+      "links": {
+        "github": "https://github.com/yourname/example-project",
+        "live": "https://example.com"
+      },
+      "impact": {},
+      "relatedEducation": [
+        "edu-kent-astronomy"
+      ],
+      "content": "\n# ",
+      "filePath": "src/content/projects/seppcon.md"
+    },
+    {
+      "slug": "rosetta-strato",
+      "id": 41,
+      "title": "Rosetta Strato Campaign",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "github": "https://github.com/yourname/example-project",
+        "live": "https://example.com"
+      },
+      "impact": {},
+      "client": "European Space Agency",
+      "caseStudy": "Rosetta Philae",
+      "relatedExperience": [
+        "exp-design-and-data"
+      ],
+      "content": "\n# \n\n[https://youtu.be/iYaFGL7dEBk?is=aYOy039ug9GnuNcj](https://youtu.be/iYaFGL7dEBk?is=aYOy039ug9GnuNcj)",
+      "filePath": "src/content/projects/rosetta-strato.md"
+    },
+    {
+      "slug": "rosetta-shop",
+      "id": 41,
+      "title": "Rosetta Shop",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "github": "https://github.com/yourname/example-project",
+        "live": "https://rosettashop.eu"
+      },
+      "impact": {},
+      "client": "European Space Agency",
+      "caseStudy": "Rosetta Philae",
+      "relatedExperience": [
+        "exp-design-and-data"
+      ],
+      "content": "\n# \n",
+      "filePath": "src/content/projects/rosetta-shop.md"
+    },
+    {
+      "slug": "rosetta-philae-animations",
+      "id": 41,
+      "title": "Rosetta & Philae animations",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "github": "https://github.com/yourname/example-project",
+        "live": "https://example.com"
+      },
+      "impact": {},
+      "client": "European Space Agency",
+      "caseStudy": "Rosetta Philae",
+      "relatedExperience": [
+        "exp-design-and-data"
+      ],
+      "content": "\n\n# \n",
+      "filePath": "src/content/projects/rosetta-philae-animations.md"
+    },
+    {
+      "slug": "riga-airtext",
+      "id": 41,
+      "title": "Riga Airtext",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "github": "https://github.com/yourname/example-project",
+        "live": "https://example.com"
+      },
+      "impact": {},
+      "caseStudy": "ESOTC",
+      "client": "ECMWF",
+      "relatedExperience": [
+        "exp-design-and-data"
+      ],
+      "content": "\n# \n\nCase studies: European State of the Climate  (https://app.notion.com/p/European-State-of-the-Climate-3813a96540ad80b9b474e68a4ee37de5?pvs=21)\nOrganisations: Design & Data GmbH (https://app.notion.com/p/Design-Data-GmbH-37b3a96540ad80fa8598ebd7f766d9db?pvs=21)",
+      "filePath": "src/content/projects/riga-airtext.md"
+    },
+    {
+      "slug": "point-iot-mooc",
+      "id": 41,
+      "title": "Point.IOT.MOOC",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "github": "https://github.com/yourname/example-project",
+        "web": "https://example.com"
+      },
+      "impact": {},
+      "client": "SpaceTec Partners",
+      "relatedExperience": [
+        "exp-design-and-data"
+      ],
+      "content": "\n# \n",
+      "filePath": "src/content/projects/point-iot-mooc.md"
+    },
+    {
+      "slug": "plume",
+      "id": 41,
+      "title": "PLUME (Picosatellite of Leicester University Micrometeoroid Experiment)",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "github": "https://github.com/yourname/example-project",
+        "web": "https://example.com"
+      },
+      "impact": {},
+      "relatedEducation": [
+        "edu-leicester-mphys"
+      ],
+      "relatedVolunteering": [
+        "vol-plume-comms-officer"
+      ],
+      "content": "\n# \n",
+      "filePath": "src/content/projects/plume.md"
+    },
+    {
+      "slug": "phiweekbootcamp2019",
+      "id": 41,
+      "title": "PhiWeek Bootcamp 2019",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "youtubeId": "kbaoIb3s29s",
+      "links": {
+        "youtube": "https://youtu.be/kbaoIb3s29s?is=Q16BVec5UxT-VImz",
+        "live": "https://example.com"
+      },
+      "impact": {},
+      "caseStudy": "PhiWeek Bootcamp",
+      "client": "European Space Agency",
+      "relatedExperience": [
+        "exp-design-and-data"
+      ],
+      "sectors": [
+        "energy",
+        "earth observation"
+      ],
+      "content": "# \n\n",
+      "filePath": "src/content/projects/phiweekbootcamp2019.md"
+    },
+    {
+      "slug": "phiweekbootcamp2018",
+      "id": 41,
+      "title": "PhiWeek Bootcamp 2018",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "github": "https://github.com/yourname/example-project",
+        "live": "https://example.com"
+      },
+      "impact": {},
+      "caseStudy": "PhiWeek Bootcamp",
+      "client": "European Space Agency",
+      "relatedExperience": [
+        "exp-design-and-data"
+      ],
+      "content": "# \n\nCase studies: PhiWeek Bootcamp (https://app.notion.com/p/PhiWeek-Bootcamp-3813a96540ad80e29281f7c1046f685a?pvs=21)\n",
+      "filePath": "src/content/projects/phiweekbootcamp2018.md"
+    },
+    {
+      "slug": "pan-starrs",
+      "id": 41,
+      "title": "Pan-STARRS Asteroid Search Campaign",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "tags": [
+        "astronomy",
+        "pan-starrs",
+        "asteroids"
+      ],
+      "links": {
+        "web": "https://example.com"
+      },
+      "impact": {},
+      "relatedVolunteering": [
+        "vol-ukseds-asteroid-chasers"
+      ],
+      "content": "# \n",
+      "filePath": "src/content/projects/pan-starrs.md"
+    },
+    {
+      "slug": "oceanstatereport4",
+      "id": 41,
+      "title": "Ocean State Report 4",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "science policy"
+      ],
+      "youtubeId": "xlKmSGvqaFo",
+      "links": {
+        "web": "https://github.com/yourname/example-project",
+        "youtube": "https://youtu.be/xlKmSGvqaFo?is=CkpLT3PQgJK1UkrG"
+      },
+      "impact": {},
+      "Client": "Mercator Ocean",
+      "relatedExperience": [
+        "exp-design-and-data"
+      ],
+      "content": "# \n\n",
+      "filePath": "src/content/projects/oceanstatereport4.md"
+    },
+    {
+      "slug": "marketing-audit",
+      "id": 41,
+      "title": "Marketing audit",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "github": "https://github.com/yourname/example-project",
+        "live": "https://example.com"
+      },
+      "impact": {},
+      "client": "Climate Action Leicester and Leicestershire",
+      "relatedExperience": [
+        "exp-design-and-data"
+      ],
+      "sectors": [
+        "climate",
+        "energy",
+        "built environment"
+      ],
+      "content": "# \n",
+      "filePath": "src/content/projects/marketing-audit.md"
+    },
+    {
+      "slug": "lunch-and-learn",
+      "id": 41,
+      "title": "Lunch and Learn",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "web": "https://powering.space"
+      },
+      "impact": {},
+      "relatedExperience": [
+        "exp-powering-space"
+      ],
+      "content": "# \n",
+      "filePath": "src/content/projects/lunch-and-learn.md"
+    },
+    {
+      "slug": "lunar-exp-interactive-docu",
+      "id": 41,
+      "title": "Lunar Exploration Interactive Documentary",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "web": "https://lunarexploration.esa.int"
+      },
+      "impact": {},
+      "client": "European Space Agency",
+      "relatedExperience": [
+        "exp-design-and-data"
+      ],
+      "content": "# \n\nAwards : Award of Excellence - The Communicator Awards (https://app.notion.com/p/Award-of-Excellence-The-Communicator-Awards-3803a96540ad8024b927fce03692a86b?pvs=21)\n",
+      "filePath": "src/content/projects/lunar-exp-interactive-docu.md"
+    },
+    {
+      "slug": "living-with-space-40",
+      "id": 41,
+      "title": "Living with Space 4.0",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "youtubeId": "hpBKuqzYnKI",
+      "links": {
+        "web": "https://github.com/yourname/example-project",
+        "youtube": "https://youtu.be/hpBKuqzYnKI?is=pJmzZaCQNSYm1dOC"
+      },
+      "impact": {},
+      "client": "European Space Agency",
+      "relatedExperience": [
+        "exp-design-and-data"
+      ],
+      "content": "# \n",
+      "filePath": "src/content/projects/living-with-space-40.md"
+    },
+    {
+      "slug": "little-spaceoneers",
+      "id": 41,
+      "title": "Little Spaceoneers",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "web": "https://spaceoneers.io"
+      },
+      "impact": {},
+      "relatedExperience": [
+        "exp-design-and-data"
+      ],
+      "content": "# \n",
+      "filePath": "src/content/projects/little-spaceoneers.md"
+    },
+    {
+      "slug": "knex",
+      "id": 41,
+      "title": "K’nex",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "web": "https://bloodhoundssc.com"
+      },
+      "impact": {},
+      "relatedExperience": [
+        "exp-bloodhound-ssc"
+      ],
+      "content": "##\n",
+      "filePath": "src/content/projects/knex.md"
+    },
+    {
+      "slug": "innospaceweekend2017",
+      "id": 41,
+      "title": "InnoSpace Weekend 2017",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "youtubeId": "4DccpiuX9Xw",
+      "links": {
+        "web": "https://innospaceweekend.de",
+        "youtube": "https://youtu.be/4DccpiuX9Xw?is=uz0pkk9eU5Yykm0L"
+      },
+      "impact": {},
+      "client": "DLR",
+      "relatedExperience": [
+        "exp-design-and-data"
+      ],
+      "heroImage": "/images/projects/innospace-weekend.jpg",
+      "heroAlt": "INNOspace Weekend Logo",
+      "imageCredit": "DLR",
+      "sectors": [
+        "logistics",
+        "automotive",
+        "space"
+      ],
+      "content": "# \n\n\n[https://youtu.be/3ifypFNULlM?is=yCdpBEfI-y1RnP9z](https://youtu.be/3ifypFNULlM?is=yCdpBEfI-y1RnP9z)",
+      "filePath": "src/content/projects/innospaceweekend2017.md"
+    },
+    {
+      "slug": "impulse2021",
+      "id": 41,
+      "title": "Impulse 2021",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "web": "https://powering.space"
+      },
+      "impact": {},
+      "caseStudy": "Impulse",
+      "relatedExperience": [
+        "exp-powering-space"
+      ],
+      "content": "# \n",
+      "filePath": "src/content/projects/impulse2021.md"
+    },
+    {
+      "slug": "green-orbit-workshops",
+      "id": 41,
+      "title": "Green Orbit workshops",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "web": "https://greenorbit.academy"
+      },
+      "impact": {},
+      "relatedExperience": [
+        "exp-green-orbit-founder"
+      ],
+      "content": "# \n",
+      "filePath": "src/content/projects/green-orbit-workshops.md"
+    },
+    {
+      "slug": "gerb",
+      "id": 41,
+      "title": "Calibration of Geostationary Earth Radiation Budget (GERB)",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2008-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "IDL",
+        "Astro",
+        "Zod"
+      ],
+      "tags": [
+        "MSG",
+        "EUMETSAT",
+        "NCEO"
+      ],
+      "links": {
+        "web": "https://www.nceo.ac.uk/our-research/missions/gerb/"
+      },
+      "impact": {},
+      "client": "National Centre for Earth Observation",
+      "heroImage": "/images/projects/gerb.jpg",
+      "heroAlt": "GERB aboard MSG",
+      "imageCredit": "NCEO",
+      "relatedExperience": [
+        "exp-uol-gerb"
+      ],
+      "content": "## Overview\n\nThe Geostationary Earth Radiation Budget (GERB) instruments, originally developed using funding from ESA and NERC, and now supported by EUMETSAT, are unique in providing dedicated measurements of the Earth’s Radiation Budget (ERB) from geostationary orbit.  ",
+      "filePath": "src/content/projects/gerb.md"
+    },
+    {
+      "slug": "gaia",
+      "id": 41,
+      "title": "Gaia",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "tags": [
+        "ESA",
+        "Gaia",
+        "example"
+      ],
+      "youtubeId": "9EB_h6RX0EA",
+      "links": {
+        "youtube": "https://youtu.be/9EB_h6RX0EA?is=iXPLuG-XC0bQCJyQ",
+        "web": "https://example.com"
+      },
+      "impact": {},
+      "caseStudy": "ESA Material Labs",
+      "client": "European Space Agency",
+      "relatedExperience": [
+        "exp-design-and-data"
+      ],
+      "content": "# \n",
+      "filePath": "src/content/projects/gaia.md"
+    },
+    {
+      "slug": "eumetsat-food",
+      "id": 41,
+      "title": "Eumetsat food security",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "youtubeId": "V1qxGUTaQlI?is",
+      "tags": [
+        "EUMETSAT",
+        "Africa",
+        "food-security"
+      ],
+      "links": {
+        "youtube": "https://youtu.be/V1qxGUTaQlI?is=--A0vkxekfABrEBc",
+        "web": "https://example.com"
+      },
+      "impact": {},
+      "caseStudy": "EUMETSAT in Africa",
+      "client": "EUMETSAT",
+      "relatedExperience": [
+        "exp-design-and-data"
+      ],
+      "content": "# \n",
+      "filePath": "src/content/projects/eumetsat-food.md"
+    },
+    {
+      "slug": "eumetsat-africa",
+      "id": 41,
+      "title": "Eumetsat Africa",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "web": "https://example.com"
+      },
+      "impact": {},
+      "caseStudy": "EUMETSAT in Africa",
+      "client": "EUMETSAT",
+      "relatedExperience": [
+        "exp-design-and-data"
+      ],
+      "content": "# \n",
+      "filePath": "src/content/projects/eumetsat-africa.md"
+    },
+    {
+      "slug": "esoultrahd",
+      "id": 41,
+      "title": "ESO Ultra HD Expedition",
+      "featured": true,
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "endDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "web": "https://www.hq.eso.org/public/announcements/ann14035/"
+      },
+      "impact": {},
+      "draft": false,
+      "caseStudy": "ESO Ultra HD",
+      "client": "European Southern Observatory",
+      "relatedExperience": [
+        "exp-eso-intern"
+      ],
+      "heroImage": "/images/projects/uhd_vixen_babak_2_cc.jpg",
+      "heroAlt": "High on the Chajnantor Plateau, some 5000 metres above sea level it can get extremely cold at the site of the Atacama Large Millimeter/submillimeter Array (ALMA). Babak Tafreshi, one of ESO's Photo Ambassadors and part of the ESO Ultra HD Expedition team is shown here capturing the cool cosmos.",
+      "imageCredit": "ESO/B. Tafreshi (twanight.org)",
+      "content": "\n# Heading \n\nText, blah blah blah",
+      "filePath": "src/content/projects/esoultrahd.md"
+    },
+    {
+      "slug": "esotc2018",
+      "id": 41,
+      "title": "European State of the Climate 2018",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "web": "https://example.com"
+      },
+      "impact": {},
+      "client": "ECMWF",
+      "relatedExperience": [
+        "exp-design-and-data"
+      ],
+      "sectors": [
+        "energy",
+        "climate",
+        "health"
+      ],
+      "content": "# \n",
+      "filePath": "src/content/projects/esotc2018.md"
+    },
+    {
+      "slug": "esocast66",
+      "id": 41,
+      "title": "ESOcast 66 - A Groundbreaking Event for the E-ELT",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "youtubeId": "ZA52tGuZH8FQhdgb",
+      "links": {
+        "web": "https://github.com/yourname/example-project",
+        "youtube": "https://youtu.be/YVUK8dtzGCs?si=ZA52tGuZH8FQhdgb"
+      },
+      "caseStudy": "ESOcast",
+      "impact": {},
+      "relatedExperience": [
+        "exp-eso-intern"
+      ],
+      "content": "# \n",
+      "filePath": "src/content/projects/esocast66.md"
+    },
+    {
+      "slug": "esocast65",
+      "id": 41,
+      "title": "ESOcast 65 - The Chilean Sky in Ultra High Definition",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "youtubeId": "LVAcfq7AV4k",
+      "links": {
+        "web": "https://github.com/yourname/example-project",
+        "youtube": "https://youtu.be/LVAcfq7AV4k?si=w3nQScWmpfhjtNDu"
+      },
+      "caseStudy": "ESOcast",
+      "impact": {},
+      "relatedExperience": [
+        "exp-eso-intern"
+      ],
+      "content": "# \n",
+      "filePath": "src/content/projects/esocast65.md"
+    },
+    {
+      "slug": "esocast64",
+      "id": 41,
+      "title": "ESOcast 64 - First Ring System Around Asteroid",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "youtubeId": "KUoNtEKaAsk",
+      "links": {
+        "web": "https://www.eso.org/public/announcements/ann14022/",
+        "youtube": "https://www.youtube.com/watch?v=KUoNtEKaAsk"
+      },
+      "caseStudy": "ESOcast",
+      "impact": {},
+      "relatedExperience": [
+        "exp-eso-intern"
+      ],
+      "heroImage": "https://cdn.eso.org/images/screen/ann14022a.jpg",
+      "heroAlt": "Screenshot of ESOcast 64: First Ring System Around Asteroid",
+      "imageCredit": "ESO",
+      "content": "# \n",
+      "filePath": "src/content/projects/esocast64.md"
+    },
+    {
+      "slug": "esa-industry-days",
+      "id": 41,
+      "title": "ESA Industry Days",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "web": "https://isd.esa.int"
+      },
+      "impact": {},
+      "relatedExperience": [
+        "exp-design-and-data"
+      ],
+      "content": "# \n",
+      "filePath": "src/content/projects/esa-industry-days.md"
+    },
+    {
+      "slug": "esa-hubble",
+      "id": 41,
+      "title": "ESA Hubble",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "web": "https://example.com"
+      },
+      "impact": {},
+      "client": "European Space Agency",
+      "relatedExperience": [
+        "exp-eso-intern"
+      ],
+      "content": "# ",
+      "filePath": "src/content/projects/esa-hubble.md"
+    },
+    {
+      "slug": "esa-green-dossier",
+      "id": 41,
+      "title": "Green dossier",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "web": "https://business.esa.int"
+      },
+      "impact": {},
+      "client": "European Space Agency",
+      "relatedExperience": [
+        "exp-he-space"
+      ],
+      "content": "\n# ",
+      "filePath": "src/content/projects/esa-green-dossier.md"
+    },
+    {
+      "slug": "esa-ba-webinars",
+      "id": 41,
+      "title": "ESA Business Applications Webinars",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "web": "https://business.esa.int"
+      },
+      "impact": {},
+      "client": "European Space Agency",
+      "relatedExperience": [
+        "exp-he-space"
+      ],
+      "content": "# \n",
+      "filePath": "src/content/projects/esa-ba-webinars.md"
+    },
+    {
+      "slug": "esa-ba-newsletter",
+      "id": 41,
+      "title": "ESA Business Applicarions newsletter",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "github": "https://github.com/yourname/example-project",
+        "live": "https://example.com"
+      },
+      "impact": {},
+      "relatedExperience": [
+        "exp-he-space"
+      ],
+      "content": "# \n",
+      "filePath": "src/content/projects/esa-ba-newsletter.md"
+    },
+    {
+      "slug": "discovair",
+      "id": 41,
+      "title": "Discovair",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "web": "https://github.com/yourname/example-project",
+        "youtube": "https://youtu.be/1r3QI88w4BI?is=6elRbvBmc2HJFfKH"
+      },
+      "impact": {},
+      "caseStudy": "ESOTC",
+      "client": "ECMWF",
+      "relatedExperience": [
+        "exp-design-and-data"
+      ],
+      "content": "#\n",
+      "filePath": "src/content/projects/discovair.md"
+    },
+    {
+      "slug": "desert-living",
+      "id": 41,
+      "title": "Desert Living",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "web": "https://bloodhoundssc.com"
+      },
+      "impact": {},
+      "relatedExperience": [
+        "exp-bloodhound-ssc"
+      ],
+      "content": "# \n",
+      "filePath": "src/content/projects/desert-living.md"
+    },
+    {
+      "slug": "copernicus-hackathon-leics",
+      "id": 41,
+      "title": "Copernicus Hackathon",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "web": "https://copernicus.le.ac.uk"
+      },
+      "impact": {},
+      "client": "University of Leicester",
+      "relatedExperience": [
+        "exp-freelance"
+      ],
+      "content": "# \n",
+      "filePath": "src/content/projects/copernicus-hackathon-leics.md"
+    },
+    {
+      "slug": "spaceforneurodiversity",
+      "id": 41,
+      "title": "Space for Neurodiversity",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startstartDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "web": "https://spaceforneurodiversity.org"
+      },
+      "impact": {},
+      "content": "# Campaign\n",
+      "filePath": "src/content/projects/campaign.md"
+    },
+    {
+      "slug": "build4space",
+      "id": 41,
+      "title": "Build4Space",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "web": "https://build4.space"
+      },
+      "impact": {},
+      "relatedExperience": [
+        "exp-rr-space"
+      ],
+      "content": "",
+      "filePath": "src/content/projects/build4space.md"
+    },
+    {
+      "slug": "breezometer",
+      "id": 41,
+      "title": "Breezometer",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "web": "https://example.com",
+        "youtube": "https://youtu.be/VRv6sqPa2o8?is=BfBOjFiu-O0h_aiY"
+      },
+      "impact": {},
+      "caseStudy": "ESOTC",
+      "client": "ECMWF",
+      "relatedExperience": [
+        "exp-design-and-data"
+      ],
+      "content": "",
+      "filePath": "src/content/projects/breezometer.md"
+    },
+    {
+      "slug": "bloodhound-blast",
+      "id": 41,
+      "title": "Bloodhound blast example",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "web": "https://bloodhoundssc.com"
+      },
+      "impact": {},
+      "caseStudy": "bloodhound-blast",
+      "relatedExperience": [
+        "exp-bloodhound-ssc"
+      ],
+      "content": "# \n",
+      "filePath": "src/content/projects/bloodhound-blast.md"
+    },
+    {
+      "slug": "bepi-colombo",
+      "id": 41,
+      "title": "Bepi Colombo",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "web": "https://example.com",
+        "youtube": "https://youtu.be/djerGKGiNC4?is=Gi6qlOIEgSixa52-"
+      },
+      "impact": {},
+      "relatedExperience": [
+        "exp-design-and-data"
+      ],
+      "caseStudy": "ESA material labs",
+      "client": "European Space Agency",
+      "content": "# \n",
+      "filePath": "src/content/projects/bepi-colombo.md"
+    },
+    {
+      "slug": "bake-in-space",
+      "id": 41,
+      "title": "Bake In Space",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "web": "https://bakein.space"
+      },
+      "impact": {},
+      "caseStudy": "bake-in-space",
+      "relatedExperience": [
+        "exp-design-and-data"
+      ],
+      "content": "\nAwards : INNOspace Masters 2017 (https://app.notion.com/p/INNOspace-Masters-2017-3803a96540ad80da8cc7f62c94dc0eda?pvs=21)\n",
+      "filePath": "src/content/projects/bake-in-space.md"
+    },
+    {
+      "slug": "aeolus",
+      "id": 43,
+      "title": "Aeolus",
+      "featured": true,
+      "draft": false,
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "youtubeId": "OOHS8nN1Hcg",
+      "links": {
+        "youtube": "https://youtu.be/OOHS8nN1Hcg?is=FGvsLz2ULXEdDodP"
+      },
+      "impact": {},
+      "caseStudy": "ESA material labs",
+      "client": "European Space Agency",
+      "relatedExperience": [
+        "exp-design-and-data"
+      ],
+      "heroImage": "https://img.youtube.com/vi/OOHS8nN1Hcg/maxresdefault.jpg",
+      "heroAlt": "Aeolus Thumbnail",
+      "imageCredit": "ESA/Design & Data",
+      "content": "\n",
+      "filePath": "src/content/projects/aeolus.md"
+    }
+  ],
+  "initiatives": [
+    {
+      "slug": "spaceup-live",
+      "id": 41,
+      "title": "SpaceUp Live",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "github": "https://github.com/yourname/example-project",
+        "live": "https://example.com"
+      },
+      "impact": {},
+      "caseStudy": "spaceup",
+      "relatedExperience": [
+        "exp-rr-space"
+      ],
+      "content": "\n# \n",
+      "filePath": "src/content/initiatives/spaceup-live.md"
+    },
+    {
+      "slug": "spaceup-live",
+      "id": 41,
+      "title": "SpaceUp Live",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "github": "https://github.com/yourname/example-project",
+        "live": "https://example.com"
+      },
+      "impact": {},
+      "caseStudy": "spaceup",
+      "relatedExperience": [
+        "exp-rr-space"
+      ],
+      "content": "\n# \n",
+      "filePath": "src/content/initiatives/spaceup-leicester.md"
+    },
+    {
+      "slug": "spaceintegrity",
+      "id": 41,
+      "title": "Space Integrity Initiative",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "github": "https://github.com/yourname/example-project",
+        "live": "https://spaceintegrity.org"
+      },
+      "impact": {},
+      "relatedExperience": [
+        "exp-green-orbit-founder"
+      ],
+      "content": "\n# \n\n",
+      "filePath": "src/content/initiatives/spaceintegrity.md"
+    },
+    {
+      "slug": "spaceimpactforum",
+      "id": 41,
+      "title": "Space Impact Forum",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "github": "https://github.com/yourname/example-project",
+        "live": "https://spaceimpactforum.com"
+      },
+      "impact": {},
+      "relatedExperience": [
+        "exp-green-orbit-founder"
+      ],
+      "content": "",
+      "filePath": "src/content/initiatives/spaceimpactforum.md"
+    },
+    {
+      "slug": "leicesterspaceweek",
+      "id": 41,
+      "title": "Leicester Space Week",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "live": "https://leicesterspaceweek.com"
+      },
+      "impact": {},
+      "relatedExperience": [
+        "exp-green-orbit-founder"
+      ],
+      "content": "# \n\n",
+      "filePath": "src/content/initiatives/spaceforneurodiversity.md"
+    },
+    {
+      "slug": "leicesterspaceweek",
+      "id": 41,
+      "title": "Leicester Space Week",
+      "type": "featured",
+      "status": "completed",
+      "description": "A short summary of what this project does.",
+      "startDate": "2026-07-01T00:00:00.000Z",
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "tags": [
+        "portfolio",
+        "web",
+        "example"
+      ],
+      "links": {
+        "live": "https://leicesterspaceweek.com"
+      },
+      "impact": {},
+      "relatedExperience": [
+        "exp-green-orbit-founder"
+      ],
+      "content": "# \n\n",
+      "filePath": "src/content/initiatives/leicesterspaceweek.md"
+    }
+  ],
+  "caseStudies": [
+    {
+      "slug": "eso-ultra-hd",
+      "title": "ESO Ultra HD",
+      "description": "A short summary of the project.",
+      "excerpt": "A slightly longer excerpt for cards and previews.",
+      "date": "2026-07-07T00:00:00.000Z",
+      "featured": true,
+      "category": [
+        "Space"
+      ],
+      "tags": [
+        "Space",
+        "Science policy"
+      ],
+      "draft": false,
+      "author": "ryan-laird",
+      "image": "/images/blog/my-first-post.jpg",
+      "imageCredit": "Cover image for ESO Ultra HD",
+      "status": "completed",
+      "links": {
+        "github": "https://github.com/yourname/example-project",
+        "live": "https://example.com"
+      },
+      "impact": {
+        "outcome": "Improved discoverability and storytelling",
+        "engagement": "High"
+      },
+      "tools_tech": [
+        "TypeScript",
+        "Astro",
+        "Zod"
+      ],
+      "features": [
+        "Feature one",
+        "Feature two"
+      ],
+      "relatedProjects": [
+        "windy"
+      ],
+      "content": "",
+      "filePath": "src/content/case-studies/esoultrahd.md"
+    }
+  ],
+  "authors": [
+    {
+      "slug": "ryan-laird",
+      "name": "Ryan Laird",
+      "author": "ryan-laird",
+      "role": "Chartered Marketer",
+      "bio": "Director and founder of Green Orbit Digital, specialising in sustainable marketing systems for the global space sector. Focused on data-led growth strategies aligned with environmental responsibility across the space ecosystem.",
+      "avatar": "/img/person/ryan-laird.jpg",
+      "content": "",
+      "filePath": "src/content/authors/ryan-laird.md"
+    }
+  ],
+  "blog": []
+}
