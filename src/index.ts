@@ -30,19 +30,19 @@ import skills from "./data/skills.json";
 import teaching from "./data/teaching.json";
 import { tools } from "./data/tools";
 import volunteering from "./data/volunteering.json";
-import socials from "./data/socials.json"; // 1. Added Import
+import socials from "./data/socials.json";
 
 // Portfolio Data imports
 import initiatives from "./data/initiatives.json";
 import reviews from "./data/reviews.json";
 import projects from "./data/projects.json";
+import caseStudies from "./data/caseStudies.json";
 import publicationsText from "./data/publications.txt";
 
 const app = new Hono<{ Bindings: Env }>();
 
 app.use("*", logger());
 
-// 2. Updated CV Data Registry
 const cvData = {
   awards,
   certifications,
@@ -56,7 +56,7 @@ const cvData = {
   teaching,
   tools,
   volunteering,
-  socials, // Added to registry
+  socials,
 } as const;
 
 const portfolioData = {
@@ -65,12 +65,13 @@ const portfolioData = {
   teaching,
   research: publicationsText,
   projects,
+  caseStudies,
 } as const;
 
-// 3. Mount Routes
+// Mount Routes
 app.route("/system", system);
 app.route("/debug", debug);
-app.route("/webdav", webdav);
+app.route("/v1/webdav", webdav);
 app.route("/v1/research", research);
 app.route("/v1/cv", cv);
 app.route("/v1/portfolio", portfolio);
@@ -81,7 +82,7 @@ app.route("/v1/ai", aiApp);
 app.route("/v1/cdn", cdn);
 app.route("/v1/webhooks", webhooks);
 
-// 4. API Endpoints
+// API Endpoints
 app.get("/api/:collection", (c) => {
   const collectionKey = c.req.param("collection");
   if (collectionKey in cvData) return json(cvData[collectionKey as keyof typeof cvData]);
@@ -96,7 +97,7 @@ app.get("/api/cv/:collection", (c) => {
   return json({ error: "CV collection not found" }, 404);
 });
 
-// Explicit: GET /api/socials (The shortcut you requested)
+// Explicit: GET /api/socials (The shortcut requested)
 app.get("/api/socials", (c) => json(socials));
 
 app.get("/api/portfolio/:collection", (c) => {

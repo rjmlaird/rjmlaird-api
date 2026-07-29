@@ -29,11 +29,75 @@ const openapiSpec = {
     "/v1/research": { get: { summary: "Research API", responses: { "200": { description: "OK" } } } },
     "/v1/cv": { get: { summary: "CV API", responses: { "200": { description: "OK" } } } },
     "/v1/portfolio": { get: { summary: "Portfolio API", responses: { "200": { description: "OK" } } } },
+    "/v1/portfolio/projects": {
+      get: {
+        summary: "List projects",
+        parameters: [
+          { name: "status", in: "query", schema: { type: "string" } },
+          { name: "tag", in: "query", schema: { type: "string" } },
+          { name: "featured", in: "query", schema: { type: "boolean" } },
+        ],
+        responses: { "200": { description: "OK" } },
+      },
+    },
+    "/v1/portfolio/project/{slug}": {
+      get: {
+        summary: "Get a single project by slug",
+        parameters: [
+          { name: "slug", in: "path", required: true, schema: { type: "string" } },
+          { name: "expand", in: "query", schema: { type: "string" }, description: "Comma-separated: caseStudy" },
+        ],
+        responses: { "200": { description: "OK" }, "404": { description: "Not found" } },
+      },
+    },
+    "/v1/portfolio/initiatives": {
+      get: {
+        summary: "List initiatives",
+        parameters: [
+          { name: "status", in: "query", schema: { type: "string" } },
+          { name: "tag", in: "query", schema: { type: "string" } },
+          { name: "featured", in: "query", schema: { type: "boolean" } },
+        ],
+        responses: { "200": { description: "OK" } },
+      },
+    },
+    "/v1/portfolio/initiative/{slug}": {
+      get: {
+        summary: "Get a single initiative by slug",
+        parameters: [
+          { name: "slug", in: "path", required: true, schema: { type: "string" } },
+          { name: "expand", in: "query", schema: { type: "string" }, description: "Comma-separated: caseStudy" },
+        ],
+        responses: { "200": { description: "OK" }, "404": { description: "Not found" } },
+      },
+    },
+    "/v1/portfolio/case-studies": {
+      get: {
+        summary: "List case studies",
+        parameters: [
+          { name: "status", in: "query", schema: { type: "string" } },
+          { name: "tag", in: "query", schema: { type: "string" } },
+          { name: "category", in: "query", schema: { type: "string" } },
+          { name: "featured", in: "query", schema: { type: "boolean" } },
+        ],
+        responses: { "200": { description: "OK" } },
+      },
+    },
+    "/v1/portfolio/case-study/{slug}": {
+      get: {
+        summary: "Get a single case study by slug",
+        parameters: [
+          { name: "slug", in: "path", required: true, schema: { type: "string" } },
+          { name: "expand", in: "query", schema: { type: "string" }, description: "Comma-separated: relatedProjects" },
+        ],
+        responses: { "200": { description: "OK" }, "404": { description: "Not found" } },
+      },
+    },
     "/v1/contact": { post: { summary: "Contact API", responses: { "200": { description: "OK" } } } },
     "/v1/activities": { get: { summary: "Activities API", responses: { "200": { description: "OK" } } } },
     "/v1/general": { get: { summary: "General API", responses: { "200": { description: "OK" } } } },
     "/v1/ai": { post: { summary: "AI endpoint", responses: { "200": { description: "OK" } } } },
-    "/webdav": {
+    "/v1/webdav": {
       options: { summary: "WebDAV options", responses: { "204": { description: "No Content" } } },
       get: { summary: "WebDAV get", responses: { "200": { description: "OK" }, "404": { description: "Not found" } } },
       put: { summary: "WebDAV put", responses: { "200": { description: "Updated" }, "201": { description: "Created" } } },

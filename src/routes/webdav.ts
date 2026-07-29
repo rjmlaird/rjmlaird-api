@@ -9,7 +9,6 @@ type WebdavEnv = Env & {
 const webdav = new Hono<{ Bindings: WebdavEnv }>();
 
 const BASE_PREFIX = "zotero";
-const MOUNT_PREFIX = "/webdav";
 const DAV_HEADER = "1,2";
 const ALLOW_HEADER = "OPTIONS, GET, PUT, DELETE, PROPFIND, HEAD, MKCOL, LOCK, UNLOCK";
 const LOCK_TIMEOUT_SECONDS = 300;
@@ -64,6 +63,12 @@ function plain(body: string | null, status: number, headers: Record<string, stri
       ...headers,
     },
   });
+}
+
+function detectMountPrefix(pathname: string): string {
+  const path = pathname.replace(/^\/+/, "");
+  if (path === "v1/webdav" || path.startsWith("v1/webdav/")) return "/v1/webdav";
+  return "/webdav";
 }
 
 function normalizePath(pathname: string) {
@@ -152,19 +157,31 @@ async function exists(key: string, env: Env): Promise<DavNode | null> {
   return null;
 }
 
-async function parentExists(key: string, env: Env) {
-  const parent = key.includes("/") ? key.slice(0, key.lastIndexOf("/")) : BASE_PREFIX;
-  if (!parent || parent === BASE_PREFIX) return true;
-  return !!(await exists(parent, env));
+async function ensureParentsAndSelf(key: string, env: Env, isCollection = false) {
+  const segments = key.split("/");
+  let currentPath = "";
+
+  for (let i = 0; i < segments.length; i++) {
+    currentPath = i === 0 ? segments[0] : `${currentPath}/${segments[i]}`;
+    if (!isCollection && i === segments.length - 1) break;
+
+    const folderMarker = `${currentPath}/.folder`;
+    const markerObj = await storage.r2.get(folderMarker, env);
+    if (!markerObj) {
+      await storage.r2.put(folderMarker, new Uint8Array(0), env, "application/x-directory");
+    }
+  }
 }
 
-function hrefFromPath(path: string) {
+function hrefFromPath(path: string, mountPrefix: string) {
   const cleaned = path.replace(/^\/+/, "").replace(/\/+$/, "");
-  return cleaned ? `${MOUNT_PREFIX}/zotero/${encodeURI(cleaned)}` : `${MOUNT_PREFIX}/zotero/`;
+  return cleaned
+    ? `${mountPrefix}/zotero/${encodeURI(cleaned)}`
+    : `${mountPrefix}/zotero/`;
 }
 
-function propfindItem(node: DavNode, requestPath: string, displayname: string) {
-  const href = hrefFromPath(requestPath);
+function propfindItem(node: DavNode, requestPath: string, displayname: string, mountPrefix: string) {
+  const href = hrefFromPath(requestPath, mountPrefix);
   const resType = node.kind === "collection" ? "<d:collection/>" : "";
   const etag = node.etag ?? etagFor(node.key, node.kind === "file" ? node.size : 0);
   const len = node.kind === "collection" ? 0 : node.size;
@@ -181,13 +198,9 @@ function parseLockToken(request: Request) {
   return token ? token.replace(/^<|>$/g, "").trim() : null;
 }
 
-/** Validates the Authorization header's Basic credentials against the
- *  configured Zotero WebDAV username/password. Returns true only if both
- *  are set and match exactly. */
 function checkBasicAuth(request: Request, env: WebdavEnv): boolean {
   const header = request.headers.get("authorization") ?? "";
   if (!header.startsWith("Basic ")) return false;
-
   if (!env.ZOTERO_WEBDAV_USER || !env.ZOTERO_WEBDAV_PASS) return false;
 
   try {
@@ -203,8 +216,6 @@ function checkBasicAuth(request: Request, env: WebdavEnv): boolean {
   }
 }
 
-/** Lists immediate children (files + one-level-deep subfolders) under a
- *  collection key by scanning R2 keys with that prefix. */
 async function listChildren(
   collectionKey: string,
   env: WebdavEnv
@@ -216,7 +227,7 @@ async function listChildren(
   const children = new Map<string, { name: string; node: DavNode }>();
 
   for (const item of items) {
-    if (item.key.startsWith("locks/")) continue; // separate namespace, not part of the tree
+    if (item.key.startsWith("locks/")) continue;
 
     const rest = item.key.slice(listPrefix.length);
     if (!rest) continue;
@@ -227,12 +238,11 @@ async function listChildren(
     const childKey = `${collectionKey === BASE_PREFIX ? BASE_PREFIX : collectionKey}/${first}`;
 
     if (remainder.length > 0) {
-      // Nested deeper — first segment is a subfolder.
       if (!children.has(first) || children.get(first)!.node.kind !== "collection") {
         children.set(first, { name: first, node: { kind: "collection", key: childKey, etag: etagFor(childKey, 0) } });
       }
     } else if (first === ".folder") {
-      continue; // marker for the current collection itself, not a child
+      continue;
     } else {
       children.set(first, {
         name: first,
@@ -257,13 +267,20 @@ webdav.all("*", async (c) => {
     });
   }
 
-  const pathname = normalizePath(new URL(request.url).pathname);
+  const rawPathname = new URL(request.url).pathname;
+  const mountPrefix = detectMountPrefix(rawPathname);
+  const pathname = normalizePath(rawPathname);
   const key = toKey(pathname || null);
   const root = !pathname;
 
-  const current: DavNode | null = root
+  let current: DavNode | null = root
     ? { kind: "collection", key: BASE_PREFIX, etag: etagFor(BASE_PREFIX, 0) }
     : await exists(key, c.env);
+
+  if (root && !current) {
+    await storage.r2.put(`${BASE_PREFIX}/.folder`, new Uint8Array(0), c.env, "application/x-directory");
+    current = { kind: "collection", key: BASE_PREFIX, etag: etagFor(BASE_PREFIX, 0) };
+  }
 
   switch (request.method) {
     case "OPTIONS":
@@ -300,7 +317,10 @@ webdav.all("*", async (c) => {
     }
 
     case "PUT": {
-      if (root) return plain("Cannot PUT to root collection", 405);
+      if (root) {
+        await storage.r2.put(`${BASE_PREFIX}/.folder`, new Uint8Array(0), c.env, "application/x-directory");
+        return plain(null, 201);
+      }
 
       const lock = await getLockRecord(key, c.env);
       const requestToken = parseLockToken(request);
@@ -308,16 +328,19 @@ webdav.all("*", async (c) => {
         return plain("Locked", 423);
       }
 
-      if (!(await parentExists(key, c.env))) {
-        return plain("Conflict: parent collection does not exist", 409);
-      }
+      await ensureParentsAndSelf(key, c.env, false);
 
       const contentType = request.headers.get("content-type") ?? "application/octet-stream";
-      const body = await request.arrayBuffer();
-      await storage.r2.put(key, body, c.env, contentType);
+      
+      // Stream request body directly into R2 storage to prevent buffer memory limits and 413 errors
+      await storage.r2.put(key, request.body, c.env, contentType);
+
+      // Fetch back object metadata for accurate size and etag calculation
+      const updatedObj = await storage.r2.get(key, c.env);
+      const finalSize = updatedObj?.size ?? 0;
 
       return plain(null, current ? 204 : 201, {
-        ETag: etagFor(key, body.byteLength),
+        ETag: etagFor(key, finalSize),
       });
     }
 
@@ -347,28 +370,26 @@ webdav.all("*", async (c) => {
 
     case "MKCOL": {
       if (current) return plain("Already exists", 405);
-      if (!(await parentExists(key, c.env))) {
-        return plain("Conflict: parent collection does not exist", 409);
-      }
-
-      await storage.r2.put(`${key}/.folder`, new Uint8Array(0), c.env, "application/x-directory");
+      await ensureParentsAndSelf(key, c.env, true);
       return plain(null, 201);
     }
 
     case "PROPFIND": {
-      if (!current) return plain("Not Found", 404);
+      if (!current) {
+        return plain("Not Found", 404);
+      }
 
       const depthHeader = request.headers.get("depth") ?? "1";
-      const depth = depthHeader === "0" ? 0 : 1; // "infinity" is not supported — treated as 1
+      const depth = depthHeader === "0" ? 0 : 1;
 
       const selfName = root ? "zotero" : key.slice(key.lastIndexOf("/") + 1);
-      const items = [propfindItem(current, pathname, selfName)];
+      const items = [propfindItem(current, pathname, selfName, mountPrefix)];
 
       if (depth === 1 && current.kind === "collection") {
         const children = await listChildren(key, c.env);
         for (const child of children) {
           const childPath = root ? child.name : `${pathname}/${child.name}`;
-          items.push(propfindItem(child.node, childPath, child.name));
+          items.push(propfindItem(child.node, childPath, child.name, mountPrefix));
         }
       }
 

@@ -15,6 +15,7 @@
   "dependencies": {
     "chanfana": "3.3.0",
     "hono": "^4.12.27",
+    "paper-search-cli": "^0.3.4",
     "zod": "4.3.6"
   },
   "devDependencies": {
