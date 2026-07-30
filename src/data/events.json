@@ -1,0 +1,2286 @@
+[
+  {
+    "slug": "uksc2009",
+    "id": 41,
+    "title": "UK Space Conference 2009",
+    "featured": false,
+    "draft": false,
+    "type": "networking",
+    "status": "completed",
+    "description": "...",
+    "startDate": "2009-02-14T09:00:00.000Z",
+    "endDate": "2009-02-14T10:00:00.000Z",
+    "tags": [
+      "leicester",
+      "coffee",
+      "networking"
+    ],
+    "links": {
+      "web": "https://www.eventbrite.co.uk/o/leicester-open-coffee-club-18538532655"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "lcc"
+    ],
+    "heroImage": "/images/initiatives/lcc.webp",
+    "organiser": "Ryan Laird",
+    "hosts": [
+      "Leicester Coffee House Company"
+    ],
+    "location": {
+      "name": "Leicester Coffee House Company",
+      "address": "Granby Street",
+      "city": "Leicester",
+      "region": "Leicestershire",
+      "country": "United Kingdom",
+      "postalCode": "LE1 7RH",
+      "online": false
+    },
+    "format": "in-person",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/uksc2009.md"
+  },
+  {
+    "slug": "spaceuplive4",
+    "id": 41,
+    "title": "SpaceUp Live 4",
+    "featured": false,
+    "draft": false,
+    "type": "webinar",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2021-04-01T00:00:00.000Z",
+    "youtubeId": "KeRk05Ru__4",
+    "tags": [
+      "spaceup",
+      "spaceuplive",
+      "broadcast"
+    ],
+    "links": {
+      "youtube": "https://www.youtube.com/live/KeRk05Ru__4?si=NR--Z2vzkGgJEdhv",
+      "web": "https://spaceup.org/live"
+    },
+    "impact": {},
+    "heroImage": "https://img.youtube.com/vi/KeRk05Ru__4/maxresdefault.jpg",
+    "heroAlt": "SpaceUp Live Thumbnail",
+    "imageCredit": "R&R Space",
+    "relatedExperience": [
+      "exp-rr-space"
+    ],
+    "relatedInitiatives": [
+      "spaceuplive"
+    ],
+    "relatedVideos": [
+      "KeRk05Ru__4"
+    ],
+    "organiser": "R&R Space",
+    "speakers": [
+      "person1",
+      "person2"
+    ],
+    "location": {
+      "online": true,
+      "onlineUrl": "https://www.youtube.com/live/KeRk05Ru__4?si=NR--Z2vzkGgJEdhv"
+    },
+    "format": "online",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/spaceuplive4.md"
+  },
+  {
+    "slug": "spaceuplive3",
+    "id": 41,
+    "title": "SpaceUp Live 3",
+    "featured": false,
+    "draft": false,
+    "type": "webinar",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2020-10-07T00:00:00.000Z",
+    "youtubeId": "EegcIc-vfkQ",
+    "tags": [
+      "spaceup",
+      "spaceuplive",
+      "broadcast"
+    ],
+    "links": {
+      "youtube": "https://www.youtube.com/live/EegcIc-vfkQ?si=pLMPcaPG8LjGoS-M",
+      "web": "https://spaceup.org/live"
+    },
+    "impact": {},
+    "heroImage": "https://img.youtube.com/vi/EegcIc-vfkQ/maxresdefault.jpg",
+    "heroAlt": "SpaceUp Live Thumbnail",
+    "imageCredit": "R&R Space",
+    "relatedExperience": [
+      "exp-rr-space"
+    ],
+    "relatedInitiatives": [
+      "spaceuplive"
+    ],
+    "relatedVideos": [
+      "EegcIc-vfkQ"
+    ],
+    "organiser": "R&R Space",
+    "speakers": [
+      "person1",
+      "person2"
+    ],
+    "location": {
+      "online": true,
+      "onlineUrl": "https://www.youtube.com/live/EegcIc-vfkQ?si=pLMPcaPG8LjGoS-Mv"
+    },
+    "format": "online",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/spaceuplive3.md"
+  },
+  {
+    "slug": "spaceuplive2",
+    "id": 41,
+    "title": "SpaceUp Live 2",
+    "featured": false,
+    "draft": false,
+    "type": "webinar",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2020-06-24T00:00:00.000Z",
+    "youtubeId": "xm98IUpL4Aw",
+    "tags": [
+      "spaceup",
+      "spaceuplive",
+      "broadcast"
+    ],
+    "links": {
+      "youtube": "https://www.youtube.com/live/xm98IUpL4Aw?si=Z7a3WeXrzCux2hBr",
+      "web": "https://spaceup.org/live"
+    },
+    "impact": {},
+    "heroImage": "https://img.youtube.com/vi/xm98IUpL4Aw/maxresdefault.jpg",
+    "heroAlt": "SpaceUp Live Thumbnail",
+    "imageCredit": "R&R Space",
+    "relatedExperience": [
+      "exp-rr-space"
+    ],
+    "relatedInitiatives": [
+      "spaceuplive"
+    ],
+    "relatedVideos": [
+      "xm98IUpL4Aw"
+    ],
+    "organiser": "R&R Space",
+    "speakers": [
+      "person1",
+      "person2"
+    ],
+    "location": {
+      "online": true,
+      "onlineUrl": "https://www.youtube.com/live/xm98IUpL4Aw?si=Z7a3WeXrzCux2hBr"
+    },
+    "format": "online",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/spaceuplive2.md"
+  },
+  {
+    "slug": "spaceuplive1",
+    "id": 41,
+    "title": "SpaceUp Live 1",
+    "featured": false,
+    "draft": false,
+    "type": "webinar",
+    "status": "completed",
+    "description": "The organisers of SpaceUp Leicester (R&R Space) worked with SpaceUp Foundation to organise the very first SpaceUpLIVE – an online version of the global “space unconference”. It was planned as a brilliant way to spend time with collaborators all over the world, without leaving your home, while sharing your interest about space.\\n Everyone who presents at SpaceUp LIVE is encouraged to give a talk or start a discussion in a live conference call. Presenters were able to schedule their sessions online on a first-come, first-serve basis, which were be posted to the “grid”.",
+    "startDate": "2020-04-29T00:00:00.000Z",
+    "youtubeId": "FgbmM0A3tIo",
+    "tags": [
+      "spaceup",
+      "spaceuplive",
+      "broadcast"
+    ],
+    "links": {
+      "youtube": "https://www.youtube.com/live/FgbmM0A3tIo?si=2lGEowz088c2gBCE",
+      "web": "https://spaceup.org/live"
+    },
+    "impact": {},
+    "heroImage": "https://img.youtube.com/vi/FgbmM0A3tIo/maxresdefault.jpg",
+    "heroAlt": "SpaceUp Live Thumbnail",
+    "imageCredit": "R&R Space",
+    "relatedExperience": [
+      "exp-rr-space"
+    ],
+    "relatedInitiatives": [
+      "spaceuplive"
+    ],
+    "relatedVideos": [
+      "FgbmM0A3tIo"
+    ],
+    "organiser": "R&R Space",
+    "speakers": [
+      "person1",
+      "person2"
+    ],
+    "location": {
+      "online": true,
+      "onlineUrl": "https://www.youtube.com/live/FgbmM0A3tIo?si=2lGEowz088c2gBCE"
+    },
+    "format": "online",
+    "content": " ",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/spaceuplive1.md"
+  },
+  {
+    "slug": "spaceupleics2019",
+    "id": 41,
+    "title": "SpaceUp Leicester 2019",
+    "featured": false,
+    "draft": false,
+    "type": "conference",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2019-11-18T00:00:00.000Z",
+    "endDate": "2019-11-19T00:00:00.000Z",
+    "tags": [
+      "spaceup",
+      "leicester",
+      "unconference"
+    ],
+    "links": {
+      "web": "https://spaceupleicester.org.uk"
+    },
+    "impact": {},
+    "caseStudy": "spaceup",
+    "relatedExperience": [
+      "exp-rr-space"
+    ],
+    "relatedInitiatives": [
+      "spaceupleicester"
+    ],
+    "heroImage": "/images/events/spaceupleic2019.jpg",
+    "relatedVideos": [
+      "BJAyWN-qdGs"
+    ],
+    "organiser": "R&R Space",
+    "speakers": [
+      "person1",
+      "person2"
+    ],
+    "hosts": [
+      "DOCK Leicester"
+    ],
+    "location": {
+      "name": "DOCK Leicester",
+      "address": "75 Exploration Drive",
+      "city": "Leicester",
+      "region": "Leicestershire",
+      "country": "United Kingdom",
+      "postalCode": "LE4 5NU",
+      "online": false
+    },
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/spaceupleics2019.md"
+  },
+  {
+    "slug": "spaceupleics2018",
+    "id": 41,
+    "title": "SpaceUp Leicester 2018",
+    "type": "conference",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2018-11-17T00:00:00.000Z",
+    "endDate": "2018-11-18T00:00:00.000Z",
+    "youtubeId": "BJAyWN-qdGs",
+    "tags": [
+      "spaceup",
+      "leicester",
+      "unconference"
+    ],
+    "links": {
+      "web": "https://spaceupleicester.org.uk",
+      "youtube": "https://youtu.be/BJAyWN-qdGs?si=FKMdMXnY_5zi5rrz"
+    },
+    "impact": {},
+    "heroImage": "/images/events/spaceupleic2018.png",
+    "relatedExperience": [
+      "exp-rr-space"
+    ],
+    "relatedInitiatives": [
+      "spaceupleicester"
+    ],
+    "relatedVideos": [
+      "BJAyWN-qdGs",
+      "ywCG8DiSkAg",
+      "dMHWzMXAyWs",
+      "__1WZ4d8omg",
+      "soTCHJ0fL8g"
+    ],
+    "organiser": "R&R Space",
+    "speakers": [
+      "person1",
+      "person2"
+    ],
+    "hosts": [
+      "DOCK Leicester"
+    ],
+    "location": {
+      "name": "DOCK Leicester",
+      "address": "75 Exploration Drive",
+      "city": "Leicester",
+      "region": "Leicestershire",
+      "country": "United Kingdom",
+      "postalCode": "LE4 5NU",
+      "online": false
+    },
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/spaceupleics2018.md"
+  },
+  {
+    "slug": "spaceoneerslive3",
+    "id": 41,
+    "title": "3 - Investment in Space",
+    "featured": false,
+    "draft": false,
+    "type": "webinar",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2020-07-23T15:00:00.000Z",
+    "endDate": "2020-07-23T16:00:00.000Z",
+    "youtubeId": "mMLxP3hMIzQ",
+    "tags": [
+      "spaceoneers",
+      "livestream",
+      "webinar"
+    ],
+    "links": {
+      "youtube": "https://www.youtube.com/live/mMLxP3hMIzQ?si=u_yzV5gACNhKy21X",
+      "web": "https://spaceoneers.io"
+    },
+    "impact": {},
+    "relatedInitiatives": [
+      "spaceoneerslive"
+    ],
+    "relatedExperience": [
+      "exp-design-and-data"
+    ],
+    "heroImage": "https://img.youtube.com/vi/mMLxP3hMIzQ/maxresdefault.jpg",
+    "heroAlt": "Spaceoneers Live Thumbnail",
+    "imageCredit": "Spaceoneers by Design & Data GmbH",
+    "organiser": "Spaceoneers",
+    "speakers": [
+      "person1",
+      "person2"
+    ],
+    "hosts": [
+      "Spaceoneers"
+    ],
+    "location": {
+      "online": true,
+      "onlineUrl": "https://www.youtube.com/live/mMLxP3hMIzQ?si=u_yzV5gACNhKy21X"
+    },
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/spaceoneerslive3.md"
+  },
+  {
+    "slug": "spaceoneerslive2",
+    "id": 41,
+    "title": "2 - Space Clusters Across Europe",
+    "featured": false,
+    "draft": false,
+    "type": "webinar",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2020-07-02T15:00:00.000Z",
+    "endDate": "2020-07-02T16:00:00.000Z",
+    "youtubeId": "tE701hPeSP4",
+    "tags": [
+      "spaceoneers",
+      "livestream",
+      "webinar"
+    ],
+    "links": {
+      "youtube": "https://www.youtube.com/live/tE701hPeSP4?si=xI3WjCni-hGU0yeu",
+      "web": "https://spaceoneers.io"
+    },
+    "impact": {},
+    "relatedInitiatives": [
+      "spaceoneerslive"
+    ],
+    "relatedExperience": [
+      "exp-design-and-data"
+    ],
+    "heroImage": "https://img.youtube.com/vi/tE701hPeSP4/maxresdefault.jpg",
+    "heroAlt": "Spaceoneers Live Thumbnail",
+    "imageCredit": "Spaceoneers by Design & Data GmbH",
+    "organiser": "Spaceoneers",
+    "speakers": [
+      "person1",
+      "person2"
+    ],
+    "hosts": [
+      "Spaceoneers"
+    ],
+    "location": {
+      "online": true,
+      "onlineUrl": "https://www.youtube.com/live/tE701hPeSP4?si=xI3WjCni-hGU0yeu"
+    },
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/spaceoneerslive2.md"
+  },
+  {
+    "slug": "spaceoneerslive1",
+    "id": 41,
+    "title": "1 - Commercial Opportunities for Human Spaceflight in Europe",
+    "featured": false,
+    "draft": false,
+    "type": "webinar",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2020-06-18T15:00:00.000Z",
+    "endDate": "2020-06-18T16:00:00.000Z",
+    "youtubeId": "_qkLLNg8SpI",
+    "tags": [
+      "spaceoneers",
+      "livestream",
+      "webinar"
+    ],
+    "links": {
+      "youtube": "https://www.youtube.com/live/_qkLLNg8SpI?si=EAVGOOMPquemLINI",
+      "web": "https://spaceoneers.io"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-design-and-data"
+    ],
+    "relatedInitiatives": [
+      "spaceoneerslive"
+    ],
+    "heroImage": "https://img.youtube.com/vi/_qkLLNg8SpI/maxresdefault.jpg",
+    "heroAlt": "Spaceoneers Live Thumbnail",
+    "imageCredit": "Spaceoneers by Design & Data GmbH",
+    "organiser": "Spaceoneers",
+    "speakers": [
+      "person1",
+      "person2"
+    ],
+    "hosts": [
+      "Spaceoneers"
+    ],
+    "location": {
+      "online": true,
+      "onlineUrl": "https://www.youtube.com/live/_qkLLNg8SpI?si=EAVGOOMPquemLINI"
+    },
+    "content": "\n",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/spaceoneerslive1.md"
+  },
+  {
+    "slug": "spacehour5",
+    "id": 41,
+    "title": "SpaceHour Hangout",
+    "featured": false,
+    "draft": false,
+    "type": "webinar",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2020-06-03T11:00:00.000Z",
+    "endDate": "2020-06-03T12:00:00.000Z",
+    "tags": [
+      "spacehour",
+      "hangout",
+      "broadcast"
+    ],
+    "links": {
+      "web": "https://spaceup.org/live"
+    },
+    "impact": {},
+    "heroImage": "/images/events/spacehour5.webp",
+    "heroAlt": "SpaceHour Thumbnail",
+    "imageCredit": "Ryan Laird",
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "spacehour"
+    ],
+    "organiser": "Ryan Laird",
+    "speakers": [
+      "person1",
+      "person2"
+    ],
+    "location": {
+      "online": true,
+      "onlineUrl": "https://www.youtube.com/live/KeRk05Ru__4?si=NR--Z2vzkGgJEdhv"
+    },
+    "format": "online",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/spacehour5.md"
+  },
+  {
+    "slug": "spacehour4",
+    "id": 41,
+    "title": "SpaceHour Hangout",
+    "featured": false,
+    "draft": false,
+    "type": "webinar",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2020-05-20T11:00:00.000Z",
+    "endDate": "2020-05-20T12:00:00.000Z",
+    "tags": [
+      "spacehour",
+      "hangout",
+      "broadcast"
+    ],
+    "links": {
+      "web": "https://spaceup.org/live"
+    },
+    "impact": {},
+    "heroImage": "/images/events/spacehour4.webp",
+    "heroAlt": "SpaceHour Thumbnail",
+    "imageCredit": "Ryan Laird",
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "spacehour"
+    ],
+    "organiser": "Ryan Laird",
+    "speakers": [
+      "person1",
+      "person2"
+    ],
+    "location": {
+      "online": true,
+      "onlineUrl": "https://www.youtube.com/live/KeRk05Ru__4?si=NR--Z2vzkGgJEdhv"
+    },
+    "format": "online",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/spacehour4.md"
+  },
+  {
+    "slug": "spacehour3",
+    "id": 41,
+    "title": "SpaceHour Hangout",
+    "featured": false,
+    "draft": false,
+    "type": "webinar",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2020-05-06T11:00:00.000Z",
+    "endDate": "2020-05-06T12:00:00.000Z",
+    "tags": [
+      "spacehour",
+      "hangout",
+      "broadcast"
+    ],
+    "links": {
+      "web": "https://spaceup.org/live"
+    },
+    "impact": {},
+    "heroImage": "/images/events/spacehour3.webp",
+    "heroAlt": "SpaceHour Thumbnail",
+    "imageCredit": "Ryan Laird",
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "spacehour"
+    ],
+    "organiser": "Ryan Laird",
+    "speakers": [
+      "person1",
+      "person2"
+    ],
+    "location": {
+      "online": true,
+      "onlineUrl": "https://www.youtube.com/live/KeRk05Ru__4?si=NR--Z2vzkGgJEdhv"
+    },
+    "format": "online",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/spacehour3.md"
+  },
+  {
+    "slug": "spacehour2",
+    "id": 41,
+    "title": "SpaceHour Hangout",
+    "featured": false,
+    "draft": false,
+    "type": "webinar",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2020-04-22T11:00:00.000Z",
+    "endDate": "2020-04-22T12:00:00.000Z",
+    "tags": [
+      "spacehour",
+      "hangout",
+      "broadcast"
+    ],
+    "links": {
+      "web": "https://spaceup.org/live"
+    },
+    "impact": {},
+    "heroImage": "/images/events/spacehour2.webp",
+    "heroAlt": "SpaceHour Thumbnail",
+    "imageCredit": "Ryan Laird",
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "spacehour"
+    ],
+    "organiser": "Ryan Laird",
+    "speakers": [
+      "person1",
+      "person2"
+    ],
+    "location": {
+      "online": true,
+      "onlineUrl": "https://www.youtube.com/live/KeRk05Ru__4?si=NR--Z2vzkGgJEdhv"
+    },
+    "format": "online",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/spacehour2.md"
+  },
+  {
+    "slug": "spacehour1",
+    "id": 41,
+    "title": "SpaceHour Hangout",
+    "featured": false,
+    "draft": false,
+    "type": "webinar",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2020-04-08T11:00:00.000Z",
+    "endDate": "2020-04-08T12:00:00.000Z",
+    "tags": [
+      "spacehour",
+      "hangout",
+      "broadcast"
+    ],
+    "links": {
+      "web": "https://spaceup.org/live"
+    },
+    "impact": {},
+    "heroImage": "/images/events/spacehour1.webp",
+    "heroAlt": "SpaceHour Thumbnail",
+    "imageCredit": "Ryan Laird",
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "spacehour"
+    ],
+    "organiser": "Ryan Laird",
+    "speakers": [
+      "person1",
+      "person2"
+    ],
+    "location": {
+      "online": true,
+      "onlineUrl": "https://www.youtube.com/live/KeRk05Ru__4?si=NR--Z2vzkGgJEdhv"
+    },
+    "format": "online",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/spacehour1.md"
+  },
+  {
+    "slug": "phiweekbootcamp2019",
+    "id": 41,
+    "title": "PhiWeek Bootcamp 2019",
+    "type": "hackathon",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2019-09-13T00:00:00.000Z",
+    "endDate": "2019-09-15T00:00:00.000Z",
+    "tags": [
+      "esa",
+      "phiweek",
+      "bootcamp"
+    ],
+    "youtubeId": "kbaoIb3s29s",
+    "links": {
+      "youtube": "https://youtu.be/kbaoIb3s29s?is=Q16BVec5UxT-VImz",
+      "web": "https://phiweekbootcamp.space"
+    },
+    "impact": {},
+    "relatedCaseStudies": [
+      "phiweekbootcamp"
+    ],
+    "client": "European Space Agency",
+    "relatedExperience": [
+      "exp-design-and-data"
+    ],
+    "sectors": [
+      "energy",
+      "earth observation"
+    ],
+    "heroImage": "https://img.youtube.com/vi/kbaoIb3s29s/maxresdefault.jpg",
+    "heroAlt": "PhiWeek Bootcamp 2019 Thumbnail",
+    "imageCredit": "ESA/Design & Data",
+    "relatedVideos": [
+      "https://youtu.be/iUqnJ2XRAus?si=XeHqRQBREd1Vq3n5"
+    ],
+    "organiser": "Design & Data GmbH",
+    "speakers": [
+      "person1",
+      "person2"
+    ],
+    "hosts": [
+      "European Space Agency"
+    ],
+    "location": {
+      "name": "Pi Campus",
+      "address": "",
+      "city": "Rome",
+      "region": "Lazio",
+      "country": "Italy",
+      "postalCode": "",
+      "online": false
+    },
+    "content": "# \n\n",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/phiweekbootcamp2019.md"
+  },
+  {
+    "slug": "phiweekbootcamp2018",
+    "id": 41,
+    "title": "PhiWeek Bootcamp 2018",
+    "type": "hackathon",
+    "status": "completed",
+    "description": "From 11 to 13 November 2018, the European Space Agency (ESA) organised the 1st Φ-week Bootcamp in the framework of Φ-Week in Frascati (Rome), Italy. It brought together a mix of EO researchers, data scientists, non-space corporates, tech leaders, aspiring entrepreneurs and young professionals for an intensive 3-day event where participants were provided the tools to create their own start-up. The themes for the first event were space, food and energy.",
+    "startDate": "2018-11-11T00:00:00.000Z",
+    "endDate": "2018-11-13T00:00:00.000Z",
+    "tags": [
+      "esa",
+      "phiweek",
+      "bootcamp"
+    ],
+    "youtubeId": "TXjvUIJQN4Q",
+    "links": {
+      "web": "https://github.com/yourname/example-project",
+      "youtube": "https://youtu.be/TXjvUIJQN4Q?si=LRauInhEgpmiE7bF"
+    },
+    "impact": {},
+    "relatedCaseStudies": [
+      "phiweekbootcamp"
+    ],
+    "client": "European Space Agency",
+    "relatedExperience": [
+      "exp-design-and-data"
+    ],
+    "heroImage": "https://img.youtube.com/vi/TXjvUIJQN4Q/maxresdefault.jpg",
+    "heroAlt": "PhiWeek Bootcamp 2018 Thumbnail",
+    "imageCredit": "ESA/Design & Data",
+    "organiser": "Design & Data GmbH",
+    "speakers": [
+      "person1",
+      "person2"
+    ],
+    "hosts": [
+      "European Space Agency"
+    ],
+    "location": {
+      "name": "ESA ESRIN",
+      "address": "Galileo Galilei",
+      "city": "Frascati",
+      "region": "Lazio",
+      "country": "Italy",
+      "postalCode": "GU2 7XH",
+      "online": false
+    },
+    "content": "# \n",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/phiweekbootcamp2018.md"
+  },
+  {
+    "slug": "nssc2015",
+    "id": 41,
+    "title": "National Student Space Conference 2015",
+    "featured": false,
+    "draft": false,
+    "type": "conference",
+    "status": "completed",
+    "description": "In 2015, the National Student Space Conference was hosted by Surrey Electronics and Amateur Radio Society (EARS) at the University of Surrey. One of the keynote speakers at the event was Abbie Hutty, a Spacecraft Structures Engineer on Airbus’ ExoMars Rover Project, whose talk was titled “Structural challenges in the Martian environment”. Another keynote speaker was Dr Matt Taylor, a project scientist on the Rosetta Mission whose talk was “The Rosetta Mission So Far”. Students had the opportunity to socialise at the Networking Reception sponsored by Satellite Applications Catapult and the evening social on Saturday.",
+    "startDate": "2015-02-28T00:00:00.000Z",
+    "endDate": "2015-03-01T00:00:00.000Z",
+    "tags": [
+      "nssc",
+      "ukseds",
+      "conference"
+    ],
+    "links": {
+      "web": "https://ukseds.org/nssc2015"
+    },
+    "heroImage": "/images/events/NESSconf15.png",
+    "impact": {},
+    "relatedCaseStudies": [
+      "nssc"
+    ],
+    "relatedVolunteering": [
+      "vol-ukseds-vc"
+    ],
+    "organiser": "UKSEDS",
+    "coOrganisers": [
+      {
+        "name": "Surrey EARS"
+      }
+    ],
+    "speakers": [
+      "person1",
+      "person2"
+    ],
+    "hosts": [
+      "University of Surrey"
+    ],
+    "location": {
+      "name": "University of Surrey",
+      "address": "Guildford, Surrey",
+      "city": "Guildford",
+      "region": "Surrey",
+      "country": "United Kingdom",
+      "postalCode": "GU2 7XH",
+      "online": false
+    },
+    "format": "in-person",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/nssc2015.md"
+  },
+  {
+    "slug": "nssc2014",
+    "id": 41,
+    "title": "National Student Space Conference 2014",
+    "featured": false,
+    "draft": false,
+    "type": "conference",
+    "status": "completed",
+    "description": "In 2014, the National Student Space Conference was hosted by Leicester AstRoSoc at the University of Leicester. The conference was attended by industry experts such as the ESA astronaut Major Tim Peake. Our keynote speakers were Dr David Parker, the UK Space Agency Chief Executive, and Professor Richard Brown, Director of the Centre for Future Air-Space Transportation Technology at the University of Strathclyde in Glasgow. The sponsors for the event included Telespazio, Reaction Engines and the UK Space Agency.",
+    "startDate": "2014-03-01T00:00:00.000Z",
+    "endDate": "2014-03-02T00:00:00.000Z",
+    "tags": [
+      "nssc",
+      "ukseds",
+      "conference"
+    ],
+    "links": {
+      "web": "https://ukseds.org/2014/03/report_nssc2014/"
+    },
+    "heroImage": "/images/events/nssc2014.png",
+    "impact": {},
+    "relatedCaseStudies": [
+      "nssc"
+    ],
+    "relatedVolunteering": [
+      "vol-ukseds-secretary"
+    ],
+    "organiser": "UKSEDS",
+    "coOrganisers": [
+      {
+        "name": "Leicester AstRoSoc"
+      }
+    ],
+    "speakers": [
+      "person1",
+      "person2"
+    ],
+    "hosts": [
+      "University of Leicester"
+    ],
+    "location": {
+      "name": "University of Leicester",
+      "address": "University Road",
+      "city": "Leicester",
+      "region": "Leicestershire",
+      "country": "United Kingdom",
+      "postalCode": "LE1 7RH",
+      "online": false
+    },
+    "format": "in-person",
+    "content": "On 1st and 2nd March, space enthusiasts descended on the University of Leicester for the UKSEDS National Student Space Conference 2014. Aimed at UK students, each year the conference is a key opportunity to meet and network with a wide range of people in the space sector from academia to industry, across multiple disciplines. It is also a great time for students from UKSEDS’ various branches to meet together in one place and discuss their activities. This year the event was in its 26th year.\n\nThe conference was a real sell-out once again with over 250 delegates* from many UKSEDS branches spanning the width and breadth of the country — from Edinburgh to Kent to Southampton, Exeter, Manchester and Strathclyde. We were also happy to welcome our international friends at SEDS-USA and EUROAVIA once again. We had a great range of talks throughout the weekend from spaceplanes to cubesats, ISS, outreach and education, space biomedicine, astronomy, Mars and beyond.\n\nHighlights included a talk by British ESA Astronaut Major Tim Peake who Skyped in from Houston to talk about his mission alongside the outreach components of his mission, along with Jeremy Curtis (Head of Education and Outreach, UK Space Agency). There was a good chance of a Q&A and for delegates to engage with Tim. He revealed how his mission is being prepared and how his food and drinks will be sent up in advance, sharing his love of Yorkshire Tea. Sheffield SEDS (ShefSEDS) tweeted this, amusingly re-tweeted and replied to by Yorkshire Tea:\n\n\nOur Saturday keynote included Prof. Richard Brown from the Centre for Future Air-Space Transportation Technology, University of Strathclyde who gave a very inspiring talk on ‘Shock Waves and the Design of Future Spacecraft’.\n\nFollowing this, delegates were invited to a networking reception, kindly sponsored by Reaction Engines Ltd. After which, delegates could attend the UKSEDS social and enjoy a tasty buffet meal and mingle with other delegates.\n\nSunday morning started with Dr David Parker (CEO, UK Space Agency) who spoke about the latest developments on UK Space activities.\n\nThroughout the weekend Telespazio Vega Deutschland demonstrated their Satellite Operations Training simulator, allowing delegates to simulate real in-orbit satellite operations throughout the conference.\n\nThe conference would not have been possible without the kind sponsorship of Reaction Engines, Telespazio VEGA Deutschland, UK Space Agency, HE Space, Printech Circuit Laboratories, Sapienza Consulting, Institution of Mechanical Engineers, Royal Aeronautical Society, Serco Group, AstroGnome, International Space University, RAL Space, and Avanti Communications Group plc, and the support of the British Interplanetary Society, ESERO-UK, European Southern Observatory (ESO), ESA Education Office, AstRoSoc Leicester, University of Leicester Department of Physics and Astronomy, Leicester Astronomical Society and EUROAVIA.\n\nMany thanks also to all our wonderful speakers throughout the conference. Presentations will be made available on our conference site at: ukseds.org/nssc2014",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/nssc2014.md"
+  },
+  {
+    "slug": "nssc2013",
+    "id": 41,
+    "title": "National Student Space Conference 2013",
+    "featured": false,
+    "draft": false,
+    "type": "conference",
+    "status": "completed",
+    "description": "In 2013, the National Student Space Conference was hosted by Bristol SEDS at the University of Bristol. Our keynote speakers for the event included Dr Ralph Lorenz of the John Hopkins University Applied Physics Lab on “Exploring Titan” and Dr Jason Hatton of the European Space Agency on “The ESA ELIPS programme and European ISS Utilisation”. This year was also the 25th anniversary of the founding of UKSEDS, and we had a ‘Birthday Social’ aboard the boat ‘Under the Stars’ in Bristol Harbour!",
+    "startDate": "2013-02-23T00:00:00.000Z",
+    "endDate": "2013-02-24T00:00:00.000Z",
+    "tags": [
+      "nssc",
+      "ukseds",
+      "conference"
+    ],
+    "links": {
+      "web": "https://www.bristol.ac.uk/news/2013/9161.html"
+    },
+    "heroImage": "/images/events/nssc2013_large_black_full-4174962635.png",
+    "impact": {},
+    "relatedCaseStudies": [
+      "nssc"
+    ],
+    "relatedVolunteering": [
+      "vol-ukseds-secretary"
+    ],
+    "organiser": "UKSEDS",
+    "coOrganisers": [
+      {
+        "name": "BristolSEDS"
+      },
+      {
+        "name": "Bristol CHAOS"
+      }
+    ],
+    "speakers": [
+      "person1",
+      "person2"
+    ],
+    "hosts": [
+      "University of Bristol"
+    ],
+    "location": {
+      "name": "University of Bristol",
+      "address": "Guildford, Surrey",
+      "city": "Bristol",
+      "region": "Surrey",
+      "country": "United Kingdom",
+      "postalCode": "GU2 7XH",
+      "online": false
+    },
+    "format": "in-person",
+    "content": "https://ukseds.org/2013/03/ukseds-national-student-space-conference-2013-25th-anniversary/",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/nssc2013.md"
+  },
+  {
+    "slug": "midlandsspace-online4",
+    "id": 41,
+    "title": "Midlands Space Networking (online)",
+    "featured": false,
+    "draft": false,
+    "type": "webinar",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2021-04-22T16:00:00.000Z",
+    "endDate": "2021-04-22T18:00:00.000Z",
+    "tags": [
+      "spacehour",
+      "hangout",
+      "broadcast"
+    ],
+    "links": {
+      "web": "https://www.eventbrite.co.uk/e/midlands-space-networking-online-registration-145165021487"
+    },
+    "impact": {},
+    "heroImage": "/images/events/msn4.webp",
+    "heroAlt": "SpaceHour Thumbnail",
+    "imageCredit": "Ryan Laird",
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "spacehour"
+    ],
+    "organiser": "Ryan Laird",
+    "speakers": [
+      "person1",
+      "person2"
+    ],
+    "location": {
+      "online": true,
+      "onlineUrl": "https://www.eventbrite.co.uk/e/midlands-space-networking-online-registration-145165021487"
+    },
+    "format": "online",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/midlandsspace-online4.md"
+  },
+  {
+    "slug": "midlandsspace-online3",
+    "id": 41,
+    "title": "Midlands Space Networking (online)",
+    "featured": false,
+    "draft": false,
+    "type": "webinar",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2021-02-17T16:00:00.000Z",
+    "endDate": "2021-02-17T18:00:00.000Z",
+    "tags": [
+      "spacehour",
+      "hangout",
+      "broadcast"
+    ],
+    "links": {
+      "web": "https://www.eventbrite.co.uk/e/midlands-space-networking-online-registration-138755337951"
+    },
+    "impact": {},
+    "heroImage": "/images/events/msn3.webp",
+    "heroAlt": "SpaceHour Thumbnail",
+    "imageCredit": "Ryan Laird",
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "spacehour"
+    ],
+    "organiser": "Ryan Laird",
+    "speakers": [
+      "person1",
+      "person2"
+    ],
+    "location": {
+      "online": true,
+      "onlineUrl": "https://www.eventbrite.co.uk/e/midlands-space-networking-online-registration-138755337951"
+    },
+    "format": "online",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/midlandsspace-online3.md"
+  },
+  {
+    "slug": "midlandsspace-online2",
+    "id": 41,
+    "title": "Midlands Space Networking (online)",
+    "featured": false,
+    "draft": false,
+    "type": "webinar",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2020-07-29T16:00:00.000Z",
+    "endDate": "2020-07-29T18:00:00.000Z",
+    "tags": [
+      "spacehour",
+      "hangout",
+      "broadcast"
+    ],
+    "links": {
+      "web": "https://www.eventbrite.co.uk/e/midlands-space-networking-online-registration-113093116556"
+    },
+    "impact": {},
+    "heroImage": "/images/events/msn2.webp",
+    "heroAlt": "SpaceHour Thumbnail",
+    "imageCredit": "Ryan Laird",
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "spacehour"
+    ],
+    "organiser": "Ryan Laird",
+    "speakers": [
+      "person1",
+      "person2"
+    ],
+    "location": {
+      "online": true,
+      "onlineUrl": "https://www.eventbrite.co.uk/e/midlands-space-networking-online-registration-113093116556"
+    },
+    "format": "online",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/midlandsspace-online2.md"
+  },
+  {
+    "slug": "midlandsspace-online1",
+    "id": 41,
+    "title": "Midlands Space Networking (online)",
+    "featured": false,
+    "draft": false,
+    "type": "webinar",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2020-06-10T16:00:00.000Z",
+    "endDate": "2020-06-10T18:00:00.000Z",
+    "tags": [
+      "spacehour",
+      "hangout",
+      "broadcast"
+    ],
+    "links": {
+      "web": "https://www.eventbrite.co.uk/e/midlands-space-networking-online-registration-106251115948"
+    },
+    "impact": {},
+    "heroImage": "/images/events/msn1.webp",
+    "heroAlt": "SpaceHour Thumbnail",
+    "imageCredit": "Ryan Laird",
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "spacehour"
+    ],
+    "organiser": "Ryan Laird",
+    "speakers": [
+      "person1",
+      "person2"
+    ],
+    "location": {
+      "online": true,
+      "onlineUrl": "https://www.eventbrite.co.uk/e/midlands-space-networking-online-registration-106251115948"
+    },
+    "format": "online",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/midlandsspace-online1.md"
+  },
+  {
+    "slug": "leicscicomm3",
+    "id": 41,
+    "title": "Leicester SciComm",
+    "featured": false,
+    "draft": false,
+    "type": "networking",
+    "status": "completed",
+    "description": "A collaborative space for creatives, researchers and science communicators in/around Leicester to share news, ideas, upcoming events and thoughts on outreach and public engagement activities.",
+    "startDate": "2018-09-12T18:00:00.000Z",
+    "endDate": "2018-09-12T20:00:00.000Z",
+    "tags": [
+      "leicester",
+      "scicomm",
+      "networking"
+    ],
+    "links": {
+      "web": "https://leicscicomm.eventbrite.com"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "leicscicomm"
+    ],
+    "heroImage": "/images/events/leicscicomm3.webp",
+    "organiser": "Leicester SciComm",
+    "hosts": [
+      "The Parcel Yard"
+    ],
+    "location": {
+      "name": "The Parcel Yard",
+      "address": "48a London Road",
+      "city": "Leicester",
+      "region": "Leicestershire",
+      "country": "United Kingdom",
+      "postalCode": "LE2 0QB",
+      "online": false
+    },
+    "format": "in-person",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/leicscicomm3.md"
+  },
+  {
+    "slug": "leicscicomm2",
+    "id": 41,
+    "title": "Leicester SciComm",
+    "featured": false,
+    "draft": false,
+    "type": "networking",
+    "status": "completed",
+    "description": "A collaborative space for creatives, researchers and science communicators in/around Leicester to share news, ideas, upcoming events and thoughts on outreach and public engagement activities.",
+    "startDate": "2018-08-15T18:00:00.000Z",
+    "endDate": "2018-08-15T20:00:00.000Z",
+    "tags": [
+      "leicester",
+      "scicomm",
+      "networking"
+    ],
+    "links": {
+      "web": "https://leicscicomm.eventbrite.com"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "leicscicomm"
+    ],
+    "heroImage": "/images/events/leicscicomm2.webp",
+    "organiser": "Leicester SciComm",
+    "hosts": [
+      "The Parcel Yard"
+    ],
+    "location": {
+      "name": "The Parcel Yard",
+      "address": "48a London Road",
+      "city": "Leicester",
+      "region": "Leicestershire",
+      "country": "United Kingdom",
+      "postalCode": "LE2 0QB",
+      "online": false
+    },
+    "format": "in-person",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/leicscicomm2.md"
+  },
+  {
+    "slug": "leicscicomm1",
+    "id": 41,
+    "title": "Leicester SciComm",
+    "featured": false,
+    "draft": false,
+    "type": "networking",
+    "status": "completed",
+    "description": "A collaborative space for creatives, researchers and science communicators in/around Leicester to share news, ideas, upcoming events and thoughts on outreach and public engagement activities.",
+    "startDate": "2018-07-18T18:00:00.000Z",
+    "endDate": "2018-07-18T20:00:00.000Z",
+    "tags": [
+      "leicester",
+      "scicomm",
+      "networking"
+    ],
+    "links": {
+      "web": "https://leicscicomm.eventbrite.com"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "leicscicomm"
+    ],
+    "heroImage": "/images/events/leicscicomm1.webp",
+    "organiser": "Leicester SciComm",
+    "hosts": [
+      "The Parcel Yard"
+    ],
+    "location": {
+      "name": "The Parcel Yard",
+      "address": "48a London Road",
+      "city": "Leicester",
+      "region": "Leicestershire",
+      "country": "United Kingdom",
+      "postalCode": "LE2 0QB",
+      "online": false
+    },
+    "format": "in-person",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/leicscicomm1.md"
+  },
+  {
+    "slug": "lcc9",
+    "id": 41,
+    "title": "Leicester Coffee Club",
+    "featured": false,
+    "draft": false,
+    "type": "networking",
+    "status": "completed",
+    "description": "Open Coffee Club is a simple idea - have a fixed time and place where entrepreneurs, investors, developers and marketers involved and interested in startups could get together in a really informal setting to meet, chat and make connections.",
+    "startDate": "2019-09-17T08:00:00.000Z",
+    "endDate": "2019-09-17T09:00:00.000Z",
+    "tags": [
+      "leicester",
+      "coffee",
+      "networking"
+    ],
+    "links": {
+      "web": "https://www.eventbrite.co.uk/o/leicester-open-coffee-club-18538532655"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "lcc"
+    ],
+    "heroImage": "/images/initiatives/lcc.webp",
+    "organiser": "Ryan Laird",
+    "hosts": [
+      "Leicester Coffee House Company"
+    ],
+    "location": {
+      "name": "Leicester Coffee House Company",
+      "address": "Granby Street",
+      "city": "Leicester",
+      "region": "Leicestershire",
+      "country": "United Kingdom",
+      "postalCode": "LE1 7RH",
+      "online": false
+    },
+    "format": "in-person",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/lcc9.md"
+  },
+  {
+    "slug": "lcc8",
+    "id": 41,
+    "title": "Leicester Coffee Club",
+    "featured": false,
+    "draft": false,
+    "type": "networking",
+    "status": "completed",
+    "description": "Open Coffee Club is a simple idea - have a fixed time and place where entrepreneurs, investors, developers and marketers involved and interested in startups could get together in a really informal setting to meet, chat and make connections.",
+    "startDate": "2019-08-08T08:00:00.000Z",
+    "endDate": "2019-08-08T10:00:00.000Z",
+    "tags": [
+      "leicester",
+      "coffee",
+      "networking"
+    ],
+    "links": {
+      "web": "https://www.eventbrite.co.uk/o/leicester-open-coffee-club-18538532655"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "lcc"
+    ],
+    "heroImage": "/images/initiatives/lcc.webp",
+    "organiser": "Ryan Laird",
+    "hosts": [
+      "Leicester Coffee House Company"
+    ],
+    "location": {
+      "name": "Leicester Coffee House Company",
+      "address": "Granby Street",
+      "city": "Leicester",
+      "region": "Leicestershire",
+      "country": "United Kingdom",
+      "postalCode": "LE1 7RH",
+      "online": false
+    },
+    "format": "in-person",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/lcc8.md"
+  },
+  {
+    "slug": "lcc7",
+    "id": 41,
+    "title": "Leicester Coffee Club",
+    "featured": false,
+    "draft": false,
+    "type": "networking",
+    "status": "completed",
+    "description": "Open Coffee Club is a simple idea - have a fixed time and place where entrepreneurs, investors, developers and marketers involved and interested in startups could get together in a really informal setting to meet, chat and make connections.",
+    "startDate": "2019-07-11T08:00:00.000Z",
+    "endDate": "2019-07-11T09:00:00.000Z",
+    "tags": [
+      "leicester",
+      "coffee",
+      "networking"
+    ],
+    "links": {
+      "web": "https://www.eventbrite.co.uk/o/leicester-open-coffee-club-18538532655"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "lcc"
+    ],
+    "heroImage": "/images/initiatives/lcc.webp",
+    "organiser": "Ryan Laird",
+    "hosts": [
+      "Leicester Coffee House Company"
+    ],
+    "location": {
+      "name": "Leicester Coffee House Company",
+      "address": "Granby Street",
+      "city": "Leicester",
+      "region": "Leicestershire",
+      "country": "United Kingdom",
+      "postalCode": "LE1 7RH",
+      "online": false
+    },
+    "format": "in-person",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/lcc7.md"
+  },
+  {
+    "slug": "lcc6",
+    "id": 41,
+    "title": "Leicester Coffee Club",
+    "featured": false,
+    "draft": false,
+    "type": "networking",
+    "status": "completed",
+    "description": "Open Coffee Club is a simple idea - have a fixed time and place where entrepreneurs, investors, developers and marketers involved and interested in startups could get together in a really informal setting to meet, chat and make connections.",
+    "startDate": "2021-04-01T08:00:00.000Z",
+    "endDate": "2021-04-01T09:00:00.000Z",
+    "tags": [
+      "leicester",
+      "coffee",
+      "networking"
+    ],
+    "links": {
+      "web": "https://www.eventbrite.co.uk/o/leicester-open-coffee-club-18538532655"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "lcc"
+    ],
+    "heroImage": "/images/initiatives/lcc.webp",
+    "organiser": "Ryan Laird",
+    "hosts": [
+      "Leicester Coffee House Company"
+    ],
+    "location": {
+      "name": "Leicester Coffee House Company",
+      "address": "Granby Street",
+      "city": "Leicester",
+      "region": "Leicestershire",
+      "country": "United Kingdom",
+      "postalCode": "LE1 7RH",
+      "online": false
+    },
+    "format": "in-person",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/lcc6.md"
+  },
+  {
+    "slug": "lcc5",
+    "id": 41,
+    "title": "Leicester Coffee Club",
+    "featured": false,
+    "draft": false,
+    "type": "networking",
+    "status": "completed",
+    "description": "Open Coffee Club is a simple idea - have a fixed time and place where entrepreneurs, investors, developers and marketers involved and interested in startups could get together in a really informal setting to meet, chat and make connections.",
+    "startDate": "2019-05-09T08:00:00.000Z",
+    "endDate": "2019-05-09T09:00:00.000Z",
+    "tags": [
+      "leicester",
+      "coffee",
+      "networking"
+    ],
+    "links": {
+      "web": "https://www.eventbrite.co.uk/o/leicester-open-coffee-club-18538532655"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "lcc"
+    ],
+    "heroImage": "/images/initiatives/lcc.webp",
+    "organiser": "Ryan Laird",
+    "hosts": [
+      "Leicester Coffee House Company"
+    ],
+    "location": {
+      "name": "Leicester Coffee House Company",
+      "address": "Granby Street",
+      "city": "Leicester",
+      "region": "Leicestershire",
+      "country": "United Kingdom",
+      "postalCode": "LE1 7RH",
+      "online": false
+    },
+    "format": "in-person",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/lcc5.md"
+  },
+  {
+    "slug": "lcc4",
+    "id": 41,
+    "title": "Leicester Coffee Club",
+    "featured": false,
+    "draft": false,
+    "type": "networking",
+    "status": "completed",
+    "description": "Open Coffee Club is a simple idea - have a fixed time and place where entrepreneurs, investors, developers and marketers involved and interested in startups could get together in a really informal setting to meet, chat and make connections.",
+    "startDate": "2019-04-11T08:00:00.000Z",
+    "endDate": "2019-04-11T09:00:00.000Z",
+    "tags": [
+      "leicester",
+      "coffee",
+      "networking"
+    ],
+    "links": {
+      "web": "https://www.eventbrite.co.uk/o/leicester-open-coffee-club-18538532655"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "lcc"
+    ],
+    "heroImage": "/images/initiatives/lcc.webp",
+    "organiser": "Ryan Laird",
+    "hosts": [
+      "Leicester Coffee House Company"
+    ],
+    "location": {
+      "name": "Leicester Coffee House Company",
+      "address": "Granby Street",
+      "city": "Leicester",
+      "region": "Leicestershire",
+      "country": "United Kingdom",
+      "postalCode": "LE1 7RH",
+      "online": false
+    },
+    "format": "in-person",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/lcc4.md"
+  },
+  {
+    "slug": "lcc3",
+    "id": 41,
+    "title": "Leicester Coffee Club",
+    "featured": false,
+    "draft": false,
+    "type": "networking",
+    "status": "completed",
+    "description": "Open Coffee Club is a simple idea - have a fixed time and place where entrepreneurs, investors, developers and marketers involved and interested in startups could get together in a really informal setting to meet, chat and make connections.",
+    "startDate": "2019-03-14T08:00:00.000Z",
+    "endDate": "2019-03-14T09:00:00.000Z",
+    "tags": [
+      "leicester",
+      "coffee",
+      "networking"
+    ],
+    "links": {
+      "web": "https://www.eventbrite.co.uk/o/leicester-open-coffee-club-18538532655"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "lcc"
+    ],
+    "heroImage": "/images/initiatives/lcc.webp",
+    "organiser": "Ryan Laird",
+    "hosts": [
+      "Leicester Coffee House Company"
+    ],
+    "location": {
+      "name": "Leicester Coffee House Company",
+      "address": "Granby Street",
+      "city": "Leicester",
+      "region": "Leicestershire",
+      "country": "United Kingdom",
+      "postalCode": "LE1 7RH",
+      "online": false
+    },
+    "format": "in-person",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/lcc3.md"
+  },
+  {
+    "slug": "lcc2",
+    "id": 41,
+    "title": "Leicester Coffee Club",
+    "featured": false,
+    "draft": false,
+    "type": "networking",
+    "status": "completed",
+    "description": "Open Coffee Club is a simple idea - have a fixed time and place where entrepreneurs, investors, developers and marketers involved and interested in startups could get together in a really informal setting to meet, chat and make connections.",
+    "startDate": "2019-02-14T08:00:00.000Z",
+    "endDate": "2019-02-14T09:00:00.000Z",
+    "tags": [
+      "leicester",
+      "coffee",
+      "networking"
+    ],
+    "links": {
+      "web": "https://www.eventbrite.co.uk/o/leicester-open-coffee-club-18538532655"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "lcc"
+    ],
+    "heroImage": "/images/initiatives/lcc.webp",
+    "organiser": "Ryan Laird",
+    "hosts": [
+      "Leicester Coffee House Company"
+    ],
+    "location": {
+      "name": "Leicester Coffee House Company",
+      "address": "Granby Street",
+      "city": "Leicester",
+      "region": "Leicestershire",
+      "country": "United Kingdom",
+      "postalCode": "LE1 7RH",
+      "online": false
+    },
+    "format": "in-person",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/lcc2.md"
+  },
+  {
+    "slug": "lcc15",
+    "id": 41,
+    "title": "Leicester Coffee Club",
+    "featured": false,
+    "draft": false,
+    "type": "networking",
+    "status": "completed",
+    "description": "Open Coffee Club is a simple idea - have a fixed time and place where entrepreneurs, investors, developers and marketers involved and interested in startups could get together in a really informal setting to meet, chat and make connections.",
+    "startDate": "2020-03-03T09:00:00.000Z",
+    "endDate": "2020-03-03T10:00:00.000Z",
+    "tags": [
+      "leicester",
+      "coffee",
+      "networking"
+    ],
+    "links": {
+      "web": "https://www.eventbrite.co.uk/o/leicester-open-coffee-club-18538532655"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "lcc"
+    ],
+    "heroImage": "/images/initiatives/lcc.webp",
+    "organiser": "Ryan Laird",
+    "hosts": [
+      "Leicester Coffee House Company"
+    ],
+    "location": {
+      "name": "Leicester Coffee House Company",
+      "address": "Granby Street",
+      "city": "Leicester",
+      "region": "Leicestershire",
+      "country": "United Kingdom",
+      "postalCode": "LE1 7RH",
+      "online": false
+    },
+    "format": "in-person",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/lcc15.md"
+  },
+  {
+    "slug": "lcc14",
+    "id": 41,
+    "title": "Leicester Coffee Club",
+    "featured": false,
+    "draft": false,
+    "type": "networking",
+    "status": "completed",
+    "description": "Open Coffee Club is a simple idea - have a fixed time and place where entrepreneurs, investors, developers and marketers involved and interested in startups could get together in a really informal setting to meet, chat and make connections.",
+    "startDate": "2020-02-04T09:00:00.000Z",
+    "endDate": "2020-02-04T10:00:00.000Z",
+    "tags": [
+      "leicester",
+      "coffee",
+      "networking"
+    ],
+    "links": {
+      "web": "https://www.eventbrite.co.uk/o/leicester-open-coffee-club-18538532655"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "lcc"
+    ],
+    "heroImage": "/images/initiatives/lcc.webp",
+    "organiser": "Ryan Laird",
+    "hosts": [
+      "Leicester Coffee House Company"
+    ],
+    "location": {
+      "name": "Leicester Coffee House Company",
+      "address": "Granby Street",
+      "city": "Leicester",
+      "region": "Leicestershire",
+      "country": "United Kingdom",
+      "postalCode": "LE1 7RH",
+      "online": false
+    },
+    "format": "in-person",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/lcc14.md"
+  },
+  {
+    "slug": "lcc13",
+    "id": 41,
+    "title": "Leicester Coffee Club",
+    "featured": false,
+    "draft": false,
+    "type": "networking",
+    "status": "completed",
+    "description": "Open Coffee Club is a simple idea - have a fixed time and place where entrepreneurs, investors, developers and marketers involved and interested in startups could get together in a really informal setting to meet, chat and make connections.",
+    "startDate": "2020-01-07T09:00:00.000Z",
+    "endDate": "2020-01-07T10:00:00.000Z",
+    "tags": [
+      "leicester",
+      "coffee",
+      "networking"
+    ],
+    "links": {
+      "web": "https://www.eventbrite.co.uk/o/leicester-open-coffee-club-18538532655"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "lcc"
+    ],
+    "heroImage": "/images/initiatives/lcc.webp",
+    "organiser": "Ryan Laird",
+    "hosts": [
+      "Leicester Coffee House Company"
+    ],
+    "location": {
+      "name": "Leicester Coffee House Company",
+      "address": "Granby Street",
+      "city": "Leicester",
+      "region": "Leicestershire",
+      "country": "United Kingdom",
+      "postalCode": "LE1 7RH",
+      "online": false
+    },
+    "format": "in-person",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/lcc13.md"
+  },
+  {
+    "slug": "lcc12",
+    "id": 41,
+    "title": "Leicester Coffee Club",
+    "featured": false,
+    "draft": false,
+    "type": "networking",
+    "status": "completed",
+    "description": "Open Coffee Club is a simple idea - have a fixed time and place where entrepreneurs, investors, developers and marketers involved and interested in startups could get together in a really informal setting to meet, chat and make connections.",
+    "startDate": "2019-12-10T09:00:00.000Z",
+    "endDate": "2019-12-10T10:00:00.000Z",
+    "tags": [
+      "leicester",
+      "coffee",
+      "networking"
+    ],
+    "links": {
+      "web": "https://www.eventbrite.co.uk/o/leicester-open-coffee-club-18538532655"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "lcc"
+    ],
+    "heroImage": "/images/initiatives/lcc.webp",
+    "organiser": "Ryan Laird",
+    "hosts": [
+      "Leicester Coffee House Company"
+    ],
+    "location": {
+      "name": "Leicester Coffee House Company",
+      "address": "Granby Street",
+      "city": "Leicester",
+      "region": "Leicestershire",
+      "country": "United Kingdom",
+      "postalCode": "LE1 7RH",
+      "online": false
+    },
+    "format": "in-person",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/lcc12.md"
+  },
+  {
+    "slug": "lcc11",
+    "id": 41,
+    "title": "Leicester Coffee Club",
+    "featured": false,
+    "draft": false,
+    "type": "networking",
+    "status": "completed",
+    "description": "Open Coffee Club is a simple idea - have a fixed time and place where entrepreneurs, investors, developers and marketers involved and interested in startups could get together in a really informal setting to meet, chat and make connections.",
+    "startDate": "2019-11-12T09:00:00.000Z",
+    "endDate": "2019-11-12T10:00:00.000Z",
+    "tags": [
+      "leicester",
+      "coffee",
+      "networking"
+    ],
+    "links": {
+      "web": "https://www.eventbrite.co.uk/o/leicester-open-coffee-club-18538532655"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "lcc"
+    ],
+    "heroImage": "/images/initiatives/lcc.webp",
+    "organiser": "Ryan Laird",
+    "hosts": [
+      "Leicester Coffee House Company"
+    ],
+    "location": {
+      "name": "Leicester Coffee House Company",
+      "address": "Granby Street",
+      "city": "Leicester",
+      "region": "Leicestershire",
+      "country": "United Kingdom",
+      "postalCode": "LE1 7RH",
+      "online": false
+    },
+    "format": "in-person",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/lcc11.md"
+  },
+  {
+    "slug": "lcc10",
+    "id": 41,
+    "title": "Leicester Coffee Club",
+    "featured": false,
+    "draft": false,
+    "type": "networking",
+    "status": "completed",
+    "description": "Open Coffee Club is a simple idea - have a fixed time and place where entrepreneurs, investors, developers and marketers involved and interested in startups could get together in a really informal setting to meet, chat and make connections.",
+    "startDate": "2019-10-15T09:00:00.000Z",
+    "endDate": "2019-10-15T11:00:00.000Z",
+    "tags": [
+      "leicester",
+      "coffee",
+      "networking"
+    ],
+    "links": {
+      "web": "https://www.eventbrite.co.uk/o/leicester-open-coffee-club-18538532655"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "lcc"
+    ],
+    "heroImage": "/images/initiatives/lcc.webp",
+    "organiser": "Ryan Laird",
+    "hosts": [
+      "Leicester Coffee House Company"
+    ],
+    "location": {
+      "name": "Leicester Coffee House Company",
+      "address": "Granby Street",
+      "city": "Leicester",
+      "region": "Leicestershire",
+      "country": "United Kingdom",
+      "postalCode": "LE1 7RH",
+      "online": false
+    },
+    "format": "in-person",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/lcc10.md"
+  },
+  {
+    "slug": "lcc1",
+    "id": 41,
+    "title": "Leicester Coffee Club",
+    "featured": false,
+    "draft": false,
+    "type": "networking",
+    "status": "completed",
+    "description": "Open Coffee Club is a simple idea - have a fixed time and place where entrepreneurs, investors, developers and marketers involved and interested in startups could get together in a really informal setting to meet, chat and make connections.",
+    "startDate": "2019-02-14T09:00:00.000Z",
+    "endDate": "2019-02-14T10:00:00.000Z",
+    "tags": [
+      "leicester",
+      "coffee",
+      "networking"
+    ],
+    "links": {
+      "web": "https://www.eventbrite.co.uk/o/leicester-open-coffee-club-18538532655"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "lcc"
+    ],
+    "heroImage": "/images/initiatives/lcc.webp",
+    "organiser": "Ryan Laird",
+    "hosts": [
+      "Leicester Coffee House Company"
+    ],
+    "location": {
+      "name": "Leicester Coffee House Company",
+      "address": "Granby Street",
+      "city": "Leicester",
+      "region": "Leicestershire",
+      "country": "United Kingdom",
+      "postalCode": "LE1 7RH",
+      "online": false
+    },
+    "format": "in-person",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/lcc1.md"
+  },
+  {
+    "slug": "lcc-online3",
+    "id": 41,
+    "title": "Leicester Coffee Club - Online",
+    "featured": false,
+    "draft": false,
+    "type": "networking",
+    "status": "completed",
+    "description": "Open Coffee Club is a simple idea - have a fixed time and place where entrepreneurs, investors, developers and marketers involved and interested in startups could get together in a really informal setting to meet, chat and make connections.",
+    "startDate": "2020-04-07T09:00:00.000Z",
+    "endDate": "2020-04-07T10:00:00.000Z",
+    "tags": [
+      "leicester",
+      "coffee",
+      "networking"
+    ],
+    "links": {
+      "web": "https://www.eventbrite.co.uk/o/leicester-open-coffee-club-18538532655"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "lcc"
+    ],
+    "heroImage": "/images/initiatives/lcc.webp",
+    "organiser": "Ryan Laird",
+    "hosts": [
+      "Leicester Coffee House Company"
+    ],
+    "location": {
+      "online": true,
+      "onlineUrl": "https://www.eventbrite.co.uk/o/leicester-open-coffee-club-18538532655"
+    },
+    "format": "online",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/lcc-online3.md"
+  },
+  {
+    "slug": "lcc-online2",
+    "id": 41,
+    "title": "Leicester Coffee Club - Online",
+    "featured": false,
+    "draft": false,
+    "type": "networking",
+    "status": "completed",
+    "description": "Open Coffee Club is a simple idea - have a fixed time and place where entrepreneurs, investors, developers and marketers involved and interested in startups could get together in a really informal setting to meet, chat and make connections.",
+    "startDate": "2020-04-07T09:00:00.000Z",
+    "endDate": "2020-04-07T10:00:00.000Z",
+    "tags": [
+      "leicester",
+      "coffee",
+      "networking"
+    ],
+    "links": {
+      "web": "https://www.eventbrite.co.uk/o/leicester-open-coffee-club-18538532655"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "lcc"
+    ],
+    "heroImage": "/images/initiatives/lcc.webp",
+    "organiser": "Ryan Laird",
+    "hosts": [
+      "Leicester Coffee House Company"
+    ],
+    "location": {
+      "online": true,
+      "onlineUrl": "https://www.eventbrite.co.uk/o/leicester-open-coffee-club-18538532655"
+    },
+    "format": "online",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/lcc-online2.md"
+  },
+  {
+    "slug": "lcc-online",
+    "id": 41,
+    "title": "Leicester Coffee Club - Online",
+    "featured": false,
+    "draft": false,
+    "type": "networking",
+    "status": "completed",
+    "description": "Open Coffee Club is a simple idea - have a fixed time and place where entrepreneurs, investors, developers and marketers involved and interested in startups could get together in a really informal setting to meet, chat and make connections.",
+    "startDate": "2020-04-07T08:00:00.000Z",
+    "endDate": "2020-04-07T09:00:00.000Z",
+    "tags": [
+      "leicester",
+      "coffee",
+      "networking"
+    ],
+    "links": {
+      "web": "https://www.eventbrite.co.uk/o/leicester-open-coffee-club-18538532655"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "lcc"
+    ],
+    "heroImage": "/images/initiatives/lcc.webp",
+    "organiser": "Ryan Laird",
+    "hosts": [
+      "Leicester Coffee House Company"
+    ],
+    "location": {
+      "online": true,
+      "onlineUrl": "https://www.eventbrite.co.uk/o/leicester-open-coffee-club-18538532655"
+    },
+    "format": "online",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/lcc-online.md"
+  },
+  {
+    "slug": "innospaceweekend2017",
+    "id": 41,
+    "title": "InnoSpace Weekend 2017",
+    "type": "hackathon",
+    "status": "completed",
+    "description": "During the 1st INNOspace Weekend you will learn about space, automotive and logistics, and identify challenges in each of those sectors. You will apply the design thinking process to innovate real-life problems and generate multiple ideas in a constructive way. Resources will be made available for you to build your own prototype to be able to test and validate with potential customers.",
+    "startDate": "2017-09-15T07:00:00.000Z",
+    "endDate": "2017-09-17T15:00:00.000Z",
+    "tags": [
+      "innospace",
+      "dlr",
+      "entrepreneurship"
+    ],
+    "youtubeId": "4DccpiuX9Xw",
+    "links": {
+      "web": "https://innospaceweekend.de",
+      "youtube": "https://youtu.be/4DccpiuX9Xw?is=uz0pkk9eU5Yykm0L"
+    },
+    "impact": {},
+    "client": "DLR",
+    "relatedExperience": [
+      "exp-design-and-data"
+    ],
+    "heroImage": "/images/projects/innospace-weekend.jpg",
+    "heroAlt": "INNOspace Weekend Logo",
+    "imageCredit": "DLR",
+    "sectors": [
+      "logistics",
+      "automotive",
+      "space"
+    ],
+    "relatedVideos": [
+      "3ifypFNULlM",
+      "4DccpiuX9Xw"
+    ],
+    "organiser": "Design & Data GmbH",
+    "speakers": [
+      "person1",
+      "person2"
+    ],
+    "hosts": [
+      "DLR"
+    ],
+    "location": {
+      "name": "Solution Space",
+      "address": "",
+      "city": "Cologne",
+      "region": "NRW",
+      "country": "Germany",
+      "postalCode": "",
+      "online": false
+    },
+    "format": "in-person",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/innospaceweekend2017.md"
+  },
+  {
+    "slug": "impulse2022",
+    "id": 41,
+    "title": "Impulse 2022",
+    "type": "conference",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2022-03-23T14:00:00.000Z",
+    "endDate": "2022-03-24T16:00:00.000Z",
+    "tags": [
+      "impulse",
+      "powering-space",
+      "outreach"
+    ],
+    "links": {
+      "web": "https://powering.space"
+    },
+    "impact": {},
+    "relatedCaseStudies": [
+      "impulse"
+    ],
+    "heroImage": "/images/projects/impulse2022.jpg",
+    "heroAlt": "Impulse 2022 banner",
+    "imageCredit": "Powering Space",
+    "relatedExperience": [
+      "exp-powering-space"
+    ],
+    "organiser": "Powering Space",
+    "speakers": [
+      "person1",
+      "person2"
+    ],
+    "location": {
+      "online": true,
+      "onlineUrl": "https://powering.space"
+    },
+    "content": "# \n",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/impulse2022.md"
+  },
+  {
+    "slug": "impulse2021",
+    "id": 41,
+    "title": "Impulse 2021",
+    "type": "conference",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2021-04-09T14:00:00.000Z",
+    "endDate": "2021-04-09T16:00:00.000Z",
+    "tags": [
+      "impulse",
+      "powering-space",
+      "outreach"
+    ],
+    "links": {
+      "web": "https://powering.space"
+    },
+    "impact": {},
+    "relatedCaseStudies": [
+      "impulse"
+    ],
+    "heroImage": "/images/projects/impulse2021.jpg",
+    "heroAlt": "Impulse 2021 banner",
+    "imageCredit": "Powering Space",
+    "relatedExperience": [
+      "exp-powering-space"
+    ],
+    "organiser": "Powering Space",
+    "speakers": [
+      "person1",
+      "person2"
+    ],
+    "location": {
+      "online": true,
+      "onlineUrl": "https://powering.space"
+    },
+    "content": "# \n",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/impulse2021.md"
+  },
+  {
+    "slug": "commercial-space-stories",
+    "id": 41,
+    "title": "Commercial Space stories from the US to Europe",
+    "type": "networking",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2016-08-19T01:30:00.000Z",
+    "endDate": "2016-08-19T04:30:00.000Z",
+    "tags": [
+      "impulse",
+      "powering-space",
+      "outreach"
+    ],
+    "links": {
+      "web": "https://powering.space"
+    },
+    "impact": {},
+    "relatedCaseStudies": [
+      "impulse"
+    ],
+    "heroImage": "/images/projects/impulse2022.jpg",
+    "heroAlt": "Impulse 2022 banner",
+    "imageCredit": "Powering Space",
+    "relatedExperience": [
+      "exp-design-and-data"
+    ],
+    "organiser": "Design & Data GmbH",
+    "speakers": [
+      "person1",
+      "person2"
+    ],
+    "location": {
+      "online": true,
+      "onlineUrl": "https://powering.space"
+    },
+    "content": "# \n\n\n",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/commercial-space-stories.md"
+  },
+  {
+    "slug": "lcc1",
+    "id": 41,
+    "title": "Leicester Coffee Club",
+    "featured": false,
+    "draft": false,
+    "type": "networking",
+    "status": "completed",
+    "description": "Open Coffee Club is a simple idea - have a fixed time and place where entrepreneurs, investors, developers and marketers involved and interested in startups could get together in a really informal setting to meet, chat and make connections.",
+    "startDate": "2019-02-14T09:00:00.000Z",
+    "endDate": "2019-02-14T10:00:00.000Z",
+    "tags": [
+      "leicester",
+      "coffee",
+      "networking"
+    ],
+    "links": {
+      "web": "https://www.eventbrite.co.uk/o/leicester-open-coffee-club-18538532655"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-freelance"
+    ],
+    "relatedInitiatives": [
+      "lcc"
+    ],
+    "heroImage": "/images/initiatives/lcc.webp",
+    "organiser": "Ryan Laird",
+    "hosts": [
+      "Leicester Coffee House Company"
+    ],
+    "location": {
+      "name": "Leicester Coffee House Company",
+      "address": "Granby Street",
+      "city": "Leicester",
+      "region": "Leicestershire",
+      "country": "United Kingdom",
+      "postalCode": "LE1 7RH",
+      "online": false
+    },
+    "format": "in-person",
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/brohp.md"
+  },
+  {
+    "slug": "bremen-sanfrancisco",
+    "id": 41,
+    "title": "Bremen - San Francisco Space & Tech Startup Exchange",
+    "type": "networking",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2016-08-15T21:00:00.000Z",
+    "endDate": "2016-08-16T00:00:00.000Z",
+    "tags": [
+      "impulse",
+      "powering-space",
+      "outreach"
+    ],
+    "links": {
+      "web": "https://powering.space"
+    },
+    "impact": {},
+    "relatedCaseStudies": [
+      "impulse"
+    ],
+    "heroImage": "/images/projects/impulse2022.jpg",
+    "heroAlt": "Impulse 2022 banner",
+    "imageCredit": "Powering Space",
+    "relatedExperience": [
+      "exp-design-and-data"
+    ],
+    "organiser": "Design & Data GmbH",
+    "speakers": [
+      "person1",
+      "person2"
+    ],
+    "location": {
+      "online": true,
+      "onlineUrl": "https://powering.space"
+    },
+    "content": "# \n",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/events/bremen-sanfrancisco.md"
+  }
+]

@@ -1,6 +1,6 @@
 [
   {
-    "slug": "spaceup-live",
+    "slug": "spaceuplive",
     "id": 41,
     "title": "SpaceUp Live",
     "type": "featured",
@@ -8,35 +8,95 @@
     "description": "A short summary of what this project does.",
     "startDate": "2026-07-01T00:00:00.000Z",
     "tools_tech": [
-      "TypeScript",
-      "Astro",
-      "Zod"
-    ],
-    "features": [
-      "Feature one",
-      "Feature two"
+      "YouTube Live",
+      "Zoom"
     ],
     "tags": [
-      "portfolio",
-      "web",
-      "example"
+      "spaceuplive",
+      "livestream",
+      "broadcast"
     ],
     "links": {
-      "github": "https://github.com/yourname/example-project",
-      "live": "https://example.com"
+      "live": "https://spaceup.org"
     },
     "impact": {},
-    "caseStudy": "spaceup",
     "relatedExperience": [
       "exp-rr-space"
     ],
+    "relatedEvents": [
+      "spaceuplive1",
+      "spaceuplive2",
+      "spaceuplive3",
+      "spaceuplive4"
+    ],
     "content": "\n# \n",
-    "filePath": "src/content/initiatives/spaceup-live.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/initiatives/spaceuplive.md"
   },
   {
-    "slug": "spaceup-live",
+    "slug": "spaceupleicester",
     "id": 41,
-    "title": "SpaceUp Live",
+    "title": "SpaceUp Leicester",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2018-01-01T00:00:00.000Z",
+    "endDate": "2019-11-18T00:00:00.000Z",
+    "tags": [
+      "spaceup",
+      "leicester",
+      "spaceup-leicester"
+    ],
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-rr-space"
+    ],
+    "relatedEvents": [
+      "spaceupleics2018",
+      "spaceupleics2019"
+    ],
+    "content": "\n# \n",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/initiatives/spaceupleicester.md"
+  },
+  {
+    "slug": "spaceoneerslive",
+    "id": 41,
+    "title": "Spaceoneers Live",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "tools_tech": [
+      "YouTube Live",
+      "Zoom"
+    ],
+    "tags": [
+      "spaceuplive",
+      "livestream",
+      "broadcast"
+    ],
+    "links": {
+      "live": "https://spaceoneers.io"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-design-and-data"
+    ],
+    "relatedEvents": [
+      "spaceoneerslive1",
+      "spaceoneerslive2",
+      "spaceoneerslive3",
+      "spaceoneerslive4"
+    ],
+    "content": "\n# \n",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/initiatives/spaceoneerslive.md"
+  },
+  {
+    "slug": "spaceoneers",
+    "id": 41,
+    "title": "Spaceoneers",
     "type": "featured",
     "status": "completed",
     "description": "A short summary of what this project does.",
@@ -56,16 +116,15 @@
       "example"
     ],
     "links": {
-      "github": "https://github.com/yourname/example-project",
-      "live": "https://example.com"
+      "live": "https://spaceoneers.io"
     },
     "impact": {},
-    "caseStudy": "spaceup",
+    "caseStudies": "spaceoneers",
     "relatedExperience": [
-      "exp-rr-space"
+      "exp-design-and-data"
     ],
-    "content": "\n# \n",
-    "filePath": "src/content/initiatives/spaceup-leicester.md"
+    "content": "\n# \n\nArticles: Spaceoneers (https://app.notion.com/p/Spaceoneers-3803a96540ad80549535df4e398304a4?pvs=21)\n",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/initiatives/spaceoneers.md"
   },
   {
     "slug": "spaceintegrity",
@@ -98,7 +157,7 @@
       "exp-green-orbit-founder"
     ],
     "content": "\n# \n\n",
-    "filePath": "src/content/initiatives/spaceintegrity.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/initiatives/spaceintegrity.md"
   },
   {
     "slug": "spaceimpactforum",
@@ -131,12 +190,12 @@
       "exp-green-orbit-founder"
     ],
     "content": "",
-    "filePath": "src/content/initiatives/spaceimpactforum.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/initiatives/spaceimpactforum.md"
   },
   {
-    "slug": "leicesterspaceweek",
+    "slug": "spaceforneurodiversity",
     "id": 41,
-    "title": "Leicester Space Week",
+    "title": "Space for Neurodiversity",
     "type": "featured",
     "status": "completed",
     "description": "A short summary of what this project does.",
@@ -156,45 +215,60 @@
       "example"
     ],
     "links": {
-      "live": "https://leicesterspaceweek.com"
+      "live": "https://spaceforneurodiversity.org"
     },
     "impact": {},
     "relatedExperience": [
       "exp-green-orbit-founder"
     ],
     "content": "# \n\n",
-    "filePath": "src/content/initiatives/spaceforneurodiversity.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/initiatives/spaceforneurodiversity.md"
   },
   {
     "slug": "leicesterspaceweek",
     "id": 41,
     "title": "Leicester Space Week",
-    "type": "featured",
+    "type": "event",
     "status": "completed",
     "description": "A short summary of what this project does.",
     "startDate": "2026-07-01T00:00:00.000Z",
-    "tools_tech": [
-      "TypeScript",
-      "Astro",
-      "Zod"
-    ],
-    "features": [
-      "Feature one",
-      "Feature two"
-    ],
     "tags": [
       "portfolio",
       "web",
       "example"
     ],
     "links": {
-      "live": "https://leicesterspaceweek.com"
+      "web": "https://leicesterspaceweek.com"
     },
     "impact": {},
     "relatedExperience": [
       "exp-green-orbit-founder"
     ],
     "content": "# \n\n",
-    "filePath": "src/content/initiatives/leicesterspaceweek.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/initiatives/leicesterspaceweek.md"
+  },
+  {
+    "slug": "build4space",
+    "id": 41,
+    "title": "Build4Space",
+    "type": "hackathon",
+    "status": "completed",
+    "featured": true,
+    "description": "A short summary of what this project does.",
+    "startDate": "2026-07-01T00:00:00.000Z",
+    "tags": [
+      "build4space",
+      "hands-on",
+      "curriculum"
+    ],
+    "links": {
+      "web": "https://build4.space"
+    },
+    "impact": {},
+    "relatedExperience": [
+      "exp-rr-space"
+    ],
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/initiatives/build4space.md"
   }
 ]

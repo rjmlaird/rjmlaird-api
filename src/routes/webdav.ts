@@ -330,8 +330,12 @@ webdav.all("*", async (c) => {
 
       await ensureParentsAndSelf(key, c.env, false);
 
+      if (!request.body) {
+        return plain("Bad Request: missing body", 400);
+      }
+
       const contentType = request.headers.get("content-type") ?? "application/octet-stream";
-      
+
       // Stream request body directly into R2 storage to prevent buffer memory limits and 413 errors
       await storage.r2.put(key, request.body, c.env, contentType);
 

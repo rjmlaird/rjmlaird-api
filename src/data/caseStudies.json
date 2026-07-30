@@ -1,7 +1,7 @@
 [
   {
-    "slug": "eso-ultra-hd",
-    "title": "ESO Ultra HD",
+    "slug": "rosetta-philae",
+    "title": "Rosetta & Philae",
     "description": "A short summary of the project.",
     "excerpt": "A slightly longer excerpt for cards and previews.",
     "date": "2026-07-07T00:00:00.000Z",
@@ -20,7 +20,240 @@
     "status": "completed",
     "links": {
       "github": "https://github.com/yourname/example-project",
-      "live": "https://example.com"
+      "web": "https://www.eso.org/public/videos/archive/category/esocast/"
+    },
+    "impact": {
+      "outcome": "Improved discoverability and storytelling",
+      "engagement": "High"
+    },
+    "relatedProjects": [
+      "rosetta-shop",
+      "rosetta-philae-animations"
+    ],
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/case-studies/rosetta-philae.md"
+  },
+  {
+    "slug": "phiweekbootcamp",
+    "id": 41,
+    "title": "PhiWeek Bootcamp",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2018-07-01T00:00:00.000Z",
+    "endDate": "2019-07-01T00:00:00.000Z",
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "youtubeId": "OdjDiMfyrro",
+    "links": {
+      "web": "https://phiweekbootcamp.space",
+      "youtube": "https://youtu.be/OdjDiMfyrro?si=cY3WCURPPg9M93NJ"
+    },
+    "impact": {},
+    "client": "European Space Agency",
+    "relatedExperience": [
+      "exp-design-and-data"
+    ],
+    "relatedProjects": [
+      "phiweekbootcamp2018",
+      "[phiweekbootcamp2019"
+    ],
+    "heroImage": "https://img.youtube.com/vi/OdjDiMfyrro/maxresdefault.jpg",
+    "heroAlt": "PhiWeek Bootcamp Thumbnail",
+    "imageCredit": "ESA/Design & Data",
+    "content": "# ",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/case-studies/phiweekbootcamp.md"
+  },
+  {
+    "slug": "oceanstatereport",
+    "id": 41,
+    "title": "Ocean State Report",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2026-07-01T00:00:00.000Z",
+    "tags": [
+      "oceanstatereport",
+      "climate",
+      "copernicus"
+    ],
+    "youtubeId": "xlKmSGvqaFo",
+    "links": {
+      "web": "https://climate.copernicus.eu/CopernicusESC",
+      "youtube": "https://youtu.be/xlKmSGvqaFo?si=EfmvAENYYSJK20xI"
+    },
+    "impact": {},
+    "client": "Mercator Ocean",
+    "relatedExperience": [
+      "exp-design-and-data"
+    ],
+    "sectors": [
+      "marine",
+      "climate",
+      "fisheries"
+    ],
+    "heroImage": "https://img.youtube.com/vi/xlKmSGvqaFo/maxresdefault.jpg",
+    "heroAlt": "Ocean State Report 4 Thumbnail",
+    "imageCredit": "Mercator Ocean/Design & Data",
+    "content": "# \n",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/case-studies/oceanstatereport.md"
+  },
+  {
+    "slug": "nssc",
+    "title": "National Student Space Conference",
+    "description": "A short summary of the project.",
+    "excerpt": "A slightly longer excerpt for cards and previews.",
+    "featured": true,
+    "category": "case-studies",
+    "tags": [
+      "Space",
+      "Science policy"
+    ],
+    "draft": false,
+    "author": "ryan-laird",
+    "image": "/images/events/nssc2014.png",
+    "imageCredit": "NSSC",
+    "links": {
+      "web": "https://www.ukseds.org"
+    },
+    "impact": {
+      "outcome": "Improved discoverability and storytelling",
+      "engagement": "High"
+    },
+    "relatedEvents": [
+      "nssc2013",
+      "nssc2014",
+      "nssc2015"
+    ],
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/case-studies/nssc.md"
+  },
+  {
+    "slug": "eumetsat-africa",
+    "id": 41,
+    "title": "EUMETSAT in Africa",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2015-09-01T00:00:00.000Z",
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "youtubeId": "qwuUcX_srh4",
+    "links": {
+      "web": "https://example.com"
+    },
+    "impact": {},
+    "client": "EUMETSAT",
+    "relatedExperience": [
+      "exp-design-and-data"
+    ],
+    "relatedProjects": [
+      "eumetsat-food"
+    ],
+    "heroImage": "https://img.youtube.com/vi/qwuUcX_srh4/maxresdefault.jpg",
+    "heroAlt": "EUMETSAT in Africa Thumbnail",
+    "imageCredit": "EUMETSAT/Design & Data",
+    "content": "# \n",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/case-studies/eumetsat-africa.md"
+  },
+  {
+    "slug": "esoultrahd",
+    "id": 41,
+    "title": "ESO Ultra HD Expedition",
+    "featured": true,
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2014-07-01T00:00:00.000Z",
+    "endDate": "2014-07-01T00:00:00.000Z",
+    "tags": [
+      "portfolio",
+      "web",
+      "example"
+    ],
+    "links": {
+      "web": "https://www.hq.eso.org/public/announcements/ann14035/"
+    },
+    "impact": {},
+    "draft": false,
+    "client": "European Southern Observatory",
+    "relatedExperience": [
+      "exp-eso-intern"
+    ],
+    "relatedProjects": [
+      "esocast65"
+    ],
+    "heroImage": "/images/case-studies/uhd_vixen_babak_2_cc.jpg",
+    "heroAlt": "High on the Chajnantor Plateau, some 5000 metres above sea level it can get extremely cold at the site of the Atacama Large Millimeter/submillimeter Array (ALMA). Babak Tafreshi, one of ESO's Photo Ambassadors and part of the ESO Ultra HD Expedition team is shown here capturing the cool cosmos.",
+    "imageCredit": "ESO/B. Tafreshi (twanight.org)",
+    "content": "\n# Heading \n\nText, blah blah blah",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/case-studies/esoultrahd.md"
+  },
+  {
+    "slug": "esotc2017",
+    "id": 41,
+    "title": "European State of the Climate 2017",
+    "type": "featured",
+    "status": "completed",
+    "description": "A short summary of what this project does.",
+    "startDate": "2026-07-01T00:00:00.000Z",
+    "tags": [
+      "esotc",
+      "climate",
+      "copernicus"
+    ],
+    "youtubeId": "P-76uk-PbAQ",
+    "links": {
+      "web": "https://climate.copernicus.eu/CopernicusESC"
+    },
+    "impact": {},
+    "client": "ECMWF",
+    "relatedExperience": [
+      "exp-design-and-data"
+    ],
+    "relatedProjects": [
+      "breezometer",
+      "discovair",
+      "vortex",
+      "windy"
+    ],
+    "sectors": [
+      "energy",
+      "climate",
+      "health"
+    ],
+    "heroImage": "https://img.youtube.com/vi/kbaoIb3s29s/maxresdefault.jpg",
+    "heroAlt": "PhiWeek Bootcamp 2019 Thumbnail",
+    "imageCredit": "ESA/Design & Data",
+    "content": "# \n",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/case-studies/esotc2017.md"
+  },
+  {
+    "slug": "esocast",
+    "title": "ESOcast",
+    "description": "A short summary of the project.",
+    "excerpt": "A slightly longer excerpt for cards and previews.",
+    "date": "2026-07-07T00:00:00.000Z",
+    "featured": true,
+    "category": [
+      "Space"
+    ],
+    "tags": [
+      "Space",
+      "Science policy"
+    ],
+    "draft": false,
+    "author": "ryan-laird",
+    "image": "/images/blog/my-first-post.jpg",
+    "imageCredit": "Cover image for ESO Ultra HD",
+    "status": "completed",
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "web": "https://www.eso.org/public/videos/archive/category/esocast/"
     },
     "impact": {
       "outcome": "Improved discoverability and storytelling",
@@ -36,9 +269,50 @@
       "Feature two"
     ],
     "relatedProjects": [
-      "windy"
+      "esocast64",
+      "esocast65",
+      "esocast66"
     ],
     "content": "",
-    "filePath": "src/content/case-studies/esoultrahd.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/case-studies/esocast.md"
+  },
+  {
+    "slug": "esa-material-labs",
+    "title": "ESA Material Labs",
+    "description": "A short summary of the project.",
+    "excerpt": "A slightly longer excerpt for cards and previews.",
+    "date": "2026-07-07T00:00:00.000Z",
+    "featured": true,
+    "tags": [
+      "Space",
+      "Science policy"
+    ],
+    "draft": false,
+    "author": "ryan-laird",
+    "image": "/images/blog/my-first-post.jpg",
+    "imageCredit": "Cover image for ESO Ultra HD",
+    "status": "completed",
+    "links": {
+      "github": "https://github.com/yourname/example-project",
+      "live": "https://example.com"
+    },
+    "impact": {
+      "outcome": "Improved discoverability and storytelling",
+      "engagement": "High"
+    },
+    "relatedProjects": [
+      "aeolus",
+      "gaia",
+      "bepi-colombo",
+      "vega"
+    ],
+    "relatedVideos": [
+      "aeolus",
+      "gaia",
+      "bepi-colombo",
+      "dO6a3EtuF3U"
+    ],
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/case-studies/esa-material-labs.md"
   }
 ]

@@ -9,6 +9,7 @@ import webdav from "./routes/webdav";
 import research from "./routes/research";
 import cv from "./routes/cv";
 import portfolio from "./routes/portfolio";
+import media from "./routes/media";
 import contact from "./routes/contact";
 import activities from "./routes/activities";
 import general from "./routes/general";
@@ -39,6 +40,10 @@ import projects from "./data/projects.json";
 import caseStudies from "./data/caseStudies.json";
 import publicationsText from "./data/publications.txt";
 
+// Media Data imports
+import videos from "./data/videos.json";
+import podcasts from "./data/podcasts.json";
+
 const app = new Hono<{ Bindings: Env }>();
 
 app.use("*", logger());
@@ -68,6 +73,11 @@ const portfolioData = {
   caseStudies,
 } as const;
 
+const mediaData = {
+  videos,
+  podcasts,
+} as const;
+
 // Mount Routes
 app.route("/system", system);
 app.route("/debug", debug);
@@ -75,6 +85,7 @@ app.route("/v1/webdav", webdav);
 app.route("/v1/research", research);
 app.route("/v1/cv", cv);
 app.route("/v1/portfolio", portfolio);
+app.route("/v1/media", media);
 app.route("/v1/contact", contact);
 app.route("/v1/activities", activities);
 app.route("/v1/general", general);
@@ -87,6 +98,7 @@ app.get("/api/:collection", (c) => {
   const collectionKey = c.req.param("collection");
   if (collectionKey in cvData) return json(cvData[collectionKey as keyof typeof cvData]);
   if (collectionKey in portfolioData) return json(portfolioData[collectionKey as keyof typeof portfolioData]);
+  if (collectionKey in mediaData) return json(mediaData[collectionKey as keyof typeof mediaData]);
   return json({ error: "Collection not found", received: collectionKey }, 404);
 });
 
@@ -104,6 +116,12 @@ app.get("/api/portfolio/:collection", (c) => {
   const collectionKey = c.req.param("collection") as keyof typeof portfolioData;
   if (collectionKey in portfolioData) return json(portfolioData[collectionKey]);
   return json({ error: "Portfolio collection not found" }, 404);
+});
+
+app.get("/api/media/:collection", (c) => {
+  const collectionKey = c.req.param("collection") as keyof typeof mediaData;
+  if (collectionKey in mediaData) return json(mediaData[collectionKey]);
+  return json({ error: "Media collection not found" }, 404);
 });
 
 app.route("/", site);
