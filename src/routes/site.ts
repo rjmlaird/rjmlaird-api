@@ -2,146 +2,287 @@ import { Hono } from "hono";
 
 export const site = new Hono();
 
-const cvCollections = [
-  "awards", "certifications", "credly", "education", "experience",
-  "languages", "memberships", "profile", "skills", "teaching",
-  "tools", "volunteering",
-] as const;
-
 const openapiSpec = {
-  openapi: "3.0.0",
+  openapi: "3.0.3",
   info: {
-    title: "rjmlaird API",
+    title: "Ryan Laird Portfolio API",
     version: "1.0.0",
-    description: "GitHub-powered CV + portfolio + contact + research + WebDAV API.",
+    description:
+      "Public, read-only professional portfolio API for Ryan Laird.",
   },
-  servers: [{ url: "/" }],
+  servers: [
+    {
+      url: "https://api.rjmlaird.co.uk",
+      description: "Production",
+    },
+    {
+      url: "http://localhost:8787",
+      description: "Local development",
+    },
+  ],
+  tags: [
+    {
+      name: "System",
+      description: "Service status and API discovery.",
+    },
+    {
+      name: "Biography",
+      description: "Public biography, professional focus, and contact links.",
+    },
+    {
+      name: "CV",
+      description: "Professional profile and CV data.",
+    },
+    {
+      name: "Portfolio",
+      description: "Projects, initiatives, and case studies.",
+    },
+    {
+      name: "Media",
+      description: "Publications, talks, podcasts, and video.",
+    },
+    {
+      name: "General",
+      description: "Additional public profile and site data.",
+    },
+  ],
   paths: {
-    "/health": { get: { summary: "Health check", responses: { "200": { description: "Healthy" } } } },
-    "/openapi.json": { get: { summary: "OpenAPI document", responses: { "200": { description: "OpenAPI JSON document" } } } },
-    "/api/{collection}": {
+    "/healthz": {
       get: {
-        summary: "Get CV collection",
-        parameters: [{ name: "collection", in: "path", required: true, schema: { type: "string", enum: cvCollections } }],
-        responses: { "200": { description: "Collection data" }, "404": { description: "Collection not found" } },
+        tags: ["System"],
+        summary: "Health check",
+        responses: {
+          "200": {
+            description: "Service is available.",
+          },
+        },
       },
     },
-    "/v1/research": { get: { summary: "Research API", responses: { "200": { description: "OK" } } } },
-    "/v1/cv": { get: { summary: "CV API", responses: { "200": { description: "OK" } } } },
-    "/v1/portfolio": { get: { summary: "Portfolio API", responses: { "200": { description: "OK" } } } },
-    "/v1/portfolio/projects": {
+    "/v1": {
       get: {
-        summary: "List projects",
+        tags: ["System"],
+        summary: "API discovery",
+        responses: {
+          "200": {
+            description: "API metadata and primary endpoint links.",
+          },
+        },
+      },
+    },
+    "/v1/bio": {
+      get: {
+        tags: ["Biography"],
+        summary: "Get public biography",
+        responses: {
+          "200": {
+            description: "Biography document.",
+          },
+        },
+      },
+    },
+    "/v1/bio/{section}": {
+      get: {
+        tags: ["Biography"],
+        summary: "Get a biography section",
         parameters: [
-          { name: "status", in: "query", schema: { type: "string" } },
-          { name: "tag", in: "query", schema: { type: "string" } },
-          { name: "featured", in: "query", schema: { type: "boolean" } },
+          {
+            name: "section",
+            in: "path",
+            required: true,
+            schema: {
+              type: "string",
+              enum: [
+                "short",
+                "summary",
+                "roles",
+                "focus",
+                "profiles",
+                "links",
+                "contact",
+              ],
+            },
+          },
         ],
-        responses: { "200": { description: "OK" } },
+        responses: {
+          "200": {
+            description: "Requested biography section.",
+          },
+          "404": {
+            description: "Unknown biography section.",
+          },
+        },
       },
     },
-    "/v1/portfolio/project/{slug}": {
+    "/v1/cv": {
       get: {
-        summary: "Get a single project by slug",
-        parameters: [
-          { name: "slug", in: "path", required: true, schema: { type: "string" } },
-          { name: "expand", in: "query", schema: { type: "string" }, description: "Comma-separated: caseStudy" },
-        ],
-        responses: { "200": { description: "OK" }, "404": { description: "Not found" } },
+        tags: ["CV"],
+        summary: "Get CV data",
+        responses: {
+          "200": {
+            description: "CV API response.",
+          },
+        },
       },
     },
-    "/v1/portfolio/initiatives": {
+    "/v1/portfolio": {
       get: {
-        summary: "List initiatives",
-        parameters: [
-          { name: "status", in: "query", schema: { type: "string" } },
-          { name: "tag", in: "query", schema: { type: "string" } },
-          { name: "featured", in: "query", schema: { type: "boolean" } },
-        ],
-        responses: { "200": { description: "OK" } },
+        tags: ["Portfolio"],
+        summary: "Get portfolio data",
+        responses: {
+          "200": {
+            description: "Portfolio API response.",
+          },
+        },
       },
     },
-    "/v1/portfolio/initiative/{slug}": {
+    "/v1/media": {
       get: {
-        summary: "Get a single initiative by slug",
-        parameters: [
-          { name: "slug", in: "path", required: true, schema: { type: "string" } },
-          { name: "expand", in: "query", schema: { type: "string" }, description: "Comma-separated: caseStudy" },
-        ],
-        responses: { "200": { description: "OK" }, "404": { description: "Not found" } },
+        tags: ["Media"],
+        summary: "Get media data",
+        responses: {
+          "200": {
+            description: "Media API response.",
+          },
+        },
       },
     },
-    "/v1/portfolio/case-studies": {
+    "/v1/general": {
       get: {
-        summary: "List case studies",
-        parameters: [
-          { name: "status", in: "query", schema: { type: "string" } },
-          { name: "tag", in: "query", schema: { type: "string" } },
-          { name: "category", in: "query", schema: { type: "string" } },
-          { name: "featured", in: "query", schema: { type: "boolean" } },
-        ],
-        responses: { "200": { description: "OK" } },
+        tags: ["General"],
+        summary: "Get general public data",
+        responses: {
+          "200": {
+            description: "General API response.",
+          },
+        },
       },
     },
-    "/v1/portfolio/case-study/{slug}": {
+    "/v1/site": {
       get: {
-        summary: "Get a single case study by slug",
-        parameters: [
-          { name: "slug", in: "path", required: true, schema: { type: "string" } },
-          { name: "expand", in: "query", schema: { type: "string" }, description: "Comma-separated: relatedProjects" },
-        ],
-        responses: { "200": { description: "OK" }, "404": { description: "Not found" } },
+        tags: ["General"],
+        summary: "Get public site data",
+        responses: {
+          "200": {
+            description: "Site API response.",
+          },
+        },
       },
-    },
-    "/v1/contact": { post: { summary: "Contact API", responses: { "200": { description: "OK" } } } },
-    "/v1/activities": { get: { summary: "Activities API", responses: { "200": { description: "OK" } } } },
-    "/v1/general": { get: { summary: "General API", responses: { "200": { description: "OK" } } } },
-    "/v1/ai": { post: { summary: "AI endpoint", responses: { "200": { description: "OK" } } } },
-    "/v1/webdav": {
-      options: { summary: "WebDAV options", responses: { "204": { description: "No Content" } } },
-      get: { summary: "WebDAV get", responses: { "200": { description: "OK" }, "404": { description: "Not found" } } },
-      put: { summary: "WebDAV put", responses: { "200": { description: "Updated" }, "201": { description: "Created" } } },
-      delete: { summary: "WebDAV delete", responses: { "204": { description: "Deleted" } } },
-      propfind: { summary: "WebDAV propfind", responses: { "207": { description: "Multi-Status" } } },
-      mkcol: { summary: "WebDAV mkcol", responses: { "201": { description: "Collection created" } } },
-      lock: { summary: "WebDAV lock", responses: { "200": { description: "Locked" }, "423": { description: "Locked" } } },
-      unlock: { summary: "WebDAV unlock", responses: { "204": { description: "Unlocked" } } },
     },
   },
-};
+} as const;
 
 site.get("/openapi.json", (c) => c.json(openapiSpec));
 
-site.get("/health", (c) => c.json({ status: "ok", service: "rjmlaird-api", timestamp: new Date().toISOString() }));
+site.get("/health", (c) =>
+  c.json(
+    {
+      error: "Legacy endpoint",
+      message: "Use /healthz instead.",
+      endpoint: "/healthz",
+    },
+    410,
+  ),
+);
 
-site.get("/", (c) => {
-  return c.html(`<!doctype html>
+site.get("/", (c) =>
+  c.html(`<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>rjmlaird API</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.17.14/swagger-ui.css" />
+    <title>Ryan Laird Portfolio API</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.17.14/swagger-ui.css"
+    />
     <style>
       :root {
-        --ink:#0B0F1A; --card:#141B29; --lift:#1A2236; --w:#EDEAE3; 
-        --m:#7C8AA4; --sky:#38BDF8; --bd:rgba(255,255,255,.07); --B:'Inter',sans-serif;
+        --ink: #0b0f1a;
+        --card: #141b29;
+        --lift: #1a2236;
+        --white: #edeae3;
+        --muted: #a4b0c5;
+        --sky: #38bdf8;
+        --border: rgba(255, 255, 255, 0.1);
+        --font: Inter, ui-sans-serif, system-ui, sans-serif;
       }
-      body { margin: 0; font-family: var(--B); background: var(--ink); color: var(--w); }
-      .wrap { max-width: 960px; margin: auto; padding: 48px 20px; }
-      
-      /* Theme Integration */
-      .swagger-ui { background: transparent !important; color: var(--w) !important; }
-      .swagger-ui .info .title, .swagger-ui .opblock-summary-path, .swagger-ui label { color: var(--w) !important; }
-      .swagger-ui .opblock { background: var(--card) !important; border: 1px solid var(--bd) !important; }
-      .swagger-ui .opblock-summary-method { background: var(--sky) !important; color: var(--ink) !important; font-weight: bold; }
-      .swagger-ui .btn.execute { background: var(--sky) !important; color: var(--ink) !important; }
-      .swagger-ui .btn { background: var(--lift) !important; color: var(--w) !important; border: 1px solid var(--bd) !important; }
-      .swagger-ui .markdown p, .swagger-ui .renderedMarkdown { color: var(--m) !important; }
+
+      body {
+        margin: 0;
+        font-family: var(--font);
+        background: var(--ink);
+        color: var(--white);
+      }
+
+      .wrap {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 48px 20px;
+      }
+
+      .swagger-ui {
+        background: transparent !important;
+        color: var(--white) !important;
+      }
+
+      .swagger-ui .info .title,
+      .swagger-ui .opblock-summary-path,
+      .swagger-ui label,
+      .swagger-ui .opblock-summary-description,
+      .swagger-ui .parameter__name,
+      .swagger-ui .parameter__type {
+        color: var(--white) !important;
+      }
+
+      .swagger-ui .info .description,
+      .swagger-ui .markdown p,
+      .swagger-ui .renderedMarkdown,
+      .swagger-ui .response-col_description,
+      .swagger-ui .parameter__in {
+        color: var(--muted) !important;
+      }
+
+      .swagger-ui .opblock {
+        background: var(--card) !important;
+        border: 1px solid var(--border) !important;
+      }
+
+      .swagger-ui .opblock-summary {
+        border-bottom-color: var(--border) !important;
+      }
+
+      .swagger-ui .opblock-summary-method {
+        background: var(--sky) !important;
+        color: var(--ink) !important;
+        font-weight: 700;
+      }
+
+      .swagger-ui .btn.execute {
+        background: var(--sky) !important;
+        border-color: var(--sky) !important;
+        color: var(--ink) !important;
+      }
+
+      .swagger-ui .btn {
+        background: var(--lift) !important;
+        border: 1px solid var(--border) !important;
+        color: var(--white) !important;
+      }
+
+      .swagger-ui input,
+      .swagger-ui textarea,
+      .swagger-ui select {
+        background: var(--lift) !important;
+        border-color: var(--border) !important;
+        color: var(--white) !important;
+      }
     </style>
   </head>
   <body>
-    <div class="wrap"><div id="swagger-ui"></div></div>
+    <main class="wrap">
+      <div id="swagger-ui"></div>
+    </main>
+
     <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.17.14/swagger-ui-bundle.js"></script>
     <script>
       window.ui = SwaggerUIBundle({
@@ -152,5 +293,5 @@ site.get("/", (c) => {
       });
     </script>
   </body>
-</html>`);
-});
+</html>`),
+);
