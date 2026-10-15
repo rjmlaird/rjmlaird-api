@@ -2,6 +2,8 @@ import { Hono } from "hono";
 
 export const site = new Hono();
 
+const faviconSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title"><title>Ryan Laird</title><rect width="64" height="64" rx="12" fill="#0B0F1A"/><path d="M18 14h17.5c9.1 0 14.5 4.9 14.5 12.4 0 5.3-3 9.4-8.3 11L51 50H39.5l-9.2-11H28v11H18V14Zm10 8v9h6.7c3.3 0 5.3-1.7 5.3-4.5S38 22 34.7 22H28Z" fill="#00C2A8"/></svg>`;
+
 const openapiSpec = {
   openapi: "3.0.3",
   info: {
@@ -172,6 +174,16 @@ const openapiSpec = {
   },
 } as const;
 
+site.get("/favicon.svg", () =>
+  new Response(faviconSvg, {
+    headers: {
+      "Cache-Control": "public, max-age=31536000, immutable",
+      "Content-Type": "image/svg+xml; charset=utf-8",
+      "X-Content-Type-Options": "nosniff",
+    },
+  }),
+);
+
 site.get("/openapi.json", (c) =>
   c.json(openapiSpec, 200, {
     "Cache-Control": "public, max-age=300",
@@ -201,6 +213,9 @@ site.get("/", (c) =>
     />
     <meta name="theme-color" content="#0B0F1A" />
     <title>Ryan Laird Portfolio API</title>
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="shortcut icon" href="/favicon.svg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
