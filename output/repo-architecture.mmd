@@ -1,0 +1,37 @@
+%%{init: {'flowchart': {'curve': 'basis', 'nodeSpacing': 46, 'rankSpacing': 68}}}%%
+flowchart LR
+    classDef worker fill:#ecfdf5,stroke:#047857,stroke-width:2px,color:#064e3b
+    classDef edge fill:#e6f4ff,stroke:#1769aa,stroke-width:2px,color:#102a43
+    classDef route fill:#f8fafc,stroke:#64748b,stroke-width:1.5px,color:#0f172a
+    classDef queue fill:#fff7ed,stroke:#c2410c,color:#7c2d12
+    classDef dlq fill:#fef2f2,stroke:#b91c1c,stroke-dasharray:4 3,color:#7f1d1d
+    classDef database fill:#f1f5f9,stroke:#475569,color:#0f172a
+    classDef storage fill:#f0fdf4,stroke:#15803d,color:#14532d
+    classDef compute fill:#fefce8,stroke:#a16207,color:#713f12
+    subgraph EDGE["Public API / edge Workers"]
+        W_rjmlaird_api["rjmlaird-api<br/><small>Entry: src/index.ts<br/>Detected mounts: /, /v1/bio, /v1/cv, /v1/media, /v1/portfolio, /v1/site</small>"]:::edge
+    end
+    subgraph ROUTE_MODULES["Detected route modules"]
+        R_rjmlaird_api_src_index_ts["Src<br/><small>src</small><br/><small>GET /api/:collection<br/>GET /api/profile<br/>GET /api/socials<br/>GET /healthz<br/>GET /v1</small>"]:::route
+        R_rjmlaird_api_src_routes_activities_ts["Activities<br/><small>src/routes</small><br/><small>GET /<br/>GET /:collection<br/>GET /full<br/>GET /list<br/>GET /search<br/>GET /section/:section<br/>GET /sections</small>"]:::route
+        R_rjmlaird_api_src_routes_bio_ts["Bio<br/><small>src/routes</small><br/><small>GET /<br/>GET /:section</small>"]:::route
+        R_rjmlaird_api_src_routes_cv_ts["Cv<br/><small>src/routes</small><br/><small>GET /v1/cv<br/>GET /v1/cv/:collection<br/>GET /v1/cv/full<br/>GET /v1/cv/list<br/>GET /v1/cv/search<br/>GET /v1/cv/section/:section<br/>GET /v1/cv/sections</small>"]:::route
+        R_rjmlaird_api_src_routes_debug_ts["Debug<br/><small>src/routes</small><br/><small>GET /v1/debug</small>"]:::route
+        R_rjmlaird_api_src_routes_general_ts["General<br/><small>src/routes</small><br/><small>GET /v1/site<br/>GET /v1/site/:collection<br/>GET /v1/site/full<br/>GET /v1/site/list<br/>GET /v1/site/search<br/>GET /v1/site/section/:section<br/>GET /v1/site/sections</small>"]:::route
+        R_rjmlaird_api_src_routes_media_ts["Media<br/><small>src/routes</small><br/><small>GET /v1/media<br/>GET /v1/media/:collection<br/>GET /v1/media/full<br/>GET /v1/media/list<br/>GET /v1/media/podcast/:slug<br/>GET /v1/media/podcasts<br/>GET /v1/media/search<br/>+ 4 more</small>"]:::route
+        R_rjmlaird_api_src_routes_portfolio_ts["Portfolio<br/><small>src/routes</small><br/><small>GET /v1/portfolio<br/>GET /v1/portfolio/:collection<br/>GET /v1/portfolio/case-studies<br/>GET /v1/portfolio/case-study/:slug<br/>GET /v1/portfolio/full<br/>GET /v1/portfolio/initiative/:slug<br/>GET /v1/portfolio/initiatives<br/>+ 7 more</small>"]:::route
+        R_rjmlaird_api_src_routes_site_ts["Site<br/><small>src/routes</small><br/><small>GET /<br/>GET /health<br/>GET /openapi.json</small>"]:::route
+        R_rjmlaird_api_src_routes_sites_ts["Sites<br/><small>src/routes</small><br/><small>GET /<br/>GET /:id</small>"]:::route
+        R_rjmlaird_api_src_routes_system_ts["System<br/><small>src/routes</small><br/><small>DELETE /webdav<br/>GET /<br/>GET /api/:collection<br/>GET /health<br/>GET /openapi.json<br/>GET /v1/activities<br/>GET /v1/cv<br/>+ 8 more</small>"]:::route
+    end
+    W_rjmlaird_api --> R_rjmlaird_api_src_index_ts
+    W_rjmlaird_api --> R_rjmlaird_api_src_routes_activities_ts
+    W_rjmlaird_api --> R_rjmlaird_api_src_routes_bio_ts
+    W_rjmlaird_api --> R_rjmlaird_api_src_routes_cv_ts
+    W_rjmlaird_api --> R_rjmlaird_api_src_routes_debug_ts
+    W_rjmlaird_api --> R_rjmlaird_api_src_routes_general_ts
+    W_rjmlaird_api --> R_rjmlaird_api_src_routes_media_ts
+    W_rjmlaird_api --> R_rjmlaird_api_src_routes_portfolio_ts
+    W_rjmlaird_api --> R_rjmlaird_api_src_routes_site_ts
+    W_rjmlaird_api --> R_rjmlaird_api_src_routes_sites_ts
+    W_rjmlaird_api --> R_rjmlaird_api_src_routes_system_ts

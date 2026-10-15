@@ -1,0 +1,33 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+
+  "name": "rjmlaird-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-10",
+  "minify": true,
+
+  // Production is served through the custom domain only.
+  "workers_dev": false,
+  "preview_urls": false,
+
+  // The custom domain owns the complete api.rjmlaird.co.uk hostname.
+  // Do not also configure api.rjmlaird.co.uk/* as a Worker route.
+  "routes": [
+    {
+      "pattern": "api.rjmlaird.co.uk",
+      "custom_domain": true
+    }
+  ],
+
+  // Public, non-sensitive runtime configuration.
+  "vars": {
+    "ENVIRONMENT": "production",
+    "API_ORIGIN": "https://api.rjmlaird.co.uk",
+    "SITE_ORIGIN": "https://rjmlaird.co.uk",
+    "API_VISIBILITY": "public-read-only"
+  },
+
+  "observability": {
+    "enabled": true
+  }
+}

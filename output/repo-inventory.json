@@ -1,0 +1,767 @@
+{
+  "repository": "rjmlaird-api",
+  "package": {
+    "name": "rjmlaird-portfolio-api",
+    "scripts": {
+      "dev": "wrangler dev",
+      "deploy": "wrangler deploy",
+      "check": "tsc --noEmit",
+      "test": "vitest run",
+      "data": "node scripts/sanitise-data.mjs"
+    }
+  },
+  "workers": [
+    {
+      "file": "wrangler.jsonc",
+      "name": "rjmlaird-api",
+      "main": "src/index.ts",
+      "compatibility_date": "2026-10-10",
+      "compatibility_flags": [],
+      "production": {
+        "routes": [
+          "api.rjmlaird.co.uk"
+        ],
+        "producers": [],
+        "consumers": [],
+        "d1": [],
+        "services": [],
+        "kv": [],
+        "r2": [],
+        "durable_objects": [],
+        "vectorize": [],
+        "ai": null,
+        "vars": [
+          "API_ORIGIN",
+          "API_VISIBILITY",
+          "ENVIRONMENT",
+          "SITE_ORIGIN"
+        ],
+        "crons": []
+      },
+      "environments": {}
+    }
+  ],
+  "source": {
+    "rjmlaird-api": {
+      "files": [
+        "scripts/sanitise-data.mjs",
+        "src/data/languages.ts",
+        "src/data/tools.ts",
+        "src/data/unCountries.ts",
+        "src/env.d.ts",
+        "src/index.ts",
+        "src/lib/buildInfo.ts",
+        "src/lib/data.ts",
+        "src/lib/jsonResponse.ts",
+        "src/openapi.ts",
+        "src/routes/activities.ts",
+        "src/routes/bio.ts",
+        "src/routes/cv.ts",
+        "src/routes/debug.ts",
+        "src/routes/general.ts",
+        "src/routes/media.ts",
+        "src/routes/portfolio.ts",
+        "src/routes/site.ts",
+        "src/routes/sites.ts",
+        "src/routes/system.ts",
+        "src/types.d.ts",
+        "vitest.config.ts"
+      ],
+      "routes": [
+        "DELETE /webdav",
+        "GET /",
+        "GET /:collection",
+        "GET /:id",
+        "GET /:section",
+        "GET /api/:collection",
+        "GET /api/profile",
+        "GET /api/socials",
+        "GET /case-studies",
+        "GET /case-study/:slug",
+        "GET /full",
+        "GET /health",
+        "GET /healthz",
+        "GET /initiative/:slug",
+        "GET /initiatives",
+        "GET /list",
+        "GET /openapi.json",
+        "GET /podcast/:slug",
+        "GET /podcasts",
+        "GET /project/:slug",
+        "GET /projects",
+        "GET /publications.txt",
+        "GET /search",
+        "GET /section/:section",
+        "GET /sections",
+        "GET /v1",
+        "GET /v1/activities",
+        "GET /v1/cv",
+        "GET /v1/debug",
+        "GET /v1/general",
+        "GET /v1/portfolio",
+        "GET /v1/research",
+        "GET /video/:slug",
+        "GET /videos",
+        "GET /webdav",
+        "OPTIONS /webdav",
+        "POST /v1/ai",
+        "POST /v1/contact",
+        "PUT /webdav"
+      ],
+      "mounts": [
+        {
+          "parent_router": "app",
+          "child_router": "site",
+          "prefix": "/",
+          "source_file": "src/index.ts",
+          "child_file": "src/routes/site.ts"
+        },
+        {
+          "parent_router": "app",
+          "child_router": "cv",
+          "prefix": "/v1/cv",
+          "source_file": "src/index.ts",
+          "child_file": "src/routes/cv.ts"
+        },
+        {
+          "parent_router": "app",
+          "child_router": "media",
+          "prefix": "/v1/media",
+          "source_file": "src/index.ts",
+          "child_file": "src/routes/media.ts"
+        },
+        {
+          "parent_router": "app",
+          "child_router": "portfolio",
+          "prefix": "/v1/portfolio",
+          "source_file": "src/index.ts",
+          "child_file": "src/routes/portfolio.ts"
+        },
+        {
+          "parent_router": "app",
+          "child_router": "general",
+          "prefix": "/v1/site",
+          "source_file": "src/index.ts",
+          "child_file": "src/routes/general.ts"
+        },
+        {
+          "parent_router": "app",
+          "child_router": "bio",
+          "prefix": "/v1/bio",
+          "source_file": "src/routes/bio.ts",
+          "child_file": "src/data/bio.json"
+        }
+      ],
+      "base_paths": [],
+      "route_modules": [
+        {
+          "file": "src/index.ts",
+          "folder": "src",
+          "label": "Src",
+          "routes": [
+            {
+              "method": "GET",
+              "path": "/healthz",
+              "route": "GET /healthz",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/v1",
+              "route": "GET /v1",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/api/:collection",
+              "route": "GET /api/:collection",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/api/profile",
+              "route": "GET /api/profile",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/api/socials",
+              "route": "GET /api/socials",
+              "router": "app"
+            }
+          ],
+          "mounts": [
+            {
+              "parent_router": "app",
+              "child_router": "cv",
+              "prefix": "/v1/cv",
+              "source_file": "src/index.ts",
+              "child_file": "src/routes/cv.ts"
+            },
+            {
+              "parent_router": "app",
+              "child_router": "portfolio",
+              "prefix": "/v1/portfolio",
+              "source_file": "src/index.ts",
+              "child_file": "src/routes/portfolio.ts"
+            },
+            {
+              "parent_router": "app",
+              "child_router": "media",
+              "prefix": "/v1/media",
+              "source_file": "src/index.ts",
+              "child_file": "src/routes/media.ts"
+            },
+            {
+              "parent_router": "app",
+              "child_router": "general",
+              "prefix": "/v1/site",
+              "source_file": "src/index.ts",
+              "child_file": "src/routes/general.ts"
+            },
+            {
+              "parent_router": "app",
+              "child_router": "site",
+              "prefix": "/",
+              "source_file": "src/index.ts",
+              "child_file": "src/routes/site.ts"
+            }
+          ],
+          "base_paths": []
+        },
+        {
+          "file": "src/routes/activities.ts",
+          "folder": "src/routes",
+          "label": "Activities",
+          "routes": [
+            {
+              "method": "GET",
+              "path": "/",
+              "route": "GET /",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/sections",
+              "route": "GET /sections",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/list",
+              "route": "GET /list",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/full",
+              "route": "GET /full",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/search",
+              "route": "GET /search",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/section/:section",
+              "route": "GET /section/:section",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/:collection",
+              "route": "GET /:collection",
+              "router": "app"
+            }
+          ],
+          "mounts": [],
+          "base_paths": []
+        },
+        {
+          "file": "src/routes/bio.ts",
+          "folder": "src/routes",
+          "label": "Bio",
+          "routes": [
+            {
+              "method": "GET",
+              "path": "/",
+              "route": "GET /",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/:section",
+              "route": "GET /:section",
+              "router": "app"
+            }
+          ],
+          "mounts": [
+            {
+              "parent_router": "app",
+              "child_router": "bio",
+              "prefix": "/v1/bio",
+              "source_file": "src/routes/bio.ts",
+              "child_file": "src/data/bio.json"
+            }
+          ],
+          "base_paths": []
+        },
+        {
+          "file": "src/routes/cv.ts",
+          "folder": "src/routes",
+          "label": "Cv",
+          "routes": [
+            {
+              "method": "GET",
+              "path": "/",
+              "route": "GET /",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/sections",
+              "route": "GET /sections",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/list",
+              "route": "GET /list",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/full",
+              "route": "GET /full",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/search",
+              "route": "GET /search",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/section/:section",
+              "route": "GET /section/:section",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/:collection",
+              "route": "GET /:collection",
+              "router": "app"
+            }
+          ],
+          "mounts": [],
+          "base_paths": []
+        },
+        {
+          "file": "src/routes/debug.ts",
+          "folder": "src/routes",
+          "label": "Debug",
+          "routes": [
+            {
+              "method": "GET",
+              "path": "/v1/debug",
+              "route": "GET /v1/debug",
+              "router": "debug"
+            }
+          ],
+          "mounts": [],
+          "base_paths": []
+        },
+        {
+          "file": "src/routes/general.ts",
+          "folder": "src/routes",
+          "label": "General",
+          "routes": [
+            {
+              "method": "GET",
+              "path": "/",
+              "route": "GET /",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/sections",
+              "route": "GET /sections",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/list",
+              "route": "GET /list",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/full",
+              "route": "GET /full",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/search",
+              "route": "GET /search",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/section/:section",
+              "route": "GET /section/:section",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/:collection",
+              "route": "GET /:collection",
+              "router": "app"
+            }
+          ],
+          "mounts": [],
+          "base_paths": []
+        },
+        {
+          "file": "src/routes/media.ts",
+          "folder": "src/routes",
+          "label": "Media",
+          "routes": [
+            {
+              "method": "GET",
+              "path": "/",
+              "route": "GET /",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/sections",
+              "route": "GET /sections",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/list",
+              "route": "GET /list",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/full",
+              "route": "GET /full",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/videos",
+              "route": "GET /videos",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/video/:slug",
+              "route": "GET /video/:slug",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/podcasts",
+              "route": "GET /podcasts",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/podcast/:slug",
+              "route": "GET /podcast/:slug",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/search",
+              "route": "GET /search",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/section/:section",
+              "route": "GET /section/:section",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/:collection",
+              "route": "GET /:collection",
+              "router": "app"
+            }
+          ],
+          "mounts": [],
+          "base_paths": []
+        },
+        {
+          "file": "src/routes/portfolio.ts",
+          "folder": "src/routes",
+          "label": "Portfolio",
+          "routes": [
+            {
+              "method": "GET",
+              "path": "/",
+              "route": "GET /",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/sections",
+              "route": "GET /sections",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/list",
+              "route": "GET /list",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/full",
+              "route": "GET /full",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/publications.txt",
+              "route": "GET /publications.txt",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/projects",
+              "route": "GET /projects",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/project/:slug",
+              "route": "GET /project/:slug",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/initiatives",
+              "route": "GET /initiatives",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/initiative/:slug",
+              "route": "GET /initiative/:slug",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/case-studies",
+              "route": "GET /case-studies",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/case-study/:slug",
+              "route": "GET /case-study/:slug",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/search",
+              "route": "GET /search",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/section/:section",
+              "route": "GET /section/:section",
+              "router": "app"
+            },
+            {
+              "method": "GET",
+              "path": "/:collection",
+              "route": "GET /:collection",
+              "router": "app"
+            }
+          ],
+          "mounts": [],
+          "base_paths": []
+        },
+        {
+          "file": "src/routes/site.ts",
+          "folder": "src/routes",
+          "label": "Site",
+          "routes": [
+            {
+              "method": "GET",
+              "path": "/openapi.json",
+              "route": "GET /openapi.json",
+              "router": "site"
+            },
+            {
+              "method": "GET",
+              "path": "/health",
+              "route": "GET /health",
+              "router": "site"
+            },
+            {
+              "method": "GET",
+              "path": "/",
+              "route": "GET /",
+              "router": "site"
+            }
+          ],
+          "mounts": [],
+          "base_paths": []
+        },
+        {
+          "file": "src/routes/sites.ts",
+          "folder": "src/routes",
+          "label": "Sites",
+          "routes": [
+            {
+              "method": "GET",
+              "path": "/",
+              "route": "GET /",
+              "router": "sites"
+            },
+            {
+              "method": "GET",
+              "path": "/:id",
+              "route": "GET /:id",
+              "router": "sites"
+            }
+          ],
+          "mounts": [],
+          "base_paths": []
+        },
+        {
+          "file": "src/routes/system.ts",
+          "folder": "src/routes",
+          "label": "System",
+          "routes": [
+            {
+              "method": "GET",
+              "path": "/",
+              "route": "GET /",
+              "router": "system"
+            },
+            {
+              "method": "GET",
+              "path": "/health",
+              "route": "GET /health",
+              "router": "system"
+            },
+            {
+              "method": "GET",
+              "path": "/openapi.json",
+              "route": "GET /openapi.json",
+              "router": "system"
+            },
+            {
+              "method": "GET",
+              "path": "/api/:collection",
+              "route": "GET /api/:collection",
+              "router": "system"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/research",
+              "route": "GET /v1/research",
+              "router": "system"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/cv",
+              "route": "GET /v1/cv",
+              "router": "system"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/portfolio",
+              "route": "GET /v1/portfolio",
+              "router": "system"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/contact",
+              "route": "POST /v1/contact",
+              "router": "system"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/activities",
+              "route": "GET /v1/activities",
+              "router": "system"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/general",
+              "route": "GET /v1/general",
+              "router": "system"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/ai",
+              "route": "POST /v1/ai",
+              "router": "system"
+            },
+            {
+              "method": "OPTIONS",
+              "path": "/webdav",
+              "route": "OPTIONS /webdav",
+              "router": "system"
+            },
+            {
+              "method": "GET",
+              "path": "/webdav",
+              "route": "GET /webdav",
+              "router": "system"
+            },
+            {
+              "method": "PUT",
+              "path": "/webdav",
+              "route": "PUT /webdav",
+              "router": "system"
+            },
+            {
+              "method": "DELETE",
+              "path": "/webdav",
+              "route": "DELETE /webdav",
+              "router": "system"
+            }
+          ],
+          "mounts": [],
+          "base_paths": []
+        }
+      ],
+      "env_vars": [],
+      "secrets": []
+    }
+  },
+  "binding_audit": {
+    "rjmlaird-api": {
+      "used_in_source": [],
+      "configured_in_production": [
+        "API_ORIGIN",
+        "API_VISIBILITY",
+        "ENVIRONMENT",
+        "SITE_ORIGIN"
+      ],
+      "used_not_declared": [],
+      "declared_not_detected": [
+        "API_ORIGIN",
+        "API_VISIBILITY",
+        "ENVIRONMENT",
+        "SITE_ORIGIN"
+      ]
+    }
+  }
+}

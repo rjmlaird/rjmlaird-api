@@ -1,0 +1,21 @@
+{
+  "/v1/sites": {
+    "get": {
+      "summary": "List public sites in the rjmlaird.co.uk estate",
+      "parameters": [
+        { "name": "kind", "in": "query", "schema": { "enum": ["hub","authority","service","operational","tool"] } },
+        { "name": "status", "in": "query", "schema": { "enum": ["live","building","planned","optional"] } },
+        { "name": "footer", "in": "query", "schema": { "type": "boolean" }, "description": "Return footer sites in order; defaults to live only" },
+        { "name": "host", "in": "query", "schema": { "type": "string" } }
+      ],
+      "responses": { "200": { "description": "Registry projection" }, "304": { "description": "Not modified" }, "400": { "description": "Invalid filter" } }
+    }
+  },
+  "/v1/sites/{id}": {
+    "get": {
+      "summary": "Get one public site by id",
+      "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
+      "responses": { "200": { "description": "Site" }, "404": { "description": "Not found" } }
+    }
+  }
+}

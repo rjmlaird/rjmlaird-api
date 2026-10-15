@@ -1,0 +1,441 @@
+[
+  {
+    "id": "exp-green-orbit-founder",
+    "organisation": { "name": "Green Orbit Digital", "website": "https://greenorbit.digital" },
+    "role": "Founder & Director",
+    "employmentType": "Founder",
+    "startDate": "2023-10",
+    "endDate": null,
+    "current": true,
+    "city": "Leicester",
+    "country": "United Kingdom",
+    "workMode": "Hybrid",
+    "summary": "Founder and Principal Consultant of a specialist B2B marketing agency, driving brand growth and digital transformation for clients in space, deep tech, and sustainability sectors. Expert in bridging the gap between complex technical innovation and commercial market positioning through high-impact content strategy and data-informed digital experiences.",
+    "responsibilities": [
+      "Define and execute enterprise-level brand strategy, elevating market visibility and authority for high-tech clients.",
+      "Spearhead full-cycle bid management and commercial proposal development, consistently converting technical expertise into value-driven client narratives.",
+      "Architect sustainable digital ecosystems, integrating SEO, low-carbon web development, and GA4 analytics to optimize conversion and user experience.",
+      "Lead cross-functional stakeholder engagement to harmonize senior-level messaging with long-term commercial goals.",
+      "Apply cutting-edge AI and automation workflows to scale content production, information architecture, and technical marketing operations."
+    ],
+    "achievements": [
+      "Built a scalable consultancy model focused on niche technical expertise and data-driven growth.",
+      "Delivered measurable increases in organic visibility and lead generation for mission-driven organisations."
+    ],
+    "skills": [
+      "B2B Marketing Strategy",
+      "Brand Positioning",
+      "Strategic Content Marketing",
+      "Technical SEO",
+      "Lead Generation Pipeline",
+      "Stakeholder Management",
+      "Agile Project Management",
+      "Digital Transformation",
+      "Sustainable Web Standards"
+    ],
+    "projects": ["green-orbit-workshops","marketing-audit","spaceimpactforum","spaceintegrity"],
+    "clients": [],
+    "articles": [],
+    "talks": [],
+    "technologies": [
+      "Astro",
+      "React",
+      "Node.js",
+      "GitHub Actions",
+      "Google Analytics 4",
+      "Applied AI/LLM Workflows"
+    ],
+    "media": [],
+    "featured": true,
+    "order": 1
+  },
+  {
+    "id": "exp-he-space",
+    "organisation": { "name": "HE Space for ESA", "website": "https://hespace.com" },
+    "role": "Marketing & Communications Manager",
+    "employmentType": "Contract",
+    "startDate": "2021-08",
+    "endDate": "2023-02",
+    "current": false,
+    "city": "Harwell",
+    "country": "United Kingdom",
+    "workMode": "Hybrid",
+    "summary": "Directed strategic communications and digital marketing for ESA Business Applications and Space Solutions. Led end-to-end campaign execution, stakeholder relationship management, and editorial output to promote high-value funding calls and ecosystem growth.",
+    "responsibilities": [
+      "Managed integrated marketing campaigns for major European space programmes, maintaining brand consistency across global stakeholder channels.",
+      "Optimized editorial strategy and content pipelines, translating complex scientific outcomes into actionable, high-engagement market communications.",
+      "Led high-profile webinar series and event communications, driving audience participation and programme awareness.",
+      "Deployed data-driven insights through GA4 and CRM analytics to personalize stakeholder journeys and improve lead conversion."
+    ],
+    "achievements": [
+      "Played a critical role in increasing programme visibility and engagement across the ESA Business Applications ecosystem.",
+      "Standardized multi-channel content workflows, significantly improving project delivery and editorial throughput."
+    ],
+    "projects": ["esa-ba-newsletter","esa-ba-webinars","esa-green-dossier"],
+    "skills": [
+      "Campaign Management",
+      "Technical Communications",
+      "Stakeholder Relations",
+      "Event Strategy",
+      "Editorial Planning",
+      "Content Marketing"
+    ],
+    "clients": ["ESA Business Applications"],
+    "articles": [],
+    "talks": [],
+    "technologies": ["GA4", "CRM"],
+    "media": [],
+    "featured": true,
+    "order": 2
+  },
+  {
+    "id": "exp-freelance",
+    "organisation": { "name": "Self-Employed", "website": "" },
+    "role": "Marketing & Communications Consultant",
+    "employmentType": "Freelance",
+    "startDate": "2018-07",
+    "endDate": "2021-07",
+    "current": false,
+    "city": "Leicester",
+    "country": "United Kingdom",
+    "workMode": "Remote",
+    "summary": "Provided expert consultancy in science communication, digital strategy, and editorial management for international space and research institutions. Successfully scaled complex technical narratives for diverse audiences across digital media and education platforms.",
+    "responsibilities": [
+      "Led social media strategy and public affairs outreach for the Ocean State Report (CMEMS), driving significant stakeholder engagement.",
+      "Architected educational content for high-tech MOOCs (Point.IOT), improving technical knowledge transfer for industry participants.",
+      "Executed comprehensive content audits and migrations, enhancing information architecture and SEO performance.",
+      "Facilitated workshop and training sessions for scientific audiences, focusing on clarity and impact."
+    ],
+    "achievements": [
+      "Successfully delivered multi-year contracts for high-prestige European space and environmental initiatives.",
+      "Established a reputation for translating complex R&D projects into accessible, high-performing digital marketing assets."
+    ],
+    "projects": ["copernicus-hackathon-leics","esotc2018","vortex","windy"],
+    "skills": [
+      "Strategic Communications",
+      "Digital Content Strategy",
+      "Social Media Growth",
+      "Instructional Design",
+      "SEO",
+      "Market Outreach"
+    ],
+    "featured": true,
+    "order": 3
+  },
+  {
+    "id": "exp-rr-space",
+    "organisation": { "name": "R&R Space Ltd", "website": "" },
+    "role": "Co-Founder & Director",
+    "employmentType": "Founder",
+    "startDate": "2018-01",
+    "endDate": "2021-12",
+    "current": false,
+    "city": "Leicester",
+    "country": "United Kingdom",
+    "workMode": "Hybrid",
+    "summary": "Co-founded and scaled a space sector outreach and training company focused on developing engagement programmes, events, and skills development initiatives.",
+    "responsibilities": [
+      "Founded and led SpaceUp Leicester, delivering sell-out engagement events with full ownership of venue, supplier, budget, and risk management.",
+      "Launched SpaceUp Live, generating 1,000+ YouTube views and strong engagement from industry professionals.",
+      "Delivered communications for the University of Leicester Copernicus Hackathon, supporting recruitment and awareness.",
+      "Managed end-to-end event delivery across multiple workstreams and deadlines."
+    ],
+    "achievements": [
+      "Established R&R Space Ltd as a key space-sector outreach initiative.",
+      "Successfully converted passive digital interest into active industry engagement."
+    ],
+   "projects": ["build4space","spaceup-live","spaceupleics2018","spaceupleics2019"],
+    "skills": [
+      "Programme Development",
+      "Outreach",
+      "Event Management",
+      "Partnership Development",
+      "STEM Communication"
+    ],
+    "featured": false,
+    "order": 4
+  },
+    {
+    "id": "exp-powering-space",
+    "organisation": { "name": "Powering Space C.I.C.", "website": "" },
+    "role": "Co-Founder & Director",
+    "employmentType": "Founder",
+    "startDate": "2018-01",
+    "endDate": "2021-12",
+    "current": false,
+    "city": "Leicester",
+    "country": "United Kingdom",
+    "workMode": "Hybrid",
+    "summary": "Co-founded and scaled a space sector outreach and training company focused on developing engagement programmes, events, and skills development initiatives.",
+    "responsibilities": [
+      "Founded and led SpaceUp Leicester, delivering sell-out engagement events with full ownership of venue, supplier, budget, and risk management.",
+      "Launched SpaceUp Live, generating 1,000+ YouTube views and strong engagement from industry professionals.",
+      "Delivered communications for the University of Leicester Copernicus Hackathon, supporting recruitment and awareness.",
+      "Managed end-to-end event delivery across multiple workstreams and deadlines."
+    ],
+    "achievements": [
+      "Established R&R Space Ltd as a key space-sector outreach initiative.",
+      "Successfully converted passive digital interest into active industry engagement."
+    ],
+   "projects": ["impulse2021","lunch-and-learn"],
+    "skills": [
+      "Programme Development",
+      "Outreach",
+      "Event Management",
+      "Partnership Development",
+      "STEM Communication"
+    ],
+    "featured": false,
+    "order": 4
+  },
+  {
+    "id": "exp-design-and-data",
+    "organisation": { "name": "Design and Data", "website": "https://designanddata.de" },
+    "role": "Editor",
+    "employmentType": "Contract",
+    "startDate": "2015-07",
+    "endDate": "2021-07",
+    "current": false,
+    "city": "Cologne",
+    "country": "Germany",
+    "workMode": "Hybrid",
+    "summary": "Led editorial production and multimedia storytelling for space-related publications. Translated complex technical material for audiences ranging from the general public to policy experts.",
+    "responsibilities": [
+      "Authored and edited high-level content for ESA and EUMETSAT, translating intricate technical specifications into persuasive, audience-specific narratives.",
+      "Contributed to the proposal lifecycle, supporting successful bid writing and market entry strategies.",
+      "Managed public policy communication campaigns (e.g., EUMETSAT and Africa series), engaging diplomatic-level stakeholders.",
+      "Provided strategic communications support for industry events, including ESA PhiWeek and DLR INNOspace Weekend."
+    ],
+    "achievements": [
+      "Delivered high-quality editorial and multimedia content for space-sector communications.",
+      "Strengthened narrative and publishing workflows across digital platforms."
+    ],
+    "projects": ["vega","spaceoneers","rosetta-strato","rosetta-shop","rosetta-philae-animations","riga-airtext","point-iot-mooc","phiweekbootcamp2019","phiweekbootcamp2018","oceanstatereport4","lunar-exp-interactive-docu","living-with-space-40","little-spaceoneers","innospaceweekend2017","aeolus","bake-in-space","bepi-colombo","breezometer","discovair","esa-industry-days","eumetsat-africa","eumetsat-food","gaia"],
+    "skills": [
+      "Editorial Leadership",
+      "Multimedia Storytelling",
+      "Scriptwriting",
+      "Proposal Writing",
+      "Public Policy Communications"
+    ],
+    "featured": true,
+    "order": 5
+  },
+  {
+    "id": "exp-bloodhound-ssc",
+    "organisation": { "name": "Bloodhound SSC", "website": "https://www.bloodhoundlsr.com" },
+    "role": "STEM Communicator",
+    "employmentType": "Contract",
+    "startDate": "2014-08",
+    "endDate": "2015-07",
+    "current": false,
+    "city": "Bristol",
+    "country": "United Kingdom",
+    "workMode": "Hybrid",
+    "summary": "Led large-scale educational outreach for the Bloodhound engineering programme, driving engagement and public awareness of aerospace innovation.",
+    "responsibilities": [
+      "Facilitated communication workflows bridging the gap between cutting-edge engineering R&D and high-profile industry partners.",
+      "Developed and delivered educational assets that simplified complex engineering breakthroughs for diverse demographics.",
+      "Collaborated on public-facing communication around advanced engineering projects."
+    ],
+    "achievements": [
+      "Produced education resources widely used in outreach and classroom settings.",
+      "Built early experience in STEM communication and public engagement."
+    ],
+    "projects": ["bloodhound-blast","desert-living","knex"],
+    "skills": [
+      "STEM Communication",
+      "Public Engagement",
+      "Workshop Facilitation",
+      "Educational Content Development"
+    ],
+    "featured": false,
+    "order": 6
+  },
+  {
+    "id": "exp-eso-intern",
+    "organisation": { "name": "European Southern Observatory", "website": "https://www.eso.org" },
+    "role": "Science Communication Intern",
+    "employmentType": "Internship",
+    "startDate": "2014-01",
+    "endDate": "2014-06",
+    "current": false,
+    "city": "Munich",
+    "country": "Germany",
+    "workMode": "On-site",
+    "summary": "Supported science communication and outreach activities for the European Southern Observatory (ESO). Produced web and press content for a major international astronomy organisation.",
+    "responsibilities": [
+      "Produced news releases, photo releases, and web content.",
+      "Assisted with video scripts and educational materials.",
+      "Supported editorial production within a fast-paced science communication department."
+    ],
+    "achievements": [
+      "Developed practical experience in science press and outreach writing.",
+      "Contributed to public-facing communications for a world-leading astronomy organisation."
+    ],
+    "projects": ["esocast","esa-hubble","esoultrahd"],
+    "skills": ["Science Writing", "Press Releases", "Web Content", "Astronomy Communication"],
+    "featured": false,
+    "order": 7
+  },
+  {
+    "id": "exp-unawe-intern",
+    "organisation": { "name": "Universe Awareness", "website": "https://unawe.org" },
+    "role": "Intern (Space Scoop)",
+    "employmentType": "Internship",
+    "startDate": "2013-10",
+    "endDate": "2014-01",
+    "current": false,
+    "city": "Leiden",
+    "country": "Netherlands",
+    "workMode": "On-site",
+    "summary": "Focused on expanding the distribution and accessibility of astronomy communication for children.",
+    "responsibilities": [
+      "Researched content syndication strategies for youth science communication.",
+      "Adapted Space Scoop content for new media channels.",
+      "Supported outreach strategy for educational astronomy content."
+    ],
+    "achievements": ["Helped broaden the reach of astronomy content for schools and youth groups."],
+    "projects": ["space-scoop-comms"],
+    "skills": ["Content Syndication", "Science Education", "Youth Engagement"],
+    "featured": false,
+    "order": 8
+  },
+  {
+    "id": "exp-sgac-intern",
+    "organisation": { "name": "Space Generation Advisory Council", "website": "https://spacegeneration.org" },
+    "role": "Intern",
+    "employmentType": "Internship",
+    "startDate": "2013-01",
+    "endDate": "2013-04",
+    "current": false,
+    "city": "Vienna",
+    "country": "Austria",
+    "workMode": "On-site",
+    "summary": "Supported operations, reporting, and policy engagement within a global space policy organisation.",
+    "responsibilities": [
+      "Contributed to organisational reporting and programme support.",
+      "Assisted with Space Generation Fusion Forum activities.",
+      "Engaged with UN COPUOS sessions."
+    ],
+    "achievements": ["Gained experience in global space policy and international advocacy."],
+    "projects": ["sg-fusion-forum"],
+    "skills": ["Space Policy", "International Collaboration", "Programme Coordination"],
+    "featured": false,
+    "order": 9
+  },
+  {
+    "id": "exp-kent-demonstrator",
+    "organisation": { "name": "University of Kent", "website": "https://kent.ac.uk" },
+    "role": "Postgraduate Demonstrator",
+    "employmentType": "Academic",
+    "startDate": "2009-09",
+    "endDate": "2012-07",
+    "current": false,
+    "city": "Canterbury",
+    "country": "United Kingdom",
+    "workMode": "On-site",
+    "summary": "Delivered undergraduate teaching and academic support across physics modules.",
+    "responsibilities": [
+      "Led tutorials for foundation and first-year physics students.",
+      "Assessed coursework and provided academic feedback.",
+      "Supported curriculum delivery and student mentoring."
+    ],
+    "achievements": ["Developed experience in academic communication and student support."],
+    "projects": ["standardised-lab-exp"],
+    "skills": ["Physics Education", "Teaching", "Mentoring", "Assessment"],
+    "featured": false,
+    "order": 10
+  },
+  {
+    "id": "exp-sepnet-outreach",
+    "organisation": { "name": "South-East Physics Network", "website": "https://sepnet.ac.uk" },
+    "role": "Outreach Support",
+    "employmentType": "Contract",
+    "startDate": "2009-09",
+    "endDate": "2012-07",
+    "current": false,
+    "city": "Canterbury",
+    "country": "United Kingdom",
+    "workMode": "On-site",
+    "summary": "Delivered physics outreach activities and public engagement events across schools.",
+    "responsibilities": [
+      "Presented science outreach talks and demonstrations.",
+      "Delivered inflatable planetarium sessions.",
+      "Adapted physics content for public and school audiences."
+    ],
+    "achievements": ["Built experience in live science presentation and public engagement."],
+    "projects": ["astrodome"],
+    "skills": ["Public Engagement", "Science Communication", "Physics Outreach"],
+    "featured": false,
+    "order": 11
+  },
+  {
+    "id": "exp-uol-gerb",
+    "organisation": { "name": "University of Leicester", "website": "https://le.ac.uk" },
+    "role": "Technician",
+    "employmentType": "Academic",
+    "startDate": "2008-07",
+    "endDate": "2008-09",
+    "current": false,
+    "city": "Leicester",
+    "country": "United Kingdom",
+    "workMode": "On-site",
+    "summary": "Supported satellite instrumentation research and calibration data analysis.",
+    "responsibilities": [
+      "Analysed calibration data for the GERB instrument.",
+      "Developed tools for scientific data visualisation.",
+      "Maintained and verified data processing workflows."
+    ],
+    "achievements": ["Contributed to satellite instrumentation support and calibration analysis."],
+    "projects": ["gerb"],
+    "skills": ["Data Analysis", "Scientific Computing", "Instrumentation", "Calibration"],
+    "featured": false,
+    "order": 12
+  },
+  {
+    "id": "exp-brockington-college",
+    "organisation": { "name": "Brockington College", "website": "" },
+    "role": "Student Associate",
+    "employmentType": "Placement",
+    "startDate": "2008-06",
+    "endDate": "2008-07",
+    "current": false,
+    "city": "Leicester",
+    "country": "United Kingdom",
+    "workMode": "On-site",
+    "summary": "Supported science education delivery for secondary school students.",
+    "responsibilities": [
+      "Assisted in classroom science teaching for students aged 11–14.",
+      "Supported practical science experiments and lesson preparation."
+    ],
+    "achievements": ["Developed confidence in communicating science to younger students."],
+    "projects": ["school-experiment"],
+    "skills": ["Education Support", "Classroom Assistance", "Science Communication"],
+    "featured": false,
+    "order": 13
+  },
+  {
+    "id": "exp-uol-research-2008",
+    "organisation": { "name": "University of Leicester", "website": "https://le.ac.uk" },
+    "role": "Technician (Summer Research)",
+    "employmentType": "Research Placement",
+    "startDate": "2008-06",
+    "endDate": "2008-07",
+    "current": false,
+    "city": "Leicester",
+    "country": "United Kingdom",
+    "workMode": "On-site",
+    "summary": "Conducted undergraduate research in astrophysics focusing on spectral analysis.",
+    "responsibilities": [
+      "Analysed FUSE pipeline data and spectral observations.",
+      "Investigated stellar absorption features.",
+      "Produced research outputs through data interpretation."
+    ],
+    "achievements": ["Completed an undergraduate summer research placement in astrophysics."],
+    "projects": ["white-dwarves"],
+    "skills": ["Astrophysics", "Spectral Analysis", "Data Interpretation"],
+    "featured": false,
+    "order": 14
+  }
+]

@@ -1,0 +1,508 @@
+{
+  "taxonomy": {
+    "domain_expertise": [
+      {
+        "id": "marketing_growth",
+        "label": "Strategy, Marketing & Growth",
+        "skills": [
+          "Marketing Strategy",
+          "Digital Marketing",
+          "SEO",
+          "Content Marketing",
+          "Brand Strategy",
+          "Go-to-Market Strategy",
+          "B2B Marketing",
+          "Campaign Planning",
+          "Lead Generation",
+          "Positioning",
+          "Social Media Strategy",
+          "Inbound Marketing",
+          "Audience Development",
+          "Conversion Optimisation",
+          "Growth Strategy",
+          "Data-Driven Marketing",
+          "Sustainable Marketing",
+          "Customer Journey Mapping",
+          "Market Research",
+          "Product Marketing",
+          "SEO Copywriting",
+          "Email Marketing",
+          "Lifecycle Marketing",
+          "Marketing Automation",
+          "Community Growth"
+        ]
+      },
+      {
+        "id": "comms_pr_editorial",
+        "label": "Communications, PR & Editorial",
+        "skills": [
+          "Strategic Communications",
+          "Science Communication",
+          "Technical Writing",
+          "Public Relations",
+          "Media Relations",
+          "Copywriting",
+          "Editing",
+          "Content Strategy",
+          "Editorial Planning",
+          "Press Release Writing",
+          "Corporate & Stakeholder Communications",
+          "Internal Communications",
+          "Event Communications",
+          "Webinar Production",
+          "Storytelling & Narrative Development",
+          "Proofreading",
+          "Tone of Voice",
+          "Speechwriting",
+          "Reputation Management",
+          "Message Development",
+          "Information Design"
+        ]
+      },
+      {
+        "id": "space_climate",
+        "label": "Space, Astronomy & Climate",
+        "skills": [
+          "Space Industry Communications",
+          "Earth Observation",
+          "ESA Business Applications",
+          "Copernicus Programme",
+          "Satellite Applications",
+          "Climate Services from Space",
+          "Astronomy Communication",
+          "Space Policy Awareness",
+          "Space Outreach",
+          "Scientific Research Communication",
+          "Space Innovation Ecosystems",
+          "Space Entrepreneurship",
+          "Climate Tech Communication",
+          "Environmental Communication",
+          "Climate Advocacy",
+          "Net Zero Communication",
+          "ESG Strategy",
+          "Sustainability Reporting",
+          "Climate Risk",
+          "Climate Data",
+          "Remote Sensing",
+          "Geospatial Data",
+          "Earth System Science",
+          "Atmospheric Science",
+          "Scientific Literacy"
+        ]
+      },
+      {
+        "id": "data_analytics_research",
+        "label": "Data, Analytics & Research",
+        "skills": [
+          "Google Analytics 4 (GA4)",
+          "Data Visualisation",
+          "Marketing Analytics",
+          "KPI Tracking",
+          "Dashboard Reporting",
+          "Data Cleaning",
+          "Scientific Research",
+          "Literature Review",
+          "Matomo Analytics",
+          "Performance Analytics",
+          "User Behaviour Analysis",
+          "A/B Testing",
+          "SEO Analytics",
+          "Campaign Measurement",
+          "Data Interpretation",
+          "Observational Astronomy",
+          "Academic Publishing",
+          "Peer-Reviewed Research",
+          "Quantitative Analysis",
+          "Qualitative Analysis",
+          "Data Modelling",
+          "Statistical Analysis",
+          "Research Design",
+          "Survey Analysis",
+          "Experiment Design"
+        ]
+      }
+    ],
+    "technical_skills": [
+      {
+        "id": "languages",
+        "label": "Languages & Programming",
+        "skills": [
+          "Python",
+          "TypeScript",
+          "JavaScript",
+          "HTML/CSS",
+          "SQL",
+          "C++",
+          "Java",
+          "C#",
+          "R",
+          "Bash / Shell Scripting",
+          "LaTeX",
+          "MATLAB",
+          "IDL",
+          "Fortran"
+        ]
+      },
+      {
+        "id": "frontend",
+        "label": "Frontend & UX",
+        "skills": [
+          "Astro",
+          "Tailwind CSS",
+          "React",
+          "Vite",
+          "Next.js",
+          "Three.js",
+          "Redux",
+          "Figma",
+          "Canva",
+          "UX/UI Design",
+          "Responsive Design",
+          "Information Architecture",
+          "Accessibility",
+          "Wireframing & Prototyping",
+          "CMS Management (WordPress/Drupal)"
+        ]
+      },
+      {
+        "id": "backend_cloud",
+        "label": "Backend, Cloud & DevOps",
+        "skills": [
+          "Node.js",
+          "REST API Design",
+          "Cloudflare Workers",
+          "Git",
+          "GitHub Actions / CI/CD",
+          "Express.js",
+          "FastAPI",
+          "GraphQL",
+          "PostgreSQL",
+          "MongoDB",
+          "Redis",
+          "SQLite",
+          "Docker",
+          "Terraform",
+          "Infrastructure as Code",
+          "AWS (EC2, S3, Lambda, CloudFront, RDS)",
+          "AWS (CodePipeline, CloudFormation, EventBridge)"
+        ]
+      },
+      {
+        "id": "ai_ml_automation",
+        "label": "AI/ML & Automation Tooling",
+        "skills": [
+          "Prompt Engineering",
+          "LLM APIs",
+          "Workflow Automation",
+          "Claude Code",
+          "GitHub Copilot",
+          "RAG Pipelines",
+          "AI Agent Frameworks",
+          "MCP Protocol",
+          "TensorFlow",
+          "PyTorch",
+          "Scikit-learn",
+          "Pandas",
+          "NumPy",
+          "Jupyter Notebook",
+          "Model Evaluation",
+          "Feature Engineering"
+        ]
+      },
+      {
+        "id": "data_science_tools",
+        "label": "Scientific & Data Tooling",
+        "skills": [
+          "Pandas",
+          "Skyfield",
+          "OCR Pipelines",
+          "Data Cleaning & Taxonomy Design",
+          "NumPy",
+          "Streamlit"
+        ]
+      },
+      {
+        "id": "apis_integrations",
+        "label": "APIs & Integrations",
+        "skills": [
+          "Notion API",
+          "HubSpot API",
+          "GitHub API",
+          "Stripe API",
+          "Zotero API",
+          "Google APIs"
+        ]
+      },
+      {
+        "id": "cs_fundamentals",
+        "label": "Computer Science Fundamentals",
+        "skills": [
+          "Data Structures & Algorithms",
+          "Object-Oriented Programming",
+          "Version Control",
+          "Computer Networks",
+          "Operating Systems",
+          "Database Management Systems",
+          "Design Patterns",
+          "Testing Principles"
+        ]
+      },
+      {
+        "id": "open_data_km",
+        "label": "Open Data & Knowledge Management",
+        "skills": [
+          "Data Catalogs",
+          "Dataset Documentation",
+          "Metadata Standards",
+          "Metadata Management",
+          "Taxonomy Design",
+          "Ontology Design",
+          "Linked Data",
+          "Knowledge Graphs",
+          "RDF",
+          "RDFS",
+          "OWL",
+          "SKOS",
+          "SHACL",
+          "SPARQL",
+          "JSON-LD",
+          "DCAT",
+          "PROV-O",
+          "VOID",
+          "Schema.org",
+          "CKAN",
+          "RDF4J",
+          "Apache Jena",
+          "Protégé",
+          "GraphDB",
+          "YASGUI"
+        ]
+      },
+      {
+        "id": "scientific_computing",
+        "label": "Scientific Computing",
+        "subcategories": [
+          {
+            "id": "scientific_computing_data_processing",
+            "label": "Data Processing",
+            "skills": [
+              "Data Reduction",
+              "Calibration",
+              "Image Processing",
+              "Instrumentation",
+              "Research Support"
+            ]
+          },
+          {
+            "id": "scientific_computing_analysis",
+            "label": "Analysis",
+            "skills": [
+              "Analytics",
+              "Assessment",
+              "Data Interpretation",
+              "Mathematics",
+              "Modelling",
+              "Problem Solving",
+              "Research Methods"
+            ]
+          },
+          {
+            "id": "scientific_computing_visualisation",
+            "label": "Visualisation & Reporting",
+            "skills": [
+              "Data Visualisation",
+              "Reporting",
+              "Web Content"
+            ]
+          },
+          {
+            "id": "scientific_computing_research_workflow",
+            "label": "Research Workflow",
+            "skills": [
+              "Research",
+              "Research Preparation",
+              "Research Writing",
+              "Collaborative Research",
+              "Team Projects"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "astrophysics",
+        "label": "Astrophysics",
+        "subcategories": [
+          {
+            "id": "astrophysics_observational_astronomy",
+            "label": "Observational Astronomy",
+            "skills": [
+              "Observational Astronomy",
+              "Astronomy Communication",
+              "Public Outreach",
+              "Space Policy"
+            ]
+          },
+          {
+            "id": "astrophysics_data_analysis",
+            "label": "Data Analysis",
+            "skills": [
+              "Astronomical Data Analysis",
+              "Spectral Analysis",
+              "Thermal Infrared Analysis",
+              "Data Interpretation"
+            ]
+          },
+          {
+            "id": "astrophysics_instrumentation_calibration",
+            "label": "Instrumentation & Calibration",
+            "skills": [
+              "Instrumentation",
+              "Calibration",
+              "Satellite Systems",
+              "Mission Concepts"
+            ]
+          },
+          {
+            "id": "astrophysics_fundamentals",
+            "label": "Fundamentals",
+            "skills": [
+              "Astrophysics",
+              "Physics Fundamentals",
+              "Mathematics",
+              "Modelling",
+              "Science Education"
+            ]
+          },
+          {
+            "id": "astrophysics_scientific_communication",
+            "label": "Scientific Communication",
+            "skills": [
+              "Research Writing",
+              "Press Writing",
+              "Technical Communication",
+              "Presentation",
+              "Science Storytelling"
+            ]
+          }
+        ]
+      }
+    ],
+    "practices": [
+      {
+        "id": "information_architecture_content_modelling",
+        "label": "Information Architecture & Content Modelling"
+      },
+      {
+        "id": "sustainable_low_carbon_digital_standards",
+        "label": "Sustainable / Low-Carbon Digital Standards"
+      },
+      {
+        "id": "applied_ai_workflows",
+        "label": "Applied AI Workflows"
+      },
+      {
+        "id": "impact_measurement_sdg_frameworks",
+        "label": "Impact Measurement & SDG Frameworks"
+      }
+    ],
+    "leadership_and_collaboration": {
+      "id": "leadership_delivery_collaboration",
+      "label": "Leadership, Delivery & Collaboration",
+      "skills": [
+        "Project & Programme Management",
+        "Stakeholder Management",
+        "Team Leadership",
+        "Agile Methodologies",
+        "Cross-Functional Collaboration",
+        "Public Speaking & Presentation",
+        "Change Management",
+        "Roadmapping & OKR Planning",
+        "Risk Management",
+        "Partnership Development",
+        "Mentoring",
+        "Workshop Facilitation",
+        "Community Building",
+        "Negotiation",
+        "Conflict Resolution",
+        "Critical & Analytical Thinking",
+        "Adaptability",
+        "Attention to Detail",
+        "Event Management",
+        "Event Programming",
+        "Event Support",
+        "Campaign Delivery",
+        "Campaign Management",
+        "Campaign Planning",
+        "Communications Strategy",
+        "Editorial Leadership",
+        "Editorial Management",
+        "Editorial Production",
+        "Editorial Strategy",
+        "Education",
+        "Education Delivery",
+        "Education Support",
+        "Educational Content",
+        "Interdisciplinary Collaboration",
+        "International Collaboration",
+        "Lesson Support",
+        "Network Development",
+        "Outreach",
+        "Outreach Delivery",
+        "Press Writing",
+        "Professional Development",
+        "Programme Coordination",
+        "Programme Development",
+        "Public Engagement",
+        "Public Outreach",
+        "Social Media",
+        "Social Media Strategy",
+        "Teaching",
+        "Tutorial Delivery",
+        "Video Production",
+        "Web Content",
+        "Webinar Production",
+        "Workshop Delivery",
+        "Youth Engagement",
+        "Classroom Assistance",
+        "Course Development",
+        "Presentation",
+        "Practical Science",
+        "STEM Communication"
+      ]
+    },
+    "areas_of_interest": [
+      {
+        "id": "full_stack_development",
+        "label": "Full-Stack Development"
+      },
+      {
+        "id": "ai_ml_engineering",
+        "label": "AI/ML Engineering"
+      },
+      {
+        "id": "ai_agents_mcp",
+        "label": "AI Agents & MCP"
+      },
+      {
+        "id": "open_source",
+        "label": "Open Source"
+      },
+      {
+        "id": "data_engineering",
+        "label": "Data Engineering"
+      },
+      {
+        "id": "digital_systems_automation",
+        "label": "Digital Systems & Automation"
+      },
+      {
+        "id": "open_data",
+        "label": "Open Data"
+      },
+      {
+        "id": "knowledge_management",
+        "label": "Knowledge Management"
+      }
+    ]
+  }
+}

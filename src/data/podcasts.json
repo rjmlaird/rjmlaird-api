@@ -1,0 +1,173 @@
+[
+  {
+    "slug": "esocast66",
+    "title": "ESOcast 66: A Groundbreaking Event for the E-ELT",
+    "description": "An episode about a groundbreaking event for the European Extremely Large Telescope (E-ELT), featuring developments and milestones in this ambitious astronomical project.",
+    "type": "featured",
+    "status": "completed",
+    "podcastTitle": "ESOcast",
+    "podcastDescription": "ESOcast brings you the latest news and discoveries from the European Southern Observatory, covering astronomy, space science, and cosmic phenomena.",
+    "podcastFeedUrl": "http://feeds2.feedburner.com/ESOcast?format=xml",
+    "podcastWebsite": "https://www.eso.org/public/videos/archive/category/esocast/",
+    "podcastPublisher": "European Southern Observatory",
+    "podcastLanguage": "en",
+    "podcastCoverImage": "https://www.eso.org/public/archives/images/esocast.png",
+    "tags": [
+      "eso",
+      "astronomy",
+      "e-elt",
+      "telescope"
+    ],
+    "podcastApplePodcasts": "https://podcasts.apple.com/us/podcast/esocast-hd/id295471183",
+    "podcastYouTube": "https://www.youtube.com/playlist?list=PL25F06D1140B44361",
+    "episodeNumber": 66,
+    "publishedDate": "2014-07-02",
+    "duration": "05M 36S",
+    "transcriptUrl": "https://www.eso.org/public/archives/videos/script/esocast66a.pdf",
+    "videoUrl": "https://cdn.eso.org/videos/hd_1080p25_screen/esocast66a.mp4",
+    "shareUrl": "https://www.eso.org/public/videos/esocast66a/",
+    "youtubeId": "YVUK8dtzGCs",
+    "heroImage": "https://cdn.eso.org/images/screen/ann14054a.jpg",
+    "heroAlt": "Screenshot of ESOcast 66: A Groundbreaking Event for the E-ELT",
+    "imageCredit": "ESO",
+    "summary": "An episode about a groundbreaking event for the European Extremely Large Telescope (E-ELT), featuring developments and milestones in this ambitious astronomical project.",
+    "canonical": "https://www.eso.org/public/announcements/ann14054/",
+    "impact": {},
+    "relatedCaseStudies": [
+      "esocast"
+    ],
+    "relatedExperience": [
+      "exp-eso-intern"
+    ],
+    "content": "\n",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/podcasts/esocast66.md"
+  },
+  {
+    "slug": "esocast65",
+    "title": "ESOcast 65: The Chilean Sky in Ultra High Definition",
+    "description": "In the Spring of 2014, a team of ESO Photo ambassadors embarked on a pioneering expedition to ESO's three observatories in Chile. Their mission was to capture a wide range of images and time-lapses of the magnificent Chilean night sky and landscape in crisp Ultra High Definition.",
+    "type": "video scripting",
+    "status": "completed",
+    "podcastTitle": "ESOcast",
+    "podcastDescription": "ESOcast brings you the latest news and discoveries from the European Southern Observatory, covering astronomy, space science, and cosmic phenomena.",
+    "podcastWebsite": "https://www.eso.org/public/videos/archive/category/esocast/",
+    "podcastFeedUrl": "http://feeds2.feedburner.com/ESOcast?format=xml",
+    "podcastPublisher": "European Southern Observatory",
+    "podcastLanguage": "en",
+    "podcastCoverImage": "https://www.eso.org/public/archives/images/esocast.png",
+    "tags": [
+      "eso",
+      "astronomy",
+      "chile",
+      "observatory"
+    ],
+    "podcastApplePodcasts": "https://podcasts.apple.com/us/podcast/esocast-hd/id295471183",
+    "podcastYouTube": "https://www.youtube.com/playlist?list=PL25F06D1140B44361",
+    "episodeNumber": 65,
+    "publishedDate": "2014-05-30",
+    "duration": "11M 485",
+    "transcriptUrl": "https://www.eso.org/public/archives/videos/script/esocast65a.pdf",
+    "videoUrl": "https://cdn.eso.org/videos/hd_1080p25_screen/esocast65a.mp4",
+    "shareUrl": "https://www.eso.org/public/videos/esocast65a/",
+    "youtubeId": "LVAcfq7AV4k",
+    "heroImage": "https://cdn.eso.org/images/screen/ann14043a.jpg",
+    "heroAlt": "Screenshot of ESOcast 65: The Chilean Sky in Ultra High Definition",
+    "imageCredit": "ESO",
+    "summary": "An episode documenting an expedition to ESO's three observatories in Chile to capture Ultra High Definition images and time-lapses of the Chilean night sky and landscape.",
+    "canonical": "https://www.eso.org/public/announcements/ann14043/",
+    "impact": {},
+    "relatedCaseStudies": [
+      "esocast"
+    ],
+    "relatedExperience": [
+      "exp-eso-intern"
+    ],
+    "content": "",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/podcasts/esocast65.md"
+  },
+  {
+    "slug": "esocast64",
+    "title": "ESOcast 64: First Ring System Around Asteroid",
+    "description": "An episode about the discovery of the first ring system around an asteroid, featuring observations and analysis from ESO.",
+    "type": "featured",
+    "status": "completed",
+    "podcastTitle": "ESOcast",
+    "podcastDescription": "ESOcast brings you the latest news and discoveries from the European Southern Observatory, covering astronomy, space science, and cosmic phenomena.",
+    "podcastWebsite": "https://www.eso.org/public/videos/archive/category/esocast/",
+    "podcastFeedUrl": "http://feeds2.feedburner.com/ESOcast?format=xml",
+    "podcastPublisher": "European Southern Observatory",
+    "podcastLanguage": "en",
+    "podcastCoverImage": "https://www.eso.org/public/archives/images/esocast.png",
+    "tags": [
+      "esocast",
+      "eso",
+      "asteroid",
+      "astronomy",
+      "space"
+    ],
+    "podcastApplePodcasts": "https://podcasts.apple.com/us/podcast/esocast-hd/id295471183",
+    "podcastYouTube": "https://www.youtube.com/playlist?list=PL25F06D1140B44361",
+    "episodeNumber": 64,
+    "publishedDate": "2014-03-26",
+    "duration": "04M 53S",
+    "host": "Dr Joe Liske",
+    "videoUrl": "https://cdn.eso.org/videos/hd_and_apple/eso1410a.m4v",
+    "transcriptUrl": "https://www.eso.org/public/archives/videos/script/eso1410a.pdf",
+    "shareUrl": "https://www.eso.org/public/videos/eso1410a/",
+    "youtubeId": "KUoNtEKaAsk",
+    "heroImage": "https://cdn.eso.org/images/screen/ann14022a.jpg",
+    "heroAlt": "Screenshot of ESOcast 64: First Ring System Around Asteroid",
+    "imageCredit": "ESO",
+    "summary": "An episode about the discovery of the first ring system around an asteroid, featuring observations and analysis from ESO.",
+    "canonical": "https://www.eso.org/public/announcements/ann14022/",
+    "impact": {},
+    "relatedVideos": [
+      "KUoNtEKaAsk"
+    ],
+    "relatedExperience": [
+      "exp-eso-intern"
+    ],
+    "relatedCaseStudies": [
+      "esocast"
+    ],
+    "content": "\n",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/podcasts/esocast64.md"
+  },
+  {
+    "slug": "ecosend",
+    "title": "S4E10: Sustainability and Space?!, with Ryan Laird 👽",
+    "description": "Ryan Laird joins James Gill to explore sustainability in space, satellite data, and the future of climate-conscious business.",
+    "podcastTitle": "The EcoSend Podcast",
+    "podcastDescription": "The EcoSend Podcast explores how to build a truly climate-conscious business, covering sustainability, marketing, startups, software, and space. This episode continues that mission with a focused conversation about space sustainability and satellite technology.",
+    "podcastWebsite": "https://ecosend.io",
+    "podcastFeedUrl": "https://feeds.transistor.fm/the-ecosend-podcast",
+    "podcastPublisher": "EcoSend",
+    "podcastLanguage": "en",
+    "podcastCoverImage": "/images/podcasts/ecosend-podcast.jpg",
+    "tags": [
+      "climate",
+      "technology",
+      "marketing",
+      "startups"
+    ],
+    "podcastApplePodcasts": "https://podcasts.apple.com/us/podcast/the-ecosend-podcast/id1652526977?uo=4",
+    "podcastSpotify": "https://open.spotify.com/show/3H1QJE8bcXmLwRReyxEJsS",
+    "podcastYouTube": "https://www.youtube.com/@ecosend",
+    "season": 4,
+    "episodeNumber": 10,
+    "guest": "Ryan Laird",
+    "host": "James Gill",
+    "publishedDate": "2024-04-03",
+    "duration": "36M 48S",
+    "audioUrl": "https://media.transistor.fm/cc1168d5237c5bfd.mp3",
+    "shareUrl": "https://share.transistor.fm/s/cc1168d5",
+    "transcriptUrl": "https://share.transistor.fm/s/cc1168d5/transcript",
+    "heroImage": "/images/podcasts/ecosend-s4e10.jpg",
+    "heroAlt": "Cover for Ecosend podcast episode S4E10: Sustainability and Space?!",
+    "imageCredit": "Ecosend",
+    "summary": "An episode about sustainability and space, including satellite data, space debris, and climate impact.",
+    "canonical": "https://ecosend.io/podcast/s4e10-sustainability-and-space-with-ryan-laird",
+    "content": "\n## Episode overview\n\nWhen it comes to sustainability, we usually think about life here on Earth. This episode asks what happens when we extend that conversation into space.\n\nJames Gill speaks with Ryan Laird, Founder and Director of Green Orbit Digital, about how satellite data and space technology can support climate action and better environmental decision-making.\n\n## Topics covered\n\n- Ryan’s journey from Physics to Marketing and Space Sustainability.\n- The rise of private ventures in the space industry.\n- The challenge of integrating sustainable practice into satellite management.\n- How satellite data can help safeguard the future against climate change.\n- The idea of creating a digital twin of the world to monitor planetary health and inform environmental policy.\n\n## Key takeaway\n\nThe episode argues that sustainability should apply not only to our work on Earth, but also to how we build, launch, and manage technology in space.\n\n## About Ryan Laird\n\nRyan Laird is the Founder and Director of Green Orbit Digital, where he helps businesses navigate the intersection of digital marketing and sustainability in the space industry.\n\n## Further resources\n\n- [Green Orbit Digital website](https://greenorbit.space)\n- [Green Orbit Digital on LinkedIn](https://www.linkedin.com/company/greenorbitdigital/)\n- [Green Orbit Digital on Twitter](https://twitter.com/greenorbitspace)\n- [INCO Academy's Green Digital Skills Course](https://www.greenskills.inco-group.co/)\n\n\n## Music credit\n\nMusic credit: bensound.com\n",
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/podcasts/ecosend.md"
+  }
+]

@@ -1,0 +1,139 @@
+
+@article{snodgrass_collision_2010,
+	title = {A collision in 2009 as the origin of the debris trail of asteroid {P}/2010 {A2}.},
+	volume = {467},
+	copyright = {All rights reserved},
+	issn = {0028-0836},
+	url = {http://adsabs.harvard.edu/abs/2010Natur.467..814S},
+	doi = {10.1038/nature09453},
+	abstract = {The peculiar object P/2010 A2 was discovered in January 2010 and given a cometary designation because of the presence of a trail of material, although there was no central condensation or coma. The appearance of this object, in an asteroidal orbit (small eccentricity and inclination) in the inner main asteroid belt attracted attention as a potential new member of the recently recognized class of main-belt comets. If confirmed, this new object would expand the range in heliocentric distance over which main-belt comets are found. Here we report observations of P/2010 A2 by the Rosetta spacecraft. We conclude that the trail arose from a single event, rather than a period of cometary activity, in agreement with independent results. The trail is made up of relatively large particles of millimetre to centimetre size that remain close to the parent asteroid. The shape of the trail can be explained by an initial impact ejecting large clumps of debris that disintegrated and dispersed almost immediately. We determine that this was an asteroid collision that occurred around 10 February 2009.},
+	number = {7317},
+	urldate = {2014-11-09},
+	journal = {Nature},
+	author = {Snodgrass, Colin and Tubiana, Cecilia and Vincent, Jean-Baptiste and Sierks, Holger and Hviid, Stubbe and Moissl, Richard and Boehnhardt, Hermann and Barbieri, Cesare and Koschny, Detlef and Lamy, Philippe and Rickman, Hans and Rodrigo, Rafael and Carry, Benoît and Lowry, Stephen C and Laird, Ryan J M and Weissman, Paul R and Fitzsimmons, Alan and Marchi, Simone},
+	month = oct,
+	year = {2010},
+	note = {arXiv: 1010.2883
+ISBN: 0028-0836},
+	pages = {814--816},
+	file = {Full Text PDF:files/11081/2010 - Snodgrass et al. - A collision in 2009 as the origin of the debris trail of asteroid P2010 A2..pdf:application/pdf},
+}
+
+@article{snodgrass_p/2010_2010,
+	title = {The {P}/2010 {A2} {Asteroid} {Collision} {Confirmed} by {Rosetta}/{OSIRIS} {Observation}},
+	copyright = {All rights reserved},
+	url = {http://adsabs.harvard.edu/abs/2010DPS....42.3933S},
+	abstract = {The discovery of P/2010 A2 by the LINEAR survey in January 2010 revealed an object displaying a large trail of material similar in shape to a cometary tail although no central condensation or coma could be detected. The appearance of this object in an asteroidal orbit in the inner main belt attracted attention as a potential new member of the Main Belt Comets class (MBCs) but the discovery of a nucleus, with an estimated diameter of 120 m, around 1500 km away from the trail implied that the extended object we were seeing could be the debris trail from a recent collision rather than the tail of a comet. Due to the low inclination of its orbit, it is difficult to conclude about the nature of P/2010 A2 from Earth-based data only, as different scenarios lead to the same appearance in the orbital configuration at the times of observations. We present here another set of images, acquired from the unique viewing geometry provided by ESA's Rosetta spacecraft en route to comet 67P/Churyumov-Gerasimenko. Albeit faint (22 magnitude), the object could be observed by the high-resolution camera OSIRIS. We used a Finson-Probstein model to simulate the shape of the trail, and estimate the time of emission and β parameter (ratio between solar radiation pressure and gravity) for the dust grains. Simulations were compared to the OSIRIS images and ground based observations acquired at NTT and Palomar telescopes. Thanks to the different phase angle provided by Rosetta, we could reduce the number of solutions to a unique model, leading to the conclusive demonstration that the trail is due to a single event rather than a period of cometary activity.},
+	urldate = {2014-11-09},
+	journal = {American Astronomical Society},
+	author = {Snodgrass, Colin and Tubiana, C. and Vincent, J. and Sierks, H. and Hviid, S. and Moissl, R. and Boehnhardt, H. and Barbieri, C. and Koschny, D. and Lamy, P. and Rickman, H. and Rodrigo, R. and Carry, B. and Lowry, S. C. and Laird, R. J. M. and Weissman, P. R. and Fitzsimmons, A. and Marchi, S. and {OSIRIS Team}},
+	year = {2010},
+}
+
+@inproceedings{marcu_rosetta_2015,
+	title = {Rosetta and {Philae}: {Captivating} the hearts and minds of a global audience},
+	volume = {13},
+	isbn = {978-1-5108-1893-4},
+	issn = {00741795},
+	abstract = {Copyright © 2015 by Design \& Data GmbH.In the final year leading up to Rosetta's approach to comet 67P/Churyumov-Gerasimenko and subsequent landing of Philae, an outreach campaign was initiated by the European Space Agency (ESA) using social media, participatory engagement and storytelling techniques as a means to reach out to the hearts and minds of a global audience. The comet-landing event received major global publicity unseen before for a space mission in recent times. ESA registered 4.3 billion page impressions on their Twitter channel. This mission proved a major success for ESA and Europe. The crossmedia agency Design \& Data GmbH contributed to ESA's outreach campaign through the creation of a cartoon animation, which due to increasing demand turned into a whole series. This paper focuses on this cartoon series, which is believed to have been a key component for popularising the mission globally. The cartoon series was launched shortly before the \#WakeUpRosetta event and continues to provide updates of the mission to this day. A survey conducted for this paper looks in detail at various aspects that we have identified as potential drivers for promoting the Rosetta mission with the cartoon series as its central component. A breakdown of the outreach strategies implemented for the Rosetta mission demonstrates their individual effect. This paper is based on our first hand experience in working with ESA to promote the Rosetta \& Philae mission. It concludes with a series of recommendations on how to successfully conduct outreach campaigns for future space exploration missions.},
+	booktitle = {Proceedings of the {International} {Astronautical} {Congress}, {IAC}},
+	author = {Marcu, S.D. and Laird, R.J.M.},
+	year = {2015},
+}
+
+@misc{laird_black_nodate,
+	title = {Black {Holes} and {Revelations} {\textbar} {Space} {Scoop} {\textbar} {UNAWE}},
+	url = {http://unawe.org/kids/unawe1372/},
+	urldate = {2014-11-09},
+	author = {Laird, Ryan J M},
+	keywords = {news, astronomy, calendar, educational material, goodies, images, kids, posters, video, wallpaper},
+}
+
+@article{fernandez_visible-wavelength_2012,
+	title = {Visible-{Wavelength} {Survey} of {Jupiter}-{Family} {Cometary} {Nuclei} as {Part} of {SEPPCoN}},
+	volume = {1667},
+	journal = {Asteroids, Comets, Meteors 2012},
+	author = {Fernandez, Y R and Lowry, S C and Meech, K J and Laird, R and Fitzsimmons, A and Snodgrass, C and Weissman, P R and Pittichova, J and Bauer, J M and Weaver, H A and {others}},
+	year = {2012},
+	pages = {6488},
+}
+
+@inproceedings{marcu_bake_2018,
+	title = {Bake in space: {To} boldly bake where nobody has baked before},
+	volume = {2018-October},
+	copyright = {All rights reserved},
+	issn = {00741795},
+	abstract = {The current provisions for food in microgravity are not sustainable for future human space exploration missions to the Moon and especially to Mars. Life in space manages to address only the basic nutrition requirements and the technical challenges associated with food preparation in microgravity in near Earth orbit. In addition it is designed with a shelf life of 1-2 years so that issues of deterioration are not a concern. Current options rely on a constant supply from Earth, which is not a viable option the further humanity explores the solar system. With the rise of space tourism, increased interest in revisiting the Moon and landing humans on Mars, food will play an important role. On the International Space Station, astronauts most look forward to a supply of fresh fruit. Those crew members who spend months in orbit often go long periods of time without eating any fresh produce. Bake In Space aims to change that by addressing the scientific and technical challenges relating to the production of fresh food in space. The idea is to use bread as a stepping-stone to providing fresh food that will benefit the wellness and general quality of life of those living and working in space. It is a staple food that unites us all as humanity. It crosses many cultures and languages, and is included in many religious practices. Our civilisation on Earth began with agriculture and bread accompanied our progress so much so that bread became a symbol for quality of life. We want to give future astronauts and space explorers a 'taste of home'. What better a meal solution than a homemade sandwich developed for the best nutritional outcome.? We take for granted the conditions on Earth that have led us to develop many tools and processes that are simply not possible in the unique environment of microgravity. We have developed a plan to test key bread-making processes including baking, mixing, preparing wheat and harvesting/cultivating wheat. Each of the steps will require new hardware items and food preparation processes to be developed first for microgravity and then onto the Moon and Mars. This paper will provide an overview of Bake In Space and its objectives, the long-term challenges to be addressed and the future outlook for human exploration missions to the Moon, Mars and beyond.},
+	booktitle = {Proceedings of the {International} {Astronautical} {Congress}, {IAC}},
+	author = {Marcu, Sebastian D. and Laird, Ryan J.M. and Jaschinski, Neil},
+	year = {2018},
+}
+
+@inproceedings{marcu_iaf_2018,
+	title = {Iaf microgravity sciences and processes symposium ({A2}) {Life} and {Microgravity} {Sciences} on board {ISS} and beyond ({Part} {I}) (6)},
+	volume = {2018-October},
+	copyright = {All rights reserved},
+	issn = {00741795},
+	abstract = {The objective of Bake in Space is to recreate the complete production cycle of bread making - from grain production to making freshly baked bread that is suitable for the unique environment of spacecraft in microgravity. The idea is to use this endeavour as a stepping-stone to provide fresh food that will benefit the wellness and general quality of life of those living and working in space. In order to achieve our main objective we have established a series of milestones that we intend to implement on the International Space Station as a series of technology demonstrations.: 1. Baking: Establishing baking infrastructure and testing it with pre-baked bread rolls and later with other forms of dough creation (earth supply) i.e. granulate then bake dough for bread rolls 2. Kneading: Prepare dough from flour (earth supply) + water (recycled from ISS) then bake dough for bread rolls 3. Grinding: Grind corn, prepare dough in microgravity and bake for bread rolls 4. Harvesting: Separate corn from plant 5. Growing: Grow corn for bread/ bread rolls Each of the above steps is challenged by the unique environment of the International Space Station. There are a number of constraints to take into account such as dust, heat and moisture control as well as yeast behaviour in microgravity. This in turn will lead to the development of new hardware items and food preparation processes as well as innovative new food products for use in space and on Earth. Bake in Space is leveraging the business opportunities afforded by the commercialisation of the ISS and is contributing directly to NASA and ESA's goals for the long-term exploration efforts of humankind. This paper will address some of the technical challenges that are to be overcome with the project.},
+	booktitle = {Proceedings of the {International} {Astronautical} {Congress}, {IAC}},
+	author = {Marcu, Sebastian D. and Jaschinski, Neil and Boehme, Matthias and Laird, Ryan J.M. and Stukenborg, Florian},
+	year = {2018},
+}
+
+@article{littlejohns_a3_5_observations_2009,
+	title = {A3\_5\_Observations of {NewX}-1(1436+32)\_v2},
+	volume = {7},
+	url = {https://api.semanticscholar.org/CorpusID:125566392},
+	journal = {Physics Special Topics},
+	author = {Littlejohns, O M and Hill, Kathryn and Laird, Ryan},
+	year = {2009},
+}
+
+@inproceedings{littlejohns_a3_2_uranus_2009,
+	title = {A3\_2\_Uranus and {Neptune}, non-identical twins?\_v2},
+	url = {https://api.semanticscholar.org/CorpusID:125275395},
+	author = {Littlejohns, O M and Hill, Kathryn and Laird, Ryan},
+	year = {2009},
+}
+
+@inproceedings{littlejohns_a3_3_detection_2009,
+	title = {A3\_3\_Detection bias in the search for extrasolar planets\_v2},
+	url = {https://api.semanticscholar.org/CorpusID:125642068},
+	author = {Littlejohns, O M and Hill, Kathryn and Laird, Ryan},
+	year = {2009},
+}
+
+@techreport{snodgrass_collision_nodate,
+	title = {A collision in 2009 as the origin of the debris trail of asteroid {P}/2010 {A2}},
+	copyright = {All rights reserved},
+	author = {Snodgrass, Colin and Tubiana, Cecilia and Vincent, Jean-Baptiste and Sierks, Holger and Hviid, Stubbe and Moissl, Richard and Boehnhardt, Hermann and Barbieri, Cesare and Koschny, Detlef and Lamy, Philippe and Rickman, Hans and Rodrigo, Rafael and Carry, Benoît and Lowry, Stephen C and Laird, Ryan J M and Weissman, Paul R and Fitzsimmons, Alan and Marchi, Simone and Team, Osiris},
+	file = {PDF:files/3593/Snodgrass et al. - A collision in 2009 as the origin of the debris trail of asteroid P2010 A2.pdf:application/pdf},
+}
+
+@techreport{sebastian_space_2015,
+	title = {{SPACE} {EDUCATION} {AND} {OUTREACH} {SYMPOSIUM} ({E1}) {New} {Worlds}-{Innovative} {Space} {Education} and {Outreach} (7)},
+	copyright = {All rights reserved},
+	abstract = {In the final year leading up to Rosetta's approach to comet 67P/Churyumov-Gerasimenko and subsequent landing of Philae, an outreach campaign was initiated by the European Space Agency (ESA) using social media, participatory engagement and storytelling techniques as a means to reach out to the hearts and minds of a global audience. As a result, the comet-landing event received major global publicity unseen before for a space mission in recent time. This paper analyzes how this outreach success was achieved by providing a historical analysis of Rosetta's key mission highlights over the 10-year journey. A comparative analysis showcases the differences and commonalities between the outreach campaign for ESA's Rosetta mission and NASA's Curiosity mission in 2012. NASA's campaign for the Curiosity mission served as inspiration for the outreach decisions adopted by ESA. A survey conducted for this paper looks in detail at what aspects of the outreach campaign were the key drivers for promoting the Rosetta mission. A breakdown of the outreach strategies implemented for the Rosetta mission demonstrates their individual effect. Design \& Data GmbH contributed extensively to the success of this outreach campaign by producing the key content elements. This paper is based on our first hand experience. It concludes with a series of recommendations and provides a blueprint on how to successfully conduct outreach campaigns for future space missions 1 Paper ID: 29445 oral},
+	author = {Sebastian, Mr and Marcu, Davis and Laird, Mr Ryan},
+	year = {2015},
+	file = {PDF:files/5508/2015 - Sebastian et al. - SPACE EDUCATION AND OUTREACH SYMPOSIUM (E1) New Worlds-Innovative Space Education and Outreach (7).pdf:application/pdf},
+}
+
+@inproceedings{pittichova_visible-wavelength_2010,
+	title = {Visible-wavelength {Observations} of {Jupiter}-family {Comet} {Nuclei} as {Part} of {Seppcon}.},
+	volume = {42},
+	copyright = {All rights reserved},
+	booktitle = {{AAS}/{Division} for {Planetary} {Sciences} {Meeting} {Abstracts}\# 42},
+	author = {Pittichova, Jana and Lowry, SC and Laird, R and A'Hearn, MF and Bauer, JM and Campins, H and Fernández, Y and Fitzsimmons, A and Groussin, O and Hsieh, H and {others}},
+	year = {2010},
+	pages = {28--26},
+}
+
+@inproceedings{boyce_post_2008,
+	title = {Post {Iron} {Group} {Elements} in {DO} {Stars}},
+	volume = {391},
+	booktitle = {Hydrogen-{Deficient} {Stars}},
+	author = {Boyce, DD and Barstow, MA and Dobbie, PD and Aston, JH and Booles, BC and Preval, SP and Laird, RJM and James, FA and Barstow, JK and Forbes, AE},
+	year = {2008},
+	pages = {235},
+}

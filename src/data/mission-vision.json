@@ -1,0 +1,85 @@
+{
+  "vision_and_strategy": {
+    "mission": "Advance sustainability, environmental responsibility, and equitable access to science and technology by connecting space exploration with real-world impact and public engagement.",
+    "vision": "A globally inclusive and environmentally responsible space sector that inspires curiosity, empowers future generations, and contributes to a sustainable and collaborative future on Earth and beyond.",
+    "values": [
+      {
+        "name": "Integrity",
+        "description": "Act with honesty, transparency, and strong ethical principles in all work."
+      },
+      {
+        "name": "Responsibility",
+        "description": "Take accountability for environmental, social, and technological impacts."
+      },
+      {
+        "name": "Excellence",
+        "description": "Deliver high-quality, rigorous, and impactful work."
+      },
+      {
+        "name": "Continuous Learning",
+        "description": "Continuously expand knowledge across space science, sustainability, and technology."
+      },
+      {
+        "name": "Respect",
+        "description": "Foster inclusive, respectful engagement across communities and disciplines."
+      },
+      {
+        "name": "Innovation",
+        "description": "Embrace new ideas and interdisciplinary approaches to solve complex challenges."
+      },
+      {
+        "name": "Collaboration",
+        "description": "Promote global cooperation across sectors, disciplines, and borders."
+      },
+      {
+        "name": "Commitment",
+        "description": "Dedicate sustained effort toward meaningful, long-term impact."
+      }
+    ],
+    "core_causes": {
+      "sustainability": {
+        "description": "Promoting environmentally responsible practices on Earth and in space.",
+        "areas": [
+          "Environmental Responsibility",
+          "Responsible Space Policy"
+        ]
+      },
+      "education_and_outreach": {
+        "description": "Inspiring and enabling access to science, technology, and space knowledge.",
+        "areas": [
+          "STEM Education",
+          "Space Outreach",
+          "Youth Mentoring"
+        ]
+      },
+      "equity_and_inclusion": {
+        "description": "Ensuring fair access and diverse participation in science and space sectors.",
+        "areas": [
+          "Inclusion & Diversity"
+        ]
+      },
+      "global_collaboration": {
+        "description": "Supporting international cooperation to address shared challenges in space and sustainability.",
+        "areas": [
+          "Global Collaboration"
+        ]
+      }
+    },
+    "meaning_portfolio": {
+      "summary": "A diversified set of purpose-driven motivations centered on communication, education, and collaboration within the space and sustainability sectors.",
+      "core_sources_of_fulfillment": [
+        "Communicating space science and environmental insights to broader audiences",
+        "Supporting education and public understanding of space and technology",
+        "Contributing to sustainable and responsible space practices",
+        "Building tools, platforms, and data-driven solutions with real-world impact"
+      ],
+      "sense_of_purpose": "To contribute to a global effort that expands humanity’s understanding of space while ensuring that exploration is inclusive, responsible, and beneficial to life on Earth.",
+      "growth_and_expansion": [
+        "Develop interdisciplinary collaborations across science, policy, and technology",
+        "Create and share open, accessible data and visualisation tools",
+        "Engage in public communication and advocacy for responsible space policy",
+        "Continuously explore new methods of outreach and knowledge sharing"
+      ]
+    }
+  }
+}

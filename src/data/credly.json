@@ -1,0 +1,102 @@
+{
+  "certifications": [
+    {
+      "id": 1,
+      "name": "Certified in Cybersecurity (CC)",
+      "type": "Industry Certification",
+      "issuer": "ISC2",
+      "issueDate": "2023-05-15",
+      "badgeId": "243eda66-fffa-4e8e-aec9-6c13c12c1767",
+      "badgeUrl": "https://www.credly.com/badges/243eda66-fffa-4e8e-aec9-6c13c12c1767",
+      "expiryDate": "2026-05-31",
+      "imageUrl": "https://images.credly.com/images/2030e43f-8003-4d4b-9630-847add403c87/image.png"
+    },
+    {
+      "id": 2,
+      "name": "APM Associate",
+      "type": "Industry Certification",
+      "issuer": "Association for Project Management",
+      "issueDate": "2023-03-09",
+      "badgeId": "0da010d9-d7ff-4a71-9ca5-5c472cd8d988",
+      "badgeUrl": "https://www.credly.com/badges/0da010d9-d7ff-4a71-9ca5-5c472cd8d988",
+      "level": "Associate",
+      "imageUrl": "https://images.credly.com/images/200b2ce7-5324-4a8b-bded-be74e1ad4431/image.png"
+    },
+    {
+      "id": 3,
+      "name": "Certificate in Professional Digital Marketing",
+      "type": "Industry Certification",
+      "issuer": "The Chartered Institute of Marketing",
+      "issueDate": "2022-03-18",
+      "badgeId": "9b363b0c-71e4-4ab6-9c7c-6c02db537c51",
+      "badgeUrl": "https://www.credly.com/badges/9b363b0c-71e4-4ab6-9c7c-6c02db537c51",
+      "level": "Professional",
+      "imageUrl": "https://images.credly.com/images/c1725ecd-8966-4052-9f2a-b0c1ea5f96eb/Digital-Badge_L4_Qual_Certificate_in_Professional_Digital_Marketing.png"
+    }
+  ],
+  "learning_badges": [
+    {
+      "id": 1,
+      "name": "Enterprise Design Thinking Co-Creator",
+      "type": "Badge",
+      "issuer": "IBM",
+      "issueDate": "2024-02-07",
+      "badgeId": "3e35bc4a-9d66-4c08-9f56-590a8765be63",
+      "badgeUrl": "https://www.credly.com/badges/3e35bc4a-9d66-4c08-9f56-590a8765be63",
+      "imageUrl": "https://images.credly.com/images/2700b813-82b8-4232-9b36-5dcd5cd24584/Badges_v8-08_Co-Creator.png"
+    },
+    {
+      "id": 2,
+      "name": "Enterprise Design Thinking Practitioner",
+      "type": "Badge",
+      "issuer": "IBM",
+      "issueDate": "2024-02-07",
+      "badgeId": "e8a1b73b-78cf-4d0e-92ce-617ab846be20",
+      "badgeUrl": "https://www.credly.com/badges/e8a1b73b-78cf-4d0e-92ce-617ab846be20",
+      "level": "Foundational",
+      "imageUrl": "https://images.credly.com/images/bc08972c-3c7d-4b99-82a0-c94bcca36674/Badges_v8-07_Practitioner.png"
+    },
+    {
+      "id": 3,
+      "name": "Copywriting Masterclass",
+      "type": "Badge",
+      "issuer": "The Chartered Institute of Marketing",
+      "issueDate": "2022-08-25",
+      "badgeId": "7b298323-929d-4bda-92a5-3fcce9da5678",
+      "badgeUrl": "https://www.credly.com/badges/7b298323-929d-4bda-92a5-3fcce9da5678",
+      "imageUrl": "https://images.credly.com/images/5c589f5c-07d0-4593-852e-a4e8d5dde543/image.png"
+    },
+    {
+      "id": 4,
+      "name": "Applied Marketing",
+      "type": "Badge",
+      "issuer": "The Chartered Institute of Marketing",
+      "issueDate": "2022-03-18",
+      "badgeId": "c8332af1-f0f5-46bf-80b9-c5976681a52b",
+      "badgeUrl": "https://www.credly.com/badges/c8332af1-f0f5-46bf-80b9-c5976681a52b",
+      "imageUrl": "https://images.credly.com/images/fb406356-7f28-48ec-bba4-464178f3ccee/Digital-Badge_L4_Award_Applied_Marketing.png"
+    },
+    {
+      "id": 5,
+      "name": "Planning Campaigns",
+      "type": "Badge",
+      "issuer": "The Chartered Institute of Marketing",
+      "issueDate": "2021-07-05",
+      "badgeId": "ab8f07ff-9a94-4662-a01f-8d060e6a46ca",
+      "badgeUrl": "https://www.credly.com/badges/ab8f07ff-9a94-4662-a01f-8d060e6a46ca",
+      "imageUrl": "https://images.credly.com/images/f52a34a0-5423-4e88-aa2f-4b8b8339e05f/Digital-Badge_L4_Award_Planning_Campaigns.png"
+    },
+    {
+      "id": 6,
+      "name": "Digital Marketing Techniques",
+      "type": "Badge",
+      "issuer": "The Chartered Institute of Marketing",
+      "issueDate": "2021-05-11",
+      "badgeId": "34934015-edf7-4e0c-a234-ce6599f1e837",
+      "badgeUrl": "https://www.credly.com/badges/34934015-edf7-4e0c-a234-ce6599f1e837",
+      "imageUrl": "https://images.credly.com/images/2b27dba9-3b22-4b3b-8bbd-1e9c7416cfb6/Digital-Badge_L4_Award_Digital_Marketing_Techniques.png"
+    }
+  ],
+  "achievements": [],
+  "coding_platform_stats": {}
+}

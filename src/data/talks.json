@@ -1,0 +1,107 @@
+{
+  "talk_series": [
+    {
+      "id": "space-sustainability-001",
+      "series": "Sustainable Space Systems",
+      "title": "Space as Critical Infrastructure for Climate Intelligence",
+      "type": "talk",
+      "level": "intermediate",
+      "tags": [
+        "space-tech",
+        "earth-observation",
+        "sustainability",
+        "climate-data"
+      ],
+      "summary": "How satellite data is becoming essential infrastructure for climate monitoring, risk analysis, and sustainability decision-making.",
+      "key_points": [
+        "Earth observation data pipelines for sustainability reporting",
+        "Climate intelligence systems built from satellite inputs",
+        "Connecting satellite data with business and ESG metrics"
+      ],
+      "audience": [
+        "space industry professionals",
+        "climate tech startups",
+        "data engineers"
+      ],
+      "duration_minutes": 35,
+      "format": "presentation",
+      "status": "planned",
+      "date": null,
+      "location": "UK / Remote",
+      "assets": {
+        "slides": "",
+        "video": "",
+        "repo": ""
+      }
+    },
+    {
+      "id": "ai-infra-002",
+      "series": "AI Infrastructure for Space Tech",
+      "title": "Multi-Model AI Systems for Production",
+      "type": "talk",
+      "level": "advanced",
+      "tags": [
+        "ai",
+        "mcp",
+        "llm-orchestration",
+        "bedrock",
+        "claude"
+      ],
+      "summary": "Practical architecture patterns for building multi-model AI systems in production environments.",
+      "key_points": [
+        "Model routing strategies across Claude, Bedrock, and OpenAI",
+        "Cost-aware AI architecture and optimisation patterns",
+        "Tool-using agents in production workflows"
+      ],
+      "audience": [
+        "AI engineers",
+        "platform architects",
+        "startup founders"
+      ],
+      "duration_minutes": 45,
+      "format": "technical talk",
+      "status": "draft",
+      "date": null,
+      "location": "UK / EU",
+      "assets": {
+        "slides": "",
+        "video": "",
+        "repo": ""
+      }
+    },
+    {
+      "id": "eo-decisions-003",
+      "series": "Earth Observation for Decision-Making",
+      "title": "From Satellites to Business Decisions",
+      "type": "talk",
+      "level": "beginner",
+      "tags": [
+        "earth-observation",
+        "data-science",
+        "gis",
+        "decision-systems"
+      ],
+      "summary": "How Earth observation data is transformed into actionable insights across sectors.",
+      "key_points": [
+        "Data ingestion from satellite APIs",
+        "Processing pipelines for Earth observation datasets",
+        "Use cases in agriculture, insurance, and logistics"
+      ],
+      "audience": [
+        "analysts",
+        "policy makers",
+        "startup teams"
+      ],
+      "duration_minutes": 30,
+      "format": "keynote",
+      "status": "ready",
+      "date": null,
+      "location": "UK",
+      "assets": {
+        "slides": "",
+        "video": "",
+        "repo": ""
+      }
+    }
+  ]
+}

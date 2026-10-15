@@ -1,0 +1,132 @@
+{
+  "brand_identity": {
+    "name": "Ryan Laird / Green Orbit Digital",
+    "brand_type": "Personal brand and specialist communications practice",
+    "brand_summary": "A premium strategic communications brand focused on helping space, climate, and mission-driven organisations communicate complex ideas with clarity, credibility, and purpose."
+  },
+  "mission": "To help space, climate, and mission-driven organisations communicate complex ideas clearly through thoughtful strategy, editorial storytelling, and responsible digital practice.",
+  "vision": "A world where communication is clear, inclusive, and purposeful, and where progress in space and climate contributes positively to life on Earth.",
+  "values": [
+    {
+      "id": "integrity",
+      "title": "Integrity",
+      "icon": "🛡️",
+      "description": "Operating with honesty, consistency, and accountability in how work is shaped, delivered, and represented.",
+      "brand_expression": "Transparent communication, dependable delivery, and clear expectations.",
+      "do": ["Speak truthfully and transparently", "Admit mistakes and correct them promptly"],
+      "dont": ["Withhold important information", "Make promises you cannot keep"],
+      "tags": ["ethics", "trust"]
+    },
+    {
+      "id": "balance",
+      "title": "Balance",
+      "icon": "⚖️",
+      "description": "Maintaining perspective and sustainable focus to support thoughtful decisions and long-term effectiveness.",
+      "brand_expression": "Measured strategy, calm execution, and work that respects time, attention, and capacity.",
+      "do": ["Prioritize well-being and sustainable pacing", "Seek equilibrium between quality and speed"],
+      "dont": ["Burn out for short-term gain", "Compromise quality for arbitrary deadlines"],
+      "tags": ["perspective", "stability"]
+    },
+    {
+      "id": "sustainability",
+      "title": "Sustainability (Long-Term Thinking)",
+      "icon": "🌱",
+      "description": "Plan and act with long-term health and fairness in mind, prioritising durability and ethical resource use.",
+      "brand_expression": "Low-carbon thinking, durable digital practice, and decisions guided by long-term value.",
+      "do": ["Evaluate long-term trade-offs", "Design for resilience and minimal harm"],
+      "dont": ["Opt for short-term gains that cause lasting harm", "Ignore broader ecological impacts"],
+      "tags": ["long-term", "environment"]
+    },
+    {
+      "id": "decency",
+      "title": "Decency",
+      "icon": "🤝",
+      "description": "Engaging with people respectfully, professionally, and with consideration for context and nuance.",
+      "brand_expression": "Human-centred collaboration, thoughtful communication, and a consistently respectful approach.",
+      "do": ["Listen actively and treat people equitably", "Use polite language and considerate actions"],
+      "dont": ["Dismiss others' experiences", "Use demeaning or exclusionary language"],
+      "tags": ["respect", "empathy"]
+    },
+    {
+      "id": "curiosity",
+      "title": "Curiosity (Intellectual Honesty)",
+      "icon": "🔎",
+      "description": "Pursue learning with humility — question assumptions, seek evidence, and be willing to update views.",
+      "brand_expression": "Exploration, experimentation, and continuous improvement shaped by insight.",
+      "do": ["Ask thoughtful questions", "Share sources and acknowledge uncertainty"],
+      "dont": ["Cling to beliefs despite evidence", "Suppress dissenting perspectives"],
+      "tags": ["learning", "critical-thinking"]
+    },
+    {
+      "id": "responsibility",
+      "title": "Responsibility (Personal & Collective)",
+      "icon": "🧭",
+      "description": "Take ownership for actions and their impacts, both as individuals and as part of a community.",
+      "brand_expression": "Considered judgement, accountable delivery, and awareness of broader consequences.",
+      "do": ["Own mistakes and make reparations", "Consider environmental and social impacts of choices"],
+      "dont": ["Shift blame to others", "Ignore long-term consequences"],
+      "tags": ["accountability", "stewardship"]
+    },
+    {
+      "id": "contribution",
+      "title": "Contribution / Service",
+      "icon": "🌍",
+      "description": "Focus on creating positive, tangible value for others through service, mentorship, and practical work.",
+      "brand_expression": "Practical support, meaningful contribution, and communication designed to help clients move forward.",
+      "do": ["Share time and skills to help others grow", "Build tools and resources that scale impact"],
+      "dont": ["Hoard knowledge or resources", "Prioritise credit over outcomes"],
+      "tags": ["service", "mentorship"]
+    }
+  ],
+  "brand_strategy": {
+    "value_proposition": "I help organisations working in space, climate, and other mission-led sectors turn complex ideas into clear, credible communication that builds trust, deepens understanding, and supports meaningful action.",
+    "position_statement": "For space, climate, and purpose-driven organisations that need communication to be both intelligent and human, I provide strategic digital and editorial support that combines subject understanding, clarity, and responsible delivery.",
+    "brand_promise": "I will help you communicate with clarity, purpose, and care — without losing the depth, nuance, or ambition of your work.",
+    "elevator_pitch": "I’m Ryan Laird, a digital strategist and science communicator helping space, climate, and mission-driven organisations create clear, thoughtful communication that earns attention and builds trust. My work combines editorial storytelling, SEO, content strategy, and responsible digital practice to support visibility, inclusivity, and impact.",
+    "brand_essence": "Clarity with purpose",
+    "core_essence_statement": {
+      "emotional": "Grounded, hopeful, reassuring, and quietly ambitious.",
+      "psychological": "A sense of confidence that meaningful work can be communicated with intelligence, care, and credibility.",
+      "functional": "Strategic communication that makes complex, technical, and mission-led work easier to understand, trust, and act on."
+    }
+  },
+  "brand_guidelines": {
+    "attributes": ["Clear", "Premium", "Thoughtful", "Credible", "Responsible", "Inclusive", "Strategic", "Human", "Purposeful", "Measured"],
+    "tone_of_voice": {
+      "primary": "Clear and refined",
+      "secondary": ["Credible", "Human", "Inclusive", "Purposeful", "Measured"],
+      "avoid": ["Jargon-heavy", "Overly promotional", "Corporate fluff", "Unnecessary complexity", "Exclusionary language"]
+    },
+    "messaging_pillars": [
+      {
+        "pillar": "Clarity",
+        "message": "Complex ideas deserve communication that is elegant, intelligible, and respectful of the audience."
+      },
+      {
+        "pillar": "Purpose",
+        "message": "Good communication should serve a meaningful goal, not simply occupy space."
+      },
+      {
+        "pillar": "Responsibility",
+        "message": "How we communicate matters, especially in sectors shaped by science, climate, policy, and public trust."
+      },
+      {
+        "pillar": "Inclusivity",
+        "message": "Communication should be accessible, considerate, and designed to welcome more people into the conversation."
+      },
+      {
+        "pillar": "Space for good",
+        "message": "Space communication can and should support life on Earth, public understanding, and long-term benefit."
+      }
+    ]
+  },
+  "additional_data": {
+    "brand_differentiators": ["Blends technical understanding with editorial communication.", "Works confidently across space, climate, and sustainability.", "Brings a premium yet human tone to complex subject matter.", "Combines strategy with practical delivery.", "Uses a responsible and inclusive approach to digital communication.", "Understands how to communicate for both specialist and broader audiences."],
+    "brand_benefits": ["Clearer messaging for complex topics.", "Stronger trust with target audiences.", "More purposeful digital communication.", "Better alignment between mission, message, and medium.", "A more responsible and inclusive approach to communication.", "Support for organisations seeking a premium but accessible brand presence."],
+    "ideal_audience": ["Space organisations", "Climate and sustainability organisations", "Mission-driven businesses", "Science, research, and innovation teams", "Public sector and institutional organisations", "Inclusive, purpose-led founders and small teams"],
+    "content_themes": ["Space communication", "Climate communication", "Responsible digital strategy", "Low-carbon web thinking", "Editorial storytelling", "SEO and content strategy", "Inclusivity in communication", "Audience engagement", "Clear communication for good"],
+    "brand_keywords": ["clarity", "purpose", "trust", "responsibility", "sustainability", "inclusivity", "storytelling", "strategy", "impact", "space", "climate"],
+    "tagline": "Clarity for space, climate, and purposeful progress.",
+    "slogan": "Turning complex ideas into inclusive, meaningful impact."
+  }
+}
