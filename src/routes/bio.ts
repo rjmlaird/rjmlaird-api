@@ -23,7 +23,7 @@ const SECTION_KEYS = [
   "contact",
 ] as const satisfies readonly BioSection[];
 
-type SocialSource = (typeof socials)[number];
+type SocialSource = (typeof socials.profiles)[number];
 
 type Profile = {
   id: string;
@@ -33,7 +33,7 @@ type Profile = {
 };
 
 const socialById = new Map<string, SocialSource>(
-  socials.map((social) => [social.key, social]),
+  socials.profiles.map((social) => [social.key, social]),
 );
 
 const profiles: Profile[] = bio.profileIds
