@@ -47,7 +47,7 @@ describe("GET /v1/bio", () => {
     const body = (await response.json()) as BioResponse;
 
     expect(body.data).toMatchObject({
-      id: "ryan-j-m-laird",
+      id: "rjmlaird",
       displayName: "Ryan Laird",
     });
 
