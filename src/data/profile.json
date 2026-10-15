@@ -94,31 +94,22 @@
     "linkedin": "https://www.linkedin.com/in/rjmlaird/",
     "github": "https://github.com/rjmlaird"
   },
-  "links": [
+  "portfolioLinks": [
     {
-      "label": "Main site",
-      "url": "https://rjmlaird.co.uk",
-      "type": "website"
-    },
-    {
-      "label": "Impact Orbit Co.",
-      "url": "https://impactorbit.co",
-      "type": "organisation"
-    },
-    {
-      "label": "Space for Neurodiversity",
-      "url": "https://spaceforneurodiversity.org",
-      "type": "organisation"
+      "label": "Professional Website",
+      "href": "https://rjmlaird.co.uk"
     },
     {
       "label": "Space Integrity Initiative",
-      "url": "https://spaceintegrity.org",
-      "type": "initiative"
+      "href": "https://spaceintegrity.org"
     },
     {
       "label": "Space Impact Forum",
-      "url": "https://spaceimpactforum.com",
-      "type": "initiative"
+      "href": "https://spaceimpactforum.com"
+    },
+    {
+      "label": "Space for Neurodiversity",
+      "href": "https://spaceforneurodiversity.org"
     }
   ],
   "related": {
