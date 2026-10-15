@@ -1,32 +1,150 @@
 {
-  "name": "Ryan Laird",
+  "id": "rjmlaird",
+  "name": "Ryan J. M. Laird",
   "preferredName": "Ryan",
+  "displayName": "Ryan Laird",
   "pronouns": "he/him",
-  "headline": "Strategic and Sustainable Marketing in the Space Sector",
-  "location": "Leicester, United Kingdom",
-  "email": "ryan@greenorbit.space",
+  "headline": "Strategic communications, sustainable marketing, and technical systems for space, deep-tech, and mission-led organisations.",
+  "shortBio": "Space and science communications specialist, Chartered Marketer, and technical systems consultant helping complex, mission-led organisations communicate clearly, operate efficiently, and grow responsibly.",
+  "summary": "Ryan Laird is a space and science communications specialist, Chartered Marketer, and founder of Green Orbit Digital. He combines a background in physics and astrophysics with more than a decade of experience across marketing, communications, digital strategy, editorial work, stakeholder engagement, and science communication in the space and technology sectors.",
+  "professionalSummary": "Senior marketing, communications, business development, and commercial partnerships professional with 15+ years of experience across the UK and European space ecosystem. Experienced in commercial positioning, proposition development, stakeholder engagement, bid support, market-facing communications, content strategy, SEO, digital platforms, and partnership development. Ryan translates technical capability into commercially compelling value propositions and clear communications for government, industry, academia, SMEs, innovation partners, and public audiences. His technical grounding in physics and astrophysics is complemented by expertise in digital marketing, public relations, analytics, automation, and sustainable web strategy.",
+  "location": {
+    "city": "Leicester",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "display": "Leicester, United Kingdom"
+  },
+  "contact": {
+    "email": "ryan@greenorbit.space",
+    "availability": "Open to consulting, speaking, strategic partnerships, and collaboration enquiries.",
+    "contactUrl": "https://rjmlaird.co.uk/contact"
+  },
   "avatar": "/images/profile/ryan-laird.jpg",
-  "role": "Director, Green Orbit Digital.",
-  "credentials": "MPhys (Hons) · MInstP · CMktr · MCIPR",
-  "biography": [
-    "Director and founder of Green Orbit Digital, specialising in sustainable marketing systems for the global space sector. Focused on data-led growth strategies aligned with environmental responsibility across the space ecosystem.",
-    "Results-driven communications and marketing professional with over a decade of experience in the space industry. As a Chartered Marketer (CMktr), I have led numerous successful campaigns, driving brand growth and engagement through data-informed strategy, content creation, and audience-focused communications. I combine technical knowledge in physics and space studies with marketing, digital strategy, and public relations to communicate complex topics clearly and persuasively across diverse audiences.",
-    "Beyond Green Orbit Digital, I maintain a portfolio of projects spanning software development, marketing, and space research, bridging disciplines to create meaningful connections between complex subjects and the audiences they serve."
+  "credentials": [
+    "MPhys (Hons)",
+    "MInstP",
+    "CMktr",
+    "MCIPR"
   ],
-  "summary": ["Senior business development and commercial partnerships professional with 15+ years’ experience across the UK and European space ecosystem. Track record in commercial positioning, stakeholder engagement, proposition development, bid support, and market-facing communications. Experienced in translating technical capability into commercially compelling value propositions, building relationships across government, industry, academia, SMEs, and innovation partners, and supporting growth across space, satellite, connectivity, secure communications, and digital applications. Strong technical grounding in Physics with Astrophysics, complemented by digital, marketing, and communications expertise. Well placed to support revenue growth, market expansion, partnership development, and innovation-led business growth in telecoms and digital technology."],
+  "roles": [
+    {
+      "title": "Founder and Director",
+      "organisation": "Green Orbit Digital",
+      "current": true
+    },
+    {
+      "title": "Founder",
+      "organisation": "Impact Orbit Collective",
+      "current": true
+    },
+    {
+      "title": "Strategic consultant",
+      "current": true
+    },
+    {
+      "title": "Full-stack builder",
+      "current": true
+    },
+    {
+      "title": "Technical communicator",
+      "current": true
+    }
+  ],
+  "focus": [
+    "Strategic communications",
+    "Sustainable marketing",
+    "Space-sector growth",
+    "Founder-led consulting systems",
+    "Commercial positioning and partnerships",
+    "CRM and automation architecture",
+    "Knowledge bases and client portals",
+    "Content systems and SEO infrastructure",
+    "Cloud-native web platforms",
+    "Science and technical communication",
+    "Earth observation and sustainability",
+    "Responsible space and deep-tech innovation"
+  ],
   "tags": [
     "Digital Marketing",
-    "SEO",
+    "Strategic Communications",
     "Content Marketing",
+    "SEO",
     "Social Media Strategy",
     "Lead Generation",
+    "Business Development",
+    "Commercial Partnerships",
     "Sustainability",
     "Space Industry",
     "Earth Observation",
+    "Science Communication",
     "Brand Strategy",
     "Data Analytics",
+    "CRM",
+    "Automation",
     "Project Management",
-    "Leadership"
+    "Leadership",
+    "Technical Systems"
+  ],
+  "biography": [
+    "Ryan Laird is the Founder and Director of Green Orbit Digital, specialising in sustainable marketing systems for the global space sector. He develops data-led growth strategies that connect commercial performance with environmental responsibility across the space ecosystem.",
+    "A Chartered Marketer with a background in physics and astrophysics, Ryan combines technical knowledge with marketing, digital strategy, public relations, content creation, and stakeholder engagement. He communicates complex subjects clearly and persuasively across professional, public, institutional, and technical audiences.",
+    "Ryan has worked across marketing, communications, business development, commercial partnerships, editorial production, digital platforms, and science communication. His experience includes translating technical capabilities into compelling propositions, supporting growth strategies, developing content and SEO systems, and building practical infrastructure for mission-led organisations.",
+    "Alongside Green Orbit Digital, Ryan maintains a portfolio of projects spanning software development, marketing, space research, data systems, and science communication. His work explores how responsible innovation, sustainability, and effective communication can support a more resilient and forward-looking space sector."
+  ],
+  "profileIds": [
+    "linkedin",
+    "github"
+  ],
+  "profiles": {
+    "linkedin": "https://www.linkedin.com/in/rjmlaird/",
+    "github": "https://github.com/rjmlaird"
+  },
+  "links": [
+    {
+      "label": "Main site",
+      "url": "https://rjmlaird.co.uk",
+      "type": "website"
+    },
+    {
+      "label": "Green Orbit Digital",
+      "url": "https://greenorbit.space",
+      "type": "organisation"
+    },
+    {
+      "label": "Portfolio API",
+      "url": "https://api.rjmlaird.co.uk",
+      "type": "api"
+    },
+    {
+      "label": "API documentation",
+      "url": "https://api.rjmlaird.co.uk/openapi.json",
+      "type": "documentation"
+    },
+    {
+      "label": "Labs",
+      "url": "https://labs.rjmlaird.co.uk",
+      "type": "labs"
+    },
+    {
+      "label": "Status",
+      "url": "https://status.rjmlaird.co.uk",
+      "type": "status"
+    },
+    {
+      "label": "Space Integrity Initiative",
+      "url": "https://spaceintegrity.org",
+      "type": "initiative"
+    },
+    {
+      "label": "Space Impact Forum",
+      "url": "https://spaceimpactforum.com",
+      "type": "initiative"
+    },
+    {
+      "label": "Space for Neurodiversity",
+      "url": "https://spaceforneurodiversity.org",
+      "type": "initiative"
+    }
   ],
   "portfolioLinks": [
     {
@@ -49,5 +167,11 @@
       "label": "Space for Neurodiversity",
       "href": "https://spaceforneurodiversity.org"
     }
-  ]
+  ],
+  "related": {
+    "cv": "/v1/cv",
+    "portfolio": "/v1/portfolio",
+    "contact": "/v1/contact"
+  },
+  "updatedAt": "2026-10-15T00:00:00Z"
 }
