@@ -1,4 +1,5 @@
-[
+{
+  "profiles": [
   { "key": "github", "name": "GitHub", "url": "https://github.com/rjmlaird", "icon": "github", "label": "GitHub profile", "username": "rjmlaird", "type": "code", "color": "#181717" },
   { "key": "gitlab", "name": "GitLab", "url": "https://gitlab.com/rjmlaird", "icon": "gitlab", "label": "GitLab profile", "username": "rjmlaird", "type": "code", "color": "#FC6D26" },
   { "key": "stackoverflow", "name": "Stack Overflow", "url": "https://stackoverflow.com/users/5563085/rjmlaird", "icon": "stackoverflow", "label": "Stack Overflow profile", "username": "rjmlaird", "type": "community", "color": "#F58025" },
@@ -34,3 +35,4 @@
   { "key": "academia", "name": "Academia.edu", "url": "https://isunet.academia.edu/rjmlaird", "icon": "academia", "label": "Academia.edu profile", "username": "rjmlaird", "type": "academic", "color": "#1F4287" },
   { "key": "webofscience", "name": "Web of Science", "url": "https://www.webofscience.com/wos/author/record/K-3858-2017", "icon": "webofscience", "label": "Web of Science profile", "username": "K-3858-2017", "type": "academic", "color": "#005574" }
 ]
+}
