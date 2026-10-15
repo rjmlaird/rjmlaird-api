@@ -1,44 +1,53 @@
 {
-  "id": "ryan-j-m-laird",
-  "name": "Ryan J. M. Laird",
-  "displayName": "Ryan Laird",
-  "headline": "Strategic communications, technical systems, and digital growth for space, deep-tech, and sustainability organisations.",
-  "shortBio": "Science communicator and technical systems consultant building practical digital infrastructure for complex, mission-led organisations.",
-  "summary": "I build practical systems that help technically capable teams communicate more clearly, operate more efficiently, and convert expertise into commercial traction.",
-  "location": {
-    "city": "London",
-    "country": "United Kingdom",
-    "countryCode": "GB"
-  },
-  "roles": [
-    { "title": "Founder", "organisation": "Impact Orbit Collective", "current": true },
-    { "title": "Strategic consultant", "current": true },
-    { "title": "Full-stack builder", "current": true },
-    { "title": "Technical communicator", "current": true }
+  "name": "Ryan Laird",
+  "preferredName": "Ryan",
+  "pronouns": "he/him",
+  "headline": "Strategic and Sustainable Marketing in the Space Sector",
+  "location": "Leicester, United Kingdom",
+  "email": "ryan@greenorbit.space",
+  "avatar": "/images/profile/ryan-laird.jpg",
+  "role": "Director, Green Orbit Digital.",
+  "credentials": "MPhys (Hons) · MInstP · CMktr · MCIPR",
+  "biography": [
+    "Director and founder of Green Orbit Digital, specialising in sustainable marketing systems for the global space sector. Focused on data-led growth strategies aligned with environmental responsibility across the space ecosystem.",
+    "Results-driven communications and marketing professional with over a decade of experience in the space industry. As a Chartered Marketer (CMktr), I have led numerous successful campaigns, driving brand growth and engagement through data-informed strategy, content creation, and audience-focused communications. I combine technical knowledge in physics and space studies with marketing, digital strategy, and public relations to communicate complex topics clearly and persuasively across diverse audiences.",
+    "Beyond Green Orbit Digital, I maintain a portfolio of projects spanning software development, marketing, and space research, bridging disciplines to create meaningful connections between complex subjects and the audiences they serve."
   ],
-  "focus": [
-    "Founder-led consulting systems",
-    "CRM and automation architecture",
-    "Knowledge bases and client portals",
-    "Content systems and SEO infrastructure",
-    "Cloud-native web platforms"
+  "summary": ["Senior business development and commercial partnerships professional with 15+ years’ experience across the UK and European space ecosystem. Track record in commercial positioning, stakeholder engagement, proposition development, bid support, and market-facing communications. Experienced in translating technical capability into commercially compelling value propositions, building relationships across government, industry, academia, SMEs, and innovation partners, and supporting growth across space, satellite, connectivity, secure communications, and digital applications. Strong technical grounding in Physics with Astrophysics, complemented by digital, marketing, and communications expertise. Well placed to support revenue growth, market expansion, partnership development, and innovation-led business growth in telecoms and digital technology."],
+  "tags": [
+    "Digital Marketing",
+    "SEO",
+    "Content Marketing",
+    "Social Media Strategy",
+    "Lead Generation",
+    "Sustainability",
+    "Space Industry",
+    "Earth Observation",
+    "Brand Strategy",
+    "Data Analytics",
+    "Project Management",
+    "Leadership"
   ],
-  "profileIds": ["linkedin", "github"],
-  "links": [
-    { "label": "Main site", "url": "https://rjmlaird.co.uk", "type": "website" },
-    { "label": "Portfolio API", "url": "https://api.rjmlaird.co.uk", "type": "api" },
-    { "label": "API documentation", "url": "https://api.rjmlaird.co.uk/openapi.json", "type": "documentation" },
-    { "label": "Labs", "url": "https://labs.rjmlaird.co.uk", "type": "labs" },
-    { "label": "Status", "url": "https://status.rjmlaird.co.uk", "type": "status" }
-  ],
-  "contact": {
-    "availability": "REPLACE: one public sentence, for example 'Open to consulting, speaking and collaboration enquiries.'",
-    "contactUrl": "https://rjmlaird.co.uk/contact"
-  },
-  "related": {
-    "cv": "/v1/cv",
-    "portfolio": "/v1/portfolio",
-    "contact": "/v1/contact"
-  },
-  "updatedAt": "2026-10-12T00:00:00Z"
+  "portfolioLinks": [
+    {
+      "label": "Professional Website",
+      "href": "https://rjmlaird.co.uk"
+    },
+    {
+      "label": "Green Orbit Digital",
+      "href": "https://greenorbit.space"
+    },
+    {
+      "label": "Space Integrity Initiative",
+      "href": "https://spaceintegrity.org"
+    },
+    {
+      "label": "Space Impact Forum",
+      "href": "https://spaceimpactforum.com"
+    },
+    {
+      "label": "Space for Neurodiversity",
+      "href": "https://spaceforneurodiversity.org"
+    }
+  ]
 }
