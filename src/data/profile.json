@@ -84,7 +84,7 @@
     "Ryan Laird is the Founder and Director of Impact Orbit Co., specialising in sustainable marketing systems for the global space sector. He develops data-led growth strategies that connect commercial performance with environmental responsibility across the space ecosystem.",
     "A Chartered Marketer with a background in physics and astrophysics, Ryan combines technical knowledge with marketing, digital strategy, public relations, content creation, and stakeholder engagement. He communicates complex subjects clearly and persuasively across professional, public, institutional, and technical audiences.",
     "Ryan has worked across marketing, communications, business development, commercial partnerships, editorial production, digital platforms, and science communication. His experience includes translating technical capabilities into compelling propositions, supporting growth strategies, developing content and SEO systems, and building practical infrastructure for mission-led organisations.",
-    "Alongside Green Orbit Digital, Ryan maintains a portfolio of projects spanning software development, marketing, space research, data systems, and science communication. His work explores how responsible innovation, sustainability, and effective communication can support a more resilient and forward-looking space sector."
+    "Alongside Impact Orbit, Ryan maintains a portfolio of projects spanning software development, marketing, space research, data systems, and science communication. His work explores how responsible innovation, sustainability, and effective communication can support a more resilient and forward-looking space sector."
   ],
   "profileIds": [
     "linkedin",
@@ -101,29 +101,14 @@
       "type": "website"
     },
     {
-      "label": "Green Orbit Digital",
-      "url": "https://greenorbit.space",
+      "label": "Impact Orbit Co.",
+      "url": "https://impactorbit.co",
       "type": "organisation"
     },
     {
-      "label": "Portfolio API",
-      "url": "https://api.rjmlaird.co.uk",
-      "type": "api"
-    },
-    {
-      "label": "API documentation",
-      "url": "https://api.rjmlaird.co.uk/openapi.json",
-      "type": "documentation"
-    },
-    {
-      "label": "Labs",
-      "url": "https://labs.rjmlaird.co.uk",
-      "type": "labs"
-    },
-    {
-      "label": "Status",
-      "url": "https://status.rjmlaird.co.uk",
-      "type": "status"
+      "label": "Space for Neurodiversity",
+      "url": "https://spaceforneurodiversity.org",
+      "type": "organisation"
     },
     {
       "label": "Space Integrity Initiative",
@@ -134,33 +119,6 @@
       "label": "Space Impact Forum",
       "url": "https://spaceimpactforum.com",
       "type": "initiative"
-    },
-    {
-      "label": "Space for Neurodiversity",
-      "url": "https://spaceforneurodiversity.org",
-      "type": "initiative"
-    }
-  ],
-  "portfolioLinks": [
-    {
-      "label": "Professional Website",
-      "href": "https://rjmlaird.co.uk"
-    },
-    {
-      "label": "Green Orbit Digital",
-      "href": "https://greenorbit.space"
-    },
-    {
-      "label": "Space Integrity Initiative",
-      "href": "https://spaceintegrity.org"
-    },
-    {
-      "label": "Space Impact Forum",
-      "href": "https://spaceimpactforum.com"
-    },
-    {
-      "label": "Space for Neurodiversity",
-      "href": "https://spaceforneurodiversity.org"
     }
   ],
   "related": {
