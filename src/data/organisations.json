@@ -1321,20 +1321,6 @@
     "featured": false
   },
   {
-    "slug": "loughborough-college",
-    "name": "Loughborough College",
-    "kind": "college",
-    "sectors": [
-      "education"
-    ],
-    "relationships": [],
-    "description": "Further education college in Loughborough, Leicestershire.",
-    "url": null,
-    "hubspotId": null,
-    "logo": null,
-    "featured": false
-  },
-  {
     "slug": "luxembourg-space-agency",
     "name": "Luxembourg Space Agency",
     "kind": "space_agency",
@@ -1347,7 +1333,6 @@
     ],
     "description": "The Luxembourg Space Agency promotes research, innovation, and investment in the space sector, with a focus on sustainability and economic development.",
     "url": "https://space-agency.public.lu/en.html",
-    "hubspotId": "00000000002",
     "logo": "/logos/organisations/luxembourg-space-agency.jpg",
     "featured": false
   },
@@ -1367,7 +1352,6 @@
     ],
     "description": "Mercator Ocean monitors and models the global ocean to support climate research, operational oceanography, and marine environmental policy decisions.",
     "url": "https://www.mercator-ocean.fr",
-    "hubspotId": "00000000019",
     "logo": "/logos/organisations/mercator-ocean.png",
     "featured": false
   },
@@ -1401,7 +1385,6 @@
     ],
     "description": "The National Centre for Earth Observation delivers world-class research using satellite data to monitor and understand environmental change, supporting policy, industry, and public services.",
     "url": "https://nceo.ac.uk",
-    "hubspotId": "28203876539",
     "logo": "/logos/organisations/nceo.png",
     "featured": false
   },
@@ -2572,22 +2555,7 @@
   ],
   "relationships": [],
   "description": "Organisation working on impact-driven approaches to the space sector and its contribution to society.",
-  "url": null,
-  "logo": null,
-  "featured": false
-},
-{
-  "slug": "space-for-neurodiversity",
-  "name": "Space for Neurodiversity",
-  "kind": "network",
-  "sectors": [
-    "space",
-    "health_neurodiversity",
-    "community_charity"
-  ],
-  "relationships": [],
-  "description": "Community supporting neurodivergent people and improving inclusion across the space sector.",
-  "url": null,
+  "url": "https://impactorbit.co",
   "logo": null,
   "featured": false
 },
@@ -2637,5 +2605,233 @@
   "url": "https://randr.space",
   "logo": null,
   "featured": false
-}
+},[
+  {
+    "slug": "loughborough-college",
+    "name": "Loughborough College",
+    "aliases": [
+      "Loughborough College Group"
+    ],
+    "kind": "college",
+    "sectors": [
+      "education",
+      "space",
+      "engineering"
+    ],
+    "relationships": [],
+    "description": "Further-education college offering a specialist Space Engineering programme in partnership with the National Space Centre.",
+    "url": "https://www.loucoll.ac.uk",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "brockington-college",
+    "name": "Brockington College",
+    "kind": "school",
+    "sectors": [
+      "education",
+      "community"
+    ],
+    "relationships": [],
+    "description": "Secondary academy in Enderby, Leicestershire.",
+    "url": "https://www.brockington.leics.sch.uk",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "leiden-university",
+    "name": "Leiden University",
+    "aliases": [
+      "Universiteit Leiden"
+    ],
+    "kind": "university",
+    "sectors": [
+      "education",
+      "science_research",
+      "space"
+    ],
+    "relationships": [],
+    "description": "Dutch research university with a long-standing international reputation in astronomy and space science.",
+    "url": "https://www.universiteitleiden.nl/en",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "powering-space",
+    "name": "Powering Space C.I.C.",
+    "shortName": "Powering Space",
+    "aliases": [
+      "Powering Space CIC"
+    ],
+    "kind": "community_interest_company",
+    "sectors": [
+      "space",
+      "education",
+      "community_charity"
+    ],
+    "relationships": [],
+    "description": "Community interest company supporting collaboration, education and knowledge-sharing across the space sector.",
+    "url": "https://powering.space",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "he-space-operations",
+    "name": "HE Space Operations",
+    "shortName": "HE Space",
+    "aliases": [
+      "HE Space"
+    ],
+    "kind": "company",
+    "sectors": [
+      "space",
+      "engineering"
+    ],
+    "relationships": [],
+    "description": "European space-services company providing engineering, operations and specialist support to the space sector.",
+    "url": "https://www.hespace.com",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "space-for-neurodiversity",
+    "name": "Space for Neurodiversity",
+    "kind": "initiative",
+    "sectors": [
+      "space",
+      "health_neurodiversity",
+      "community_charity"
+    ],
+    "relationships": [],
+    "description": "Initiative supporting neurodivergent people and improving inclusion, representation and meaningful participation across the space sector.",
+    "url": "https://spaceforneurodiversity.org",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "palomar-observatory",
+    "name": "Palomar Observatory",
+    "kind": "observatory",
+    "sectors": [
+      "astronomy",
+      "science_research",
+      "education"
+    ],
+    "relationships": [],
+    "description": "Astronomical research observatory in California operated by the California Institute of Technology.",
+    "url": "https://sites.astro.caltech.edu/palomar/",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "open-university",
+    "name": "The Open University",
+    "shortName": "OU",
+    "aliases": [
+      "Open University",
+      "OU"
+    ],
+    "kind": "university",
+    "sectors": [
+      "education",
+      "science_research",
+      "space"
+    ],
+    "relationships": [],
+    "description": "UK distance-learning university offering flexible higher education and research across science, technology, space and sustainability.",
+    "url": "https://www.open.ac.uk",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "hubspot",
+    "name": "HubSpot",
+    "kind": "company",
+    "sectors": [
+      "technology_digital",
+      "marketing_communications",
+      "business_support"
+    ],
+    "relationships": [],
+    "description": "Customer platform providing CRM, marketing, sales, service and operations software.",
+    "url": "https://www.hubspot.com",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "google",
+    "name": "Google",
+    "kind": "company",
+    "sectors": [
+      "technology_digital",
+      "software",
+      "business_support"
+    ],
+    "relationships": [],
+    "description": "Technology company providing search, cloud, productivity, advertising and developer services.",
+    "url": "https://www.google.com",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "space-awareness",
+    "name": "Space Awareness",
+    "kind": "programme",
+    "sectors": [
+      "space",
+      "education",
+      "community_charity"
+    ],
+    "relationships": [],
+    "description": "International education initiative using space science to inspire young people and provide free resources for educators and families.",
+    "url": "https://www.space-awareness.org/en/",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "small-business-charter",
+    "name": "Small Business Charter",
+    "shortName": "SBC",
+    "aliases": [
+      "SBC"
+    ],
+    "kind": "accreditation",
+    "sectors": [
+      "business_support",
+      "education",
+      "entrepreneurship"
+    ],
+    "relationships": [],
+    "description": "Accreditation scheme recognising business schools that support small businesses, entrepreneurship and local economic growth.",
+    "url": "https://smallbusinesscharter.org",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "ecodemy",
+    "name": "Ecodemy",
+    "kind": "education_provider",
+    "sectors": [
+      "education",
+      "climate_sustainability"
+    ],
+    "relationships": [],
+    "description": "Sustainability-focused education and training provider helping people and organisations develop skills for positive environmental change.",
+    "url": "https://ecodemy.ca",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  }
 ]
