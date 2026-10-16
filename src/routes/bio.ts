@@ -23,7 +23,8 @@ const SECTION_KEYS = [
   "contact",
 ] as const satisfies readonly BioSection[];
 
-type SocialSource = (typeof socials.profiles)[number];
+// socials.json is a top-level array.
+type SocialSource = (typeof socials)[number];
 
 type Profile = {
   id: string;
@@ -56,27 +57,33 @@ const sections = {
     displayName: bio.displayName,
     shortBio: bio.shortBio,
   },
+
   summary: {
     summary: bio.summary,
   },
+
   roles: {
     roles: bio.roles,
     related: {
       experience: "/v1/cv/experience",
     },
   },
+
   focus: {
     focus: bio.focus,
   },
+
   profiles: {
     profiles,
     related: {
       socials: "/v1/socials",
     },
   },
+
   links: {
     links: bio.links,
   },
+
   contact: {
     ...bio.contact,
     related: {
