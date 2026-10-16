@@ -10,28 +10,29 @@
     "city": "Leicester",
     "country": "United Kingdom",
     "workMode": "Hybrid",
-    "summary": "Founder and Principal Consultant of a specialist B2B marketing agency, driving brand growth and digital transformation for clients in space, deep tech, and sustainability sectors. Expert in bridging the gap between complex technical innovation and commercial market positioning through high-impact content strategy and data-informed digital experiences.",
+    "summary": "Founder and principal consultant of a specialist communications and digital consultancy for space, deep-tech, climate and mission-led organisations. I help technical teams define their positioning, explain what they do, reach the right audiences and build credible digital platforms that support visibility, partnerships and lead generation.",
     "responsibilities": [
-      "Define and execute enterprise-level brand strategy, elevating market visibility and authority for high-tech clients.",
-      "Spearhead full-cycle bid management and commercial proposal development, consistently converting technical expertise into value-driven client narratives.",
-      "Architect sustainable digital ecosystems, integrating SEO, low-carbon web development, and GA4 analytics to optimize conversion and user experience.",
-      "Lead cross-functional stakeholder engagement to harmonize senior-level messaging with long-term commercial goals.",
-      "Apply cutting-edge AI and automation workflows to scale content production, information architecture, and technical marketing operations."
+      "Develop brand, editorial and digital strategies for clients in space, sustainability and deep technology, translating technical capability into clear audience value.",
+      "Lead content strategy and production across websites, thought-leadership articles, newsletters, campaign assets, proposals and multimedia.",
+      "Design and build low-carbon websites and marketing systems using Astro, React, Node.js, GitHub Actions and GA4.",
+      "Provide technical SEO, analytics and information architecture for science and technology organisations.",
+      "Support bid development, stakeholder communications and partnership-facing materials for research, innovation and commercial programmes.",
+      "Build AI-assisted content and automation workflows that improve editorial consistency and reduce production effort."
     ],
     "achievements": [
-      "Built a scalable consultancy model focused on niche technical expertise and data-driven growth.",
-      "Delivered measurable increases in organic visibility and lead generation for mission-driven organisations."
+      "Established a scalable consultancy model built around technical communications, sustainable digital delivery and science-sector expertise.",
+      "Improved organic visibility and lead generation for mission-led clients.",
+      "Developed repeatable editorial and automation systems for technical content delivery."
     ],
     "skills": [
-      "B2B Marketing Strategy",
-      "Brand Positioning",
-      "Strategic Content Marketing",
+      "B2B Positioning",
+      "Brand Strategy",
+      "Content Strategy",
       "Technical SEO",
-      "Lead Generation Pipeline",
-      "Stakeholder Management",
-      "Agile Project Management",
-      "Digital Transformation",
-      "Sustainable Web Standards"
+      "Lead Generation",
+      "Bid Support",
+      "Sustainable Web Development",
+      "AI-Assisted Workflows"
     ],
     "projects": [
       "green-orbit-workshops",
@@ -65,16 +66,18 @@
     "city": "Harwell",
     "country": "United Kingdom",
     "workMode": "Hybrid",
-    "summary": "Directed strategic communications and digital marketing for ESA Business Applications and Space Solutions. Led end-to-end campaign execution, stakeholder relationship management, and editorial output to promote high-value funding calls and ecosystem growth.",
+    "summary": "Led strategic communications and digital marketing for ESA Business Applications and Space Solutions, promoting funding opportunities, innovation programmes and the European space-applications community.",
     "responsibilities": [
-      "Managed integrated marketing campaigns for major European space programmes, maintaining brand consistency across global stakeholder channels.",
-      "Optimized editorial strategy and content pipelines, translating complex scientific outcomes into actionable, high-engagement market communications.",
-      "Led high-profile webinar series and event communications, driving audience participation and programme awareness.",
-      "Deployed data-driven insights through GA4 and CRM analytics to personalize stakeholder journeys and improve lead conversion."
+      "Managed integrated campaigns across web, email, social media, events and partner channels, keeping messaging consistent for European and international audiences.",
+      "Developed editorial strategies and content pipelines that translated complex space-application outcomes into accessible, commercially relevant communications.",
+      "Led webinar and event communications, supporting programme awareness, stakeholder participation and audience development.",
+      "Used GA4, CRM and campaign analytics to assess performance, refine audience journeys and improve lead conversion.",
+      "Coordinated messaging, approvals and multi-channel delivery with ESA programme teams, contractors and external partners."
     ],
     "achievements": [
-      "Played a critical role in increasing programme visibility and engagement across the ESA Business Applications ecosystem.",
-      "Standardized multi-channel content workflows, significantly improving project delivery and editorial throughput."
+      "Increased visibility and engagement across ESA Business Applications communications.",
+      "Standardised multi-channel editorial workflows, improving consistency, delivery reliability and editorial throughput.",
+      "Produced and coordinated communications for major initiatives, including newsletters, webinars and the ESA Green Dossier."
     ],
     "projects": [
       "esa-ba-newsletter",
@@ -84,10 +87,10 @@
     "skills": [
       "Campaign Management",
       "Technical Communications",
-      "Stakeholder Relations",
-      "Event Strategy",
       "Editorial Planning",
-      "Content Marketing"
+      "Event Communications",
+      "Content Marketing",
+      "Campaign Analytics"
     ],
     "clients": [
       "ESA Business Applications"
@@ -112,16 +115,18 @@
     "city": "Leicester",
     "country": "United Kingdom",
     "workMode": "Remote",
-    "summary": "Provided expert consultancy in science communication, digital strategy, and editorial management for international space and research institutions. Successfully scaled complex technical narratives for diverse audiences across digital media and education platforms.",
+    "summary": "Delivered science communication, digital strategy and editorial consultancy for international space, environmental and research organisations, across digital content, public engagement, education, SEO and multi-channel communications.",
     "responsibilities": [
-      "Led social media strategy and public affairs outreach for the Ocean State Report (CMEMS), driving significant stakeholder engagement.",
-      "Architected educational content for high-tech MOOCs (Point.IOT), improving technical knowledge transfer for industry participants.",
-      "Executed comprehensive content audits and migrations, enhancing information architecture and SEO performance.",
-      "Facilitated workshop and training sessions for scientific audiences, focusing on clarity and impact."
+      "Led social media strategy and public-affairs outreach for the Copernicus Marine Environment Monitoring Service's Ocean State Report.",
+      "Developed educational content for high-technology MOOCs through Point.IOT, making technical material accessible to industry learners.",
+      "Delivered content audits, migrations and information-architecture improvements that strengthened findability, usability and SEO.",
+      "Facilitated workshops and training sessions for scientific and technical audiences, focusing on clear communication and practical impact.",
+      "Produced digital communications for space and environmental initiatives, including the Copernicus Hackathon Leicester."
     ],
     "achievements": [
-      "Successfully delivered multi-year contracts for high-prestige European space and environmental initiatives.",
-      "Established a reputation for translating complex R&D projects into accessible, high-performing digital marketing assets."
+      "Delivered multi-year consultancy work for high-profile European space and environmental initiatives.",
+      "Translated complex research and technical projects into accessible digital assets for expert, policy, industry and public audiences.",
+      "Built durable editorial and information-architecture foundations for science and technology communication projects."
     ],
     "projects": [
       "copernicus-hackathon-leics",
@@ -130,12 +135,12 @@
       "windy"
     ],
     "skills": [
-      "Strategic Communications",
+      "Science Communication",
       "Digital Content Strategy",
-      "Social Media Growth",
+      "Social Media Strategy",
       "Instructional Design",
       "SEO",
-      "Market Outreach"
+      "Public Engagement"
     ],
     "featured": true,
     "order": 3
@@ -143,7 +148,7 @@
   {
     "id": "exp-rr-space",
     "organisationSlug": "r-and-r-space",
-    "role": "Co-Founder & Director",
+    "role": "Co-Founder & Director (R&R Space Ltd / Powering Space C.I.C.)",
     "employmentType": "Founder",
     "startDate": "2018-01",
     "endDate": "2021-12",
@@ -151,65 +156,33 @@
     "city": "Leicester",
     "country": "United Kingdom",
     "workMode": "Hybrid",
-    "summary": "Co-founded and scaled a space sector outreach and training company focused on developing engagement programmes, events, and skills development initiatives.",
+    "summary": "Co-founded a space-sector outreach and training organisation delivering public engagement events, industry programmes and skills-development initiatives. R&R Space Ltd and Powering Space C.I.C. operated as connected vehicles for this work, presented here as one body of activity.",
     "responsibilities": [
-      "Founded and led SpaceUp Leicester, delivering sell-out engagement events with full ownership of venue, supplier, budget, and risk management.",
-      "Launched SpaceUp Live, generating 1,000+ YouTube views and strong engagement from industry professionals.",
-      "Delivered communications for the University of Leicester Copernicus Hackathon, supporting recruitment and awareness.",
-      "Managed end-to-end event delivery across multiple workstreams and deadlines."
+      "Founded and led SpaceUp Leicester, delivering sell-out community events with responsibility for venue, suppliers, budget, programme and risk.",
+      "Launched SpaceUp Live, producing online space-sector discussions that generated more than 1,000 YouTube views and engagement from industry professionals.",
+      "Delivered communications for the University of Leicester Copernicus Hackathon, supporting participant recruitment, partner awareness and promotion.",
+      "Developed outreach, training and partnership programmes connecting students, researchers, entrepreneurs and space-sector organisations.",
+      "Coordinated partners, suppliers, schedules and budgets across multiple event workstreams."
     ],
     "achievements": [
-      "Established R&R Space Ltd as a key space-sector outreach initiative.",
-      "Successfully converted passive digital interest into active industry engagement."
+      "Established a recognised Leicester-based space outreach and community initiative.",
+      "Converted online interest into active participation through events, workshops and digital programming.",
+      "Built partnerships across universities, industry, public-sector organisations and the regional innovation ecosystem."
     ],
     "projects": [
       "build4space",
       "spaceup-live",
       "spaceupleics2018",
-      "spaceupleics2019"
-    ],
-    "skills": [
-      "Programme Development",
-      "Outreach",
-      "Event Management",
-      "Partnership Development",
-      "STEM Communication"
-    ],
-    "featured": false,
-    "order": 4
-  },
-  {
-    "id": "exp-powering-space",
-    "organisationSlug": "powering-space",
-    "role": "Co-Founder & Director",
-    "employmentType": "Founder",
-    "startDate": "2018-01",
-    "endDate": "2021-12",
-    "current": false,
-    "city": "Leicester",
-    "country": "United Kingdom",
-    "workMode": "Hybrid",
-    "summary": "Co-founded and scaled a space sector outreach and training company focused on developing engagement programmes, events, and skills development initiatives.",
-    "responsibilities": [
-      "Founded and led SpaceUp Leicester, delivering sell-out engagement events with full ownership of venue, supplier, budget, and risk management.",
-      "Launched SpaceUp Live, generating 1,000+ YouTube views and strong engagement from industry professionals.",
-      "Delivered communications for the University of Leicester Copernicus Hackathon, supporting recruitment and awareness.",
-      "Managed end-to-end event delivery across multiple workstreams and deadlines."
-    ],
-    "achievements": [
-      "Established R&R Space Ltd as a key space-sector outreach initiative.",
-      "Successfully converted passive digital interest into active industry engagement."
-    ],
-    "projects": [
+      "spaceupleics2019",
       "impulse2021",
       "lunch-and-learn"
     ],
     "skills": [
       "Programme Development",
-      "Outreach",
       "Event Management",
       "Partnership Development",
-      "STEM Communication"
+      "Public Engagement",
+      "Workshop Facilitation"
     ],
     "featured": false,
     "order": 4
@@ -225,16 +198,18 @@
     "city": "Cologne",
     "country": "Germany",
     "workMode": "Hybrid",
-    "summary": "Led editorial production and multimedia storytelling for space-related publications. Translated complex technical material for audiences ranging from the general public to policy experts.",
+    "summary": "Led editorial production and multimedia storytelling for European space and science organisations, translating technical, scientific and policy material into accessible content for public, industry and policy audiences.",
     "responsibilities": [
-      "Authored and edited high-level content for ESA and EUMETSAT, translating intricate technical specifications into persuasive, audience-specific narratives.",
-      "Contributed to the proposal lifecycle, supporting successful bid writing and market entry strategies.",
-      "Managed public policy communication campaigns (e.g., EUMETSAT and Africa series), engaging diplomatic-level stakeholders.",
-      "Provided strategic communications support for industry events, including ESA PhiWeek and DLR INNOspace Weekend."
+      "Authored and edited editorial, web and multimedia content for ESA and EUMETSAT, adapting technical material to different audiences and objectives.",
+      "Contributed to proposal and bid development, turning technical capability into persuasive client-facing narratives.",
+      "Managed public-policy communication projects, including EUMETSAT's Africa-focused series, engaging diplomatic and policy-level stakeholders.",
+      "Provided strategic communications support for ESA Φ-week and DLR INNOspace Weekend.",
+      "Produced scripts, interactive features, educational resources and campaign content across space exploration, Earth observation and innovation."
     ],
     "achievements": [
-      "Delivered high-quality editorial and multimedia content for space-sector communications.",
-      "Strengthened narrative and publishing workflows across digital platforms."
+      "Delivered editorial and multimedia content for leading European space and Earth-observation organisations, including the award-winning Lunar Exploration interactive documentary for ESA.",
+      "Strengthened publishing workflows and narrative consistency across digital platforms.",
+      "Contributed to successful bid and market-entry communications for technical and scientific work."
     ],
     "projects": [
       "vega",
@@ -282,15 +257,15 @@
     "city": "Bristol",
     "country": "United Kingdom",
     "workMode": "Hybrid",
-    "summary": "Led large-scale educational outreach for the Bloodhound engineering programme, driving engagement and public awareness of aerospace innovation.",
+    "summary": "Delivered educational outreach for the Bloodhound land-speed-record engineering programme, helping young audiences engage with advanced engineering, physics and innovation.",
     "responsibilities": [
-      "Facilitated communication workflows bridging the gap between cutting-edge engineering R&D and high-profile industry partners.",
-      "Developed and delivered educational assets that simplified complex engineering breakthroughs for diverse demographics.",
-      "Collaborated on public-facing communication around advanced engineering projects."
+      "Developed and delivered educational resources and workshops that made complex engineering concepts accessible to schools and public audiences.",
+      "Supported communication between engineering teams, industry partners and public-facing outreach activities.",
+      "Produced learning materials and public-engagement content on high-speed engineering, propulsion and scientific research."
     ],
     "achievements": [
-      "Produced education resources widely used in outreach and classroom settings.",
-      "Built early experience in STEM communication and public engagement."
+      "Produced education resources used in outreach and classroom settings.",
+      "Built early professional experience in STEM communication, workshop facilitation and public engagement."
     ],
     "projects": [
       "bloodhound-blast",
@@ -317,15 +292,15 @@
     "city": "Munich",
     "country": "Germany",
     "workMode": "On-site",
-    "summary": "Supported science communication and outreach activities for the European Southern Observatory (ESO). Produced web and press content for a major international astronomy organisation.",
+    "summary": "Supported science communication and outreach for the European Southern Observatory, one of the world's leading astronomical research organisations.",
     "responsibilities": [
-      "Produced news releases, photo releases, and web content.",
+      "Produced news releases, photo releases and web content for international astronomy audiences.",
       "Assisted with video scripts and educational materials.",
-      "Supported editorial production within a fast-paced science communication department."
+      "Contributed to editorial production in a fast-paced science communication department."
     ],
     "achievements": [
-      "Developed practical experience in science press and outreach writing.",
-      "Contributed to public-facing communications for a world-leading astronomy organisation."
+      "Developed practical experience in science press writing, astronomy communication and digital editorial production.",
+      "Contributed to public-facing communications for major astronomical research and facilities."
     ],
     "projects": [
       "esocast",
@@ -352,10 +327,10 @@
     "city": "Leiden",
     "country": "Netherlands",
     "workMode": "On-site",
-    "summary": "Focused on expanding the distribution and accessibility of astronomy communication for children.",
+    "summary": "Supported the distribution and accessibility of astronomy content for children and schools.",
     "responsibilities": [
-      "Researched content syndication strategies for youth science communication.",
-      "Adapted Space Scoop content for new media channels.",
+      "Researched content-syndication opportunities for youth science communication.",
+      "Adapted Space Scoop astronomy content for new media channels.",
       "Supported outreach strategy for educational astronomy content."
     ],
     "achievements": [
@@ -383,11 +358,11 @@
     "city": "Vienna",
     "country": "Austria",
     "workMode": "On-site",
-    "summary": "Supported operations, reporting, and policy engagement within a global space policy organisation.",
+    "summary": "Supported operations, reporting and policy engagement within a global space-policy organisation.",
     "responsibilities": [
       "Contributed to organisational reporting and programme support.",
       "Assisted with Space Generation Fusion Forum activities.",
-      "Engaged with UN COPUOS sessions."
+      "Engaged with United Nations COPUOS-related policy discussions."
     ],
     "achievements": [
       "Gained experience in global space policy and international advocacy."
@@ -417,8 +392,8 @@
     "summary": "Delivered undergraduate teaching and academic support across physics modules.",
     "responsibilities": [
       "Led tutorials for foundation and first-year physics students.",
-      "Assessed coursework and provided academic feedback.",
-      "Supported curriculum delivery and student mentoring."
+      "Assessed coursework and provided structured academic feedback.",
+      "Supported curriculum delivery, practical work and student mentoring."
     ],
     "achievements": [
       "Developed experience in academic communication and student support."
@@ -446,11 +421,11 @@
     "city": "Canterbury",
     "country": "United Kingdom",
     "workMode": "On-site",
-    "summary": "Delivered physics outreach activities and public engagement events across schools.",
+    "summary": "Delivered physics outreach and public-engagement activities across schools and community settings.",
     "responsibilities": [
-      "Presented science outreach talks and demonstrations.",
-      "Delivered inflatable planetarium sessions.",
-      "Adapted physics content for public and school audiences."
+      "Presented science talks, demonstrations and inflatable-planetarium sessions.",
+      "Adapted physics content for school and public audiences.",
+      "Supported live science engagement and educational outreach."
     ],
     "achievements": [
       "Built experience in live science presentation and public engagement."
@@ -481,7 +456,7 @@
     "responsibilities": [
       "Analysed calibration data for the GERB instrument.",
       "Developed tools for scientific data visualisation.",
-      "Maintained and verified data processing workflows."
+      "Maintained and verified data-processing workflows."
     ],
     "achievements": [
       "Contributed to satellite instrumentation support and calibration analysis."
@@ -511,8 +486,8 @@
     "workMode": "On-site",
     "summary": "Supported science education delivery for secondary school students.",
     "responsibilities": [
-      "Assisted in classroom science teaching for students aged 11–14.",
-      "Supported practical science experiments and lesson preparation."
+      "Assisted classroom delivery, practical experiments and lesson preparation for students aged 11–14.",
+      "Developed early experience communicating science to younger audiences."
     ],
     "achievements": [
       "Developed confidence in communicating science to younger students."
@@ -539,10 +514,10 @@
     "city": "Leicester",
     "country": "United Kingdom",
     "workMode": "On-site",
-    "summary": "Conducted undergraduate research in astrophysics focusing on spectral analysis.",
+    "summary": "Completed an undergraduate astrophysics research placement focused on spectral analysis.",
     "responsibilities": [
-      "Analysed FUSE pipeline data and spectral observations.",
-      "Investigated stellar absorption features.",
+      "Analysed FUSE pipeline data and stellar spectral observations.",
+      "Investigated absorption features in stellar spectra.",
       "Produced research outputs through data interpretation."
     ],
     "achievements": [

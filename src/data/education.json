@@ -1,187 +1,5 @@
 [
   {
-    "id": "edu-uwe-science-communication",
-    "organisationSlug": "university-of-the-west-of-england",
-    "role": "Applied Science Communication: Online and Media Writing",
-    "qualification": "Applied Science Communication: Online and Media Writing",
-    "field": "Science Communication",
-    "startDate": "2023-04",
-    "endDate": "2023-06",
-    "current": false,
-    "city": "Bristol",
-    "country": "United Kingdom",
-    "summary": "Completed a Masters-level science communication module focused on writing for non-academic audiences, with training in online science writing, audience adaptation, narrative structure, risk and statistics communication, press release writing, and making science content more visible online. The assessed portfolio encouraged flexible writing across multiple genres and audiences, aligned to real-world science communication practice.",
-    "keyActivities": [
-      "Identified research stories and translated them into clear public-facing content.",
-      "Adapted writing style, structure, and tone for different audiences and formats.",
-      "Produced science writing in formats such as blog posts, features, news stories, and press releases.",
-      "Applied best practice in online science communication and audience engagement.",
-      "Evaluated how to communicate scientific uncertainty, risk, and statistics effectively."
-    ],
-    "achievements": [
-      "Completed a 2,500-word science writing portfolio.",
-      "Strengthened practical skills in digital-first science communication."
-    ],
-    "skills": [
-      "Science Communication",
-      "Content Writing",
-      "Audience Adaptation",
-      "Digital Media",
-      "Editorial Skills",
-      "SEO Copywriting",
-      "Press Release Writing",
-      "Storytelling & Narrative Development"
-    ],
-    "domainExpertise": [
-      "comms_pr_editorial",
-      "space_climate"
-    ],
-    "technicalSkills": [],
-    "practices": [
-      "Information Architecture & Content Modelling"
-    ],
-    "leadershipAndCollaboration": [
-      "Critical & Analytical Thinking",
-      "Attention to Detail"
-    ],
-    "areasOfInterest": [
-      "Open Source",
-      "Knowledge Management"
-    ],
-    "projects": [],
-    "clients": [],
-    "articles": [],
-    "talks": [],
-    "relatedAwards": [],
-    "relatedCertifications": [],
-    "technologies": [],
-    "media": [],
-    "featured": false,
-    "order": 1
-  },
-  {
-    "id": "edu-cim-digital-marketing",
-    "organisationSlug": "loughborough-college",
-    "awardingBodySlug": "cim",
-    "role": "CIM Level 4 Certificate in Professional Digital Marketing",
-    "qualification": "CIM Level 4 Certificate in Professional Digital Marketing",
-    "field": "Digital Marketing",
-    "startDate": "2020-12",
-    "endDate": "2021-12",
-    "current": false,
-    "city": "Loughborough",
-    "country": "United Kingdom",
-    "summary": "Completed a professionally recognised digital marketing qualification covering marketing impact, planning integrated campaigns, content marketing, and social media marketing. Built practical capability in campaign planning, channel strategy, audience targeting, and performance-led digital communication.",
-    "keyActivities": [
-      "Studied core digital marketing concepts and campaign planning methods.",
-      "Applied content marketing and social media marketing principles.",
-      "Developed audience-focused messaging and campaign thinking.",
-      "Used analytical judgement to assess marketing performance and impact."
-    ],
-    "achievements": [
-      "Achieved the CIM Level 4 Certificate in Professional Digital Marketing.",
-      "Built a strong foundation in modern digital and content marketing practice."
-    ],
-    "skills": [
-      "Digital Marketing",
-      "Campaign Planning",
-      "Marketing Strategy",
-      "Content Marketing",
-      "Analytics",
-      "Social Media Strategy",
-      "Lead Generation",
-      "Positioning"
-    ],
-    "domainExpertise": [
-      "marketing_growth"
-    ],
-    "technicalSkills": [],
-    "practices": [
-      "Impact Measurement & SDG Frameworks"
-    ],
-    "leadershipAndCollaboration": [
-      "Critical & Analytical Thinking"
-    ],
-    "areasOfInterest": [
-      "Full-Stack Development",
-      "Knowledge Management"
-    ],
-    "projects": [],
-    "clients": [],
-    "articles": [],
-    "talks": [],
-    "relatedAwards": [],
-    "relatedCertifications": [
-      "CIM Level 4 Certificate in Professional Digital Marketing"
-    ],
-    "technologies": [],
-    "media": [],
-    "featured": false,
-    "order": 2
-  },
-  {
-    "id": "edu-isu-ssp",
-    "organisationSlug": "international-space-university",
-    "role": "Space Studies Programme (SSP)",
-    "qualification": "Space Studies Programme (SSP)",
-    "field": "Space Applications",
-    "startDate": "2013-06",
-    "endDate": "2013-08",
-    "current": false,
-    "city": "Strasbourg",
-    "country": "France",
-    "summary": "Completed an intensive interdisciplinary space studies programme focused on space applications, systems thinking, and collaborative problem solving. Contributed to the AMBIEnT project on affordable microsatellite-based internet access and environmental monitoring, strengthening understanding of space-sector innovation, technical feasibility, and mission-level collaboration.",
-    "keyActivities": [
-      "Worked on the AMBIEnT project: Affordable Microsatellite-Based Internet Access and Environmental Monitoring.",
-      "Applied systems thinking to space applications and mission concepts.",
-      "Collaborated across disciplines in an international project environment.",
-      "Evaluated the technical and societal value of proposed space services."
-    ],
-    "achievements": [
-      "Contributed to an interdisciplinary project exploring microsatellite applications.",
-      "Built experience in international collaboration on a space-sector concept."
-    ],
-    "skills": [
-      "Space Applications",
-      "Satellite Systems",
-      "Team Projects",
-      "Systems Thinking",
-      "Interdisciplinary Collaboration",
-      "Mission Concepts",
-      "Technical Communication"
-    ],
-    "domainExpertise": [
-      "space_climate",
-      "comms_pr_editorial"
-    ],
-    "technicalSkills": [],
-    "practices": [
-      "Information Architecture & Content Modelling"
-    ],
-    "leadershipAndCollaboration": [
-      "Project & Programme Management",
-      "Cross-Functional Collaboration",
-      "Public Speaking & Presentation"
-    ],
-    "areasOfInterest": [
-      "AI/ML Engineering",
-      "Open Data",
-      "Knowledge Management"
-    ],
-    "projects": [
-      "AMBIEnT - Affordable Microsatellite-Based Internet Access and Environmental Monitoring"
-    ],
-    "clients": [],
-    "articles": [],
-    "talks": [],
-    "relatedAwards": [],
-    "relatedCertifications": [],
-    "technologies": [],
-    "media": [],
-    "featured": false,
-    "order": 3
-  },
-  {
     "id": "edu-leicester-mphys",
     "organisationSlug": "university-of-leicester",
     "role": "MPhys Physics with Astrophysics (Hons)",
@@ -192,16 +10,16 @@
     "current": false,
     "city": "Leicester",
     "country": "United Kingdom",
-    "summary": "Completed an integrated master's degree in physics with astrophysics, combining core physics, mathematics, and specialist astronomy study. Developed strong analytical, mathematical, and scientific computing skills through rigorous quantitative training and research preparation.",
+    "summary": "Completed an integrated master's degree in Physics with Astrophysics, combining advanced physics, mathematics, scientific computing and specialist astronomy. Developed strong analytical, quantitative and research skills through laboratory work, modelling and independent study.",
     "keyActivities": [
-      "Studied core physics topics alongside specialist astrophysics modules.",
+      "Studied core physics alongside specialist astrophysics modules.",
       "Applied mathematics to scientific modelling and problem solving.",
-      "Developed scientific computing and data analysis skills.",
-      "Strengthened understanding of physical systems through advanced quantitative study."
+      "Developed scientific computing and data-analysis skills.",
+      "Built research methods and independent-investigation skills."
     ],
     "achievements": [
       "Completed an MPhys degree with astrophysics specialism.",
-      "Built a strong academic foundation in physics, astronomy, and scientific analysis."
+      "Built a strong academic foundation in physics, astronomy and scientific analysis."
     ],
     "skills": [
       "Astrophysics",
@@ -243,31 +61,28 @@
     "technologies": [],
     "media": [],
     "featured": false,
-    "order": 4
+    "order": 1
   },
   {
     "id": "edu-kent-astronomy",
     "organisationSlug": "university-of-kent",
-    "role": "PhD Candidate, Astronomy",
-    "qualification": "PhD Candidate, Astronomy",
+    "role": "PhD Research, Astronomy",
+    "qualification": "PhD Research, Astronomy",
     "field": "Astronomy",
     "startDate": "2009-09",
     "endDate": "2012-09",
     "current": false,
     "city": "Canterbury",
     "country": "United Kingdom",
-    "summary": "Conducted doctoral research on Jupiter-family comets within the SEPPCoN collaboration, analysing optical and thermal infrared observations from major observatories including VLT, Palomar, Keck, and Spitzer. Investigated comet size, spin, albedo, thermal behaviour, and composition, contributing to scientific understanding of small-body populations and observational astronomy.",
+    "summary": "Conducted doctoral research on Jupiter-family comets within the SEPPCoN collaboration, analysing optical and thermal-infrared observations from the VLT, Palomar Observatory, Keck Observatory and Spitzer Space Telescope. Investigated comet size, spin, albedo, thermal behaviour and composition.",
     "keyActivities": [
-      "Analysed astronomical datasets from optical and thermal infrared observations.",
-      "Processed and interpreted comet imagery and observational data.",
-      "Conducted observational astronomy and thermal infrared analysis.",
-      "Collaborated with researchers in the SEPPCoN project.",
-      "Contributed to research into Jupiter-family comet physical properties."
+      "Processed and interpreted astronomical imaging and observational datasets.",
+      "Carried out thermal-infrared and observational astronomy analysis.",
+      "Collaborated with researchers across an international small-body science programme."
     ],
     "achievements": [
-      "Contributed to research on the physical properties and size distribution of Jupiter-family cometary nuclei.",
-      "Worked with data from major observatories and space-based infrared facilities.",
-      "Supported scientific understanding of cometary populations relevant to planetary science."
+      "Contributed to research on the physical properties and size distribution of Jupiter-family comet nuclei.",
+      "Awarded observing time as co-investigator at ESO (NTT) and Palomar (Hale Telescope) in 2010."
     ],
     "skills": [
       "Astronomical Data Analysis",
@@ -312,37 +127,175 @@
     "technologies": [],
     "media": [],
     "featured": false,
-    "order": 5
+    "order": 2
   },
   {
-    "id": "edu-skegness-grammar",
-    "organisationSlug": "skegness-grammar-school",
-    "role": "Student",
-    "qualification": "A-levels and GCSEs",
-    "startDate": "1998-09",
-    "endDate": "2005-08",
+    "id": "edu-isu-ssp",
+    "organisationSlug": "international-space-university",
+    "role": "Space Studies Programme (SSP)",
+    "qualification": "Space Studies Programme (SSP)",
+    "field": "Space Applications",
+    "startDate": "2013-06",
+    "endDate": "2013-08",
     "current": false,
-    "city": "Skegness",
-    "country": "United Kingdom",
-    "summary": "Attended a selective grammar school and completed a rigorous academic programme with strong results across mathematics, sciences, languages, and humanities. The school was the first British secondary school to be awarded Grant Maintained status by the government in 1988, reflecting its longstanding academic reputation and independent ethos.\nA-levels (2005): Mathematics, Further Mathematics, Additional Further Mathematics, Physics, Chemistry.\nAS-levels: completed alongside the sixth-form programme.\nGCSEs (2003): French A*, Spanish A, English Language A, English Literature A, Physics A, Chemistry A, Biology A, Geography B, Mathematics A*.",
+    "city": "Strasbourg",
+    "country": "France",
+    "summary": "Completed an intensive interdisciplinary space programme covering space applications, systems thinking, mission concepts and international collaboration. Contributed to the AMBIEnT team project on affordable microsatellite-based internet access and environmental monitoring.",
     "keyActivities": [
-      "Studied a broad science and mathematics curriculum.",
-      "Completed advanced mathematics and physics qualifications at A-level.",
-      "Achieved strong GCSE results across languages, sciences, humanities, and mathematics."
+      "Worked on the AMBIEnT project team.",
+      "Applied systems thinking to space applications and mission concepts.",
+      "Collaborated across disciplines in an international project environment."
+    ],
+    "achievements": [
+      "Contributed to an interdisciplinary microsatellite-applications project.",
+      "Attended with a UK Space Agency / ESA scholarship."
     ],
     "skills": [
-      "Mathematical Reasoning",
-      "Scientific Literacy",
-      "Analytical Thinking",
-      "Written Communication",
-      "Language Learning",
-      "Problem Solving"
+      "Space Applications",
+      "Satellite Systems",
+      "Team Projects",
+      "Systems Thinking",
+      "Interdisciplinary Collaboration",
+      "Mission Concepts",
+      "Technical Communication"
     ],
-    "domainExpertise": [],
+    "domainExpertise": [
+      "space_climate",
+      "comms_pr_editorial"
+    ],
     "technicalSkills": [],
-    "practices": [],
-    "leadershipAndCollaboration": [],
-    "areasOfInterest": [],
+    "practices": [
+      "Information Architecture & Content Modelling"
+    ],
+    "leadershipAndCollaboration": [
+      "Project & Programme Management",
+      "Cross-Functional Collaboration",
+      "Public Speaking & Presentation"
+    ],
+    "areasOfInterest": [
+      "AI/ML Engineering",
+      "Open Data",
+      "Knowledge Management"
+    ],
+    "projects": [
+      "AMBIEnT - Affordable Microsatellite-Based Internet Access and Environmental Monitoring"
+    ],
+    "clients": [],
+    "articles": [],
+    "talks": [],
+    "relatedAwards": [],
+    "relatedCertifications": [],
+    "technologies": [],
+    "media": [],
+    "featured": false,
+    "order": 3
+  },
+  {
+    "id": "edu-cim-digital-marketing",
+    "organisationSlug": "loughborough-college",
+    "awardingBodySlug": "cim",
+    "role": "CIM Level 4 Certificate in Professional Digital Marketing",
+    "qualification": "CIM Level 4 Certificate in Professional Digital Marketing",
+    "field": "Digital Marketing",
+    "startDate": "2020-12",
+    "endDate": "2021-12",
+    "current": false,
+    "city": "Loughborough",
+    "country": "United Kingdom",
+    "summary": "Completed a professionally recognised digital marketing qualification covering integrated campaign planning, content marketing, social media strategy and performance measurement.",
+    "keyActivities": [
+      "Planned integrated campaigns and channel strategy.",
+      "Applied content and social media marketing principles.",
+      "Developed audience targeting and positioning.",
+      "Assessed marketing performance using analytics."
+    ],
+    "achievements": [
+      "Achieved the CIM Level 4 Certificate in Professional Digital Marketing."
+    ],
+    "skills": [
+      "Digital Marketing",
+      "Campaign Planning",
+      "Marketing Strategy",
+      "Content Marketing",
+      "Analytics",
+      "Social Media Strategy",
+      "Lead Generation",
+      "Positioning"
+    ],
+    "domainExpertise": [
+      "marketing_growth"
+    ],
+    "technicalSkills": [],
+    "practices": [
+      "Impact Measurement & SDG Frameworks"
+    ],
+    "leadershipAndCollaboration": [
+      "Critical & Analytical Thinking"
+    ],
+    "areasOfInterest": [
+      "Full-Stack Development",
+      "Knowledge Management"
+    ],
+    "projects": [],
+    "clients": [],
+    "articles": [],
+    "talks": [],
+    "relatedAwards": [],
+    "relatedCertifications": [
+      "CIM Level 4 Certificate in Professional Digital Marketing"
+    ],
+    "technologies": [],
+    "media": [],
+    "featured": false,
+    "order": 4
+  },
+  {
+    "id": "edu-uwe-science-communication",
+    "organisationSlug": "university-of-the-west-of-england",
+    "role": "Applied Science Communication: Online and Media Writing",
+    "qualification": "Applied Science Communication: Online and Media Writing",
+    "field": "Science Communication",
+    "startDate": "2023-04",
+    "endDate": "2023-06",
+    "current": false,
+    "city": "Bristol",
+    "country": "United Kingdom",
+    "summary": "Completed a master's-level science communication module focused on writing for non-academic audiences, digital science storytelling and public engagement.",
+    "keyActivities": [
+      "Turned research stories into clear public-facing content.",
+      "Adapted style, structure and tone for different audiences and formats.",
+      "Wrote blog posts, features, news stories and press releases.",
+      "Evaluated how to communicate uncertainty, risk and statistics."
+    ],
+    "achievements": [
+      "Completed a 2,500-word multi-genre science writing portfolio."
+    ],
+    "skills": [
+      "Science Communication",
+      "Content Writing",
+      "Audience Adaptation",
+      "Digital Media",
+      "Editorial Skills",
+      "SEO Copywriting",
+      "Press Release Writing",
+      "Storytelling & Narrative Development"
+    ],
+    "domainExpertise": [
+      "comms_pr_editorial",
+      "space_climate"
+    ],
+    "technicalSkills": [],
+    "practices": [
+      "Information Architecture & Content Modelling"
+    ],
+    "leadershipAndCollaboration": [
+      "Critical & Analytical Thinking",
+      "Attention to Detail"
+    ],
+    "areasOfInterest": [
+      "Open Source",
+      "Knowledge Management"
+    ],
     "projects": [],
     "clients": [],
     "articles": [],
@@ -352,6 +305,6 @@
     "technologies": [],
     "media": [],
     "featured": false,
-    "order": 1
+    "order": 5
   }
 ]
