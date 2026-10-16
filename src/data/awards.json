@@ -3,7 +3,7 @@
     {
       "id": "awards-uk-space-2019-panel",
       "title": "Invited Panellist",
-      "issuer": "UK Space Conference",
+      "organisationSlug": "uk-space-conference",
       "year": 2019,
       "type": "speaker invitation",
       "event": "UK Space Conference 2019",
@@ -16,12 +16,14 @@
         "UK Space Sector",
         "Industry Engagement"
       ],
-      "relatedExperience": ["exp-rr-space"]
+      "relatedExperience": [
+        "exp-rr-space"
+      ]
     },
     {
       "id": "awards-innospace-masters-2017",
       "title": "ESA BIC Startup Challenge 2017 winner",
-      "issuer": "INNOspace Masters",
+      "organisationSlug": "innospace-masters",
       "year": 2019,
       "type": "speaker invitation",
       "keywords": [
@@ -30,17 +32,19 @@
         "esa",
         "esa-bic"
       ],
-      "relatedExperience": ["exp-design-and-data"]
+      "relatedExperience": [
+        "exp-design-and-data"
+      ]
     },
     {
       "id": "awards-excellence-2017-esa",
       "title": "Award of Excellence",
-      "issuer": "The Communicator Awards",
+      "organisationSlug": "communicator-awards",
       "year": 2017,
       "type": "award",
       "project": "Lunar Exploration Interactive Documentary",
       "category": "User Interface / Features",
-      "client": "European Space Agency",
+      "clientOrganisationSlug": "esa",
       "keywords": [
         "Science Communication",
         "Interactive Media",
@@ -49,15 +53,16 @@
         "ESA Communication",
         "Digital Storytelling"
       ],
-      "relatedExperience": ["exp-design-and-data"]
+      "relatedExperience": [
+        "exp-design-and-data"
+      ]
     },
-
     {
       "id": "award-isu-ssp-2013",
       "title": "Scholarship Recipient",
-      "issuer": [
-        "UK Space Agency",
-        "European Space Agency"
+      "organisationSlug": "uk-space-agency",
+      "additionalOrganisationSlugs": [
+        "esa"
       ],
       "type": "scholarship",
       "year": 2013,
@@ -70,13 +75,14 @@
         "International Collaboration",
         "Space Policy Training"
       ],
-       "relatedEducation": ["edu-isu-ssp"]
+      "relatedEducation": [
+        "edu-isu-ssp"
+      ]
     },
-
     {
       "id": "award-ras-sgc-2012",
       "title": "Education & Outreach Small Grant",
-      "issuer": "Royal Astronomical Society",
+      "organisationSlug": "ras",
       "year": 2012,
       "type": "grant",
       "event": "Space Generation Congress",
@@ -88,13 +94,14 @@
         "Scientific Outreach",
         "Early Career Research"
       ],
-      "relatedVolunteering": ["vol-sgac-npoc-uk"]
+      "relatedVolunteering": [
+        "vol-sgac-npoc-uk"
+      ]
     },
-
     {
       "id": "award-eso-ntt-2010",
       "title": "Observing Time Award (Co-I)",
-      "issuer": "European Southern Observatory",
+      "organisationSlug": "eso",
       "year": 2010,
       "type": "grant",
       "instrument": "New Technology Telescope (NTT)",
@@ -109,13 +116,14 @@
         "Scientific Research",
         "ESO"
       ],
-       "relatedEducation": ["edu-kent-astronomy"]
+      "relatedEducation": [
+        "edu-kent-astronomy"
+      ]
     },
-
     {
       "id": "award-palomar-2010",
       "title": "Observing Time Award (Co-I)",
-      "issuer": "Palomar Observatory",
+      "organisationSlug": "palomar-observatory",
       "year": 2010,
       "type": "grant",
       "instrument": "Hale Telescope (5m)",
@@ -129,13 +137,14 @@
         "Planetary Science",
         "Space Research"
       ],
-       "relatedEducation": ["edu-kent-astronomy"]
+      "relatedEducation": [
+        "edu-kent-astronomy"
+      ]
     },
-
     {
       "id": "award-ras-iya2009-rep",
       "title": "UK Student Representative IYA2009",
-      "issuer": "Royal Astronomical Society",
+      "organisationSlug": "ras",
       "year": 2009,
       "type": "award",
       "event": "International Year of Astronomy Opening Ceremony",
@@ -148,13 +157,14 @@
         "Space Advocacy",
         "International Collaboration"
       ],
-       "relatedEducation": ["edu-leicester-mphys"]
+      "relatedEducation": [
+        "edu-leicester-mphys"
+      ]
     },
-
     {
       "id": "award-arthur-clarke",
       "title": "Nominee",
-      "issuer": "British Interplanetary Society",
+      "organisationSlug": "british-interplanetary-society",
       "year": 2010,
       "type": "award",
       "award": "Sir Arthur Clarke Awards",
@@ -165,13 +175,14 @@
         "Science Communication",
         "UK Space Sector"
       ],
-      "relatedVolunteering": ["vol-ukseds-secretary"]
+      "relatedVolunteering": [
+        "vol-ukseds-secretary"
+      ]
     },
-
     {
       "id": "award-sure-2007",
       "title": "SURE Fellowship",
-      "issuer": "University of Leicester",
+      "organisationSlug": "university-of-leicester",
       "year": 2007,
       "type": "fellowship",
       "keywords": [
@@ -181,13 +192,14 @@
         "Data Analysis",
         "University Research Grant"
       ],
-      "relatedEducation": ["edu-leicester-mphys"]
+      "relatedEducation": [
+        "edu-leicester-mphys"
+      ]
     },
-
     {
       "id": "award-sgs-magdalen",
       "title": "Magdalen Cup for Science",
-      "issuer": "Skegness Grammar School",
+      "organisationSlug": "skegness-grammar-school",
       "year": 2005,
       "type": "award",
       "keywords": [
@@ -195,12 +207,14 @@
         "Science Achievement",
         "Early Academic Achievement"
       ],
-      "relatedEducation": ["edu-skegness-grammar"]
+      "relatedEducation": [
+        "edu-skegness-grammar"
+      ]
     },
     {
       "id": "award-sgs-king",
       "title": "King Prize for Service",
-      "issuer": "Skegness Grammar School",
+      "organisationSlug": "skegness-grammar-school",
       "year": 2005,
       "type": "award",
       "keywords": [
@@ -208,7 +222,9 @@
         "Service Award",
         "Early Academic Achievement"
       ],
-      "relatedEducation": ["edu-skegness-grammar"]
+      "relatedEducation": [
+        "edu-skegness-grammar"
+      ]
     }
   ]
 }

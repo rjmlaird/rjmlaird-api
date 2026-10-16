@@ -1,38 +1,5974 @@
-{
-  "profiles": [
-  { "key": "github", "name": "GitHub", "url": "https://github.com/rjmlaird", "icon": "github", "label": "GitHub profile", "username": "rjmlaird", "type": "code", "color": "#181717" },
-  { "key": "gitlab", "name": "GitLab", "url": "https://gitlab.com/rjmlaird", "icon": "gitlab", "label": "GitLab profile", "username": "rjmlaird", "type": "code", "color": "#FC6D26" },
-  { "key": "stackoverflow", "name": "Stack Overflow", "url": "https://stackoverflow.com/users/5563085/rjmlaird", "icon": "stackoverflow", "label": "Stack Overflow profile", "username": "rjmlaird", "type": "community", "color": "#F58025" },
-  { "key": "linkedin", "name": "LinkedIn", "url": "https://www.linkedin.com/in/rjmlaird", "icon": "linkedin", "label": "LinkedIn profile", "username": "rjmlaird", "type": "professional", "color": "#0A66C2" },
-  { "key": "x", "name": "X", "url": "https://x.com/rjmlaird", "icon": "x", "label": "X profile", "username": "rjmlaird", "type": "social", "color": "#000000" },
-  { "key": "twitter", "name": "Twitter", "url": "https://twitter.com/rjmlaird", "icon": "twitter", "label": "Twitter profile", "username": "rjmlaird", "type": "social", "color": "#1DA1F2" },
-  { "key": "bluesky", "name": "Bluesky", "url": "https://bsky.app/profile/rjmlaird.bsky.social", "icon": "bluesky", "label": "Bluesky profile", "username": "rjmlaird.bsky.social", "type": "social", "color": "#0085FF" },
-  { "key": "mastodon", "name": "Mastodon", "url": "https://mastodon.social/@rjmlaird", "icon": "mastodon", "label": "Mastodon profile", "username": "@rjmlaird", "type": "social", "color": "#6364FF" },
-  { "key": "instagram", "name": "Instagram", "url": "https://www.instagram.com/rjmlaird/", "icon": "instagram", "label": "Instagram profile", "username": "rjmlaird", "type": "social", "color": "#E4405F" },
-  { "key": "facebook", "name": "Facebook", "url": "https://www.facebook.com/rjmlaird", "icon": "facebook", "label": "Facebook profile", "username": "rjmlaird", "type": "social", "color": "#1877F2" },
-  { "key": "youtube", "name": "YouTube", "url": "https://www.youtube.com/@rjmlaird", "icon": "youtube", "label": "YouTube channel", "username": "@rjmlaird", "type": "video", "color": "#FF0000" },
-  { "key": "tiktok", "name": "TikTok", "url": "https://www.tiktok.com/@rjmlaird", "icon": "tiktok", "label": "TikTok profile", "username": "@rjmlaird", "type": "social", "color": "#000000" },
-  { "key": "twitch", "name": "Twitch", "url": "https://www.twitch.tv/rjmlaird", "icon": "twitch", "label": "Twitch channel", "username": "rjmlaird", "type": "streaming", "color": "#9146FF" },
-  { "key": "threads", "name": "Threads", "url": "https://www.threads.net/@rjmlaird", "icon": "threads", "label": "Threads profile", "username": "@rjmlaird", "type": "social", "color": "#000000" },
-  { "key": "reddit", "name": "Reddit", "url": "https://www.reddit.com/user/rjmlaird", "icon": "reddit", "label": "Reddit profile", "username": "rjmlaird", "type": "community", "color": "#FF4500" },
-  { "key": "discord", "name": "Discord", "url": "https://discord.com/users/rjmlaird", "icon": "discord", "label": "Discord profile", "username": "your-user-id", "type": "community", "color": "#5865F2" },
-  { "key": "telegram", "name": "Telegram", "url": "https://t.me/rjmlaird", "icon": "telegram", "label": "Telegram profile", "username": "@rjmlaird", "type": "messaging", "color": "#26A5E4" },
-  { "key": "whatsapp", "name": "WhatsApp", "url": "https://wa.me/447599423050", "icon": "whatsapp", "label": "WhatsApp chat", "username": "+441234567890", "type": "messaging", "color": "#25D366" },
-  { "key": "signal", "name": "Signal", "url": "https://signal.me/#p/+447599423050", "icon": "signal", "label": "Signal contact", "username": "+441234567890", "type": "messaging", "color": "#3A76F0" },
-  { "key": "medium", "name": "Medium", "url": "https://medium.com/@rjmlaird", "icon": "medium", "label": "Medium profile", "username": "@rjmlaird", "type": "writing", "color": "#000000" },
-  { "key": "devto", "name": "DEV Community", "url": "https://dev.to/rjmlaird", "icon": "devdotto", "label": "DEV profile", "username": "rjmlaird", "type": "writing", "color": "#0A0A0A" },
-  { "key": "substack", "name": "Substack", "url": "https://rjmlaird.substack.com", "icon": "substack", "label": "Substack publication", "username": "rjmlaird", "type": "writing", "color": "#FF6719" },
-  { "key": "codepen", "name": "CodePen", "url": "https://codepen.io/rjmlaird", "icon": "codepen", "label": "CodePen profile", "username": "rjmlaird", "type": "code", "color": "#000000" },
-  { "key": "behance", "name": "Behance", "url": "https://www.behance.net/rjmlaird", "icon": "behance", "label": "Behance profile", "username": "rjmlaird", "type": "portfolio", "color": "#1769FF" },
-  { "key": "dribbble", "name": "Dribbble", "url": "https://dribbble.com/rjmlaird", "icon": "dribbble", "label": "Dribbble profile", "username": "rjmlaird", "type": "portfolio", "color": "#EA4C89" },
-  { "key": "pinterest", "name": "Pinterest", "url": "https://www.pinterest.com/rjmlaird", "icon": "pinterest", "label": "Pinterest profile", "username": "rjmlaird", "type": "social", "color": "#E60023" },
-  { "key": "flickr", "name": "Flickr", "url": "https://www.flickr.com/photos/rjmlaird", "icon": "flickr", "label": "Flickr profile", "username": "rjmlaird", "type": "photo", "color": "#0063DC" },
-  { "key": "spotify", "name": "Spotify", "url": "https://open.spotify.com/user/rjmlaird", "icon": "spotify", "label": "Spotify profile", "username": "rjmlaird", "type": "music", "color": "#1DB954" },
-  { "key": "soundcloud", "name": "SoundCloud", "url": "https://soundcloud.com/rjmlaird", "icon": "soundcloud", "label": "SoundCloud profile", "username": "rjmlaird", "type": "music", "color": "#FF3300" },
-  { "key": "orcid", "name": "ORCID", "url": "https://orcid.org/0000-0002-5992-684X", "icon": "orcid", "label": "ORCID profile", "username": "0000-0002-5992-684X", "type": "academic", "color": "#A6CE39" },
-  { "key": "googlescholar", "name": "Google Scholar", "url": "https://scholar.google.com/citations?user=v9lQktoAAAAJ&hl=en", "icon": "googlescholar", "label": "Google Scholar profile", "username": "v9lQktoAAAAJ", "type": "academic", "color": "#4285F4" },
-  { "key": "researchgate", "name": "ResearchGate", "url": "https://www.researchgate.net/profile/Ryan_Laird", "icon": "researchgate", "label": "ResearchGate profile", "username": "Ryan_Laird", "type": "academic", "color": "#00CCBB" },
-  { "key": "academia", "name": "Academia.edu", "url": "https://isunet.academia.edu/rjmlaird", "icon": "academia", "label": "Academia.edu profile", "username": "rjmlaird", "type": "academic", "color": "#1F4287" },
-  { "key": "webofscience", "name": "Web of Science", "url": "https://www.webofscience.com/wos/author/record/K-3858-2017", "icon": "webofscience", "label": "Web of Science profile", "username": "K-3858-2017", "type": "academic", "color": "#005574" }
+[
+  {
+    "key": "github",
+    "name": "GitHub",
+    "url": "https://github.com/rjmlaird",
+    "icon": "github",
+    "label": "GitHub profile",
+    "username": "rjmlaird",
+    "type": "code",
+    "color": "#181717",
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "github",
+      "software"
+    ],
+    "notes": null,
+    "addedAt": "27 August 2014 22:43 (UTC)",
+    "sources": [
+      "socials.json",
+      "notion:My online profiles",
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "gitlab",
+    "name": "GitLab",
+    "url": "https://gitlab.com/rjmlaird",
+    "icon": "gitlab",
+    "label": "GitLab profile",
+    "username": "rjmlaird",
+    "type": "code",
+    "color": "#FC6D26",
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "socials.json",
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "stackoverflow",
+    "name": "Stack Overflow",
+    "url": "https://stackoverflow.com/users/5563085/rjmlaird",
+    "icon": "stackoverflow",
+    "label": "Stack Overflow profile",
+    "username": "rjmlaird",
+    "type": "community",
+    "color": "#F58025",
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "socials.json",
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "linkedin",
+    "name": "LinkedIn",
+    "url": "https://www.linkedin.com/in/rjmlaird",
+    "icon": "linkedin",
+    "label": "LinkedIn profile",
+    "username": "rjmlaird",
+    "type": "professional",
+    "color": "#0A66C2",
+    "category": "professional",
+    "categories": [
+      "professional",
+      "social",
+      "speaking"
+    ],
+    "status": "active",
+    "altUrls": [
+      "http://www.linkedin.com/in/rjmlaird"
+    ],
+    "tags": [
+      "Leicester",
+      "business",
+      "green",
+      "marketing",
+      "space",
+      "space sector"
+    ],
+    "notes": null,
+    "addedAt": "27 August 2014 22:40 (UTC)",
+    "sources": [
+      "socials.json",
+      "notion:My online profiles",
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "x",
+    "name": "X",
+    "url": "https://x.com/rjmlaird",
+    "icon": "x",
+    "label": "X profile",
+    "username": "rjmlaird",
+    "type": "social",
+    "color": "#000000",
+    "category": "social",
+    "categories": [
+      "social",
+      "speaking"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "socials.json",
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "twitter",
+    "name": "Twitter",
+    "url": "https://twitter.com/rjmlaird",
+    "icon": "twitter",
+    "label": "Twitter profile",
+    "username": "rjmlaird",
+    "type": "social",
+    "color": "#1DA1F2",
+    "category": "social",
+    "categories": [
+      "social"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "socials.json"
+    ]
+  },
+  {
+    "key": "bluesky",
+    "name": "Bluesky",
+    "url": "https://bsky.app/profile/rjmlaird.bsky.social",
+    "icon": "bluesky",
+    "label": "Bluesky profile",
+    "username": "rjmlaird.bsky.social",
+    "type": "social",
+    "color": "#0085FF",
+    "category": "social",
+    "categories": [
+      "social"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "socials.json"
+    ]
+  },
+  {
+    "key": "mastodon",
+    "name": "Mastodon",
+    "url": "https://mastodon.social/@rjmlaird",
+    "icon": "mastodon",
+    "label": "Mastodon profile",
+    "username": "@rjmlaird",
+    "type": "social",
+    "color": "#6364FF",
+    "category": "social",
+    "categories": [
+      "social"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "social"
+    ],
+    "notes": null,
+    "addedAt": "21 January 2024 21:13",
+    "sources": [
+      "socials.json",
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "instagram",
+    "name": "Instagram",
+    "url": "https://www.instagram.com/rjmlaird/",
+    "icon": "instagram",
+    "label": "Instagram profile",
+    "username": "rjmlaird",
+    "type": "social",
+    "color": "#E4405F",
+    "category": "social",
+    "categories": [
+      "social",
+      "photography"
+    ],
+    "status": "active",
+    "altUrls": [
+      "http://instagram.com/rjmlaird"
+    ],
+    "tags": [],
+    "notes": null,
+    "addedAt": "27 August 2014 22:42 (UTC)",
+    "sources": [
+      "socials.json",
+      "notion:My online profiles",
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "facebook",
+    "name": "Facebook",
+    "url": "https://www.facebook.com/rjmlaird",
+    "icon": "facebook",
+    "label": "Facebook profile",
+    "username": "rjmlaird",
+    "type": "social",
+    "color": "#1877F2",
+    "category": "social",
+    "categories": [
+      "social",
+      "speaking"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "socials.json",
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "youtube",
+    "name": "YouTube",
+    "url": "https://www.youtube.com/@rjmlaird",
+    "icon": "youtube",
+    "label": "YouTube channel",
+    "username": "@rjmlaird",
+    "type": "video",
+    "color": "#FF0000",
+    "category": "video",
+    "categories": [
+      "video",
+      "social",
+      "speaking"
+    ],
+    "status": "active",
+    "altUrls": [
+      "https://www.youtube.com/user/rjmlaird"
+    ],
+    "tags": [
+      "branding",
+      "lead generation",
+      "marketing",
+      "newsletter",
+      "seo",
+      "social",
+      "space",
+      "team"
+    ],
+    "notes": null,
+    "addedAt": "27 August 2014 22:40 (UTC)",
+    "sources": [
+      "socials.json",
+      "notion:My online profiles",
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "tiktok",
+    "name": "TikTok",
+    "url": "https://www.tiktok.com/@rjmlaird",
+    "icon": "tiktok",
+    "label": "TikTok profile",
+    "username": "@rjmlaird",
+    "type": "social",
+    "color": "#000000",
+    "category": "social",
+    "categories": [
+      "social"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "socials.json"
+    ]
+  },
+  {
+    "key": "twitch",
+    "name": "Twitch",
+    "url": "https://www.twitch.tv/rjmlaird",
+    "icon": "twitch",
+    "label": "Twitch channel",
+    "username": "rjmlaird",
+    "type": "streaming",
+    "color": "#9146FF",
+    "category": "video",
+    "categories": [
+      "video"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "socials.json"
+    ]
+  },
+  {
+    "key": "threads",
+    "name": "Threads",
+    "url": "https://www.threads.net/@rjmlaird",
+    "icon": "threads",
+    "label": "Threads profile",
+    "username": "@rjmlaird",
+    "type": "social",
+    "color": "#000000",
+    "category": "social",
+    "categories": [
+      "social"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "socials.json"
+    ]
+  },
+  {
+    "key": "reddit",
+    "name": "Reddit",
+    "url": "https://www.reddit.com/user/rjmlaird",
+    "icon": "reddit",
+    "label": "Reddit profile",
+    "username": "rjmlaird",
+    "type": "community",
+    "color": "#FF4500",
+    "category": "community",
+    "categories": [
+      "community",
+      "speaking"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "socials.json",
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "discord",
+    "name": "Discord",
+    "url": "https://discord.com/users/rjmlaird",
+    "icon": "discord",
+    "label": "Discord profile",
+    "username": "your-user-id",
+    "type": "community",
+    "color": "#5865F2",
+    "category": "community",
+    "categories": [
+      "community",
+      "speaking"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "socials.json",
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "telegram",
+    "name": "Telegram",
+    "url": "https://t.me/rjmlaird",
+    "icon": "telegram",
+    "label": "Telegram profile",
+    "username": "@rjmlaird",
+    "type": "messaging",
+    "color": "#26A5E4",
+    "category": "messaging",
+    "categories": [
+      "messaging",
+      "speaking"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "socials.json",
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "whatsapp",
+    "name": "WhatsApp",
+    "url": "https://wa.me/447599423050",
+    "icon": "whatsapp",
+    "label": "WhatsApp chat",
+    "username": "+441234567890",
+    "type": "messaging",
+    "color": "#25D366",
+    "category": "messaging",
+    "categories": [
+      "messaging"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "socials.json"
+    ]
+  },
+  {
+    "key": "signal",
+    "name": "Signal",
+    "url": "https://signal.me/#p/+447599423050",
+    "icon": "signal",
+    "label": "Signal contact",
+    "username": "+441234567890",
+    "type": "messaging",
+    "color": "#3A76F0",
+    "category": "messaging",
+    "categories": [
+      "messaging"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "socials.json"
+    ]
+  },
+  {
+    "key": "medium",
+    "name": "Medium",
+    "url": "https://medium.com/@rjmlaird",
+    "icon": "medium",
+    "label": "Medium profile",
+    "username": "@rjmlaird",
+    "type": "writing",
+    "color": "#000000",
+    "category": "writing",
+    "categories": [
+      "writing"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "astronomy",
+      "space",
+      "story",
+      "voice"
+    ],
+    "notes": null,
+    "addedAt": "31 August 2014 19:47 (UTC)",
+    "sources": [
+      "socials.json",
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "devto",
+    "name": "DEV Community",
+    "url": "https://dev.to/rjmlaird",
+    "icon": "devdotto",
+    "label": "DEV profile",
+    "username": "rjmlaird",
+    "type": "writing",
+    "color": "#0A0A0A",
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "socials.json",
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "substack",
+    "name": "Substack",
+    "url": "https://rjmlaird.substack.com",
+    "icon": "substack",
+    "label": "Substack publication",
+    "username": "rjmlaird",
+    "type": "writing",
+    "color": "#FF6719",
+    "category": "writing",
+    "categories": [
+      "writing"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "socials.json"
+    ]
+  },
+  {
+    "key": "codepen",
+    "name": "CodePen",
+    "url": "https://codepen.io/rjmlaird",
+    "icon": "codepen",
+    "label": "CodePen profile",
+    "username": "rjmlaird",
+    "type": "code",
+    "color": "#000000",
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": "4 January 2024 19:14",
+    "sources": [
+      "socials.json",
+      "notion:My online profiles",
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "behance",
+    "name": "Behance",
+    "url": "https://www.behance.net/rjmlaird",
+    "icon": "behance",
+    "label": "Behance profile",
+    "username": "rjmlaird",
+    "type": "portfolio",
+    "color": "#1769FF",
+    "category": "creative",
+    "categories": [
+      "creative",
+      "photography"
+    ],
+    "status": "active",
+    "altUrls": [
+      "https://www.behance.net/rjmlaird/info"
+    ],
+    "tags": [],
+    "notes": null,
+    "addedAt": "26 September 2025 23:31 (UTC)",
+    "sources": [
+      "socials.json",
+      "notion:My online profiles",
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "dribbble",
+    "name": "Dribbble",
+    "url": "https://dribbble.com/rjmlaird",
+    "icon": "dribbble",
+    "label": "Dribbble profile",
+    "username": "rjmlaird",
+    "type": "portfolio",
+    "color": "#EA4C89",
+    "category": "creative",
+    "categories": [
+      "creative",
+      "dev"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "socials.json",
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "pinterest",
+    "name": "Pinterest",
+    "url": "https://www.pinterest.com/rjmlaird",
+    "icon": "pinterest",
+    "label": "Pinterest profile",
+    "username": "rjmlaird",
+    "type": "social",
+    "color": "#E60023",
+    "category": "creative",
+    "categories": [
+      "creative"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "socials.json"
+    ]
+  },
+  {
+    "key": "flickr",
+    "name": "Flickr",
+    "url": "https://www.flickr.com/photos/rjmlaird",
+    "icon": "flickr",
+    "label": "Flickr profile",
+    "username": "rjmlaird",
+    "type": "photo",
+    "color": "#0063DC",
+    "category": "photography",
+    "categories": [
+      "photography",
+      "social"
+    ],
+    "status": "active",
+    "altUrls": [
+      "https://www.flickr.com/people/rjmlaird"
+    ],
+    "tags": [
+      "testimonials"
+    ],
+    "notes": null,
+    "addedAt": "27 August 2014 22:42 (UTC)",
+    "sources": [
+      "socials.json",
+      "notion:My online profiles",
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "spotify",
+    "name": "Spotify",
+    "url": "https://open.spotify.com/user/rjmlaird",
+    "icon": "spotify",
+    "label": "Spotify profile",
+    "username": "rjmlaird",
+    "type": "music",
+    "color": "#1DB954",
+    "category": "creative",
+    "categories": [
+      "creative"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "socials.json"
+    ]
+  },
+  {
+    "key": "soundcloud",
+    "name": "SoundCloud",
+    "url": "https://soundcloud.com/rjmlaird",
+    "icon": "soundcloud",
+    "label": "SoundCloud profile",
+    "username": "rjmlaird",
+    "type": "music",
+    "color": "#FF3300",
+    "category": "creative",
+    "categories": [
+      "creative"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "cologne",
+      "sound"
+    ],
+    "notes": null,
+    "addedAt": "27 August 2014 22:52 (UTC)",
+    "sources": [
+      "socials.json",
+      "notion:My online profiles",
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "orcid",
+    "name": "ORCID",
+    "url": "https://orcid.org/0000-0002-5992-684X",
+    "icon": "orcid",
+    "label": "ORCID profile",
+    "username": "0000-0002-5992-684X",
+    "type": "academic",
+    "color": "#A6CE39",
+    "category": "research",
+    "categories": [
+      "research"
+    ],
+    "status": "active",
+    "altUrls": [
+      "http://orcid.org/0000-0002-5992-684X"
+    ],
+    "tags": [
+      "research",
+      "Core Author/Researcher Profiles"
+    ],
+    "notes": null,
+    "addedAt": "7 January 2016 15:15",
+    "sources": [
+      "socials.json",
+      "notion:My online profiles",
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "googlescholar",
+    "name": "Google Scholar",
+    "url": "https://scholar.google.com/citations?user=v9lQktoAAAAJ&hl=en",
+    "icon": "googlescholar",
+    "label": "Google Scholar profile",
+    "username": "v9lQktoAAAAJ",
+    "type": "academic",
+    "color": "#4285F4",
+    "category": "research",
+    "categories": [
+      "research"
+    ],
+    "status": "active",
+    "altUrls": [
+      "https://scholar.google.co.uk/citations?hl=en&view_op=list_works&gmla=AFix5MYqQ3v3R90vnGYQwpY_PxYKfPvz84goR9iWIlKqsfyHnPIZieXqEpUTIEkxSbMeZaWqgYSIBRglc6HV8gkdhCHe&user=v9lQktoAAAAJ",
+      "https://scholar.google.co.uk/citations?user=v9lQktoAAAAJ"
+    ],
+    "tags": [
+      "comms",
+      "communication",
+      "green",
+      "marketing",
+      "science communication",
+      "Core Author/Researcher Profiles"
+    ],
+    "notes": null,
+    "addedAt": "12 December 2024 01:50",
+    "sources": [
+      "socials.json",
+      "notion:My online profiles",
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "researchgate",
+    "name": "ResearchGate",
+    "url": "https://www.researchgate.net/profile/Ryan_Laird",
+    "icon": "researchgate",
+    "label": "ResearchGate profile",
+    "username": "Ryan_Laird",
+    "type": "academic",
+    "color": "#00CCBB",
+    "category": "research",
+    "categories": [
+      "research"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "editor",
+      "research",
+      "Research Sharing & Networking Platforms"
+    ],
+    "notes": null,
+    "addedAt": "24 July 2015 12:07 (UTC)",
+    "sources": [
+      "socials.json",
+      "notion:My online profiles",
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "academia",
+    "name": "Academia.edu",
+    "url": "https://isunet.academia.edu/rjmlaird",
+    "icon": "academia",
+    "label": "Academia.edu profile",
+    "username": "rjmlaird",
+    "type": "academic",
+    "color": "#1F4287",
+    "category": "research",
+    "categories": [
+      "research"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "astronomy",
+      "astrophysics",
+      "author",
+      "emissions",
+      "event",
+      "grants",
+      "learning",
+      "nature",
+      "outreach",
+      "privacy",
+      "space",
+      "statistics"
+    ],
+    "notes": null,
+    "addedAt": "9 November 2014 18:48",
+    "sources": [
+      "socials.json",
+      "notion:My online profiles",
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "webofscience",
+    "name": "Web of Science",
+    "url": "https://www.webofscience.com/wos/author/record/K-3858-2017",
+    "icon": "webofscience",
+    "label": "Web of Science profile",
+    "username": "K-3858-2017",
+    "type": "academic",
+    "color": "#005574",
+    "category": "research",
+    "categories": [
+      "research"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "Core Author/Researcher Profiles"
+    ],
+    "notes": null,
+    "addedAt": "26 January 2025 22:11",
+    "sources": [
+      "socials.json",
+      "notion:My online profiles",
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "buymeacoffee",
+    "name": "Buy Me a Coffee",
+    "url": "http://buymeacoffee.com/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "business",
+    "categories": [
+      "business"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "green"
+    ],
+    "notes": null,
+    "addedAt": "30 May 2025 23:17 (UTC)",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "cal",
+    "name": "Cal.com",
+    "url": "https://cal.com/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "business",
+    "categories": [
+      "business",
+      "speaking"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "branding",
+      "consultant",
+      "consulting",
+      "marketing",
+      "space"
+    ],
+    "notes": null,
+    "addedAt": "26 April 2024 22:09 (UTC)",
+    "sources": [
+      "notion:My online profiles",
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "crunchbase",
+    "name": "Crunchbase",
+    "url": "https://www.crunchbase.com/person/ryan-laird",
+    "icon": null,
+    "label": null,
+    "username": "ryan-laird",
+    "type": null,
+    "color": null,
+    "category": "business",
+    "categories": [
+      "business"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "green"
+    ],
+    "notes": null,
+    "addedAt": "9 January 2024 18:44",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "enterprisenation",
+    "name": "Enterprise Nation",
+    "url": "https://www.enterprisenation.com/get-connected/t1t0h5k2-ryan-laird/",
+    "icon": null,
+    "label": null,
+    "username": "t1t0h5k2-ryan-laird",
+    "type": null,
+    "color": null,
+    "category": "business",
+    "categories": [
+      "business"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "business",
+      "entrepreneurial",
+      "green",
+      "growth",
+      "lead generation",
+      "marketing",
+      "networking",
+      "seo",
+      "startups",
+      "website"
+    ],
+    "notes": null,
+    "addedAt": "14 May 2025 00:34 (UTC)",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "producthunt",
+    "name": "Product Hunt",
+    "url": "https://www.producthunt.com/@rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "@rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "business",
+    "categories": [
+      "business"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "marketing"
+    ],
+    "notes": null,
+    "addedAt": "24 February 2026 15:53",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "truelancer",
+    "name": "Truelancer",
+    "url": "http://www.truelancer.com/freelancer/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "business",
+    "categories": [
+      "business"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "Leicester",
+      "freelance",
+      "skills"
+    ],
+    "notes": null,
+    "addedAt": "10 April 2015 20:59 (UTC)",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "upwork",
+    "name": "Upwork",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "business",
+    "categories": [
+      "business"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "wellfound",
+    "name": "Wellfound",
+    "url": "https://wellfound.com/u/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "business",
+    "categories": [
+      "business"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": "26 September 2025 20:00 (UTC)",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "disqus",
+    "name": "Disqus",
+    "url": "http://disqus.com/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "community",
+    "categories": [
+      "community"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": "31 August 2014 18:42 (UTC)",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "memoryalpha",
+    "name": "Memory Alpha (Wikia)",
+    "url": "http://memory-alpha.wikia.com/wiki/User:Rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "User:Rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "community",
+    "categories": [
+      "community"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": "20 February 2016 20:54",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "creativemarket",
+    "name": "Creative Market",
+    "url": "https://creativemarket.com/users/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "creative",
+    "categories": [
+      "creative"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "creativity"
+    ],
+    "notes": null,
+    "addedAt": "4 January 2024 19:10",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "lastfm",
+    "name": "Last.fm",
+    "url": "http://www.last.fm/user/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "creative",
+    "categories": [
+      "creative",
+      "social"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "event",
+      "jobs",
+      "legal",
+      "music",
+      "parking",
+      "privacy",
+      "social",
+      "support"
+    ],
+    "notes": null,
+    "addedAt": "27 August 2014 22:42 (UTC)",
+    "sources": [
+      "notion:My online profiles",
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "musicbrainz",
+    "name": "Musicbrainz",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "creative",
+    "categories": [
+      "creative"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "padlet",
+    "name": "Padlet",
+    "url": "https://padlet.com/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "creative",
+    "categories": [
+      "creative"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": "28 September 2025 16:55 (UTC)",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "patreon",
+    "name": "Patreon",
+    "url": "https://www.patreon.com/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "creative",
+    "categories": [
+      "creative"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "marketing",
+      "space"
+    ],
+    "notes": null,
+    "addedAt": "4 January 2024 16:25",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "pearltrees",
+    "name": "Pearltrees",
+    "url": "http://www.pearltrees.com/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "creative",
+    "categories": [
+      "creative"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": "8 January 2016 02:04",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "pocketlive",
+    "name": "PocketLive",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "creative",
+    "categories": [
+      "creative"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "pressfolios",
+    "name": "Pressfolios",
+    "url": "https://rjmlaird.pressfolios.com/",
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "creative",
+    "categories": [
+      "creative"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": "9 February 2025 22:22",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "songkick",
+    "name": "Songkick",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "creative",
+    "categories": [
+      "creative"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "soundiz",
+    "name": "Soundiz",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "creative",
+    "categories": [
+      "creative"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "trailforks",
+    "name": "TrailForks",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "creative",
+    "categories": [
+      "creative"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "zivolio",
+    "name": "Zivolio",
+    "url": "https://www.zivolio.com/rjmlaird/",
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "creative",
+    "categories": [
+      "creative"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "arcdev",
+    "name": "Arcdev",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "bitbucket",
+    "name": "Bitbucket",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "carbon",
+    "name": "Carbon",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "codewars",
+    "name": "CodeWars",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "crates",
+    "name": "crates.io",
+    "url": "https://crates.io/users/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": "21 November 2025 02:03",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "cursor",
+    "name": "Cursor",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "docker",
+    "name": "Docker Hub",
+    "url": "https://hub.docker.com/u/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "app",
+      "docker",
+      "hub",
+      "images",
+      "software"
+    ],
+    "notes": null,
+    "addedAt": "9 December 2025 05:16",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "expogo",
+    "name": "Expo Go",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "guru",
+    "name": "Guru",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "hackerrank",
+    "name": "HackerRank",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "jsfiddle",
+    "name": "JSFiddle",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "laracasts",
+    "name": "Laracasts",
+    "url": "https://laracasts.com/@rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "@rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "dev",
+    "categories": [
+      "dev",
+      "podcasting"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": "4 January 2024 17:44",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "leetcode",
+    "name": "LeetCode",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "npm",
+    "name": "NPM JS",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "profilein",
+    "name": "Profile.in",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "pypi",
+    "name": "PyPI",
+    "url": "https://pypi.org/user/rjmlaird/",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": "21 November 2025 01:36",
+    "sources": [
+      "notion:My online profiles",
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "replit",
+    "name": "Replit",
+    "url": "https://replit.com/@rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "@rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": "21 November 2025 02:44",
+    "sources": [
+      "notion:My online profiles",
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "rubygems",
+    "name": "RubyGems",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "sourceforge",
+    "name": "Sourceforge",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "stackshare",
+    "name": "StackShare",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "familysearch",
+    "name": "Family Search",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "genealogy",
+    "categories": [
+      "genealogy"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "bucketlist",
+    "name": "Bucketlist",
+    "url": "https://bucketlist.org/list/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "lifestyle",
+    "categories": [
+      "lifestyle"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": "2 January 2016 03:52",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "foursquare",
+    "name": "Foursquare",
+    "url": "https://foursquare.com/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "lifestyle",
+    "categories": [
+      "lifestyle",
+      "social"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "app",
+      "business",
+      "consultant",
+      "consulting",
+      "editor",
+      "social",
+      "space"
+    ],
+    "notes": null,
+    "addedAt": "27 August 2014 22:40 (UTC)",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "goodreads",
+    "name": "Goodreads",
+    "url": "https://www.goodreads.com/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "lifestyle",
+    "categories": [
+      "lifestyle"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "book",
+      "ebook",
+      "learning",
+      "story"
+    ],
+    "notes": null,
+    "addedAt": "27 August 2014 23:05 (UTC)",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "kit",
+    "name": "Kit",
+    "url": "https://kit.co/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "lifestyle",
+    "categories": [
+      "lifestyle"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "kit"
+    ],
+    "notes": null,
+    "addedAt": "22 August 2023 17:14 (UTC)",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "tripadvisor",
+    "name": "TripAdvisor",
+    "url": "http://www.tripadvisor.co.uk/members/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "lifestyle",
+    "categories": [
+      "lifestyle"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "travel"
+    ],
+    "notes": null,
+    "addedAt": "31 October 2015 15:30",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "tripit",
+    "name": "TripIt",
+    "url": "https://www.tripit.com/people/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "lifestyle",
+    "categories": [
+      "lifestyle"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "business",
+      "travel"
+    ],
+    "notes": null,
+    "addedAt": "27 August 2014 23:09 (UTC)",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "untappd",
+    "name": "Untappd",
+    "url": "https://untappd.com/user/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "lifestyle",
+    "categories": [
+      "lifestyle"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "app"
+    ],
+    "notes": null,
+    "addedAt": "22 August 2023 15:25 (UTC)",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "vivino",
+    "name": "Vivino",
+    "url": "https://www.vivino.com",
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "lifestyle",
+    "categories": [
+      "lifestyle"
+    ],
+    "status": "generic-link",
+    "altUrls": [],
+    "tags": [
+      "offers",
+      "shopping"
+    ],
+    "notes": "Homepage only, not a profile URL",
+    "addedAt": "8 January 2016 00:28",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "yummly",
+    "name": "Yummly",
+    "url": "http://www.yummly.com/profile/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "lifestyle",
+    "categories": [
+      "lifestyle"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": "2 January 2016 03:52",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "skype",
+    "name": "Skype",
+    "url": "https://web.skype.com/en",
+    "icon": null,
+    "label": null,
+    "username": "en",
+    "type": null,
+    "color": null,
+    "category": "messaging",
+    "categories": [
+      "messaging"
+    ],
+    "status": "generic-link",
+    "altUrls": [],
+    "tags": [
+      "app",
+      "privacy",
+      "security",
+      "support"
+    ],
+    "notes": "Generic web login URL, not a profile URL",
+    "addedAt": "26 July 2015 00:42 (UTC)",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "altdentifier",
+    "name": "AltDentifier",
+    "url": "https://altdentifier.com/dashboard?lang=",
+    "icon": null,
+    "label": null,
+    "username": "dashboard",
+    "type": null,
+    "color": null,
+    "category": "other",
+    "categories": [
+      "other"
+    ],
+    "status": "generic-link",
+    "altUrls": [],
+    "tags": [
+      "business",
+      "dashboard",
+      "devices",
+      "phone",
+      "planning",
+      "privacy",
+      "security",
+      "support",
+      "team",
+      "text",
+      "training",
+      "voice"
+    ],
+    "notes": "Dashboard login URL, not a public profile",
+    "addedAt": "22 August 2023 17:40 (UTC)",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "4ormat",
+    "name": "4ormat",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "photography",
+    "categories": [
+      "photography"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "500px",
+    "name": "500px",
+    "url": "http://500px.com/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "photography",
+    "categories": [
+      "photography",
+      "social"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "creators",
+      "photo",
+      "photo sharing",
+      "photographers",
+      "photography",
+      "social"
+    ],
+    "notes": null,
+    "addedAt": "27 August 2014 22:43 (UTC)",
+    "sources": [
+      "notion:My online profiles",
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "adobeportfolio",
+    "name": "Adobe Portfolio",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "photography",
+    "categories": [
+      "photography"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "carbonmade",
+    "name": "Carbonmade",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "photography",
+    "categories": [
+      "photography"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "deviantart",
+    "name": "DeviantArt",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "photography",
+    "categories": [
+      "photography"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "ello",
+    "name": "Ello",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "photography",
+    "categories": [
+      "photography"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "krop",
+    "name": "Krop",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "photography",
+    "categories": [
+      "photography"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "kwikpic",
+    "name": "Kwikpic",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "photography",
+    "categories": [
+      "photography"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "photoblog",
+    "name": "PhotoBlog",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "photography",
+    "categories": [
+      "photography"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "photoshelter",
+    "name": "PhotoShelter",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "photography",
+    "categories": [
+      "photography"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "picasa",
+    "name": "Picasa Web Albums",
+    "url": "https://picasaweb.google.com/115471088290916459257",
+    "icon": null,
+    "label": null,
+    "username": "115471088290916459257",
+    "type": null,
+    "color": null,
+    "category": "photography",
+    "categories": [
+      "photography"
+    ],
+    "status": "defunct",
+    "altUrls": [],
+    "tags": [
+      "Google"
+    ],
+    "notes": "Picasa Web Albums was retired by Google; likely dead",
+    "addedAt": "6 January 2016 13:12",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "pikore",
+    "name": "Pikore",
+    "url": "http://www.pikore.com/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "photography",
+    "categories": [
+      "photography"
+    ],
+    "status": "defunct",
+    "altUrls": [],
+    "tags": [
+      "support"
+    ],
+    "notes": "Likely defunct Instagram viewer",
+    "addedAt": "25 July 2015 23:42 (UTC)",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "pixieset",
+    "name": "Pixieset",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "photography",
+    "categories": [
+      "photography"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "pixpa",
+    "name": "Pixpa",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "photography",
+    "categories": [
+      "photography"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "portfoliobox",
+    "name": "PortfolioBox",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "photography",
+    "categories": [
+      "photography"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "smugmug",
+    "name": "SmugMug",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "photography",
+    "categories": [
+      "photography"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "squarespace",
+    "name": "Squarespace",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "photography",
+    "categories": [
+      "photography"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "viewbook",
+    "name": "Viewbook",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "photography",
+    "categories": [
+      "photography"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "virb",
+    "name": "Virb",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "photography",
+    "categories": [
+      "photography"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "vsco",
+    "name": "VSCO",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "photography",
+    "categories": [
+      "photography"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "wix",
+    "name": "Wix",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "photography",
+    "categories": [
+      "photography"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "zenfolio",
+    "name": "Zenfolio",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "photography",
+    "categories": [
+      "photography"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "ecosend",
+    "name": "EcoSend Podcast",
+    "url": "https://podcast.ecosend.io/people",
+    "icon": null,
+    "label": null,
+    "username": "people",
+    "type": null,
+    "color": null,
+    "category": "podcasting",
+    "categories": [
+      "podcasting"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": "27 October 2024 02:29",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "aboutme",
+    "name": "about.me",
+    "url": "http://about.me/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "professional",
+    "categories": [
+      "professional"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "Leicester",
+      "astronomy",
+      "astrophysics",
+      "consultant",
+      "consulting",
+      "editor",
+      "event",
+      "freelance",
+      "organisation",
+      "outreach",
+      "social",
+      "space"
+    ],
+    "notes": null,
+    "addedAt": "27 August 2014 22:44 (UTC)",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "agilience",
+    "name": "Agilience",
+    "url": "https://agilience.com/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "professional",
+    "categories": [
+      "professional"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "astronomy",
+      "astrophysics",
+      "author",
+      "comms",
+      "nasa",
+      "space"
+    ],
+    "notes": null,
+    "addedAt": "26 July 2015 00:05 (UTC)",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "googleaboutme",
+    "name": "Google About Me",
+    "url": "https://aboutme.google.com",
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "professional",
+    "categories": [
+      "professional"
+    ],
+    "status": "generic-link",
+    "altUrls": [],
+    "tags": [
+      "Google"
+    ],
+    "notes": "Generic Google page, not a profile URL",
+    "addedAt": "16 November 2015 20:02",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "muckrack",
+    "name": "Muck Rack",
+    "url": "http://muckrack.com/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "professional",
+    "categories": [
+      "professional"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": "31 August 2014 19:49 (UTC)",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "spacegeneration",
+    "name": "Space Generation Advisory Council",
+    "url": "http://spacegeneration.org/social/profile/rjmlaird.html",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird.html",
+    "type": null,
+    "color": null,
+    "category": "professional",
+    "categories": [
+      "professional"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": "12 June 2017 09:23 (UTC)",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "spaceindividuals",
+    "name": "Space Individuals",
+    "url": "https://spaceindividuals.com/individual-details-preview",
+    "icon": null,
+    "label": null,
+    "username": "individual-details-preview",
+    "type": null,
+    "color": null,
+    "category": "professional",
+    "categories": [
+      "professional"
+    ],
+    "status": "generic-link",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Edit-preview URL, not a public profile URL",
+    "addedAt": "16 February 2025 19:19",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "cornellid",
+    "name": "CornellID",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "dataworld",
+    "name": "data.world",
+    "url": "https://data.world/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "datasets"
+    ],
+    "notes": null,
+    "addedAt": "24 May 2025 00:36 (UTC)",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "dimensions",
+    "name": "Dimensions",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [
+      "Specialised Profiles"
+    ],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "impactstory",
+    "name": "ImpactStory",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [
+      "Specialised Profiles"
+    ],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "kudos",
+    "name": "Kudos",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [
+      "Specialised Profiles"
+    ],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "mendeley",
+    "name": "Mendeley",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [
+      "Research Sharing & Networking Platforms"
+    ],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "mybibliographyncbipubmed",
+    "name": "MyBibliography (NCBI/PubMed)",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [
+      "Specialised Profiles"
+    ],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "oceanexpert",
+    "name": "OceanExpert",
+    "url": "https://oceanexpert.org/index.php/expert/82837",
+    "icon": null,
+    "label": null,
+    "username": "82837",
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research",
+      "professional"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": "1 December 2025 16:41",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "sagepolicyprofiles",
+    "name": "Sage Policy Profiles",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [
+      "Specialised Profiles"
+    ],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "sciprofiles",
+    "name": "SciProfiles",
+    "url": "https://sciprofiles.com/profile/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": "3 February 2026 03:35",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "scopusauthorprofileelsevier",
+    "name": "Scopus Author Profile (Elsevier)",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [
+      "Core Author/Researcher Profiles"
+    ],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "semanticscholar",
+    "name": "Semantic Scholar",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [
+      "Specialised Profiles"
+    ],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "spie",
+    "name": "Spie",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "zooniverse",
+    "name": "Zooniverse",
+    "url": "https://www.zooniverse.org/users/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "citizen science",
+      "research"
+    ],
+    "notes": null,
+    "addedAt": "12 January 2016 22:38",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "zotero",
+    "name": "Zotero",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "appnet",
+    "name": "App.net",
+    "url": "https://alpha.app.net/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "social",
+    "categories": [
+      "social"
+    ],
+    "status": "defunct",
+    "altUrls": [],
+    "tags": [
+      "app"
+    ],
+    "notes": "App.net shut down (2017); likely dead",
+    "addedAt": "8 January 2016 00:53",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "influenceco",
+    "name": "Influence.co",
+    "url": "https://influence.co/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "social",
+    "categories": [
+      "social"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "business",
+      "creators",
+      "economy",
+      "influencer",
+      "learning",
+      "social"
+    ],
+    "notes": null,
+    "addedAt": "22 August 2023 15:25 (UTC)",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "linktree",
+    "name": "Linktree",
+    "url": "https://linktr.ee/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "social",
+    "categories": [
+      "social",
+      "professional"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "marketing",
+      "space"
+    ],
+    "notes": null,
+    "addedAt": "22 August 2023 15:24 (UTC)",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "twitter-orbitingtardis",
+    "name": "Twitter (@orbitingtardis)",
+    "url": "https://twitter.com/orbitingtardis",
+    "icon": null,
+    "label": null,
+    "username": "orbitingtardis",
+    "type": null,
+    "color": null,
+    "category": "social",
+    "categories": [
+      "social"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": "27 July 2015 18:56 (UTC)",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "chamberofcommerce",
+    "name": "Chamber of Commerce",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "speaking",
+    "categories": [
+      "speaking"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "clubhouse",
+    "name": "Clubhouse",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "speaking",
+    "categories": [
+      "speaking"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "coursera",
+    "name": "Coursera",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "speaking",
+    "categories": [
+      "speaking"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "duarte",
+    "name": "Duarte",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "speaking",
+    "categories": [
+      "speaking"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "eventsguest",
+    "name": "EventsGuest",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "speaking",
+    "categories": [
+      "speaking"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "heroicpublicspeaking",
+    "name": "Heroic Public Speaking",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "speaking",
+    "categories": [
+      "speaking"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "lionsclub",
+    "name": "Lions Club",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "speaking",
+    "categories": [
+      "speaking"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "meetup",
+    "name": "Meetup",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "speaking",
+    "categories": [
+      "speaking"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "micdropworkshop",
+    "name": "Mic Drop Workshop",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "speaking",
+    "categories": [
+      "speaking"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "publicspeakingbuddies",
+    "name": "Public Speaking Buddies",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "speaking",
+    "categories": [
+      "speaking"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "quorapublicspeakingspace",
+    "name": "Quora Public Speaking Space",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "speaking",
+    "categories": [
+      "speaking"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "rotaryclub",
+    "name": "Rotary Club",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "speaking",
+    "categories": [
+      "speaking"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "saga",
+    "name": "Saga",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "speaking",
+    "categories": [
+      "speaking"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "slideshare",
+    "name": "SlideShare",
+    "url": "http://www.slideshare.net/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "speaking",
+    "categories": [
+      "speaking",
+      "writing"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "Leicester",
+      "astronomy",
+      "astrophysics",
+      "change",
+      "economy",
+      "editor",
+      "freelance",
+      "inclusivity",
+      "outreach",
+      "privacy",
+      "slides",
+      "space"
+    ],
+    "notes": null,
+    "addedAt": "9 November 2014 18:53",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "speakerdeck",
+    "name": "Speaker Deck",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "speaking",
+    "categories": [
+      "speaking"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "speakerhub",
+    "name": "SpeakerHUB",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "speaking",
+    "categories": [
+      "speaking"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "speakernet",
+    "name": "SpeakerNet (UK)",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "speaking",
+    "categories": [
+      "speaking"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "speakerside",
+    "name": "SpeakerSide",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "speaking",
+    "categories": [
+      "speaking"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "speakingclub",
+    "name": "Speaking Club",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "speaking",
+    "categories": [
+      "speaking"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "ted",
+    "name": "TED",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "speaking",
+    "categories": [
+      "speaking"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "tedx",
+    "name": "TEDx",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "speaking",
+    "categories": [
+      "speaking"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "themouthfuls",
+    "name": "The Mouthfuls",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "speaking",
+    "categories": [
+      "speaking"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "toastmastersinternational",
+    "name": "TOASTMASTERS International",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "speaking",
+    "categories": [
+      "speaking"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "u3a",
+    "name": "U3A",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "speaking",
+    "categories": [
+      "speaking"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "udemyforbusiness",
+    "name": "Udemy for Business",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "speaking",
+    "categories": [
+      "speaking"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "womensinstitutewi",
+    "name": "Women's Institute (WI)",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "speaking",
+    "categories": [
+      "speaking"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "womenspublicspeakinggroupcircle",
+    "name": "Women's Public Speaking Group (Circle)",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "speaking",
+    "categories": [
+      "speaking"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "amazingtutor",
+    "name": "AmazingTutor",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "tutoring",
+    "categories": [
+      "tutoring"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "carecom",
+    "name": "Care.com",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "tutoring",
+    "categories": [
+      "tutoring"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "cheggtutors",
+    "name": "Chegg Tutors",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "tutoring",
+    "categories": [
+      "tutoring"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "coursehero",
+    "name": "CourseHero",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "tutoring",
+    "categories": [
+      "tutoring"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "fairytutor",
+    "name": "FairyTutor",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "tutoring",
+    "categories": [
+      "tutoring"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "gauthmathtutor",
+    "name": "Gauthmath Tutor",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "tutoring",
+    "categories": [
+      "tutoring"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "mytutor",
+    "name": "MyTutor",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "tutoring",
+    "categories": [
+      "tutoring"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "nextgentutor",
+    "name": "NextGenTutor",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "tutoring",
+    "categories": [
+      "tutoring"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "preply",
+    "name": "Preply",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "tutoring",
+    "categories": [
+      "tutoring"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "superprof",
+    "name": "Superprof",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "tutoring",
+    "categories": [
+      "tutoring"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "teacheron",
+    "name": "TeacherOn",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "tutoring",
+    "categories": [
+      "tutoring"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "tutorhunt",
+    "name": "Tutor Hunt",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "tutoring",
+    "categories": [
+      "tutoring"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "tutorprofiles",
+    "name": "Tutor Profiles",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "tutoring",
+    "categories": [
+      "tutoring"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "tutorsprofile",
+    "name": "Tutors Profile",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "tutoring",
+    "categories": [
+      "tutoring"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "wyzant",
+    "name": "Wyzant",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "tutoring",
+    "categories": [
+      "tutoring"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": null,
+    "sources": [
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "vimeo",
+    "name": "Vimeo",
+    "url": "http://vimeo.com/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "video",
+    "categories": [
+      "video",
+      "social"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "Leicester",
+      "astronomy",
+      "cologne",
+      "travel"
+    ],
+    "notes": null,
+    "addedAt": "27 August 2014 22:41 (UTC)",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "website",
+    "name": "Personal website",
+    "url": "http://rjmlaird.co.uk/#",
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "website",
+    "categories": [
+      "website"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "Ryan J. M. Laird"
+    ],
+    "notes": null,
+    "addedAt": "23 February 2026 00:13",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "rjmlaird-me",
+    "name": "rjmlaird.me",
+    "url": "https://rjmlaird.me",
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "website",
+    "categories": [
+      "website"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "branding",
+      "business",
+      "growth",
+      "lead generation",
+      "marketing",
+      "offers",
+      "research",
+      "seo",
+      "skills",
+      "space",
+      "story"
+    ],
+    "notes": null,
+    "addedAt": "30 January 2017 23:09",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "buzzfeed",
+    "name": "BuzzFeed",
+    "url": "http://www.buzzfeed.com/rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "writing",
+    "categories": [
+      "writing"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [],
+    "notes": null,
+    "addedAt": "13 April 2015 04:21 (UTC)",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "convertkit",
+    "name": "ConvertKit",
+    "url": "https://rjmlaird.ck.page/",
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "writing",
+    "categories": [
+      "writing"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "CIPR",
+      "branding",
+      "green",
+      "kit",
+      "space"
+    ],
+    "notes": null,
+    "addedAt": "5 January 2024 19:19",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "flipboard",
+    "name": "Flipboard",
+    "url": "https://flipboard.com/@rjmlaird",
+    "icon": null,
+    "label": null,
+    "username": "@rjmlaird",
+    "type": null,
+    "color": null,
+    "category": "writing",
+    "categories": [
+      "writing"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "app",
+      "phone",
+      "story"
+    ],
+    "notes": null,
+    "addedAt": "26 July 2015 00:19 (UTC)",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "paperli",
+    "name": "Paper.li",
+    "url": "http://paper.li/rjmlaird/1383841564",
+    "icon": null,
+    "label": null,
+    "username": "1383841564",
+    "type": null,
+    "color": null,
+    "category": "writing",
+    "categories": [
+      "writing"
+    ],
+    "status": "defunct",
+    "altUrls": [
+      "http://paper.li/~/publisher/0b84d271-fccb-4525-8478-df1043b95d8d"
+    ],
+    "tags": [],
+    "notes": "Paper.li service sunset 20 Apr 2023 per Notion note",
+    "addedAt": "25 July 2015 23:42 (UTC)",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "tumblr-orbitingtardis",
+    "name": "Tumblr (orbitingtardis)",
+    "url": "http://orbitingtardis.tumblr.com",
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "writing",
+    "categories": [
+      "writing"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "space",
+      "travel"
+    ],
+    "notes": null,
+    "addedAt": "27 July 2015 18:44 (UTC)",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "tumblr",
+    "name": "Tumblr (rjmlaird)",
+    "url": "http://rjmlaird.tumblr.com",
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "writing",
+    "categories": [
+      "writing",
+      "social"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "food"
+    ],
+    "notes": null,
+    "addedAt": "27 July 2015 18:55 (UTC)",
+    "sources": [
+      "notion:My online profiles"
+    ]
+  },
+  {
+    "key": "wordpress",
+    "name": "WordPress",
+    "url": "https://rjmlaird.wordpress.com",
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "writing",
+    "categories": [
+      "writing",
+      "website",
+      "photography"
+    ],
+    "status": "active",
+    "altUrls": [],
+    "tags": [
+      "AMinstP",
+      "FRAS",
+      "MPhys",
+      "Ryan J. M. Laird",
+      "astronomy",
+      "astrophysics",
+      "space"
+    ],
+    "notes": null,
+    "addedAt": "7 August 2016 15:22 (UTC)",
+    "sources": [
+      "notion:My online profiles",
+      "notion:Online Profiles"
+    ]
+  },
+  {
+    "key": "wikidata",
+    "name": "Wikidata",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "identity",
+    "categories": [
+      "identity"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "isni",
+    "name": "ISNI",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "identity",
+    "categories": [
+      "identity"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "viaf",
+    "name": "VIAF",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "identity",
+    "categories": [
+      "identity"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "scopus",
+    "name": "Scopus Author ID",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "identity",
+    "categories": [
+      "identity",
+      "research"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "gravatar",
+    "name": "Gravatar",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "identity",
+    "categories": [
+      "identity"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "keybase",
+    "name": "Keybase",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "identity",
+    "categories": [
+      "identity"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "companieshouse",
+    "name": "Companies House officer record",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "identity",
+    "categories": [
+      "identity",
+      "business"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "nasaads",
+    "name": "NASA ADS",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "arxiv",
+    "name": "arXiv author ID",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "zenodo",
+    "name": "Zenodo",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "figshare",
+    "name": "Figshare",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "kentacademicrepository",
+    "name": "Kent Academic Repository",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "leicesterresearch",
+    "name": "University of Leicester research profile",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "astrobin",
+    "name": "AstroBin",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research",
+      "photography"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "ras",
+    "name": "Royal Astronomical Society (Fellow directory)",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research",
+      "professional"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "iop",
+    "name": "Institute of Physics (member page)",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research",
+      "professional"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "cipr",
+    "name": "CIPR (member directory)",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research",
+      "professional"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "cim",
+    "name": "CIM Chartered Marketer register",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research",
+      "professional"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "spa",
+    "name": "Society for Popular Astronomy",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research",
+      "community"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "baa",
+    "name": "British Astronomical Association",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research",
+      "community"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "ukseds",
+    "name": "UKSEDS",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "research",
+    "categories": [
+      "research",
+      "community"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "kaggle",
+    "name": "Kaggle",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "dev",
+    "categories": [
+      "dev",
+      "research"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "huggingface",
+    "name": "Hugging Face",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "observable",
+    "name": "Observable",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "hashnode",
+    "name": "Hashnode",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "dev",
+    "categories": [
+      "dev",
+      "writing"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "codeberg",
+    "name": "Codeberg",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "hackernews",
+    "name": "Hacker News",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "dev",
+    "categories": [
+      "dev",
+      "community"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "vercel",
+    "name": "Vercel",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "netlify",
+    "name": "Netlify",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "dev",
+    "categories": [
+      "dev"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "googlebusiness",
+    "name": "Google Business Profile",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "business",
+    "categories": [
+      "business"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "bingplaces",
+    "name": "Bing Places",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "business",
+    "categories": [
+      "business"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "eventbrite",
+    "name": "Eventbrite organiser page",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "business",
+    "categories": [
+      "business",
+      "events"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "luma",
+    "name": "Luma",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "business",
+    "categories": [
+      "business",
+      "events"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "clutch",
+    "name": "Clutch",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "business",
+    "categories": [
+      "business"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "peopleperhour",
+    "name": "PeoplePerHour",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "business",
+    "categories": [
+      "business"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "fiverr",
+    "name": "Fiverr",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "business",
+    "categories": [
+      "business"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "contra",
+    "name": "Contra",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "business",
+    "categories": [
+      "business"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "malt",
+    "name": "Malt",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "business",
+    "categories": [
+      "business"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "ukspaceagency",
+    "name": "UK Space Agency directory / supplier listing",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "business",
+    "categories": [
+      "business",
+      "space-sector"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "satappscatapult",
+    "name": "Satellite Applications Catapult",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "business",
+    "categories": [
+      "business",
+      "space-sector"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "spacecareers",
+    "name": "Space Careers",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "business",
+    "categories": [
+      "business",
+      "space-sector"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "sessionize",
+    "name": "Sessionize",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "business",
+    "categories": [
+      "business",
+      "speaking"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "podchaser",
+    "name": "Podchaser",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "business",
+    "categories": [
+      "business",
+      "podcasting"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "linkedin-company-greenorbit",
+    "name": "LinkedIn company page: Green Orbit Digital",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "business",
+    "categories": [
+      "business",
+      "professional"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "linkedin-company-impactorbit",
+    "name": "LinkedIn company page: Impact Orbit",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "business",
+    "categories": [
+      "business",
+      "professional"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "linkedin-company-lsw",
+    "name": "LinkedIn company page: Leicester Space Week",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "business",
+    "categories": [
+      "business",
+      "professional",
+      "events"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "ghost",
+    "name": "Ghost",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "writing",
+    "categories": [
+      "writing"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "beehiiv",
+    "name": "Beehiiv",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "writing",
+    "categories": [
+      "writing"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "quora",
+    "name": "Quora",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "writing",
+    "categories": [
+      "writing",
+      "community"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "bluesky-feed",
+    "name": "Bluesky feed / starter pack (Signal & Noise)",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "writing",
+    "categories": [
+      "writing",
+      "social"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "changeorg",
+    "name": "Change.org",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "advocacy",
+    "categories": [
+      "advocacy"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "38degrees",
+    "name": "38 Degrees",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "advocacy",
+    "categories": [
+      "advocacy"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "writetothem",
+    "name": "WriteToThem",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "advocacy",
+    "categories": [
+      "advocacy"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "justgiving",
+    "name": "JustGiving",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "advocacy",
+    "categories": [
+      "advocacy"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "opencollective",
+    "name": "Open Collective",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "advocacy",
+    "categories": [
+      "advocacy"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "canva",
+    "name": "Canva",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "creative",
+    "categories": [
+      "creative"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "figma",
+    "name": "Figma Community",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "creative",
+    "categories": [
+      "creative",
+      "dev"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "unsplash",
+    "name": "Unsplash",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "creative",
+    "categories": [
+      "creative",
+      "photography"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "bandcamp",
+    "name": "Bandcamp",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "creative",
+    "categories": [
+      "creative"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "mixcloud",
+    "name": "Mixcloud",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "creative",
+    "categories": [
+      "creative"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "strava",
+    "name": "Strava",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "lifestyle",
+    "categories": [
+      "lifestyle"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "alltrails",
+    "name": "AllTrails",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "lifestyle",
+    "categories": [
+      "lifestyle"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "komoot",
+    "name": "Komoot",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "lifestyle",
+    "categories": [
+      "lifestyle"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "letterboxd",
+    "name": "Letterboxd",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "lifestyle",
+    "categories": [
+      "lifestyle"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "steam",
+    "name": "Steam",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "lifestyle",
+    "categories": [
+      "lifestyle"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  },
+  {
+    "key": "wikitree",
+    "name": "WikiTree",
+    "url": null,
+    "icon": null,
+    "label": null,
+    "username": null,
+    "type": null,
+    "color": null,
+    "category": "genealogy",
+    "categories": [
+      "genealogy"
+    ],
+    "status": "planned",
+    "altUrls": [],
+    "tags": [],
+    "notes": "Suggested; not yet created or verified",
+    "addedAt": null,
+    "sources": [
+      "suggested"
+    ]
+  }
 ]
-}

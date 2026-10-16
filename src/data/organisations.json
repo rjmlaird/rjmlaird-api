@@ -1,1081 +1,2187 @@
 [
   {
-    "organisation": "Green Orbit Digital",
+    "slug": "act-climate-labs",
+    "name": "ACT Climate Labs",
+    "kind": "ngo_charity",
+    "sectors": [
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "ACT Climate Labs is a collaborative initiative developing creative campaigns and strategies to inspire large-scale climate action and public engagement.",
+    "url": "https://www.actclimatelabs.org",
+    "hubspotId": null,
+    "logo": "/logos/organisations/act.png",
+    "featured": false
+  },
+  {
+    "slug": "adhd-uk",
+    "name": "ADHD UK",
+    "kind": "ngo_charity",
+    "sectors": [
+      "health_neurodiversity",
+      "community_charity"
+    ],
+    "relationships": [],
+    "description": "UK charity supporting people with ADHD.",
+    "url": "https://www.adhduk.co.uk",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "apm",
+    "name": "Association for Project Management",
+    "shortName": "APM",
+    "aliases": [
+      "Association for Project Management (APM)"
+    ],
+    "kind": "professional_body",
+    "sectors": [
+      "business_support"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "The UK chartered body for the project profession, supporting project and programme management professionals.",
+    "shortDescription": "UK chartered body for project and programme management professionals.",
+    "url": "https://www.apm.org.uk",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "absw",
+    "name": "Association of British Science Writers",
+    "shortName": "ABSW",
+    "aliases": [
+      "Association of British Science Writers (ABSW)"
+    ],
+    "kind": "professional_body",
+    "sectors": [
+      "media_publishing",
+      "science_research"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "The Association of British Science Writers supports, promotes, and defends the professional interests of science writers, journalists, and communicators in the UK.",
+    "url": "https://absw.org.uk",
+    "hubspotId": null,
+    "logo": "/logos/organisations/absw.png",
+    "featured": false,
+    "shortDescription": "Professional body for science writers and communicators."
+  },
+  {
+    "slug": "b-lab-uk",
+    "name": "B Lab UK",
+    "kind": "ngo_charity",
+    "sectors": [
+      "business_support",
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "B Lab UK certifies and supports businesses that meet high standards of social and environmental performance, transparency, and accountability.",
+    "url": "https://bcorporation.uk",
+    "hubspotId": "00000000022",
+    "logo": "/logos/organisations/b-lab-uk.png",
+    "featured": false
+  },
+  {
+    "slug": "british-interplanetary-society",
+    "name": "British Interplanetary Society",
+    "shortName": "BIS",
+    "kind": "learned_society",
+    "sectors": [
+      "space"
+    ],
+    "relationships": [],
+    "description": "UK-based society promoting spaceflight and space exploration, founded in 1933.",
+    "url": "https://www.bis-space.com",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "bsi-sustainable-space",
+    "name": "BSI Sustainable Space Community",
+    "kind": "network",
+    "sectors": [
+      "space",
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "The BSI Sustainable Space Community is a forum for organisations committed to developing standards and practices that ensure space activities are environmentally and socially responsible.",
+    "url": "https://bsigroup.com",
+    "hubspotId": "28242758900",
+    "logo": "/logos/organisations/bsi.png",
+    "featured": false
+  },
+  {
+    "slug": "campaign-for-dark-skies",
+    "name": "Campaign for Dark Skies",
+    "shortName": "CfDS",
+    "aliases": [
+      "Campaign for Dark Skies (CfDS)"
+    ],
+    "kind": "ngo_charity",
+    "sectors": [
+      "astronomy",
+      "climate_sustainability"
+    ],
+    "relationships": [],
+    "description": "UK campaign against light pollution and for access to dark skies.",
+    "url": null,
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "carbon-literacy-project",
+    "name": "Carbon Literacy Project",
+    "kind": "ngo_charity",
+    "sectors": [
+      "climate_sustainability",
+      "education"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "The Carbon Literacy Project delivers training and awareness programmes to empower individuals and organisations to reduce carbon emissions and act on climate change.",
+    "url": "https://carbonliteracy.com",
+    "hubspotId": "00000000010",
+    "logo": "/logos/organisations/carbon-literacy-project.png",
+    "featured": false
+  },
+  {
+    "slug": "charitycomms",
+    "name": "CharityComms",
+    "kind": "network",
+    "sectors": [
+      "marketing_comms",
+      "community_charity"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "CharityComms is the professional membership network for charity communicators, providing training, best practice, and peer support to enhance impact across the sector.",
+    "url": "https://charitycomms.org.uk",
+    "hubspotId": null,
+    "logo": "/logos/organisations/charitycomms.png",
+    "featured": false
+  },
+  {
+    "slug": "cim",
+    "name": "Chartered Institute of Marketing",
+    "shortName": "CIM",
+    "aliases": [
+      "Chartered Institute of Marketing (CIM)"
+    ],
+    "kind": "professional_body",
+    "sectors": [
+      "marketing_comms"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "The Chartered Institute of Marketing is the world’s leading professional marketing body, providing training, resources, and accreditation to marketers worldwide.",
+    "url": "https://cim.co.uk",
+    "hubspotId": null,
+    "logo": "/logos/organisations/cim.png",
+    "featured": false,
+    "shortDescription": "Professional body for marketing standards, strategy, and accreditation."
+  },
+  {
+    "slug": "cipr",
+    "name": "Chartered Institute of Public Relations",
+    "shortName": "CIPR",
+    "aliases": [
+      "Chartered Institute of Public Relations (CIPR)"
+    ],
+    "kind": "professional_body",
+    "sectors": [
+      "marketing_comms"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "The Chartered Institute of Public Relations is a professional body representing PR practitioners, promoting best practice, skills development, and ethical standards.",
+    "url": "https://cipr.co.uk",
+    "hubspotId": null,
+    "logo": "/logos/organisations/cipr.png",
+    "featured": false,
+    "shortDescription": "Professional body for public relations and strategic communications."
+  },
+  {
+    "slug": "circular-economy-club",
+    "name": "Circular Economy Club",
+    "legacySlugs": [
+      "circulareconomyclub"
+    ],
+    "kind": "network",
+    "sectors": [
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "The Circular Economy Club is a global non-profit network connecting professionals and organisations to accelerate the transition to a circular economy.",
+    "url": "https://www.circulareconomyclub.com",
+    "hubspotId": null,
+    "logo": "/logos/organisations/cec.png",
+    "featured": false
+  },
+  {
+    "slug": "climate-action-leicester-and-leicestershire",
+    "name": "Climate Action Leicester and Leicestershire",
+    "kind": "network",
+    "sectors": [
+      "climate_sustainability",
+      "community_charity"
+    ],
+    "relationships": [],
+    "description": "Local climate action group for Leicester and Leicestershire.",
+    "url": null,
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "climate-impact-partners",
+    "name": "Climate Impact Partners",
+    "kind": "company",
+    "sectors": [
+      "climate_sustainability",
+      "finance"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "Climate Impact Partners delivers high-quality carbon credit solutions and climate finance to help organisations achieve net-zero goals while supporting sustainable development projects.",
+    "url": null,
+    "hubspotId": null,
+    "logo": "/logos/organisations/cip.png",
+    "featured": false
+  },
+  {
+    "slug": "climate-perks",
+    "name": "Climate Perks",
+    "kind": "ngo_charity",
+    "sectors": [
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "Climate Perks partners with employers to offer paid travel days for low-carbon journeys, encouraging sustainable transport choices and reducing business travel emissions.",
+    "url": "https://climateperks.com",
+    "hubspotId": "128913280206",
+    "logo": "/logos/organisations/climate-perks.png",
+    "featured": false
+  },
+  {
+    "slug": "climate-voice",
+    "name": "Climate Voice",
+    "legacySlugs": [
+      "climatevoice"
+    ],
+    "kind": "network",
+    "sectors": [
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "Climate Voice mobilises employees, students, and the public to push organisations towards bold climate action and advocacy for systemic environmental change.",
+    "url": "https://climatevoice.org",
+    "hubspotId": null,
+    "logo": "/logos/organisations/climatevoice.png",
+    "featured": false
+  },
+  {
+    "slug": "climateaction-tech",
+    "name": "ClimateAction.tech",
+    "legacySlugs": [
+      "climateactiontech"
+    ],
+    "kind": "network",
+    "sectors": [
+      "technology_digital",
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "ClimateAction.tech is a community of tech professionals taking climate action by sharing knowledge, tools, and best practices for building a sustainable digital future.",
+    "url": "https://ClimateAction.tech",
+    "hubspotId": null,
+    "logo": "/logos/organisations/cat.png",
+    "featured": false
+  },
+  {
+    "slug": "copernicus-eu",
+    "name": "Copernicus EU",
+    "kind": "programme",
+    "sectors": [
+      "space",
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "The Copernicus programme monitors the Earth using satellite data to support environmental management, climate monitoring, and disaster response in Europe.",
+    "url": "https://www.copernicus.eu",
+    "hubspotId": "00000000016",
+    "logo": "/logos/organisations/copernicus-eu.png",
+    "featured": false
+  },
+  {
+    "slug": "cosmos-for-humanity",
+    "name": "Cosmos for Humanity",
+    "legacySlugs": [
+      "cosmosforhumanity"
+    ],
+    "kind": "ngo_charity",
+    "sectors": [
+      "space"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "Cosmos for Humanity promotes sustainable and inclusive space exploration, ensuring the benefits of space are shared by all people and future generations.",
+    "url": "https://cosmosforhumanity.org",
+    "hubspotId": "50469090509",
+    "logo": "/logos/organisations/cosmosforhumanity.png",
+    "featured": false
+  },
+  {
+    "slug": "creatives-for-climate",
+    "name": "Creatives for Climate",
+    "kind": "network",
+    "sectors": [
+      "design_creative",
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "Creatives for Climate is a global network of creative professionals using storytelling, design, and campaigns to accelerate the transition to a sustainable future.",
+    "url": "https://www.creativesforclimate.co",
+    "hubspotId": null,
+    "logo": "/logos/organisations/c4c.png",
+    "featured": false
+  },
+  {
+    "slug": "culture-declares",
+    "name": "Culture Declares",
+    "kind": "network",
+    "sectors": [
+      "climate_sustainability",
+      "events_culture"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "Culture Declares is a global network of cultural organisations committed to taking action against climate change and promoting sustainable practices in the arts.",
+    "url": "https://www.culturedeclares.org",
+    "hubspotId": "00000000007",
+    "logo": "/logos/organisations/culture-declares.png",
+    "featured": false
+  },
+  {
+    "slug": "darksky-international",
+    "name": "DarkSky International",
+    "kind": "ngo_charity",
+    "sectors": [
+      "astronomy",
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "DarkSky International works to protect the night environment and preserve dark skies through responsible outdoor lighting, education, and advocacy worldwide.",
+    "url": "https://darksky.org",
+    "hubspotId": "00000000017",
+    "logo": "/logos/organisations/darksky-international.jpg",
+    "featured": false
+  },
+  {
+    "slug": "dwp",
+    "name": "Department for Work and Pensions",
+    "shortName": "DWP",
+    "kind": "government",
+    "sectors": [
+      "government_policy"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "DWP is a UK government department responsible for welfare, pensions, and employment services, helping citizens access financial support and social security.",
+    "url": "https://www.gov.uk/government/organisations/department-for-work-pensions",
+    "hubspotId": "00000000023",
+    "logo": "/logos/organisations/dwp.jpg",
+    "featured": false
+  },
+  {
+    "slug": "designers-in-space-community",
+    "name": "Designers in Space Community",
+    "kind": "network",
+    "sectors": [
+      "design_creative",
+      "space"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "Designers in Space is a global community for creatives working in or inspired by the space sector, fostering collaboration and design-led innovation in space exploration.",
+    "url": "https://dis.community",
+    "hubspotId": null,
+    "logo": "/logos/organisations/disc.png",
+    "featured": false,
+    "shortDescription": "Community exploring design and UX in space systems."
+  },
+  {
+    "slug": "dock-leicester",
+    "name": "DOCK",
+    "legacySlugs": [
+      "dockleicester"
+    ],
+    "kind": "company",
+    "sectors": [
+      "business_support"
+    ],
+    "relationships": [
+      "supplier"
+    ],
+    "description": "DOCK is a Leicester-based innovation hub providing office space, labs, and support for high-tech and low-carbon businesses.",
+    "url": "https://dockleicester.co.uk",
+    "hubspotId": null,
+    "logo": "/logos/organisations/dockleicester.png",
+    "featured": false
+  },
+  {
+    "slug": "ecodemy",
+    "name": "Ecodemy",
+    "kind": "training_provider",
+    "sectors": [
+      "education",
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "Ecodemy provides sustainability-focused education and training, helping individuals and organisations gain the skills to create positive environmental change.",
+    "url": "https://ecodemy.ca",
+    "hubspotId": null,
+    "logo": "/logos/organisations/ecodemy.png",
+    "featured": false
+  },
+  {
+    "slug": "ecosend",
+    "name": "Ecosend",
+    "kind": "company",
+    "sectors": [
+      "technology_digital",
+      "marketing_comms"
+    ],
+    "relationships": [
+      "supplier"
+    ],
+    "description": "Ecosend is an email marketing platform designed to minimise environmental impact, using carbon offsetting and energy-efficient infrastructure for sustainable digital communications.",
+    "url": "https://ecosend.io",
+    "hubspotId": null,
+    "logo": "/logos/organisations/ecosend.png",
+    "featured": false
+  },
+  {
+    "slug": "enterprise-nation",
+    "name": "Enterprise Nation",
+    "kind": "network",
+    "sectors": [
+      "business_support"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "Enterprise Nation is a small business network offering advice, resources, training, and community support to help entrepreneurs start and grow their ventures.",
+    "url": "https://www.enterprisenation.com",
+    "hubspotId": null,
+    "logo": "/logos/organisations/enterprise-nation.png",
+    "featured": false
+  },
+  {
+    "slug": "epigeum",
+    "name": "Epigeum",
+    "kind": "training_provider",
+    "sectors": [
+      "education"
+    ],
+    "relationships": [],
+    "description": "Provider of online training courses for universities, including researcher development and career planning.",
+    "url": "https://www.epigeum.com",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "eumetsat",
+    "name": "EUMETSAT",
+    "kind": "intergovernmental",
+    "sectors": [
+      "space",
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "EUMETSAT operates meteorological satellites to monitor climate, weather, and environmental conditions across Europe, supporting scientific research and operational services.",
+    "url": "https://www.eumetsat.int",
+    "hubspotId": "00000000012",
+    "logo": "/logos/organisations/eumetsat.png",
+    "featured": false
+  },
+  {
+    "slug": "earsc",
+    "name": "European Association of Remote Sensing Companies",
+    "shortName": "EARSC",
+    "aliases": [
+      "European Association of Remote Sensing Companies (EARSC)"
+    ],
+    "kind": "trade_association",
+    "sectors": [
+      "space"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "The European Association of Remote Sensing Companies represents the Earth observation industry, fostering growth, partnerships, and the uptake of satellite-based services.",
+    "url": "https://earsc.org",
+    "hubspotId": null,
+    "logo": "/logos/organisations/earsc.png",
+    "featured": false,
+    "shortDescription": "European industry association for Earth observation and remote sensing."
+  },
+  {
+    "slug": "ecmwf",
+    "name": "European Centre for Medium-Range Weather Forecasts",
+    "shortName": "ECMWF",
+    "kind": "intergovernmental",
+    "sectors": [
+      "science_research",
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "ECMWF provides global medium-range weather forecasts, supporting climate research, operational meteorology, and environmental monitoring across Europe.",
+    "url": "https://www.ecmwf.int",
+    "hubspotId": "00000000015",
+    "logo": "/logos/organisations/ecmwf.jpg",
+    "featured": false
+  },
+  {
+    "slug": "eso",
+    "name": "European Southern Observatory",
+    "shortName": "ESO",
+    "kind": "observatory",
+    "sectors": [
+      "astronomy",
+      "science_research"
+    ],
+    "relationships": [],
+    "description": "Intergovernmental European astronomy organisation operating observatories in Chile, including La Silla.",
+    "url": "https://www.eso.org",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "esa",
+    "name": "European Space Agency",
+    "shortName": "ESA",
+    "kind": "space_agency",
+    "sectors": [
+      "space"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "The European Space Agency is an intergovernmental organisation dedicated to the exploration and use of space for peaceful purposes, advancing science, technology, and sustainability.",
+    "url": "https://www.esa.int",
+    "hubspotId": "118940428524",
+    "logo": "/logos/organisations/esa.png",
+    "featured": false
+  },
+  {
+    "slug": "esric",
+    "name": "European Space Resources Innovation Centre",
+    "shortName": "ESRIC",
+    "kind": "research_centre",
+    "sectors": [
+      "space",
+      "science_research"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "ESRIC drives European research, innovation, and training in space resources and space mining, supporting sustainable off-Earth resource utilisation.",
+    "url": "https://esric.esa.int",
+    "hubspotId": "00000000003",
+    "logo": "/logos/organisations/esric.jpg",
+    "featured": false
+  },
+  {
+    "slug": "exotopic",
+    "name": "Exotopic",
+    "kind": "company",
+    "sectors": [
+      "technology_digital",
+      "education"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "Exotopic develops innovative digital and physical experiences for education, culture, and science communication with a focus on immersive storytelling.",
+    "url": "https://www.exotopic.com",
+    "hubspotId": "00000000025",
+    "logo": "/logos/organisations/exotopic.png",
+    "featured": false
+  },
+  {
+    "slug": "fsb",
+    "name": "Federation of Small Businesses",
+    "shortName": "FSB",
+    "aliases": [
+      "Federation of Small Businesses (FSB)"
+    ],
+    "kind": "trade_association",
+    "sectors": [
+      "business_support"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "The Federation of Small Businesses champions the interests of small business owners and the self-employed through advocacy, resources, and networking opportunities.",
+    "url": "https://fsb.org.uk",
+    "hubspotId": null,
+    "logo": "/logos/organisations/fsb.png",
+    "featured": false
+  },
+  {
+    "slug": "future-earth",
+    "name": "Future Earth",
+    "legacySlugs": [
+      "futureearth"
+    ],
+    "kind": "network",
+    "sectors": [
+      "science_research",
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "Future Earth is a global research network advancing sustainability science to support transformations towards a resilient, equitable, and sustainable planet.",
+    "url": "https://futureearth.org",
+    "hubspotId": null,
+    "logo": "/logos/organisations/futureearth.png",
+    "featured": false
+  },
+  {
+    "slug": "global-space-enablers-network",
+    "name": "Global Space Enablers Network",
+    "legacySlugs": [
+      "space-enablers"
+    ],
+    "kind": "network",
+    "sectors": [
+      "space"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "The Global Space Enablers Network fosters equitable entrepreneurial ecosystems in developing and emerging countries to ensure inclusive access to the opportunities of space.",
+    "url": "https://www.spaceenablers.net/",
+    "hubspotId": null,
+    "logo": "/logos/organisations/gsen.png",
+    "featured": false,
+    "shortDescription": "Global network supporting emerging space ecosystems."
+  },
+  {
+    "slug": "good-business-charter",
+    "name": "Good Business Charter",
+    "aliases": [
+      "Good Business Foundation"
+    ],
+    "legacySlugs": [
+      "good-business-foundation"
+    ],
+    "kind": "ngo_charity",
+    "sectors": [
+      "business_support",
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "partner",
+      "member"
+    ],
+    "description": "The Good Business Foundation supports socially and environmentally responsible businesses with guidance, resources, and networking opportunities.",
+    "url": "https://www.goodbusiness.org.uk",
+    "hubspotId": "00000000026",
+    "logo": "/logos/organisations/gbc.png",
+    "featured": false
+  },
+  {
+    "slug": "google",
+    "name": "Google",
+    "kind": "company",
+    "sectors": [
+      "technology_digital",
+      "marketing_comms"
+    ],
+    "relationships": [],
+    "description": "Technology company whose training programmes include Google Analytics, the Google News Initiative and Digital Garage.",
+    "url": "https://www.google.com",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "gosquared",
+    "name": "GoSquared",
+    "kind": "company",
+    "sectors": [
+      "technology_digital",
+      "marketing_comms"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "GoSquared provides website analytics, live chat, and marketing automation tools to help businesses grow and optimise digital customer engagement.",
+    "url": "https://www.gosquared.com",
+    "hubspotId": "00000000024",
+    "logo": "/logos/organisations/gosquared.jpg",
+    "featured": false
+  },
+  {
+    "slug": "green-economy",
+    "name": "Green Economy",
+    "kind": "network",
+    "sectors": [
+      "climate_sustainability",
+      "business_support"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "Green Economy connects businesses with low-carbon solutions, helping organisations reduce their environmental impact and transition to net zero.",
+    "url": "https://greeneconomy.co.uk",
+    "hubspotId": null,
+    "logo": "/logos/organisations/green-economy.png",
+    "featured": false
+  },
+  {
     "slug": "green-orbit-digital",
+    "name": "Green Orbit Digital",
+    "kind": "company",
+    "sectors": [
+      "marketing_comms",
+      "space"
+    ],
+    "relationships": [
+      "own"
+    ],
     "description": "Green Orbit Digital is a Leicester-based agency specialising in sustainable marketing for the space sector, helping organisations achieve impact while reducing environmental footprint.",
     "url": "https://greenorbit.space",
     "hubspotId": "00000000001",
-    "industry": "marketing",
-    "category": "agency",
-    "type": "partner",
     "logo": "/logos/organisations/green-orbit-digital.png",
     "featured": true
   },
   {
-    "organisation": "Luxembourg Space Agency",
-    "slug": "luxembourg-space-agency",
-    "description": "The Luxembourg Space Agency promotes research, innovation, and investment in the space sector, with a focus on sustainability and economic development.",
-    "url": "https://space-agency.public.lu/en.html",
-    "hubspot-id": "00000000002",
-    "industry": "space",
-    "category": "space agency",
-    "type": "partner",
-    "logo": "/logos/organisations/luxembourg-space-agency.jpg"
+    "slug": "greenerfuture-leicestershire",
+    "name": "GreenerFuture Leicestershire",
+    "kind": "ngo_charity",
+    "sectors": [
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "GreenerFuture Leicestershire is a local initiative focused on community-led sustainability projects, environmental education, and climate action.",
+    "url": null,
+    "hubspotId": null,
+    "logo": "/logos/organisations/greenerfuture.png",
+    "featured": false
   },
   {
-    "organisation": "European Space Resources Innovation Centre",
-    "slug": "esric",
-    "description": "ESRIC drives European research, innovation, and training in space resources and space mining, supporting sustainable off-Earth resource utilisation.",
-    "url": "https://esric.esa.int",
-    "hubspot-id": "00000000003",
-    "industry": "space",
-    "category": "research centre",
-    "type": "partner",
-    "logo": "/logos/organisations/esric.jpg"
-  },
-  {
-    "organisation": "Hub Exhibitions",
     "slug": "hub-exhibitions",
+    "name": "Hub Exhibitions",
+    "kind": "company",
+    "sectors": [
+      "events_culture",
+      "space"
+    ],
+    "relationships": [
+      "partner"
+    ],
     "description": "Hub Exhibitions specialises in creating immersive exhibitions and events that connect audiences with space, science, and technology topics.",
     "url": "https://www.hubexhibitions.com",
-    "hubspot-id": "00000000004",
-    "industry": "events",
-    "category": "exhibitions",
-    "type": "partner",
-    "logo": "/logos/organisations/hub-exhibitions.png"
+    "hubspotId": "00000000004",
+    "logo": "/logos/organisations/hub-exhibitions.png",
+    "featured": false
   },
   {
-    "organisation": "Space Universities Network",
-    "slug": "space-universities-network",
-    "description": "A network of universities collaborating on space education, research, and innovation initiatives to advance knowledge and sustainable space development.",
-    "url": "https://spaceuniversities.org",
-    "hubspot-id": "00000000005",
-    "industry": "education",
-    "category": "network",
-    "type": "partner",
-    "logo": "/logos/organisations/space-universities-network.jpeg"
+    "slug": "hubspot",
+    "name": "HubSpot",
+    "kind": "company",
+    "sectors": [
+      "technology_digital",
+      "marketing_comms"
+    ],
+    "relationships": [],
+    "description": "CRM and marketing software company that runs the HubSpot Academy training and certification programme.",
+    "url": "https://www.hubspot.com",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
   },
   {
-    "organisation": "Culture Declares",
-    "slug": "culture-declares",
-    "description": "Culture Declares is a global network of cultural organisations committed to taking action against climate change and promoting sustainable practices in the arts.",
-    "url": "https://www.culturedeclares.org",
-    "hubspot-id": "00000000007",
-    "industry": "culture",
-    "category": "network",
-    "type": "partner",
-    "logo": "/logos/organisations/culture-declares.png"
+    "slug": "iau-cps",
+    "name": "IAU Centre for the Protection of Dark and Quiet Skies",
+    "shortName": "IAU CPS",
+    "aliases": [
+      "IAU CPS",
+      "IAU Centre for the Protection of the Dark and Quiet Sky from Satellite Constellation Interference"
+    ],
+    "kind": "network",
+    "sectors": [
+      "astronomy",
+      "space"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "The IAU Centre for the Protection of the Dark and Quiet Sky from Satellite Constellation Interference coordinates global efforts to safeguard astronomy from the impact of satellite constellations.",
+    "url": null,
+    "hubspotId": null,
+    "logo": "/logos/organisations/iau-cps.png",
+    "featured": false,
+    "shortDescription": "International initiative protecting astronomical observation conditions."
   },
   {
-    "organisation": "International Telecommunication Union",
-    "slug": "itu",
-    "description": "The ITU is the United Nations specialised agency for information and communication technologies, coordinating global telecom standards and satellite spectrum management.",
-    "url": "https://www.itu.int",
-    "hubspot-id": "00000000008",
-    "industry": "telecommunications",
-    "category": "UN agency",
-    "type": "partner",
-    "logo": "/logos/organisations/itu.png"
-  },
-  {
-    "organisation": "United Nations Platform for Space-based Information for Disaster Management and Emergency Response",
-    "slug": "un-spider",
-    "description": "UN-SPIDER provides access to space-based information to support disaster management and emergency response worldwide, promoting the use of satellite data for resilience.",
-    "url": "https://www.un-spider.org",
-    "hubspot-id": "00000000009",
-    "industry": "space",
-    "category": "UN programme",
-    "type": "partner",
-    "logo": "/logos/organisations/un-spider.png"
-  },
-  {
-    "organisation": "Carbon Literacy Project",
-    "slug": "carbon-literacy-project",
-    "description": "The Carbon Literacy Project delivers training and awareness programmes to empower individuals and organisations to reduce carbon emissions and act on climate change.",
-    "url": "https://carbonliteracy.com",
-    "hubspot-id": "00000000010",
-    "industry": "sustainability",
-    "category": "project",
-    "type": "partner",
-    "logo": "/logos/organisations/carbon-literacy-project.png"
-  },
-  {
-    "organisation": "Small Business Britain",
-    "slug": "small-business-britain",
-    "description": "Small Business Britain champions the interests of small businesses, providing support, networking, and recognition to help them grow and thrive in competitive markets.",
-    "url": "https://smallbusinessbritain.uk",
-    "hubspot-id": "00000000011",
-    "industry": "business support",
-    "category": "organisation",
-    "type": "partner",
-    "logo": "/logos/organisations/small-business-britain.png"
-  },
-  {
-    "organisation": "EUMETSAT",
-    "slug": "eumetsat",
-    "description": "EUMETSAT operates meteorological satellites to monitor climate, weather, and environmental conditions across Europe, supporting scientific research and operational services.",
-    "url": "https://www.eumetsat.int",
-    "hubspot-id": "00000000012",
-    "industry": "space",
-    "category": "space agency",
-    "type": "partner",
-    "logo": "/logos/organisations/eumetsat.png"
-  },
-  {
-    "organisation": "UK Space Agency",
-    "slug": "uk-space-agency",
-    "description": "The UK Space Agency leads the nation's civil space programme, supporting innovation, research, and partnerships that drive economic growth, scientific discovery, and sustainable use of space.",
-    "url": "https://www.gov.uk/government/organisations/uk-space-agency",
-    "hubspot-id": "180115567816",
-    "industry": "space",
-    "category": "space agency",
-    "type": "partner",
-    "logo": "/logos/organisations/uksa.png"
-  },
-  {
-    "organisation": "United Nations Office for Outer Space Affairs",
-    "slug": "unoosa",
-    "description": "UNOOSA promotes international cooperation in the peaceful use and exploration of space, ensuring space activities contribute to sustainable development and benefit all humankind.",
-    "url": "https://unoosa.org",
-    "hubspot-id": "28180536554",
-    "industry": "international affairs",
-    "category": "intergovernmental",
-    "type": "partner",
-    "logo": "/logos/organisations/unoosa.jpg"
-  },
-  {
-    "organisation": "United Nations Framework Convention on Climate Change",
-    "slug": "unfccc",
-    "description": "The UNFCCC drives global action to combat climate change, supporting countries to reduce greenhouse gas emissions and adapt to climate impacts.",
-    "url": "https://unfccc.int",
-    "hubspot-id": "",
-    "industry": "international affairs",
-    "category": "intergovernmental",
-    "type": "partner",
-    "logo": "/logos/organisations/unfccc.jpg"
-  },
-  {
-    "organisation": "Organisation for Responsible Businesses",
-    "slug": "orb",
-    "description": "ORB leads the responsible business movement for solo, micro & small businesses.",
-    "url": "https://www.orbuk.org.uk",
-    "hubspot-id": "",
-    "industry": "environmental services",
-    "category": "organisation",
-    "type": "partner",
-    "logo": "/logos/organisations/orb.jpg"
-  },
-  {
-    "organisation": "Rainforest Foundation UK",
-    "slug": "rainforest-foundation-uk",
-    "description": "Rainforest Foundation UK works alongside Indigenous peoples and local communities to protect rainforests, safeguard biodiversity, and address the climate crisis through rights-based approaches.",
-    "url": "https://rainforestfoundation.org.uk",
-    "hubspot-id": "",
-    "industry": "environmental services",
-    "category": "ngo",
-    "type": "member",
-    "logo": "/logos/organisations/rainforest-uk.png"
-  },
-  {
-    "organisation": "University of Leicester",
-    "slug": "university-of-leicester",
-    "description": "The University of Leicester is a leading UK research institution, recognised globally for its expertise in space science, planetary exploration, and Earth observation technologies.",
-    "url": "https://le.ac.uk",
-    "hubspot-id": "128913278200",
-    "industry": "higher education",
-    "category": "university",
-    "type": "partner",
-    "logo": "/logos/organisations/uol.png"
-  },
-  {
-    "organisation": "INCO Academy",
     "slug": "inco-academy",
+    "name": "INCO Academy",
+    "kind": "training_provider",
+    "sectors": [
+      "education",
+      "climate_sustainability",
+      "technology_digital"
+    ],
+    "relationships": [
+      "partner"
+    ],
     "description": "INCO Academy provides innovative training programmes to equip individuals with the digital and green skills needed for the jobs of tomorrow, fostering inclusive and sustainable growth.",
     "url": "https://inco-group.co",
-    "hubspot-id": "27661914319",
-    "industry": "professional training & coaching",
-    "category": "education",
-    "type": "partner",
-    "logo": "/logos/organisations/inco-academy.png"
+    "hubspotId": "27661914319",
+    "logo": "/logos/organisations/inco-academy.png",
+    "featured": false
   },
   {
-    "organisation": "Leicester City Council",
-    "slug": "leicester-city-council",
-    "description": "Leicester City Council is the local authority for the city of Leicester, working to deliver sustainable urban development, community services, and economic opportunities.",
-    "url": "https://leicester.gov.uk",
-    "hubspot-id": "28162402530",
-    "industry": "local council",
-    "category": "local authority",
-    "type": "partner",
-    "logo": "/logos/organisations/lcc.png"
+    "slug": "innospace-masters",
+    "name": "INNOspace Masters",
+    "kind": "programme",
+    "sectors": [
+      "space",
+      "business_support"
+    ],
+    "relationships": [],
+    "description": "Space innovation competition run by the German Space Agency at DLR.",
+    "url": "https://www.innospace-masters.de",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
   },
   {
-    "organisation": "Space Park Leicester",
-    "slug": "space-park-leicester",
-    "description": "Space Park Leicester is a collaborative hub for space research, innovation, and industry, enabling partnerships that drive advancements in satellite technology, data analytics, and sustainability.",
-    "url": "https://space-park.co.uk",
-    "hubspot-id": "27661914315",
-    "industry": "higher education",
-    "category": "space agency",
-    "type": "partner",
-    "logo": "/logos/organisations/spl.png"
-  },
-  {
-    "organisation": "UK Earth Observation Network for Sustainability",
-    "slug": "uk-eons",
-    "description": "The UK Earth Observation Network for Sustainability connects researchers, industry, and policymakers to leverage satellite data for tackling environmental challenges and advancing sustainable development goals.",
-    "url": "",
-    "hubspot-id": "",
-    "industry": "environmental services",
-    "category": "network",
-    "type": "partner",
-    "logo": "/logos/organisations/uk-eons.png"
-  },
-  {
-    "organisation": "Space4Climate",
-    "slug": "space4climate",
-    "description": "Space4Climate is a professional network bringing together expertise in climate services from space, helping to turn satellite data into actionable insights for climate resilience and sustainability.",
-    "url": "https://space4climate.com",
-    "hubspot-id": "",
-    "industry": "space",
-    "category": "professional society",
-    "type": "member",
-    "logo": "/logos/organisations/s4c.png"
-  },
-  {
-    "organisation": "SmartCitiesWorld",
-    "slug": "smartcitiesworld",
-    "description": "SmartCitiesWorld is an online platform providing news, insights, and best practices on smart city innovations, helping urban leaders develop more sustainable, connected, and resilient communities.",
-    "url": "https://SmartCitiesWorld.com",
-    "hubspot-id": "",
-    "industry": "media",
-    "category": "industry group",
-    "type": "member",
-    "logo": "/logos/organisations/smartcitiesworld.png"
-  },
-  {
-    "organisation": "National Centre for Earth Observation",
-    "slug": "nceo",
-    "description": "The National Centre for Earth Observation delivers world-class research using satellite data to monitor and understand environmental change, supporting policy, industry, and public services.",
-    "url": "https://nceo.ac.uk",
-    "hubspot-id": "28203876539",
-    "industry": "higher education",
-    "category": "ngo",
-    "type": "partner",
-    "logo": "/logos/organisations/nceo.png"
-  },
-  {
-    "organisation": "Space Communications Alliance",
-    "slug": "spacecommsalliance",
-    "description": "The Space Communications Alliance is a global network of marketing and PR professionals dedicated to raising awareness of the space industry and its contribution to innovation and sustainability.",
-    "url": "https://spacecommsalliance.com",
-    "hubspot-id": "28165924075",
-    "industry": "marketing & communications",
-    "category": "industry group",
-    "type": "partner",
-    "logo": "/logos/organisations/sca.png"
-  },
-  {
-    "organisation": "Space Partnership",
-    "slug": "spacepartnership",
-    "description": "Space Partnership is a UK initiative that brings together industry, academia, and government to coordinate space sector growth and deliver strategic benefits to the economy and society.",
-    "url": "https://spacepartnership.org.uk",
-    "hubspot-id": "28249998544",
-    "industry": "public policy",
-    "category": "space agency",
-    "type": "partner",
-    "logo": "/logos/organisations/space-partnership.png"
-  },
-  {
-    "organisation": "The Climate Coalition",
-    "slug": "the-climate-coalition",
-    "description": "The Climate Coalition is the UK’s largest group of organisations dedicated to action on climate change, uniting voices to protect the things we love and promote a sustainable future.",
-    "url": "https://theclimatecoalition.org",
-    "hubspot-id": "28203875572",
-    "industry": "environmental services",
-    "category": "ngo",
-    "type": "partner",
-    "logo": "/logos/organisations/tcc.png"
-  },
-  {
-    "organisation": "Climate Perks",
-    "slug": "climate-perks",
-    "description": "Climate Perks partners with employers to offer paid travel days for low-carbon journeys, encouraging sustainable transport choices and reducing business travel emissions.",
-    "url": "https://climateperks.com",
-    "hubspot-id": "128913280206",
-    "industry": "environmental services",
-    "category": "ngo",
-    "type": "partner",
-    "logo": "/logos/organisations/climate-perks.png"
-  },
-  {
-    "organisation": "Supply Chain Sustainability School",
-    "slug": "supply-chain-school",
-    "description": "The Supply Chain Sustainability School is a free, award-winning virtual learning platform providing sustainability training to professionals in the built environment sector.",
-    "url": "https://www.supplychainschool.co.uk",
-    "hubspot-id": "",
-    "industry": "education",
-    "category": "higher education",
-    "type": "member",
-    "logo": "/logos/organisations/scss.png"
-  },
-  {
-    "organisation": "International Space University",
-    "slug": "isunet",
-    "description": "The International Space University offers interdisciplinary space education, fostering global cooperation and developing leaders to meet the challenges of humanity’s future in space.",
-    "url": "https://isunet.edu",
-    "hubspot-id": "28288113874",
-    "industry": "higher education",
-    "category": "space agency",
-    "type": "partner",
-    "logo": "/logos/organisations/isunet.png"
-  },
-  {
-    "organisation": "Space Safety Coalition",
-    "slug": "space-safety-coalition",
-    "description": "The Space Safety Coalition is an industry-led initiative promoting best practices and guidelines for the safe and sustainable use of outer space.",
-    "url": "https://spacesafety.org",
-    "hubspot-id": "28203934967",
-    "industry": "space",
-    "category": "professional association",
-    "type": "partner",
-    "logo": "/logos/organisations/space-safety.png"
-  },
-  {
-    "organisation": "BSI Sustainable Space Community",
-    "slug": "bsi-sustainable-space",
-    "description": "The BSI Sustainable Space Community is a forum for organisations committed to developing standards and practices that ensure space activities are environmentally and socially responsible.",
-    "url": "https://bsigroup.com",
-    "hubspot-id": "28242758900",
-    "industry": "professional training & coaching",
-    "category": "industry group",
-    "type": "partner",
-    "logo": "/logos/organisations/bsi.png"
-  },
-  {
-    "organisation": "Leicester Startups",
-    "slug": "leicesterstartups",
-    "description": "Leicester Startups is a community network supporting entrepreneurs and early-stage businesses through events, mentoring, and collaboration opportunities.",
-    "url": "https://leicesterstartups.com",
-    "hubspot-id": "28249998537",
-    "industry": "entrepreneurship",
-    "category": "local",
-    "type": "partner",
-    "logo": "/logos/organisations/leicester-startups.png"
-  },
-  {
-    "organisation": "Space City Leicester",
-    "slug": "spacecityleicester",
-    "description": "Space City Leicester is a dedicated cluster for space-related businesses, research, and innovation, supporting economic growth and collaboration in the space sector.",
-    "url": "https://spacecityleicester.co.uk",
-    "hubspot-id": "",
-    "industry": "space",
-    "category": "local",
-    "type": "partner",
-    "logo": "/logos/organisations/scl.png"
-  },
-  {
-    "organisation": "Cosmos for Humanity",
-    "slug": "cosmosforhumanity",
-    "description": "Cosmos for Humanity promotes sustainable and inclusive space exploration, ensuring the benefits of space are shared by all people and future generations.",
-    "url": "https://cosmosforhumanity.org",
-    "hubspot-id": "50469090509",
-    "industry": "space",
-    "category": "ngo",
-    "type": "partner",
-    "logo": "/logos/organisations/cosmosforhumanity.png"
-  },
-  {
-    "organisation": "SME Climate Hub",
-    "slug": "sme-climate-hub",
-    "description": "The SME Climate Hub provides tools, resources, and commitments for small and medium-sized businesses to reduce emissions and align with net-zero targets.",
-    "url": "https://smeclimatehub.org",
-    "hubspot-id": "",
-    "industry": "environmental services",
-    "category": "network",
-    "type": "member",
-    "logo": "/logos/organisations/sme-climate-hub.png"
-  },
-  {
-    "organisation": "Taskforce on Nature-related Financial Disclosures",
-    "slug": "tnfd",
-    "description": "The TNFD develops a risk management and disclosure framework for organisations to report and act on nature-related risks, supporting a shift in global financial flows toward nature-positive outcomes.",
-    "url": "https://tnfd.global",
-    "hubspot-id": "",
-    "industry": "finance",
-    "category": "network",
-    "type": "member",
-    "logo": "/logos/organisations/tnfd.png"
-  },
-  {
-    "organisation": "DOCK",
-    "slug": "dockleicester",
-    "description": "DOCK is a Leicester-based innovation hub providing office space, labs, and support for high-tech and low-carbon businesses.",
-    "url": "https://dockleicester.co.uk",
-    "hubspot-id": "",
-    "industry": "business services",
-    "category": "local",
-    "type": "supplier",
-    "logo": "/logos/organisations/dockleicester.png"
-  },
-  {
-    "organisation": "Place Support Partnership",
-    "slug": "placesupportpartnership",
-    "description": "Place Support Partnership helps local authorities and communities improve town centre vitality through business engagement, support, and resilience-building initiatives.",
-    "url": "https://placesupportpartnership.com",
-    "hubspot-id": "122073527494",
-    "industry": "business services",
-    "category": "partnership",
-    "type": "partner",
-    "logo": "/logos/organisations/psp.png"
-  },
-  {
-    "organisation": "Space Enterprise Community",
-    "slug": "space-enterprise-uk",
-    "description": "The Space Enterprise Community is a digital platform connecting UK space professionals, fostering collaboration, innovation, and knowledge-sharing across the sector.",
-    "url": "https://spaceenterprise.uk",
-    "hubspot-id": "129841171660",
-    "industry": "space",
-    "category": "network",
-    "type": "partner",
-    "logo": "/logos/organisations/sec.png"
-  },
-  {
-    "organisation": "European Space Agency",
-    "slug": "esa",
-    "description": "The European Space Agency is an intergovernmental organisation dedicated to the exploration and use of space for peaceful purposes, advancing science, technology, and sustainability.",
-    "url": "https://www.esa.int",
-    "hubspot-id": "118940428524",
-    "industry": "defence & space",
-    "category": "space agency",
-    "type": "partner",
-    "logo": "/logos/organisations/esa.png"
-  },
-  {
-    "organisation": "Sustainable East Midlands",
-    "slug": "sustainable-east-midlands",
-    "description": "Sustainable East Midlands is a regional network promoting low-carbon initiatives, green business practices, and environmental collaboration.",
-    "url": "",
-    "hubspot-id": "",
-    "industry": "environmental services",
-    "category": "local authority",
-    "type": "partner",
-    "logo": "/logos/organisations/sustainable-east-mids.png"
-  },
-  {
-    "organisation": "SpaceProjects.uk",
-    "slug": "spaceprojectsuk",
-    "description": "SpaceProjects.uk showcases and supports UK-led space projects, encouraging collaboration between researchers, industry, and educators.",
-    "url": "https://spaceprojects.uk",
-    "hubspot-id": "",
-    "industry": "space",
-    "category": "ngo",
-    "type": "partner",
-    "logo": "/logos/organisations/spaceprojects-uk.png"
-  },
-  {
-    "organisation": "GreenerFuture Leicestershire",
-    "slug": "greenerfuture-leicestershire",
-    "description": "GreenerFuture Leicestershire is a local initiative focused on community-led sustainability projects, environmental education, and climate action.",
-    "url": "",
-    "hubspot-id": "",
-    "industry": "environmental services",
-    "category": "academic",
-    "type": "partner",
-    "logo": "/logos/organisations/greenerfuture.png"
-  },
-  {
-    "organisation": "Climate Impact Partners",
-    "slug": "climate-impact-partners",
-    "description": "Climate Impact Partners delivers high-quality carbon credit solutions and climate finance to help organisations achieve net-zero goals while supporting sustainable development projects.",
-    "url": "",
-    "hubspot-id": "",
-    "industry": "environmental services",
-    "category": "industry group",
-    "type": "partner",
-    "logo": "/logos/organisations/cip.png"
-  },
-  {
-    "organisation": "Sustainable Business Alliance",
-    "slug": "sba",
-    "description": "The Sustainable Business Alliance brings together companies committed to environmental responsibility, social equity, and ethical governance.",
-    "url": "https://sustainablebusinessalliance.com",
-    "hubspot-id": "",
-    "industry": "business",
-    "category": "ngo",
-    "type": "partner",
-    "logo": "/logos/organisations/sba.png"
-  },
-  {
-    "organisation": "UK Students for the Exploration and Development of Space",
-    "slug": "ukseds",
-    "description": "UKSEDS is the UK’s national student space society, supporting and inspiring students to pursue careers in the space industry through projects, competitions, and outreach.",
-    "url": "https://www.ukseds.org",
-    "hubspot-id": "",
-    "industry": "space",
-    "category": "youth",
-    "type": "partner",
-    "logo": "/logos/organisations/ukseds.png"
-  },
-  {
-    "organisation": "International Society for Development and Sustainability",
-    "slug": "isds",
-    "description": "The International Society for Development and Sustainability promotes sustainable development research and practice through global collaboration and knowledge exchange.",
-    "url": "https://sfdora.org",
-    "hubspot-id": "178336278741",
-    "industry": "non-profit",
-    "category": "ngo",
-    "type": "partner",
-    "logo": "/logos/organisations/isds.png"
-  },
-  {
-    "organisation": "Justspace Alliance",
-    "slug": "justspace-alliance",
-    "description": "Justspace Alliance advocates for a more inclusive and ethical space future, addressing issues of environmental sustainability, social justice, and responsible governance.",
-    "url": "https://justspacealliance.org",
-    "hubspot-id": "178313345242",
-    "industry": "space",
-    "category": "ngo",
-    "type": "partner",
-    "logo": "/logos/organisations/justspace.png"
-  },
-  {
-    "organisation": "Zero Waste International Alliance",
-    "slug": "zwia",
-    "description": "The Zero Waste International Alliance promotes zero waste principles globally, supporting communities, businesses, and governments in reducing waste and protecting resources.",
-    "url": "",
-    "hubspot-id": "",
-    "industry": "environmental services",
-    "category": "ngo",
-    "type": "partner",
-    "logo": "/logos/organisations/zwia.png"
-  },
-  {
-    "organisation": "Institute of Physics",
     "slug": "iop",
+    "name": "Institute of Physics",
+    "shortName": "IOP",
+    "aliases": [
+      "Institute of Physics (IOP)"
+    ],
+    "kind": "professional_body",
+    "sectors": [
+      "science_research",
+      "education"
+    ],
+    "relationships": [
+      "member"
+    ],
     "description": "The Institute of Physics is a scientific charity working to advance physics education, research, and application for the benefit of society.",
-    "url": "",
-    "hubspot-id": "",
-    "industry": "science & research",
-    "category": "professional association",
-    "type": "member",
-    "logo": "/logos/organisations/iop.png"
+    "url": null,
+    "hubspotId": null,
+    "logo": "/logos/organisations/iop.png",
+    "featured": false,
+    "shortDescription": "Professional body advancing physics research and application."
   },
   {
-    "organisation": "IAU CPS",
-    "slug": "iau-cps",
-    "description": "The IAU Centre for the Protection of the Dark and Quiet Sky from Satellite Constellation Interference coordinates global efforts to safeguard astronomy from the impact of satellite constellations.",
-    "url": "",
-    "hubspot-id": "",
-    "industry": "science & research",
-    "category": "intergovernmental",
-    "type": "member",
-    "logo": "/logos/organisations/iau-cps.png"
-  },
-  {
-    "organisation": "SpacePride",
-    "slug": "spacepride",
-    "description": "SpacePride is an inclusive community celebrating diversity in the space sector and promoting equal opportunities for all space professionals.",
-    "url": "https://spacepride.space",
-    "hubspot-id": "178350111950",
-    "industry": "space",
-    "category": "ngo",
-    "type": "partner",
-    "logo": "/logos/organisations/spacepride.png"
-  },
-  {
-    "organisation": "Circular Economy Club",
-    "slug": "circulareconomyclub",
-    "description": "The Circular Economy Club is a global non-profit network connecting professionals and organisations to accelerate the transition to a circular economy.",
-    "url": "https://www.circulareconomyclub.com",
-    "hubspot-id": "",
-    "industry": "environmental services",
-    "category": "non-profit",
-    "type": "member",
-    "logo": "/logos/organisations/cec.png"
-  },
-  {
-    "organisation": "ClimateAction.tech",
-    "slug": "climateactiontech",
-    "description": "ClimateAction.tech is a community of tech professionals taking climate action by sharing knowledge, tools, and best practices for building a sustainable digital future.",
-    "url": "https://ClimateAction.tech",
-    "hubspot-id": "",
-    "industry": "technology",
-    "category": "network",
-    "type": "partner",
-    "logo": "/logos/organisations/cat.png"
-  },
-  {
-    "organisation": "Zero Emissions Network",
-    "slug": "zeroemissionsnetwork",
-    "description": "The Zero Emissions Network helps businesses and residents reduce emissions by promoting active travel, electric vehicles, and cleaner air initiatives.",
-    "url": "https://zeroemissionsnetwork.com",
-    "hubspot-id": "",
-    "industry": "environmental services",
-    "category": "network",
-    "type": "member",
-    "logo": "/logos/organisations/zen.png"
-  },
-  {
-    "organisation": "Chartered Institute of Public Relations",
-    "slug": "cipr",
-    "description": "The Chartered Institute of Public Relations is a professional body representing PR practitioners, promoting best practice, skills development, and ethical standards.",
-    "url": "https://cipr.co.uk",
-    "hubspot-id": "",
-    "industry": "public relations",
-    "category": "professional association",
-    "type": "member",
-    "logo": "/logos/organisations/cipr.png"
-  },
-  {
-    "organisation": "Chartered Institute of Marketing",
-    "slug": "cim",
-    "description": "The Chartered Institute of Marketing is the world’s leading professional marketing body, providing training, resources, and accreditation to marketers worldwide.",
-    "url": "https://cim.co.uk",
-    "hubspot-id": "",
-    "industry": "marketing",
-    "category": "professional association",
-    "type": "member",
-    "logo": "/logos/organisations/cim.png"
-  },
-  {
-    "organisation": "Midlands Space Cluster",
-    "slug": "midlands-space-cluster",
-    "description": "The Midlands Space Cluster is a regional initiative uniting businesses, research institutions, and local authorities to grow the space economy in the Midlands.",
-    "url": "",
-    "hubspot-id": "",
-    "industry": "aerospace",
-    "category": "association",
-    "type": "partner",
-    "logo": "/logos/organisations/midlands-space-cluster.png"
-  },
-  {
-    "organisation": "European Association of Remote Sensing Companies",
-    "slug": "earsc",
-    "description": "The European Association of Remote Sensing Companies represents the Earth observation industry, fostering growth, partnerships, and the uptake of satellite-based services.",
-    "url": "https://earsc.org",
-    "hubspot-id": "",
-    "industry": "space",
-    "category": "ngo",
-    "type": "member",
-    "logo": "/logos/organisations/earsc.png"
-  },
-  {
-    "organisation": "UKspace",
-    "slug": "ukspace",
-    "description": "UKspace is the official trade association for the UK space industry, representing and promoting the sector’s interests to government, media, and international stakeholders.",
-    "url": "https://ukspace.org",
-    "hubspot-id": "",
-    "industry": "space",
-    "category": "trade association",
-    "type": "member",
-    "logo": "/logos/organisations/ukspace.png"
-  },
-  {
-    "organisation": "Federation of Small Businesses",
-    "slug": "fsb",
-    "description": "The Federation of Small Businesses champions the interests of small business owners and the self-employed through advocacy, resources, and networking opportunities.",
-    "url": "https://fsb.org.uk",
-    "hubspot-id": "",
-    "industry": "business services",
-    "category": "trade association",
-    "type": "member",
-    "logo": "/logos/organisations/fsb.png"
-  },
-  {
-    "organisation": "CharityComms",
-    "slug": "charitycomms",
-    "description": "CharityComms is the professional membership network for charity communicators, providing training, best practice, and peer support to enhance impact across the sector.",
-    "url": "https://charitycomms.org.uk",
-    "hubspot-id": "",
-    "industry": "nonprofit organisation management",
-    "category": "trade association",
-    "type": "member",
-    "logo": "/logos/organisations/charitycomms.png"
-  },
-  {
-    "organisation": "Designers in Space Community",
-    "slug": "designers-in-space-community",
-    "description": "Designers in Space is a global community for creatives working in or inspired by the space sector, fostering collaboration and design-led innovation in space exploration.",
-    "url": "https://dis.community",
-    "hubspot-id": "",
-    "industry": "design",
-    "category": "network",
-    "type": "member",
-    "logo": "/logos/organisations/disc.png"
-  },
-  {
-    "organisation": "Ecosend",
-    "slug": "ecosend",
-    "description": "Ecosend is an email marketing platform designed to minimise environmental impact, using carbon offsetting and energy-efficient infrastructure for sustainable digital communications.",
-    "url": "https://ecosend.io",
-    "hubspot-id": "",
-    "industry": "software",
-    "category": "software",
-    "type": "supplier",
-    "logo": "/logos/organisations/ecosend.png"
-  },
-  {
-    "organisation": "Association of British Science Writers",
-    "slug": "absw",
-    "description": "The Association of British Science Writers supports, promotes, and defends the professional interests of science writers, journalists, and communicators in the UK.",
-    "url": "https://absw.org.uk",
-    "hubspot-id": "",
-    "industry": "media",
-    "category": "professional society",
-    "type": "member",
-    "logo": "/logos/organisations/absw.png"
-  },
-  {
-    "organisation": "Climate Voice",
-    "slug": "climatevoice",
-    "description": "Climate Voice mobilises employees, students, and the public to push organisations towards bold climate action and advocacy for systemic environmental change.",
-    "url": "https://climatevoice.org",
-    "hubspot-id": "",
-    "industry": "environmental services",
-    "category": "advocacy group",
-    "type": "member",
-    "logo": "/logos/organisations/climatevoice.png"
-  },
-  {
-    "organisation": "ACT Climate Labs",
-    "slug": "act-climate-labs",
-    "description": "ACT Climate Labs is a collaborative initiative developing creative campaigns and strategies to inspire large-scale climate action and public engagement.",
-    "url": "https://www.actclimatelabs.org",
-    "hubspot-id": "",
-    "industry": "environmental services",
-    "category": "nonprofit",
-    "type": "member",
-    "logo": "/logos/organisations/act.png"
-  },
-  {
-    "organisation": "Creatives for Climate",
-    "slug": "creatives-for-climate",
-    "description": "Creatives for Climate is a global network of creative professionals using storytelling, design, and campaigns to accelerate the transition to a sustainable future.",
-    "url": "https://www.creativesforclimate.co",
-    "hubspot-id": "",
-    "industry": "creative services",
-    "category": "network",
-    "type": "member",
-    "logo": "/logos/organisations/c4c.png"
-  },
-  {
-    "organisation": "Enterprise Nation",
-    "slug": "enterprise-nation",
-    "description": "Enterprise Nation is a small business network offering advice, resources, training, and community support to help entrepreneurs start and grow their ventures.",
-    "url": "https://www.enterprisenation.com",
-    "hubspot-id": "",
-    "industry": "business services",
-    "category": "network",
-    "type": "member",
-    "logo": "/logos/organisations/enterprise-nation.png"
-  },
-  {
-    "organisation": "Future Earth",
-    "slug": "futureearth",
-    "description": "Future Earth is a global research network advancing sustainability science to support transformations towards a resilient, equitable, and sustainable planet.",
-    "url": "https://futureearth.org",
-    "hubspot-id": "",
-    "industry": "research",
-    "category": "nonprofit",
-    "type": "member",
-    "logo": "/logos/organisations/futureearth.png"
-  },
-  {
-    "organisation": "Green Economy",
-    "slug": "green-economy",
-    "description": "Green Economy connects businesses with low-carbon solutions, helping organisations reduce their environmental impact and transition to net zero.",
-    "url": "https://greeneconomy.co.uk",
-    "hubspot-id": "",
-    "industry": "environmental services",
-    "category": "network",
-    "type": "member",
-    "logo": "/logos/organisations/green-economy.png"
-  },
-  {
-    "organisation": "Global Space Enablers Network",
-    "slug": "space-enablers",
-    "description": "The Global Space Enablers Network fosters equitable entrepreneurial ecosystems in developing and emerging countries to ensure inclusive access to the opportunities of space.",
-    "url": "https://www.spaceenablers.net/",
-    "hubspot-id": "",
-    "industry": "space",
-    "category": "network",
-    "type": "member",
-    "logo": "/logos/organisations/gsen.png"
-  },
-  {
-    "organisation": "Leaders for Climate Action",
-    "slug": "leaders-for-climate-action",
-    "description": "Leaders for Climate Action is a global community of entrepreneurs and changemakers committed to measurable emissions reduction and climate advocacy.",
-    "url": "https://lfca.earth",
-    "hubspot-id": "",
-    "industry": "environmental services",
-    "category": "network",
-    "type": "member",
-    "logo": "/logos/organisations/lca.png"
-  },
-  {
-    "organisation": "Net Zero Carbon Events",
-    "slug": "nzce",
-    "description": "Net Zero Carbon Events is an industry-wide initiative supporting the events sector in reducing greenhouse gas emissions and achieving net zero by 2050.",
-    "url": "https://nzce.org",
-    "hubspot-id": "",
-    "industry": "events",
-    "category": "events",
-    "type": "member",
-    "logo": "/logos/organisations/nzce.png"
-  },
-  {
-    "organisation": "Krystal",
-    "slug": "krystal",
-    "description": "Krystal provides sustainable web hosting powered by renewable energy, combining high-performance services with a commitment to environmental responsibility.",
-    "url": "https://krystal.uk",
-    "hubspot-id": "",
-    "industry": "technology",
-    "category": "web hosting",
-    "type": "supplier",
-    "logo": "/logos/organisations/krystal.png"
-  },
-  {
-    "organisation": "Plusnet",
-    "slug": "plusnet",
-    "description": "Plusnet is a UK-based broadband and telecommunications provider known for affordable services and customer-focused support.",
-    "url": "https://plus.net",
-    "hubspot-id": "",
-    "industry": "telecommunications",
-    "category": "telecoms",
-    "type": "supplier",
-    "logo": "/logos/organisations/plusnet.png"
-  },
-  {
-    "organisation": "Stripe",
-    "slug": "stripe",
-    "description": "Stripe is a global payments platform that enables businesses to securely accept and manage online transactions while offering tools to support growth.",
-    "url": "https://stripe.com",
-    "hubspot-id": "",
-    "industry": "financial services",
-    "category": "payments",
-    "type": "supplier",
-    "logo": "/logos/organisations/stripe.png"
-  },
-  {
-    "organisation": "Tide",
-    "slug": "tide",
-    "description": "Tide is a UK-based digital banking platform offering accounts, payment services, and tools tailored for small businesses and entrepreneurs.",
-    "url": "https://tide.co",
-    "hubspot-id": "",
-    "industry": "financial services",
-    "category": "bank",
-    "type": "supplier",
-    "logo": "/logos/organisations/tide.png"
-  },
-  {
-    "organisation": "Rebel Business School",
-    "slug": "rebel-business-school",
-    "description": "Rebel Business School delivers practical, free training that empowers people to start and grow businesses without debt or traditional constraints.",
-    "url": "https://therebelschool.com",
-    "hubspot-id": "",
-    "industry": "education",
-    "category": "education",
-    "type": "partner",
-    "logo": "/logos/organisations/rebel.png"
-  },
-  {
-    "organisation": "Ecodemy",
-    "slug": "ecodemy",
-    "description": "Ecodemy provides sustainability-focused education and training, helping individuals and organisations gain the skills to create positive environmental change.",
-    "url": "https://ecodemy.ca",
-    "hubspot-id": "",
-    "industry": "education",
-    "category": "education",
-    "type": "partner",
-    "logo": "/logos/organisations/ecodemy.png"
-  },
-  {
-    "organisation": "Locality",
-    "slug": "locality",
-    "description": "Locality is a national membership network supporting community organisations to create thriving, inclusive, and sustainable local places.",
-    "url": "https://locality.org.uk",
-    "hubspot-id": "",
-    "industry": "nonprofit organisation management",
-    "category": "network",
-    "type": "member",
-    "logo": "/logos/organisations/locality.png"
-  },
-  {
-    "organisation": "International Astronautical Federation",
-    "slug": "iafastro",
+    "slug": "international-astronautical-federation",
+    "name": "International Astronautical Federation",
+    "legacySlugs": [
+      "iafastro"
+    ],
+    "kind": "network",
+    "sectors": [
+      "space"
+    ],
+    "relationships": [
+      "partner"
+    ],
     "description": "IAF is a global network of space agencies, companies, and institutions promoting international cooperation in astronautics and space exploration.",
     "url": "https://www.iafastro.org",
-    "hubspot-id": "00000000013",
-    "industry": "space",
-    "category": "federation",
-    "type": "partner",
-    "logo": "/logos/organisations/iaf.png"
+    "hubspotId": "00000000013",
+    "logo": "/logos/organisations/iaf.png",
+    "featured": false
   },
   {
-    "organisation": "European Centre for Medium-Range Weather Forecasts",
-    "slug": "ecmwf",
-    "description": "ECMWF provides global medium-range weather forecasts, supporting climate research, operational meteorology, and environmental monitoring across Europe.",
-    "url": "https://www.ecmwf.int",
-    "hubspot-id": "00000000015",
-    "industry": "meteorology",
-    "category": "research centre",
-    "type": "partner",
-    "logo": "/logos/organisations/ecmwf.jpg"
+    "slug": "isds",
+    "name": "International Society for Development and Sustainability",
+    "kind": "ngo_charity",
+    "sectors": [
+      "climate_sustainability",
+      "science_research"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "The International Society for Development and Sustainability promotes sustainable development research and practice through global collaboration and knowledge exchange.",
+    "url": "https://sfdora.org",
+    "hubspotId": "178336278741",
+    "logo": "/logos/organisations/isds.png",
+    "featured": false
   },
   {
-    "organisation": "DarkSky International",
-    "slug": "darksky-international",
-    "description": "DarkSky International works to protect the night environment and preserve dark skies through responsible outdoor lighting, education, and advocacy worldwide.",
-    "url": "https://darksky.org",
-    "hubspot-id": "00000000017",
-    "industry": "environmental protection",
-    "category": "non-profit",
-    "type": "partner",
-    "logo": "/logos/organisations/darksky-international.jpg"
+    "slug": "international-space-university",
+    "name": "International Space University",
+    "shortName": "ISU",
+    "legacySlugs": [
+      "isunet"
+    ],
+    "kind": "university",
+    "sectors": [
+      "education",
+      "space"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "The International Space University offers interdisciplinary space education, fostering global cooperation and developing leaders to meet the challenges of humanity’s future in space.",
+    "url": "https://isunet.edu",
+    "hubspotId": "28288113874",
+    "logo": "/logos/organisations/isunet.png",
+    "featured": false
   },
   {
-    "organisation": "Copernicus EU",
-    "slug": "copernicus-eu",
-    "description": "The Copernicus programme monitors the Earth using satellite data to support environmental management, climate monitoring, and disaster response in Europe.",
-    "url": "https://www.copernicus.eu",
-    "hubspot-id": "00000000016",
-    "industry": "space",
-    "category": "programme",
-    "type": "partner",
-    "logo": "/logos/organisations/copernicus-eu.png"
+    "slug": "itu",
+    "name": "International Telecommunication Union",
+    "shortName": "ITU",
+    "kind": "intergovernmental",
+    "sectors": [
+      "telecoms",
+      "space"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "The ITU is the United Nations specialised agency for information and communication technologies, coordinating global telecom standards and satellite spectrum management.",
+    "url": "https://www.itu.int",
+    "hubspotId": "00000000008",
+    "logo": "/logos/organisations/itu.png",
+    "featured": false
   },
   {
-    "organisation": "Wholegrain Digital",
-    "slug": "wholegrain-digital",
-    "description": "Wholegrain Digital is a web agency specialising in sustainable digital design, focusing on energy efficiency, accessibility, and ethical online experiences.",
-    "url": "https://www.wholegraindigital.com",
-    "hubspot-id": "00000000017",
-    "industry": "digital",
-    "category": "agency",
-    "type": "partner",
-    "logo": "/logos/organisations/wholegrain-digital.jpg"
+    "slug": "isc2",
+    "name": "ISC2",
+    "shortName": "ISC2",
+    "aliases": [
+      "(ISC)²",
+      "International Information System Security Certification Consortium (ISC2)"
+    ],
+    "kind": "professional_body",
+    "sectors": [
+      "technology_digital"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "Global non-profit cybersecurity professional body that sets certification and standards, including the Certified in Cybersecurity (CC) credential.",
+    "shortDescription": "Global organisation for cybersecurity certification and standards.",
+    "url": "https://www.isc2.org",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
   },
   {
-    "organisation": "Plant-Based Treaty",
-    "slug": "plant-based-treaty",
-    "description": "The Plant-Based Treaty campaign promotes global policies to reduce reliance on animal agriculture and accelerate a transition to sustainable plant-based food systems.",
-    "url": "https://plantbasedtreaty.org",
-    "hubspot-id": "00000000018",
-    "industry": "sustainability",
-    "category": "campaign",
-    "type": "partner",
-    "logo": "/logos/organisations/plant-based-treaty.png"
+    "slug": "justspace-alliance",
+    "name": "Justspace Alliance",
+    "kind": "ngo_charity",
+    "sectors": [
+      "space"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "Justspace Alliance advocates for a more inclusive and ethical space future, addressing issues of environmental sustainability, social justice, and responsible governance.",
+    "url": "https://justspacealliance.org",
+    "hubspotId": "178313345242",
+    "logo": "/logos/organisations/justspace.png",
+    "featured": false
   },
   {
-    "organisation": "Mercator Ocean",
+    "slug": "krystal",
+    "name": "Krystal",
+    "kind": "company",
+    "sectors": [
+      "technology_digital"
+    ],
+    "relationships": [
+      "supplier"
+    ],
+    "description": "Krystal provides sustainable web hosting powered by renewable energy, combining high-performance services with a commitment to environmental responsibility.",
+    "url": "https://krystal.uk",
+    "hubspotId": null,
+    "logo": "/logos/organisations/krystal.png",
+    "featured": false
+  },
+  {
+    "slug": "leaders-for-climate-action",
+    "name": "Leaders for Climate Action",
+    "kind": "network",
+    "sectors": [
+      "climate_sustainability",
+      "business_support"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "Leaders for Climate Action is a global community of entrepreneurs and changemakers committed to measurable emissions reduction and climate advocacy.",
+    "url": "https://lfca.earth",
+    "hubspotId": null,
+    "logo": "/logos/organisations/lca.png",
+    "featured": false
+  },
+  {
+    "slug": "leicester-city-council",
+    "name": "Leicester City Council",
+    "kind": "local_authority",
+    "sectors": [
+      "government_policy"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "Leicester City Council is the local authority for the city of Leicester, working to deliver sustainable urban development, community services, and economic opportunities.",
+    "url": "https://leicester.gov.uk",
+    "hubspotId": "28162402530",
+    "logo": "/logos/organisations/lcc.png",
+    "featured": false
+  },
+  {
+    "slug": "leicester-startups",
+    "name": "Leicester Startups",
+    "legacySlugs": [
+      "leicesterstartups"
+    ],
+    "kind": "network",
+    "sectors": [
+      "business_support"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "Leicester Startups is a community network supporting entrepreneurs and early-stage businesses through events, mentoring, and collaboration opportunities.",
+    "url": "https://leicesterstartups.com",
+    "hubspotId": "28249998537",
+    "logo": "/logos/organisations/leicester-startups.png",
+    "featured": false
+  },
+  {
+    "slug": "linkedin",
+    "name": "LinkedIn",
+    "aliases": [
+      "LinkedIn Learning"
+    ],
+    "kind": "company",
+    "sectors": [
+      "technology_digital",
+      "education"
+    ],
+    "relationships": [],
+    "description": "Professional networking platform whose LinkedIn Learning courses award completion badges.",
+    "url": "https://www.linkedin.com",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "locality",
+    "name": "Locality",
+    "kind": "network",
+    "sectors": [
+      "community_charity"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "Locality is a national membership network supporting community organisations to create thriving, inclusive, and sustainable local places.",
+    "url": "https://locality.org.uk",
+    "hubspotId": null,
+    "logo": "/logos/organisations/locality.png",
+    "featured": false
+  },
+  {
+    "slug": "loughborough-college",
+    "name": "Loughborough College",
+    "kind": "college",
+    "sectors": [
+      "education"
+    ],
+    "relationships": [],
+    "description": "Further education college in Loughborough, Leicestershire.",
+    "url": null,
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "luxembourg-space-agency",
+    "name": "Luxembourg Space Agency",
+    "kind": "space_agency",
+    "sectors": [
+      "space",
+      "government_policy"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "The Luxembourg Space Agency promotes research, innovation, and investment in the space sector, with a focus on sustainability and economic development.",
+    "url": "https://space-agency.public.lu/en.html",
+    "hubspotId": "00000000002",
+    "logo": "/logos/organisations/luxembourg-space-agency.jpg",
+    "featured": false
+  },
+  {
     "slug": "mercator-ocean",
+    "name": "Mercator Ocean",
+    "kind": "research_centre",
+    "sectors": [
+      "science_research",
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "partner"
+    ],
     "description": "Mercator Ocean monitors and models the global ocean to support climate research, operational oceanography, and marine environmental policy decisions.",
     "url": "https://www.mercator-ocean.fr",
-    "hubspot-id": "00000000019",
-    "industry": "oceanography",
-    "category": "research centre",
-    "type": "partner",
-    "logo": "/logos/organisations/mercator-ocean.png"
+    "hubspotId": "00000000019",
+    "logo": "/logos/organisations/mercator-ocean.png",
+    "featured": false
   },
   {
-    "organisation": "Portuguese Space Agency",
+    "slug": "midlands-space-cluster",
+    "name": "Midlands Space Cluster",
+    "kind": "network",
+    "sectors": [
+      "space"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "The Midlands Space Cluster is a regional initiative uniting businesses, research institutions, and local authorities to grow the space economy in the Midlands.",
+    "url": null,
+    "hubspotId": null,
+    "logo": "/logos/organisations/midlands-space-cluster.png",
+    "featured": false
+  },
+  {
+    "slug": "nceo",
+    "name": "National Centre for Earth Observation",
+    "shortName": "NCEO",
+    "kind": "research_centre",
+    "sectors": [
+      "science_research",
+      "space"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "The National Centre for Earth Observation delivers world-class research using satellite data to monitor and understand environmental change, supporting policy, industry, and public services.",
+    "url": "https://nceo.ac.uk",
+    "hubspotId": "28203876539",
+    "logo": "/logos/organisations/nceo.png",
+    "featured": false
+  },
+  {
+    "slug": "net-zero-carbon-events",
+    "name": "Net Zero Carbon Events",
+    "aliases": [
+      "Net Zero Carbon Events Initiative"
+    ],
+    "legacySlugs": [
+      "nzce"
+    ],
+    "kind": "network",
+    "sectors": [
+      "events_culture",
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "Net Zero Carbon Events is an industry-wide initiative supporting the events sector in reducing greenhouse gas emissions and achieving net zero by 2050.",
+    "url": "https://nzce.org",
+    "hubspotId": null,
+    "logo": "/logos/organisations/nzce.png",
+    "featured": false
+  },
+  {
+    "slug": "open-university",
+    "name": "Open University",
+    "kind": "university",
+    "sectors": [
+      "education"
+    ],
+    "relationships": [],
+    "description": "UK distance-learning university.",
+    "url": "https://www.open.ac.uk",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "orb",
+    "name": "Organisation for Responsible Businesses",
+    "kind": "network",
+    "sectors": [
+      "climate_sustainability",
+      "business_support"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "ORB leads the responsible business movement for solo, micro & small businesses.",
+    "url": "https://www.orbuk.org.uk",
+    "hubspotId": null,
+    "logo": "/logos/organisations/orb.jpg",
+    "featured": false
+  },
+  {
+    "slug": "palomar-observatory",
+    "name": "Palomar Observatory",
+    "kind": "observatory",
+    "sectors": [
+      "astronomy"
+    ],
+    "relationships": [],
+    "description": "Astronomical observatory in California, home of the 5 m Hale Telescope.",
+    "url": null,
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "pan-starrs",
+    "name": "PAN-STARRS",
+    "kind": "programme",
+    "sectors": [
+      "astronomy",
+      "science_research"
+    ],
+    "relationships": [],
+    "description": "Panoramic Survey Telescope and Rapid Response System, an astronomical survey that discovers asteroids and other moving or transient objects.",
+    "url": null,
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "place-support-partnership",
+    "name": "Place Support Partnership",
+    "legacySlugs": [
+      "placesupportpartnership"
+    ],
+    "kind": "company",
+    "sectors": [
+      "business_support"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "Place Support Partnership helps local authorities and communities improve town centre vitality through business engagement, support, and resilience-building initiatives.",
+    "url": "https://placesupportpartnership.com",
+    "hubspotId": "122073527494",
+    "logo": "/logos/organisations/psp.png",
+    "featured": false
+  },
+  {
+    "slug": "plant-based-treaty",
+    "name": "Plant-Based Treaty",
+    "kind": "ngo_charity",
+    "sectors": [
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "The Plant-Based Treaty campaign promotes global policies to reduce reliance on animal agriculture and accelerate a transition to sustainable plant-based food systems.",
+    "url": "https://plantbasedtreaty.org",
+    "hubspotId": "00000000018",
+    "logo": "/logos/organisations/plant-based-treaty.png",
+    "featured": false
+  },
+  {
+    "slug": "plume",
+    "name": "PLUME",
+    "kind": "programme",
+    "sectors": [
+      "space",
+      "education"
+    ],
+    "relationships": [],
+    "description": "Picosatellite of Leicester University Micrometeoroid Experiment, a university student satellite project.",
+    "url": null,
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "plusnet",
+    "name": "Plusnet",
+    "kind": "company",
+    "sectors": [
+      "telecoms"
+    ],
+    "relationships": [
+      "supplier"
+    ],
+    "description": "Plusnet is a UK-based broadband and telecommunications provider known for affordable services and customer-focused support.",
+    "url": "https://plus.net",
+    "hubspotId": null,
+    "logo": "/logos/organisations/plusnet.png",
+    "featured": false
+  },
+  {
     "slug": "portuguese-space-agency",
+    "name": "Portuguese Space Agency",
+    "kind": "space_agency",
+    "sectors": [
+      "space"
+    ],
+    "relationships": [
+      "partner"
+    ],
     "description": "The Portuguese Space Agency coordinates Portugal's civil space activities, supporting research, industry growth, and international cooperation in space science.",
     "url": "https://www.ageneciacespacial.pt",
-    "hubspot-id": "00000000020",
-    "industry": "space",
-    "category": "space agency",
-    "type": "partner",
-    "logo": "/logos/organisations/portuguese-space.png"
+    "hubspotId": "00000000020",
+    "logo": "/logos/organisations/portuguese-space.png",
+    "featured": false
   },
   {
-    "organisation": "Secure World Foundation",
+    "slug": "rainforest-foundation-uk",
+    "name": "Rainforest Foundation UK",
+    "kind": "ngo_charity",
+    "sectors": [
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "Rainforest Foundation UK works alongside Indigenous peoples and local communities to protect rainforests, safeguard biodiversity, and address the climate crisis through rights-based approaches.",
+    "url": "https://rainforestfoundation.org.uk",
+    "hubspotId": null,
+    "logo": "/logos/organisations/rainforest-uk.png",
+    "featured": false
+  },
+  {
+    "slug": "rebel-business-school",
+    "name": "Rebel Business School",
+    "kind": "training_provider",
+    "sectors": [
+      "education",
+      "business_support"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "Rebel Business School delivers practical, free training that empowers people to start and grow businesses without debt or traditional constraints.",
+    "url": "https://therebelschool.com",
+    "hubspotId": null,
+    "logo": "/logos/organisations/rebel.png",
+    "featured": false
+  },
+  {
+    "slug": "ras",
+    "name": "Royal Astronomical Society",
+    "shortName": "RAS",
+    "aliases": [
+      "Royal Astronomical Society (RAS)"
+    ],
+    "kind": "learned_society",
+    "sectors": [
+      "astronomy",
+      "science_research"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "Learned society promoting astronomy and geophysics research, education and outreach.",
+    "shortDescription": "Society promoting astronomy and geophysics research.",
+    "url": "https://ras.ac.uk",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
     "slug": "secure-world-foundation",
+    "name": "Secure World Foundation",
+    "kind": "ngo_charity",
+    "sectors": [
+      "space",
+      "government_policy"
+    ],
+    "relationships": [
+      "partner"
+    ],
     "description": "SWF is an NGO promoting the sustainable and secure use of outer space through policy research, advocacy, and international collaboration.",
     "url": "https://swfound.org",
-    "hubspot-id": "00000000021",
-    "industry": "space policy",
-    "category": "NGO",
-    "type": "partner",
-    "logo": "/logos/organisations/secure-world-foundation.png"
+    "hubspotId": "00000000021",
+    "logo": "/logos/organisations/secure-world-foundation.png",
+    "featured": false
   },
   {
-    "organisation": "B Lab UK",
-    "slug": "b-lab-uk",
-    "description": "B Lab UK certifies and supports businesses that meet high standards of social and environmental performance, transparency, and accountability.",
-    "url": "https://bcorporation.uk",
-    "hubspot-id": "00000000022",
-    "industry": "business",
-    "category": "certification",
-    "type": "partner",
-    "logo": "/logos/organisations/b-lab-uk.png"
+    "slug": "skegness-grammar-school",
+    "name": "Skegness Grammar School",
+    "kind": "school",
+    "sectors": [
+      "education"
+    ],
+    "relationships": [],
+    "description": "Selective grammar school in Skegness, Lincolnshire.",
+    "url": null,
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
   },
   {
-    "organisation": "Department for Work and Pensions",
-    "slug": "dwp",
-    "description": "DWP is a UK government department responsible for welfare, pensions, and employment services, helping citizens access financial support and social security.",
-    "url": "https://www.gov.uk/government/organisations/department-for-work-pensions",
-    "hubspot-id": "00000000023",
-    "industry": "government",
-    "category": "government department",
-    "type": "partner",
-    "logo": "/logos/organisations/dwp.jpg"
+    "slug": "small-business-britain",
+    "name": "Small Business Britain",
+    "kind": "ngo_charity",
+    "sectors": [
+      "business_support"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "Small Business Britain champions the interests of small businesses, providing support, networking, and recognition to help them grow and thrive in competitive markets.",
+    "url": "https://smallbusinessbritain.uk",
+    "hubspotId": "00000000011",
+    "logo": "/logos/organisations/small-business-britain.png",
+    "featured": false
   },
   {
-    "organisation": "GoSquared",
-    "slug": "gosquared",
-    "description": "GoSquared provides website analytics, live chat, and marketing automation tools to help businesses grow and optimise digital customer engagement.",
-    "url": "https://www.gosquared.com",
-    "hubspot-id": "00000000024",
-    "industry": "digital",
-    "category": "software",
-    "type": "partner",
-    "logo": "/logos/organisations/gosquared.jpg"
+    "slug": "small-business-charter",
+    "name": "Small Business Charter",
+    "kind": "awarding_body",
+    "sectors": [
+      "education",
+      "business_support"
+    ],
+    "relationships": [],
+    "description": "UK scheme recognising business schools that support small businesses and entrepreneurship.",
+    "url": "https://www.smallbusinesscharter.org",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
   },
   {
-    "organisation": "Exotopic",
-    "slug": "exotopic",
-    "description": "Exotopic develops innovative digital and physical experiences for education, culture, and science communication with a focus on immersive storytelling.",
-    "url": "https://www.exotopic.com",
-    "hubspot-id": "00000000025",
-    "industry": "digital",
-    "category": "agency",
-    "type": "partner",
-    "logo": "/logos/organisations/exotopic.png"
+    "slug": "smartcitiesworld",
+    "name": "SmartCitiesWorld",
+    "kind": "network",
+    "sectors": [
+      "media_publishing"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "SmartCitiesWorld is an online platform providing news, insights, and best practices on smart city innovations, helping urban leaders develop more sustainable, connected, and resilient communities.",
+    "url": "https://SmartCitiesWorld.com",
+    "hubspotId": null,
+    "logo": "/logos/organisations/smartcitiesworld.png",
+    "featured": false
   },
   {
-    "organisation": "Good Business Foundation",
-    "slug": "good-business-foundation",
-    "description": "The Good Business Foundation supports socially and environmentally responsible businesses with guidance, resources, and networking opportunities.",
-    "url": "https://www.goodbusiness.org.uk",
-    "hubspot-id": "00000000026",
-    "industry": "business",
-    "category": "foundation",
-    "type": "partner",
-    "logo": "/logos/organisations/gbc.png"
+    "slug": "sme-climate-hub",
+    "name": "SME Climate Hub",
+    "kind": "network",
+    "sectors": [
+      "climate_sustainability",
+      "business_support"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "The SME Climate Hub provides tools, resources, and commitments for small and medium-sized businesses to reduce emissions and align with net-zero targets.",
+    "url": "https://smeclimatehub.org",
+    "hubspotId": null,
+    "logo": "/logos/organisations/sme-climate-hub.png",
+    "featured": false
   },
   {
-    "organisation": "Space Renaissance Initiative",
+    "slug": "space-awareness",
+    "name": "Space Awareness",
+    "kind": "programme",
+    "sectors": [
+      "education",
+      "space"
+    ],
+    "relationships": [],
+    "description": "European space education and outreach programme.",
+    "url": "https://www.space-awareness.org",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "space-city-leicester",
+    "name": "Space City Leicester",
+    "legacySlugs": [
+      "spacecityleicester"
+    ],
+    "kind": "network",
+    "sectors": [
+      "space"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "Space City Leicester is a dedicated cluster for space-related businesses, research, and innovation, supporting economic growth and collaboration in the space sector.",
+    "url": "https://spacecityleicester.co.uk",
+    "hubspotId": null,
+    "logo": "/logos/organisations/scl.png",
+    "featured": false
+  },
+  {
+    "slug": "space-communications-alliance",
+    "name": "Space Communications Alliance",
+    "legacySlugs": [
+      "spacecommsalliance"
+    ],
+    "kind": "network",
+    "sectors": [
+      "marketing_comms",
+      "space"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "The Space Communications Alliance is a global network of marketing and PR professionals dedicated to raising awareness of the space industry and its contribution to innovation and sustainability.",
+    "url": "https://spacecommsalliance.com",
+    "hubspotId": "28165924075",
+    "logo": "/logos/organisations/sca.png",
+    "featured": false
+  },
+  {
+    "slug": "space-enterprise-community",
+    "name": "Space Enterprise Community",
+    "legacySlugs": [
+      "space-enterprise-uk"
+    ],
+    "kind": "network",
+    "sectors": [
+      "space"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "The Space Enterprise Community is a digital platform connecting UK space professionals, fostering collaboration, innovation, and knowledge-sharing across the sector.",
+    "url": "https://spaceenterprise.uk",
+    "hubspotId": "129841171660",
+    "logo": "/logos/organisations/sec.png",
+    "featured": false
+  },
+  {
+    "slug": "sgac",
+    "name": "Space Generation Advisory Council",
+    "shortName": "SGAC",
+    "kind": "network",
+    "sectors": [
+      "space",
+      "education"
+    ],
+    "relationships": [],
+    "description": "Global network of students and young professionals that brings youth perspectives on space to the UN and space agencies.",
+    "url": "https://spacegeneration.org",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "space-park-leicester",
+    "name": "Space Park Leicester",
+    "kind": "research_centre",
+    "sectors": [
+      "space",
+      "science_research"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "Space Park Leicester is a collaborative hub for space research, innovation, and industry, enabling partnerships that drive advancements in satellite technology, data analytics, and sustainability.",
+    "url": "https://space-park.co.uk",
+    "hubspotId": "27661914315",
+    "logo": "/logos/organisations/spl.png",
+    "featured": false
+  },
+  {
+    "slug": "space-partnership",
+    "name": "Space Partnership",
+    "legacySlugs": [
+      "spacepartnership"
+    ],
+    "kind": "network",
+    "sectors": [
+      "space",
+      "government_policy"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "Space Partnership is a UK initiative that brings together industry, academia, and government to coordinate space sector growth and deliver strategic benefits to the economy and society.",
+    "url": "https://spacepartnership.org.uk",
+    "hubspotId": "28249998544",
+    "logo": "/logos/organisations/space-partnership.png",
+    "featured": false
+  },
+  {
     "slug": "space-renaissance-initiative",
+    "name": "Space Renaissance Initiative",
+    "kind": "ngo_charity",
+    "sectors": [
+      "space"
+    ],
+    "relationships": [
+      "partner"
+    ],
     "description": "SRI advocates for a new era of human space settlement and sustainable space development, focusing on advocacy, education, and international collaboration.",
     "url": "https://www.spacerenaissance.org",
-    "hubspot-id": "00000000027",
-    "industry": "space",
-    "category": "NGO",
-    "type": "partner",
-    "logo": "/logos/organisations/space-renaissance-initiative.jpg"
+    "hubspotId": "00000000027",
+    "logo": "/logos/organisations/space-renaissance-initiative.jpg",
+    "featured": false
   },
   {
-    "organisation": "United Nations",
+    "slug": "space-safety-coalition",
+    "name": "Space Safety Coalition",
+    "kind": "network",
+    "sectors": [
+      "space"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "The Space Safety Coalition is an industry-led initiative promoting best practices and guidelines for the safe and sustainable use of outer space.",
+    "url": "https://spacesafety.org",
+    "hubspotId": "28203934967",
+    "logo": "/logos/organisations/space-safety.png",
+    "featured": false
+  },
+  {
+    "slug": "space-universities-network",
+    "name": "Space Universities Network",
+    "kind": "network",
+    "sectors": [
+      "education",
+      "space"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "A network of universities collaborating on space education, research, and innovation initiatives to advance knowledge and sustainable space development.",
+    "url": "https://spaceuniversities.org",
+    "hubspotId": "00000000005",
+    "logo": "/logos/organisations/space-universities-network.jpeg",
+    "featured": false
+  },
+  {
+    "slug": "space4climate",
+    "name": "Space4Climate",
+    "kind": "network",
+    "sectors": [
+      "space",
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "Space4Climate is a professional network bringing together expertise in climate services from space, helping to turn satellite data into actionable insights for climate resilience and sustainability.",
+    "url": "https://space4climate.com",
+    "hubspotId": null,
+    "logo": "/logos/organisations/s4c.png",
+    "featured": false,
+    "shortDescription": "Network translating satellite data into climate services."
+  },
+  {
+    "slug": "spacepride",
+    "name": "SpacePride",
+    "kind": "network",
+    "sectors": [
+      "space",
+      "community_charity"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "SpacePride is an inclusive community celebrating diversity in the space sector and promoting equal opportunities for all space professionals.",
+    "url": "https://spacepride.space",
+    "hubspotId": "178350111950",
+    "logo": "/logos/organisations/spacepride.png",
+    "featured": false
+  },
+  {
+    "slug": "spaceprojects-uk",
+    "name": "SpaceProjects.uk",
+    "legacySlugs": [
+      "spaceprojectsuk"
+    ],
+    "kind": "ngo_charity",
+    "sectors": [
+      "space"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "SpaceProjects.uk showcases and supports UK-led space projects, encouraging collaboration between researchers, industry, and educators.",
+    "url": "https://spaceprojects.uk",
+    "hubspotId": null,
+    "logo": "/logos/organisations/spaceprojects-uk.png",
+    "featured": false
+  },
+  {
+    "slug": "stripe",
+    "name": "Stripe",
+    "kind": "company",
+    "sectors": [
+      "finance"
+    ],
+    "relationships": [
+      "supplier"
+    ],
+    "description": "Stripe is a global payments platform that enables businesses to securely accept and manage online transactions while offering tools to support growth.",
+    "url": "https://stripe.com",
+    "hubspotId": null,
+    "logo": "/logos/organisations/stripe.png",
+    "featured": false
+  },
+  {
+    "slug": "supply-chain-sustainability-school",
+    "name": "Supply Chain Sustainability School",
+    "legacySlugs": [
+      "supply-chain-school"
+    ],
+    "kind": "training_provider",
+    "sectors": [
+      "education",
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "The Supply Chain Sustainability School is a free, award-winning virtual learning platform providing sustainability training to professionals in the built environment sector.",
+    "url": "https://www.supplychainschool.co.uk",
+    "hubspotId": null,
+    "logo": "/logos/organisations/scss.png",
+    "featured": false
+  },
+  {
+    "slug": "sustainable-business-alliance",
+    "name": "Sustainable Business Alliance",
+    "legacySlugs": [
+      "sba"
+    ],
+    "kind": "network",
+    "sectors": [
+      "climate_sustainability",
+      "business_support"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "The Sustainable Business Alliance brings together companies committed to environmental responsibility, social equity, and ethical governance.",
+    "url": "https://sustainablebusinessalliance.com",
+    "hubspotId": null,
+    "logo": "/logos/organisations/sba.png",
+    "featured": false
+  },
+  {
+    "slug": "sustainable-east-midlands",
+    "name": "Sustainable East Midlands",
+    "kind": "network",
+    "sectors": [
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "Sustainable East Midlands is a regional network promoting low-carbon initiatives, green business practices, and environmental collaboration.",
+    "url": null,
+    "hubspotId": null,
+    "logo": "/logos/organisations/sustainable-east-mids.png",
+    "featured": false
+  },
+  {
+    "slug": "tnfd",
+    "name": "Taskforce on Nature-related Financial Disclosures",
+    "shortName": "TNFD",
+    "aliases": [
+      "Taskforce on Nature-related Financial Disclosures (TNFD)"
+    ],
+    "kind": "network",
+    "sectors": [
+      "finance",
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "The TNFD develops a risk management and disclosure framework for organisations to report and act on nature-related risks, supporting a shift in global financial flows toward nature-positive outcomes.",
+    "url": "https://tnfd.global",
+    "hubspotId": null,
+    "logo": "/logos/organisations/tnfd.png",
+    "featured": false
+  },
+  {
+    "slug": "the-climate-coalition",
+    "name": "The Climate Coalition",
+    "kind": "ngo_charity",
+    "sectors": [
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "The Climate Coalition is the UK’s largest group of organisations dedicated to action on climate change, uniting voices to protect the things we love and promote a sustainable future.",
+    "url": "https://theclimatecoalition.org",
+    "hubspotId": "28203875572",
+    "logo": "/logos/organisations/tcc.png",
+    "featured": false
+  },
+  {
+    "slug": "communicator-awards",
+    "name": "The Communicator Awards",
+    "kind": "awarding_body",
+    "sectors": [
+      "marketing_comms"
+    ],
+    "relationships": [],
+    "description": "International awards programme recognising excellence in communications.",
+    "url": "https://www.communicatorawards.com",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "tide",
+    "name": "Tide",
+    "kind": "company",
+    "sectors": [
+      "finance"
+    ],
+    "relationships": [
+      "supplier"
+    ],
+    "description": "Tide is a UK-based digital banking platform offering accounts, payment services, and tools tailored for small businesses and entrepreneurs.",
+    "url": "https://tide.co",
+    "hubspotId": null,
+    "logo": "/logos/organisations/tide.png",
+    "featured": false
+  },
+  {
+    "slug": "uk-eons",
+    "name": "UK Earth Observation Network for Sustainability",
+    "kind": "network",
+    "sectors": [
+      "climate_sustainability",
+      "space"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "The UK Earth Observation Network for Sustainability connects researchers, industry, and policymakers to leverage satellite data for tackling environmental challenges and advancing sustainable development goals.",
+    "url": null,
+    "hubspotId": null,
+    "logo": "/logos/organisations/uk-eons.png",
+    "featured": false
+  },
+  {
+    "slug": "uk-space-agency",
+    "name": "UK Space Agency",
+    "shortName": "UKSA",
+    "kind": "space_agency",
+    "sectors": [
+      "space",
+      "government_policy"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "The UK Space Agency leads the nation's civil space programme, supporting innovation, research, and partnerships that drive economic growth, scientific discovery, and sustainable use of space.",
+    "url": "https://www.gov.uk/government/organisations/uk-space-agency",
+    "hubspotId": "180115567816",
+    "logo": "/logos/organisations/uksa.png",
+    "featured": false
+  },
+  {
+    "slug": "uk-space-conference",
+    "name": "UK Space Conference",
+    "kind": "event",
+    "sectors": [
+      "space"
+    ],
+    "relationships": [],
+    "description": "Major UK space-sector conference.",
+    "url": "https://www.ukspaceconference.com",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "ukseds",
+    "name": "UK Students for the Exploration and Development of Space",
+    "shortName": "UKSEDS",
+    "aliases": [
+      "UK Students for the Exploration and Development of Space"
+    ],
+    "kind": "student_society",
+    "sectors": [
+      "space",
+      "education"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "UKSEDS is the UK’s national student space society, supporting and inspiring students to pursue careers in the space industry through projects, competitions, and outreach.",
+    "url": "https://www.ukseds.org",
+    "hubspotId": null,
+    "logo": "/logos/organisations/ukseds.png",
+    "featured": false
+  },
+  {
+    "slug": "ukspace",
+    "name": "UKspace",
+    "kind": "trade_association",
+    "sectors": [
+      "space"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "UKspace is the official trade association for the UK space industry, representing and promoting the sector’s interests to government, media, and international stakeholders.",
+    "url": "https://ukspace.org",
+    "hubspotId": null,
+    "logo": "/logos/organisations/ukspace.png",
+    "featured": false,
+    "shortDescription": "UK trade association for the space industry."
+  },
+  {
     "slug": "united-nations",
+    "name": "United Nations",
+    "kind": "intergovernmental",
+    "sectors": [
+      "government_policy"
+    ],
+    "relationships": [
+      "partner"
+    ],
     "description": "The United Nations promotes international cooperation across peace, development, human rights, and sustainability, including its space-related programmes and initiatives.",
     "url": "https://www.un.org",
-    "hubspot-id": "00000000028",
-    "industry": "international affairs",
-    "category": "intergovernmental",
-    "type": "partner",
-    "logo": "/logos/organisations/united-nations.png"
+    "hubspotId": "00000000028",
+    "logo": "/logos/organisations/united-nations.png",
+    "featured": false
+  },
+  {
+    "slug": "unfccc",
+    "name": "United Nations Framework Convention on Climate Change",
+    "shortName": "UNFCCC",
+    "kind": "intergovernmental",
+    "sectors": [
+      "climate_sustainability",
+      "government_policy"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "The UNFCCC drives global action to combat climate change, supporting countries to reduce greenhouse gas emissions and adapt to climate impacts.",
+    "url": "https://unfccc.int",
+    "hubspotId": null,
+    "logo": "/logos/organisations/unfccc.jpg",
+    "featured": false
+  },
+  {
+    "slug": "unoosa",
+    "name": "United Nations Office for Outer Space Affairs",
+    "shortName": "UNOOSA",
+    "kind": "intergovernmental",
+    "sectors": [
+      "space",
+      "government_policy"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "UNOOSA promotes international cooperation in the peaceful use and exploration of space, ensuring space activities contribute to sustainable development and benefit all humankind.",
+    "url": "https://unoosa.org",
+    "hubspotId": "28180536554",
+    "logo": "/logos/organisations/unoosa.jpg",
+    "featured": false
+  },
+  {
+    "slug": "un-spider",
+    "name": "United Nations Platform for Space-based Information for Disaster Management and Emergency Response",
+    "kind": "intergovernmental",
+    "sectors": [
+      "space",
+      "government_policy"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "UN-SPIDER provides access to space-based information to support disaster management and emergency response worldwide, promoting the use of satellite data for resilience.",
+    "url": "https://www.un-spider.org",
+    "hubspotId": "00000000009",
+    "logo": "/logos/organisations/un-spider.png",
+    "featured": false
+  },
+  {
+    "slug": "university-of-kent",
+    "name": "University of Kent",
+    "kind": "university",
+    "sectors": [
+      "education",
+      "science_research"
+    ],
+    "relationships": [],
+    "description": "UK university with campuses in Canterbury and beyond.",
+    "url": "https://www.kent.ac.uk",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "university-of-leicester",
+    "name": "University of Leicester",
+    "kind": "university",
+    "sectors": [
+      "education",
+      "science_research",
+      "space"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "The University of Leicester is a leading UK research institution, recognised globally for its expertise in space science, planetary exploration, and Earth observation technologies.",
+    "url": "https://le.ac.uk",
+    "hubspotId": "128913278200",
+    "logo": "/logos/organisations/uol.png",
+    "featured": false
+  },
+  {
+    "slug": "university-of-the-west-of-england",
+    "name": "University of the West of England",
+    "shortName": "UWE",
+    "aliases": [
+      "University of the West of England (UWE)"
+    ],
+    "kind": "university",
+    "sectors": [
+      "education"
+    ],
+    "relationships": [],
+    "description": "UK university based in Bristol.",
+    "url": "https://www.uwe.ac.uk",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "wholegrain-digital",
+    "name": "Wholegrain Digital",
+    "kind": "company",
+    "sectors": [
+      "technology_digital",
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "Wholegrain Digital is a web agency specialising in sustainable digital design, focusing on energy efficiency, accessibility, and ethical online experiences.",
+    "url": "https://www.wholegraindigital.com",
+    "hubspotId": "00000000017",
+    "logo": "/logos/organisations/wholegrain-digital.jpg",
+    "featured": false
+  },
+  {
+    "slug": "woodland-trust",
+    "name": "Woodland Trust",
+    "kind": "ngo_charity",
+    "sectors": [
+      "climate_sustainability"
+    ],
+    "relationships": [],
+    "description": "UK woodland conservation charity.",
+    "url": "https://www.woodlandtrust.org.uk",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "zero-emissions-network",
+    "name": "Zero Emissions Network",
+    "legacySlugs": [
+      "zeroemissionsnetwork"
+    ],
+    "kind": "network",
+    "sectors": [
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "The Zero Emissions Network helps businesses and residents reduce emissions by promoting active travel, electric vehicles, and cleaner air initiatives.",
+    "url": "https://zeroemissionsnetwork.com",
+    "hubspotId": null,
+    "logo": "/logos/organisations/zen.png",
+    "featured": false
+  },
+  {
+    "slug": "zero-waste-international-alliance",
+    "name": "Zero Waste International Alliance",
+    "legacySlugs": [
+      "zwia"
+    ],
+    "kind": "network",
+    "sectors": [
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "The Zero Waste International Alliance promotes zero waste principles globally, supporting communities, businesses, and governments in reducing waste and protecting resources.",
+    "url": null,
+    "hubspotId": null,
+    "logo": "/logos/organisations/zwia.png",
+    "featured": false
   }
 ]

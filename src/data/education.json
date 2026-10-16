@@ -1,11 +1,10 @@
 [
   {
     "id": "edu-uwe-science-communication",
-    "institution": "University of the West of England (UWE)",
+    "organisationSlug": "university-of-the-west-of-england",
     "role": "Applied Science Communication: Online and Media Writing",
     "qualification": "Applied Science Communication: Online and Media Writing",
     "field": "Science Communication",
-    "institutionType": "University",
     "startDate": "2023-04",
     "endDate": "2023-06",
     "current": false,
@@ -62,11 +61,11 @@
   },
   {
     "id": "edu-cim-digital-marketing",
-    "institution": "Loughborough College",
+    "organisationSlug": "loughborough-college",
+    "awardingBodySlug": "cim",
     "role": "CIM Level 4 Certificate in Professional Digital Marketing",
     "qualification": "CIM Level 4 Certificate in Professional Digital Marketing",
     "field": "Digital Marketing",
-    "institutionType": "College",
     "startDate": "2020-12",
     "endDate": "2021-12",
     "current": false,
@@ -112,7 +111,7 @@
     "articles": [],
     "talks": [],
     "relatedAwards": [],
-    "relatedrelatedCertifications": [
+    "relatedCertifications": [
       "CIM Level 4 Certificate in Professional Digital Marketing"
     ],
     "technologies": [],
@@ -122,11 +121,10 @@
   },
   {
     "id": "edu-isu-ssp",
-    "institution": "International Space University",
+    "organisationSlug": "international-space-university",
     "role": "Space Studies Programme (SSP)",
     "qualification": "Space Studies Programme (SSP)",
     "field": "Space Applications",
-    "institutionType": "University",
     "startDate": "2013-06",
     "endDate": "2013-08",
     "current": false,
@@ -185,11 +183,10 @@
   },
   {
     "id": "edu-leicester-mphys",
-    "institution": "University of Leicester",
+    "organisationSlug": "university-of-leicester",
     "role": "MPhys Physics with Astrophysics (Hons)",
     "qualification": "MPhys Physics with Astrophysics (Hons)",
     "field": "Physics and Astronomy",
-    "institutionType": "University",
     "startDate": "2005-09",
     "endDate": "2009-07",
     "current": false,
@@ -250,11 +247,10 @@
   },
   {
     "id": "edu-kent-astronomy",
-    "institution": "University of Kent",
+    "organisationSlug": "university-of-kent",
     "role": "PhD Candidate, Astronomy",
     "qualification": "PhD Candidate, Astronomy",
     "field": "Astronomy",
-    "institutionType": "University",
     "startDate": "2009-09",
     "endDate": "2012-09",
     "current": false,
@@ -318,45 +314,44 @@
     "featured": false,
     "order": 5
   },
-{
-  "id": "edu-skegness-grammar",
-  "institution": "Skegness Grammar School",
-  "role": "Student",
-  "qualification": "A-levels and GCSEs",
-  "institutionType": "Secondary School",
-  "startDate": "1998-09",
-  "endDate": "2005-08",
-  "current": false,
-  "city": "Skegness",
-  "country": "United Kingdom",
- "summary": "Attended a selective grammar school and completed a rigorous academic programme with strong results across mathematics, sciences, languages, and humanities. The school was the first British secondary school to be awarded Grant Maintained status by the government in 1988, reflecting its longstanding academic reputation and independent ethos.\nA-levels (2005): Mathematics, Further Mathematics, Additional Further Mathematics, Physics, Chemistry.\nAS-levels: completed alongside the sixth-form programme.\nGCSEs (2003): French A*, Spanish A, English Language A, English Literature A, Physics A, Chemistry A, Biology A, Geography B, Mathematics A*.",
-  "keyActivities": [
-    "Studied a broad science and mathematics curriculum.",
-    "Completed advanced mathematics and physics qualifications at A-level.",
-    "Achieved strong GCSE results across languages, sciences, humanities, and mathematics."
-  ],
-  "skills": [
-    "Mathematical Reasoning",
-    "Scientific Literacy",
-    "Analytical Thinking",
-    "Written Communication",
-    "Language Learning",
-    "Problem Solving"
-  ],
-  "domainExpertise": [],
-  "technicalSkills": [],
-  "practices": [],
-  "leadershipAndCollaboration": [],
-  "areasOfInterest": [],
-  "projects": [],
-  "clients": [],
-  "articles": [],
-  "talks": [],
-  "relatedAwards": [],
-  "relatedCertifications": [],
-  "technologies": [],
-  "media": [],
-  "featured": false,
-  "order": 1
-}
+  {
+    "id": "edu-skegness-grammar",
+    "organisationSlug": "skegness-grammar-school",
+    "role": "Student",
+    "qualification": "A-levels and GCSEs",
+    "startDate": "1998-09",
+    "endDate": "2005-08",
+    "current": false,
+    "city": "Skegness",
+    "country": "United Kingdom",
+    "summary": "Attended a selective grammar school and completed a rigorous academic programme with strong results across mathematics, sciences, languages, and humanities. The school was the first British secondary school to be awarded Grant Maintained status by the government in 1988, reflecting its longstanding academic reputation and independent ethos.\nA-levels (2005): Mathematics, Further Mathematics, Additional Further Mathematics, Physics, Chemistry.\nAS-levels: completed alongside the sixth-form programme.\nGCSEs (2003): French A*, Spanish A, English Language A, English Literature A, Physics A, Chemistry A, Biology A, Geography B, Mathematics A*.",
+    "keyActivities": [
+      "Studied a broad science and mathematics curriculum.",
+      "Completed advanced mathematics and physics qualifications at A-level.",
+      "Achieved strong GCSE results across languages, sciences, humanities, and mathematics."
+    ],
+    "skills": [
+      "Mathematical Reasoning",
+      "Scientific Literacy",
+      "Analytical Thinking",
+      "Written Communication",
+      "Language Learning",
+      "Problem Solving"
+    ],
+    "domainExpertise": [],
+    "technicalSkills": [],
+    "practices": [],
+    "leadershipAndCollaboration": [],
+    "areasOfInterest": [],
+    "projects": [],
+    "clients": [],
+    "articles": [],
+    "talks": [],
+    "relatedAwards": [],
+    "relatedCertifications": [],
+    "technologies": [],
+    "media": [],
+    "featured": false,
+    "order": 1
+  }
 ]
