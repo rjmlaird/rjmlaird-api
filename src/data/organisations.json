@@ -2493,41 +2493,135 @@
     "featured": false
   },
   {
-    "slug": "zero-emissions-network",
-    "name": "Zero Emissions Network",
-    "legacySlugs": [
-      "zeroemissionsnetwork"
-    ],
-    "kind": "network",
-    "sectors": [
-      "climate_sustainability"
-    ],
-    "relationships": [
-      "member"
-    ],
-    "description": "The Zero Emissions Network helps businesses and residents reduce emissions by promoting active travel, electric vehicles, and cleaner air initiatives.",
-    "url": "https://zeroemissionsnetwork.com",
-    "hubspotId": null,
-    "logo": "/logos/organisations/zen.png",
-    "featured": false
-  },
-  {
-    "slug": "zero-waste-international-alliance",
-    "name": "Zero Waste International Alliance",
-    "legacySlugs": [
-      "zwia"
-    ],
-    "kind": "network",
-    "sectors": [
-      "climate_sustainability"
-    ],
-    "relationships": [
-      "partner"
-    ],
-    "description": "The Zero Waste International Alliance promotes zero waste principles globally, supporting communities, businesses, and governments in reducing waste and protecting resources.",
-    "url": null,
-    "hubspotId": null,
-    "logo": "/logos/organisations/zwia.png",
-    "featured": false
-  }
+  "slug": "zero-emissions-network",
+  "name": "Zero Emissions Network",
+  "legacySlugs": [
+    "zeroemissionsnetwork"
+  ],
+  "kind": "network",
+  "sectors": [
+    "climate_sustainability"
+  ],
+  "relationships": [
+    "member"
+  ],
+  "description": "The Zero Emissions Network helps businesses and residents reduce emissions by promoting active travel, electric vehicles, and cleaner air initiatives.",
+  "url": "https://zeroemissionsnetwork.com",
+  "logo": "/logos/organisations/zen.png",
+  "featured": false
+},
+{
+  "slug": "zero-waste-international-alliance",
+  "name": "Zero Waste International Alliance",
+  "legacySlugs": [
+    "zwia"
+  ],
+  "kind": "network",
+  "sectors": [
+    "climate_sustainability"
+  ],
+  "relationships": [
+    "partner"
+  ],
+  "description": "The Zero Waste International Alliance promotes zero waste principles globally, supporting communities, businesses, and governments in reducing waste and protecting resources.",
+  "url": null,
+  "logo": "/logos/organisations/zwia.png",
+  "featured": false
+},
+{
+  "slug": "leiden-university",
+  "name": "Leiden University",
+  "kind": "university",
+  "sectors": [
+    "education",
+    "science_research",
+    "space"
+  ],
+  "relationships": [],
+  "description": "Dutch research university with a long-standing international reputation in astronomy and space science.",
+  "url": "https://www.universiteitleiden.nl/en",
+  "logo": null,
+  "featured": false
+},
+{
+  "slug": "he-space-operations",
+  "name": "HE Space Operations",
+  "aliases": [
+    "HE Space"
+  ],
+  "kind": "company",
+  "sectors": [
+    "space"
+  ],
+  "relationships": [],
+  "description": "European space-services company providing engineering, operations, and specialist support to the space sector.",
+  "url": "https://www.hespace.com",
+  "logo": null,
+  "featured": false
+},
+{
+  "slug": "impact-orbit-co",
+  "name": "Impact Orbit Co.",
+  "aliases": [
+    "Impact Orbit"
+  ],
+  "kind": "company",
+  "sectors": [
+    "space",
+    "climate_sustainability"
+  ],
+  "relationships": [],
+  "description": "Organisation working on impact-driven approaches to the space sector and its contribution to society.",
+  "url": null,
+  "logo": null,
+  "featured": false
+},
+{
+  "slug": "space-for-neurodiversity",
+  "name": "Space for Neurodiversity",
+  "kind": "network",
+  "sectors": [
+    "space",
+    "health_neurodiversity",
+    "community_charity"
+  ],
+  "relationships": [],
+  "description": "Community supporting neurodivergent people and improving inclusion across the space sector.",
+  "url": null,
+  "logo": null,
+  "featured": false
+},
+{
+  "slug": "british-rocketry-oral-history-programme",
+  "name": "British Rocketry Oral History Programme",
+  "shortName": "BROHP",
+  "aliases": [
+    "BROHP"
+  ],
+  "kind": "programme",
+  "sectors": [
+    "space",
+    "science_research",
+    "events_culture"
+  ],
+  "relationships": [],
+  "description": "Oral-history programme documenting people and stories from the history of British rocketry.",
+  "url": null,
+  "logo": null,
+  "featured": false
+},
+{
+  "slug": "leicester-astronomical-society",
+  "name": "Leicester Astronomical Society",
+  "kind": "learnedsociety",
+  "sectors": [
+    "astronomy",
+    "education"
+  ],
+  "relationships": [],
+  "description": "Astronomy society serving Leicester and the surrounding area.",
+  "url": null,
+  "logo": null,
+  "featured": false
+}
 ]
