@@ -39,13 +39,17 @@ const socialById = new Map<string, SocialSource>(
 
 const profiles: Profile[] = bio.profileIds
   .map((id) => socialById.get(id))
-  .filter((social): social is SocialSource => social !== undefined)
+  .filter(
+    (social): social is SocialSource & { url: string } =>
+      social !== undefined && typeof social.url === "string",
+  )
   .map(({ key, name, url, type }) => ({
     id: key,
     label: name,
     url,
     ...(type ? { type } : {}),
   }));
+
 
 const meta = {
   version: "1",
