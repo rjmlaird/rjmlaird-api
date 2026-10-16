@@ -33,7 +33,7 @@ type Profile = {
 };
 
 const socialById = new Map<string, SocialSource>(
-  socials.profiles.map((social) => [social.key, social]),
+  socials.map((social) => [social.key, social]),
 );
 
 const profiles: Profile[] = bio.profileIds
