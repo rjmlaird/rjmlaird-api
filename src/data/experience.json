@@ -191,6 +191,40 @@
     ]
   },
   {
+    "id": "exp-powering-space",
+    "organisationSlug": "powering-space",
+    "role": "Co-Founder & Director",
+    "employmentType": "Founder",
+    "startDate": "2018-01",
+    "endDate": "2021-12",
+    "current": false,
+    "city": "London",
+    "country": "United Kingdom",
+    "workMode": "Hybrid",
+    "summary": "Co-founded a space-sector outreach and training organisation delivering public engagement events, industry programmes and skills-development initiatives. R&R Space Ltd and Powering Space C.I.C. operated as connected vehicles for this work, presented here as one body of activity.",
+    "responsibilities": [
+      "Developed outreach, training and partnership programmes connecting students, researchers, entrepreneurs and space-sector organisations.",
+      "Coordinated partners, suppliers, schedules and budgets across multiple event workstreams."
+    ],
+    "achievements": [
+      "Built partnerships across universities, industry, public-sector organisations and the regional innovation ecosystem."
+    ],
+    "projects": [,
+      "impulse2021",
+      "impulse2022",
+      "lunch-and-learn"
+    ],
+    "skills": [
+      "Programme Development",
+      "Event Management",
+      "Partnership Development",
+      "Public Engagement",
+      "Workshop Facilitation"
+    ],
+    "featured": false,
+    "order": 4
+  },
+  {
     "id": "exp-design-and-data",
     "organisationSlug": "design-and-data",
     "role": "Editor",

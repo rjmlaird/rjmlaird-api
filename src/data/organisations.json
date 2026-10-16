@@ -999,7 +999,7 @@
     ],
     "description": "The IAU Centre for the Protection of the Dark and Quiet Sky from Satellite Constellation Interference coordinates global efforts to safeguard astronomy from the impact of satellite constellations.",
     "shortDescription": "International initiative protecting astronomical observation conditions.",
-    "url": null,
+    "url": "https://cps.iau.org/",
     "hubspotId": null,
     "logo": "/logos/organisations/iau-cps.png",
     "featured": false
@@ -1094,7 +1094,7 @@
     ],
     "description": "The Institute of Physics is a scientific charity working to advance physics education, research, and application for the benefit of society.",
     "shortDescription": "Professional body advancing physics research and application.",
-    "url": null,
+    "url": "https://iop.org",
     "hubspotId": null,
     "logo": "/logos/organisations/iop.png",
     "featured": false
@@ -1583,7 +1583,7 @@
     ],
     "relationships": [],
     "description": "",
-    "url": null,
+    "url": "https://powering.space",
     "hubspotId": null,
     "logo": null,
     "featured": false
@@ -2621,6 +2621,20 @@
   "relationships": [],
   "description": "Astronomy society serving Leicester and the surrounding area.",
   "url": null,
+  "logo": null,
+  "featured": false
+},
+{
+  "slug": "r-and-r-space",
+  "name": "R & R Space",
+  "kind": "learnedsociety",
+  "sectors": [
+    "astronomy",
+    "education"
+  ],
+  "relationships": [],
+  "description": "Outreach and training organisation delivering public engagement events, industry programmes and skills-development initiatives.",
+  "url": "https://randr.space",
   "logo": null,
   "featured": false
 }
