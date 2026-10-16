@@ -185,7 +185,10 @@
       "Workshop Facilitation"
     ],
     "featured": false,
-    "order": 4
+    "order": 4,
+    "relatedOrg": [
+      "powering-space"
+    ]
   },
   {
     "id": "exp-design-and-data",
