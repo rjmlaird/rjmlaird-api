@@ -8,6 +8,7 @@ import education from "../data/education.json";
 import experience from "../data/experience.json";
 import { languages } from "../data/languages";
 import memberships from "../data/memberships.json";
+import organisations from "../data/organisations.json";
 import profile from "../data/profile.json";
 import skills from "../data/skills.json";
 import teaching from "../data/teaching.json";
@@ -22,6 +23,7 @@ export type CvCollection =
   | "experience"
   | "languages"
   | "memberships"
+  | "organisations"
   | "profile"
   | "skills"
   | "teaching"
@@ -36,6 +38,7 @@ const SECTION_KEYS = [
   "experience",
   "languages",
   "memberships",
+  "organisations",
   "profile",
   "skills",
   "teaching",
@@ -51,6 +54,7 @@ const cvData = {
   experience,
   languages,
   memberships,
+  organisations,
   profile,
   skills,
   teaching,
@@ -58,12 +62,13 @@ const cvData = {
   volunteering,
 } satisfies Record<CvCollection, unknown>;
 
+
 const app = new Hono<{ Bindings: Env }>();
 
 const isCollection = (value: string): value is CvCollection =>
   (SECTION_KEYS as readonly string[]).includes(value);
 
-app.get("/", (c) =>
+app.get("/", () =>
   json({
     service: "cv",
     version: "1.0",
@@ -80,9 +85,9 @@ app.get("/", (c) =>
   }),
 );
 
-app.get("/sections", (c) => json({ sections: SECTION_KEYS }));
+app.get("/sections", () => json({ sections: SECTION_KEYS }));
 
-app.get("/list", (c) =>
+app.get("/list", () =>
   json({
     count: SECTION_KEYS.length,
     items: SECTION_KEYS.map((section) => ({
@@ -92,35 +97,69 @@ app.get("/list", (c) =>
   }),
 );
 
-app.get("/full", (c) => json({ sections: cvData }));
+app.get("/full", () => json({ sections: cvData }));
 
 app.get("/search", (c) => {
   const q = c.req.query("q")?.trim().toLowerCase();
-  if (!q) return json({ error: "Missing ?q=" }, 400);
 
-  const results = SECTION_KEYS.filter((section) =>
-    JSON.stringify(cvData[section]).toLowerCase().includes(q),
-  ).map((section) => ({ section, data: cvData[section] }));
+  if (!q) {
+    return json({ error: "Missing ?q=" }, 400);
+  }
 
-  return json({ query: q, count: results.length, results });
+  const results = SECTION_KEYS
+    .filter((section) =>
+      JSON.stringify(cvData[section]).toLowerCase().includes(q),
+    )
+    .map((section) => ({
+      section,
+      data: cvData[section],
+    }));
+
+  return json({
+    query: q,
+    count: results.length,
+    results,
+  });
 });
 
 app.get("/section/:section", (c) => {
   const section = c.req.param("section");
+
   if (!isCollection(section)) {
-    return json({ error: "Not found", section, allowed: SECTION_KEYS }, 404);
+    return json(
+      {
+        error: "Not found",
+        section,
+        allowed: SECTION_KEYS,
+      },
+      404,
+    );
   }
 
-  return json({ section, data: cvData[section] });
+  return json({
+    section,
+    data: cvData[section],
+  });
 });
 
 app.get("/:collection", (c) => {
   const collection = c.req.param("collection");
+
   if (!isCollection(collection)) {
-    return json({ error: "Not found", collection, allowed: SECTION_KEYS }, 404);
+    return json(
+      {
+        error: "Not found",
+        collection,
+        allowed: SECTION_KEYS,
+      },
+      404,
+    );
   }
 
-  return json({ section: collection, data: cvData[collection] });
+  return json({
+    section: collection,
+    data: cvData[collection],
+  });
 });
 
 export default app;
