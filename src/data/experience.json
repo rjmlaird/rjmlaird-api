@@ -1,7 +1,7 @@
 [
   {
     "id": "exp-green-orbit-founder",
-    "organisation": { "name": "Green Orbit Digital", "website": "https://greenorbit.digital" },
+    "organisationSlug": "green-orbit-digital",
     "role": "Founder & Director",
     "employmentType": "Founder",
     "startDate": "2023-10",
@@ -51,7 +51,7 @@
   },
   {
     "id": "exp-he-space",
-    "organisation": { "name": "HE Space for ESA", "website": "https://hespace.com" },
+    "organisationSlug": "esa",
     "role": "Marketing & Communications Manager",
     "employmentType": "Contract",
     "startDate": "2021-08",
@@ -303,7 +303,7 @@
   },
   {
     "id": "exp-sgac-intern",
-    "organisation": { "name": "Space Generation Advisory Council", "website": "https://spacegeneration.org" },
+    "organisationSlug": "sgac",
     "role": "Intern",
     "employmentType": "Internship",
     "startDate": "2013-01",
@@ -326,7 +326,7 @@
   },
   {
     "id": "exp-kent-demonstrator",
-    "organisation": { "name": "University of Kent", "website": "https://kent.ac.uk" },
+    "organisationSlug": "university-of-kent",
     "role": "Postgraduate Demonstrator",
     "employmentType": "Academic",
     "startDate": "2009-09",
@@ -372,7 +372,7 @@
   },
   {
     "id": "exp-uol-gerb",
-    "organisation": { "name": "University of Leicester", "website": "https://le.ac.uk" },
+    "organisationSlug": "university-of-leicester",
     "role": "Technician",
     "employmentType": "Academic",
     "startDate": "2008-07",
@@ -395,7 +395,7 @@
   },
   {
     "id": "exp-brockington-college",
-    "organisation": { "name": "Brockington College", "website": "" },
+    "organisationSlug": "brockington-college",
     "role": "Student Associate",
     "employmentType": "Placement",
     "startDate": "2008-06",
@@ -417,7 +417,7 @@
   },
   {
     "id": "exp-uol-research-2008",
-    "organisation": { "name": "University of Leicester", "website": "https://le.ac.uk" },
+    "organisationSlug": "university-of-leicester",
     "role": "Technician (Summer Research)",
     "employmentType": "Research Placement",
     "startDate": "2008-06",
