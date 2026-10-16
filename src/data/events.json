@@ -27,8 +27,8 @@
     ],
     "heroImage": "/images/initiatives/lcc.webp",
     "organiser": "Ryan Laird",
-    "hosts": [
-      "Leicester Coffee House Company"
+    "hostOrganisationSlugs": [
+      "leicester-coffee-house-company"
     ],
     "location": {
       "name": "Leicester Coffee House Company",
@@ -76,7 +76,7 @@
     "relatedVideos": [
       "KeRk05Ru__4"
     ],
-    "organiser": "R&R Space",
+    "organisationSlug": "r-and-r-space",
     "speakers": [
       "person1",
       "person2"
@@ -122,7 +122,7 @@
     "relatedVideos": [
       "EegcIc-vfkQ"
     ],
-    "organiser": "R&R Space",
+    "organisationSlug": "r-and-r-space",
     "speakers": [
       "person1",
       "person2"
@@ -168,7 +168,7 @@
     "relatedVideos": [
       "xm98IUpL4Aw"
     ],
-    "organiser": "R&R Space",
+    "organisationSlug": "r-and-r-space",
     "speakers": [
       "person1",
       "person2"
@@ -214,7 +214,7 @@
     "relatedVideos": [
       "FgbmM0A3tIo"
     ],
-    "organiser": "R&R Space",
+    "organisationSlug": "r-and-r-space",
     "speakers": [
       "person1",
       "person2"
@@ -258,13 +258,13 @@
     "relatedVideos": [
       "BJAyWN-qdGs"
     ],
-    "organiser": "R&R Space",
+    "organisationSlug": "r-and-r-space",
     "speakers": [
       "person1",
       "person2"
     ],
-    "hosts": [
-      "DOCK Leicester"
+    "hostOrganisationSlugs": [
+      "dock-leicester"
     ],
     "location": {
       "name": "DOCK Leicester",
@@ -312,13 +312,13 @@
       "__1WZ4d8omg",
       "soTCHJ0fL8g"
     ],
-    "organiser": "R&R Space",
+    "organisationSlug": "r-and-r-space",
     "speakers": [
       "person1",
       "person2"
     ],
-    "hosts": [
-      "DOCK Leicester"
+    "hostOrganisationSlugs": [
+      "dock-leicester"
     ],
     "location": {
       "name": "DOCK Leicester",
@@ -363,13 +363,13 @@
     "heroImage": "https://img.youtube.com/vi/mMLxP3hMIzQ/maxresdefault.jpg",
     "heroAlt": "Spaceoneers Live Thumbnail",
     "imageCredit": "Spaceoneers by Design & Data GmbH",
-    "organiser": "Spaceoneers",
+    "organisationSlug": "spaceoneers",
     "speakers": [
       "person1",
       "person2"
     ],
-    "hosts": [
-      "Spaceoneers"
+    "hostOrganisationSlugs": [
+      "spaceoneers"
     ],
     "location": {
       "online": true,
@@ -409,13 +409,13 @@
     "heroImage": "https://img.youtube.com/vi/tE701hPeSP4/maxresdefault.jpg",
     "heroAlt": "Spaceoneers Live Thumbnail",
     "imageCredit": "Spaceoneers by Design & Data GmbH",
-    "organiser": "Spaceoneers",
+    "organisationSlug": "spaceoneers",
     "speakers": [
       "person1",
       "person2"
     ],
-    "hosts": [
-      "Spaceoneers"
+    "hostOrganisationSlugs": [
+      "spaceoneers"
     ],
     "location": {
       "online": true,
@@ -455,13 +455,13 @@
     "heroImage": "https://img.youtube.com/vi/_qkLLNg8SpI/maxresdefault.jpg",
     "heroAlt": "Spaceoneers Live Thumbnail",
     "imageCredit": "Spaceoneers by Design & Data GmbH",
-    "organiser": "Spaceoneers",
+    "organisationSlug": "spaceoneers",
     "speakers": [
       "person1",
       "person2"
     ],
-    "hosts": [
-      "Spaceoneers"
+    "hostOrganisationSlugs": [
+      "spaceoneers"
     ],
     "location": {
       "online": true,
@@ -703,7 +703,7 @@
     "relatedCaseStudies": [
       "phiweekbootcamp"
     ],
-    "client": "European Space Agency",
+    "clientOrganisationSlug": "esa",
     "relatedExperience": [
       "exp-design-and-data"
     ],
@@ -717,13 +717,13 @@
     "relatedVideos": [
       "https://youtu.be/iUqnJ2XRAus?si=XeHqRQBREd1Vq3n5"
     ],
-    "organiser": "Design & Data GmbH",
+    "organisationSlug": "design-and-data",
     "speakers": [
       "person1",
       "person2"
     ],
-    "hosts": [
-      "European Space Agency"
+    "hostOrganisationSlugs": [
+      "esa"
     ],
     "location": {
       "name": "Pi Campus",
@@ -760,20 +760,20 @@
     "relatedCaseStudies": [
       "phiweekbootcamp"
     ],
-    "client": "European Space Agency",
+    "clientOrganisationSlug": "esa",
     "relatedExperience": [
       "exp-design-and-data"
     ],
     "heroImage": "https://img.youtube.com/vi/TXjvUIJQN4Q/maxresdefault.jpg",
     "heroAlt": "PhiWeek Bootcamp 2018 Thumbnail",
     "imageCredit": "ESA/Design & Data",
-    "organiser": "Design & Data GmbH",
+    "organisationSlug": "design-and-data",
     "speakers": [
       "person1",
       "person2"
     ],
-    "hosts": [
-      "European Space Agency"
+    "hostOrganisationSlugs": [
+      "esa"
     ],
     "location": {
       "name": "ESA ESRIN",
@@ -814,18 +814,16 @@
     "relatedVolunteering": [
       "vol-ukseds-vc"
     ],
-    "organiser": "UKSEDS",
-    "coOrganisers": [
-      {
-        "name": "Surrey EARS"
-      }
+    "organisationSlug": "ukseds",
+    "coOrganisationSlugs": [
+      "surrey-ears"
     ],
     "speakers": [
       "person1",
       "person2"
     ],
-    "hosts": [
-      "University of Surrey"
+    "hostOrganisationSlugs": [
+      "university-of-surrey"
     ],
     "location": {
       "name": "University of Surrey",
@@ -867,18 +865,16 @@
     "relatedVolunteering": [
       "vol-ukseds-secretary"
     ],
-    "organiser": "UKSEDS",
-    "coOrganisers": [
-      {
-        "name": "Leicester AstRoSoc"
-      }
+    "organisationSlug": "ukseds",
+    "coOrganisationSlugs": [
+      "leicester-astrosoc"
     ],
     "speakers": [
       "person1",
       "person2"
     ],
-    "hosts": [
-      "University of Leicester"
+    "hostOrganisationSlugs": [
+      "university-of-leicester"
     ],
     "location": {
       "name": "University of Leicester",
@@ -920,21 +916,17 @@
     "relatedVolunteering": [
       "vol-ukseds-secretary"
     ],
-    "organiser": "UKSEDS",
-    "coOrganisers": [
-      {
-        "name": "BristolSEDS"
-      },
-      {
-        "name": "Bristol CHAOS"
-      }
+    "organisationSlug": "ukseds",
+    "coOrganisationSlugs": [
+      "bristol-seds",
+      "bristol-chaos"
     ],
     "speakers": [
       "person1",
       "person2"
     ],
-    "hosts": [
-      "University of Bristol"
+    "hostOrganisationSlugs": [
+      "university-of-bristol"
     ],
     "location": {
       "name": "University of Bristol",
@@ -1144,9 +1136,9 @@
       "leicscicomm"
     ],
     "heroImage": "/images/events/leicscicomm3.webp",
-    "organiser": "Leicester SciComm",
-    "hosts": [
-      "The Parcel Yard"
+    "organisationSlug": "leicester-scicomm",
+    "hostOrganisationSlugs": [
+      "the-parcel-yard"
     ],
     "location": {
       "name": "The Parcel Yard",
@@ -1188,9 +1180,9 @@
       "leicscicomm"
     ],
     "heroImage": "/images/events/leicscicomm2.webp",
-    "organiser": "Leicester SciComm",
-    "hosts": [
-      "The Parcel Yard"
+    "organisationSlug": "leicester-scicomm",
+    "hostOrganisationSlugs": [
+      "the-parcel-yard"
     ],
     "location": {
       "name": "The Parcel Yard",
@@ -1232,9 +1224,9 @@
       "leicscicomm"
     ],
     "heroImage": "/images/events/leicscicomm1.webp",
-    "organiser": "Leicester SciComm",
-    "hosts": [
-      "The Parcel Yard"
+    "organisationSlug": "leicester-scicomm",
+    "hostOrganisationSlugs": [
+      "the-parcel-yard"
     ],
     "location": {
       "name": "The Parcel Yard",
@@ -1277,8 +1269,8 @@
     ],
     "heroImage": "/images/initiatives/lcc.webp",
     "organiser": "Ryan Laird",
-    "hosts": [
-      "Leicester Coffee House Company"
+    "hostOrganisationSlugs": [
+      "leicester-coffee-house-company"
     ],
     "location": {
       "name": "Leicester Coffee House Company",
@@ -1321,8 +1313,8 @@
     ],
     "heroImage": "/images/initiatives/lcc.webp",
     "organiser": "Ryan Laird",
-    "hosts": [
-      "Leicester Coffee House Company"
+    "hostOrganisationSlugs": [
+      "leicester-coffee-house-company"
     ],
     "location": {
       "name": "Leicester Coffee House Company",
@@ -1365,8 +1357,8 @@
     ],
     "heroImage": "/images/initiatives/lcc.webp",
     "organiser": "Ryan Laird",
-    "hosts": [
-      "Leicester Coffee House Company"
+    "hostOrganisationSlugs": [
+      "leicester-coffee-house-company"
     ],
     "location": {
       "name": "Leicester Coffee House Company",
@@ -1409,8 +1401,8 @@
     ],
     "heroImage": "/images/initiatives/lcc.webp",
     "organiser": "Ryan Laird",
-    "hosts": [
-      "Leicester Coffee House Company"
+    "hostOrganisationSlugs": [
+      "leicester-coffee-house-company"
     ],
     "location": {
       "name": "Leicester Coffee House Company",
@@ -1453,8 +1445,8 @@
     ],
     "heroImage": "/images/initiatives/lcc.webp",
     "organiser": "Ryan Laird",
-    "hosts": [
-      "Leicester Coffee House Company"
+    "hostOrganisationSlugs": [
+      "leicester-coffee-house-company"
     ],
     "location": {
       "name": "Leicester Coffee House Company",
@@ -1497,8 +1489,8 @@
     ],
     "heroImage": "/images/initiatives/lcc.webp",
     "organiser": "Ryan Laird",
-    "hosts": [
-      "Leicester Coffee House Company"
+    "hostOrganisationSlugs": [
+      "leicester-coffee-house-company"
     ],
     "location": {
       "name": "Leicester Coffee House Company",
@@ -1541,8 +1533,8 @@
     ],
     "heroImage": "/images/initiatives/lcc.webp",
     "organiser": "Ryan Laird",
-    "hosts": [
-      "Leicester Coffee House Company"
+    "hostOrganisationSlugs": [
+      "leicester-coffee-house-company"
     ],
     "location": {
       "name": "Leicester Coffee House Company",
@@ -1585,8 +1577,8 @@
     ],
     "heroImage": "/images/initiatives/lcc.webp",
     "organiser": "Ryan Laird",
-    "hosts": [
-      "Leicester Coffee House Company"
+    "hostOrganisationSlugs": [
+      "leicester-coffee-house-company"
     ],
     "location": {
       "name": "Leicester Coffee House Company",
@@ -1629,8 +1621,8 @@
     ],
     "heroImage": "/images/initiatives/lcc.webp",
     "organiser": "Ryan Laird",
-    "hosts": [
-      "Leicester Coffee House Company"
+    "hostOrganisationSlugs": [
+      "leicester-coffee-house-company"
     ],
     "location": {
       "name": "Leicester Coffee House Company",
@@ -1673,8 +1665,8 @@
     ],
     "heroImage": "/images/initiatives/lcc.webp",
     "organiser": "Ryan Laird",
-    "hosts": [
-      "Leicester Coffee House Company"
+    "hostOrganisationSlugs": [
+      "leicester-coffee-house-company"
     ],
     "location": {
       "name": "Leicester Coffee House Company",
@@ -1717,8 +1709,8 @@
     ],
     "heroImage": "/images/initiatives/lcc.webp",
     "organiser": "Ryan Laird",
-    "hosts": [
-      "Leicester Coffee House Company"
+    "hostOrganisationSlugs": [
+      "leicester-coffee-house-company"
     ],
     "location": {
       "name": "Leicester Coffee House Company",
@@ -1761,8 +1753,8 @@
     ],
     "heroImage": "/images/initiatives/lcc.webp",
     "organiser": "Ryan Laird",
-    "hosts": [
-      "Leicester Coffee House Company"
+    "hostOrganisationSlugs": [
+      "leicester-coffee-house-company"
     ],
     "location": {
       "name": "Leicester Coffee House Company",
@@ -1805,8 +1797,8 @@
     ],
     "heroImage": "/images/initiatives/lcc.webp",
     "organiser": "Ryan Laird",
-    "hosts": [
-      "Leicester Coffee House Company"
+    "hostOrganisationSlugs": [
+      "leicester-coffee-house-company"
     ],
     "location": {
       "name": "Leicester Coffee House Company",
@@ -1849,8 +1841,8 @@
     ],
     "heroImage": "/images/initiatives/lcc.webp",
     "organiser": "Ryan Laird",
-    "hosts": [
-      "Leicester Coffee House Company"
+    "hostOrganisationSlugs": [
+      "leicester-coffee-house-company"
     ],
     "location": {
       "name": "Leicester Coffee House Company",
@@ -1893,8 +1885,8 @@
     ],
     "heroImage": "/images/initiatives/lcc.webp",
     "organiser": "Ryan Laird",
-    "hosts": [
-      "Leicester Coffee House Company"
+    "hostOrganisationSlugs": [
+      "leicester-coffee-house-company"
     ],
     "location": {
       "name": "Leicester Coffee House Company",
@@ -1937,8 +1929,8 @@
     ],
     "heroImage": "/images/initiatives/lcc.webp",
     "organiser": "Ryan Laird",
-    "hosts": [
-      "Leicester Coffee House Company"
+    "hostOrganisationSlugs": [
+      "leicester-coffee-house-company"
     ],
     "location": {
       "online": true,
@@ -1976,8 +1968,8 @@
     ],
     "heroImage": "/images/initiatives/lcc.webp",
     "organiser": "Ryan Laird",
-    "hosts": [
-      "Leicester Coffee House Company"
+    "hostOrganisationSlugs": [
+      "leicester-coffee-house-company"
     ],
     "location": {
       "online": true,
@@ -2015,8 +2007,8 @@
     ],
     "heroImage": "/images/initiatives/lcc.webp",
     "organiser": "Ryan Laird",
-    "hosts": [
-      "Leicester Coffee House Company"
+    "hostOrganisationSlugs": [
+      "leicester-coffee-house-company"
     ],
     "location": {
       "online": true,
@@ -2046,7 +2038,7 @@
       "youtube": "https://youtu.be/4DccpiuX9Xw?is=uz0pkk9eU5Yykm0L"
     },
     "impact": {},
-    "client": "DLR",
+    "clientOrganisationSlug": "dlr",
     "relatedExperience": [
       "exp-design-and-data"
     ],
@@ -2062,13 +2054,13 @@
       "3ifypFNULlM",
       "4DccpiuX9Xw"
     ],
-    "organiser": "Design & Data GmbH",
+    "organisationSlug": "design-and-data",
     "speakers": [
       "person1",
       "person2"
     ],
-    "hosts": [
-      "DLR"
+    "hostOrganisationSlugs": [
+      "dlr"
     ],
     "location": {
       "name": "Solution Space",
@@ -2110,7 +2102,7 @@
     "relatedExperience": [
       "exp-powering-space"
     ],
-    "organiser": "Powering Space",
+    "organisationSlug": "powering-space",
     "speakers": [
       "person1",
       "person2"
@@ -2149,7 +2141,7 @@
     "relatedExperience": [
       "exp-powering-space"
     ],
-    "organiser": "Powering Space",
+    "organisationSlug": "powering-space",
     "speakers": [
       "person1",
       "person2"
@@ -2188,7 +2180,7 @@
     "relatedExperience": [
       "exp-design-and-data"
     ],
-    "organiser": "Design & Data GmbH",
+    "organisationSlug": "design-and-data",
     "speakers": [
       "person1",
       "person2"
@@ -2228,8 +2220,8 @@
     ],
     "heroImage": "/images/initiatives/lcc.webp",
     "organiser": "Ryan Laird",
-    "hosts": [
-      "Leicester Coffee House Company"
+    "hostOrganisationSlugs": [
+      "leicester-coffee-house-company"
     ],
     "location": {
       "name": "Leicester Coffee House Company",
@@ -2271,7 +2263,7 @@
     "relatedExperience": [
       "exp-design-and-data"
     ],
-    "organiser": "Design & Data GmbH",
+    "organisationSlug": "design-and-data",
     "speakers": [
       "person1",
       "person2"

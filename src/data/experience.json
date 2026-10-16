@@ -33,7 +33,12 @@
       "Digital Transformation",
       "Sustainable Web Standards"
     ],
-    "projects": ["green-orbit-workshops","marketing-audit","spaceimpactforum","spaceintegrity"],
+    "projects": [
+      "green-orbit-workshops",
+      "marketing-audit",
+      "spaceimpactforum",
+      "spaceintegrity"
+    ],
     "clients": [],
     "articles": [],
     "talks": [],
@@ -71,7 +76,11 @@
       "Played a critical role in increasing programme visibility and engagement across the ESA Business Applications ecosystem.",
       "Standardized multi-channel content workflows, significantly improving project delivery and editorial throughput."
     ],
-    "projects": ["esa-ba-newsletter","esa-ba-webinars","esa-green-dossier"],
+    "projects": [
+      "esa-ba-newsletter",
+      "esa-ba-webinars",
+      "esa-green-dossier"
+    ],
     "skills": [
       "Campaign Management",
       "Technical Communications",
@@ -80,17 +89,21 @@
       "Editorial Planning",
       "Content Marketing"
     ],
-    "clients": ["ESA Business Applications"],
+    "clients": [
+      "ESA Business Applications"
+    ],
     "articles": [],
     "talks": [],
-    "technologies": ["GA4", "CRM"],
+    "technologies": [
+      "GA4",
+      "CRM"
+    ],
     "media": [],
     "featured": true,
     "order": 2
   },
   {
     "id": "exp-freelance",
-    "organisation": { "name": "Self-Employed", "website": "" },
     "role": "Marketing & Communications Consultant",
     "employmentType": "Freelance",
     "startDate": "2018-07",
@@ -110,7 +123,12 @@
       "Successfully delivered multi-year contracts for high-prestige European space and environmental initiatives.",
       "Established a reputation for translating complex R&D projects into accessible, high-performing digital marketing assets."
     ],
-    "projects": ["copernicus-hackathon-leics","esotc2018","vortex","windy"],
+    "projects": [
+      "copernicus-hackathon-leics",
+      "esotc2018",
+      "vortex",
+      "windy"
+    ],
     "skills": [
       "Strategic Communications",
       "Digital Content Strategy",
@@ -124,7 +142,7 @@
   },
   {
     "id": "exp-rr-space",
-    "organisation": { "name": "R&R Space Ltd", "website": "" },
+    "organisationSlug": "r-and-r-space",
     "role": "Co-Founder & Director",
     "employmentType": "Founder",
     "startDate": "2018-01",
@@ -144,7 +162,12 @@
       "Established R&R Space Ltd as a key space-sector outreach initiative.",
       "Successfully converted passive digital interest into active industry engagement."
     ],
-   "projects": ["build4space","spaceup-live","spaceupleics2018","spaceupleics2019"],
+    "projects": [
+      "build4space",
+      "spaceup-live",
+      "spaceupleics2018",
+      "spaceupleics2019"
+    ],
     "skills": [
       "Programme Development",
       "Outreach",
@@ -155,9 +178,9 @@
     "featured": false,
     "order": 4
   },
-    {
+  {
     "id": "exp-powering-space",
-    "organisation": { "name": "Powering Space C.I.C.", "website": "" },
+    "organisationSlug": "powering-space",
     "role": "Co-Founder & Director",
     "employmentType": "Founder",
     "startDate": "2018-01",
@@ -177,7 +200,10 @@
       "Established R&R Space Ltd as a key space-sector outreach initiative.",
       "Successfully converted passive digital interest into active industry engagement."
     ],
-   "projects": ["impulse2021","lunch-and-learn"],
+    "projects": [
+      "impulse2021",
+      "lunch-and-learn"
+    ],
     "skills": [
       "Programme Development",
       "Outreach",
@@ -190,7 +216,7 @@
   },
   {
     "id": "exp-design-and-data",
-    "organisation": { "name": "Design and Data", "website": "https://designanddata.de" },
+    "organisationSlug": "design-and-data",
     "role": "Editor",
     "employmentType": "Contract",
     "startDate": "2015-07",
@@ -210,7 +236,31 @@
       "Delivered high-quality editorial and multimedia content for space-sector communications.",
       "Strengthened narrative and publishing workflows across digital platforms."
     ],
-    "projects": ["vega","spaceoneers","rosetta-strato","rosetta-shop","rosetta-philae-animations","riga-airtext","point-iot-mooc","phiweekbootcamp2019","phiweekbootcamp2018","oceanstatereport4","lunar-exp-interactive-docu","living-with-space-40","little-spaceoneers","innospaceweekend2017","aeolus","bake-in-space","bepi-colombo","breezometer","discovair","esa-industry-days","eumetsat-africa","eumetsat-food","gaia"],
+    "projects": [
+      "vega",
+      "spaceoneers",
+      "rosetta-strato",
+      "rosetta-shop",
+      "rosetta-philae-animations",
+      "riga-airtext",
+      "point-iot-mooc",
+      "phiweekbootcamp2019",
+      "phiweekbootcamp2018",
+      "oceanstatereport4",
+      "lunar-exp-interactive-docu",
+      "living-with-space-40",
+      "little-spaceoneers",
+      "innospaceweekend2017",
+      "aeolus",
+      "bake-in-space",
+      "bepi-colombo",
+      "breezometer",
+      "discovair",
+      "esa-industry-days",
+      "eumetsat-africa",
+      "eumetsat-food",
+      "gaia"
+    ],
     "skills": [
       "Editorial Leadership",
       "Multimedia Storytelling",
@@ -223,7 +273,7 @@
   },
   {
     "id": "exp-bloodhound-ssc",
-    "organisation": { "name": "Bloodhound SSC", "website": "https://www.bloodhoundlsr.com" },
+    "organisationSlug": "bloodhound-ssc",
     "role": "STEM Communicator",
     "employmentType": "Contract",
     "startDate": "2014-08",
@@ -242,7 +292,11 @@
       "Produced education resources widely used in outreach and classroom settings.",
       "Built early experience in STEM communication and public engagement."
     ],
-    "projects": ["bloodhound-blast","desert-living","knex"],
+    "projects": [
+      "bloodhound-blast",
+      "desert-living",
+      "knex"
+    ],
     "skills": [
       "STEM Communication",
       "Public Engagement",
@@ -254,7 +308,7 @@
   },
   {
     "id": "exp-eso-intern",
-    "organisation": { "name": "European Southern Observatory", "website": "https://www.eso.org" },
+    "organisationSlug": "eso",
     "role": "Science Communication Intern",
     "employmentType": "Internship",
     "startDate": "2014-01",
@@ -273,14 +327,23 @@
       "Developed practical experience in science press and outreach writing.",
       "Contributed to public-facing communications for a world-leading astronomy organisation."
     ],
-    "projects": ["esocast","esa-hubble","esoultrahd"],
-    "skills": ["Science Writing", "Press Releases", "Web Content", "Astronomy Communication"],
+    "projects": [
+      "esocast",
+      "esa-hubble",
+      "esoultrahd"
+    ],
+    "skills": [
+      "Science Writing",
+      "Press Releases",
+      "Web Content",
+      "Astronomy Communication"
+    ],
     "featured": false,
     "order": 7
   },
   {
     "id": "exp-unawe-intern",
-    "organisation": { "name": "Universe Awareness", "website": "https://unawe.org" },
+    "organisationSlug": "unawe",
     "role": "Intern (Space Scoop)",
     "employmentType": "Internship",
     "startDate": "2013-10",
@@ -295,9 +358,17 @@
       "Adapted Space Scoop content for new media channels.",
       "Supported outreach strategy for educational astronomy content."
     ],
-    "achievements": ["Helped broaden the reach of astronomy content for schools and youth groups."],
-    "projects": ["space-scoop-comms"],
-    "skills": ["Content Syndication", "Science Education", "Youth Engagement"],
+    "achievements": [
+      "Helped broaden the reach of astronomy content for schools and youth groups."
+    ],
+    "projects": [
+      "space-scoop-comms"
+    ],
+    "skills": [
+      "Content Syndication",
+      "Science Education",
+      "Youth Engagement"
+    ],
     "featured": false,
     "order": 8
   },
@@ -318,9 +389,17 @@
       "Assisted with Space Generation Fusion Forum activities.",
       "Engaged with UN COPUOS sessions."
     ],
-    "achievements": ["Gained experience in global space policy and international advocacy."],
-    "projects": ["sg-fusion-forum"],
-    "skills": ["Space Policy", "International Collaboration", "Programme Coordination"],
+    "achievements": [
+      "Gained experience in global space policy and international advocacy."
+    ],
+    "projects": [
+      "sg-fusion-forum"
+    ],
+    "skills": [
+      "Space Policy",
+      "International Collaboration",
+      "Programme Coordination"
+    ],
     "featured": false,
     "order": 9
   },
@@ -341,15 +420,24 @@
       "Assessed coursework and provided academic feedback.",
       "Supported curriculum delivery and student mentoring."
     ],
-    "achievements": ["Developed experience in academic communication and student support."],
-    "projects": ["standardised-lab-exp"],
-    "skills": ["Physics Education", "Teaching", "Mentoring", "Assessment"],
+    "achievements": [
+      "Developed experience in academic communication and student support."
+    ],
+    "projects": [
+      "standardised-lab-exp"
+    ],
+    "skills": [
+      "Physics Education",
+      "Teaching",
+      "Mentoring",
+      "Assessment"
+    ],
     "featured": false,
     "order": 10
   },
   {
     "id": "exp-sepnet-outreach",
-    "organisation": { "name": "South-East Physics Network", "website": "https://sepnet.ac.uk" },
+    "organisationSlug": "sepnet",
     "role": "Outreach Support",
     "employmentType": "Contract",
     "startDate": "2009-09",
@@ -364,9 +452,17 @@
       "Delivered inflatable planetarium sessions.",
       "Adapted physics content for public and school audiences."
     ],
-    "achievements": ["Built experience in live science presentation and public engagement."],
-    "projects": ["astrodome"],
-    "skills": ["Public Engagement", "Science Communication", "Physics Outreach"],
+    "achievements": [
+      "Built experience in live science presentation and public engagement."
+    ],
+    "projects": [
+      "astrodome"
+    ],
+    "skills": [
+      "Public Engagement",
+      "Science Communication",
+      "Physics Outreach"
+    ],
     "featured": false,
     "order": 11
   },
@@ -387,9 +483,18 @@
       "Developed tools for scientific data visualisation.",
       "Maintained and verified data processing workflows."
     ],
-    "achievements": ["Contributed to satellite instrumentation support and calibration analysis."],
-    "projects": ["gerb"],
-    "skills": ["Data Analysis", "Scientific Computing", "Instrumentation", "Calibration"],
+    "achievements": [
+      "Contributed to satellite instrumentation support and calibration analysis."
+    ],
+    "projects": [
+      "gerb"
+    ],
+    "skills": [
+      "Data Analysis",
+      "Scientific Computing",
+      "Instrumentation",
+      "Calibration"
+    ],
     "featured": false,
     "order": 12
   },
@@ -409,9 +514,17 @@
       "Assisted in classroom science teaching for students aged 11–14.",
       "Supported practical science experiments and lesson preparation."
     ],
-    "achievements": ["Developed confidence in communicating science to younger students."],
-    "projects": ["school-experiment"],
-    "skills": ["Education Support", "Classroom Assistance", "Science Communication"],
+    "achievements": [
+      "Developed confidence in communicating science to younger students."
+    ],
+    "projects": [
+      "school-experiment"
+    ],
+    "skills": [
+      "Education Support",
+      "Classroom Assistance",
+      "Science Communication"
+    ],
     "featured": false,
     "order": 13
   },
@@ -432,9 +545,17 @@
       "Investigated stellar absorption features.",
       "Produced research outputs through data interpretation."
     ],
-    "achievements": ["Completed an undergraduate summer research placement in astrophysics."],
-    "projects": ["white-dwarves"],
-    "skills": ["Astrophysics", "Spectral Analysis", "Data Interpretation"],
+    "achievements": [
+      "Completed an undergraduate summer research placement in astrophysics."
+    ],
+    "projects": [
+      "white-dwarves"
+    ],
+    "skills": [
+      "Astrophysics",
+      "Spectral Analysis",
+      "Data Interpretation"
+    ],
     "featured": false,
     "order": 14
   }

@@ -9,7 +9,6 @@
     "podcastDescription": "ESOcast brings you the latest news and discoveries from the European Southern Observatory, covering astronomy, space science, and cosmic phenomena.",
     "podcastFeedUrl": "http://feeds2.feedburner.com/ESOcast?format=xml",
     "podcastWebsite": "https://www.eso.org/public/videos/archive/category/esocast/",
-    "podcastPublisher": "European Southern Observatory",
     "podcastLanguage": "en",
     "podcastCoverImage": "https://www.eso.org/public/archives/images/esocast.png",
     "tags": [
@@ -40,7 +39,8 @@
       "exp-eso-intern"
     ],
     "content": "\n",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/podcasts/esocast66.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/podcasts/esocast66.md",
+    "organisationSlug": "eso"
   },
   {
     "slug": "esocast65",
@@ -52,7 +52,6 @@
     "podcastDescription": "ESOcast brings you the latest news and discoveries from the European Southern Observatory, covering astronomy, space science, and cosmic phenomena.",
     "podcastWebsite": "https://www.eso.org/public/videos/archive/category/esocast/",
     "podcastFeedUrl": "http://feeds2.feedburner.com/ESOcast?format=xml",
-    "podcastPublisher": "European Southern Observatory",
     "podcastLanguage": "en",
     "podcastCoverImage": "https://www.eso.org/public/archives/images/esocast.png",
     "tags": [
@@ -83,7 +82,8 @@
       "exp-eso-intern"
     ],
     "content": "",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/podcasts/esocast65.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/podcasts/esocast65.md",
+    "organisationSlug": "eso"
   },
   {
     "slug": "esocast64",
@@ -95,7 +95,6 @@
     "podcastDescription": "ESOcast brings you the latest news and discoveries from the European Southern Observatory, covering astronomy, space science, and cosmic phenomena.",
     "podcastWebsite": "https://www.eso.org/public/videos/archive/category/esocast/",
     "podcastFeedUrl": "http://feeds2.feedburner.com/ESOcast?format=xml",
-    "podcastPublisher": "European Southern Observatory",
     "podcastLanguage": "en",
     "podcastCoverImage": "https://www.eso.org/public/archives/images/esocast.png",
     "tags": [
@@ -131,7 +130,8 @@
       "esocast"
     ],
     "content": "\n",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/podcasts/esocast64.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/podcasts/esocast64.md",
+    "organisationSlug": "eso"
   },
   {
     "slug": "ecosend",
@@ -141,7 +141,6 @@
     "podcastDescription": "The EcoSend Podcast explores how to build a truly climate-conscious business, covering sustainability, marketing, startups, software, and space. This episode continues that mission with a focused conversation about space sustainability and satellite technology.",
     "podcastWebsite": "https://ecosend.io",
     "podcastFeedUrl": "https://feeds.transistor.fm/the-ecosend-podcast",
-    "podcastPublisher": "EcoSend",
     "podcastLanguage": "en",
     "podcastCoverImage": "/images/podcasts/ecosend-podcast.jpg",
     "tags": [
@@ -168,6 +167,7 @@
     "summary": "An episode about sustainability and space, including satellite data, space debris, and climate impact.",
     "canonical": "https://ecosend.io/podcast/s4e10-sustainability-and-space-with-ryan-laird",
     "content": "\n## Episode overview\n\nWhen it comes to sustainability, we usually think about life here on Earth. This episode asks what happens when we extend that conversation into space.\n\nJames Gill speaks with Ryan Laird, Founder and Director of Green Orbit Digital, about how satellite data and space technology can support climate action and better environmental decision-making.\n\n## Topics covered\n\n- Ryan’s journey from Physics to Marketing and Space Sustainability.\n- The rise of private ventures in the space industry.\n- The challenge of integrating sustainable practice into satellite management.\n- How satellite data can help safeguard the future against climate change.\n- The idea of creating a digital twin of the world to monitor planetary health and inform environmental policy.\n\n## Key takeaway\n\nThe episode argues that sustainability should apply not only to our work on Earth, but also to how we build, launch, and manage technology in space.\n\n## About Ryan Laird\n\nRyan Laird is the Founder and Director of Green Orbit Digital, where he helps businesses navigate the intersection of digital marketing and sustainability in the space industry.\n\n## Further resources\n\n- [Green Orbit Digital website](https://greenorbit.space)\n- [Green Orbit Digital on LinkedIn](https://www.linkedin.com/company/greenorbitdigital/)\n- [Green Orbit Digital on Twitter](https://twitter.com/greenorbitspace)\n- [INCO Academy's Green Digital Skills Course](https://www.greenskills.inco-group.co/)\n\n\n## Music credit\n\nMusic credit: bensound.com\n",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/podcasts/ecosend.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/podcasts/ecosend.md",
+    "organisationSlug": "ecosend"
   }
 ]

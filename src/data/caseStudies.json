@@ -53,7 +53,6 @@
       "youtube": "https://youtu.be/OdjDiMfyrro?si=cY3WCURPPg9M93NJ"
     },
     "impact": {},
-    "client": "European Space Agency",
     "relatedExperience": [
       "exp-design-and-data"
     ],
@@ -65,7 +64,8 @@
     "heroAlt": "PhiWeek Bootcamp Thumbnail",
     "imageCredit": "ESA/Design & Data",
     "content": "# ",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/case-studies/phiweekbootcamp.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/case-studies/phiweekbootcamp.md",
+    "clientOrganisationSlug": "esa"
   },
   {
     "slug": "oceanstatereport",
@@ -85,7 +85,6 @@
       "youtube": "https://youtu.be/xlKmSGvqaFo?si=EfmvAENYYSJK20xI"
     },
     "impact": {},
-    "client": "Mercator Ocean",
     "relatedExperience": [
       "exp-design-and-data"
     ],
@@ -98,7 +97,8 @@
     "heroAlt": "Ocean State Report 4 Thumbnail",
     "imageCredit": "Mercator Ocean/Design & Data",
     "content": "# \n",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/case-studies/oceanstatereport.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/case-studies/oceanstatereport.md",
+    "clientOrganisationSlug": "mercator-ocean"
   },
   {
     "slug": "nssc",
@@ -148,7 +148,6 @@
       "web": "https://example.com"
     },
     "impact": {},
-    "client": "EUMETSAT",
     "relatedExperience": [
       "exp-design-and-data"
     ],
@@ -159,7 +158,8 @@
     "heroAlt": "EUMETSAT in Africa Thumbnail",
     "imageCredit": "EUMETSAT/Design & Data",
     "content": "# \n",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/case-studies/eumetsat-africa.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/case-studies/eumetsat-africa.md",
+    "clientOrganisationSlug": "eumetsat"
   },
   {
     "slug": "esoultrahd",
@@ -180,7 +180,6 @@
     },
     "impact": {},
     "draft": false,
-    "client": "European Southern Observatory",
     "relatedExperience": [
       "exp-eso-intern"
     ],
@@ -191,7 +190,8 @@
     "heroAlt": "High on the Chajnantor Plateau, some 5000 metres above sea level it can get extremely cold at the site of the Atacama Large Millimeter/submillimeter Array (ALMA). Babak Tafreshi, one of ESO's Photo Ambassadors and part of the ESO Ultra HD Expedition team is shown here capturing the cool cosmos.",
     "imageCredit": "ESO/B. Tafreshi (twanight.org)",
     "content": "\n# Heading \n\nText, blah blah blah",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/case-studies/esoultrahd.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/case-studies/esoultrahd.md",
+    "clientOrganisationSlug": "eso"
   },
   {
     "slug": "esotc2017",
@@ -211,7 +211,6 @@
       "web": "https://climate.copernicus.eu/CopernicusESC"
     },
     "impact": {},
-    "client": "ECMWF",
     "relatedExperience": [
       "exp-design-and-data"
     ],
@@ -230,7 +229,8 @@
     "heroAlt": "PhiWeek Bootcamp 2019 Thumbnail",
     "imageCredit": "ESA/Design & Data",
     "content": "# \n",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/case-studies/esotc2017.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/case-studies/esotc2017.md",
+    "clientOrganisationSlug": "ecmwf"
   },
   {
     "slug": "esocast",

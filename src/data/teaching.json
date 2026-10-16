@@ -1,5 +1,5 @@
 {
-  "institution": "University of Kent",
+  "organisationSlug": "university-of-kent",
   "location": "Canterbury, UK",
   "programmes": [
     {
@@ -14,7 +14,12 @@
           "credits": 15,
           "term": "Winter 2009/10",
           "type": "mathematics",
-          "tags": ["algebra", "mathematics", "foundations", "physics-prep"]
+          "tags": [
+            "algebra",
+            "mathematics",
+            "foundations",
+            "physics-prep"
+          ]
         },
         {
           "code": "PH021",
@@ -23,7 +28,12 @@
           "credits": 15,
           "term": "Winter 2011/12",
           "type": "mathematics",
-          "tags": ["algebra", "mathematics", "foundations", "physics-prep"]
+          "tags": [
+            "algebra",
+            "mathematics",
+            "foundations",
+            "physics-prep"
+          ]
         },
         {
           "code": "PS370",
@@ -32,7 +42,12 @@
           "credits": 15,
           "term": "Winter 2009/10",
           "type": "skills",
-          "tags": ["problem-solving", "experimental-skills", "data-analysis", "physics-foundations"]
+          "tags": [
+            "problem-solving",
+            "experimental-skills",
+            "data-analysis",
+            "physics-foundations"
+          ]
         },
         {
           "code": "PH302",
@@ -41,12 +56,16 @@
           "credits": 15,
           "term": "Winter 2011/12",
           "type": "computing",
-          "tags": ["python", "programming", "numerical-methods", "scientific-computing"]
+          "tags": [
+            "python",
+            "programming",
+            "numerical-methods",
+            "scientific-computing"
+          ]
         }
       ]
     }
   ],
-
   "summary": {
     "focus": "Foundational physics education bridging mathematics, computation, and core scientific reasoning.",
     "skills_developed": [

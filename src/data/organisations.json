@@ -1,5 +1,27 @@
 [
   {
+    "slug": "absw",
+    "name": "Association of British Science Writers",
+    "shortName": "ABSW",
+    "aliases": [
+      "Association of British Science Writers (ABSW)"
+    ],
+    "kind": "professional_body",
+    "sectors": [
+      "media_publishing",
+      "science_research"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "The Association of British Science Writers supports, promotes, and defends the professional interests of science writers, journalists, and communicators in the UK.",
+    "shortDescription": "Professional body for science writers and communicators.",
+    "url": "https://absw.org.uk",
+    "hubspotId": null,
+    "logo": "/logos/organisations/absw.png",
+    "featured": false
+  },
+  {
     "slug": "act-climate-labs",
     "name": "ACT Climate Labs",
     "kind": "ngo_charity",
@@ -52,28 +74,6 @@
     "featured": false
   },
   {
-    "slug": "absw",
-    "name": "Association of British Science Writers",
-    "shortName": "ABSW",
-    "aliases": [
-      "Association of British Science Writers (ABSW)"
-    ],
-    "kind": "professional_body",
-    "sectors": [
-      "media_publishing",
-      "science_research"
-    ],
-    "relationships": [
-      "member"
-    ],
-    "description": "The Association of British Science Writers supports, promotes, and defends the professional interests of science writers, journalists, and communicators in the UK.",
-    "url": "https://absw.org.uk",
-    "hubspotId": null,
-    "logo": "/logos/organisations/absw.png",
-    "featured": false,
-    "shortDescription": "Professional body for science writers and communicators."
-  },
-  {
     "slug": "b-lab-uk",
     "name": "B Lab UK",
     "kind": "ngo_charity",
@@ -91,6 +91,57 @@
     "featured": false
   },
   {
+    "slug": "bloodhound-ssc",
+    "name": "Bloodhound SSC",
+    "aliases": [
+      "Bloodhound LSR",
+      "BLOODHOUND"
+    ],
+    "kind": "programme",
+    "sectors": [
+      "education",
+      "science_research"
+    ],
+    "relationships": [],
+    "description": "",
+    "url": "https://www.bloodhoundlsr.com",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "bristol-chaos",
+    "name": "Bristol CHAOS",
+    "kind": "student_society",
+    "sectors": [
+      "education"
+    ],
+    "relationships": [],
+    "description": "",
+    "url": null,
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "bristol-seds",
+    "name": "BristolSEDS",
+    "aliases": [
+      "Bristol SEDS"
+    ],
+    "kind": "student_society",
+    "sectors": [
+      "space",
+      "education"
+    ],
+    "relationships": [],
+    "description": "",
+    "url": null,
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
     "slug": "british-interplanetary-society",
     "name": "British Interplanetary Society",
     "shortName": "BIS",
@@ -101,6 +152,20 @@
     "relationships": [],
     "description": "UK-based society promoting spaceflight and space exploration, founded in 1933.",
     "url": "https://www.bis-space.com",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "brockington-college",
+    "name": "Brockington College",
+    "kind": "school",
+    "sectors": [
+      "education"
+    ],
+    "relationships": [],
+    "description": "",
+    "url": null,
     "hubspotId": null,
     "logo": null,
     "featured": false
@@ -190,11 +255,11 @@
       "member"
     ],
     "description": "The Chartered Institute of Marketing is the world’s leading professional marketing body, providing training, resources, and accreditation to marketers worldwide.",
+    "shortDescription": "Professional body for marketing standards, strategy, and accreditation.",
     "url": "https://cim.co.uk",
     "hubspotId": null,
     "logo": "/logos/organisations/cim.png",
-    "featured": false,
-    "shortDescription": "Professional body for marketing standards, strategy, and accreditation."
+    "featured": false
   },
   {
     "slug": "cipr",
@@ -211,11 +276,11 @@
       "member"
     ],
     "description": "The Chartered Institute of Public Relations is a professional body representing PR practitioners, promoting best practice, skills development, and ethical standards.",
+    "shortDescription": "Professional body for public relations and strategic communications.",
     "url": "https://cipr.co.uk",
     "hubspotId": null,
     "logo": "/logos/organisations/cipr.png",
-    "featured": false,
-    "shortDescription": "Professional body for public relations and strategic communications."
+    "featured": false
   },
   {
     "slug": "circular-economy-club",
@@ -324,6 +389,20 @@
     "featured": false
   },
   {
+    "slug": "communicator-awards",
+    "name": "The Communicator Awards",
+    "kind": "awarding_body",
+    "sectors": [
+      "marketing_comms"
+    ],
+    "relationships": [],
+    "description": "International awards programme recognising excellence in communications.",
+    "url": "https://www.communicatorawards.com",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
     "slug": "copernicus-eu",
     "name": "Copernicus EU",
     "kind": "programme",
@@ -411,6 +490,88 @@
     "featured": false
   },
   {
+    "slug": "design-and-data",
+    "name": "Design & Data GmbH",
+    "aliases": [
+      "Design and Data",
+      "Design & Data"
+    ],
+    "kind": "company",
+    "sectors": [
+      "design_creative",
+      "space",
+      "marketing_comms"
+    ],
+    "relationships": [],
+    "description": "",
+    "url": "https://designanddata.de",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "designers-in-space-community",
+    "name": "Designers in Space Community",
+    "kind": "network",
+    "sectors": [
+      "design_creative",
+      "space"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "Designers in Space is a global community for creatives working in or inspired by the space sector, fostering collaboration and design-led innovation in space exploration.",
+    "shortDescription": "Community exploring design and UX in space systems.",
+    "url": "https://dis.community",
+    "hubspotId": null,
+    "logo": "/logos/organisations/disc.png",
+    "featured": false
+  },
+  {
+    "slug": "dlr",
+    "name": "German Aerospace Center",
+    "shortName": "DLR",
+    "aliases": [
+      "DLR",
+      "Deutsches Zentrum für Luft- und Raumfahrt"
+    ],
+    "kind": "space_agency",
+    "sectors": [
+      "space",
+      "science_research"
+    ],
+    "relationships": [
+      "client"
+    ],
+    "description": "",
+    "url": null,
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "dock-leicester",
+    "name": "DOCK",
+    "aliases": [
+      "DOCK Leicester"
+    ],
+    "legacySlugs": [
+      "dockleicester"
+    ],
+    "kind": "company",
+    "sectors": [
+      "business_support"
+    ],
+    "relationships": [
+      "supplier"
+    ],
+    "description": "DOCK is a Leicester-based innovation hub providing office space, labs, and support for high-tech and low-carbon businesses.",
+    "url": "https://dockleicester.co.uk",
+    "hubspotId": null,
+    "logo": "/logos/organisations/dockleicester.png",
+    "featured": false
+  },
+  {
     "slug": "dwp",
     "name": "Department for Work and Pensions",
     "shortName": "DWP",
@@ -428,40 +589,45 @@
     "featured": false
   },
   {
-    "slug": "designers-in-space-community",
-    "name": "Designers in Space Community",
-    "kind": "network",
+    "slug": "earsc",
+    "name": "European Association of Remote Sensing Companies",
+    "shortName": "EARSC",
+    "aliases": [
+      "European Association of Remote Sensing Companies (EARSC)"
+    ],
+    "kind": "trade_association",
     "sectors": [
-      "design_creative",
       "space"
     ],
     "relationships": [
       "member"
     ],
-    "description": "Designers in Space is a global community for creatives working in or inspired by the space sector, fostering collaboration and design-led innovation in space exploration.",
-    "url": "https://dis.community",
+    "description": "The European Association of Remote Sensing Companies represents the Earth observation industry, fostering growth, partnerships, and the uptake of satellite-based services.",
+    "shortDescription": "European industry association for Earth observation and remote sensing.",
+    "url": "https://earsc.org",
     "hubspotId": null,
-    "logo": "/logos/organisations/disc.png",
-    "featured": false,
-    "shortDescription": "Community exploring design and UX in space systems."
+    "logo": "/logos/organisations/earsc.png",
+    "featured": false
   },
   {
-    "slug": "dock-leicester",
-    "name": "DOCK",
-    "legacySlugs": [
-      "dockleicester"
+    "slug": "ecmwf",
+    "name": "European Centre for Medium-Range Weather Forecasts",
+    "shortName": "ECMWF",
+    "aliases": [
+      "Copernicus ECMWF"
     ],
-    "kind": "company",
+    "kind": "intergovernmental",
     "sectors": [
-      "business_support"
+      "science_research",
+      "climate_sustainability"
     ],
     "relationships": [
-      "supplier"
+      "partner"
     ],
-    "description": "DOCK is a Leicester-based innovation hub providing office space, labs, and support for high-tech and low-carbon businesses.",
-    "url": "https://dockleicester.co.uk",
-    "hubspotId": null,
-    "logo": "/logos/organisations/dockleicester.png",
+    "description": "ECMWF provides global medium-range weather forecasts, supporting climate research, operational meteorology, and environmental monitoring across Europe.",
+    "url": "https://www.ecmwf.int",
+    "hubspotId": "00000000015",
+    "logo": "/logos/organisations/ecmwf.jpg",
     "featured": false
   },
   {
@@ -529,81 +695,12 @@
     "featured": false
   },
   {
-    "slug": "eumetsat",
-    "name": "EUMETSAT",
-    "kind": "intergovernmental",
-    "sectors": [
-      "space",
-      "climate_sustainability"
-    ],
-    "relationships": [
-      "partner"
-    ],
-    "description": "EUMETSAT operates meteorological satellites to monitor climate, weather, and environmental conditions across Europe, supporting scientific research and operational services.",
-    "url": "https://www.eumetsat.int",
-    "hubspotId": "00000000012",
-    "logo": "/logos/organisations/eumetsat.png",
-    "featured": false
-  },
-  {
-    "slug": "earsc",
-    "name": "European Association of Remote Sensing Companies",
-    "shortName": "EARSC",
-    "aliases": [
-      "European Association of Remote Sensing Companies (EARSC)"
-    ],
-    "kind": "trade_association",
-    "sectors": [
-      "space"
-    ],
-    "relationships": [
-      "member"
-    ],
-    "description": "The European Association of Remote Sensing Companies represents the Earth observation industry, fostering growth, partnerships, and the uptake of satellite-based services.",
-    "url": "https://earsc.org",
-    "hubspotId": null,
-    "logo": "/logos/organisations/earsc.png",
-    "featured": false,
-    "shortDescription": "European industry association for Earth observation and remote sensing."
-  },
-  {
-    "slug": "ecmwf",
-    "name": "European Centre for Medium-Range Weather Forecasts",
-    "shortName": "ECMWF",
-    "kind": "intergovernmental",
-    "sectors": [
-      "science_research",
-      "climate_sustainability"
-    ],
-    "relationships": [
-      "partner"
-    ],
-    "description": "ECMWF provides global medium-range weather forecasts, supporting climate research, operational meteorology, and environmental monitoring across Europe.",
-    "url": "https://www.ecmwf.int",
-    "hubspotId": "00000000015",
-    "logo": "/logos/organisations/ecmwf.jpg",
-    "featured": false
-  },
-  {
-    "slug": "eso",
-    "name": "European Southern Observatory",
-    "shortName": "ESO",
-    "kind": "observatory",
-    "sectors": [
-      "astronomy",
-      "science_research"
-    ],
-    "relationships": [],
-    "description": "Intergovernmental European astronomy organisation operating observatories in Chile, including La Silla.",
-    "url": "https://www.eso.org",
-    "hubspotId": null,
-    "logo": null,
-    "featured": false
-  },
-  {
     "slug": "esa",
     "name": "European Space Agency",
     "shortName": "ESA",
+    "aliases": [
+      "ESA - European Space Agency"
+    ],
     "kind": "space_agency",
     "sectors": [
       "space"
@@ -615,6 +712,23 @@
     "url": "https://www.esa.int",
     "hubspotId": "118940428524",
     "logo": "/logos/organisations/esa.png",
+    "featured": false
+  },
+  {
+    "slug": "eso",
+    "name": "European Southern Observatory",
+    "shortName": "ESO",
+    "aliases": [],
+    "kind": "observatory",
+    "sectors": [
+      "astronomy",
+      "science_research"
+    ],
+    "relationships": [],
+    "description": "Intergovernmental European astronomy organisation operating observatories in Chile, including La Silla.",
+    "url": "https://www.eso.org",
+    "hubspotId": null,
+    "logo": null,
     "featured": false
   },
   {
@@ -633,6 +747,23 @@
     "url": "https://esric.esa.int",
     "hubspotId": "00000000003",
     "logo": "/logos/organisations/esric.jpg",
+    "featured": false
+  },
+  {
+    "slug": "eumetsat",
+    "name": "EUMETSAT",
+    "kind": "intergovernmental",
+    "sectors": [
+      "space",
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "EUMETSAT operates meteorological satellites to monitor climate, weather, and environmental conditions across Europe, supporting scientific research and operational services.",
+    "url": "https://www.eumetsat.int",
+    "hubspotId": "00000000012",
+    "logo": "/logos/organisations/eumetsat.png",
     "featured": false
   },
   {
@@ -706,11 +837,11 @@
       "member"
     ],
     "description": "The Global Space Enablers Network fosters equitable entrepreneurial ecosystems in developing and emerging countries to ensure inclusive access to the opportunities of space.",
+    "shortDescription": "Global network supporting emerging space ecosystems.",
     "url": "https://www.spaceenablers.net/",
     "hubspotId": null,
     "logo": "/logos/organisations/gsen.png",
-    "featured": false,
-    "shortDescription": "Global network supporting emerging space ecosystems."
+    "featured": false
   },
   {
     "slug": "good-business-charter",
@@ -867,11 +998,11 @@
       "member"
     ],
     "description": "The IAU Centre for the Protection of the Dark and Quiet Sky from Satellite Constellation Interference coordinates global efforts to safeguard astronomy from the impact of satellite constellations.",
+    "shortDescription": "International initiative protecting astronomical observation conditions.",
     "url": null,
     "hubspotId": null,
     "logo": "/logos/organisations/iau-cps.png",
-    "featured": false,
-    "shortDescription": "International initiative protecting astronomical observation conditions."
+    "featured": false
   },
   {
     "slug": "inco-academy",
@@ -907,28 +1038,6 @@
     "featured": false
   },
   {
-    "slug": "iop",
-    "name": "Institute of Physics",
-    "shortName": "IOP",
-    "aliases": [
-      "Institute of Physics (IOP)"
-    ],
-    "kind": "professional_body",
-    "sectors": [
-      "science_research",
-      "education"
-    ],
-    "relationships": [
-      "member"
-    ],
-    "description": "The Institute of Physics is a scientific charity working to advance physics education, research, and application for the benefit of society.",
-    "url": null,
-    "hubspotId": null,
-    "logo": "/logos/organisations/iop.png",
-    "featured": false,
-    "shortDescription": "Professional body advancing physics research and application."
-  },
-  {
     "slug": "international-astronautical-federation",
     "name": "International Astronautical Federation",
     "legacySlugs": [
@@ -945,23 +1054,6 @@
     "url": "https://www.iafastro.org",
     "hubspotId": "00000000013",
     "logo": "/logos/organisations/iaf.png",
-    "featured": false
-  },
-  {
-    "slug": "isds",
-    "name": "International Society for Development and Sustainability",
-    "kind": "ngo_charity",
-    "sectors": [
-      "climate_sustainability",
-      "science_research"
-    ],
-    "relationships": [
-      "partner"
-    ],
-    "description": "The International Society for Development and Sustainability promotes sustainable development research and practice through global collaboration and knowledge exchange.",
-    "url": "https://sfdora.org",
-    "hubspotId": "178336278741",
-    "logo": "/logos/organisations/isds.png",
     "featured": false
   },
   {
@@ -986,21 +1078,25 @@
     "featured": false
   },
   {
-    "slug": "itu",
-    "name": "International Telecommunication Union",
-    "shortName": "ITU",
-    "kind": "intergovernmental",
+    "slug": "iop",
+    "name": "Institute of Physics",
+    "shortName": "IOP",
+    "aliases": [
+      "Institute of Physics (IOP)"
+    ],
+    "kind": "professional_body",
     "sectors": [
-      "telecoms",
-      "space"
+      "science_research",
+      "education"
     ],
     "relationships": [
-      "partner"
+      "member"
     ],
-    "description": "The ITU is the United Nations specialised agency for information and communication technologies, coordinating global telecom standards and satellite spectrum management.",
-    "url": "https://www.itu.int",
-    "hubspotId": "00000000008",
-    "logo": "/logos/organisations/itu.png",
+    "description": "The Institute of Physics is a scientific charity working to advance physics education, research, and application for the benefit of society.",
+    "shortDescription": "Professional body advancing physics research and application.",
+    "url": null,
+    "hubspotId": null,
+    "logo": "/logos/organisations/iop.png",
     "featured": false
   },
   {
@@ -1023,6 +1119,41 @@
     "url": "https://www.isc2.org",
     "hubspotId": null,
     "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "isds",
+    "name": "International Society for Development and Sustainability",
+    "kind": "ngo_charity",
+    "sectors": [
+      "climate_sustainability",
+      "science_research"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "The International Society for Development and Sustainability promotes sustainable development research and practice through global collaboration and knowledge exchange.",
+    "url": "https://sfdora.org",
+    "hubspotId": "178336278741",
+    "logo": "/logos/organisations/isds.png",
+    "featured": false
+  },
+  {
+    "slug": "itu",
+    "name": "International Telecommunication Union",
+    "shortName": "ITU",
+    "kind": "intergovernmental",
+    "sectors": [
+      "telecoms",
+      "space"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "The ITU is the United Nations specialised agency for information and communication technologies, coordinating global telecom standards and satellite spectrum management.",
+    "url": "https://www.itu.int",
+    "hubspotId": "00000000008",
+    "logo": "/logos/organisations/itu.png",
     "featured": false
   },
   {
@@ -1075,6 +1206,21 @@
     "featured": false
   },
   {
+    "slug": "leicester-astrosoc",
+    "name": "Leicester AstRoSoc",
+    "kind": "student_society",
+    "sectors": [
+      "astronomy",
+      "education"
+    ],
+    "relationships": [],
+    "description": "",
+    "url": null,
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
     "slug": "leicester-city-council",
     "name": "Leicester City Council",
     "kind": "local_authority",
@@ -1088,6 +1234,37 @@
     "url": "https://leicester.gov.uk",
     "hubspotId": "28162402530",
     "logo": "/logos/organisations/lcc.png",
+    "featured": false
+  },
+  {
+    "slug": "leicester-coffee-house-company",
+    "name": "Leicester Coffee House Company",
+    "kind": "company",
+    "sectors": [
+      "events_culture"
+    ],
+    "relationships": [],
+    "description": "",
+    "url": null,
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "leicester-scicomm",
+    "name": "Leicester SciComm",
+    "kind": "network",
+    "sectors": [
+      "science_research",
+      "education"
+    ],
+    "relationships": [
+      "own"
+    ],
+    "description": "",
+    "url": null,
+    "hubspotId": null,
+    "logo": null,
     "featured": false
   },
   {
@@ -1177,6 +1354,9 @@
   {
     "slug": "mercator-ocean",
     "name": "Mercator Ocean",
+    "aliases": [
+      "Copernicus Marine Environment Monitoring Service (CMEMS)"
+    ],
     "kind": "research_centre",
     "sectors": [
       "science_research",
@@ -1391,6 +1571,44 @@
     "featured": false
   },
   {
+    "slug": "powering-space",
+    "name": "Powering Space C.I.C.",
+    "aliases": [
+      "Powering Space"
+    ],
+    "kind": "company",
+    "sectors": [
+      "space",
+      "education"
+    ],
+    "relationships": [],
+    "description": "",
+    "url": null,
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "r-and-r-space",
+    "name": "R&R Space Ltd",
+    "shortName": "R&R Space",
+    "aliases": [
+      "R&R Space"
+    ],
+    "kind": "company",
+    "sectors": [
+      "space",
+      "events_culture",
+      "marketing_comms"
+    ],
+    "relationships": [],
+    "description": "",
+    "url": null,
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
     "slug": "rainforest-foundation-uk",
     "name": "Rainforest Foundation UK",
     "kind": "ngo_charity",
@@ -1404,23 +1622,6 @@
     "url": "https://rainforestfoundation.org.uk",
     "hubspotId": null,
     "logo": "/logos/organisations/rainforest-uk.png",
-    "featured": false
-  },
-  {
-    "slug": "rebel-business-school",
-    "name": "Rebel Business School",
-    "kind": "training_provider",
-    "sectors": [
-      "education",
-      "business_support"
-    ],
-    "relationships": [
-      "partner"
-    ],
-    "description": "Rebel Business School delivers practical, free training that empowers people to start and grow businesses without debt or traditional constraints.",
-    "url": "https://therebelschool.com",
-    "hubspotId": null,
-    "logo": "/logos/organisations/rebel.png",
     "featured": false
   },
   {
@@ -1446,6 +1647,23 @@
     "featured": false
   },
   {
+    "slug": "rebel-business-school",
+    "name": "Rebel Business School",
+    "kind": "training_provider",
+    "sectors": [
+      "education",
+      "business_support"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "Rebel Business School delivers practical, free training that empowers people to start and grow businesses without debt or traditional constraints.",
+    "url": "https://therebelschool.com",
+    "hubspotId": null,
+    "logo": "/logos/organisations/rebel.png",
+    "featured": false
+  },
+  {
     "slug": "secure-world-foundation",
     "name": "Secure World Foundation",
     "kind": "ngo_charity",
@@ -1460,6 +1678,38 @@
     "url": "https://swfound.org",
     "hubspotId": "00000000021",
     "logo": "/logos/organisations/secure-world-foundation.png",
+    "featured": false
+  },
+  {
+    "slug": "sepnet",
+    "name": "South-East Physics Network",
+    "shortName": "SEPnet",
+    "kind": "network",
+    "sectors": [
+      "education",
+      "science_research"
+    ],
+    "relationships": [],
+    "description": "",
+    "url": "https://sepnet.ac.uk",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "sgac",
+    "name": "Space Generation Advisory Council",
+    "shortName": "SGAC",
+    "kind": "network",
+    "sectors": [
+      "space",
+      "education"
+    ],
+    "relationships": [],
+    "description": "Global network of students and young professionals that brings youth perspectives on space to the UN and space agencies.",
+    "url": "https://spacegeneration.org",
+    "hubspotId": null,
+    "logo": null,
     "featured": false
   },
   {
@@ -1614,22 +1864,6 @@
     "featured": false
   },
   {
-    "slug": "sgac",
-    "name": "Space Generation Advisory Council",
-    "shortName": "SGAC",
-    "kind": "network",
-    "sectors": [
-      "space",
-      "education"
-    ],
-    "relationships": [],
-    "description": "Global network of students and young professionals that brings youth perspectives on space to the UN and space agencies.",
-    "url": "https://spacegeneration.org",
-    "hubspotId": null,
-    "logo": null,
-    "featured": false
-  },
-  {
     "slug": "space-park-leicester",
     "name": "Space Park Leicester",
     "kind": "research_centre",
@@ -1727,11 +1961,28 @@
       "member"
     ],
     "description": "Space4Climate is a professional network bringing together expertise in climate services from space, helping to turn satellite data into actionable insights for climate resilience and sustainability.",
+    "shortDescription": "Network translating satellite data into climate services.",
     "url": "https://space4climate.com",
     "hubspotId": null,
     "logo": "/logos/organisations/s4c.png",
-    "featured": false,
-    "shortDescription": "Network translating satellite data into climate services."
+    "featured": false
+  },
+  {
+    "slug": "spaceoneers",
+    "name": "Spaceoneers",
+    "kind": "programme",
+    "sectors": [
+      "space",
+      "events_culture"
+    ],
+    "relationships": [
+      "own"
+    ],
+    "description": "",
+    "url": "https://spaceoneers.io",
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
   },
   {
     "slug": "spacepride",
@@ -1767,6 +2018,40 @@
     "url": "https://spaceprojects.uk",
     "hubspotId": null,
     "logo": "/logos/organisations/spaceprojects-uk.png",
+    "featured": false
+  },
+  {
+    "slug": "spacetec-partners",
+    "name": "SpaceTec Partners",
+    "kind": "company",
+    "sectors": [
+      "space",
+      "business_support"
+    ],
+    "relationships": [
+      "client"
+    ],
+    "description": "",
+    "url": null,
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "spaceup-leicester",
+    "name": "SpaceUp Leicester",
+    "kind": "event",
+    "sectors": [
+      "space",
+      "events_culture"
+    ],
+    "relationships": [
+      "own"
+    ],
+    "description": "",
+    "url": null,
+    "hubspotId": null,
+    "logo": null,
     "featured": false
   },
   {
@@ -1806,6 +2091,21 @@
     "featured": false
   },
   {
+    "slug": "surrey-ears",
+    "name": "Surrey EARS",
+    "kind": "student_society",
+    "sectors": [
+      "space",
+      "education"
+    ],
+    "relationships": [],
+    "description": "",
+    "url": null,
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
     "slug": "sustainable-business-alliance",
     "name": "Sustainable Business Alliance",
     "legacySlugs": [
@@ -1842,27 +2142,6 @@
     "featured": false
   },
   {
-    "slug": "tnfd",
-    "name": "Taskforce on Nature-related Financial Disclosures",
-    "shortName": "TNFD",
-    "aliases": [
-      "Taskforce on Nature-related Financial Disclosures (TNFD)"
-    ],
-    "kind": "network",
-    "sectors": [
-      "finance",
-      "climate_sustainability"
-    ],
-    "relationships": [
-      "member"
-    ],
-    "description": "The TNFD develops a risk management and disclosure framework for organisations to report and act on nature-related risks, supporting a shift in global financial flows toward nature-positive outcomes.",
-    "url": "https://tnfd.global",
-    "hubspotId": null,
-    "logo": "/logos/organisations/tnfd.png",
-    "featured": false
-  },
-  {
     "slug": "the-climate-coalition",
     "name": "The Climate Coalition",
     "kind": "ngo_charity",
@@ -1879,15 +2158,15 @@
     "featured": false
   },
   {
-    "slug": "communicator-awards",
-    "name": "The Communicator Awards",
-    "kind": "awarding_body",
+    "slug": "the-parcel-yard",
+    "name": "The Parcel Yard",
+    "kind": "company",
     "sectors": [
-      "marketing_comms"
+      "events_culture"
     ],
     "relationships": [],
-    "description": "International awards programme recognising excellence in communications.",
-    "url": "https://www.communicatorawards.com",
+    "description": "",
+    "url": null,
     "hubspotId": null,
     "logo": null,
     "featured": false
@@ -1906,6 +2185,27 @@
     "url": "https://tide.co",
     "hubspotId": null,
     "logo": "/logos/organisations/tide.png",
+    "featured": false
+  },
+  {
+    "slug": "tnfd",
+    "name": "Taskforce on Nature-related Financial Disclosures",
+    "shortName": "TNFD",
+    "aliases": [
+      "Taskforce on Nature-related Financial Disclosures (TNFD)"
+    ],
+    "kind": "network",
+    "sectors": [
+      "finance",
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "The TNFD develops a risk management and disclosure framework for organisations to report and act on nature-related risks, supporting a shift in global financial flows toward nature-positive outcomes.",
+    "url": "https://tnfd.global",
+    "hubspotId": null,
+    "logo": "/logos/organisations/tnfd.png",
     "featured": false
   },
   {
@@ -1989,26 +2289,43 @@
       "member"
     ],
     "description": "UKspace is the official trade association for the UK space industry, representing and promoting the sector’s interests to government, media, and international stakeholders.",
+    "shortDescription": "UK trade association for the space industry.",
     "url": "https://ukspace.org",
     "hubspotId": null,
     "logo": "/logos/organisations/ukspace.png",
-    "featured": false,
-    "shortDescription": "UK trade association for the space industry."
+    "featured": false
   },
   {
-    "slug": "united-nations",
-    "name": "United Nations",
+    "slug": "un-spider",
+    "name": "United Nations Platform for Space-based Information for Disaster Management and Emergency Response",
     "kind": "intergovernmental",
     "sectors": [
+      "space",
       "government_policy"
     ],
     "relationships": [
       "partner"
     ],
-    "description": "The United Nations promotes international cooperation across peace, development, human rights, and sustainability, including its space-related programmes and initiatives.",
-    "url": "https://www.un.org",
-    "hubspotId": "00000000028",
-    "logo": "/logos/organisations/united-nations.png",
+    "description": "UN-SPIDER provides access to space-based information to support disaster management and emergency response worldwide, promoting the use of satellite data for resilience.",
+    "url": "https://www.un-spider.org",
+    "hubspotId": "00000000009",
+    "logo": "/logos/organisations/un-spider.png",
+    "featured": false
+  },
+  {
+    "slug": "unawe",
+    "name": "Universe Awareness",
+    "shortName": "UNAWE",
+    "kind": "programme",
+    "sectors": [
+      "astronomy",
+      "education"
+    ],
+    "relationships": [],
+    "description": "",
+    "url": "https://unawe.org",
+    "hubspotId": null,
+    "logo": null,
     "featured": false
   },
   {
@@ -2030,38 +2347,34 @@
     "featured": false
   },
   {
-    "slug": "unoosa",
-    "name": "United Nations Office for Outer Space Affairs",
-    "shortName": "UNOOSA",
+    "slug": "united-nations",
+    "name": "United Nations",
     "kind": "intergovernmental",
     "sectors": [
-      "space",
       "government_policy"
     ],
     "relationships": [
       "partner"
     ],
-    "description": "UNOOSA promotes international cooperation in the peaceful use and exploration of space, ensuring space activities contribute to sustainable development and benefit all humankind.",
-    "url": "https://unoosa.org",
-    "hubspotId": "28180536554",
-    "logo": "/logos/organisations/unoosa.jpg",
+    "description": "The United Nations promotes international cooperation across peace, development, human rights, and sustainability, including its space-related programmes and initiatives.",
+    "url": "https://www.un.org",
+    "hubspotId": "00000000028",
+    "logo": "/logos/organisations/united-nations.png",
     "featured": false
   },
   {
-    "slug": "un-spider",
-    "name": "United Nations Platform for Space-based Information for Disaster Management and Emergency Response",
-    "kind": "intergovernmental",
+    "slug": "university-of-bristol",
+    "name": "University of Bristol",
+    "kind": "university",
     "sectors": [
-      "space",
-      "government_policy"
+      "education",
+      "science_research"
     ],
-    "relationships": [
-      "partner"
-    ],
-    "description": "UN-SPIDER provides access to space-based information to support disaster management and emergency response worldwide, promoting the use of satellite data for resilience.",
-    "url": "https://www.un-spider.org",
-    "hubspotId": "00000000009",
-    "logo": "/logos/organisations/un-spider.png",
+    "relationships": [],
+    "description": "",
+    "url": null,
+    "hubspotId": null,
+    "logo": null,
     "featured": false
   },
   {
@@ -2098,6 +2411,21 @@
     "featured": false
   },
   {
+    "slug": "university-of-surrey",
+    "name": "University of Surrey",
+    "kind": "university",
+    "sectors": [
+      "education",
+      "science_research"
+    ],
+    "relationships": [],
+    "description": "",
+    "url": null,
+    "hubspotId": null,
+    "logo": null,
+    "featured": false
+  },
+  {
     "slug": "university-of-the-west-of-england",
     "name": "University of the West of England",
     "shortName": "UWE",
@@ -2113,6 +2441,24 @@
     "url": "https://www.uwe.ac.uk",
     "hubspotId": null,
     "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "unoosa",
+    "name": "United Nations Office for Outer Space Affairs",
+    "shortName": "UNOOSA",
+    "kind": "intergovernmental",
+    "sectors": [
+      "space",
+      "government_policy"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "UNOOSA promotes international cooperation in the peaceful use and exploration of space, ensuring space activities contribute to sustainable development and benefit all humankind.",
+    "url": "https://unoosa.org",
+    "hubspotId": "28180536554",
+    "logo": "/logos/organisations/unoosa.jpg",
     "featured": false
   },
   {

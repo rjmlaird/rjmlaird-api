@@ -51,7 +51,6 @@
       "youtube": "https://youtu.be/RCWH-Z14Uts?si=oYkWpKhRhBg159Dt"
     },
     "impact": {},
-    "client": "ECMWF",
     "relatedExperience": [
       "exp-design-and-data"
     ],
@@ -62,7 +61,8 @@
     "heroAlt": "Windy Thumbnail",
     "imageCredit": "ECMWF/Design & Data",
     "content": "",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/windy.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/windy.md",
+    "clientOrganisationSlug": "ecmwf"
   },
   {
     "slug": "white-dwarves",
@@ -81,12 +81,12 @@
       "web": "https://le.ac.uk/physics"
     },
     "impact": {},
-    "institution": "University of Leicester",
     "relatedExperience": [
       "exp-uol-research-2008"
     ],
     "content": "\npublication",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/white-dwarves.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/white-dwarves.md",
+    "organisationSlug": "university-of-leicester"
   },
   {
     "slug": "vortex",
@@ -115,7 +115,6 @@
       "youtube": "https://youtu.be/czHlge1hJ7o?si=XrHuk36_ajopdURg"
     },
     "impact": {},
-    "client": "ECMWF",
     "relatedExperience": [
       "exp-design-and-data"
     ],
@@ -126,7 +125,8 @@
     "heroAlt": "Vortex Thumbnail",
     "imageCredit": "ECMWF/Design & Data",
     "content": "",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/vortex.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/vortex.md",
+    "clientOrganisationSlug": "ecmwf"
   },
   {
     "slug": "vega",
@@ -147,7 +147,6 @@
       "youtube": "https://youtu.be/dO6a3EtuF3U?is=1lUkQiCHpXe-Cp-t"
     },
     "impact": {},
-    "client": "European Space Agency",
     "relatedExperience": [
       "exp-design-and-data"
     ],
@@ -158,7 +157,8 @@
     "heroAlt": "Vega Thumbnail",
     "imageCredit": "ESA/Design & Data",
     "content": "\n\n# \n\n",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/vega.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/vega.md",
+    "clientOrganisationSlug": "esa"
   },
   {
     "slug": "ukspace-startup",
@@ -178,12 +178,12 @@
       "web": "https://ukspace.org"
     },
     "impact": {},
-    "client": "UKspace",
     "relatedExperience": [
       "vol-ukspace-startup"
     ],
     "content": "\n# ",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/ukspace-startup.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/ukspace-startup.md",
+    "clientOrganisationSlug": "ukspace"
   },
   {
     "slug": "ukseds-charity",
@@ -381,7 +381,6 @@
       "youtube": "https://youtu.be/iYaFGL7dEBk?is=aYOy039ug9GnuNcj"
     },
     "impact": {},
-    "client": "European Space Agency",
     "caseStudy": "Rosetta Philae",
     "relatedExperience": [
       "exp-design-and-data"
@@ -390,7 +389,8 @@
     "heroAlt": "Screenshots of Rosetta Strato",
     "imageCredit": "Design & Data GmbH",
     "content": "",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/rosetta-strato.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/rosetta-strato.md",
+    "clientOrganisationSlug": "esa"
   },
   {
     "slug": "rosetta-shop",
@@ -419,13 +419,13 @@
       "live": "https://rosettashop.eu"
     },
     "impact": {},
-    "client": "European Space Agency",
     "caseStudy": "Rosetta Philae",
     "relatedExperience": [
       "exp-design-and-data"
     ],
     "content": "\n# \n",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/rosetta-shop.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/rosetta-shop.md",
+    "clientOrganisationSlug": "esa"
   },
   {
     "slug": "rosetta-philae-animations",
@@ -445,7 +445,6 @@
       "live": "https://example.com"
     },
     "impact": {},
-    "client": "European Space Agency",
     "relatedCaseStudies": [
       "rosetta-philae"
     ],
@@ -453,7 +452,8 @@
       "exp-design-and-data"
     ],
     "content": "\n\n# \n",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/rosetta-philae-animations.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/rosetta-philae-animations.md",
+    "clientOrganisationSlug": "esa"
   },
   {
     "slug": "riga-airtext",
@@ -475,7 +475,6 @@
     },
     "impact": {},
     "caseStudy": "ESOTC",
-    "client": "ECMWF",
     "relatedExperience": [
       "exp-design-and-data"
     ],
@@ -483,7 +482,8 @@
     "heroAlt": "Screenshots of the airTEXT app",
     "imageCredit": "ECMWF/Riga airTEXT",
     "content": "\n# \n",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/riga-airtext.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/riga-airtext.md",
+    "clientOrganisationSlug": "ecmwf"
   },
   {
     "slug": "point-iot-mooc",
@@ -512,12 +512,12 @@
       "web": "https://example.com"
     },
     "impact": {},
-    "client": "SpaceTec Partners",
     "relatedExperience": [
       "exp-design-and-data"
     ],
     "content": "\n# \n",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/point-iot-mooc.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/point-iot-mooc.md",
+    "clientOrganisationSlug": "spacetec-partners"
   },
   {
     "slug": "plume",
@@ -607,7 +607,6 @@
       "youtube": "https://youtu.be/xlKmSGvqaFo?is=CkpLT3PQgJK1UkrG"
     },
     "impact": {},
-    "Client": "Mercator Ocean",
     "relatedExperience": [
       "exp-design-and-data"
     ],
@@ -615,7 +614,8 @@
     "heroAlt": "Ocean State Report 4 Thumbnail",
     "imageCredit": "ESA/Design & Data",
     "content": "# \n\n",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/oceanstatereport4.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/oceanstatereport4.md",
+    "clientOrganisationSlug": "mercator-ocean"
   },
   {
     "slug": "marketing-audit",
@@ -644,7 +644,6 @@
       "live": "https://example.com"
     },
     "impact": {},
-    "client": "Climate Action Leicester and Leicestershire",
     "relatedExperience": [
       "exp-design-and-data"
     ],
@@ -654,7 +653,8 @@
       "built environment"
     ],
     "content": "# \n",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/marketing-audit.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/marketing-audit.md",
+    "clientOrganisationSlug": "climate-action-leicester-and-leicestershire"
   },
   {
     "slug": "lunch-and-learn",
@@ -705,7 +705,6 @@
       "web": "https://lunarexploration.esa.int"
     },
     "impact": {},
-    "client": "European Space Agency",
     "relatedExperience": [
       "exp-design-and-data"
     ],
@@ -716,7 +715,8 @@
     "heroAlt": "Lunar Exploration Thumbnail",
     "imageCredit": "ESA/Design & Data",
     "content": "# \n\nAwards : Award of Excellence - The Communicator Awards (https://app.notion.com/p/Award-of-Excellence-The-Communicator-Awards-3803a96540ad8024b927fce03692a86b?pvs=21)\n",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/lunar-exp-interactive-docu.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/lunar-exp-interactive-docu.md",
+    "clientOrganisationSlug": "esa"
   },
   {
     "slug": "living-with-space-40",
@@ -737,7 +737,6 @@
       "youtube": "https://youtu.be/hpBKuqzYnKI?is=pJmzZaCQNSYm1dOC"
     },
     "impact": {},
-    "client": "European Space Agency",
     "relatedExperience": [
       "exp-design-and-data"
     ],
@@ -745,7 +744,8 @@
     "heroAlt": "Living with Space 4.0 Thumbnail",
     "imageCredit": "ESA/Design & Data",
     "content": "# \n",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/living-with-space-40.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/living-with-space-40.md",
+    "clientOrganisationSlug": "esa"
   },
   {
     "slug": "little-spaceoneers",
@@ -850,7 +850,6 @@
       "web": "https://www.nceo.ac.uk/our-research/missions/gerb/"
     },
     "impact": {},
-    "client": "National Centre for Earth Observation",
     "heroImage": "/images/projects/gerb.jpg",
     "heroAlt": "GERB aboard MSG",
     "imageCredit": "NCEO",
@@ -858,7 +857,8 @@
       "exp-uol-gerb"
     ],
     "content": "## Overview\n\nThe Geostationary Earth Radiation Budget (GERB) instruments, originally developed using funding from ESA and NERC, and now supported by EUMETSAT, are unique in providing dedicated measurements of the Earth’s Radiation Budget (ERB) from geostationary orbit.  ",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/gerb.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/gerb.md",
+    "clientOrganisationSlug": "nceo"
   },
   {
     "slug": "gaia",
@@ -882,7 +882,6 @@
     "relatedCaseStudies": [
       "esa-material-labs"
     ],
-    "client": "European Space Agency",
     "relatedExperience": [
       "exp-design-and-data"
     ],
@@ -890,7 +889,8 @@
     "heroAlt": "Gaia Thumbnail",
     "imageCredit": "ESA/Design & Data",
     "content": "# \n",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/gaia.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/gaia.md",
+    "clientOrganisationSlug": "esa"
   },
   {
     "slug": "eumetsat-food",
@@ -921,12 +921,12 @@
     },
     "impact": {},
     "caseStudy": "EUMETSAT in Africa",
-    "client": "EUMETSAT",
     "relatedExperience": [
       "exp-design-and-data"
     ],
     "content": "# \n",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/eumetsat-food.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/eumetsat-food.md",
+    "clientOrganisationSlug": "eumetsat"
   },
   {
     "slug": "esa-industry-days",
@@ -945,12 +945,12 @@
       "web": "https://isd.esa.int"
     },
     "impact": {},
-    "client": "European Space Agency",
     "relatedExperience": [
       "exp-design-and-data"
     ],
     "content": "# \n",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/esa-industry-days.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/esa-industry-days.md",
+    "clientOrganisationSlug": "esa"
   },
   {
     "slug": "esa-hubble",
@@ -969,12 +969,12 @@
       "web": "https://example.com"
     },
     "impact": {},
-    "client": "European Space Agency",
     "relatedExperience": [
       "exp-eso-intern"
     ],
     "content": "# ",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/esa-hubble.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/esa-hubble.md",
+    "clientOrganisationSlug": "esa"
   },
   {
     "slug": "esa-green-dossier",
@@ -993,7 +993,6 @@
       "web": "https://business.esa.int/sites/business/files/ESA%20Green%20Dossier%20MASTER_Digital_Final.pdf"
     },
     "impact": {},
-    "client": "European Space Agency",
     "relatedExperience": [
       "exp-he-space"
     ],
@@ -1001,7 +1000,8 @@
     "heroAlt": "ESA Green Dossier Thumbnail",
     "imageCredit": "ESA",
     "content": "\n# ",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/esa-green-dossier.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/esa-green-dossier.md",
+    "clientOrganisationSlug": "esa"
   },
   {
     "slug": "esa-ba-webinars",
@@ -1020,12 +1020,12 @@
       "web": "https://business.esa.int"
     },
     "impact": {},
-    "client": "European Space Agency",
     "relatedExperience": [
       "exp-he-space"
     ],
     "content": "# \n",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/esa-ba-webinars.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/esa-ba-webinars.md",
+    "clientOrganisationSlug": "esa"
   },
   {
     "slug": "esa-ba-newsletter",
@@ -1078,7 +1078,6 @@
       "youtube": "https://youtu.be/WfQPBSG0Ujw?si=NQXKppoSUZkyEsCf"
     },
     "impact": {},
-    "client": "ECMWF",
     "relatedCaseStudies": [
       "esotc2017"
     ],
@@ -1089,7 +1088,8 @@
     "heroAlt": "Screenshots of the DiscovAir app",
     "imageCredit": "ECMWF/DiscovAir",
     "content": "#\n",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/discovair.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/discovair.md",
+    "clientOrganisationSlug": "ecmwf"
   },
   {
     "slug": "desert-living",
@@ -1141,7 +1141,6 @@
       "web": "https://copernicus-hackathon.le.ac.uk"
     },
     "impact": {},
-    "client": "University of Leicester",
     "relatedExperience": [
       "exp-freelance"
     ],
@@ -1149,7 +1148,8 @@
     "heroAlt": "Attendees from Aegean (Greece) attending the Copernicus Hackathon in Leicester.",
     "imageCredit": "Aegean",
     "content": "# \n",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/copernicus-hackathon-leics.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/copernicus-hackathon-leics.md",
+    "clientOrganisationSlug": "university-of-leicester"
   },
   {
     "slug": "breezometer",
@@ -1175,7 +1175,6 @@
     "relatedCaseStudies": [
       "esotc2017"
     ],
-    "client": "ECMWF",
     "relatedExperience": [
       "exp-design-and-data"
     ],
@@ -1183,7 +1182,8 @@
     "heroAlt": "Screenshot of BreezoMeter App",
     "imageCredit": "ECMWF/BreezoMeter",
     "content": "\n",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/breezometer.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/breezometer.md",
+    "clientOrganisationSlug": "ecmwf"
   },
   {
     "slug": "bloodhound-blast",
@@ -1231,7 +1231,6 @@
       "youtube": "https://youtu.be/djerGKGiNC4?is=Gi6qlOIEgSixa52-"
     },
     "impact": {},
-    "client": "European Space Agency",
     "relatedExperience": [
       "exp-design-and-data"
     ],
@@ -1242,7 +1241,8 @@
     "heroAlt": "BepiColombo Thumbnail",
     "imageCredit": "ESA/Design & Data",
     "content": "#\n\nThe ESA-JAXA BepiColombo mission to Mercury must withstand extremely harsh conditions while in orbit around the innermost planet of our Solar System",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/bepi-colombo.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/bepi-colombo.md",
+    "clientOrganisationSlug": "esa"
   },
   {
     "slug": "bake-in-space",
@@ -1298,7 +1298,6 @@
       "youtube": "https://youtu.be/OOHS8nN1Hcg?is=FGvsLz2ULXEdDodP"
     },
     "impact": {},
-    "client": "European Space Agency",
     "relatedExperience": [
       "exp-design-and-data"
     ],
@@ -1309,6 +1308,7 @@
     "heroAlt": "Aeolus Thumbnail",
     "imageCredit": "ESA/Design & Data",
     "content": "\n",
-    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/aeolus.md"
+    "filePath": "/Volumes/DevProjects/rjmlaird/rjmlaird.co.uk/src/content/projects/aeolus.md",
+    "clientOrganisationSlug": "esa"
   }
 ]
