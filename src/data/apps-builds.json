@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "origin": "https://apps.rjmlaird.co.uk",
+  "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+  "sourceRef": "main",
+  "groups": [
+    {
+      "id": "space",
+      "name": "Space & Astronomy",
+      "blurb": "Dashboards and planners for observing and space data."
+    },
+    {
+      "id": "places",
+      "name": "Places & Infrastructure",
+      "blurb": "Weather and local data dashboards."
+    },
+    {
+      "id": "home",
+      "name": "Home & Everyday",
+      "blurb": "Personal inventory and planning apps for around the house."
+    }
+  ],
+  "statuses": {
+    "active": {
+      "label": "Active",
+      "order": 1
+    },
+    "in-progress": {
+      "label": "In progress",
+      "order": 2
+    },
+    "planned": {
+      "label": "Planned",
+      "order": 3
+    },
+    "archived": {
+      "label": "Archived",
+      "order": 4
+    }
+  },
+  "builds": [
+    {
+      "id": "apps/astrodash",
+      "sourceId": "astrodash",
+      "type": "app",
+      "title": "Astro Mission Control",
+      "description": "An astronomy dashboard for observing, combining Skyfield-based sky positions with weather, space weather, aurora alerts and satellite data.",
+      "group": "space",
+      "tech": [
+        "Python",
+        "Streamlit",
+        "Skyfield"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-11",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "path": "https://astrodash.apps.rjmlaird.co.uk",
+      "url": "https://astrodash.apps.rjmlaird.co.uk/",
+      "sourcePath": "apps/astrodash",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/astrodash"
+    },
+    {
+      "id": "apps/weatherdash",
+      "sourceId": "weatherdash",
+      "type": "app",
+      "title": "Weather Dashboard",
+      "description": "A weather dashboard showing current conditions and forecasts for a chosen location.",
+      "group": "places",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-11",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "path": "https://weatherdash.apps.rjmlaird.co.uk",
+      "url": "https://weatherdash.apps.rjmlaird.co.uk/",
+      "sourcePath": "apps/weatherdash",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/weatherdash"
+    },
+    {
+      "id": "apps/spice-cupboard",
+      "sourceId": "spice-cupboard",
+      "type": "app",
+      "title": "Spice Cupboard & Mix Manager",
+      "description": "Keep track of the spices you have, and see which spice mixes you can make now or are one ingredient short of, with batch scaling.",
+      "group": "home",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "active",
+      "updated": "2026-10-11",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "path": "https://spice-cupboard.apps.rjmlaird.co.uk",
+      "url": "https://spice-cupboard.apps.rjmlaird.co.uk/",
+      "sourcePath": "apps/spice-cupboard",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/spice-cupboard"
+    },
+    {
+      "id": "apps/mini-bar",
+      "sourceId": "mini-bar",
+      "type": "app",
+      "title": "Mini Bar",
+      "description": "A home bar inventory and cocktail manager: record what you have and see which drinks you can make now.",
+      "group": "home",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-11",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "path": "https://mini-bar.apps.rjmlaird.co.uk",
+      "url": "https://mini-bar.apps.rjmlaird.co.uk/",
+      "sourcePath": "apps/mini-bar",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/mini-bar"
+    },
+    {
+      "id": "apps/kinship-notes",
+      "sourceId": "kinship-notes",
+      "type": "app",
+      "title": "Kinship Notes",
+      "description": "Import a GEDCOM family tree, explore it as a whole tree, hourglass, pedigree, descendants or fan chart, and keep private research notes, questions and tasks against each person. Everything stays in your browser.",
+      "group": "home",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "path": "https://kinship-notes.apps.rjmlaird.co.uk",
+      "url": "https://kinship-notes.apps.rjmlaird.co.uk/",
+      "sourcePath": "apps/kinship-notes",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/kinship-notes"
+    }
+  ]
+}

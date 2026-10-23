@@ -1,0 +1,564 @@
+{
+  "schemaVersion": 1,
+  "origin": "https://tools.rjmlaird.co.uk",
+  "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+  "sourceRef": "main",
+  "groups": [
+    {
+      "id": "space",
+      "name": "Space & Astronomy",
+      "blurb": "Orbital mechanics, satellite passes and astronomy utilities."
+    },
+    {
+      "id": "maths-physics",
+      "name": "Maths & Physics",
+      "blurb": "Calculators and converters for physics, engineering and maths."
+    },
+    {
+      "id": "places",
+      "name": "Places & Infrastructure",
+      "blurb": "Coordinates, postcodes and local data lookups."
+    },
+    {
+      "id": "sustainability",
+      "name": "Sustainability & Climate",
+      "blurb": "Emissions reporting and planning tools."
+    },
+    {
+      "id": "productivity",
+      "name": "Focus & Wellbeing",
+      "blurb": "Small tools for focus, breaks and everyday routines."
+    },
+    {
+      "id": "web-dev",
+      "name": "Web & Development",
+      "blurb": "Accessibility and sustainability checks and developer utilities."
+    }
+  ],
+  "statuses": {
+    "active": {
+      "label": "Active",
+      "order": 1
+    },
+    "in-progress": {
+      "label": "In progress",
+      "order": 2
+    },
+    "planned": {
+      "label": "Planned",
+      "order": 3
+    },
+    "archived": {
+      "label": "Archived",
+      "order": 4
+    }
+  },
+  "builds": [
+    {
+      "id": "tools/julian-date",
+      "sourceId": "julian-date",
+      "type": "tool",
+      "title": "Julian Date & Sidereal Time",
+      "description": "Convert between UTC, Julian date, modified Julian date and Unix time, and calculate Greenwich and local mean sidereal time. Also available as a small JSON API.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-11",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/julian-date",
+      "url": "https://tools.rjmlaird.co.uk/julian-date",
+      "sourcePath": "apps/julian-date",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/julian-date"
+    },
+    {
+      "id": "tools/orbital-calc",
+      "sourceId": "orbital-calc",
+      "type": "tool",
+      "title": "Orbital Calculator",
+      "description": "Two-body orbit calculator. Enter a semi-major axis and eccentricity to get the period, periapsis and apoapsis radii and the speeds at each, using the vis-viva equation. Defaults to Earth's gravitational parameter.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-09",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/orbital-calc",
+      "url": "https://tools.rjmlaird.co.uk/orbital-calc",
+      "sourcePath": "apps/orbital-calc",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/orbital-calc"
+    },
+    {
+      "id": "tools/hohmann-transfer",
+      "sourceId": "hohmann-transfer",
+      "type": "tool",
+      "title": "Hohmann Transfer Calculator",
+      "description": "Delta-v and transfer time for a two-impulse Hohmann transfer between two circular, coplanar orbits around the same body.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-11",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/hohmann-transfer",
+      "url": "https://tools.rjmlaird.co.uk/hohmann-transfer",
+      "sourcePath": "apps/hohmann-transfer",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/hohmann-transfer"
+    },
+    {
+      "id": "tools/astro-calc",
+      "sourceId": "astro-calc",
+      "type": "tool",
+      "title": "Astronomy Calculator",
+      "description": "Observing and optics calculations for amateur astronomy, such as magnification, field of view, exit pupil and limiting magnitude.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/astro-calc",
+      "url": "https://tools.rjmlaird.co.uk/astro-calc",
+      "sourcePath": "apps/astro-calc",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/astro-calc"
+    },
+    {
+      "id": "tools/satellite-passes",
+      "sourceId": "satellite-passes",
+      "type": "tool",
+      "title": "Satellite Pass Predictor",
+      "description": "Next visible passes of a satellite for a given location, calculated from current orbital elements.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers",
+        "SGP4"
+      ],
+      "status": "planned",
+      "updated": "2026-10-09",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools"
+    },
+    {
+      "id": "tools/moon-sun",
+      "sourceId": "moon-sun",
+      "type": "tool",
+      "title": "Moon & Sun Calculator",
+      "description": "Calculate sunrise, sunset, twilight times, moonrise and moonset, Moon phase and illumination for a location and date.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "planned",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools"
+    },
+    {
+      "id": "tools/deep-sky-visibility",
+      "sourceId": "deep-sky-visibility",
+      "type": "tool",
+      "title": "Deep-Sky Object Visibility",
+      "description": "Check the altitude, azimuth, rise, set and transit times of deep-sky objects from a chosen location and observing time.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "planned",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools"
+    },
+    {
+      "id": "tools/light-pollution",
+      "sourceId": "light-pollution",
+      "type": "tool",
+      "title": "Light Pollution Estimator",
+      "description": "Estimate local sky brightness and Bortle class from a UK location, with practical guidance for visual observing.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "planned",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools"
+    },
+    {
+      "id": "tools/orbital-decay",
+      "sourceId": "orbital-decay",
+      "type": "tool",
+      "title": "Orbital Decay Estimator",
+      "description": "Estimate the approximate orbital lifetime of an Earth satellite from its orbital elements and selected physical assumptions. An educational estimate, not an operational re-entry prediction.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers",
+        "SGP4"
+      ],
+      "status": "planned",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools"
+    },
+    {
+      "id": "tools/unit-converter",
+      "sourceId": "unit-converter",
+      "type": "tool",
+      "title": "Unit Converter",
+      "description": "Convert between physics, engineering and astronomy units, from newtons and pascals to parsecs, solar masses and electronvolts. Also available as a small JSON API.",
+      "group": "maths-physics",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-09",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/unit-converter",
+      "url": "https://tools.rjmlaird.co.uk/unit-converter",
+      "sourcePath": "apps/unit-converter",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/unit-converter"
+    },
+    {
+      "id": "tools/physical-limits",
+      "sourceId": "physical-limits",
+      "type": "tool",
+      "title": "Physical Limits",
+      "description": "Four gravitational limits in one calculator: escape velocity, Hill sphere, Roche limit and Schwarzschild radius.",
+      "group": "maths-physics",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-11",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/physical-limits",
+      "url": "https://tools.rjmlaird.co.uk/physical-limits",
+      "sourcePath": "apps/physical-limits",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/physical-limits"
+    },
+    {
+      "id": "tools/rocket-equation",
+      "sourceId": "rocket-equation",
+      "type": "tool",
+      "title": "Rocket Equation Calculator",
+      "description": "Calculate delta-v from exhaust velocity and mass ratio, or solve for the mass ratio, propellant fraction or payload fraction using the Tsiolkovsky rocket equation.",
+      "group": "maths-physics",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "planned",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools"
+    },
+    {
+      "id": "tools/relativity-calculator",
+      "sourceId": "relativity-calculator",
+      "type": "tool",
+      "title": "Relativity Calculator",
+      "description": "Calculate time dilation, length contraction, relativistic momentum and energy for objects moving at a specified fraction of the speed of light.",
+      "group": "maths-physics",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "planned",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools"
+    },
+    {
+      "id": "tools/carbon-reduction-plan",
+      "sourceId": "carbon-reduction-plan",
+      "type": "tool",
+      "title": "Carbon Reduction Plan Builder",
+      "description": "Record Scope 1, 2 and 3 emissions, track progress against a reduction target and export a printable Carbon Reduction Plan aligned with PPN 006.",
+      "group": "sustainability",
+      "tech": [
+        "React",
+        "Vite",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-12",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/carbon-reduction-plan",
+      "url": "https://tools.rjmlaird.co.uk/carbon-reduction-plan",
+      "sourcePath": "apps/carbon-reduction-plan",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/carbon-reduction-plan"
+    },
+    {
+      "id": "tools/flight-emissions",
+      "sourceId": "flight-emissions",
+      "type": "tool",
+      "title": "Flight Emissions Estimator",
+      "description": "Estimate greenhouse-gas emissions for a flight from origin and destination airports, cabin class and trip type. A modelled estimate, not a measurement.",
+      "group": "sustainability",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "planned",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools"
+    },
+    {
+      "id": "tools/home-energy-baseline",
+      "sourceId": "home-energy-baseline",
+      "type": "tool",
+      "title": "Home Energy Baseline",
+      "description": "Record electricity and gas use, estimate annual emissions, compare against UK benchmarks and identify practical reduction opportunities.",
+      "group": "sustainability",
+      "tech": [
+        "React",
+        "Vite",
+        "Cloudflare Workers"
+      ],
+      "status": "planned",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools"
+    },
+    {
+      "id": "tools/climate-explorer",
+      "sourceId": "climate-explorer",
+      "type": "tool",
+      "title": "UK Climate Explorer",
+      "description": "Explore historical temperature and rainfall trends for UK locations, with clear uncertainty notes and downloadable data.",
+      "group": "sustainability",
+      "tech": [
+        "React",
+        "Vite",
+        "Cloudflare Workers"
+      ],
+      "status": "planned",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools"
+    },
+    {
+      "id": "tools/dopamine-menu",
+      "sourceId": "dopamine-menu",
+      "type": "tool",
+      "title": "Dopamine Menu",
+      "description": "Pick a short, enjoyable or restorative break from your own menu, filtered by type, time and place. Your menu stays in your browser.",
+      "group": "productivity",
+      "tech": [
+        "JavaScript",
+        "Vite",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-12",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/dopamine-menu",
+      "url": "https://tools.rjmlaird.co.uk/dopamine-menu",
+      "sourcePath": "apps/dopamine-menu",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/dopamine-menu"
+    },
+    {
+      "id": "tools/focus-planner",
+      "sourceId": "focus-planner",
+      "type": "tool",
+      "title": "Focus Session Planner",
+      "description": "Plan a short focus session with a chosen work length, break pattern and optional end-of-session prompt. Your settings stay in your browser.",
+      "group": "productivity",
+      "tech": [
+        "JavaScript",
+        "Vite",
+        "Cloudflare Workers"
+      ],
+      "status": "planned",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools"
+    },
+    {
+      "id": "tools/habit-streak",
+      "sourceId": "habit-streak",
+      "type": "tool",
+      "title": "Habit Streak Tracker",
+      "description": "Track simple daily habits with streaks, weekly summaries and local-browser storage. No account required.",
+      "group": "productivity",
+      "tech": [
+        "JavaScript",
+        "Vite",
+        "Cloudflare Workers"
+      ],
+      "status": "planned",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools"
+    },
+    {
+      "id": "tools/coordinate-converter",
+      "sourceId": "coordinate-converter",
+      "type": "tool",
+      "title": "Coordinate Converter",
+      "description": "Convert between latitude/longitude, British National Grid and other coordinate formats.",
+      "group": "places",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/coordinate-converter",
+      "url": "https://tools.rjmlaird.co.uk/coordinate-converter",
+      "sourcePath": "apps/coordinate-converter",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/coordinate-converter"
+    },
+    {
+      "id": "tools/postcode-lookup",
+      "sourceId": "postcode-lookup",
+      "type": "tool",
+      "title": "Postcode Lookup",
+      "description": "Look up a UK postcode for its coordinates, constituency and LSOA.",
+      "group": "places",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "planned",
+      "updated": "2026-10-11",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools"
+    },
+    {
+      "id": "tools/what3words-converter",
+      "sourceId": "what3words-converter",
+      "type": "tool",
+      "title": "What3Words Converter",
+      "description": "Convert between what3words addresses and latitude/longitude coordinates, with links to map and coordinate tools.",
+      "group": "places",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "planned",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools"
+    },
+    {
+      "id": "tools/nearest-postcode",
+      "sourceId": "nearest-postcode",
+      "type": "tool",
+      "title": "Nearest Postcode Finder",
+      "description": "Find the nearest UK postcodes to a coordinate, with distance, direction and links to detailed postcode information.",
+      "group": "places",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "planned",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools"
+    },
+    {
+      "id": "tools/colour-contrast",
+      "sourceId": "colour-contrast",
+      "type": "tool",
+      "title": "Colour Contrast Checker",
+      "description": "WCAG contrast ratios for foreground and background colours, with AA and AAA results and fix suggestions.",
+      "group": "web-dev",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/colour-contrast",
+      "url": "https://tools.rjmlaird.co.uk/colour-contrast",
+      "sourcePath": "apps/colour-contrast",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/colour-contrast"
+    },
+    {
+      "id": "tools/website-carbon",
+      "sourceId": "website-carbon",
+      "type": "tool",
+      "title": "Website Carbon Checker",
+      "description": "Estimate the carbon footprint of a web page from its transfer size, and check whether it is served from green hosting. A modelled estimate, not a measurement.",
+      "group": "web-dev",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "planned",
+      "updated": "2026-10-11",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools"
+    },
+    {
+      "id": "tools/page-weight",
+      "sourceId": "page-weight",
+      "type": "tool",
+      "title": "Page Weight Audit",
+      "description": "Inspect a web page’s transferred bytes, largest assets, request count and caching headers, with practical performance and sustainability suggestions.",
+      "group": "web-dev",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "planned",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools"
+    },
+    {
+      "id": "tools/meta-tag-checker",
+      "sourceId": "meta-tag-checker",
+      "type": "tool",
+      "title": "Meta Tag Checker",
+      "description": "Check a page’s title, description, Open Graph, Twitter card, canonical URL and robots directives against common SEO and sharing requirements.",
+      "group": "web-dev",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "planned",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools"
+    },
+    {
+      "id": "tools/colour-palette",
+      "sourceId": "colour-palette",
+      "type": "tool",
+      "title": "Accessible Colour Palette",
+      "description": "Generate and check accessible colour palettes, with WCAG contrast results for text, interface components and non-text elements.",
+      "group": "web-dev",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "planned",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools"
+    }
+  ]
+}

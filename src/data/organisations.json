@@ -157,20 +157,6 @@
     "featured": false
   },
   {
-    "slug": "brockington-college",
-    "name": "Brockington College",
-    "kind": "school",
-    "sectors": [
-      "education"
-    ],
-    "relationships": [],
-    "description": "",
-    "url": null,
-    "hubspotId": null,
-    "logo": null,
-    "featured": false
-  },
-  {
     "slug": "bsi-sustainable-space",
     "name": "BSI Sustainable Space Community",
     "kind": "network",
@@ -967,21 +953,6 @@
     "featured": false
   },
   {
-    "slug": "hubspot",
-    "name": "HubSpot",
-    "kind": "company",
-    "sectors": [
-      "technology_digital",
-      "marketing_comms"
-    ],
-    "relationships": [],
-    "description": "CRM and marketing software company that runs the HubSpot Academy training and certification programme.",
-    "url": "https://www.hubspot.com",
-    "hubspotId": null,
-    "logo": null,
-    "featured": false
-  },
-  {
     "slug": "iau-cps",
     "name": "IAU Centre for the Protection of Dark and Quiet Skies",
     "shortName": "IAU CPS",
@@ -1412,20 +1383,6 @@
     "featured": false
   },
   {
-    "slug": "open-university",
-    "name": "Open University",
-    "kind": "university",
-    "sectors": [
-      "education"
-    ],
-    "relationships": [],
-    "description": "UK distance-learning university.",
-    "url": "https://www.open.ac.uk",
-    "hubspotId": null,
-    "logo": null,
-    "featured": false
-  },
-  {
     "slug": "orb",
     "name": "Organisation for Responsible Businesses",
     "kind": "network",
@@ -1440,20 +1397,6 @@
     "url": "https://www.orbuk.org.uk",
     "hubspotId": null,
     "logo": "/logos/organisations/orb.jpg",
-    "featured": false
-  },
-  {
-    "slug": "palomar-observatory",
-    "name": "Palomar Observatory",
-    "kind": "observatory",
-    "sectors": [
-      "astronomy"
-    ],
-    "relationships": [],
-    "description": "Astronomical observatory in California, home of the 5 m Hale Telescope.",
-    "url": null,
-    "hubspotId": null,
-    "logo": null,
     "featured": false
   },
   {
@@ -1551,44 +1494,6 @@
     "url": "https://www.ageneciacespacial.pt",
     "hubspotId": "00000000020",
     "logo": "/logos/organisations/portuguese-space.png",
-    "featured": false
-  },
-  {
-    "slug": "powering-space",
-    "name": "Powering Space C.I.C.",
-    "aliases": [
-      "Powering Space"
-    ],
-    "kind": "company",
-    "sectors": [
-      "space",
-      "education"
-    ],
-    "relationships": [],
-    "description": "",
-    "url": "https://powering.space",
-    "hubspotId": null,
-    "logo": null,
-    "featured": false
-  },
-  {
-    "slug": "r-and-r-space",
-    "name": "R&R Space Ltd",
-    "shortName": "R&R Space",
-    "aliases": [
-      "R&R Space"
-    ],
-    "kind": "company",
-    "sectors": [
-      "space",
-      "events_culture",
-      "marketing_comms"
-    ],
-    "relationships": [],
-    "description": "",
-    "url": null,
-    "hubspotId": null,
-    "logo": null,
     "featured": false
   },
   {
@@ -2476,136 +2381,120 @@
     "featured": false
   },
   {
-  "slug": "zero-emissions-network",
-  "name": "Zero Emissions Network",
-  "legacySlugs": [
-    "zeroemissionsnetwork"
-  ],
-  "kind": "network",
-  "sectors": [
-    "climate_sustainability"
-  ],
-  "relationships": [
-    "member"
-  ],
-  "description": "The Zero Emissions Network helps businesses and residents reduce emissions by promoting active travel, electric vehicles, and cleaner air initiatives.",
-  "url": "https://zeroemissionsnetwork.com",
-  "logo": "/logos/organisations/zen.png",
-  "featured": false
-},
-{
-  "slug": "zero-waste-international-alliance",
-  "name": "Zero Waste International Alliance",
-  "legacySlugs": [
-    "zwia"
-  ],
-  "kind": "network",
-  "sectors": [
-    "climate_sustainability"
-  ],
-  "relationships": [
-    "partner"
-  ],
-  "description": "The Zero Waste International Alliance promotes zero waste principles globally, supporting communities, businesses, and governments in reducing waste and protecting resources.",
-  "url": null,
-  "logo": "/logos/organisations/zwia.png",
-  "featured": false
-},
-{
-  "slug": "leiden-university",
-  "name": "Leiden University",
-  "kind": "university",
-  "sectors": [
-    "education",
-    "science_research",
-    "space"
-  ],
-  "relationships": [],
-  "description": "Dutch research university with a long-standing international reputation in astronomy and space science.",
-  "url": "https://www.universiteitleiden.nl/en",
-  "logo": null,
-  "featured": false
-},
-{
-  "slug": "he-space-operations",
-  "name": "HE Space Operations",
-  "aliases": [
-    "HE Space"
-  ],
-  "kind": "company",
-  "sectors": [
-    "space"
-  ],
-  "relationships": [],
-  "description": "European space-services company providing engineering, operations, and specialist support to the space sector.",
-  "url": "https://www.hespace.com",
-  "logo": null,
-  "featured": false
-},
-{
-  "slug": "impact-orbit-co",
-  "name": "Impact Orbit Co.",
-  "aliases": [
-    "Impact Orbit"
-  ],
-  "kind": "company",
-  "sectors": [
-    "space",
-    "climate_sustainability"
-  ],
-  "relationships": [],
-  "description": "Organisation working on impact-driven approaches to the space sector and its contribution to society.",
-  "url": "https://impactorbit.co",
-  "logo": null,
-  "featured": false
-},
-{
-  "slug": "british-rocketry-oral-history-programme",
-  "name": "British Rocketry Oral History Programme",
-  "shortName": "BROHP",
-  "aliases": [
-    "BROHP"
-  ],
-  "kind": "programme",
-  "sectors": [
-    "space",
-    "science_research",
-    "events_culture"
-  ],
-  "relationships": [],
-  "description": "Oral-history programme documenting people and stories from the history of British rocketry.",
-  "url": null,
-  "logo": null,
-  "featured": false
-},
-{
-  "slug": "leicester-astronomical-society",
-  "name": "Leicester Astronomical Society",
-  "kind": "learnedsociety",
-  "sectors": [
-    "astronomy",
-    "education"
-  ],
-  "relationships": [],
-  "description": "Astronomy society serving Leicester and the surrounding area.",
-  "url": null,
-  "logo": null,
-  "featured": false
-},
-{
-  "slug": "r-and-r-space",
-  "name": "R & R Space",
-  "kind": "learnedsociety",
-  "sectors": [
-    "astronomy",
-    "education"
-  ],
-  "relationships": [],
-  "description": "Outreach and training organisation delivering public engagement events, industry programmes and skills-development initiatives.",
-  "url": "https://randr.space",
-  "logo": null,
-  "featured": false
-},[
+    "slug": "zero-emissions-network",
+    "name": "Zero Emissions Network",
+    "legacySlugs": [
+      "zeroemissionsnetwork"
+    ],
+    "kind": "network",
+    "sectors": [
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "member"
+    ],
+    "description": "The Zero Emissions Network helps businesses and residents reduce emissions by promoting active travel, electric vehicles, and cleaner air initiatives.",
+    "url": "https://zeroemissionsnetwork.com",
+    "logo": "/logos/organisations/zen.png",
+    "featured": false
+  },
+  {
+    "slug": "zero-waste-international-alliance",
+    "name": "Zero Waste International Alliance",
+    "legacySlugs": [
+      "zwia"
+    ],
+    "kind": "network",
+    "sectors": [
+      "climate_sustainability"
+    ],
+    "relationships": [
+      "partner"
+    ],
+    "description": "The Zero Waste International Alliance promotes zero waste principles globally, supporting communities, businesses, and governments in reducing waste and protecting resources.",
+    "url": null,
+    "logo": "/logos/organisations/zwia.png",
+    "featured": false
+  },
+  {
+    "slug": "leiden-university",
+    "name": "Leiden University",
+    "kind": "university",
+    "sectors": [
+      "education",
+      "science_research",
+      "space"
+    ],
+    "relationships": [],
+    "description": "Dutch research university with a long-standing international reputation in astronomy and space science.",
+    "url": "https://www.universiteitleiden.nl/en",
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "impact-orbit-co",
+    "name": "Impact Orbit Co.",
+    "aliases": [
+      "Impact Orbit"
+    ],
+    "kind": "company",
+    "sectors": [
+      "space",
+      "climate_sustainability"
+    ],
+    "relationships": [],
+    "description": "Organisation working on impact-driven approaches to the space sector and its contribution to society.",
+    "url": "https://impactorbit.co",
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "british-rocketry-oral-history-programme",
+    "name": "British Rocketry Oral History Programme",
+    "shortName": "BROHP",
+    "aliases": [
+      "BROHP"
+    ],
+    "kind": "programme",
+    "sectors": [
+      "space",
+      "science_research",
+      "events_culture"
+    ],
+    "relationships": [],
+    "description": "Oral-history programme documenting people and stories from the history of British rocketry.",
+    "url": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "leicester-astronomical-society",
+    "name": "Leicester Astronomical Society",
+    "kind": "learnedsociety",
+    "sectors": [
+      "astronomy",
+      "education"
+    ],
+    "relationships": [],
+    "description": "Astronomy society serving Leicester and the surrounding area.",
+    "url": null,
+    "logo": null,
+    "featured": false
+  },
+  {
+    "slug": "r-and-r-space",
+    "name": "R & R Space",
+    "kind": "learnedsociety",
+    "sectors": [
+      "astronomy",
+      "education"
+    ],
+    "relationships": [],
+    "description": "Outreach and training organisation delivering public engagement events, industry programmes and skills-development initiatives.",
+    "url": "https://randr.space",
+    "logo": null,
+    "featured": false
+  },
   {
     "slug": "loughborough-college",
     "name": "Loughborough College",
@@ -2636,25 +2525,6 @@
     "relationships": [],
     "description": "Secondary academy in Enderby, Leicestershire.",
     "url": "https://www.brockington.leics.sch.uk",
-    "hubspotId": null,
-    "logo": null,
-    "featured": false
-  },
-  {
-    "slug": "leiden-university",
-    "name": "Leiden University",
-    "aliases": [
-      "Universiteit Leiden"
-    ],
-    "kind": "university",
-    "sectors": [
-      "education",
-      "science_research",
-      "space"
-    ],
-    "relationships": [],
-    "description": "Dutch research university with a long-standing international reputation in astronomy and space science.",
-    "url": "https://www.universiteitleiden.nl/en",
     "hubspotId": null,
     "logo": null,
     "featured": false
@@ -2763,73 +2633,6 @@
     "relationships": [],
     "description": "Customer platform providing CRM, marketing, sales, service and operations software.",
     "url": "https://www.hubspot.com",
-    "hubspotId": null,
-    "logo": null,
-    "featured": false
-  },
-  {
-    "slug": "google",
-    "name": "Google",
-    "kind": "company",
-    "sectors": [
-      "technology_digital",
-      "software",
-      "business_support"
-    ],
-    "relationships": [],
-    "description": "Technology company providing search, cloud, productivity, advertising and developer services.",
-    "url": "https://www.google.com",
-    "hubspotId": null,
-    "logo": null,
-    "featured": false
-  },
-  {
-    "slug": "space-awareness",
-    "name": "Space Awareness",
-    "kind": "programme",
-    "sectors": [
-      "space",
-      "education",
-      "community_charity"
-    ],
-    "relationships": [],
-    "description": "International education initiative using space science to inspire young people and provide free resources for educators and families.",
-    "url": "https://www.space-awareness.org/en/",
-    "hubspotId": null,
-    "logo": null,
-    "featured": false
-  },
-  {
-    "slug": "small-business-charter",
-    "name": "Small Business Charter",
-    "shortName": "SBC",
-    "aliases": [
-      "SBC"
-    ],
-    "kind": "accreditation",
-    "sectors": [
-      "business_support",
-      "education",
-      "entrepreneurship"
-    ],
-    "relationships": [],
-    "description": "Accreditation scheme recognising business schools that support small businesses, entrepreneurship and local economic growth.",
-    "url": "https://smallbusinesscharter.org",
-    "hubspotId": null,
-    "logo": null,
-    "featured": false
-  },
-  {
-    "slug": "ecodemy",
-    "name": "Ecodemy",
-    "kind": "education_provider",
-    "sectors": [
-      "education",
-      "climate_sustainability"
-    ],
-    "relationships": [],
-    "description": "Sustainability-focused education and training provider helping people and organisations develop skills for positive environmental change.",
-    "url": "https://ecodemy.ca",
     "hubspotId": null,
     "logo": null,
     "featured": false

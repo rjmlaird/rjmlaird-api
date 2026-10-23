@@ -6,6 +6,7 @@ import { methodNotAllowed } from "hono/method-not-allowed";
 import { json } from "./lib/jsonResponse";
 
 import bio from "./routes/bio";
+import builds from "./routes/builds";
 import cv from "./routes/cv";
 import general from "./routes/general";
 import media from "./routes/media";
@@ -19,6 +20,10 @@ const SERVICE_NAME = "rjmlaird-api";
 const VISIBILITY = "public-read-only";
 const PUBLIC_METHODS = "GET, HEAD, OPTIONS";
 
+/**
+ * MIDDLEWARE
+ */
+
 app.use("*", logger());
 
 app.use(
@@ -31,6 +36,10 @@ app.use(
   }),
 );
 
+/**
+ * HEALTH
+ */
+
 app.get("/healthz", () =>
   json({
     status: "ok",
@@ -38,6 +47,10 @@ app.get("/healthz", () =>
     visibility: VISIBILITY,
   }),
 );
+
+/**
+ * API INDEX
+ */
 
 app.get("/v1", (c) => {
   const origin = new URL(c.req.url).origin;
@@ -52,6 +65,7 @@ app.get("/v1", (c) => {
     endpoints: {
       health: "/healthz",
       bio: "/v1/bio",
+      builds: "/v1/builds",
       cv: "/v1/cv",
       portfolio: "/v1/portfolio",
       media: "/v1/media",
@@ -61,12 +75,21 @@ app.get("/v1", (c) => {
   });
 });
 
+/**
+ * VERSIONED ROUTES
+ */
+
 app.route("/v1/bio", bio);
+app.route("/v1/builds", builds);
 app.route("/v1/cv", cv);
 app.route("/v1/portfolio", portfolio);
 app.route("/v1/media", media);
 app.route("/v1/general", general);
 app.route("/v1/site", site);
+
+/**
+ * LEGACY ROUTES
+ */
 
 app.get("/api/profile", () =>
   json(
@@ -84,7 +107,10 @@ app.get("/api/socials", () =>
     {
       error: "Legacy endpoint",
       message: "Use /v1/bio/profiles or /v1/cv/socials instead.",
-      endpoints: ["/v1/bio/profiles", "/v1/cv/socials"],
+      endpoints: [
+        "/v1/bio/profiles",
+        "/v1/cv/socials",
+      ],
     },
     410,
   ),
@@ -100,6 +126,7 @@ app.get("/api/:collection", (c) => {
       message: "Use the versioned /v1 endpoints instead.",
       endpoints: {
         bio: "/v1/bio",
+        builds: "/v1/builds",
         cv: `/v1/cv/${collection}`,
         portfolio: `/v1/portfolio/${collection}`,
         media: `/v1/media/${collection}`,
@@ -109,7 +136,15 @@ app.get("/api/:collection", (c) => {
   );
 });
 
+/**
+ * ROOT SITE ROUTES
+ */
+
 app.route("/", site);
+
+/**
+ * UNSUPPORTED METHODS
+ */
 
 app.use(
   methodNotAllowed({
@@ -124,11 +159,18 @@ app.use(
         },
         405,
         {
-          Allow: methods.length > 0 ? methods.join(", ") : PUBLIC_METHODS,
+          Allow:
+            methods.length > 0
+              ? methods.join(", ")
+              : PUBLIC_METHODS,
         },
       ),
   }),
 );
+
+/**
+ * NOT FOUND
+ */
 
 app.notFound((c) =>
   json(
@@ -136,11 +178,16 @@ app.notFound((c) =>
       error: "Route not found",
       path: c.req.path,
       method: c.req.method,
-      documentation: `${new URL(c.req.url).origin}/openapi.json`,
+      documentation:
+        `${new URL(c.req.url).origin}/openapi.json`,
     },
     404,
   ),
 );
+
+/**
+ * ERROR HANDLING
+ */
 
 app.onError((error, c) => {
   console.error(error);
