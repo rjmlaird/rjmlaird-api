@@ -32,6 +32,10 @@ const openapiSpec = {
       description: "Public biography, professional focus, and contact links.",
     },
     {
+      name: "Builds",
+      description: "Public build catalogue for apps and tools.",
+    },
+    {
       name: "CV",
       description: "Professional profile and CV data.",
     },
@@ -112,6 +116,18 @@ const openapiSpec = {
           },
           "404": {
             description: "Unknown biography section.",
+          },
+        },
+      },
+    },
+    "/v1/builds": {
+      get: {
+        tags: ["Builds"],
+        summary: "Get the public build catalogue",
+        description: "Discover public build information for apps and tools.",
+        responses: {
+          "200": {
+            description: "Public builds API response.",
           },
         },
       },
@@ -799,6 +815,7 @@ site.get("/", (c) =>
 
       <nav class="site-nav" aria-label="API navigation">
         <a href="/v1">API index</a>
+        <a href="/v1/builds">Builds</a>
         <a href="/healthz">Health</a>
         <a class="primary-link" href="/openapi.json">OpenAPI JSON</a>
       </nav>
