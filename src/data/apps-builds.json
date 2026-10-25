@@ -44,7 +44,7 @@
       "sourceId": "astrodash",
       "type": "app",
       "title": "Astro Mission Control",
-      "description": "An astronomy dashboard for observing, combining sky positions with weather, space weather, aurora alerts and satellite data.",
+      "description": "An observing dashboard: what is up tonight, the Moon and darkness, weather, planets, meteor showers, aurora and solar activity.",
       "group": "space",
       "tech": [
         "JavaScript",
@@ -56,8 +56,7 @@
       "status": "in-progress",
       "updated": "2026-10-11",
       "repository": "https://github.com/rjmlaird/rjmlaird-apps",
-      "path": "https://astrodash.apps.rjmlaird.co.uk",
-      "url": "https://astrodash.apps.rjmlaird.co.uk/",
+      "url": "https://astrodash.apps.rjmlaird.co.uk",
       "sourcePath": "apps/astrodash",
       "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/astrodash"
     },
@@ -66,7 +65,7 @@
       "sourceId": "launches",
       "type": "app",
       "title": "Upcoming Rocket Launches",
-      "description": "A readable schedule of the next 20 rocket launches, with times, vehicles and status.",
+      "description": "A live countdown to the next rocket launch and a list of the following ten, with status.",
       "group": "space",
       "tech": [
         "JavaScript",
@@ -75,8 +74,7 @@
       "status": "in-progress",
       "updated": "2026-10-21",
       "repository": "https://github.com/rjmlaird/rjmlaird-apps",
-      "path": "https://launches.apps.rjmlaird.co.uk",
-      "url": "https://launches.apps.rjmlaird.co.uk/",
+      "url": "https://launches.apps.rjmlaird.co.uk",
       "sourcePath": "apps/launches",
       "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/launches"
     },
@@ -85,7 +83,7 @@
       "sourceId": "weatherdash",
       "type": "app",
       "title": "Weather Dashboard",
-      "description": "A weather dashboard showing current conditions and forecasts for a chosen location.",
+      "description": "Weather for any place: current conditions, the next 24 hours, radar, a 7-day forecast, air quality and pollen.",
       "group": "places",
       "tech": [
         "JavaScript",
@@ -95,8 +93,7 @@
       "status": "in-progress",
       "updated": "2026-10-11",
       "repository": "https://github.com/rjmlaird/rjmlaird-apps",
-      "path": "https://weatherdash.apps.rjmlaird.co.uk",
-      "url": "https://weatherdash.apps.rjmlaird.co.uk/",
+      "url": "https://weatherdash.apps.rjmlaird.co.uk",
       "sourcePath": "apps/weatherdash",
       "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/weatherdash"
     },
@@ -115,8 +112,7 @@
       "status": "active",
       "updated": "2026-10-11",
       "repository": "https://github.com/rjmlaird/rjmlaird-apps",
-      "path": "https://spice-cupboard.apps.rjmlaird.co.uk",
-      "url": "https://spice-cupboard.apps.rjmlaird.co.uk/",
+      "url": "https://spice-cupboard.apps.rjmlaird.co.uk",
       "sourcePath": "apps/spice-cupboard",
       "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/spice-cupboard"
     },
@@ -135,8 +131,7 @@
       "status": "in-progress",
       "updated": "2026-10-11",
       "repository": "https://github.com/rjmlaird/rjmlaird-apps",
-      "path": "https://mini-bar.apps.rjmlaird.co.uk",
-      "url": "https://mini-bar.apps.rjmlaird.co.uk/",
+      "url": "https://mini-bar.apps.rjmlaird.co.uk",
       "sourcePath": "apps/mini-bar",
       "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/mini-bar"
     },
@@ -154,8 +149,7 @@
       "status": "in-progress",
       "updated": "2026-10-22",
       "repository": "https://github.com/rjmlaird/rjmlaird-apps",
-      "path": "https://first-aid-kit.apps.rjmlaird.co.uk",
-      "url": "https://first-aid-kit.apps.rjmlaird.co.uk/",
+      "url": "https://first-aid-kit.apps.rjmlaird.co.uk",
       "sourcePath": "apps/first-aid-kit",
       "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/first-aid-kit"
     },
@@ -175,8 +169,7 @@
       "status": "in-progress",
       "updated": "2026-10-22",
       "repository": "https://github.com/rjmlaird/rjmlaird-apps",
-      "path": "https://kinship-notes.apps.rjmlaird.co.uk",
-      "url": "https://kinship-notes.apps.rjmlaird.co.uk/",
+      "url": "https://kinship-notes.apps.rjmlaird.co.uk",
       "sourcePath": "apps/kinship-notes",
       "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/kinship-notes"
     }
