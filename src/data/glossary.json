@@ -1,0 +1,3829 @@
+{
+ "version": "cb3f51d0ded7",
+ "updatedAt": "2026-10-24",
+ "source": "https://glossary.rjmlaird.co.uk/",
+ "categories": [
+  {
+   "id": "space",
+   "label": "Space",
+   "count": 67
+  },
+  {
+   "id": "earth-observation",
+   "label": "Earth observation",
+   "count": 58
+  },
+  {
+   "id": "climate-science",
+   "label": "Climate science",
+   "count": 25
+  },
+  {
+   "id": "sustainability",
+   "label": "Sustainability",
+   "count": 29
+  },
+  {
+   "id": "science-communication",
+   "label": "Science communication",
+   "count": 29
+  },
+  {
+   "id": "marketing",
+   "label": "Marketing",
+   "count": 0
+  },
+  {
+   "id": "web-architecture",
+   "label": "Web architecture",
+   "count": 39
+  }
+ ],
+ "terms": [
+  {
+   "slug": "accretion-disc",
+   "term": "Accretion disc",
+   "category": "space",
+   "aliases": [
+    "accretion disk"
+   ],
+   "short": "An accretion disc is a rotating disc of gas that spirals in towards a central object such as a black hole, a neutron star or a young star.",
+   "definition": "Friction and compression heat the gas, which radiates strongly, often at X-ray wavelengths for compact objects.",
+   "related": [
+    "black-hole",
+    "active-galactic-nucleus",
+    "protoplanetary-disc"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/accretion-disc/"
+  },
+  {
+   "slug": "active-debris-removal",
+   "term": "Active debris removal (ADR)",
+   "category": "space",
+   "aliases": [],
+   "short": "Active debris removal is capturing and deorbiting existing large debris objects, such as defunct satellites and rocket bodies.",
+   "definition": "Most modelling suggests removing a few of the highest-risk objects each year would help stabilise the environment. Demonstration missions have tested capture methods, but cost and legal ownership remain barriers.",
+   "related": [
+    "orbital-debris",
+    "kessler-syndrome",
+    "on-orbit-servicing"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/active-debris-removal/"
+  },
+  {
+   "slug": "active-galactic-nucleus",
+   "term": "Active galactic nucleus (AGN)",
+   "category": "space",
+   "aliases": [
+    "AGN"
+   ],
+   "short": "An active galactic nucleus is a compact region at a galaxy's centre that is extremely luminous because matter is falling onto a supermassive black hole.",
+   "definition": "Its output can outshine the rest of the galaxy and is seen across the electromagnetic spectrum. Quasars are the most luminous type.",
+   "related": [
+    "quasar",
+    "accretion-disc",
+    "black-hole"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/active-galactic-nucleus/"
+  },
+  {
+   "slug": "active-remote-sensing",
+   "term": "Active remote sensing",
+   "category": "earth-observation",
+   "aliases": [],
+   "short": "Active remote sensing sends out its own signal, such as radar or laser pulses, and measures what returns.",
+   "definition": "Because it supplies its own illumination it can work at night, and radar can work through cloud. Synthetic aperture radar and LiDAR are active sensors.",
+   "related": [
+    "passive-remote-sensing",
+    "synthetic-aperture-radar",
+    "lidar"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/active-remote-sensing/"
+  },
+  {
+   "slug": "aerosol-forcing",
+   "term": "Aerosol forcing",
+   "category": "climate-science",
+   "aliases": [
+    "aerosol radiative forcing"
+   ],
+   "short": "Aerosol forcing is the effect of airborne particles on the Earth's energy balance, both directly by scattering or absorbing sunlight and indirectly by changing clouds.",
+   "definition": "Sulfate aerosols have a net cooling effect, which has masked part of greenhouse warming. Aerosols are the largest single uncertainty in total human forcing.",
+   "related": [
+    "radiative-forcing",
+    "albedo"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/aerosol-forcing/"
+  },
+  {
+   "slug": "albedo",
+   "term": "Albedo",
+   "category": "sustainability",
+   "aliases": [],
+   "short": "Albedo is the fraction of incoming light that a surface or body reflects, from 0 (absorbs everything) to 1 (reflects everything).",
+   "definition": "Bright surfaces such as fresh snow reflect much of the sunlight that hits them, while dark surfaces such as open water absorb more. Albedo affects how much energy a planet takes in, so it matters for both climate and for how bright planets and asteroids appear.",
+   "related": [
+    "emissivity"
+   ],
+   "updated": "2026-10-17",
+   "url": "https://glossary.rjmlaird.co.uk/albedo/"
+  },
+  {
+   "slug": "anthropogenic-climate-change",
+   "term": "Anthropogenic climate change",
+   "category": "climate-science",
+   "aliases": [
+    "human-caused climate change"
+   ],
+   "short": "Anthropogenic climate change is the long-term warming and wider climate shift caused by human activity, mainly burning fossil fuels, land-use change and agriculture.",
+   "definition": "Greenhouse gases from these activities have raised atmospheric concentrations well above pre-industrial levels. It is distinguished from natural variability such as volcanic eruptions, solar changes and orbital cycles.",
+   "related": [
+    "greenhouse-effect",
+    "radiative-forcing"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/anthropogenic-climate-change/"
+  },
+  {
+   "slug": "apogee-and-perigee",
+   "term": "Apogee and perigee",
+   "category": "space",
+   "aliases": [],
+   "short": "For an object orbiting the Earth, perigee is the point of closest approach and apogee is the point farthest away.",
+   "definition": "Orbits are rarely perfect circles. An elliptical orbit swings closer to Earth at perigee, where the object moves fastest, and farther out at apogee, where it moves slowest. Other bodies have their own terms, such as perihelion and aphelion for the Sun.",
+   "related": [
+    "geostationary-orbit",
+    "astronomical-unit"
+   ],
+   "updated": "2026-10-17",
+   "url": "https://glossary.rjmlaird.co.uk/apogee-and-perigee/"
+  },
+  {
+   "slug": "architecture-decision-record",
+   "term": "Architecture decision record",
+   "category": "web-architecture",
+   "aliases": [
+    "ADR"
+   ],
+   "short": "A short document recording a significant technical decision and why it was made.",
+   "definition": "An ADR captures the context, the options considered, the decision and its consequences, so that future you (or a colleague) can see why the system looks the way it does.",
+   "related": [
+    "origin"
+   ],
+   "updated": "2026-10-11",
+   "url": "https://glossary.rjmlaird.co.uk/architecture-decision-record/"
+  },
+  {
+   "slug": "astrometry",
+   "term": "Astrometry",
+   "category": "space",
+   "aliases": [],
+   "short": "Astrometry is the precise measurement of the positions, distances and motions of stars and other objects.",
+   "definition": "Parallax from the Earth's orbit gives distances to nearby stars. ESA's Gaia mission has measured positions and motions for well over a billion stars.",
+   "related": [
+    "photometry",
+    "spectroscopy"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/astrometry/"
+  },
+  {
+   "slug": "astronomical-unit",
+   "term": "Astronomical unit",
+   "category": "space",
+   "aliases": [
+    "AU"
+   ],
+   "short": "The astronomical unit (AU) is a unit of length, defined as exactly 149,597,870,700 metres. It is close to the average distance between the Earth and the Sun.",
+   "definition": "A convenient yardstick for distances within the Solar System. Earth is about 1 AU from the Sun, and other planets are described as multiples of that.",
+   "related": [
+    "magnitude",
+    "apogee-and-perigee"
+   ],
+   "updated": "2026-10-17",
+   "url": "https://glossary.rjmlaird.co.uk/astronomical-unit/"
+  },
+  {
+   "slug": "atmospheric-correction",
+   "term": "Atmospheric correction",
+   "category": "earth-observation",
+   "aliases": [],
+   "short": "Atmospheric correction removes the effects of scattering and absorption by gases and aerosols from satellite imagery, to estimate surface reflectance.",
+   "definition": "Without it, the same surface looks different on different days and at different heights. It is essential for comparing images over time and for calculating indices reliably.",
+   "related": [
+    "radiometric-calibration",
+    "change-detection"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/atmospheric-correction/"
+  },
+  {
+   "slug": "atmospheric-re-entry",
+   "term": "Atmospheric re-entry",
+   "category": "space",
+   "aliases": [
+    "re-entry"
+   ],
+   "short": "Atmospheric re-entry is the return of an object from space into the dense atmosphere, where compression heating usually breaks it up.",
+   "definition": "A controlled re-entry targets a safe area. Uncontrolled re-entry is predicted only roughly, and some fragments of larger objects can reach the ground.",
+   "related": [
+    "deorbit",
+    "demisability",
+    "design-for-demise"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/atmospheric-re-entry/"
+  },
+  {
+   "slug": "authentication",
+   "term": "Authentication",
+   "category": "web-architecture",
+   "aliases": [
+    "authn"
+   ],
+   "short": "Authentication is verifying that a user or system is who it claims to be, for example with a password, a passkey or a one-time code.",
+   "definition": "It is separate from authorisation, which decides what an identified user may do. Multi-factor authentication adds a second proof of identity.",
+   "related": [
+    "authorisation",
+    "oauth"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/authentication/"
+  },
+  {
+   "slug": "authorisation",
+   "term": "Authorisation",
+   "category": "web-architecture",
+   "aliases": [
+    "authorization",
+    "authz"
+   ],
+   "short": "Authorisation is deciding what an authenticated user or system is allowed to access or do.",
+   "definition": "It is usually based on roles or permissions and should follow the principle of least privilege.",
+   "related": [
+    "authentication",
+    "oauth"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/authorisation/"
+  },
+  {
+   "slug": "availability-heuristic",
+   "term": "Availability heuristic",
+   "category": "science-communication",
+   "aliases": [],
+   "short": "The availability heuristic is judging how likely or common something is by how easily examples come to mind.",
+   "definition": "It was described by Amos Tversky and Daniel Kahneman. Vivid or recent events, such as dramatic news stories, seem more frequent than they are.",
+   "related": [
+    "confirmation-bias",
+    "media-framing"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/availability-heuristic/"
+  },
+  {
+   "slug": "baryon-acoustic-oscillations",
+   "term": "Baryon acoustic oscillations",
+   "category": "space",
+   "aliases": [
+    "BAO"
+   ],
+   "short": "Baryon acoustic oscillations are regular ripples in the distribution of matter, left by sound waves in the hot early universe.",
+   "definition": "They give a characteristic length scale of about 150 megaparsecs, roughly 490 million light-years. Astronomers use it as a standard ruler to measure cosmic expansion.",
+   "related": [
+    "cosmic-microwave-background",
+    "lambda-cdm-model"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/baryon-acoustic-oscillations/"
+  },
+  {
+   "slug": "baseload-generation",
+   "term": "Baseload generation",
+   "category": "sustainability",
+   "aliases": [
+    "baseload"
+   ],
+   "short": "Baseload generation is the power supplied continuously to meet the minimum level of demand on a grid, historically from coal, nuclear and some hydro plants.",
+   "definition": "The concept is debated for systems with high shares of renewables, where flexibility to follow net demand can matter more than constant output.",
+   "related": [
+    "capacity-factor",
+    "intermittency"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/baseload-generation/"
+  },
+  {
+   "slug": "beccs",
+   "term": "Bioenergy with carbon capture and storage (BECCS)",
+   "category": "sustainability",
+   "aliases": [
+    "BECCS"
+   ],
+   "short": "BECCS grows biomass, uses it for energy, and captures and stores the carbon dioxide released, so that the process can remove carbon on balance.",
+   "definition": "It could deliver negative emissions, but at large scale it needs a lot of land and water. Its net benefit depends on how the biomass is grown and harvested.",
+   "related": [
+    "greenhouse-gas-removal",
+    "carbon-capture-and-storage"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/beccs/"
+  },
+  {
+   "slug": "bias-correction",
+   "term": "Bias correction",
+   "category": "climate-science",
+   "aliases": [],
+   "short": "Bias correction adjusts climate model output so that its statistics match observations over a reference period before it is used in impact studies.",
+   "definition": "It removes systematic errors, such as a model that runs too cold or too dry, but cannot fix a model that gets the physics wrong. Methods such as quantile mapping are common.",
+   "related": [
+    "downscaling",
+    "ensemble-modelling"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/bias-correction/"
+  },
+  {
+   "slug": "black-body",
+   "term": "Black body",
+   "category": "space",
+   "aliases": [],
+   "short": "A black body is an idealised object that absorbs all radiation falling on it and emits radiation whose spectrum depends only on its temperature.",
+   "definition": "No real object is a perfect black body, but stars and planets can often be approximated as one. This lets us estimate temperatures from the colour and intensity of the light they give off.",
+   "related": [
+    "emissivity",
+    "spectral-line",
+    "greenhouse-effect"
+   ],
+   "updated": "2026-10-17",
+   "url": "https://glossary.rjmlaird.co.uk/black-body/"
+  },
+  {
+   "slug": "black-hole",
+   "term": "Black hole",
+   "category": "space",
+   "aliases": [],
+   "short": "A black hole is a region of space where gravity is so strong that nothing, not even light, can escape from inside its event horizon.",
+   "definition": "Stellar-mass black holes form when massive stars collapse, and supermassive black holes sit at the centres of most large galaxies.",
+   "related": [
+    "event-horizon",
+    "accretion-disc",
+    "active-galactic-nucleus"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/black-hole/"
+  },
+  {
+   "slug": "british-national-grid",
+   "term": "British National Grid",
+   "category": "earth-observation",
+   "aliases": [
+    "OSGB36",
+    "EPSG:27700"
+   ],
+   "short": "The British National Grid is the projected coordinate system used by Ordnance Survey for Great Britain, giving positions in metres east and north of a false origin.",
+   "definition": "It is identified as EPSG:27700. Grid references use letter pairs for 100 km squares, and the system is accurate for Great Britain but not elsewhere.",
+   "related": [
+    "coordinate-reference-system",
+    "epsg-code"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/british-national-grid/"
+  },
+  {
+   "slug": "buffer-analysis",
+   "term": "Buffer analysis",
+   "category": "earth-observation",
+   "aliases": [
+    "buffer"
+   ],
+   "short": "Buffer analysis creates a zone around features at a set distance, such as the area within 500 metres of a river.",
+   "definition": "The result is often combined with other layers to find what lies inside the zone. For accurate distances, data should be in a projected system whose units are metres.",
+   "related": [
+    "overlay-analysis",
+    "spatial-join"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/buffer-analysis/"
+  },
+  {
+   "slug": "capacity-factor",
+   "term": "Capacity factor",
+   "category": "sustainability",
+   "aliases": [],
+   "short": "The capacity factor of a power plant is its actual energy output over a period divided by what it would produce running at full rated power throughout.",
+   "definition": "Wind and solar have lower capacity factors than plants that can run continuously, because the resource varies. A low capacity factor is not by itself a measure of poor performance.",
+   "related": [
+    "intermittency",
+    "levelised-cost-of-energy"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/capacity-factor/"
+  },
+  {
+   "slug": "carbon-budget",
+   "term": "Carbon budget",
+   "category": "sustainability",
+   "aliases": [],
+   "short": "A carbon budget is the total amount of carbon dioxide that can still be emitted while keeping global warming below a chosen limit, with a stated level of likelihood.",
+   "definition": "Think of it as a remaining allowance. Estimates depend on the temperature target and on scientific uncertainties, so the numbers differ between sources and should always be cited with their assumptions.",
+   "related": [
+    "greenhouse-effect"
+   ],
+   "updated": "2026-10-17",
+   "url": "https://glossary.rjmlaird.co.uk/carbon-budget/"
+  },
+  {
+   "slug": "carbon-capture-and-storage",
+   "term": "Carbon capture and storage (CCS)",
+   "category": "sustainability",
+   "aliases": [
+    "CCS",
+    "carbon capture, utilisation and storage"
+   ],
+   "short": "Carbon capture and storage captures carbon dioxide from a power plant or industrial process, transports it and stores it permanently underground.",
+   "definition": "It reduces emissions from sources that are hard to decarbonise, such as cement. It does not remove carbon dioxide already in the air, unlike direct air capture.",
+   "related": [
+    "direct-air-capture",
+    "negative-emissions"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/carbon-capture-and-storage/"
+  },
+  {
+   "slug": "carbon-cycle",
+   "term": "Carbon cycle",
+   "category": "climate-science",
+   "aliases": [],
+   "short": "The carbon cycle is the movement of carbon between the atmosphere, oceans, land, living things and rocks.",
+   "definition": "Carbon moves through photosynthesis, respiration, ocean uptake, decay, burning and geological processes. Human emissions have disturbed a balance that took millennia to settle.",
+   "related": [
+    "carbon-sink",
+    "carbon-source",
+    "carbon-budget"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/carbon-cycle/"
+  },
+  {
+   "slug": "carbon-sink",
+   "term": "Carbon sink",
+   "category": "climate-science",
+   "aliases": [],
+   "short": "A carbon sink is a reservoir that takes up more carbon from the atmosphere than it releases, such as forests, soils and the ocean.",
+   "definition": "Natural sinks currently absorb roughly half of human carbon dioxide emissions. Sinks can weaken or reverse, for example when forests burn or dry out.",
+   "related": [
+    "carbon-source",
+    "carbon-cycle"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/carbon-sink/"
+  },
+  {
+   "slug": "carbon-source",
+   "term": "Carbon source",
+   "category": "climate-science",
+   "aliases": [],
+   "short": "A carbon source is a process or reservoir that releases more carbon into the atmosphere than it takes up, such as burning fossil fuels or clearing forest.",
+   "definition": "The same system can switch role over time. A growing forest is a sink, but the same land becomes a source if it is cleared.",
+   "related": [
+    "carbon-sink",
+    "carbon-cycle"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/carbon-source/"
+  },
+  {
+   "slug": "catalogued-object",
+   "term": "Catalogued object",
+   "category": "space",
+   "aliases": [],
+   "short": "A catalogued object is a tracked object that has an entry in a public catalogue with its orbital elements, such as the US Space-Track catalogue.",
+   "definition": "Not every trackable object is catalogued, because some are not published. The catalogue is the basis for most collision screening.",
+   "related": [
+    "trackable-object",
+    "conjunction-assessment"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/catalogued-object/"
+  },
+  {
+   "slug": "catchment-analysis",
+   "term": "Catchment analysis",
+   "category": "earth-observation",
+   "aliases": [],
+   "short": "Catchment analysis finds the area served by or draining to a location. In planning it is a service area, and in hydrology it is a drainage basin.",
+   "definition": "Service catchments are often built with travel-time network analysis. Hydrological catchments are derived from terrain.",
+   "related": [
+    "network-analysis",
+    "watershed-delineation"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/catchment-analysis/"
+  },
+  {
+   "slug": "change-detection",
+   "term": "Change detection",
+   "category": "earth-observation",
+   "aliases": [],
+   "short": "Change detection compares data from two or more dates to identify what has changed on the ground.",
+   "definition": "Applications include deforestation, urban growth, flooding and damage assessment. Reliable results need images that are consistently calibrated and aligned.",
+   "related": [
+    "atmospheric-correction",
+    "georeferencing"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/change-detection/"
+  },
+  {
+   "slug": "cherry-picking",
+   "term": "Cherry-picking",
+   "category": "science-communication",
+   "aliases": [
+    "cherry picking"
+   ],
+   "short": "Cherry-picking is selecting only the data or examples that support a claim while ignoring evidence against it.",
+   "definition": "It can be done with real figures, such as a short time window that hides a long-term trend. Looking at the full dataset and its context guards against it.",
+   "related": [
+    "confirmation-bias",
+    "false-balance"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/cherry-picking/"
+  },
+  {
+   "slug": "climate-feedback",
+   "term": "Climate feedback",
+   "category": "climate-science",
+   "aliases": [],
+   "short": "A climate feedback is a process that amplifies (positive feedback) or dampens (negative feedback) an initial change in the climate system.",
+   "definition": "The ice-albedo feedback is positive: melting ice exposes darker surfaces that absorb more sunlight. Water vapour and cloud responses are other major feedbacks that set climate sensitivity.",
+   "related": [
+    "albedo",
+    "climate-sensitivity",
+    "tipping-point"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/climate-feedback/"
+  },
+  {
+   "slug": "climate-sensitivity",
+   "term": "Climate sensitivity",
+   "category": "climate-science",
+   "aliases": [],
+   "short": "Climate sensitivity describes how much global mean surface temperature rises in response to a given change in radiative forcing, usually a doubling of carbon dioxide.",
+   "definition": "It is not a single number: equilibrium climate sensitivity and transient climate response measure it over different timescales. The uncertainty in sensitivity is a major source of spread between climate projections.",
+   "related": [
+    "equilibrium-climate-sensitivity",
+    "transient-climate-response",
+    "radiative-forcing"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/climate-sensitivity/"
+  },
+  {
+   "slug": "co2-equivalence",
+   "term": "CO₂ equivalence (CO₂e)",
+   "category": "climate-science",
+   "aliases": [
+    "CO2e",
+    "carbon dioxide equivalent"
+   ],
+   "short": "CO₂ equivalence expresses the warming effect of different greenhouse gases as the mass of carbon dioxide that would have the same effect over a chosen time horizon.",
+   "definition": "It lets methane, nitrous oxide and other gases be added to carbon dioxide in one figure, using global warming potentials. The result depends on which time horizon and which assessment report's values are used.",
+   "related": [
+    "global-warming-potential",
+    "greenhouse-gas-inventory"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/co2-equivalence/"
+  },
+  {
+   "slug": "collision-avoidance-manoeuvre",
+   "term": "Collision avoidance manoeuvre",
+   "category": "space",
+   "aliases": [
+    "collision avoidance manoeuvre (CAM)",
+    "avoidance manoeuvre"
+   ],
+   "short": "A collision avoidance manoeuvre is a planned thruster burn that changes a spacecraft's orbit to increase its miss distance from another object.",
+   "definition": "Operators decide on one after a conjunction assessment shows a high collision probability. Each manoeuvre uses fuel and can interrupt normal operations.",
+   "related": [
+    "conjunction-assessment",
+    "collision-probability"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/collision-avoidance-manoeuvre/"
+  },
+  {
+   "slug": "collision-probability",
+   "term": "Collision probability",
+   "category": "space",
+   "aliases": [],
+   "short": "Collision probability is the estimated chance that two objects will collide during a close approach, calculated from their predicted positions and uncertainties.",
+   "definition": "Operators set their own action thresholds, often in the region of 1 in 10,000. Large position uncertainty can produce misleading values.",
+   "related": [
+    "conjunction-assessment",
+    "collision-avoidance-manoeuvre"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/collision-probability/"
+  },
+  {
+   "slug": "confidence-interval",
+   "term": "Confidence interval",
+   "category": "science-communication",
+   "aliases": [],
+   "short": "A confidence interval is a range calculated from data so that, over many repeated samples, a stated proportion of such intervals (often 95%) would contain the true value.",
+   "definition": "It is often misread as a 95% probability that the true value lies in this one interval. A wider interval signals more uncertainty.",
+   "related": [
+    "statistical-significance",
+    "effect-size",
+    "p-value"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/confidence-interval/"
+  },
+  {
+   "slug": "confirmation-bias",
+   "term": "Confirmation bias",
+   "category": "science-communication",
+   "aliases": [],
+   "short": "Confirmation bias is the tendency to seek out, interpret and remember information that confirms what you already believe.",
+   "definition": "It operates mostly without awareness. Deliberately looking for disconfirming evidence is one way to counter it.",
+   "related": [
+    "motivated-reasoning",
+    "cherry-picking"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/confirmation-bias/"
+  },
+  {
+   "slug": "conjunction-assessment",
+   "term": "Conjunction assessment",
+   "category": "space",
+   "aliases": [],
+   "short": "Conjunction assessment identifies close approaches between orbiting objects, and estimates the miss distance and the probability of collision.",
+   "definition": "It relies on tracking data and the uncertainty in each object's position. Warnings are issued to operators in time to decide whether to manoeuvre.",
+   "related": [
+    "collision-probability",
+    "space-situational-awareness"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/conjunction-assessment/"
+  },
+  {
+   "slug": "containerisation",
+   "term": "Containerisation",
+   "category": "web-architecture",
+   "aliases": [
+    "containers",
+    "containerization"
+   ],
+   "short": "Containerisation packages an application with its dependencies so that it runs in an isolated environment that shares the host's operating system kernel.",
+   "definition": "Containers are lighter than virtual machines and start quickly. The same image behaves the same on a laptop and in production.",
+   "related": [
+    "docker",
+    "kubernetes"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/containerisation/"
+  },
+  {
+   "slug": "content-authenticity",
+   "term": "Content authenticity",
+   "category": "science-communication",
+   "aliases": [],
+   "short": "Content authenticity is being able to verify where a piece of digital content came from and how it was edited.",
+   "definition": "Standards such as C2PA content credentials attach signed provenance information to media. They show origin and edits but do not prove that the content is true.",
+   "related": [
+    "provenance",
+    "deepfake",
+    "synthetic-media"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/content-authenticity/"
+  },
+  {
+   "slug": "continuous-deployment",
+   "term": "Continuous deployment (CD)",
+   "category": "web-architecture",
+   "aliases": [
+    "CD",
+    "continuous delivery"
+   ],
+   "short": "Continuous deployment automatically releases every change that passes its tests to production. Continuous delivery is similar but keeps a manual release approval.",
+   "definition": "It depends on good automated testing and ways to roll back quickly. It shortens the time between writing code and users seeing it.",
+   "related": [
+    "continuous-integration",
+    "infrastructure-as-code"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/continuous-deployment/"
+  },
+  {
+   "slug": "continuous-integration",
+   "term": "Continuous integration (CI)",
+   "category": "web-architecture",
+   "aliases": [
+    "CI"
+   ],
+   "short": "Continuous integration is the practice of merging code changes frequently and running automated builds and tests on every change.",
+   "definition": "It catches integration problems early. A failing build is treated as something to fix at once.",
+   "related": [
+    "continuous-deployment",
+    "unit-testing"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/continuous-integration/"
+  },
+  {
+   "slug": "convolutional-neural-network",
+   "term": "Convolutional neural network (CNN)",
+   "category": "earth-observation",
+   "aliases": [
+    "CNN",
+    "ConvNet"
+   ],
+   "short": "A convolutional neural network is a deep learning model that learns spatial features from images using layers of small filters.",
+   "definition": "CNNs are widely used to classify, segment and detect objects in satellite and aerial imagery. They need large labelled datasets and can fail on data unlike their training set.",
+   "related": [
+    "supervised-classification",
+    "object-based-image-analysis"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/convolutional-neural-network/"
+  },
+  {
+   "slug": "coordinate-reference-system",
+   "term": "Coordinate reference system (CRS)",
+   "category": "earth-observation",
+   "aliases": [
+    "CRS",
+    "spatial reference system"
+   ],
+   "short": "A coordinate reference system defines how coordinates relate to real places, through a datum, a projection if there is one, and units.",
+   "definition": "Two datasets in different systems will not line up unless one is transformed. Getting the CRS right is the most common source of misplaced data.",
+   "related": [
+    "epsg-code",
+    "wgs-84",
+    "british-national-grid"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/coordinate-reference-system/"
+  },
+  {
+   "slug": "copernicus-programme",
+   "term": "Copernicus programme",
+   "category": "earth-observation",
+   "aliases": [
+    "Copernicus"
+   ],
+   "short": "Copernicus is the European Union's Earth observation programme, delivered with ESA, EUMETSAT and others, combining the Sentinel satellites with in-situ data and services.",
+   "definition": "Its services cover the atmosphere, marine, land, climate change, emergency and security. Most data are free and open.",
+   "related": [
+    "sentinel-2",
+    "earth-observation"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/copernicus-programme/"
+  },
+  {
+   "slug": "core-web-vitals",
+   "term": "Core Web Vitals",
+   "category": "web-architecture",
+   "aliases": [],
+   "short": "Core Web Vitals are Google's measures of page experience: Largest Contentful Paint for loading, Interaction to Next Paint for responsiveness and Cumulative Layout Shift for visual stability.",
+   "definition": "Good thresholds are 2.5 seconds or less for LCP, 200 milliseconds or less for INP and 0.1 or less for CLS. Interaction to Next Paint replaced First Input Delay in 2024.",
+   "related": [
+    "progressive-web-app",
+    "semantic-html"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/core-web-vitals/"
+  },
+  {
+   "slug": "correlation-versus-causation",
+   "term": "Correlation versus causation",
+   "category": "science-communication",
+   "aliases": [
+    "correlation is not causation"
+   ],
+   "short": "Correlation versus causation is the distinction between two variables moving together and one actually causing the other.",
+   "definition": "A link can arise from a shared cause, reverse causation or coincidence. Randomised trials and careful causal designs are used to test causes.",
+   "related": [
+    "selection-bias",
+    "cherry-picking"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/correlation-versus-causation/"
+  },
+  {
+   "slug": "cosmic-microwave-background",
+   "term": "Cosmic microwave background (CMB)",
+   "category": "space",
+   "aliases": [
+    "CMB"
+   ],
+   "short": "The cosmic microwave background is the faint microwave radiation filling the universe, released about 380,000 years after the Big Bang when it became transparent.",
+   "definition": "It now has a temperature of 2.725 kelvin. Tiny variations in it map the early universe and constrain the parameters of the standard cosmological model.",
+   "related": [
+    "lambda-cdm-model",
+    "baryon-acoustic-oscillations",
+    "black-body"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/cosmic-microwave-background/"
+  },
+  {
+   "slug": "cosmological-redshift",
+   "term": "Cosmological redshift",
+   "category": "space",
+   "aliases": [],
+   "short": "Cosmological redshift is the stretching of light's wavelength as it travels through expanding space.",
+   "definition": "It is not caused by galaxies moving through space. A redshift of z means the universe has expanded by a factor of 1 + z since the light left.",
+   "related": [
+    "redshift",
+    "hubble-tension"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/cosmological-redshift/"
+  },
+  {
+   "slug": "dark-and-quiet-skies",
+   "term": "Dark and quiet skies",
+   "category": "space",
+   "aliases": [],
+   "short": "Dark and quiet skies is the aim of protecting astronomy from both visible light pollution, including satellite streaks, and radio interference.",
+   "definition": "The IAU Centre for the Protection of the Dark and Quiet Sky from Satellite Constellation Interference supports this work. Measures include satellite brightness limits and coordinated operations.",
+   "related": [
+    "light-pollution",
+    "radio-frequency-interference",
+    "mega-constellation"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/dark-and-quiet-skies/"
+  },
+  {
+   "slug": "dark-matter-halo",
+   "term": "Dark matter halo",
+   "category": "space",
+   "aliases": [],
+   "short": "A dark matter halo is the extended, roughly spherical region of dark matter that surrounds a galaxy and extends well beyond its visible stars.",
+   "definition": "Its presence is inferred from how fast stars and gas orbit, and from gravitational lensing. Halos are central to how galaxies are thought to form.",
+   "related": [
+    "gravitational-lensing",
+    "lambda-cdm-model"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/dark-matter-halo/"
+  },
+  {
+   "slug": "data-lake",
+   "term": "Data lake",
+   "category": "web-architecture",
+   "aliases": [],
+   "short": "A data lake is a central repository that holds large volumes of raw data, structured or not, in its original format.",
+   "definition": "Structure is applied when the data is read. Without governance and cataloguing it can become a disorganised data swamp.",
+   "related": [
+    "data-warehouse",
+    "data-lakehouse"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/data-lake/"
+  },
+  {
+   "slug": "data-lakehouse",
+   "term": "Data lakehouse",
+   "category": "web-architecture",
+   "aliases": [
+    "lakehouse"
+   ],
+   "short": "A data lakehouse combines the low-cost storage of a data lake with warehouse features such as schemas and transactions.",
+   "definition": "Open table formats such as Delta Lake and Apache Iceberg provide the transaction layer on top of files in object storage.",
+   "related": [
+    "data-lake",
+    "data-warehouse"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/data-lakehouse/"
+  },
+  {
+   "slug": "data-lineage",
+   "term": "Data lineage",
+   "category": "web-architecture",
+   "aliases": [],
+   "short": "Data lineage is the record of where data came from and what was done to it, step by step, on its way to its current form.",
+   "definition": "It makes errors traceable, supports audits and helps judge whether a figure can be trusted.",
+   "related": [
+    "data-quality",
+    "extract-transform-load",
+    "provenance"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/data-lineage/"
+  },
+  {
+   "slug": "data-model",
+   "term": "Data model",
+   "category": "web-architecture",
+   "aliases": [],
+   "short": "A data model is an abstract description of the entities in a system, their attributes and the relationships between them.",
+   "definition": "It is developed at conceptual, logical and physical levels, from business concepts down to actual tables. A clear model comes before schema design.",
+   "related": [
+    "schema",
+    "relational-database"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/data-model/"
+  },
+  {
+   "slug": "data-quality",
+   "term": "Data quality",
+   "category": "web-architecture",
+   "aliases": [],
+   "short": "Data quality is how fit data is for its intended use, judged by dimensions such as accuracy, completeness, consistency, timeliness, validity and uniqueness.",
+   "definition": "Quality is relative to purpose, so data that is fine for one use may be inadequate for another. Measuring and monitoring it is more reliable than assuming it.",
+   "related": [
+    "data-validation",
+    "data-lineage"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/data-quality/"
+  },
+  {
+   "slug": "data-validation",
+   "term": "Data validation",
+   "category": "web-architecture",
+   "aliases": [],
+   "short": "Data validation checks that data meets defined rules, such as type, range, format and completeness, before it is accepted or used.",
+   "definition": "It is best applied at the point of entry and again when data moves between systems.",
+   "related": [
+    "data-quality",
+    "schema"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/data-validation/"
+  },
+  {
+   "slug": "data-warehouse",
+   "term": "Data warehouse",
+   "category": "web-architecture",
+   "aliases": [],
+   "short": "A data warehouse is a central store of structured, curated data organised for analysis and reporting.",
+   "definition": "Data is cleaned and modelled before loading, which gives consistent figures but less flexibility than a data lake.",
+   "related": [
+    "data-lake",
+    "data-lakehouse",
+    "extract-transform-load"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/data-warehouse/"
+  },
+  {
+   "slug": "debunking",
+   "term": "Debunking",
+   "category": "science-communication",
+   "aliases": [],
+   "short": "Debunking is correcting a false claim after it has spread, by showing why it is wrong.",
+   "definition": "Corrections work best when they are clear, give a factual alternative explanation and avoid repeating the myth more than needed.",
+   "related": [
+    "prebunking",
+    "misinformation"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/debunking/"
+  },
+  {
+   "slug": "deepfake",
+   "term": "Deepfake",
+   "category": "science-communication",
+   "aliases": [],
+   "short": "A deepfake is synthetic video, audio or imagery, generated or altered with AI, that convincingly shows a person saying or doing something they did not.",
+   "definition": "It is a subset of synthetic media. Detection tools are imperfect, so provenance information is increasingly important.",
+   "related": [
+    "synthetic-media",
+    "content-authenticity"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/deepfake/"
+  },
+  {
+   "slug": "demand-response",
+   "term": "Demand response",
+   "category": "sustainability",
+   "aliases": [],
+   "short": "Demand response is changing when electricity is used, in response to price signals or grid conditions, to help balance supply and demand.",
+   "definition": "Examples include pre-heating buildings, delaying electric vehicle charging and shifting industrial processes. It is a cheaper alternative to building extra generation or storage for short peaks.",
+   "related": [
+    "grid-flexibility",
+    "smart-grid"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/demand-response/"
+  },
+  {
+   "slug": "demisability",
+   "term": "Demisability",
+   "category": "space",
+   "aliases": [],
+   "short": "Demisability is how readily a spacecraft or its parts break up and burn away during atmospheric re-entry, rather than surviving to reach the ground.",
+   "definition": "Dense or heat-resistant components such as tanks and some metals are more likely to survive. It is used to assess the casualty risk on the ground.",
+   "related": [
+    "design-for-demise",
+    "atmospheric-re-entry"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/demisability/"
+  },
+  {
+   "slug": "deorbit",
+   "term": "Deorbit",
+   "category": "space",
+   "aliases": [],
+   "short": "Deorbiting is deliberately lowering a spacecraft's orbit so that it re-enters the atmosphere.",
+   "definition": "It can be controlled, aimed at an uninhabited ocean area, or uncontrolled, where atmospheric drag brings it down over time.",
+   "related": [
+    "post-mission-disposal",
+    "atmospheric-re-entry"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/deorbit/"
+  },
+  {
+   "slug": "design-for-demise",
+   "term": "Design-for-demise",
+   "category": "space",
+   "aliases": [
+    "design for demise",
+    "D4D"
+   ],
+   "short": "Design-for-demise is designing a spacecraft, with its materials, structure and layout, so that it breaks up and burns away on re-entry.",
+   "definition": "It aims to reduce the risk to people and property on the ground. Examples include using lower-melting materials or easily separated structures.",
+   "related": [
+    "demisability",
+    "atmospheric-re-entry"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/design-for-demise/"
+  },
+  {
+   "slug": "detection-and-attribution",
+   "term": "Detection and attribution",
+   "category": "climate-science",
+   "aliases": [
+    "attribution science",
+    "extreme event attribution"
+   ],
+   "short": "Detection and attribution are statistical methods that first show a climate change is larger than natural variability, then assess how much each cause contributed.",
+   "definition": "Studies attribute long-term trends, such as global warming, and increasingly individual extreme events, such as heatwaves. Results are usually expressed as how much more likely or intense an event became.",
+   "related": [
+    "anthropogenic-climate-change",
+    "ensemble-modelling"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/detection-and-attribution/"
+  },
+  {
+   "slug": "digital-elevation-model",
+   "term": "Digital elevation model (DEM)",
+   "category": "earth-observation",
+   "aliases": [
+    "DEM"
+   ],
+   "short": "A digital elevation model is a gridded representation of surface height above a reference such as mean sea level.",
+   "definition": "The term is generic. In common use it covers both the bare ground and the surface including objects, so check which a dataset provides.",
+   "related": [
+    "digital-surface-model",
+    "digital-terrain-model"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/digital-elevation-model/"
+  },
+  {
+   "slug": "digital-surface-model",
+   "term": "Digital surface model (DSM)",
+   "category": "earth-observation",
+   "aliases": [
+    "DSM"
+   ],
+   "short": "A digital surface model records the height of the first surface a sensor sees, including buildings, trees and other objects on the ground.",
+   "definition": "It is used for line-of-sight, urban and forestry work. Subtracting a terrain model from it gives the height of objects above ground.",
+   "related": [
+    "digital-terrain-model",
+    "digital-elevation-model",
+    "lidar"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/digital-surface-model/"
+  },
+  {
+   "slug": "digital-terrain-model",
+   "term": "Digital terrain model (DTM)",
+   "category": "earth-observation",
+   "aliases": [
+    "DTM"
+   ],
+   "short": "A digital terrain model represents the bare ground surface, with buildings, vegetation and other objects removed.",
+   "definition": "It is used for hydrology, flood modelling and engineering. It is usually made by filtering the ground returns from LiDAR.",
+   "related": [
+    "digital-surface-model",
+    "digital-elevation-model",
+    "lidar"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/digital-terrain-model/"
+  },
+  {
+   "slug": "direct-air-capture",
+   "term": "Direct air capture (DAC)",
+   "category": "sustainability",
+   "aliases": [
+    "DAC"
+   ],
+   "short": "Direct air capture uses chemical processes to pull carbon dioxide out of ambient air, so that it can be stored or used.",
+   "definition": "Because carbon dioxide is dilute in air, about 0.04%, it needs a lot of energy and is costly today. Counted as a removal only if the carbon dioxide is stored durably.",
+   "related": [
+    "carbon-capture-and-storage",
+    "greenhouse-gas-removal"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/direct-air-capture/"
+  },
+  {
+   "slug": "disinformation",
+   "term": "Disinformation",
+   "category": "science-communication",
+   "aliases": [],
+   "short": "Disinformation is false information created or shared deliberately to deceive or to cause harm.",
+   "definition": "It may be financially, politically or ideologically motivated. Content can start as disinformation and then spread as misinformation when others share it without knowing.",
+   "related": [
+    "misinformation",
+    "malinformation",
+    "information-disorder"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/disinformation/"
+  },
+  {
+   "slug": "district-heating",
+   "term": "District heating",
+   "category": "sustainability",
+   "aliases": [
+    "heat network"
+   ],
+   "short": "District heating distributes heat from one or more central sources to many buildings through a network of insulated pipes.",
+   "definition": "The heat can come from waste heat, large heat pumps, geothermal or biomass. Networks make most sense in dense areas, where pipe length per customer is short.",
+   "related": [
+    "heat-pump",
+    "sector-coupling"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/district-heating/"
+  },
+  {
+   "slug": "docker",
+   "term": "Docker",
+   "category": "web-architecture",
+   "aliases": [],
+   "short": "Docker is a platform for building, sharing and running applications in containers, defined by images built from a Dockerfile.",
+   "definition": "It made containers widely used. Images are stored in registries and run as containers.",
+   "related": [
+    "containerisation",
+    "kubernetes"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/docker/"
+  },
+  {
+   "slug": "doppler-shift",
+   "term": "Doppler shift",
+   "category": "space",
+   "aliases": [],
+   "short": "The Doppler shift is the change in the observed frequency or wavelength of a wave caused by relative motion between source and observer.",
+   "definition": "Light from something moving away appears redder, and from something moving towards us appears bluer. By measuring how far spectral lines move, astronomers can work out speeds, which helps in studying stars and finding planets.",
+   "related": [
+    "spectral-line",
+    "transit-method"
+   ],
+   "updated": "2026-10-17",
+   "url": "https://glossary.rjmlaird.co.uk/doppler-shift/"
+  },
+  {
+   "slug": "downscaling",
+   "term": "Downscaling",
+   "category": "climate-science",
+   "aliases": [],
+   "short": "Downscaling derives finer-resolution local climate information from coarse global climate model output.",
+   "definition": "Dynamical downscaling runs a regional model nested in the global one. Statistical downscaling relates large-scale patterns to local observations. Both inherit the biases of the model they start from.",
+   "related": [
+    "bias-correction",
+    "ensemble-modelling"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/downscaling/"
+  },
+  {
+   "slug": "earth-observation",
+   "term": "Earth observation",
+   "category": "earth-observation",
+   "aliases": [],
+   "short": "Earth observation is gathering information about the land, oceans and atmosphere, mainly using satellites and other remote sensors.",
+   "definition": "Satellites, aircraft and drones carry instruments that measure how the planet reflects and emits energy. Those measurements are turned into maps and time series, such as land cover, sea temperature, air quality or flood extent. It is the main way to monitor climate and environmental change at global scale.",
+   "related": [
+    "remote-sensing"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/earth-observation/"
+  },
+  {
+   "slug": "effect-size",
+   "term": "Effect size",
+   "category": "science-communication",
+   "aliases": [],
+   "short": "Effect size is a measure of how large a difference or relationship is, independent of sample size.",
+   "definition": "Examples are Cohen's d and correlation coefficients. It shows whether a significant result matters in practice.",
+   "related": [
+    "statistical-significance",
+    "confidence-interval"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/effect-size/"
+  },
+  {
+   "slug": "electrification",
+   "term": "Electrification",
+   "category": "sustainability",
+   "aliases": [],
+   "short": "Electrification is replacing equipment that burns fuel, such as petrol cars and gas boilers, with electric equivalents.",
+   "definition": "It cuts emissions most when the electricity itself is low-carbon. Electric motors and heat pumps are also far more efficient than combustion, so total energy use often falls.",
+   "related": [
+    "heat-pump",
+    "sector-coupling"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/electrification/"
+  },
+  {
+   "slug": "electrolysis",
+   "term": "Electrolysis",
+   "category": "sustainability",
+   "aliases": [],
+   "short": "Electrolysis uses an electric current to drive a chemical reaction, such as splitting water into hydrogen and oxygen.",
+   "definition": "Electrolysers for hydrogen come in several types, including alkaline and proton exchange membrane designs. Efficiency, cost and the ability to follow variable power differ between them.",
+   "related": [
+    "green-hydrogen",
+    "power-to-x"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/electrolysis/"
+  },
+  {
+   "slug": "embodied-carbon",
+   "term": "Embodied carbon",
+   "category": "sustainability",
+   "aliases": [
+    "embodied emissions"
+   ],
+   "short": "The greenhouse gas emissions released making and delivering a product or building.",
+   "definition": "Embodied carbon covers extraction, manufacturing, transport and construction, as opposed to emissions from using the thing afterwards.",
+   "related": [],
+   "updated": "2026-10-11",
+   "url": "https://glossary.rjmlaird.co.uk/embodied-carbon/"
+  },
+  {
+   "slug": "emissivity",
+   "term": "Emissivity",
+   "category": "space",
+   "aliases": [],
+   "short": "Emissivity is the ratio of the thermal radiation a surface emits to what a perfect black body would emit at the same temperature, between 0 and 1.",
+   "definition": "It tells you how efficiently a surface gives off heat as radiation. Satellites that measure surface temperature need to account for emissivity, because different materials radiate differently even at the same temperature.",
+   "related": [
+    "black-body",
+    "albedo",
+    "remote-sensing"
+   ],
+   "updated": "2026-10-17",
+   "url": "https://glossary.rjmlaird.co.uk/emissivity/"
+  },
+  {
+   "slug": "energy-return-on-investment",
+   "term": "Energy return on investment (EROI)",
+   "category": "sustainability",
+   "aliases": [
+    "EROI",
+    "EROEI"
+   ],
+   "short": "Energy return on investment is the ratio of usable energy delivered by a source to the energy invested in obtaining it.",
+   "definition": "A high ratio means a source gives back much more than it costs to build and operate. Results depend heavily on where the system boundary is drawn.",
+   "related": [
+    "life-cycle-assessment",
+    "levelised-cost-of-energy"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/energy-return-on-investment/"
+  },
+  {
+   "slug": "energy-storage",
+   "term": "Energy storage",
+   "category": "sustainability",
+   "aliases": [],
+   "short": "Energy storage captures energy at one time so that it can be used later, for example in batteries, pumped hydro, heat stores or hydrogen.",
+   "definition": "Storage helps balance variable renewables over timescales from seconds to seasons. Different technologies suit different durations, so no single option covers every need.",
+   "related": [
+    "grid-flexibility",
+    "intermittency",
+    "vehicle-to-grid"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/energy-storage/"
+  },
+  {
+   "slug": "ensemble-modelling",
+   "term": "Ensemble modelling",
+   "category": "climate-science",
+   "aliases": [
+    "ensemble",
+    "multi-model ensemble"
+   ],
+   "short": "Ensemble modelling runs many simulations, with different models, starting conditions or parameters, to measure how uncertain a projection is.",
+   "definition": "The spread across an ensemble separates internal variability and model differences from the forced signal. Projects such as CMIP coordinate multi-model ensembles.",
+   "related": [
+    "shared-socioeconomic-pathways",
+    "downscaling",
+    "detection-and-attribution"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/ensemble-modelling/"
+  },
+  {
+   "slug": "epistemic-trust",
+   "term": "Epistemic trust",
+   "category": "science-communication",
+   "aliases": [],
+   "short": "Epistemic trust is the willingness to rely on others, such as experts and institutions, as sources of knowledge when you cannot check a claim yourself.",
+   "definition": "It is needed because nobody can verify everything personally. It can be earned or lost depending on perceived competence, honesty and motives.",
+   "related": [
+    "epistemic-vigilance",
+    "scientific-consensus"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/epistemic-trust/"
+  },
+  {
+   "slug": "epistemic-vigilance",
+   "term": "Epistemic vigilance",
+   "category": "science-communication",
+   "aliases": [],
+   "short": "Epistemic vigilance is the set of cognitive mechanisms we use to assess whether communicated information, and the person giving it, can be believed.",
+   "definition": "It was proposed by Dan Sperber and colleagues in 2010. It explains why trust in a source, and coherence with what we already know, strongly affect belief.",
+   "related": [
+    "epistemic-trust",
+    "confirmation-bias"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/epistemic-vigilance/"
+  },
+  {
+   "slug": "epsg-code",
+   "term": "EPSG code",
+   "category": "earth-observation",
+   "aliases": [
+    "EPSG"
+   ],
+   "short": "An EPSG code is a numeric identifier for a coordinate reference system in the EPSG geodetic registry.",
+   "definition": "For example EPSG:4326 is WGS 84 longitude and latitude, and EPSG:27700 is the British National Grid. Quoting the code removes ambiguity about which system is meant.",
+   "related": [
+    "coordinate-reference-system",
+    "wgs-84",
+    "british-national-grid"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/epsg-code/"
+  },
+  {
+   "slug": "equilibrium-climate-sensitivity",
+   "term": "Equilibrium climate sensitivity (ECS)",
+   "category": "climate-science",
+   "aliases": [
+    "ECS"
+   ],
+   "short": "Equilibrium climate sensitivity is the long-term global warming once the climate has fully adjusted to a doubling of atmospheric carbon dioxide.",
+   "definition": "The IPCC's Sixth Assessment Report gave a best estimate of 3 °C, with a likely range of 2.5 to 4 °C. Full adjustment takes centuries because the deep ocean warms slowly.",
+   "related": [
+    "climate-sensitivity",
+    "transient-climate-response"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/equilibrium-climate-sensitivity/"
+  },
+  {
+   "slug": "event-horizon",
+   "term": "Event horizon",
+   "category": "space",
+   "aliases": [],
+   "short": "The event horizon is the boundary around a black hole beyond which nothing can return to an outside observer.",
+   "definition": "Its size scales with the black hole's mass. Crossing it is not marked by anything locally dramatic for a large black hole, but the way back is closed.",
+   "related": [
+    "black-hole"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/event-horizon/"
+  },
+  {
+   "slug": "evi",
+   "term": "Enhanced Vegetation Index (EVI)",
+   "category": "earth-observation",
+   "aliases": [
+    "EVI"
+   ],
+   "short": "The Enhanced Vegetation Index is a vegetation index that adds a blue band to correct for atmospheric effects and canopy background, and saturates less than NDVI in dense vegetation.",
+   "definition": "It is widely used with MODIS data for tropical forests and other high-biomass areas, where NDVI levels off.",
+   "related": [
+    "ndvi",
+    "atmospheric-correction"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/evi/"
+  },
+  {
+   "slug": "extract-transform-load",
+   "term": "Extract, transform, load (ETL)",
+   "category": "web-architecture",
+   "aliases": [
+    "ETL",
+    "ETL pipeline",
+    "extract transform load"
+   ],
+   "short": "Extract, transform, load is a pipeline that pulls data from source systems, reshapes and cleans it, and loads it into a destination such as a warehouse.",
+   "definition": "The related ELT pattern loads raw data first and transforms it inside the destination. Both need monitoring, so that failures and bad data are caught.",
+   "related": [
+    "data-warehouse",
+    "data-lineage",
+    "data-quality"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/extract-transform-load/"
+  },
+  {
+   "slug": "false-balance",
+   "term": "False balance",
+   "category": "science-communication",
+   "aliases": [
+    "false equivalence in media"
+   ],
+   "short": "False balance is presenting two sides of an issue as equally supported when the weight of evidence is heavily on one side.",
+   "definition": "It can give a fringe view disproportionate attention and create a misleading impression of scientific disagreement.",
+   "related": [
+    "scientific-consensus",
+    "media-framing"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/false-balance/"
+  },
+  {
+   "slug": "foreign-key",
+   "term": "Foreign key",
+   "category": "web-architecture",
+   "aliases": [],
+   "short": "A foreign key is a column in one table that refers to the primary key of another, linking the rows and enforcing referential integrity.",
+   "definition": "The database can then reject entries that point to non-existent rows, or block deleting a row that others depend on.",
+   "related": [
+    "primary-key",
+    "relational-database"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/foreign-key/"
+  },
+  {
+   "slug": "fragmentation-event",
+   "term": "Fragmentation event",
+   "category": "space",
+   "aliases": [
+    "break-up event"
+   ],
+   "short": "A fragmentation event is the break-up of a spacecraft or rocket stage into many pieces, through an explosion, collision or deliberate destruction.",
+   "definition": "Well-known examples include the 2007 Chinese anti-satellite test and the 2009 collision of an Iridium satellite with a defunct Russian satellite. Such events are major sources of debris.",
+   "related": [
+    "orbital-debris",
+    "kessler-syndrome"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/fragmentation-event/"
+  },
+  {
+   "slug": "geocoding",
+   "term": "Geocoding",
+   "category": "earth-observation",
+   "aliases": [],
+   "short": "Geocoding converts an address or place name into geographic coordinates.",
+   "definition": "Accuracy varies with the source data, from an exact rooftop to just a postcode centre. Results should be checked before use in analysis.",
+   "related": [
+    "reverse-geocoding",
+    "coordinate-reference-system"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/geocoding/"
+  },
+  {
+   "slug": "geojson",
+   "term": "GeoJSON",
+   "category": "earth-observation",
+   "aliases": [],
+   "short": "GeoJSON is an open format for encoding geographic features and their attributes as JSON, defined in RFC 7946.",
+   "definition": "Coordinates are longitude and latitude in WGS 84, in that order. It is easy to use on the web but is inefficient for very large datasets.",
+   "related": [
+    "wgs-84",
+    "vector-data"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/geojson/"
+  },
+  {
+   "slug": "geopackage",
+   "term": "GeoPackage",
+   "category": "earth-observation",
+   "aliases": [],
+   "short": "GeoPackage is an open Open Geospatial Consortium format that stores vector, raster and attribute data in a single SQLite database file.",
+   "definition": "It avoids the multi-file and field-name limits of shapefiles and supports multiple layers in one file.",
+   "related": [
+    "shapefile",
+    "postgis"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/geopackage/"
+  },
+  {
+   "slug": "georeferencing",
+   "term": "Georeferencing",
+   "category": "earth-observation",
+   "aliases": [],
+   "short": "Georeferencing assigns real-world coordinates to an image or dataset, using ground control points or a sensor model.",
+   "definition": "The result can be placed on a map alongside other layers. Accuracy depends on the control points and on whether terrain effects are corrected, as in orthorectification.",
+   "related": [
+    "orthorectification",
+    "coordinate-reference-system"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/georeferencing/"
+  },
+  {
+   "slug": "geostationary-orbit",
+   "term": "Geostationary orbit",
+   "category": "space",
+   "aliases": [
+    "GEO"
+   ],
+   "short": "A geostationary orbit is a circular orbit about 35,786 km above the equator, in which a satellite takes one sidereal day to circle the Earth.",
+   "definition": "Because it keeps pace with Earth's rotation, the satellite appears to stay fixed in the sky. This is useful for communications and weather satellites that need to watch the same region continuously.",
+   "related": [
+    "apogee-and-perigee"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/geostationary-orbit/"
+  },
+  {
+   "slug": "git-repository",
+   "term": "Git repository",
+   "category": "web-architecture",
+   "aliases": [
+    "repo",
+    "Git repo"
+   ],
+   "short": "A Git repository is a store of a project's files together with their complete history of changes, managed by the Git version control system.",
+   "definition": "Each copy holds the full history, so it can be used offline. Hosting services such as GitHub keep a shared remote copy.",
+   "related": [
+    "version-control"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/git-repository/"
+  },
+  {
+   "slug": "global-warming-potential",
+   "term": "Global warming potential (GWP)",
+   "category": "climate-science",
+   "aliases": [
+    "GWP",
+    "GWP100"
+   ],
+   "short": "Global warming potential compares how much heat a greenhouse gas traps with carbon dioxide, over a stated time horizon, usually 100 years.",
+   "definition": "By definition carbon dioxide has a GWP of 1. The IPCC's Sixth Assessment Report gives methane a 100-year GWP of about 27 to 30, and a much higher value over 20 years because methane is short-lived.",
+   "related": [
+    "co2-equivalence",
+    "methane-slip"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/global-warming-potential/"
+  },
+  {
+   "slug": "graphql",
+   "term": "GraphQL",
+   "category": "web-architecture",
+   "aliases": [],
+   "short": "GraphQL is a query language and runtime for APIs in which the client specifies exactly which fields it needs from a single endpoint.",
+   "definition": "It avoids over- and under-fetching but needs care over query cost and caching.",
+   "related": [
+    "rest-api"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/graphql/"
+  },
+  {
+   "slug": "graveyard-orbit",
+   "term": "Graveyard orbit",
+   "category": "space",
+   "aliases": [
+    "disposal orbit"
+   ],
+   "short": "A graveyard orbit is a disposal orbit, a few hundred kilometres above geostationary orbit, to which retired geostationary satellites are moved.",
+   "definition": "Raising the satellite clears the busy geostationary ring for working spacecraft. It needs some fuel to be reserved for the move.",
+   "related": [
+    "geostationary-orbit",
+    "post-mission-disposal"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/graveyard-orbit/"
+  },
+  {
+   "slug": "gravitational-lensing",
+   "term": "Gravitational lensing",
+   "category": "space",
+   "aliases": [],
+   "short": "Gravitational lensing is the bending of light by the gravity of a massive object, which can magnify and distort the images of objects behind it.",
+   "definition": "Strong lensing produces arcs and multiple images. Weak lensing slightly distorts many galaxies, and statistical analysis maps dark matter.",
+   "related": [
+    "dark-matter-halo"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/gravitational-lensing/"
+  },
+  {
+   "slug": "gravitational-waves",
+   "term": "Gravitational waves",
+   "category": "space",
+   "aliases": [],
+   "short": "Gravitational waves are ripples in spacetime caused by accelerating masses, such as merging black holes or neutron stars.",
+   "definition": "They were first detected directly by LIGO in September 2015, from two merging black holes. They carry information that light does not.",
+   "related": [
+    "black-hole",
+    "neutron-star"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/gravitational-waves/"
+  },
+  {
+   "slug": "green-hydrogen",
+   "term": "Green hydrogen",
+   "category": "sustainability",
+   "aliases": [],
+   "short": "Green hydrogen is hydrogen made by splitting water with electrolysis powered by renewable or other low-carbon electricity.",
+   "definition": "It differs from grey hydrogen, made from natural gas with high emissions. Its climate benefit depends on the electricity source and on avoiding leaks of hydrogen itself.",
+   "related": [
+    "electrolysis",
+    "power-to-x"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/green-hydrogen/"
+  },
+  {
+   "slug": "greenhouse-effect",
+   "term": "Greenhouse effect",
+   "category": "sustainability",
+   "aliases": [],
+   "short": "The greenhouse effect is the warming of a planet's surface caused by atmospheric gases that absorb outgoing thermal radiation and re-emit part of it back towards the surface.",
+   "definition": "Sunlight warms the Earth, which radiates heat back out. Gases such as water vapour, carbon dioxide and methane slow that heat's escape, keeping the planet warmer than it would otherwise be. Adding more of these gases strengthens the effect.",
+   "related": [
+    "carbon-budget"
+   ],
+   "updated": "2026-10-17",
+   "url": "https://glossary.rjmlaird.co.uk/greenhouse-effect/"
+  },
+  {
+   "slug": "greenhouse-gas-inventory",
+   "term": "Greenhouse gas inventory",
+   "category": "climate-science",
+   "aliases": [],
+   "short": "A greenhouse gas inventory is a structured account of emissions and removals, by source and by gas, for a defined boundary such as a country or an organisation.",
+   "definition": "National inventories are reported to the UN climate convention using IPCC guidelines. Organisations commonly follow the GHG Protocol, which groups emissions into scopes 1, 2 and 3.",
+   "related": [
+    "co2-equivalence",
+    "global-warming-potential",
+    "net-zero-emissions"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/greenhouse-gas-inventory/"
+  },
+  {
+   "slug": "greenhouse-gas-removal",
+   "term": "Greenhouse gas removal (GGR)",
+   "category": "sustainability",
+   "aliases": [
+    "GGR",
+    "carbon dioxide removal",
+    "CDR"
+   ],
+   "short": "Greenhouse gas removal covers human activities that take greenhouse gases out of the atmosphere and store them durably.",
+   "definition": "Methods range from planting forests and restoring soils to engineered approaches such as direct air capture. They differ in permanence, cost, scale and risk.",
+   "related": [
+    "negative-emissions",
+    "direct-air-capture",
+    "beccs"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/greenhouse-gas-removal/"
+  },
+  {
+   "slug": "grid-flexibility",
+   "term": "Grid flexibility",
+   "category": "sustainability",
+   "aliases": [],
+   "short": "Grid flexibility is the ability of the power system to keep supply and demand balanced as conditions change.",
+   "definition": "Sources of flexibility include storage, interconnectors, flexible generation and demand response. Flexibility needs grow as more variable wind and solar power joins the grid.",
+   "related": [
+    "demand-response",
+    "energy-storage",
+    "intermittency"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/grid-flexibility/"
+  },
+  {
+   "slug": "ground-station",
+   "term": "Ground station",
+   "category": "space",
+   "aliases": [
+    "Earth station"
+   ],
+   "short": "A facility on Earth that communicates with spacecraft.",
+   "definition": "A ground station is an antenna, receiver and control system used to send commands to a spacecraft and receive its data.",
+   "related": [
+    "link-budget"
+   ],
+   "updated": "2026-10-11",
+   "url": "https://glossary.rjmlaird.co.uk/ground-station/"
+  },
+  {
+   "slug": "ground-truthing",
+   "term": "Ground truthing",
+   "category": "earth-observation",
+   "aliases": [
+    "ground truth",
+    "field validation"
+   ],
+   "short": "Ground truthing is collecting observations on the ground, such as field surveys, to calibrate and validate remote sensing data.",
+   "definition": "It provides the reference data for training classifiers and measuring accuracy. A poor sampling design can bias both.",
+   "related": [
+    "supervised-classification",
+    "change-detection"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/ground-truthing/"
+  },
+  {
+   "slug": "habitable-zone",
+   "term": "Habitable zone",
+   "category": "space",
+   "aliases": [
+    "circumstellar habitable zone"
+   ],
+   "short": "The habitable zone is the range of distances from a star where a rocky planet could have liquid water on its surface, given a suitable atmosphere.",
+   "definition": "Being in the zone does not make a planet habitable. Atmosphere, magnetic field and the star's activity also matter.",
+   "related": [
+    "transit-method",
+    "radial-velocity-method"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/habitable-zone/"
+  },
+  {
+   "slug": "headless-cms",
+   "term": "Headless CMS",
+   "category": "web-architecture",
+   "aliases": [
+    "headless content management system"
+   ],
+   "short": "A headless CMS is a content management system that stores and manages content and exposes it through an API, without deciding how it is displayed.",
+   "definition": "The same content can then feed a website, an app or a newsletter. The trade-off is that teams must build the front end themselves.",
+   "related": [
+    "jamstack",
+    "static-site-generation",
+    "rest-api"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/headless-cms/"
+  },
+  {
+   "slug": "heat-pump",
+   "term": "Heat pump",
+   "category": "sustainability",
+   "aliases": [
+    "heat pumps"
+   ],
+   "short": "A heat pump moves heat from a cooler source such as outside air, the ground or water into a building, using electricity to drive a refrigeration cycle.",
+   "definition": "Because it moves heat rather than generating it, a heat pump typically delivers about three or more units of heat per unit of electricity. Its efficiency falls as the temperature gap widens.",
+   "related": [
+    "electrification",
+    "district-heating"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/heat-pump/"
+  },
+  {
+   "slug": "hertzsprung-russell-diagram",
+   "term": "Hertzsprung–Russell diagram",
+   "category": "space",
+   "aliases": [
+    "HR diagram",
+    "H-R diagram"
+   ],
+   "short": "The Hertzsprung–Russell diagram plots stars by luminosity against surface temperature, with temperature conventionally increasing to the left.",
+   "definition": "Stars fall into groups, including the main sequence, giants and white dwarfs. It is a key tool for reading the evolutionary stage of a star.",
+   "related": [
+    "main-sequence",
+    "red-giant",
+    "white-dwarf"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/hertzsprung-russell-diagram/"
+  },
+  {
+   "slug": "hot-spot-analysis",
+   "term": "Hot-spot analysis",
+   "category": "earth-observation",
+   "aliases": [
+    "hotspot analysis",
+    "Getis-Ord Gi*"
+   ],
+   "short": "Hot-spot analysis identifies statistically significant clusters of high or low values across a map, rather than just visible patterns.",
+   "definition": "A common method is the Getis-Ord Gi statistic. Results depend on how neighbours are defined and on the scale of analysis.",
+   "related": [
+    "kernel-density-estimation",
+    "spatial-join"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/hot-spot-analysis/"
+  },
+  {
+   "slug": "hubble-tension",
+   "term": "Hubble tension",
+   "category": "space",
+   "aliases": [],
+   "short": "The Hubble tension is the mismatch between expansion-rate measurements: about 67 to 68 km/s per megaparsec from the early universe, and about 73 from nearby objects.",
+   "definition": "The two sets of measurements are each precise, so the gap may point to an error that remains unidentified, or to new physics. It remains unresolved.",
+   "related": [
+    "lambda-cdm-model",
+    "cosmic-microwave-background",
+    "cosmological-redshift"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/hubble-tension/"
+  },
+  {
+   "slug": "hyperspectral-imaging",
+   "term": "Hyperspectral imaging",
+   "category": "earth-observation",
+   "aliases": [
+    "hyperspectral"
+   ],
+   "short": "Hyperspectral imaging records hundreds of narrow, contiguous wavelength bands for every pixel, giving a nearly continuous spectrum.",
+   "definition": "The detail allows materials, crop stress or minerals to be identified from their spectral signature. The cost is much larger data volumes and harder calibration.",
+   "related": [
+    "multispectral-imaging",
+    "spectral-signature"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/hyperspectral-imaging/"
+  },
+  {
+   "slug": "hysteresis",
+   "term": "Hysteresis",
+   "category": "climate-science",
+   "aliases": [],
+   "short": "Hysteresis is when a system's state depends on its history, so reversing the driver does not return it along the same path.",
+   "definition": "In climate terms, an ice sheet that melts at a given temperature may not regrow when temperatures fall back to that level. Hysteresis is why tipping points can be so hard to undo.",
+   "related": [
+    "tipping-point",
+    "climate-feedback"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/hysteresis/"
+  },
+  {
+   "slug": "information-disorder",
+   "term": "Information disorder",
+   "category": "science-communication",
+   "aliases": [],
+   "short": "Information disorder is a framework by Claire Wardle and Hossein Derakhshan that groups false and harmful information into misinformation, disinformation and malinformation.",
+   "definition": "It separates them by whether the content is false and whether there is intent to harm. It helped replace the vague phrase fake news.",
+   "related": [
+    "misinformation",
+    "disinformation",
+    "malinformation"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/information-disorder/"
+  },
+  {
+   "slug": "infrastructure-as-code",
+   "term": "Infrastructure as code (IaC)",
+   "category": "web-architecture",
+   "aliases": [
+    "IaC"
+   ],
+   "short": "Infrastructure as code is managing servers, networks and other infrastructure through versioned, machine-readable definition files instead of manual configuration.",
+   "definition": "Tools such as Terraform and CloudFormation apply the definitions repeatably. Changes can be reviewed, tested and rolled back like code.",
+   "related": [
+    "version-control",
+    "continuous-deployment"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/infrastructure-as-code/"
+  },
+  {
+   "slug": "inoculation-theory",
+   "term": "Inoculation theory",
+   "category": "science-communication",
+   "aliases": [],
+   "short": "Inoculation theory holds that giving people a weakened form of a persuasive attack, with a refutation, builds resistance to later, stronger attempts.",
+   "definition": "It was developed by William McGuire in the 1960s using an analogy with vaccines. It underlies prebunking.",
+   "related": [
+    "prebunking",
+    "debunking"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/inoculation-theory/"
+  },
+  {
+   "slug": "intermittency",
+   "term": "Intermittency",
+   "category": "sustainability",
+   "aliases": [
+    "variability"
+   ],
+   "short": "Intermittency is the variation in output from wind and solar power as weather and time of day change.",
+   "definition": "It is partly predictable and averages out across wide areas. Managing it relies on forecasting, storage, interconnection and flexible demand rather than on keeping every plant running continuously.",
+   "related": [
+    "grid-flexibility",
+    "energy-storage",
+    "capacity-factor"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/intermittency/"
+  },
+  {
+   "slug": "interpolation",
+   "term": "Interpolation",
+   "category": "earth-observation",
+   "aliases": [
+    "spatial interpolation"
+   ],
+   "short": "Interpolation estimates values at places with no measurement from values at nearby measured points.",
+   "definition": "It turns point samples, such as rain gauges, into a continuous surface. Methods differ in their assumptions, so the choice affects the result.",
+   "related": [
+    "kriging",
+    "inverse-distance-weighting"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/interpolation/"
+  },
+  {
+   "slug": "inverse-distance-weighting",
+   "term": "Inverse distance weighting (IDW)",
+   "category": "earth-observation",
+   "aliases": [
+    "IDW"
+   ],
+   "short": "Inverse distance weighting estimates a value as an average of nearby measurements, weighted so that closer points count for more.",
+   "definition": "It is quick and easy to apply, but gives no uncertainty estimate and can create bullseye patterns around sample points.",
+   "related": [
+    "interpolation",
+    "kriging"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/inverse-distance-weighting/"
+  },
+  {
+   "slug": "jamstack",
+   "term": "Jamstack",
+   "category": "web-architecture",
+   "aliases": [
+    "JAMstack"
+   ],
+   "short": "Jamstack is a web architecture of pre-built pages served from a CDN, with dynamic features added through client-side JavaScript and APIs.",
+   "definition": "The name stands for JavaScript, APIs and Markup. It has largely been absorbed into broader ideas of static-first and hybrid rendering.",
+   "related": [
+    "static-site-generation",
+    "headless-cms",
+    "serverless-computing"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/jamstack/"
+  },
+  {
+   "slug": "json-web-token",
+   "term": "JSON Web Token (JWT)",
+   "category": "web-architecture",
+   "aliases": [
+    "JWT"
+   ],
+   "short": "A JSON Web Token is a compact, signed token that carries claims, such as a user identity and expiry time, as JSON, defined in RFC 7519.",
+   "definition": "It has three base64url-encoded parts: header, payload and signature. The payload is readable by anyone holding the token unless it is also encrypted, so it should not carry secrets.",
+   "related": [
+    "oauth",
+    "authentication"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/json-web-token/"
+  },
+  {
+   "slug": "just-in-time-collision-avoidance",
+   "term": "Just-in-time collision avoidance",
+   "category": "space",
+   "aliases": [
+    "JCA"
+   ],
+   "short": "Just-in-time collision avoidance is an approach that delays the decision to manoeuvre until close to the encounter, when tracking data are most accurate.",
+   "definition": "It aims to avoid unnecessary manoeuvres triggered by early, uncertain predictions. It needs fast, reliable tracking and ready spacecraft operations.",
+   "related": [
+    "collision-avoidance-manoeuvre",
+    "collision-probability"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/just-in-time-collision-avoidance/"
+  },
+  {
+   "slug": "keeling-curve",
+   "term": "Keeling Curve",
+   "category": "climate-science",
+   "aliases": [],
+   "short": "The Keeling Curve is the continuous record of atmospheric carbon dioxide measured at Mauna Loa Observatory in Hawaii since 1958, begun by Charles David Keeling.",
+   "definition": "It shows both the steady rise in carbon dioxide, now above 420 parts per million, and a yearly zigzag as northern hemisphere vegetation grows and decays.",
+   "related": [
+    "carbon-cycle",
+    "greenhouse-effect"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/keeling-curve/"
+  },
+  {
+   "slug": "kernel-density-estimation",
+   "term": "Kernel density estimation (KDE)",
+   "category": "earth-observation",
+   "aliases": [
+    "KDE",
+    "heat map"
+   ],
+   "short": "Kernel density estimation turns a set of points into a smooth surface showing how densely they cluster.",
+   "definition": "Each point contributes a bump of influence across a chosen bandwidth. The bandwidth strongly affects the look of the map, so it needs to be justified.",
+   "related": [
+    "hot-spot-analysis",
+    "raster-data"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/kernel-density-estimation/"
+  },
+  {
+   "slug": "kessler-syndrome",
+   "term": "Kessler syndrome",
+   "category": "space",
+   "aliases": [
+    "Kessler cascade"
+   ],
+   "short": "Kessler syndrome is a scenario, proposed by Donald Kessler and Burton Cour-Palais in 1978, in which collisions create debris that causes further collisions in a self-sustaining cascade.",
+   "definition": "It would make some orbits increasingly hazardous over time rather than in a single event. Its risk is greatest in altitude bands that are already crowded.",
+   "related": [
+    "orbital-debris",
+    "collision-probability",
+    "active-debris-removal"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/kessler-syndrome/"
+  },
+  {
+   "slug": "kriging",
+   "term": "Kriging",
+   "category": "earth-observation",
+   "aliases": [],
+   "short": "Kriging is a geostatistical interpolation method that uses the spatial correlation of the data, summarised in a variogram, to estimate values and their uncertainty.",
+   "definition": "Unlike simpler methods, it gives an error estimate at each location. It needs enough data to fit a reliable variogram.",
+   "related": [
+    "interpolation",
+    "inverse-distance-weighting"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/kriging/"
+  },
+  {
+   "slug": "kubernetes",
+   "term": "Kubernetes",
+   "category": "web-architecture",
+   "aliases": [
+    "K8s"
+   ],
+   "short": "Kubernetes is an open-source system for deploying, scaling and managing containerised applications across a cluster of machines.",
+   "definition": "It restarts failed containers, balances load and handles rolling updates. It is powerful but adds operational complexity, so smaller projects often do not need it.",
+   "related": [
+    "containerisation",
+    "docker"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/kubernetes/"
+  },
+  {
+   "slug": "lambda-cdm-model",
+   "term": "Lambda-CDM model",
+   "category": "space",
+   "aliases": [
+    "ΛCDM",
+    "LCDM",
+    "standard model of cosmology"
+   ],
+   "short": "The Lambda-CDM model is the standard model of cosmology, in which the universe contains dark energy (Lambda), cold dark matter and ordinary matter, and began with the Big Bang.",
+   "definition": "It fits observations such as the cosmic microwave background and large-scale structure well. The nature of dark matter and dark energy remains unknown.",
+   "related": [
+    "cosmic-microwave-background",
+    "dark-matter-halo",
+    "hubble-tension"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/lambda-cdm-model/"
+  },
+  {
+   "slug": "land-surface-temperature",
+   "term": "Land surface temperature (LST)",
+   "category": "earth-observation",
+   "aliases": [
+    "LST"
+   ],
+   "short": "Land surface temperature is the radiative temperature of the ground surface, as measured by a thermal sensor.",
+   "definition": "It differs from air temperature, which is measured about two metres above ground. Estimating it from satellite data needs emissivity and atmospheric corrections.",
+   "related": [
+    "emissivity",
+    "atmospheric-correction"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/land-surface-temperature/"
+  },
+  {
+   "slug": "landsat",
+   "term": "Landsat",
+   "category": "earth-observation",
+   "aliases": [],
+   "short": "Landsat is a series of US land-imaging satellites, run by NASA and the US Geological Survey, that has observed the Earth's land surface continuously since 1972.",
+   "definition": "Its multi-decade archive, at 30-metre resolution in the main multispectral bands, is the longest of its kind and is free to use. It is central to studies of long-term land change.",
+   "related": [
+    "sentinel-2",
+    "change-detection"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/landsat/"
+  },
+  {
+   "slug": "levelised-cost-of-energy",
+   "term": "Levelised cost of energy (LCOE)",
+   "category": "sustainability",
+   "aliases": [
+    "LCOE",
+    "levelized cost of energy"
+   ],
+   "short": "Levelised cost of energy is the lifetime cost of building and running a power plant divided by the lifetime energy it produces, with future amounts discounted.",
+   "definition": "It allows a rough comparison between technologies but omits system costs such as backup, grid connection and flexibility, which differ by technology.",
+   "related": [
+    "capacity-factor",
+    "energy-return-on-investment"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/levelised-cost-of-energy/"
+  },
+  {
+   "slug": "lidar",
+   "term": "LiDAR",
+   "category": "earth-observation",
+   "aliases": [
+    "light detection and ranging"
+   ],
+   "short": "LiDAR (light detection and ranging) measures distance by timing how long a laser pulse takes to return after reflecting from a surface.",
+   "definition": "Millions of pulses build a three-dimensional point cloud. It is used for terrain and building models, forest structure and, from space, ice and canopy height.",
+   "related": [
+    "point-cloud",
+    "active-remote-sensing",
+    "digital-surface-model"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/lidar/"
+  },
+  {
+   "slug": "life-cycle-assessment",
+   "term": "Life-cycle assessment (LCA)",
+   "category": "sustainability",
+   "aliases": [
+    "LCA",
+    "life cycle assessment"
+   ],
+   "short": "Life-cycle assessment is a standardised method for quantifying the environmental impacts of a product or service from raw materials through use to disposal.",
+   "definition": "It follows the ISO 14040 and 14044 standards. Results depend on the stated functional unit and system boundary, so comparisons are only fair when these match.",
+   "related": [
+    "embodied-carbon",
+    "operational-carbon"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/life-cycle-assessment/"
+  },
+  {
+   "slug": "light-pollution",
+   "term": "Light pollution",
+   "category": "sustainability",
+   "aliases": [],
+   "short": "Light pollution is excessive or misdirected artificial light that brightens the night sky and affects people, wildlife and observation.",
+   "definition": "Street lighting, signs and buildings scatter light into the sky, hiding faint stars and making astronomy harder. Shielded, well-aimed and appropriately bright lighting reduces the problem and often saves energy.",
+   "related": [
+    "magnitude"
+   ],
+   "updated": "2026-10-17",
+   "url": "https://glossary.rjmlaird.co.uk/light-pollution/"
+  },
+  {
+   "slug": "link-budget",
+   "term": "Link budget",
+   "category": "space",
+   "aliases": [
+    "RF link budget"
+   ],
+   "short": "The accounting of gains and losses between transmitter and receiver.",
+   "definition": "A link budget adds up every gain and loss between a transmitter and a receiver: antenna gains, cable losses, distance and atmospheric absorption. If what arrives is above the receiver's sensitivity by a safe margin, the link works.\n\nWhy it matters: it tells you whether a satellite can actually reach your ground station before anyone builds anything.",
+   "related": [
+    "ground-station",
+    "signal-to-noise-ratio"
+   ],
+   "updated": "2026-10-11",
+   "url": "https://glossary.rjmlaird.co.uk/link-budget/"
+  },
+  {
+   "slug": "low-earth-orbit",
+   "term": "Low Earth orbit (LEO)",
+   "category": "space",
+   "aliases": [
+    "LEO"
+   ],
+   "short": "Low Earth orbit is the region of orbits from roughly 160 to 2,000 kilometres above the Earth's surface.",
+   "definition": "Most crewed spaceflight, Earth observation satellites and the newer broadband mega-constellations operate here. It is also where most tracked debris is found.",
+   "related": [
+    "medium-earth-orbit",
+    "geostationary-orbit",
+    "orbital-debris"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/low-earth-orbit/"
+  },
+  {
+   "slug": "magnitude",
+   "term": "Magnitude",
+   "category": "space",
+   "aliases": [],
+   "short": "Magnitude is a logarithmic scale for the brightness of astronomical objects. A difference of 5 magnitudes corresponds to a brightness ratio of 100.",
+   "definition": "The scale runs backwards: smaller numbers mean brighter objects, and very bright objects can have negative values. Apparent magnitude describes how bright something looks from Earth, while absolute magnitude compares objects at a standard distance.",
+   "related": [
+    "light-pollution",
+    "astronomical-unit"
+   ],
+   "updated": "2026-10-17",
+   "url": "https://glossary.rjmlaird.co.uk/magnitude/"
+  },
+  {
+   "slug": "main-sequence",
+   "term": "Main sequence",
+   "category": "space",
+   "aliases": [],
+   "short": "The main sequence is the long phase of a star's life in which it fuses hydrogen into helium in its core, and the band that such stars occupy on the Hertzsprung-Russell diagram.",
+   "definition": "The Sun is a main-sequence star. A star's mass sets its position on the sequence and how long it stays there, with massive stars burning out much faster.",
+   "related": [
+    "hertzsprung-russell-diagram",
+    "red-giant"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/main-sequence/"
+  },
+  {
+   "slug": "malinformation",
+   "term": "Malinformation",
+   "category": "science-communication",
+   "aliases": [],
+   "short": "Malinformation is genuine information that is shared to cause harm, for example by leaking private data or taking true details out of context.",
+   "definition": "It is the third category in the information-disorder framework. What makes it harmful is the use, not falsity.",
+   "related": [
+    "misinformation",
+    "disinformation",
+    "information-disorder"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/malinformation/"
+  },
+  {
+   "slug": "map-algebra",
+   "term": "Map algebra",
+   "category": "earth-observation",
+   "aliases": [],
+   "short": "Map algebra applies mathematical operations to raster layers cell by cell, for example adding layers or applying conditions.",
+   "definition": "Operations can be local (a single cell), focal (a neighbourhood), zonal or global. Indices such as NDVI are calculated this way.",
+   "related": [
+    "raster-data",
+    "ndvi"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/map-algebra/"
+  },
+  {
+   "slug": "media-framing",
+   "term": "Media framing",
+   "category": "science-communication",
+   "aliases": [
+    "framing"
+   ],
+   "short": "Media framing is how the selection, emphasis and wording of coverage shape how people understand an issue.",
+   "definition": "The same facts can be framed as a risk, an opportunity or a conflict, which leads to different reactions. Awareness of framing helps both journalists and audiences.",
+   "related": [
+    "false-balance",
+    "availability-heuristic"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/media-framing/"
+  },
+  {
+   "slug": "medium-earth-orbit",
+   "term": "Medium Earth orbit (MEO)",
+   "category": "space",
+   "aliases": [
+    "MEO"
+   ],
+   "short": "Medium Earth orbit is the region between low Earth orbit and geostationary orbit, roughly 2,000 to 35,786 kilometres altitude.",
+   "definition": "Navigation constellations such as GPS and Galileo fly here, at about 20,000 to 23,000 kilometres. The radiation environment is harsher than in LEO.",
+   "related": [
+    "low-earth-orbit",
+    "geostationary-orbit"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/medium-earth-orbit/"
+  },
+  {
+   "slug": "mega-constellation",
+   "term": "Mega-constellation",
+   "category": "space",
+   "aliases": [
+    "megaconstellation",
+    "large constellation"
+   ],
+   "short": "A mega-constellation is a network of hundreds to thousands of satellites, usually in low Earth orbit, working together, for example to provide broadband internet.",
+   "definition": "Satellites are launched in large numbers and replaced regularly. They raise concerns about debris, collisions, radio interference and the effect on astronomy.",
+   "related": [
+    "low-earth-orbit",
+    "dark-and-quiet-skies",
+    "radio-frequency-interference"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/mega-constellation/"
+  },
+  {
+   "slug": "metallicity",
+   "term": "Metallicity",
+   "category": "space",
+   "aliases": [],
+   "short": "In astronomy, metallicity is the proportion of a star's mass made of elements heavier than helium, which astronomers loosely call metals.",
+   "definition": "It is usually expressed relative to the Sun, as [Fe/H]. Metal-rich stars are more likely to host giant planets, and older stars are generally more metal-poor.",
+   "related": [
+    "stellar-nucleosynthesis",
+    "spectroscopy"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/metallicity/"
+  },
+  {
+   "slug": "methane-slip",
+   "term": "Methane slip",
+   "category": "climate-science",
+   "aliases": [],
+   "short": "Methane slip is unburnt methane that escapes in the exhaust of engines and turbines running on natural gas, such as liquefied natural gas ship engines.",
+   "definition": "Because methane is a potent greenhouse gas in the short term, slip can cancel much of the carbon dioxide benefit of switching fuel. The amount depends on engine design and operating load.",
+   "related": [
+    "global-warming-potential",
+    "co2-equivalence"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/methane-slip/"
+  },
+  {
+   "slug": "misinformation",
+   "term": "Misinformation",
+   "category": "science-communication",
+   "aliases": [],
+   "short": "Misinformation is false or misleading information shared without intent to deceive.",
+   "definition": "People often pass it on in good faith. It becomes a problem when it spreads faster than corrections.",
+   "related": [
+    "disinformation",
+    "malinformation",
+    "debunking"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/misinformation/"
+  },
+  {
+   "slug": "motivated-reasoning",
+   "term": "Motivated reasoning",
+   "category": "science-communication",
+   "aliases": [],
+   "short": "Motivated reasoning is processing information to reach a conclusion you want, for example one that fits your identity or group.",
+   "definition": "It affects experts and non-experts alike. It helps explain why more facts alone often do not change minds.",
+   "related": [
+    "confirmation-bias",
+    "epistemic-vigilance"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/motivated-reasoning/"
+  },
+  {
+   "slug": "multispectral-imaging",
+   "term": "Multispectral imaging",
+   "category": "earth-observation",
+   "aliases": [
+    "multispectral"
+   ],
+   "short": "Multispectral imaging records an image in several separate wavelength bands, typically three to around a dozen, such as blue, green, red and near-infrared.",
+   "definition": "Different surfaces reflect each band differently, so band combinations can separate vegetation, water and bare ground. Sentinel-2 and Landsat are multispectral.",
+   "related": [
+    "hyperspectral-imaging",
+    "spectral-signature"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/multispectral-imaging/"
+  },
+  {
+   "slug": "ndvi",
+   "term": "Normalised Difference Vegetation Index (NDVI)",
+   "category": "earth-observation",
+   "aliases": [
+    "NDVI"
+   ],
+   "short": "NDVI is a vegetation index calculated as (near-infrared − red) divided by (near-infrared + red), giving values from −1 to 1.",
+   "definition": "Dense, healthy vegetation scores high because it reflects near-infrared and absorbs red. It can saturate in dense canopies, which EVI was designed to reduce.",
+   "related": [
+    "evi",
+    "spectral-signature"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/ndvi/"
+  },
+  {
+   "slug": "negative-emissions",
+   "term": "Negative emissions",
+   "category": "sustainability",
+   "aliases": [],
+   "short": "Negative emissions are a net removal of carbon dioxide from the atmosphere, where removals exceed emissions.",
+   "definition": "Most scenarios that limit warming to 1.5 °C assume some negative emissions, from methods such as afforestation, direct air capture and bioenergy with carbon capture and storage.",
+   "related": [
+    "greenhouse-gas-removal",
+    "net-zero-emissions"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/negative-emissions/"
+  },
+  {
+   "slug": "net-zero-emissions",
+   "term": "Net-zero emissions",
+   "category": "climate-science",
+   "aliases": [
+    "net zero",
+    "net-zero"
+   ],
+   "short": "Net-zero emissions means that human-caused greenhouse gas emissions are balanced by human-caused removals over a given period.",
+   "definition": "The definition depends on scope: which gases, which emissions and what counts as a removal. Credible plans cut emissions first and use removals only for what is hard to abate.",
+   "related": [
+    "greenhouse-gas-removal",
+    "carbon-budget",
+    "greenhouse-gas-inventory"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/net-zero-emissions/"
+  },
+  {
+   "slug": "network-analysis",
+   "term": "Network analysis",
+   "category": "earth-observation",
+   "aliases": [],
+   "short": "Network analysis works on connected lines, such as roads or rivers, to find the shortest route, the nearest facility or the area reachable within a set time.",
+   "definition": "It uses travel cost rather than straight-line distance, so results reflect how people actually move.",
+   "related": [
+    "catchment-analysis",
+    "vector-data"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/network-analysis/"
+  },
+  {
+   "slug": "neutron-star",
+   "term": "Neutron star",
+   "category": "space",
+   "aliases": [],
+   "short": "A neutron star is the extremely dense remnant of a massive star's core, with more than the Sun's mass packed into a sphere about 20 kilometres across.",
+   "definition": "It is made mostly of neutrons. Rapidly spinning, magnetised neutron stars are seen as pulsars.",
+   "related": [
+    "supernova",
+    "black-hole",
+    "gravitational-waves"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/neutron-star/"
+  },
+  {
+   "slug": "normalisation",
+   "term": "Normalisation",
+   "category": "web-architecture",
+   "aliases": [
+    "database normalisation"
+   ],
+   "short": "Normalisation is organising a relational database into tables so that each fact is stored once, reducing duplication and update errors.",
+   "definition": "It is described by normal forms, with third normal form the usual target. Reporting systems sometimes deliberately denormalise for speed.",
+   "related": [
+    "relational-database",
+    "primary-key"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/normalisation/"
+  },
+  {
+   "slug": "oauth",
+   "term": "OAuth",
+   "category": "web-architecture",
+   "aliases": [
+    "OAuth 2.0"
+   ],
+   "short": "OAuth is an authorisation framework that lets an application get limited access to a user's resources on another service, using tokens instead of the user's password.",
+   "definition": "OpenID Connect adds identity on top of it, which is what most social logins use. It defines several flows for different kinds of application.",
+   "related": [
+    "authorisation",
+    "json-web-token"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/oauth/"
+  },
+  {
+   "slug": "object-based-image-analysis",
+   "term": "Object-based image analysis (OBIA)",
+   "category": "earth-observation",
+   "aliases": [
+    "OBIA",
+    "GEOBIA"
+   ],
+   "short": "Object-based image analysis groups neighbouring pixels into objects, then classifies the objects using shape, texture and context as well as colour.",
+   "definition": "It suits high-resolution imagery, where one real feature, such as a roof, covers many pixels. It usually gives cleaner maps than classifying each pixel alone.",
+   "related": [
+    "pixel-based-classification",
+    "supervised-classification"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/object-based-image-analysis/"
+  },
+  {
+   "slug": "on-orbit-servicing",
+   "term": "On-orbit servicing",
+   "category": "space",
+   "aliases": [
+    "in-orbit servicing"
+   ],
+   "short": "On-orbit servicing is inspecting, refuelling, repairing, upgrading or relocating a spacecraft while it is in orbit.",
+   "definition": "It could extend satellite lifetimes and reduce waste. It requires rendezvous and docking with objects that were often not designed for it.",
+   "related": [
+    "active-debris-removal",
+    "post-mission-disposal"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/on-orbit-servicing/"
+  },
+  {
+   "slug": "operational-carbon",
+   "term": "Operational carbon",
+   "category": "sustainability",
+   "aliases": [],
+   "short": "Operational carbon is the greenhouse gas emissions from the energy used to run a building or product while it is in use.",
+   "definition": "It contrasts with embodied carbon, which is released making and delivering it. As grids decarbonise, embodied carbon becomes a larger share of the lifetime total.",
+   "related": [
+    "embodied-carbon",
+    "life-cycle-assessment"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/operational-carbon/"
+  },
+  {
+   "slug": "orbital-debris",
+   "term": "Orbital debris",
+   "category": "space",
+   "aliases": [
+    "space debris",
+    "space junk",
+    "space debris environment"
+   ],
+   "short": "Orbital debris is human-made material in orbit that no longer serves a purpose, including dead satellites, spent rocket stages and fragments.",
+   "definition": "Objects travel at several kilometres per second, so even a small fragment can damage a spacecraft. The total debris population is far larger than the part that can be tracked.",
+   "related": [
+    "kessler-syndrome",
+    "fragmentation-event",
+    "trackable-object"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/orbital-debris/"
+  },
+  {
+   "slug": "origin",
+   "term": "Origin",
+   "category": "web-architecture",
+   "aliases": [
+    "origin server"
+   ],
+   "short": "The server that holds the original version of a site's content.",
+   "definition": "A CDN or cache sits in front of the origin and serves copies. When the cache has nothing fresh, it goes back to the origin.",
+   "related": [
+    "architecture-decision-record"
+   ],
+   "updated": "2026-10-11",
+   "url": "https://glossary.rjmlaird.co.uk/origin/"
+  },
+  {
+   "slug": "orthorectification",
+   "term": "Orthorectification",
+   "category": "earth-observation",
+   "aliases": [],
+   "short": "Orthorectification corrects an image for distortions caused by terrain relief and sensor tilt, so that its scale is uniform like a map.",
+   "definition": "Without it, a hill or tall building appears displaced from its true position. It needs an elevation model and information on the sensor's position and orientation.",
+   "related": [
+    "georeferencing",
+    "digital-elevation-model"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/orthorectification/"
+  },
+  {
+   "slug": "overlay-analysis",
+   "term": "Overlay analysis",
+   "category": "earth-observation",
+   "aliases": [],
+   "short": "Overlay analysis combines two or more map layers to produce a new one, using operations such as intersect, union and difference.",
+   "definition": "It answers questions such as which flood-prone areas also contain housing. Layers need to share a coordinate reference system.",
+   "related": [
+    "buffer-analysis",
+    "spatial-join",
+    "map-algebra"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/overlay-analysis/"
+  },
+  {
+   "slug": "p-value",
+   "term": "P-value",
+   "category": "science-communication",
+   "aliases": [
+    "p value"
+   ],
+   "short": "A p-value is the probability of seeing results at least as extreme as those observed, if the null hypothesis and the model were true.",
+   "definition": "It is not the probability that the null hypothesis is true, nor the probability that the result is due to chance. It is often misinterpreted.",
+   "related": [
+    "statistical-significance",
+    "confidence-interval"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/p-value/"
+  },
+  {
+   "slug": "paleoclimate-proxy",
+   "term": "Paleoclimate proxy",
+   "category": "climate-science",
+   "aliases": [
+    "proxy record",
+    "climate proxy"
+   ],
+   "short": "A paleoclimate proxy is a physical, chemical or biological record, such as a tree ring or ice core, that indirectly preserves past climate conditions.",
+   "definition": "Corals, sediments, stalagmites and pollen are other proxies. Each must be calibrated against instrumental data and dated carefully.",
+   "related": [
+    "keeling-curve",
+    "carbon-cycle"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/paleoclimate-proxy/"
+  },
+  {
+   "slug": "passive-remote-sensing",
+   "term": "Passive remote sensing",
+   "category": "earth-observation",
+   "aliases": [],
+   "short": "Passive remote sensing measures radiation that comes from a natural source, usually reflected sunlight or the target's own thermal emission.",
+   "definition": "Optical and thermal satellite imagers are passive. They depend on illumination and clear skies, unlike active sensors such as radar.",
+   "related": [
+    "active-remote-sensing",
+    "remote-sensing"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/passive-remote-sensing/"
+  },
+  {
+   "slug": "photometry",
+   "term": "Photometry",
+   "category": "space",
+   "aliases": [],
+   "short": "Photometry is measuring the brightness of astronomical objects, usually through filters that select particular wavelengths.",
+   "definition": "Repeated measurements give light curves, used to find transits, variable stars and supernovae. The magnitude scale expresses these brightnesses.",
+   "related": [
+    "magnitude",
+    "transit-method",
+    "spectroscopy"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/photometry/"
+  },
+  {
+   "slug": "pixel-based-classification",
+   "term": "Pixel-based classification",
+   "category": "earth-observation",
+   "aliases": [],
+   "short": "Pixel-based classification assigns each pixel to a class using only its own spectral values, without regard to its neighbours.",
+   "definition": "It is simple and works well for moderate-resolution imagery. At high resolution it can produce a noisy, salt-and-pepper result.",
+   "related": [
+    "object-based-image-analysis",
+    "supervised-classification"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/pixel-based-classification/"
+  },
+  {
+   "slug": "point-cloud",
+   "term": "Point cloud",
+   "category": "earth-observation",
+   "aliases": [],
+   "short": "A point cloud is a set of points in three dimensions, each with x, y, z coordinates and sometimes colour or intensity.",
+   "definition": "It comes from LiDAR or from photogrammetry. Point clouds are classified into ground, vegetation and buildings, then used to make elevation models.",
+   "related": [
+    "lidar",
+    "digital-surface-model"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/point-cloud/"
+  },
+  {
+   "slug": "post-mission-disposal",
+   "term": "Post-mission disposal",
+   "category": "space",
+   "aliases": [],
+   "short": "Post-mission disposal is removing a spacecraft from useful orbit, or making it safe, at the end of its operational life.",
+   "definition": "In low Earth orbit it usually means lowering the orbit so the spacecraft re-enters. Some regulators and agencies now expect this within about five years, down from the older 25-year guideline.",
+   "related": [
+    "deorbit",
+    "graveyard-orbit",
+    "orbital-debris"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/post-mission-disposal/"
+  },
+  {
+   "slug": "postgis",
+   "term": "PostGIS",
+   "category": "earth-observation",
+   "aliases": [],
+   "short": "PostGIS is an open-source extension for the PostgreSQL database that adds geometry and raster types, spatial indexes and hundreds of spatial functions.",
+   "definition": "It lets spatial queries, such as finding everything within a distance, run inside the database. It is widely used as the back end of web mapping applications.",
+   "related": [
+    "vector-data",
+    "spatial-join"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/postgis/"
+  },
+  {
+   "slug": "power-to-x",
+   "term": "Power-to-X",
+   "category": "sustainability",
+   "aliases": [
+    "P2X",
+    "power-to-gas"
+   ],
+   "short": "Power-to-X means converting electricity into another energy carrier or product, such as hydrogen, ammonia, synthetic fuels or heat.",
+   "definition": "The X is whatever the electricity is turned into. These routes can store renewable energy and decarbonise sectors that are hard to electrify directly, at the cost of conversion losses.",
+   "related": [
+    "green-hydrogen",
+    "electrolysis",
+    "sector-coupling"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/power-to-x/"
+  },
+  {
+   "slug": "prebunking",
+   "term": "Prebunking",
+   "category": "science-communication",
+   "aliases": [],
+   "short": "Prebunking is warning people about a manipulation technique or false claim before they meet it, so that they are better able to resist it.",
+   "definition": "It often focuses on techniques, such as emotive language or false dichotomies, rather than single claims, so it applies to new falsehoods.",
+   "related": [
+    "inoculation-theory",
+    "debunking"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/prebunking/"
+  },
+  {
+   "slug": "primary-key",
+   "term": "Primary key",
+   "category": "web-architecture",
+   "aliases": [],
+   "short": "A primary key is a column, or set of columns, whose value uniquely identifies each row in a table.",
+   "definition": "It cannot be empty or repeated. Other tables refer to it through foreign keys.",
+   "related": [
+    "foreign-key",
+    "relational-database"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/primary-key/"
+  },
+  {
+   "slug": "progressive-web-app",
+   "term": "Progressive web app (PWA)",
+   "category": "web-architecture",
+   "aliases": [
+    "PWA"
+   ],
+   "short": "A progressive web app is a website that uses a manifest and service workers to be installable and to work offline, like a native app.",
+   "definition": "It is built with standard web technology and is delivered through the browser. Support for some features varies between platforms.",
+   "related": [
+    "core-web-vitals",
+    "static-site-generation"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/progressive-web-app/"
+  },
+  {
+   "slug": "protoplanetary-disc",
+   "term": "Protoplanetary disc",
+   "category": "space",
+   "aliases": [
+    "protoplanetary disk"
+   ],
+   "short": "A protoplanetary disc is a rotating disc of gas and dust around a young star, from which planets form.",
+   "definition": "Dust grains stick together and grow into planetesimals and planets. Discs can last a few million years.",
+   "related": [
+    "star-formation",
+    "accretion-disc"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/protoplanetary-disc/"
+  },
+  {
+   "slug": "provenance",
+   "term": "Provenance",
+   "category": "science-communication",
+   "aliases": [],
+   "short": "Provenance is the documented origin and history of a piece of content or data, including who made it, how, and what has changed since.",
+   "definition": "It lets people judge trustworthiness. For media it can be recorded in the file or alongside it, as in content credentials.",
+   "related": [
+    "content-authenticity",
+    "source-criticism",
+    "data-lineage"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/provenance/"
+  },
+  {
+   "slug": "publication-bias",
+   "term": "Publication bias",
+   "category": "science-communication",
+   "aliases": [],
+   "short": "Publication bias is the tendency for studies with positive or significant results to be published more often than those without, which skews the published record.",
+   "definition": "It can overstate effects in reviews. Pre-registration and registered reports are used to reduce it.",
+   "related": [
+    "selection-bias",
+    "statistical-significance"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/publication-bias/"
+  },
+  {
+   "slug": "quasar",
+   "term": "Quasar",
+   "category": "space",
+   "aliases": [],
+   "short": "A quasar is an extremely luminous active galactic nucleus, powered by a supermassive black hole accreting gas.",
+   "definition": "Quasars were first found as faint, star-like radio sources. They are seen at great distances, so they are probes of the early universe.",
+   "related": [
+    "active-galactic-nucleus",
+    "redshift"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/quasar/"
+  },
+  {
+   "slug": "radial-velocity-method",
+   "term": "Radial velocity method",
+   "category": "space",
+   "aliases": [
+    "Doppler spectroscopy",
+    "Doppler wobble method"
+   ],
+   "short": "The radial velocity method finds planets by measuring the small, periodic Doppler shifts in a star's spectrum caused by the gravitational tug of an orbiting planet.",
+   "definition": "It gives a planet's minimum mass and orbit. It has been used with the transit method, which gives size, to find a planet's density.",
+   "related": [
+    "doppler-shift",
+    "transit-method",
+    "spectroscopy"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/radial-velocity-method/"
+  },
+  {
+   "slug": "radiative-forcing",
+   "term": "Radiative forcing",
+   "category": "climate-science",
+   "aliases": [],
+   "short": "Radiative forcing is the change in the Earth's energy balance, in watts per square metre, caused by a driver such as more carbon dioxide, aerosols or a change in solar output.",
+   "definition": "A positive forcing warms the climate system and a negative one cools it. The IPCC usually measures forcing relative to 1750, and effective radiative forcing also counts rapid adjustments in the atmosphere.",
+   "related": [
+    "greenhouse-effect",
+    "aerosol-forcing",
+    "climate-feedback"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/radiative-forcing/"
+  },
+  {
+   "slug": "radio-frequency-interference",
+   "term": "Radio-frequency interference (RFI)",
+   "category": "space",
+   "aliases": [
+    "RFI"
+   ],
+   "short": "Radio-frequency interference is unwanted radio emission that disrupts the reception of a wanted signal.",
+   "definition": "Radio telescopes are especially sensitive, because the signals they observe are extremely faint. Satellite transmissions can also interfere with each other.",
+   "related": [
+    "dark-and-quiet-skies",
+    "mega-constellation"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/radio-frequency-interference/"
+  },
+  {
+   "slug": "radiometric-calibration",
+   "term": "Radiometric calibration",
+   "category": "earth-observation",
+   "aliases": [],
+   "short": "Radiometric calibration converts the raw digital numbers recorded by a sensor into physical units such as radiance or reflectance.",
+   "definition": "It uses pre-launch measurements and in-flight references such as the Sun, the Moon or stable ground sites. It must be done before values from different sensors or dates are compared.",
+   "related": [
+    "atmospheric-correction",
+    "remote-sensing"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/radiometric-calibration/"
+  },
+  {
+   "slug": "raster-data",
+   "term": "Raster data",
+   "category": "earth-observation",
+   "aliases": [
+    "raster",
+    "raster layer"
+   ],
+   "short": "Raster data represents geography as a grid of cells, each holding a value such as elevation, temperature or reflectance.",
+   "definition": "It suits continuous phenomena and imagery. Resolution is the cell size, and smaller cells mean more detail and more data.",
+   "related": [
+    "vector-data",
+    "map-algebra"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/raster-data/"
+  },
+  {
+   "slug": "red-giant",
+   "term": "Red giant",
+   "category": "space",
+   "aliases": [],
+   "short": "A red giant is an evolved star that has used up the hydrogen in its core and swollen into a large, cool and luminous star.",
+   "definition": "Hydrogen fuses in a shell around the core. The Sun is expected to become a red giant in about five billion years.",
+   "related": [
+    "main-sequence",
+    "white-dwarf"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/red-giant/"
+  },
+  {
+   "slug": "redshift",
+   "term": "Redshift",
+   "category": "space",
+   "aliases": [],
+   "short": "Redshift is the stretching of light to longer wavelengths, which shifts it towards the red end of the spectrum.",
+   "definition": "It has several causes, including relative motion (Doppler), gravity and the expansion of the universe. It is measured as z, the fractional change in wavelength.",
+   "related": [
+    "doppler-shift",
+    "cosmological-redshift",
+    "spectral-line"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/redshift/"
+  },
+  {
+   "slug": "relational-database",
+   "term": "Relational database",
+   "category": "web-architecture",
+   "aliases": [
+    "RDBMS",
+    "SQL database"
+   ],
+   "short": "A relational database stores data in tables of rows and columns, with relationships between tables defined through keys, and is queried using SQL.",
+   "definition": "PostgreSQL, MySQL and SQLite are common examples. The model enforces structure and consistency, which suits transactional data.",
+   "related": [
+    "primary-key",
+    "foreign-key",
+    "normalisation"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/relational-database/"
+  },
+  {
+   "slug": "remote-sensing",
+   "term": "Remote sensing",
+   "category": "earth-observation",
+   "aliases": [],
+   "short": "Remote sensing is acquiring information about an object or area without direct contact, typically by measuring radiation with instruments on satellites, aircraft or drones.",
+   "definition": "Instead of touching or sampling something, you read it from a distance using light or other waves. The raw measurement is then converted into useful quantities such as temperature, vegetation cover or gas levels.",
+   "related": [
+    "earth-observation",
+    "spectral-line"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/remote-sensing/"
+  },
+  {
+   "slug": "representative-concentration-pathways",
+   "term": "Representative Concentration Pathways (RCPs)",
+   "category": "climate-science",
+   "aliases": [
+    "RCP",
+    "RCPs"
+   ],
+   "short": "Representative Concentration Pathways are four greenhouse gas concentration trajectories, named by their 2100 radiative forcing, used in the IPCC's Fifth Assessment Report.",
+   "definition": "The four pathways are RCP2.6, RCP4.5, RCP6.0 and RCP8.5, in watts per square metre. They have largely been superseded in new modelling by scenarios that combine pathways with Shared Socioeconomic Pathways.",
+   "related": [
+    "shared-socioeconomic-pathways",
+    "radiative-forcing"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/representative-concentration-pathways/"
+  },
+  {
+   "slug": "rest-api",
+   "term": "REST API",
+   "category": "web-architecture",
+   "aliases": [
+    "RESTful API",
+    "REST"
+   ],
+   "short": "A REST API is a web interface where resources are identified by URLs and manipulated with standard HTTP methods such as GET, POST, PUT and DELETE.",
+   "definition": "Requests are stateless, and responses are often JSON. It is the most common style of web API.",
+   "related": [
+    "graphql",
+    "authentication"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/rest-api/"
+  },
+  {
+   "slug": "reverse-geocoding",
+   "term": "Reverse geocoding",
+   "category": "earth-observation",
+   "aliases": [],
+   "short": "Reverse geocoding converts geographic coordinates into the nearest address or place name.",
+   "definition": "It is used to label GPS positions. The returned name is an approximation and can be wrong near boundaries.",
+   "related": [
+    "geocoding"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/reverse-geocoding/"
+  },
+  {
+   "slug": "schema",
+   "term": "Schema",
+   "category": "web-architecture",
+   "aliases": [
+    "data schema"
+   ],
+   "short": "A schema is the formal definition of a dataset's or database's structure, including its tables, fields, data types and constraints.",
+   "definition": "It acts as a contract between producers and consumers of the data. Tools such as JSON Schema and database definitions express it.",
+   "related": [
+    "data-model",
+    "data-validation"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/schema/"
+  },
+  {
+   "slug": "scientific-consensus",
+   "term": "Scientific consensus",
+   "category": "science-communication",
+   "aliases": [],
+   "short": "Scientific consensus is the collective position of the relevant scientific community, based on the weight of evidence, on a question.",
+   "definition": "It does not mean unanimity or that science is closed to challenge. The strength of consensus on topics such as human-caused warming is itself measurable.",
+   "related": [
+    "false-balance",
+    "epistemic-trust"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/scientific-consensus/"
+  },
+  {
+   "slug": "sector-coupling",
+   "term": "Sector coupling",
+   "category": "sustainability",
+   "aliases": [],
+   "short": "Sector coupling links the power, heat, transport and industry sectors so that electricity, especially from renewables, can be used across all of them.",
+   "definition": "It uses technologies such as heat pumps, electric vehicles and hydrogen to add demand that can be flexible and to move surplus renewable power into other uses.",
+   "related": [
+    "electrification",
+    "power-to-x",
+    "grid-flexibility"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/sector-coupling/"
+  },
+  {
+   "slug": "selection-bias",
+   "term": "Selection bias",
+   "category": "science-communication",
+   "aliases": [],
+   "short": "Selection bias arises when the people or data studied are not representative of the group of interest, because of how they were chosen.",
+   "definition": "It can create or hide apparent effects. Self-selected surveys are a typical example.",
+   "related": [
+    "publication-bias",
+    "correlation-versus-causation"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/selection-bias/"
+  },
+  {
+   "slug": "semantic-html",
+   "term": "Semantic HTML",
+   "category": "web-architecture",
+   "aliases": [],
+   "short": "Semantic HTML uses elements that describe the meaning of content, such as nav, main, article and button, rather than generic containers styled to look the part.",
+   "definition": "It gives assistive technology and search engines structure to work with, and improves keyboard accessibility with no extra effort.",
+   "related": [
+    "wcag-conformance",
+    "core-web-vitals"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/semantic-html/"
+  },
+  {
+   "slug": "sentinel-2",
+   "term": "Sentinel-2",
+   "category": "earth-observation",
+   "aliases": [],
+   "short": "Sentinel-2 is a Copernicus mission of ESA satellites carrying a 13-band multispectral imager with resolution of up to 10 metres, for land and coastal monitoring.",
+   "definition": "With two satellites operating, a given place is revisited about every five days. The data are free and open, which has made it a standard source for vegetation and land-cover work.",
+   "related": [
+    "copernicus-programme",
+    "multispectral-imaging",
+    "landsat"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/sentinel-2/"
+  },
+  {
+   "slug": "serverless-computing",
+   "term": "Serverless computing",
+   "category": "web-architecture",
+   "aliases": [
+    "serverless",
+    "functions as a service"
+   ],
+   "short": "Serverless computing is a cloud model where the provider runs and scales code on demand, so developers do not manage servers, and billing follows usage.",
+   "definition": "Examples include Cloudflare Workers and AWS Lambda. Limits on execution time, memory and state shape how applications are designed.",
+   "related": [
+    "rest-api",
+    "static-site-generation"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/serverless-computing/"
+  },
+  {
+   "slug": "shapefile",
+   "term": "Shapefile",
+   "category": "earth-observation",
+   "aliases": [],
+   "short": "A shapefile is a vector data format from Esri that stores features in a set of files, including .shp, .shx and .dbf.",
+   "definition": "It is universally supported but has limits, including a 2 GB file size and attribute names cut to 10 characters. GeoPackage is a more modern alternative.",
+   "related": [
+    "geopackage",
+    "vector-data"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/shapefile/"
+  },
+  {
+   "slug": "shared-socioeconomic-pathways",
+   "term": "Shared Socioeconomic Pathways (SSPs)",
+   "category": "climate-science",
+   "aliases": [
+    "SSP",
+    "SSPs"
+   ],
+   "short": "Shared Socioeconomic Pathways are five narratives of future population, economic growth, technology and policy, used with forcing levels to build climate scenarios.",
+   "definition": "They run from SSP1 to SSP5 and are paired with a forcing level, as in SSP2-4.5. CMIP6 and the IPCC's Sixth Assessment Report use them.",
+   "related": [
+    "representative-concentration-pathways",
+    "ensemble-modelling"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/shared-socioeconomic-pathways/"
+  },
+  {
+   "slug": "signal-to-noise-ratio",
+   "term": "Signal-to-noise ratio",
+   "category": "space",
+   "aliases": [
+    "SNR"
+   ],
+   "short": "How strong a signal is compared with the background noise.",
+   "definition": "Usually quoted in decibels. The higher the ratio, the easier it is to recover the original data without errors.",
+   "related": [
+    "link-budget"
+   ],
+   "updated": "2026-10-11",
+   "url": "https://glossary.rjmlaird.co.uk/signal-to-noise-ratio/"
+  },
+  {
+   "slug": "smart-grid",
+   "term": "Smart grid",
+   "category": "sustainability",
+   "aliases": [],
+   "short": "A smart grid is an electricity network that uses digital sensing and two-way communication to monitor and manage supply, demand and power flows.",
+   "definition": "It supports services such as time-of-use pricing, demand response and the integration of distributed generation. It also widens the surface for cyber security risk.",
+   "related": [
+    "demand-response",
+    "grid-flexibility"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/smart-grid/"
+  },
+  {
+   "slug": "source-criticism",
+   "term": "Source criticism",
+   "category": "science-communication",
+   "aliases": [],
+   "short": "Source criticism is assessing information by examining its source: who produced it, why, how they know, how close they are to events, and what they might gain.",
+   "definition": "It comes from historical method and is the basis of media literacy and lateral reading. Checking independent sources is central to it.",
+   "related": [
+    "provenance",
+    "media-framing"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/source-criticism/"
+  },
+  {
+   "slug": "space-situational-awareness",
+   "term": "Space situational awareness (SSA)",
+   "category": "space",
+   "aliases": [
+    "SSA",
+    "space domain awareness"
+   ],
+   "short": "Space situational awareness is knowledge of the objects in orbit and the space environment, including tracking, characterising and predicting hazards.",
+   "definition": "It covers debris and active satellites, re-entries and space weather. It underpins collision warnings and, in turn, space traffic management.",
+   "related": [
+    "space-traffic-management",
+    "conjunction-assessment"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/space-situational-awareness/"
+  },
+  {
+   "slug": "space-traffic-management",
+   "term": "Space traffic management (STM)",
+   "category": "space",
+   "aliases": [
+    "STM"
+   ],
+   "short": "Space traffic management is the set of rules, standards and coordination that allow spacecraft to operate safely and sustainably in orbit.",
+   "definition": "It covers licensing, data sharing, manoeuvre coordination and end-of-life conduct. There is currently no single global body, and approaches differ between countries.",
+   "related": [
+    "space-situational-awareness",
+    "post-mission-disposal"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/space-traffic-management/"
+  },
+  {
+   "slug": "spatial-join",
+   "term": "Spatial join",
+   "category": "earth-observation",
+   "aliases": [],
+   "short": "A spatial join combines the attributes of two layers according to how their features relate in space, for example which polygon each point falls within.",
+   "definition": "Relationships include intersects, within, contains and nearest. It is the geographic equivalent of a table join.",
+   "related": [
+    "overlay-analysis",
+    "buffer-analysis"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/spatial-join/"
+  },
+  {
+   "slug": "spectral-line",
+   "term": "Spectral line",
+   "category": "space",
+   "aliases": [],
+   "short": "A spectral line is a narrow feature in a spectrum, appearing as a dark absorption line or bright emission line at a wavelength characteristic of a particular atom or molecule.",
+   "definition": "Each substance leaves its own pattern, like a fingerprint. Reading these lines reveals what stars and atmospheres are made of, and shifts in them reveal motion.",
+   "related": [
+    "doppler-shift",
+    "black-body"
+   ],
+   "updated": "2026-10-17",
+   "url": "https://glossary.rjmlaird.co.uk/spectral-line/"
+  },
+  {
+   "slug": "spectral-signature",
+   "term": "Spectral signature",
+   "category": "earth-observation",
+   "aliases": [
+    "spectral reflectance curve"
+   ],
+   "short": "A spectral signature is the pattern of energy a material reflects or emits across wavelengths, which is characteristic of that material.",
+   "definition": "Healthy leaves reflect strongly in the near-infrared and absorb red light, while water absorbs most infrared. Classification and indices such as NDVI exploit these differences.",
+   "related": [
+    "multispectral-imaging",
+    "ndvi"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/spectral-signature/"
+  },
+  {
+   "slug": "spectroscopy",
+   "term": "Spectroscopy",
+   "category": "space",
+   "aliases": [],
+   "short": "Spectroscopy is splitting light into its wavelengths to measure a source's composition, temperature and motion.",
+   "definition": "Each element absorbs or emits at characteristic wavelengths, producing spectral lines. It is how astronomers measure redshift and detect atmospheres of exoplanets.",
+   "related": [
+    "spectral-line",
+    "redshift",
+    "photometry"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/spectroscopy/"
+  },
+  {
+   "slug": "star-formation",
+   "term": "Star formation",
+   "category": "space",
+   "aliases": [],
+   "short": "Star formation is the process by which dense regions within cold clouds of gas and dust collapse under gravity to form stars.",
+   "definition": "Clumps in a cloud pull themselves together, heat up and eventually ignite nuclear fusion. Leftover material can form discs in which planets and smaller bodies such as comets take shape.",
+   "related": [
+    "spectral-line",
+    "magnitude"
+   ],
+   "updated": "2026-10-17",
+   "url": "https://glossary.rjmlaird.co.uk/star-formation/"
+  },
+  {
+   "slug": "static-site-generation",
+   "term": "Static site generation (SSG)",
+   "category": "web-architecture",
+   "aliases": [
+    "SSG",
+    "static site generator"
+   ],
+   "short": "Static site generation builds a site's HTML pages ahead of time from templates and content, so they can be served as plain files.",
+   "definition": "Astro and Hugo are examples. Pages are fast, cheap to host and secure, but content that changes often needs a rebuild or client-side fetching.",
+   "related": [
+    "jamstack",
+    "headless-cms",
+    "origin"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/static-site-generation/"
+  },
+  {
+   "slug": "statistical-significance",
+   "term": "Statistical significance",
+   "category": "science-communication",
+   "aliases": [],
+   "short": "A result is statistically significant when it would be unlikely to arise by chance alone if there were no real effect, by a pre-set threshold, commonly p below 0.05.",
+   "definition": "Significance says nothing about size or importance. With large samples even trivial effects can be significant.",
+   "related": [
+    "p-value",
+    "effect-size"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/statistical-significance/"
+  },
+  {
+   "slug": "stellar-nucleosynthesis",
+   "term": "Stellar nucleosynthesis",
+   "category": "space",
+   "aliases": [],
+   "short": "Stellar nucleosynthesis is the creation of chemical elements by nuclear fusion inside stars and in stellar explosions.",
+   "definition": "Stars fuse hydrogen to helium and, in massive stars, heavier elements up to iron. Most heavier elements form in processes such as neutron capture in supernovae and neutron-star mergers.",
+   "related": [
+    "main-sequence",
+    "supernova"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/stellar-nucleosynthesis/"
+  },
+  {
+   "slug": "sun-synchronous-orbit",
+   "term": "Sun-synchronous orbit (SSO)",
+   "category": "space",
+   "aliases": [
+    "SSO"
+   ],
+   "short": "A sun-synchronous orbit is a near-polar orbit whose plane turns by about one degree per day, so a satellite passes over any latitude at the same local solar time.",
+   "definition": "It gives consistent illumination, which is why many Earth observation satellites use it. Typical altitudes are 600 to 800 kilometres at an inclination near 98 degrees.",
+   "related": [
+    "low-earth-orbit",
+    "earth-observation"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/sun-synchronous-orbit/"
+  },
+  {
+   "slug": "supernova",
+   "term": "Supernova",
+   "category": "space",
+   "aliases": [],
+   "short": "A supernova is the explosion of a star, bright enough to briefly outshine its host galaxy.",
+   "definition": "A massive star ends in a core-collapse explosion, while a white dwarf can explode in a thermonuclear Type Ia supernova. Supernovae seed space with heavy elements and leave neutron stars or black holes.",
+   "related": [
+    "neutron-star",
+    "black-hole",
+    "stellar-nucleosynthesis"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/supernova/"
+  },
+  {
+   "slug": "supervised-classification",
+   "term": "Supervised classification",
+   "category": "earth-observation",
+   "aliases": [],
+   "short": "Supervised classification trains an algorithm on labelled examples, then uses it to assign every pixel or object to a class.",
+   "definition": "The labels usually come from field data or interpreted imagery. Accuracy depends on the quality and coverage of the training samples, so a separate set is kept to test it.",
+   "related": [
+    "unsupervised-classification",
+    "ground-truthing"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/supervised-classification/"
+  },
+  {
+   "slug": "synthetic-aperture-radar",
+   "term": "Synthetic aperture radar (SAR)",
+   "category": "earth-observation",
+   "aliases": [
+    "SAR"
+   ],
+   "short": "Synthetic aperture radar is an active imaging radar that uses the motion of a satellite or aircraft to synthesise a long antenna and produce fine-resolution images.",
+   "definition": "It works day and night and sees through cloud, which makes it valuable for floods, ice and ground movement. Images look different from optical ones because they record radar backscatter and are affected by speckle.",
+   "related": [
+    "active-remote-sensing",
+    "remote-sensing"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/synthetic-aperture-radar/"
+  },
+  {
+   "slug": "synthetic-media",
+   "term": "Synthetic media",
+   "category": "science-communication",
+   "aliases": [],
+   "short": "Synthetic media is any media, such as images, audio, video or text, that has been wholly or partly generated or altered using AI.",
+   "definition": "It covers harmless creative uses as well as deepfakes. Disclosure and labelling help people judge how far to trust it.",
+   "related": [
+    "deepfake",
+    "provenance",
+    "content-authenticity"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/synthetic-media/"
+  },
+  {
+   "slug": "test-driven-development",
+   "term": "Test-driven development (TDD)",
+   "category": "web-architecture",
+   "aliases": [
+    "TDD"
+   ],
+   "short": "Test-driven development is writing a failing automated test first, then writing the code to make it pass, then tidying up.",
+   "definition": "The cycle is often summarised as red, green, refactor. It shapes design as well as catching bugs.",
+   "related": [
+    "unit-testing",
+    "continuous-integration"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/test-driven-development/"
+  },
+  {
+   "slug": "tidal-locking",
+   "term": "Tidal locking",
+   "category": "space",
+   "aliases": [
+    "synchronous rotation"
+   ],
+   "short": "Tidal locking occurs when a body's rotation period matches its orbital period, so that it always shows the same face to the body it orbits.",
+   "definition": "The Moon is tidally locked to the Earth. Many planets orbiting close to small, cool stars are expected to be locked.",
+   "related": [
+    "habitable-zone"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/tidal-locking/"
+  },
+  {
+   "slug": "tipping-point",
+   "term": "Tipping point",
+   "category": "climate-science",
+   "aliases": [
+    "climate tipping point"
+   ],
+   "short": "A tipping point is a threshold beyond which part of the climate system changes state abruptly or irreversibly, often driven by feedbacks.",
+   "definition": "Candidates include the ice sheets, the Amazon rainforest, permafrost and the Atlantic overturning circulation. Where and when thresholds lie is uncertain.",
+   "related": [
+    "hysteresis",
+    "climate-feedback"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/tipping-point/"
+  },
+  {
+   "slug": "trackable-object",
+   "term": "Trackable object",
+   "category": "space",
+   "aliases": [],
+   "short": "A trackable object is an orbiting object large enough for ground sensors to follow reliably, roughly 10 centimetres or more in low Earth orbit.",
+   "definition": "Smaller fragments are far more numerous but cannot be tracked, so they are modelled statistically. Detection thresholds depend on the radar or telescope.",
+   "related": [
+    "catalogued-object",
+    "orbital-debris"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/trackable-object/"
+  },
+  {
+   "slug": "transient-climate-response",
+   "term": "Transient climate response (TCR)",
+   "category": "climate-science",
+   "aliases": [
+    "TCR"
+   ],
+   "short": "Transient climate response is the global warming at the moment carbon dioxide has doubled, when concentrations rise by 1% a year, before the climate has fully adjusted.",
+   "definition": "It is lower than equilibrium climate sensitivity because the oceans are still absorbing heat. The IPCC's Sixth Assessment Report gave a best estimate of 1.8 °C, with a likely range of 1.4 to 2.2 °C.",
+   "related": [
+    "climate-sensitivity",
+    "equilibrium-climate-sensitivity"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/transient-climate-response/"
+  },
+  {
+   "slug": "transit-method",
+   "term": "Transit method",
+   "category": "space",
+   "aliases": [
+    "exoplanet transit"
+   ],
+   "short": "The transit method detects a planet around another star by measuring the small, periodic dip in the star's brightness when the planet passes in front of it.",
+   "definition": "If a planet crosses our line of sight to its star, it blocks a tiny fraction of the light. The size and timing of the dip indicate the planet's size and orbital period.",
+   "related": [
+    "doppler-shift",
+    "magnitude"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/transit-method/"
+  },
+  {
+   "slug": "uncertainty-quantification",
+   "term": "Uncertainty quantification",
+   "category": "science-communication",
+   "aliases": [],
+   "short": "Uncertainty quantification is the process of estimating how uncertain a result is, and expressing it, for example as ranges or probabilities.",
+   "definition": "It separates what is known from what is not. Communicating uncertainty well avoids both false precision and the impression that uncertain means unknown.",
+   "related": [
+    "confidence-interval",
+    "ensemble-modelling"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/uncertainty-quantification/"
+  },
+  {
+   "slug": "unit-testing",
+   "term": "Unit testing",
+   "category": "web-architecture",
+   "aliases": [
+    "unit tests"
+   ],
+   "short": "Unit testing is automated testing of the smallest parts of a program, such as individual functions, in isolation.",
+   "definition": "Fast, reliable unit tests give confidence for refactoring and run in continuous integration.",
+   "related": [
+    "test-driven-development",
+    "continuous-integration"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/unit-testing/"
+  },
+  {
+   "slug": "unsupervised-classification",
+   "term": "Unsupervised classification",
+   "category": "earth-observation",
+   "aliases": [],
+   "short": "Unsupervised classification groups pixels into clusters by statistical similarity, without training labels, and an analyst then names the clusters.",
+   "definition": "Methods such as k-means need no field data up front, so they are useful for exploration. The clusters do not always match meaningful land-cover classes.",
+   "related": [
+    "supervised-classification",
+    "pixel-based-classification"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/unsupervised-classification/"
+  },
+  {
+   "slug": "vector-data",
+   "term": "Vector data",
+   "category": "earth-observation",
+   "aliases": [
+    "vector",
+    "vector layer"
+   ],
+   "short": "Vector data represents geographic features as points, lines and polygons, each with attributes.",
+   "definition": "It suits discrete features such as buildings, roads and boundaries. Formats include shapefile, GeoJSON and GeoPackage.",
+   "related": [
+    "raster-data",
+    "geopackage"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/vector-data/"
+  },
+  {
+   "slug": "vehicle-to-grid",
+   "term": "Vehicle-to-grid (V2G)",
+   "category": "sustainability",
+   "aliases": [
+    "V2G"
+   ],
+   "short": "Vehicle-to-grid lets an electric vehicle send electricity back to the grid as well as draw it, so its battery can act as a grid resource.",
+   "definition": "It needs a bidirectional charger, compatible software and agreements with the grid operator. Frequent discharging also needs to be weighed against battery wear.",
+   "related": [
+    "energy-storage",
+    "smart-grid",
+    "demand-response"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/vehicle-to-grid/"
+  },
+  {
+   "slug": "version-control",
+   "term": "Version control",
+   "category": "web-architecture",
+   "aliases": [
+    "source control"
+   ],
+   "short": "Version control is a system that records changes to files over time, so that earlier versions can be recovered and several people can work together.",
+   "definition": "Git is the most widely used system. A good history shows what changed, who changed it and why.",
+   "related": [
+    "git-repository",
+    "continuous-integration"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/version-control/"
+  },
+  {
+   "slug": "viewshed-analysis",
+   "term": "Viewshed analysis",
+   "category": "earth-observation",
+   "aliases": [
+    "viewshed"
+   ],
+   "short": "Viewshed analysis finds the areas visible from one or more viewpoints, given the terrain and sometimes buildings and trees.",
+   "definition": "It is used for planning, siting masts and turbines, and assessing visual impact. Results depend on the quality of the surface model and the observer height.",
+   "related": [
+    "digital-surface-model",
+    "raster-data"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/viewshed-analysis/"
+  },
+  {
+   "slug": "watershed-delineation",
+   "term": "Watershed delineation",
+   "category": "earth-observation",
+   "aliases": [
+    "drainage basin delineation"
+   ],
+   "short": "Watershed delineation traces the boundary of the area that drains to a chosen point, normally using flow directions derived from an elevation model.",
+   "definition": "Errors in the elevation model, such as pits and flat areas, must be corrected first. It underpins flood, water-quality and hydrology studies.",
+   "related": [
+    "catchment-analysis",
+    "digital-terrain-model"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/watershed-delineation/"
+  },
+  {
+   "slug": "wcag-conformance",
+   "term": "WCAG conformance",
+   "category": "web-architecture",
+   "aliases": [
+    "WCAG",
+    "Web Content Accessibility Guidelines"
+   ],
+   "short": "WCAG conformance means meeting the success criteria of the Web Content Accessibility Guidelines at level A, AA or AAA.",
+   "definition": "Level AA is the usual target, and WCAG 2.2 is the current version. Automated tools find only some problems, so manual and assistive technology testing is also needed.",
+   "related": [
+    "semantic-html"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/wcag-conformance/"
+  },
+  {
+   "slug": "web-feature-service",
+   "term": "Web Feature Service (WFS)",
+   "category": "earth-observation",
+   "aliases": [
+    "WFS"
+   ],
+   "short": "A Web Feature Service is an Open Geospatial Consortium standard for requesting the vector features themselves, geometry and attributes, from a server over HTTP.",
+   "definition": "Clients can query, filter and download the data, often as GeoJSON or GML, unlike a Web Map Service, which returns images.",
+   "related": [
+    "web-map-service",
+    "vector-data"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/web-feature-service/"
+  },
+  {
+   "slug": "web-map-service",
+   "term": "Web Map Service (WMS)",
+   "category": "earth-observation",
+   "aliases": [
+    "WMS"
+   ],
+   "short": "A Web Map Service is an Open Geospatial Consortium standard for requesting rendered map images from a server over HTTP.",
+   "definition": "It returns pictures of the data, not the data itself, so users cannot query or restyle features. Web Feature Service is used when the features themselves are needed.",
+   "related": [
+    "web-feature-service"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/web-map-service/"
+  },
+  {
+   "slug": "wgs-84",
+   "term": "WGS 84",
+   "category": "earth-observation",
+   "aliases": [
+    "World Geodetic System 1984",
+    "EPSG:4326"
+   ],
+   "short": "WGS 84 is the global geodetic datum used by GPS, and its longitude and latitude system is identified as EPSG:4326.",
+   "definition": "It is the default for GPS devices and most web data, including GeoJSON. Web maps typically display it in the Web Mercator projection, which distorts area.",
+   "related": [
+    "coordinate-reference-system",
+    "geojson"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/wgs-84/"
+  },
+  {
+   "slug": "white-dwarf",
+   "term": "White dwarf",
+   "category": "space",
+   "aliases": [],
+   "short": "A white dwarf is the dense, Earth-sized remnant of a low- or intermediate-mass star, supported against collapse by electron degeneracy pressure.",
+   "definition": "It no longer fuses and slowly cools. A white dwarf above about 1.4 solar masses, the Chandrasekhar limit, cannot support itself.",
+   "related": [
+    "red-giant",
+    "supernova"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/white-dwarf/"
+  },
+  {
+   "slug": "zonal-statistics",
+   "term": "Zonal statistics",
+   "category": "earth-observation",
+   "aliases": [],
+   "short": "Zonal statistics summarise the values of a raster, such as the mean, sum or maximum, within each zone defined by a set of polygons.",
+   "definition": "An example is average elevation or total rainfall for each catchment or district. It links raster data to vector areas.",
+   "related": [
+    "raster-data",
+    "vector-data"
+   ],
+   "updated": "2026-10-24",
+   "url": "https://glossary.rjmlaird.co.uk/zonal-statistics/"
+  }
+ ]
+}

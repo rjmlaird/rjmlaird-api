@@ -1,5 +1,5 @@
 {
-  "version": "068403faca62",
+  "version": "19b76e1f271f",
   "sites": [
     {
       "id": "main",
@@ -85,7 +85,7 @@
       "host": "booking.rjmlaird.co.uk",
       "url": "https://booking.rjmlaird.co.uk/",
       "kind": "service",
-      "status": "planned",
+      "status": "live",
       "audience": "Prospective clients and learners ready to act",
       "job": "Scheduling, payments, policies and confirmation",
       "cta": "Choose a booking option",
@@ -234,6 +234,45 @@
       "cta": null,
       "footer": false,
       "footer_order": null
+    },
+    {
+      "footer": false,
+      "footer_order": null,
+      "id": "glossary",
+      "label": "Glossary",
+      "host": "glossary.rjmlaird.co.uk",
+      "url": "https://glossary.rjmlaird.co.uk/",
+      "kind": "authority",
+      "status": "live",
+      "audience": "Readers, students, developers, AI agents",
+      "job": "Shared plain-English definitions across space, climate, sustainability and digital systems",
+      "cta": "Look up a term"
+    },
+    {
+      "footer": false,
+      "footer_order": null,
+      "id": "apps",
+      "label": "Apps",
+      "host": "apps.rjmlaird.co.uk",
+      "url": "https://apps.rjmlaird.co.uk/",
+      "kind": "tool",
+      "status": "live",
+      "audience": "Practical users",
+      "job": "Ongoing user-facing applications",
+      "cta": "Open an app"
+    },
+    {
+      "footer": false,
+      "footer_order": null,
+      "id": "tools",
+      "label": "Tools",
+      "host": "tools.rjmlaird.co.uk",
+      "url": "https://tools.rjmlaird.co.uk/",
+      "kind": "tool",
+      "status": "live",
+      "audience": "Practical users",
+      "job": "Small, focused utilities and calculators",
+      "cta": "Use a tool"
     }
   ]
 }

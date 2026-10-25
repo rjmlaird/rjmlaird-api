@@ -5,19 +5,9 @@
   "sourceRef": "main",
   "groups": [
     {
-      "id": "physics",
-      "name": "Physics & Space",
-      "blurb": "Interactive demonstrations of mechanics, electricity, matter, waves and orbital dynamics."
-    },
-    {
-      "id": "climate",
-      "name": "Climate & Earth",
-      "blurb": "Evidence-based explorations of the climate system, fluid dynamics, and environmental indicators."
-    },
-    {
-      "id": "focus",
-      "name": "Focus & Everyday",
-      "blurb": "Small experiments for choosing breaks, visualization, and understanding attention."
+      "id": "experiments",
+      "name": "Experiments",
+      "blurb": "Interactive experiments and prototypes."
     }
   ],
   "statuses": {
@@ -40,439 +30,392 @@
   },
   "builds": [
     {
-      "id": "labs/mechanics",
-      "sourceId": "mechanics",
-      "type": "lab",
-      "title": "Mechanics Lab",
-      "description": "Interactive demonstrations of forces, motion and energy, built to be explored rather than read.",
-      "group": "physics",
-      "tech": [
-        "React",
-        "Vite",
-        "TypeScript"
-      ],
-      "status": "active",
-      "updated": "2026-10-09",
-      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
-      "path": "https://mechanics.labs.rjmlaird.co.uk/",
-      "url": "https://mechanics.labs.rjmlaird.co.uk/",
-      "sourcePath": "apps/mechanics",
-      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/mechanics"
-    },
-    {
-      "id": "labs/electricity",
-      "sourceId": "electricity",
-      "type": "lab",
-      "title": "Electricity Lab",
-      "description": "A companion to the Mechanics Lab for exploring circuits, current, voltage and resistance.",
-      "group": "physics",
-      "tech": [
-        "React",
-        "Vite",
-        "TypeScript"
-      ],
-      "status": "in-progress",
-      "updated": "2026-10-09",
-      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
-      "path": "https://electricity.labs.rjmlaird.co.uk/",
-      "url": "https://electricity.labs.rjmlaird.co.uk/",
-      "sourcePath": "apps/electricity",
-      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/electricity"
-    },
-    {
-      "id": "labs/elements",
-      "sourceId": "elements",
-      "type": "lab",
-      "title": "Elements Lab",
-      "description": "An interactive periodic table with a card for each element, for browsing properties and patterns.",
-      "group": "physics",
-      "tech": [
-        "React",
-        "Vite",
-        "TypeScript"
-      ],
-      "status": "in-progress",
-      "updated": "2026-10-09",
-      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
-      "path": "https://elements.labs.rjmlaird.co.uk/",
-      "url": "https://elements.labs.rjmlaird.co.uk/",
-      "sourcePath": "apps/elements",
-      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/elements"
-    },
-    {
-      "id": "labs/astronomy",
-      "sourceId": "astronomy",
-      "type": "lab",
-      "title": "Astronomy Lab",
-      "description": "Visualisations and calculators for celestial coordinates, stellar properties, and sky mechanics.",
-      "group": "physics",
-      "tech": [
-        "React",
-        "Vite",
-        "TypeScript"
-      ],
-      "status": "in-progress",
-      "updated": "2026-10-15",
-      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
-      "path": "https://astronomy.labs.rjmlaird.co.uk/",
-      "url": "https://astronomy.labs.rjmlaird.co.uk/",
-      "sourcePath": "apps/astronomy",
-      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/astronomy"
-    },
-    {
       "id": "labs/n-body",
       "sourceId": "n-body",
       "type": "lab",
-      "title": "N-Body Gravitational Simulator",
-      "description": "Interactive gravitational simulation of multiple bodies interacting under Newtonian mechanics.",
-      "group": "physics",
+      "title": "N-Body Orbital Sandbox",
+      "description": "A minimal browser-based gravity simulator for exploring orbital motion and prototyping new interactive experiments.",
+      "group": "experiments",
       "tech": [
         "React",
         "Vite",
-        "TypeScript"
+        "Canvas API"
       ],
-      "status": "in-progress",
-      "updated": "2026-10-18",
+      "status": "active",
+      "updated": "2026-07-11",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
-      "path": "https://n-body.labs.rjmlaird.co.uk/",
+      "path": "https://n-body.labs.rjmlaird.co.uk",
       "url": "https://n-body.labs.rjmlaird.co.uk/",
-      "sourcePath": "apps/n-body",
-      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/n-body"
+      "sourcePath": "packages/lab-orbital-mechanics",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/packages/lab-orbital-mechanics"
     },
     {
-      "id": "labs/satellites",
-      "sourceId": "satellites",
+      "id": "labs/carbon-reduction-plan",
+      "sourceId": "carbon-reduction-plan",
       "type": "lab",
-      "title": "Satellite Orbit Viewer",
-      "description": "Visualising satellite trajectories, ground tracks, and orbital parameters in real time.",
-      "group": "physics",
+      "title": "Carbon Reduction Plan",
+      "description": "A focused web project for presenting carbon reduction information in a simple, maintainable interface.",
+      "group": "experiments",
       "tech": [
         "React",
         "Vite",
-        "TypeScript"
+        "Canvas API"
       ],
-      "status": "in-progress",
-      "updated": "2026-10-20",
+      "status": "active",
+      "updated": "2026-07-11",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
-      "path": "https://satellites.labs.rjmlaird.co.uk/",
-      "url": "https://satellites.labs.rjmlaird.co.uk/",
-      "sourcePath": "apps/satellites",
-      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/satellites"
+      "path": "https://crp.labs.rjmlaird.co.uk",
+      "url": "https://crp.labs.rjmlaird.co.uk/",
+      "sourcePath": "packages/carbon-reduction-plan",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/packages/carbon-reduction-plan"
     },
     {
-      "id": "labs/maths",
-      "sourceId": "maths",
+      "id": "labs/wildfire-story-lab",
+      "sourceId": "wildfire-story-lab",
       "type": "lab",
-      "title": "Maths Explorer",
-      "description": "Interactive mathematical functions, geometry, and transformation visualisers.",
-      "group": "physics",
+      "title": "Wildfire Story Lab",
+      "description": "An experimental storytelling tool for exploring how climate and wildfire narratives can be communicated interactively.",
+      "group": "experiments",
       "tech": [
         "React",
         "Vite",
-        "TypeScript"
+        "Canvas API"
       ],
       "status": "planned",
-      "updated": "2026-10-09",
+      "updated": "2026-07-11",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
-      "path": "https://maths.labs.rjmlaird.co.uk/",
-      "url": "https://maths.labs.rjmlaird.co.uk/",
-      "sourcePath": "apps/maths",
-      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/maths"
+      "path": "https://wildfires.labs.rjmlaird.co.uk",
+      "url": "https://wildfires.labs.rjmlaird.co.uk/",
+      "sourcePath": "packages/wildfire-story-lab",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/packages/wildfire-story-lab"
     },
     {
-      "id": "labs/equations",
-      "sourceId": "equations",
+      "id": "labs/contrast-lab",
+      "sourceId": "contrast-lab",
       "type": "lab",
-      "title": "Equation Solver",
-      "description": "Plot and explore physical and mathematical equations with live parameter adjustments.",
-      "group": "physics",
+      "title": "Contrast Lab",
+      "description": "A WCAG 2.x colour contrast checker for testing foreground and background pairs against AA and AAA accessibility thresholds.",
+      "group": "experiments",
       "tech": [
         "React",
-        "Vite",
-        "TypeScript"
+        "Vite"
       ],
-      "status": "in-progress",
-      "updated": "2026-10-09",
+      "status": "active",
+      "updated": "2026-07-11",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
-      "path": "https://equations.labs.rjmlaird.co.uk/",
-      "url": "https://equations.labs.rjmlaird.co.uk/",
-      "sourcePath": "apps/equations",
-      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/equations"
+      "path": "https://contrast.labs.rjmlaird.co.uk",
+      "url": "https://contrast.labs.rjmlaird.co.uk/",
+      "sourcePath": "packages/contrast-lab",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/packages/contrast-lab"
     },
     {
-      "id": "labs/graphs",
-      "sourceId": "graphs",
+      "id": "labs/components",
+      "sourceId": "components",
       "type": "lab",
-      "title": "Graph Explorer",
-      "description": "A focused space for visualising data, testing ideas, and exploring charts in a clean, dark interface.",
-      "group": "physics",
+      "title": "Component Sandbox",
+      "description": "A live gallery of the Astro UI blocks used across rjmlaird.co.uk, each rendered with its source snippet underneath.",
+      "group": "experiments",
       "tech": [
-        "React",
-        "Vite",
-        "TypeScript"
+        "Astro"
       ],
-      "status": "in-progress",
-      "updated": "2026-10-09",
+      "status": "active",
+      "updated": "2026-07-11",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
-      "path": "https://graphs.labs.rjmlaird.co.uk/",
-      "url": "https://graphs.labs.rjmlaird.co.uk/",
-      "sourcePath": "apps/graphs",
-      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/graphs"
-    },
-    {
-      "id": "labs/doppler",
-      "sourceId": "doppler",
-      "type": "lab",
-      "title": "Doppler & Redshift Visualiser",
-      "description": "Wavefronts and spectral lines showing Doppler shift, with a toggle between Doppler and cosmological redshift.",
-      "group": "physics",
-      "tech": [
-        "HTML",
-        "JavaScript"
-      ],
-      "status": "planned",
-      "updated": "2026-10-09",
-      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
-      "sourcePath": "apps/doppler",
-      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/doppler"
+      "path": "https://components.labs.rjmlaird.co.uk",
+      "url": "https://components.labs.rjmlaird.co.uk/",
+      "sourcePath": "packages/component-sandbox",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/packages/component-sandbox"
     },
     {
       "id": "labs/climate-visualiser",
       "sourceId": "climate-visualiser",
       "type": "lab",
       "title": "Climate Visualiser",
-      "description": "An evidence-based look at the climate system, from atmosphere and ocean to sea level, including policy successes such as the Montreal Protocol.",
-      "group": "climate",
+      "description": "A science-communication project that turns temperature anomaly data into a readable chart with plain-English annotations.",
+      "group": "experiments",
       "tech": [
         "React",
         "Vite",
-        "TypeScript"
+        "Recharts"
       ],
-      "status": "in-progress",
-      "updated": "2026-08-16",
+      "status": "planned",
+      "updated": "2026-07-11",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
-      "path": "https://climate-visualiser.labs.rjmlaird.co.uk/",
+      "path": "https://climate-visualiser.labs.rjmlaird.co.uk",
       "url": "https://climate-visualiser.labs.rjmlaird.co.uk/",
-      "sourcePath": "apps/climate-visualiser",
-      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/climate-visualiser"
+      "sourcePath": "packages/climate-visualiser",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/packages/climate-visualiser"
     },
     {
-      "id": "labs/climate-time-machine",
-      "sourceId": "climate-time-machine",
+      "id": "labs/mechanics",
+      "sourceId": "mechanics",
       "type": "lab",
-      "title": "Climate Time Machine",
-      "description": "Historical and projected climate metrics visualization over decades and centuries.",
-      "group": "climate",
+      "title": "Mechanics",
+      "description": "An interactive classical mechanics lab featuring four real-time simulations built on a shared physics engine: ramp forces and friction, Newton's cradle momentum transfers, projectile motion with independent SUVAT equations, and vehicle stopping distances.",
+      "group": "experiments",
       "tech": [
         "React",
-        "Vite",
-        "TypeScript"
+        "Vite"
       ],
-      "status": "in-progress",
-      "updated": "2026-08-20",
+      "status": "planned",
+      "updated": "2026-07-12",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
-      "path": "https://climate-time-machine.labs.rjmlaird.co.uk/",
-      "url": "https://climate-time-machine.labs.rjmlaird.co.uk/",
-      "sourcePath": "apps/climate-time-machine",
-      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/climate-time-machine"
+      "path": "https://mechanics.labs.rjmlaird.co.uk",
+      "url": "https://mechanics.labs.rjmlaird.co.uk/",
+      "sourcePath": "packages/mechanics",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/packages/mechanics"
     },
     {
-      "id": "labs/cfd",
-      "sourceId": "cfd",
+      "id": "labs/graphs",
+      "sourceId": "graphs",
       "type": "lab",
-      "title": "Fluid Dynamics (CFD) Simulator",
-      "description": "Simplified computational fluid dynamics browser simulation for airflow and fluid flow around obstacles.",
-      "group": "climate",
-      "tech": [
-        "TypeScript",
-        "HTML5 Canvas"
-      ],
-      "status": "in-progress",
-      "updated": "2026-09-10",
-      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
-      "path": "https://cfd.labs.rjmlaird.co.uk/",
-      "url": "https://cfd.labs.rjmlaird.co.uk/",
-      "sourcePath": "apps/cfd",
-      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/cfd"
-    },
-    {
-      "id": "labs/biodiversity",
-      "sourceId": "biodiversity",
-      "type": "lab",
-      "title": "Biodiversity & Ecosystems",
-      "description": "Modelling population dynamics and habitat resilience under environmental stress.",
-      "group": "climate",
+      "title": "Graphs",
+      "description": "A modular pre-launch template designed for data visualization, custom charting, and analytical metric rendering.",
+      "group": "experiments",
       "tech": [
         "React",
-        "Vite",
-        "TypeScript"
+        "Vite"
       ],
-      "status": "in-progress",
-      "updated": "2026-09-12",
+      "status": "planned",
+      "updated": "2026-07-12",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
-      "path": "https://biodiversity.labs.rjmlaird.co.uk/",
-      "url": "https://biodiversity.labs.rjmlaird.co.uk/",
-      "sourcePath": "apps/biodiversity",
-      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/biodiversity"
+      "path": "https://graphs.labs.rjmlaird.co.uk",
+      "url": "https://graphs.labs.rjmlaird.co.uk/",
+      "sourcePath": "packages/graphs",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/packages/graphs"
+    },
+    {
+      "id": "labs/satellites",
+      "sourceId": "satellites",
+      "type": "lab",
+      "title": "Satellites",
+      "description": "A live orbital tracker utilizing SGP4 propagation of Celestrak's GP catalog, cross-referenced with SATCAT and rendered interactively via Leaflet maps.",
+      "group": "experiments",
+      "tech": [
+        "Astro",
+        "Vite",
+        "Leaflet"
+      ],
+      "status": "active",
+      "updated": "2026-07-21",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://satellites.labs.rjmlaird.co.uk",
+      "url": "https://satellites.labs.rjmlaird.co.uk/",
+      "sourcePath": "packages/satellites",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/packages/satellites"
     },
     {
       "id": "labs/drought",
       "sourceId": "drought",
       "type": "lab",
-      "title": "Drought & Precipitation Index",
-      "description": "Tracking meteorological and hydrological drought indicators across regional datasets.",
-      "group": "climate",
+      "title": "Drought",
+      "description": "A comprehensive UK drought risk monitor combining live Copernicus European Drought Observatory (EDO/GDO) indicators with real-time Environment Agency and SEPA hydrology data.",
+      "group": "experiments",
       "tech": [
         "React",
-        "Vite",
-        "TypeScript"
+        "Vite"
       ],
-      "status": "in-progress",
-      "updated": "2026-09-15",
+      "status": "planned",
+      "updated": "2026-07-26",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
-      "path": "https://drought.labs.rjmlaird.co.uk/",
+      "path": "https://drought.labs.rjmlaird.co.uk",
       "url": "https://drought.labs.rjmlaird.co.uk/",
-      "sourcePath": "apps/drought",
-      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/drought"
+      "sourcePath": "packages/drought",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/packages/drought"
     },
     {
-      "id": "labs/wildfires",
-      "sourceId": "wildfires",
+      "id": "labs/tintwistle",
+      "sourceId": "tintwistle",
       "type": "lab",
-      "title": "Wildfire Spread Model",
-      "description": "Cellular automaton model simulating wildfire propagation based on wind, terrain, and moisture.",
-      "group": "climate",
+      "title": "Tintwistle",
+      "description": "A pre-launch environmental or geographical monitoring experiment focused on the Tintwistle area, currently in development.",
+      "group": "experiments",
       "tech": [
         "React",
-        "Vite",
-        "TypeScript"
+        "Vite"
       ],
-      "status": "in-progress",
-      "updated": "2026-09-18",
+      "status": "planned",
+      "updated": "2026-07-26",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
-      "path": "https://wildfires.labs.rjmlaird.co.uk/",
-      "url": "https://wildfires.labs.rjmlaird.co.uk/",
-      "sourcePath": "apps/wildfires",
-      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/wildfires"
+      "path": "https://tintwistle.labs.rjmlaird.co.uk",
+      "url": "https://tintwistle.labs.rjmlaird.co.uk/",
+      "sourcePath": "packages/tintwistle",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/packages/tintwistle"
+    },
+    {
+      "id": "labs/biodiversity",
+      "sourceId": "biodiversity",
+      "type": "lab",
+      "title": "Biodiversity",
+      "description": "A habitat health monitor combining satellite-derived vegetation greenness (NDVI), live designated nature reserve boundaries (NNR, LNR, SSSI), and river water quality archives.",
+      "group": "experiments",
+      "tech": [
+        "React",
+        "Vite"
+      ],
+      "status": "planned",
+      "updated": "2026-07-26",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://biodiversity.labs.rjmlaird.co.uk",
+      "url": "https://biodiversity.labs.rjmlaird.co.uk/",
+      "sourcePath": "packages/biodiversity",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/packages/biodiversity"
     },
     {
       "id": "labs/sewage",
       "sourceId": "sewage",
       "type": "lab",
-      "title": "Water Quality & Discharge Monitor",
-      "description": "Visualising river catchment data, rainfall events, and storm overflow impact models.",
-      "group": "climate",
+      "title": "Sewage",
+      "description": "A real-time monitoring tool tracking raw-sewage storm overflow activations (EDMs) across Severn Trent Water and Anglian Water, contextualised with Copernicus soil moisture and rainfall anomalies.",
+      "group": "experiments",
       "tech": [
         "React",
-        "Vite",
-        "TypeScript"
+        "Vite"
       ],
-      "status": "in-progress",
-      "updated": "2026-09-20",
+      "status": "planned",
+      "updated": "2026-07-26",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
-      "path": "https://sewage.labs.rjmlaird.co.uk/",
+      "path": "https://sewage.labs.rjmlaird.co.uk",
       "url": "https://sewage.labs.rjmlaird.co.uk/",
-      "sourcePath": "apps/sewage",
-      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/sewage"
+      "sourcePath": "packages/sewage",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/packages/sewage"
     },
     {
-      "id": "labs/components",
-      "sourceId": "components",
+      "id": "labs/astro",
+      "sourceId": "astro",
       "type": "lab",
-      "title": "Components Sandbox",
-      "description": "A working gallery of the Astro UI blocks used across rjmlaird.co.uk — rendered live, with the source snippet underneath each one.",
-      "group": "focus",
+      "title": "Astro",
+      "description": "A pre-launch exploratory tool dedicated to astronomical data processing, space missions, or celestial mechanics.",
+      "group": "experiments",
+      "tech": [
+        "Streamlit",
+        "Vite"
+      ],
+      "status": "planned",
+      "updated": "2026-07-26",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://astro.labs.rjmlaird.co.uk",
+      "url": "https://astro.labs.rjmlaird.co.uk/",
+      "sourcePath": "packages/astro",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/packages/astro"
+    },
+    {
+      "id": "labs/atmosphere",
+      "sourceId": "atmosphere",
+      "type": "lab",
+      "title": "Atmosphere",
+      "description": "A multi-tiered vertical air quality profile tracking nitrogen dioxide, ozone, and particulates over Leicestershire by blending Copernicus CAMS regional models with real-world AURN ground stations.",
+      "group": "experiments",
+      "tech": [
+        "React",
+        "Vite"
+      ],
+      "status": "planned",
+      "updated": "2026-07-27",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://atmosphere.labs.rjmlaird.co.uk",
+      "url": "https://atmosphere.labs.rjmlaird.co.uk/",
+      "sourcePath": "packages/atmosphere",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/packages/atmosphere"
+    },
+    {
+      "id": "labs/cfd",
+      "sourceId": "cfd",
+      "type": "lab",
+      "title": "Flow around objects",
+      "description": "A 2D fluid solver running in the browser. It uses the lattice Boltzmann method to compute flow around an aerofoil, square or cylinder in air or water, with live drag and lift coefficients, vortex shedding and pressure and vorticity fields. An educational model, not experimentally validated.",
+      "group": "experiments",
+      "tech": [
+        "JavaScript",
+        "Canvas 2D",
+        "Lattice Boltzmann (D2Q9)",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-05",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://cfd.labs.rjmlaird.co.uk",
+      "url": "https://cfd.labs.rjmlaird.co.uk/",
+      "sourcePath": "packages/cfd",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/packages/cfd"
+    },
+    {
+      "id": "labs/electricity",
+      "sourceId": "electricity",
+      "type": "lab",
+      "title": "Electricity",
+      "description": "An interactive exploration of electricity: how voltage, current and resistance relate, and how simple circuits behave as you change the components.",
+      "group": "experiments",
       "tech": [
         "React",
         "Vite",
         "TypeScript"
       ],
-      "status": "in-progress",
-      "updated": "2026-09-03",
+      "status": "active",
+      "updated": "2026-10-05",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
-      "path": "https://components.labs.rjmlaird.co.uk/",
-      "url": "https://components.labs.rjmlaird.co.uk/",
-      "sourcePath": "apps/components",
-      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/components"
+      "path": "https://electricity.labs.rjmlaird.co.uk",
+      "url": "https://electricity.labs.rjmlaird.co.uk/",
+      "sourcePath": "packages/electricity",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/packages/electricity"
     },
     {
-      "id": "labs/contrast",
-      "sourceId": "contrast",
+      "id": "labs/elements",
+      "sourceId": "elements",
       "type": "lab",
-      "title": "Colour Contrast Checker",
-      "description": "WCAG 2.x colour contrast checker.",
-      "group": "focus",
+      "title": "Elements",
+      "description": "An interactive periodic table for exploring the chemical elements, their properties and how they group and trend across the table.",
+      "group": "experiments",
       "tech": [
         "React",
         "Vite",
         "TypeScript"
       ],
-      "status": "in-progress",
-      "updated": "2026-09-03",
+      "status": "active",
+      "updated": "2026-10-05",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
-      "path": "https://contrast.labs.rjmlaird.co.uk/",
-      "url": "https://contrast.labs.rjmlaird.co.uk/",
-      "sourcePath": "apps/contrast",
-      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/contrast"
+      "path": "https://elements.labs.rjmlaird.co.uk",
+      "url": "https://elements.labs.rjmlaird.co.uk/",
+      "sourcePath": "packages/elements",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/packages/elements"
+    },
+    {
+      "id": "labs/leicester-floods",
+      "sourceId": "leicester-floods",
+      "type": "lab",
+      "title": "Leicester Floods",
+      "description": "New experiment — update this description.",
+      "group": "experiments",
+      "tech": [
+        "React",
+        "Vite"
+      ],
+      "status": "planned",
+      "updated": "2026-10-06",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://leicester-floods.labs.rjmlaird.co.uk",
+      "url": "https://leicester-floods.labs.rjmlaird.co.uk/",
+      "sourcePath": "https://github.com/greenorbitspace/labs/tree/main/packages/leicester-floods",
+      "source": "https://github.com/greenorbitspace/labs/tree/main/packages/leicester-floods"
     },
     {
       "id": "labs/rubiks",
       "sourceId": "rubiks",
       "type": "lab",
-      "title": "Rubik's Cube State Analyser",
-      "description": "Interactive 3D cube manipulation and algorithm visualization.",
-      "group": "focus",
+      "title": "Rubiks",
+      "description": "New experiment — update this description.",
+      "group": "experiments",
       "tech": [
-        "Three.js",
-        "TypeScript"
+        "React",
+        "Vite"
       ],
-      "status": "in-progress",
-      "updated": "2026-10-14",
+      "status": "planned",
+      "updated": "2026-10-06",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
-      "path": "https://rubiks.labs.rjmlaird.co.uk/",
+      "path": "https://rubiks.labs.rjmlaird.co.uk",
       "url": "https://rubiks.labs.rjmlaird.co.uk/",
-      "sourcePath": "apps/rubiks",
-      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/rubiks"
-    },
-    {
-      "id": "labs/blueprint",
-      "sourceId": "blueprint",
-      "type": "lab",
-      "title": "Blueprint Layout Grid",
-      "description": "Architectural and typographic grid layout prototyping utility.",
-      "group": "focus",
-      "tech": [
-        "React",
-        "Vite",
-        "TypeScript"
-      ],
-      "status": "in-progress",
-      "updated": "2026-10-01",
-      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
-      "path": "https://blueprint.labs.rjmlaird.co.uk/",
-      "url": "https://blueprint.labs.rjmlaird.co.uk/",
-      "sourcePath": "apps/blueprint",
-      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/blueprint"
-    },
-    {
-      "id": "labs/marketing",
-      "sourceId": "marketing",
-      "type": "lab",
-      "title": "Marketing",
-      "description": "Visualising multi-channel marketing touchpoints and conversion paths.",
-      "group": "focus",
-      "tech": [
-        "React",
-        "Vite",
-        "TypeScript"
-      ],
-      "status": "in-progress",
-      "updated": "2026-10-02",
-      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
-      "path": "https://marketing.labs.rjmlaird.co.uk/",
-      "url": "https://marketing.labs.rjmlaird.co.uk/",
-      "sourcePath": "apps/marketing",
-      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/marketing"
+      "sourcePath": "https://github.com/greenorbitspace/labs/tree/main/packages/rubiks",
+      "source": "https://github.com/greenorbitspace/labs/tree/main/packages/rubiks"
     }
   ]
 }

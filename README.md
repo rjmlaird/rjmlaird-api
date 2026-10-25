@@ -1,47 +1,49 @@
-# rjmlaird-portfolio-api
+# rjmlaird-api
 
-A single, public, **read-only** Cloudflare Worker serving Ryan Laird's portfolio as JSON, with a browsable front end at `/`.
+Public, **read-only** Cloudflare Worker (Hono) at `https://api.rjmlaird.co.uk`: structured data for Ryan Laird and the rjmlaird.co.uk estate, with Swagger UI at `/` and the OpenAPI document at `/openapi.json`.
 
-No bindings, no secrets, no storage, no outbound requests. Everything is bundled at build time from `src/data`.
+No bindings, secrets or storage. Everything is bundled from `src/data` at build time. The only outbound requests are the optional `?probe=true` status checks.
 
 ## Endpoints
 
-All `GET`. Full reference at `/openapi.json` and in the page at `/`.
+All `GET`/`HEAD`. Every JSON response carries an `ETag`; send `If-None-Match` for a `304`. Collections take `limit`/`offset` and return `meta` (`total`, `count`, `nextOffset`). Errors are `{ "error": "...", ...context }` (400 invalid parameter, 404 not found, 405 non-read method).
 
-| Path | Notes |
+| Endpoint | Purpose |
 |---|---|
-| `/` | Front end |
-| `/v1/portfolio` | Counts and endpoint index |
-| `/v1/portfolio/projects`, `/case-studies`, `/initiatives` | Filters: `status type tag sector client category featured q limit offset` |
-| `/v1/portfolio/{projects,case-studies,initiatives}/:slug` | `?expand=` for relations. Legacy `/project/:slug`, `/case-study/:slug`, `/initiative/:slug` still work |
-| `/v1/portfolio/reviews` · `/research` · `/teaching` | Testimonials, publications (parsed from BibTeX), teaching history |
-| `/v1/portfolio/search?q=` | Cross-collection search returning compact hits |
-| `/health` · `/openapi.json` | |
+| `/v1` | Discovery: endpoint groups and the estate entry point |
+| `/v1/status` | Build, dataset inventory, estate counts. `?probe=true` HEAD-checks live subdomains (3 s timeout, cached 60 s, **503** when degraded) |
+| `/v1/subdomains` · `/{id or host}` | **Estate entry point**: every public subdomain with its web and API entry points. Filters `status kind live` |
+| `/v1/sites` · `/{id}` | Raw registry (`kind status footer host`) |
+| `/v1/cv` | CV index + public profile summary + per-section counts; `/v1/cv/{section}`, `/search`, `/full` |
+| `/v1/portfolio` | Projects, initiatives, case studies (existing filters unchanged) |
+| `/v1/research` · `/{id}` · `/publications.bib` | Publications. Filters `year type author q sort`; sanitised BibTeX |
+| `/v1/glossary` · `/{slug}` | Terms. Filters `category letter q sort expand=definition`; `/categories`, `/letters`; aliases resolve (`/v1/glossary/SAR`); `?format=jsonld` gives schema.org `DefinedTerm`/`DefinedTermSet` |
+| `/v1/tools` · `/v1/apps` · `/v1/labs` | Catalogues, live items first. Filters `status group tech q live sort`; `/groups`, `/{slug}` |
 
-Any non-read method returns 405; every other path returns 404. CORS is open for `GET/HEAD/OPTIONS` only.
+`/v1/builds` (combined apps+tools), `/v1/media`, `/v1/general`, `/v1/bio` are unchanged. Legacy `/api/*` returns 410. `/v1/portfolio/publications.txt` is now a legacy alias of the BibTeX file.
+
+## Data is generated
+
+`src/data/*.json` is built, not hand-edited:
+
+```bash
+npm run data:glossary   # glossary repo term files  -> glossary.json (validates slugs, categories, related links)
+npm run data:labs       # main site experiments.json -> labs-builds.json
+npm run data:research   # publications.bib           -> research.json + publications.public.bib
+```
+
+Adjust the relative paths in `package.json` to your checkouts. `apps-builds.json` and `tools-builds.json` come from the apps/tools exporters; `sites.json` from `rjmlaird-docs/data/sites.yaml`; the older datasets from `scripts/sanitise-data.mjs`.
+
+Privacy: the public bibliography drops Zotero `file` paths, abstracts and copyright fields (a test enforces it); restricted hosts never enter the registry.
 
 ## Develop
 
 ```bash
 npm install
-npm run dev      # wrangler dev
-npm run check    # tsc
-npm test         # vitest (includes privacy and surface-area tests)
+npm run dev     # wrangler dev
+npm run check   # tsc
+npm test        # vitest: every documented path must respond 200; behaviour tests for each endpoint
 npm run deploy
 ```
 
-Routing: `workers_dev` is off. Add a `routes` entry in `wrangler.jsonc` (or attach the domain in the dashboard) before cutover.
-The deploy workflow needs repo secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`.
-
-## Data and privacy
-
-`src/data/*.json` is **generated**, not hand-edited:
-
-```bash
-node scripts/sanitise-data.mjs <path-to-raw-content-export>
-```
-
-The script keeps allowlisted fields only and removes local file paths, Notion links, draft items, template placeholder text, share-tracking URL parameters (`?si=`), and references to datasets that aren't public. It exits non-zero if anything resembling a path, email, phone number or credential remains.
-At runtime `src/portfolio.ts` applies a second allowlist, and `test/api.test.ts` asserts that no endpoint leaks private-looking content.
-
-Not covered by tooling: whether third-party testimonials and client names are cleared for publication. Review `reviews.json` and the `client` fields.
+`src/openapi.ts` is the single API description; keep it in step with `src/index.ts`.

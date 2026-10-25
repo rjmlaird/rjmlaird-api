@@ -7,3 +7,8 @@ interface Env {
   ENVIRONMENT: string;
   SITE_ORIGIN: string;
 }
+
+declare module "*.bib" {
+  const content: string;
+  export default content;
+}
