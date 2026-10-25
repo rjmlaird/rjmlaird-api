@@ -251,6 +251,8 @@
       "status": "planned",
       "updated": "2026-08-16",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://climate-visualiser.labs.rjmlaird.co.uk/",
+      "url": "https://climate-visualiser.labs.rjmlaird.co.uk/",
       "sourcePath": "apps/climate-visualiser",
       "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/climate-visualiser"
     },
@@ -266,7 +268,7 @@
         "Vite",
         "TypeScript"
       ],
-      "status": "planned",
+      "status": "in-progress",
       "updated": "2026-08-20",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
       "path": "https://climate-time-machine.labs.rjmlaird.co.uk/",
