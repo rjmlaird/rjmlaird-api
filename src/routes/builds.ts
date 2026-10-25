@@ -5,12 +5,14 @@ import { json } from "../lib/jsonResponse";
 
 import appsData from "../data/apps-builds.json";
 import toolsData from "../data/tools-builds.json";
+import labsData from "../data/labs-builds.json";
 
 const builds = new Hono<{ Bindings: Env }>();
 
 const combinedBuilds = [
   ...appsData.builds,
   ...toolsData.builds,
+  ...labsData.builds,
 ];
 
 /**
@@ -19,6 +21,7 @@ const combinedBuilds = [
  * Exporters use namespaced IDs:
  * - apps/astrodash
  * - tools/astro-calc
+ * - labs/mechanics
  */
 
 const seenIds = new Set<string>();
@@ -58,6 +61,15 @@ const buildsData = {
       sourceRef: toolsData.sourceRef,
       groups: toolsData.groups,
       statuses: toolsData.statuses,
+    },
+
+    labs: {
+      schemaVersion: labsData.schemaVersion,
+      origin: labsData.origin,
+      repository: labsData.repository,
+      sourceRef: labsData.sourceRef,
+      groups: labsData.groups,
+      statuses: labsData.statuses,
     },
   },
 
