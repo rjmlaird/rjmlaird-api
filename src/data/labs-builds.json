@@ -114,6 +114,8 @@
       "status": "in-progress",
       "updated": "2026-10-15",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://astronomy.labs.rjmlaird.co.uk/",
+      "url": "https://astronomy.labs.rjmlaird.co.uk/",
       "sourcePath": "apps/astronomy",
       "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/astronomy"
     },
@@ -132,6 +134,8 @@
       "status": "in-progress",
       "updated": "2026-10-18",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://n-body.labs.rjmlaird.co.uk/",
+      "url": "https://n-body.labs.rjmlaird.co.uk/",
       "sourcePath": "apps/n-body",
       "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/n-body"
     },
@@ -150,6 +154,8 @@
       "status": "in-progress",
       "updated": "2026-10-20",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://satellites.labs.rjmlaird.co.uk/",
+      "url": "https://satellites.labs.rjmlaird.co.uk/",
       "sourcePath": "apps/satellites",
       "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/satellites"
     },
@@ -183,9 +189,11 @@
         "Vite",
         "TypeScript"
       ],
-      "status": "planned",
+      "status": "in-progress",
       "updated": "2026-10-09",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://equations.labs.rjmlaird.co.uk/",
+      "url": "https://equations.labs.rjmlaird.co.uk/",
       "sourcePath": "apps/equations",
       "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/equations"
     },
@@ -253,9 +261,11 @@
         "TypeScript",
         "HTML5 Canvas"
       ],
-      "status": "planned",
+      "status": "in-progress",
       "updated": "2026-09-10",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://cfd.labs.rjmlaird.co.uk/",
+      "url": "https://cfd.labs.rjmlaird.co.uk/",
       "sourcePath": "apps/cfd",
       "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/cfd"
     },
@@ -271,9 +281,11 @@
         "Vite",
         "TypeScript"
       ],
-      "status": "planned",
+      "status": "in-progress",
       "updated": "2026-09-12",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://biodiversity.labs.rjmlaird.co.uk/",
+      "url": "https://biodiversity.labs.rjmlaird.co.uk/",
       "sourcePath": "apps/biodiversity",
       "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/biodiversity"
     },
@@ -289,9 +301,11 @@
         "Vite",
         "TypeScript"
       ],
-      "status": "planned",
+      "status": "in-progress",
       "updated": "2026-09-15",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://drought.labs.rjmlaird.co.uk/",
+      "url": "https://drought.labs.rjmlaird.co.uk/",
       "sourcePath": "apps/drought",
       "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/drought"
     },
@@ -307,9 +321,11 @@
         "Vite",
         "TypeScript"
       ],
-      "status": "planned",
+      "status": "in-progress",
       "updated": "2026-09-18",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://wildfires.labs.rjmlaird.co.uk/",
+      "url": "https://wildfires.labs.rjmlaird.co.uk/",
       "sourcePath": "apps/wildfires",
       "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/wildfires"
     },
@@ -325,9 +341,11 @@
         "Vite",
         "TypeScript"
       ],
-      "status": "planned",
+      "status": "in-progress",
       "updated": "2026-09-20",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://sewage.labs.rjmlaird.co.uk/",
+      "url": "https://sewage.labs.rjmlaird.co.uk/",
       "sourcePath": "apps/sewage",
       "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/sewage"
     },
@@ -396,7 +414,7 @@
         "Vite",
         "TypeScript"
       ],
-      "status": "planned",
+      "status": "in-progress",
       "updated": "2026-10-01",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
       "sourcePath": "apps/blueprint",
