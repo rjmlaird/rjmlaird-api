@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "origin": "https://labs.rjmlaird.co.uk",
+  "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+  "sourceRef": "main",
+  "groups": [
+    {
+      "id": "physics",
+      "name": "Physics & Space",
+      "blurb": "Interactive demonstrations of mechanics, electricity, matter and waves."
+    },
+    {
+      "id": "climate",
+      "name": "Climate & Earth",
+      "blurb": "Evidence-based explorations of the climate system."
+    },
+    {
+      "id": "focus",
+      "name": "Focus & Everyday",
+      "blurb": "Small experiments for choosing breaks and understanding your own attention."
+    }
+  ],
+  "statuses": {
+    "active": {
+      "label": "Active",
+      "order": 1
+    },
+    "in-progress": {
+      "label": "In progress",
+      "order": 2
+    },
+    "planned": {
+      "label": "Planned",
+      "order": 3
+    },
+    "archived": {
+      "label": "Archived",
+      "order": 4
+    }
+  },
+  "builds": [
+    {
+      "id": "labs/mechanics",
+      "sourceId": "mechanics",
+      "type": "lab",
+      "title": "Mechanics Lab",
+      "description": "Interactive demonstrations of forces, motion and energy, built to be explored rather than read.",
+      "group": "physics",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "active",
+      "updated": "2026-10-09",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://mechanics.labs.rjmlaird.co.uk/",
+      "url": "https://mechanics.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/mechanics",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/mechanics"
+    },
+    {
+      "id": "labs/electricity",
+      "sourceId": "electricity",
+      "type": "lab",
+      "title": "Electricity Lab",
+      "description": "A companion to the Mechanics Lab for exploring circuits, current, voltage and resistance.",
+      "group": "physics",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "planned",
+      "updated": "2026-10-09",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs"
+    },
+    {
+      "id": "labs/elements",
+      "sourceId": "elements",
+      "type": "lab",
+      "title": "Elements Lab",
+      "description": "An interactive periodic table with a card for each element, for browsing properties and patterns.",
+      "group": "physics",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "planned",
+      "updated": "2026-10-09",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs"
+    },
+    {
+      "id": "labs/doppler",
+      "sourceId": "doppler",
+      "type": "lab",
+      "title": "Doppler & Redshift Visualiser",
+      "description": "Wavefronts and spectral lines showing Doppler shift, with a toggle between Doppler and cosmological redshift.",
+      "group": "physics",
+      "tech": [
+        "HTML",
+        "JavaScript"
+      ],
+      "status": "planned",
+      "updated": "2026-10-09",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs"
+    },
+    {
+      "id": "labs/climate-visualiser",
+      "sourceId": "climate-visualiser",
+      "type": "lab",
+      "title": "Climate Visualiser",
+      "description": "An evidence-based look at the climate system, from atmosphere and ocean to sea level, including policy successes such as the Montreal Protocol.",
+      "group": "climate",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "planned",
+      "updated": "2026-08-16",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs"
+    },
+    {
+      "id": "labs/interruption-log",
+      "sourceId": "interruption-log",
+      "type": "lab",
+      "title": "Interruption Log",
+      "description": "Quick capture for interruptions, with charts of when they happen so you can see patterns over the week.",
+      "group": "focus",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "planned",
+      "updated": "2026-09-03",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs"
+    }
+  ]
+}
