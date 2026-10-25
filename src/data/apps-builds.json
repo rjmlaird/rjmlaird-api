@@ -44,12 +44,14 @@
       "sourceId": "astrodash",
       "type": "app",
       "title": "Astro Mission Control",
-      "description": "An astronomy dashboard for observing, combining Skyfield-based sky positions with weather, space weather, aurora alerts and satellite data.",
+      "description": "An astronomy dashboard for observing, combining sky positions with weather, space weather, aurora alerts and satellite data.",
       "group": "space",
       "tech": [
-        "Python",
-        "Streamlit",
-        "Skyfield"
+        "JavaScript",
+        "Leaflet",
+        "Open-Meteo",
+        "NOAA SWPC",
+        "NASA DONKI"
       ],
       "status": "in-progress",
       "updated": "2026-10-11",
@@ -60,6 +62,25 @@
       "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/astrodash"
     },
     {
+      "id": "apps/launches",
+      "sourceId": "launches",
+      "type": "app",
+      "title": "Upcoming Rocket Launches",
+      "description": "A readable schedule of the next 20 rocket launches, with times, vehicles and status.",
+      "group": "space",
+      "tech": [
+        "JavaScript",
+        "Launch Library 2"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-21",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "path": "https://launches.apps.rjmlaird.co.uk",
+      "url": "https://launches.apps.rjmlaird.co.uk/",
+      "sourcePath": "apps/launches",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/launches"
+    },
+    {
       "id": "apps/weatherdash",
       "sourceId": "weatherdash",
       "type": "app",
@@ -67,9 +88,9 @@
       "description": "A weather dashboard showing current conditions and forecasts for a chosen location.",
       "group": "places",
       "tech": [
-        "React",
-        "Vite",
-        "TypeScript"
+        "JavaScript",
+        "Open-Meteo",
+        "RainViewer"
       ],
       "status": "in-progress",
       "updated": "2026-10-11",
@@ -87,9 +108,9 @@
       "description": "Keep track of the spices you have, and see which spice mixes you can make now or are one ingredient short of, with batch scaling.",
       "group": "home",
       "tech": [
-        "React",
-        "Vite",
-        "TypeScript"
+        "JavaScript",
+        "Tailwind CSS",
+        "localStorage"
       ],
       "status": "active",
       "updated": "2026-10-11",
@@ -107,9 +128,9 @@
       "description": "A home bar inventory and cocktail manager: record what you have and see which drinks you can make now.",
       "group": "home",
       "tech": [
-        "React",
-        "Vite",
-        "TypeScript"
+        "JavaScript",
+        "Tailwind CSS",
+        "localStorage"
       ],
       "status": "in-progress",
       "updated": "2026-10-11",
@@ -118,6 +139,25 @@
       "url": "https://mini-bar.apps.rjmlaird.co.uk/",
       "sourcePath": "apps/mini-bar",
       "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/mini-bar"
+    },
+    {
+      "id": "apps/first-aid-kit",
+      "sourceId": "first-aid-kit",
+      "type": "app",
+      "title": "First Aid Kit Inventory",
+      "description": "Track the contents of your first aid kits: expiry dates, minimum quantities, inspection checklists and an automatic restock list.",
+      "group": "home",
+      "tech": [
+        "JavaScript",
+        "localStorage"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "path": "https://first-aid-kit.apps.rjmlaird.co.uk",
+      "url": "https://first-aid-kit.apps.rjmlaird.co.uk/",
+      "sourcePath": "apps/first-aid-kit",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/first-aid-kit"
     },
     {
       "id": "apps/kinship-notes",
@@ -129,7 +169,8 @@
       "tech": [
         "React",
         "Vite",
-        "TypeScript"
+        "TypeScript",
+        "Vitest"
       ],
       "status": "in-progress",
       "updated": "2026-10-22",
