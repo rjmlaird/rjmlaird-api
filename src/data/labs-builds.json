@@ -174,6 +174,8 @@
       "status": "planned",
       "updated": "2026-10-09",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://maths.labs.rjmlaird.co.uk/",
+      "url": "https://maths.labs.rjmlaird.co.uk/",
       "sourcePath": "apps/maths",
       "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/maths"
     },
@@ -181,7 +183,7 @@
       "id": "labs/equations",
       "sourceId": "equations",
       "type": "lab",
-      "title": "Equation Solver & Grapher",
+      "title": "Equation Solver",
       "description": "Plot and explore physical and mathematical equations with live parameter adjustments.",
       "group": "physics",
       "tech": [
@@ -196,6 +198,26 @@
       "url": "https://equations.labs.rjmlaird.co.uk/",
       "sourcePath": "apps/equations",
       "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/equations"
+    },
+    {
+      "id": "labs/graphs",
+      "sourceId": "graphs",
+      "type": "lab",
+      "title": "Graph Explorer",
+      "description": "A focused space for visualising data, testing ideas, and exploring charts in a clean, dark interface.",
+      "group": "physics",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-09",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://graphs.labs.rjmlaird.co.uk/",
+      "url": "https://graphs.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/graphs",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/graphs"
     },
     {
       "id": "labs/doppler",
@@ -247,6 +269,8 @@
       "status": "planned",
       "updated": "2026-08-20",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://climate-time-machine.labs.rjmlaird.co.uk/",
+      "url": "https://climate-time-machine.labs.rjmlaird.co.uk/",
       "sourcePath": "apps/climate-time-machine",
       "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/climate-time-machine"
     },
@@ -350,29 +374,11 @@
       "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/sewage"
     },
     {
-      "id": "labs/interruption-log",
-      "sourceId": "interruption-log",
+      "id": "labs/components",
+      "sourceId": "components",
       "type": "lab",
-      "title": "Interruption Log",
-      "description": "Quick capture for interruptions, with charts of when they happen so you can see patterns over the week.",
-      "group": "focus",
-      "tech": [
-        "React",
-        "Vite",
-        "TypeScript"
-      ],
-      "status": "planned",
-      "updated": "2026-09-03",
-      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
-      "sourcePath": "apps/interruption-log",
-      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/interruption-log"
-    },
-    {
-      "id": "labs/contrast",
-      "sourceId": "contrast",
-      "type": "lab",
-      "title": "Colour Contrast & Accessibility Lab",
-      "description": "Interactive visual contrast testing and palette evaluation for accessible web interfaces.",
+      "title": "Components Sandbox",
+      "description": "A working gallery of the Astro UI blocks used across rjmlaird.co.uk — rendered live, with the source snippet underneath each one.",
       "group": "focus",
       "tech": [
         "React",
@@ -380,8 +386,30 @@
         "TypeScript"
       ],
       "status": "in-progress",
-      "updated": "2026-10-12",
+      "updated": "2026-09-03",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://components.labs.rjmlaird.co.uk/",
+      "url": "https://components.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/components",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/components"
+    },
+    {
+      "id": "labs/contrast",
+      "sourceId": "contrast",
+      "type": "lab",
+      "title": "Colour Contrast Checker",
+      "description": "WCAG 2.x colour contrast checker.",
+      "group": "focus",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-09-03",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://contrast.labs.rjmlaird.co.uk/",
+      "url": "https://contrast.labs.rjmlaird.co.uk/",
       "sourcePath": "apps/contrast",
       "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/contrast"
     },
@@ -399,6 +427,8 @@
       "status": "in-progress",
       "updated": "2026-10-14",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://rubiks.labs.rjmlaird.co.uk/",
+      "url": "https://rubiks.labs.rjmlaird.co.uk/",
       "sourcePath": "apps/rubiks",
       "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/rubiks"
     },
@@ -417,6 +447,8 @@
       "status": "in-progress",
       "updated": "2026-10-01",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://blueprint.labs.rjmlaird.co.uk/",
+      "url": "https://blueprint.labs.rjmlaird.co.uk/",
       "sourcePath": "apps/blueprint",
       "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/blueprint"
     },
@@ -424,7 +456,7 @@
       "id": "labs/marketing",
       "sourceId": "marketing",
       "type": "lab",
-      "title": "Campaign Attribution Flow",
+      "title": "Marketing",
       "description": "Visualising multi-channel marketing touchpoints and conversion paths.",
       "group": "focus",
       "tech": [
@@ -432,9 +464,11 @@
         "Vite",
         "TypeScript"
       ],
-      "status": "planned",
+      "status": "in-progress",
       "updated": "2026-10-02",
       "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://marketing.labs.rjmlaird.co.uk/",
+      "url": "https://marketing.labs.rjmlaird.co.uk/",
       "sourcePath": "apps/marketing",
       "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/marketing"
     }
