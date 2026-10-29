@@ -44,40 +44,167 @@
       "sourceId": "astrodash",
       "type": "app",
       "title": "Astro Mission Control",
-      "description": "An astronomy dashboard for observing, combining Skyfield-based sky positions with weather, space weather, aurora alerts and satellite data.",
+      "description": "An observing dashboard: what is up tonight, the Moon and darkness, weather, planets, meteor showers, aurora and solar activity.",
       "group": "space",
       "tech": [
-        "Python",
-        "Streamlit",
-        "Skyfield"
+        "JavaScript",
+        "Leaflet",
+        "Open-Meteo",
+        "NOAA SWPC",
+        "NASA DONKI"
       ],
       "status": "in-progress",
       "updated": "2026-10-11",
       "repository": "https://github.com/rjmlaird/rjmlaird-apps",
-      "path": "https://astrodash.apps.rjmlaird.co.uk",
-      "url": "https://astrodash.apps.rjmlaird.co.uk/",
+      "url": "https://astrodash.apps.rjmlaird.co.uk",
       "sourcePath": "apps/astrodash",
       "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/astrodash"
+    },
+    {
+      "id": "apps/launches",
+      "sourceId": "launches",
+      "type": "app",
+      "title": "Upcoming Rocket Launches",
+      "description": "A live countdown to the next rocket launch and a list of the following ten, with status.",
+      "group": "space",
+      "tech": [
+        "JavaScript",
+        "Launch Library 2"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-21",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "url": "https://launches.apps.rjmlaird.co.uk",
+      "sourcePath": "apps/launches",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/launches"
+    },
+    {
+      "id": "apps/earth-explorer",
+      "sourceId": "earth-explorer",
+      "type": "app",
+      "title": "Earth Explorer",
+      "description": "Explore satellite imagery, global environmental indicators, and Earth observation datasets.",
+      "group": "space",
+      "tech": [
+        "JavaScript",
+        "Tailwind CSS"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "url": "https://earth-explorer.apps.rjmlaird.co.uk",
+      "sourcePath": "apps/earth-explorer",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/earth-explorer"
+    },
+    {
+      "id": "apps/atmosphere-explorer",
+      "sourceId": "atmosphere-explorer",
+      "type": "app",
+      "title": "Atmosphere Explorer",
+      "description": "Monitor atmospheric conditions, air quality indices, and meteorological telemetry.",
+      "group": "space",
+      "tech": [
+        "JavaScript",
+        "Tailwind CSS"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "url": "https://atmosphere-explorer.apps.rjmlaird.co.uk",
+      "sourcePath": "apps/atmosphere-explorer",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/atmosphere-explorer"
+    },
+    {
+      "id": "apps/sun-explorer",
+      "sourceId": "sun-explorer",
+      "type": "app",
+      "title": "Sun Explorer",
+      "description": "Real-time solar monitoring, sunspot tracking, and solar flare telemetry.",
+      "group": "space",
+      "tech": [
+        "JavaScript",
+        "Tailwind CSS",
+        "NOAA SWPC"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "url": "https://sun-explorer.apps.rjmlaird.co.uk",
+      "sourcePath": "apps/sun-explorer",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/sun-explorer"
+    },
+    {
+      "id": "apps/solar-system-explorer",
+      "sourceId": "solar-system-explorer",
+      "type": "app",
+      "title": "Solar System Explorer",
+      "description": "Interactive Orrery and planetary position tracker across the solar system.",
+      "group": "space",
+      "tech": [
+        "JavaScript",
+        "Tailwind CSS"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "url": "https://solar-system-explorer.apps.rjmlaird.co.uk",
+      "sourcePath": "apps/solar-system-explorer",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/solar-system-explorer"
+    },
+    {
+      "id": "apps/space-trend-keeper",
+      "sourceId": "space-trend-keeper",
+      "type": "app",
+      "title": "Space Trend Keeper",
+      "description": "Track macroeconomic, technological, and policy trends across the global space economy.",
+      "group": "space",
+      "tech": [
+        "JavaScript",
+        "Tailwind CSS"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "url": "https://space-trend-keeper.apps.rjmlaird.co.uk",
+      "sourcePath": "apps/space-trend-keeper",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/space-trend-keeper"
     },
     {
       "id": "apps/weatherdash",
       "sourceId": "weatherdash",
       "type": "app",
       "title": "Weather Dashboard",
-      "description": "A weather dashboard showing current conditions and forecasts for a chosen location.",
+      "description": "Weather for any place: current conditions, the next 24 hours, radar, a 7-day forecast, air quality and pollen.",
       "group": "places",
       "tech": [
-        "React",
-        "Vite",
-        "TypeScript"
+        "JavaScript",
+        "Open-Meteo",
+        "RainViewer"
       ],
       "status": "in-progress",
       "updated": "2026-10-11",
       "repository": "https://github.com/rjmlaird/rjmlaird-apps",
-      "path": "https://weatherdash.apps.rjmlaird.co.uk",
-      "url": "https://weatherdash.apps.rjmlaird.co.uk/",
+      "url": "https://weatherdash.apps.rjmlaird.co.uk",
       "sourcePath": "apps/weatherdash",
       "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/weatherdash"
+    },
+    {
+      "id": "apps/council-watch",
+      "sourceId": "council-watch",
+      "type": "app",
+      "title": "Council Watch",
+      "description": "Monitor local government agendas, committee minutes, and municipal planning applications.",
+      "group": "places",
+      "tech": [
+        "JavaScript",
+        "Tailwind CSS"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "url": "https://council-watch.apps.rjmlaird.co.uk",
+      "sourcePath": "apps/council-watch",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/council-watch"
     },
     {
       "id": "apps/spice-cupboard",
@@ -87,15 +214,14 @@
       "description": "Keep track of the spices you have, and see which spice mixes you can make now or are one ingredient short of, with batch scaling.",
       "group": "home",
       "tech": [
-        "React",
-        "Vite",
-        "TypeScript"
+        "JavaScript",
+        "Tailwind CSS",
+        "localStorage"
       ],
       "status": "active",
       "updated": "2026-10-11",
       "repository": "https://github.com/rjmlaird/rjmlaird-apps",
-      "path": "https://spice-cupboard.apps.rjmlaird.co.uk",
-      "url": "https://spice-cupboard.apps.rjmlaird.co.uk/",
+      "url": "https://spice-cupboard.apps.rjmlaird.co.uk",
       "sourcePath": "apps/spice-cupboard",
       "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/spice-cupboard"
     },
@@ -107,17 +233,34 @@
       "description": "A home bar inventory and cocktail manager: record what you have and see which drinks you can make now.",
       "group": "home",
       "tech": [
-        "React",
-        "Vite",
-        "TypeScript"
+        "JavaScript",
+        "Tailwind CSS",
+        "localStorage"
       ],
       "status": "in-progress",
       "updated": "2026-10-11",
       "repository": "https://github.com/rjmlaird/rjmlaird-apps",
-      "path": "https://mini-bar.apps.rjmlaird.co.uk",
-      "url": "https://mini-bar.apps.rjmlaird.co.uk/",
+      "url": "https://mini-bar.apps.rjmlaird.co.uk",
       "sourcePath": "apps/mini-bar",
       "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/mini-bar"
+    },
+    {
+      "id": "apps/first-aid-kit",
+      "sourceId": "first-aid-kit",
+      "type": "app",
+      "title": "First Aid Kit Inventory",
+      "description": "Track the contents of your first aid kits: expiry dates, minimum quantities, inspection checklists and an automatic restock list.",
+      "group": "home",
+      "tech": [
+        "JavaScript",
+        "localStorage"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "url": "https://first-aid-kit.apps.rjmlaird.co.uk",
+      "sourcePath": "apps/first-aid-kit",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/first-aid-kit"
     },
     {
       "id": "apps/kinship-notes",
@@ -129,13 +272,13 @@
       "tech": [
         "React",
         "Vite",
-        "TypeScript"
+        "TypeScript",
+        "Vitest"
       ],
       "status": "in-progress",
       "updated": "2026-10-22",
       "repository": "https://github.com/rjmlaird/rjmlaird-apps",
-      "path": "https://kinship-notes.apps.rjmlaird.co.uk",
-      "url": "https://kinship-notes.apps.rjmlaird.co.uk/",
+      "url": "https://kinship-notes.apps.rjmlaird.co.uk",
       "sourcePath": "apps/kinship-notes",
       "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/kinship-notes"
     }

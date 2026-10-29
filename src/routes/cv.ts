@@ -1,5 +1,6 @@
 import { Hono } from "hono";
 import { json } from "../lib/jsonResponse";
+import { link, respond } from "../lib/http";
 
 import awards from "../data/awards.json";
 import certifications from "../data/certifications.json";
@@ -68,10 +69,27 @@ const app = new Hono<{ Bindings: Env }>();
 const isCollection = (value: string): value is CvCollection =>
   (SECTION_KEYS as readonly string[]).includes(value);
 
-app.get("/", () =>
-  json({
+const countOf = (value: unknown): number => {
+  if (Array.isArray(value)) return value.length;
+  if (value && typeof value === "object") {
+    const values = Object.values(value as Record<string, unknown>);
+    // Wrapper objects such as { awards: [...] } count their single array.
+    if (values.length === 1 && Array.isArray(values[0])) return values[0].length;
+    return values.length;
+  }
+  return 0;
+};
+
+const pick = (source: unknown, keys: string[]) => {
+  const src = (source ?? {}) as Record<string, unknown>;
+  return Object.fromEntries(keys.filter((k) => src[k] !== undefined).map((k) => [k, src[k]]));
+};
+
+// GET /v1/cv: index plus a public summary. The summary only repeats fields already public at /v1/cv/profile.
+app.get("/", (c) =>
+  respond(c, {
     service: "cv",
-    version: "1.0",
+    version: "1.1",
     sections: SECTION_KEYS,
     endpoints: [
       "/v1/cv",
@@ -82,6 +100,16 @@ app.get("/", () =>
       "/v1/cv/:collection",
       "/v1/cv/search?q=",
     ],
+    profile: pick(profile, ["name", "displayName", "headline", "shortBio", "location"]),
+    counts: Object.fromEntries(SECTION_KEYS.map((k) => [k, countOf(cvData[k])])),
+    links: {
+      self: link(c, "/v1/cv"),
+      profile: link(c, "/v1/cv/profile"),
+      cv: "https://cv.rjmlaird.co.uk/",
+      bio: link(c, "/v1/bio"),
+      research: link(c, "/v1/research"),
+      openapi: link(c, "/openapi.json"),
+    },
   }),
 );
 

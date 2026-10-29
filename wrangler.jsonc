@@ -27,6 +27,9 @@
     "API_VISIBILITY": "public-read-only"
   },
 
+  // BibTeX is bundled as text (see src/data/publications.public.bib).
+  "rules": [{ "type": "Text", "globs": ["**/*.bib"], "fallthrough": true }],
+
   "observability": {
     "enabled": true
   }

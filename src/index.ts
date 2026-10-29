@@ -9,6 +9,15 @@ import bio from "./routes/bio";
 import builds from "./routes/builds";
 import cv from "./routes/cv";
 import general from "./routes/general";
+import glossary from "./routes/glossary";
+import research from "./routes/research";
+import status from "./routes/status";
+import subdomains from "./routes/subdomains";
+import { sites } from "./routes/sites";
+import { catalogueRouter } from "./routes/catalogue";
+import appsData from "./data/apps-builds.json";
+import toolsData from "./data/tools-builds.json";
+import labsData from "./data/labs-builds.json";
 import media from "./routes/media";
 import portfolio from "./routes/portfolio";
 import { site } from "./routes/site";
@@ -59,18 +68,31 @@ app.get("/v1", (c) => {
     name: SERVICE_NAME,
     version: API_VERSION,
     description:
-      "Public, read-only professional portfolio API for Ryan Laird.",
+      "Public, read-only API for Ryan Laird and the rjmlaird.co.uk estate.",
     visibility: VISIBILITY,
     documentation: `${origin}/openapi.json`,
     endpoints: {
       health: "/healthz",
+      status: "/v1/status",
+      subdomains: "/v1/subdomains",
+      sites: "/v1/sites",
       bio: "/v1/bio",
-      builds: "/v1/builds",
       cv: "/v1/cv",
       portfolio: "/v1/portfolio",
+      research: "/v1/research",
+      glossary: "/v1/glossary",
+      tools: "/v1/tools",
+      apps: "/v1/apps",
+      labs: "/v1/labs",
+      builds: "/v1/builds",
       media: "/v1/media",
       general: "/v1/general",
       site: "/v1/site",
+    },
+    estate: {
+      apex: "https://rjmlaird.co.uk/",
+      directory: `${origin}/v1/subdomains`,
+      note: "Each public subdomain lists its own API entry point at /v1/subdomains/{id}.",
     },
   });
 });
@@ -83,6 +105,14 @@ app.route("/v1/bio", bio);
 app.route("/v1/builds", builds);
 app.route("/v1/cv", cv);
 app.route("/v1/portfolio", portfolio);
+app.route("/v1/research", research);
+app.route("/v1/glossary", glossary);
+app.route("/v1/tools", catalogueRouter("tools", toolsData));
+app.route("/v1/apps", catalogueRouter("apps", appsData));
+app.route("/v1/labs", catalogueRouter("labs", labsData));
+app.route("/v1/status", status);
+app.route("/v1/subdomains", subdomains);
+app.route("/v1/sites", sites);
 app.route("/v1/media", media);
 app.route("/v1/general", general);
 app.route("/v1/site", site);

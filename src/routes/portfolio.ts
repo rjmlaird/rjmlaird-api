@@ -6,6 +6,7 @@ import initiatives from "../data/initiatives.json";
 import reviews from "../data/reviews.json";
 import projects from "../data/projects.json";
 import caseStudies from "../data/caseStudies.json";
+import publicBib from "../data/publications.public.bib";
 
 export type PortfolioCollection =
   | "initiatives"
@@ -188,7 +189,7 @@ app.get("/", (c) =>
       "/v1/portfolio/initiative/:slug?expand=caseStudy",
       "/v1/portfolio/case-studies?status=&tag=&featured=&category=",
       "/v1/portfolio/case-study/:slug?expand=relatedProjects",
-      "/v1/portfolio/publications.txt",
+      "/v1/portfolio/publications.txt (legacy; use /v1/research)",
     ],
   }),
 );
@@ -215,36 +216,19 @@ app.get("/full", (c) =>
   }),
 );
 
-// Raw publications file.
-// Keep publications.txt in src/data, but do not import it as a TypeScript module.
-app.get("/publications.txt", async (c) => {
-  const response = await fetch(
-    new URL(
-      "/data/publications.txt",
-      "https://api.rjmlaird.co.uk",
-    ),
-  );
-
-  if (!response.ok) {
-    return json(
-      {
-        error: "Publications file unavailable",
-      },
-      503,
-    );
-  }
-
-  return new Response(await response.text(), {
-    status: 200,
+// Legacy alias. The old implementation fetched this API's own /data/publications.txt, which
+// does not exist. Publications now live at /v1/research; the sanitised BibTeX is served here too.
+app.get("/publications.txt", () =>
+  new Response(publicBib, {
     headers: {
       "Content-Type": "text/plain; charset=utf-8",
       "Cache-Control": "public, max-age=0, must-revalidate",
       "CDN-Cache-Control": "no-store",
-      "Cloudflare-CDN-Cache-Control": "no-store",
       "X-Content-Type-Options": "nosniff",
+      Link: '</v1/research/publications.bib>; rel="canonical"',
     },
-  });
-});
+  }),
+);
 
 // Projects.
 app.get("/projects", (c) => {
