@@ -210,7 +210,7 @@ describe("tools, apps, labs", () => {
 
 it("labs are normalised from the source experiments", async () => {
     const labs = (await body("/v1/labs")).data;
-    expect(labs.length).toBe(20);
+    expect(labs.length).toBe(26);
     expect(labs.find((l: any) => l.sourceId === "astro").tech).not.toContain("Streamliy");
   });
 
