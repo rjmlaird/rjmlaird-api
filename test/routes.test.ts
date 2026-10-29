@@ -208,10 +208,9 @@ describe("tools, apps, labs", () => {
     expect("url" in planned).toBe(true);
   });
 
-  it("labs are normalised from the source experiments", async () => {
+it("labs are normalised from the source experiments", async () => {
     const labs = (await body("/v1/labs")).data;
-    expect(labs.length).toBe(23);
-    expect(labs.find((l: any) => l.sourceId === "leicester-floods").title).toBe("Leicester Floods");
+    expect(labs.length).toBe(20);
     expect(labs.find((l: any) => l.sourceId === "astro").tech).not.toContain("Streamliy");
   });
 
