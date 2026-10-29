@@ -79,6 +79,97 @@
       "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/launches"
     },
     {
+      "id": "apps/earth-explorer",
+      "sourceId": "earth-explorer",
+      "type": "app",
+      "title": "Earth Explorer",
+      "description": "Explore satellite imagery, global environmental indicators, and Earth observation datasets.",
+      "group": "space",
+      "tech": [
+        "JavaScript",
+        "Tailwind CSS"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "url": "https://earth-explorer.apps.rjmlaird.co.uk",
+      "sourcePath": "apps/earth-explorer",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/earth-explorer"
+    },
+    {
+      "id": "apps/atmosphere-explorer",
+      "sourceId": "atmosphere-explorer",
+      "type": "app",
+      "title": "Atmosphere Explorer",
+      "description": "Monitor atmospheric conditions, air quality indices, and meteorological telemetry.",
+      "group": "space",
+      "tech": [
+        "JavaScript",
+        "Tailwind CSS"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "url": "https://atmosphere-explorer.apps.rjmlaird.co.uk",
+      "sourcePath": "apps/atmosphere-explorer",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/atmosphere-explorer"
+    },
+    {
+      "id": "apps/sun-explorer",
+      "sourceId": "sun-explorer",
+      "type": "app",
+      "title": "Sun Explorer",
+      "description": "Real-time solar monitoring, sunspot tracking, and solar flare telemetry.",
+      "group": "space",
+      "tech": [
+        "JavaScript",
+        "Tailwind CSS",
+        "NOAA SWPC"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "url": "https://sun-explorer.apps.rjmlaird.co.uk",
+      "sourcePath": "apps/sun-explorer",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/sun-explorer"
+    },
+    {
+      "id": "apps/solar-system-explorer",
+      "sourceId": "solar-system-explorer",
+      "type": "app",
+      "title": "Solar System Explorer",
+      "description": "Interactive Orrery and planetary position tracker across the solar system.",
+      "group": "space",
+      "tech": [
+        "JavaScript",
+        "Tailwind CSS"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "url": "https://solar-system-explorer.apps.rjmlaird.co.uk",
+      "sourcePath": "apps/solar-system-explorer",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/solar-system-explorer"
+    },
+    {
+      "id": "apps/space-trend-keeper",
+      "sourceId": "space-trend-keeper",
+      "type": "app",
+      "title": "Space Trend Keeper",
+      "description": "Track macroeconomic, technological, and policy trends across the global space economy.",
+      "group": "space",
+      "tech": [
+        "JavaScript",
+        "Tailwind CSS"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "url": "https://space-trend-keeper.apps.rjmlaird.co.uk",
+      "sourcePath": "apps/space-trend-keeper",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/space-trend-keeper"
+    },
+    {
       "id": "apps/weatherdash",
       "sourceId": "weatherdash",
       "type": "app",
@@ -96,6 +187,24 @@
       "url": "https://weatherdash.apps.rjmlaird.co.uk",
       "sourcePath": "apps/weatherdash",
       "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/weatherdash"
+    },
+    {
+      "id": "apps/council-watch",
+      "sourceId": "council-watch",
+      "type": "app",
+      "title": "Council Watch",
+      "description": "Monitor local government agendas, committee minutes, and municipal planning applications.",
+      "group": "places",
+      "tech": [
+        "JavaScript",
+        "Tailwind CSS"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "url": "https://council-watch.apps.rjmlaird.co.uk",
+      "sourcePath": "apps/council-watch",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/council-watch"
     },
     {
       "id": "apps/spice-cupboard",

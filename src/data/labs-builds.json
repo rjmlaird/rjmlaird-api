@@ -376,6 +376,26 @@
       "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/sewage"
     },
     {
+      "id": "labs/earthquakes",
+      "sourceId": "earthquakes",
+      "type": "lab",
+      "title": "Earthquake Activity Monitor",
+      "description": "Real-time tracking and visualising global seismic activity and magnitude metrics.",
+      "group": "climate",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-25",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://earthquakes.labs.rjmlaird.co.uk/",
+      "url": "https://earthquakes.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/earthquakes",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/earthquakes"
+    },
+    {
       "id": "labs/components",
       "sourceId": "components",
       "type": "lab",

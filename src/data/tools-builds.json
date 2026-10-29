@@ -142,8 +142,8 @@
       "description": "Explore deep-sky objects, coordinates, magnitudes, and visibility from your observing site.",
       "group": "space",
       "tech": [
-        "JavaScript",
-        "Vite",
+        "TypeScript",
+        "Hono",
         "Cloudflare Workers"
       ],
       "status": "active",
@@ -162,8 +162,8 @@
       "description": "Estimate local sky brightness and Bortle class from a UK location, with practical guidance for visual observing.",
       "group": "space",
       "tech": [
-        "JavaScript",
-        "Vite",
+        "TypeScript",
+        "Hono",
         "Cloudflare Workers"
       ],
       "status": "active",
@@ -182,8 +182,8 @@
       "description": "Move sliders for aperture, focal length and eyepiece to see magnification, exit pupil, field of view and resolution update beside a schematic ray diagram.",
       "group": "space",
       "tech": [
-        "JavaScript",
-        "Vite",
+        "TypeScript",
+        "Hono",
         "Cloudflare Workers"
       ],
       "status": "active",
@@ -202,8 +202,8 @@
       "description": "Animate a two-body orbit from a central body, semi-major axis and eccentricity, with live distance, speed and true anomaly alongside the vis-viva quantities.",
       "group": "space",
       "tech": [
-        "JavaScript",
-        "Vite",
+        "TypeScript",
+        "Hono",
         "Cloudflare Workers"
       ],
       "status": "active",
@@ -222,8 +222,8 @@
       "description": "Calculate sunrise, sunset, twilight times, moonrise and moonset, Moon phase and illumination for a location and date.",
       "group": "space",
       "tech": [
-        "JavaScript",
-        "Vite",
+        "TypeScript",
+        "Hono",
         "Cloudflare Workers"
       ],
       "status": "active",
@@ -233,6 +233,146 @@
       "url": "https://tools.rjmlaird.co.uk/moon-sun-calc",
       "sourcePath": "apps/moon-sun-calc",
       "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/moon-sun-calc"
+    },
+    {
+      "id": "tools/how-satellites-see-earth",
+      "sourceId": "how-satellites-see-earth",
+      "type": "tool",
+      "title": "How Satellites See Earth",
+      "description": "Explore Earth observation imaging bands, spatial resolution, and swath widths across satellite sensors.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-24",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/how-satellites-see-earth",
+      "url": "https://tools.rjmlaird.co.uk/how-satellites-see-earth",
+      "sourcePath": "apps/how-satellites-see-earth",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/how-satellites-see-earth"
+    },
+    {
+      "id": "tools/satellite-link-budget",
+      "sourceId": "satellite-link-budget",
+      "type": "tool",
+      "title": "Satellite Link Budget Calculator",
+      "description": "Calculate free space path loss, received power, and link margins for Earth-to-space RF communications.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-24",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/satellite-link-budget",
+      "url": "https://tools.rjmlaird.co.uk/satellite-link-budget",
+      "sourcePath": "apps/satellite-link-budget",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/satellite-link-budget"
+    },
+    {
+      "id": "tools/galaxy-morphology",
+      "sourceId": "galaxy-morphology",
+      "type": "tool",
+      "title": "Galaxy Morphology Explorer",
+      "description": "Classify and explore galaxy types using the Hubble tuning fork sequence and structural parameters.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-24",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/galaxy-morphology",
+      "url": "https://tools.rjmlaird.co.uk/galaxy-morphology",
+      "sourcePath": "apps/galaxy-morphology",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/galaxy-morphology"
+    },
+    {
+      "id": "tools/active-passive-satellites",
+      "sourceId": "active-passive-satellites",
+      "type": "tool",
+      "title": "Active vs Passive Satellites",
+      "description": "Compare active radar (SAR) and passive optical Earth observation payloads and their observational capabilities.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-24",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/active-passive-satellites",
+      "url": "https://tools.rjmlaird.co.uk/active-passive-satellites",
+      "sourcePath": "apps/active-passive-satellites",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/active-passive-satellites"
+    },
+    {
+      "id": "tools/magnitude-dfference",
+      "sourceId": "magnitude-dfference",
+      "type": "tool",
+      "title": "Magnitude Difference Calculator",
+      "description": "Calculate brightness ratios and magnitude differences for stellar astronomy.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-24",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/magnitude-dfference",
+      "url": "https://tools.rjmlaird.co.uk/magnitude-dfference",
+      "sourcePath": "apps/magnitude-dfference",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/magnitude-dfference"
+    },
+    {
+      "id": "tools/jupiter-moon-visualiser",
+      "sourceId": "jupiter-moon-visualiser",
+      "type": "tool",
+      "title": "Jupiter Moon Visualiser",
+      "description": "Simulate and visualise the orbital positions of Jupiter's Galilean moons (Io, Europa, Ganymede, Callisto).",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-24",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/jupiter-moon-visualiser",
+      "url": "https://tools.rjmlaird.co.uk/jupiter-moon-visualiser",
+      "sourcePath": "apps/jupiter-moon-visualiser",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/jupiter-moon-visualiser"
+    },
+    {
+      "id": "tools/angular-size-calculator",
+      "sourceId": "angular-size-calculator",
+      "type": "tool",
+      "title": "Angular Size Calculator",
+      "description": "Calculate the angular diameter or physical size of astronomical objects using distance and subtended angle.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-24",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/angular-size-calculator",
+      "url": "https://tools.rjmlaird.co.uk/angular-size-calculator",
+      "sourcePath": "apps/angular-size-calculator",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/angular-size-calculator"
     },
     {
       "id": "tools/unit-converter",
@@ -262,8 +402,8 @@
       "description": "Four gravitational limits in one calculator: escape velocity, Hill sphere, Roche limit and Schwarzschild radius.",
       "group": "maths-physics",
       "tech": [
-        "JavaScript",
-        "Vite",
+        "TypeScript",
+        "Hono",
         "Cloudflare Workers"
       ],
       "status": "active",
@@ -273,6 +413,66 @@
       "url": "https://tools.rjmlaird.co.uk/physical-limits",
       "sourcePath": "apps/physical-limits",
       "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/physical-limits"
+    },
+    {
+      "id": "tools/chilli-heat-scale",
+      "sourceId": "chilli-heat-scale",
+      "type": "tool",
+      "title": "Chilli Heat Scale Explorer",
+      "description": "Slide along the Scoville scale, compare 14 peppers, find your comfort zone with a short quiz and estimate how much pepper a sauce needs.",
+      "group": "maths-physics",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-25",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/chilli-heat-scale",
+      "url": "https://tools.rjmlaird.co.uk/chilli-heat-scale",
+      "sourcePath": "apps/chilli-heat-scale",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/chilli-heat-scale"
+    },
+    {
+      "id": "tools/cup-delta",
+      "sourceId": "cup-delta",
+      "type": "tool",
+      "title": "Cup Delta",
+      "description": "Calculate extraction yield, brew ratios, and TDS for espresso and filter coffee.",
+      "group": "maths-physics",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-25",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/cup-delta",
+      "url": "https://tools.rjmlaird.co.uk/cup-delta",
+      "sourcePath": "apps/cup-delta",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/cup-delta"
+    },
+    {
+      "id": "tools/escape-velocity",
+      "sourceId": "escape-velocity",
+      "type": "tool",
+      "title": "Escape Velocity Calculator",
+      "description": "Calculate the escape velocity and gravitational binding energy for planets and celestial bodies.",
+      "group": "maths-physics",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-24",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/escape-velocity",
+      "url": "https://tools.rjmlaird.co.uk/escape-velocity",
+      "sourcePath": "apps/escape-velocity",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/escape-velocity"
     },
     {
       "id": "tools/carbon-reduction-plan",
@@ -302,8 +502,8 @@
       "description": "Estimate greenhouse-gas emissions for a flight from origin and destination airports, cabin class and trip type. A modelled estimate, not a measurement.",
       "group": "sustainability",
       "tech": [
-        "JavaScript",
-        "Vite",
+        "TypeScript",
+        "Hono",
         "Cloudflare Workers"
       ],
       "status": "active",
@@ -322,8 +522,8 @@
       "description": "Record electricity and gas use, estimate annual emissions, compare against UK benchmarks and identify practical reduction opportunities.",
       "group": "sustainability",
       "tech": [
-        "JavaScript",
-        "Vite",
+        "TypeScript",
+        "Hono",
         "Cloudflare Workers"
       ],
       "status": "in-progress",
@@ -335,6 +535,26 @@
       "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/home-energy-baseline"
     },
     {
+      "id": "tools/greenhouse-effect",
+      "sourceId": "greenhouse-effect",
+      "type": "tool",
+      "title": "Greenhouse Effect Model",
+      "description": "Interactive zero-dimensional energy balance climate model demonstrating radiative forcing and greenhouse gas warming.",
+      "group": "sustainability",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-24",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/greenhouse-effect",
+      "url": "https://tools.rjmlaird.co.uk/greenhouse-effect",
+      "sourcePath": "apps/greenhouse-effect",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/greenhouse-effect"
+    },
+    {
       "id": "tools/dopamine-menu",
       "sourceId": "dopamine-menu",
       "type": "tool",
@@ -343,7 +563,7 @@
       "group": "productivity",
       "tech": [
         "TypeScript",
-        "Vite",
+        "Hono",
         "Cloudflare Workers"
       ],
       "status": "active",
@@ -355,6 +575,26 @@
       "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/dopamine-menu"
     },
     {
+      "id": "tools/waiting-on-tracker",
+      "sourceId": "waiting-on-tracker",
+      "type": "tool",
+      "title": "Waiting-On Tracker",
+      "description": "Keep track of what you are waiting on and see what needs a nudge today. Snooze, resolve and reopen items, with a calm mode. Your list stays in your browser.",
+      "group": "productivity",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-26",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/waiting-on-tracker",
+      "url": "https://tools.rjmlaird.co.uk/waiting-on-tracker",
+      "sourcePath": "apps/waiting-on-tracker",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/waiting-on-tracker"
+    },
+    {
       "id": "tools/habit-streak",
       "sourceId": "habit-streak",
       "type": "tool",
@@ -362,8 +602,8 @@
       "description": "Track simple daily habits with streaks, weekly summaries and local-browser storage. No account required.",
       "group": "productivity",
       "tech": [
-        "JavaScript",
-        "Vite",
+        "TypeScript",
+        "Hono",
         "Cloudflare Workers"
       ],
       "status": "in-progress",
@@ -382,8 +622,8 @@
       "description": "Quickly switch between workspace contexts and environments.",
       "group": "productivity",
       "tech": [
-        "JavaScript",
-        "Vite",
+        "TypeScript",
+        "Hono",
         "Cloudflare Workers"
       ],
       "status": "in-progress",
@@ -458,8 +698,8 @@
       "description": "Check a page’s title, description, Open Graph, Twitter card, canonical URL and robots directives against common SEO and sharing requirements.",
       "group": "web-dev",
       "tech": [
-        "JavaScript",
-        "Vite",
+        "TypeScript",
+        "Hono",
         "Cloudflare Workers"
       ],
       "status": "active",
@@ -469,6 +709,46 @@
       "url": "https://tools.rjmlaird.co.uk/seo-meta-tag",
       "sourcePath": "apps/seo-meta-tag",
       "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/seo-meta-tag"
+    },
+    {
+      "id": "tools/marketing-dash",
+      "sourceId": "marketing-dash",
+      "type": "tool",
+      "title": "Marketing Dashboard",
+      "description": "Overview of campaign performance metrics, funnel conversion rates, and channel ROI.",
+      "group": "web-dev",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-24",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/marketing-dash",
+      "url": "https://tools.rjmlaird.co.uk/marketing-dash",
+      "sourcePath": "apps/marketing-dash",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/marketing-dash"
+    },
+    {
+      "id": "tools/marketing-funnel",
+      "sourceId": "marketing-funnel",
+      "type": "tool",
+      "title": "Marketing Funnel Calculator",
+      "description": "Model conversion rates, lead volumes, and customer acquisition costs across marketing funnel stages.",
+      "group": "web-dev",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-24",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/marketing-funnel",
+      "url": "https://tools.rjmlaird.co.uk/marketing-funnel",
+      "sourcePath": "apps/marketing-funnel",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/marketing-funnel"
     },
     {
       "id": "tools/page-weight",
