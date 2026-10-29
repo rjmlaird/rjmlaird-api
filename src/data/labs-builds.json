@@ -396,6 +396,26 @@
       "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/earthquakes"
     },
     {
+      "id": "labs/earth",
+      "sourceId": "earth",
+      "type": "lab",
+      "title": "Earth System Model",
+      "description": "Interactive visualization of global energy balance, atmospheric circulation, and cryosphere dynamics.",
+      "group": "climate",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-26",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://earth.labs.rjmlaird.co.uk/",
+      "url": "https://earth.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/earth",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/earth"
+    },
+    {
       "id": "labs/components",
       "sourceId": "components",
       "type": "lab",
@@ -493,6 +513,46 @@
       "url": "https://marketing.labs.rjmlaird.co.uk/",
       "sourcePath": "apps/marketing",
       "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/marketing"
+    },
+    {
+      "id": "labs/eo-dash",
+      "sourceId": "eo-dash",
+      "type": "lab",
+      "title": "Earth Observation Dashboard",
+      "description": "Satellite telemetry and environmental metrics monitoring dashboard.",
+      "group": "physics",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-27",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://eo-dash.labs.rjmlaird.co.uk/",
+      "url": "https://eo-dash.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/eo-dash",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/eo-dash"
+    },
+    {
+      "id": "labs/storytelling",
+      "sourceId": "storytelling",
+      "type": "lab",
+      "title": "Data Storytelling Studio",
+      "description": "Tools and templates for crafting narrative-driven data visualisations and reports.",
+      "group": "focus",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-27",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://storytelling.labs.rjmlaird.co.uk/",
+      "url": "https://storytelling.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/storytelling",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/storytelling"
     }
   ]
 }
